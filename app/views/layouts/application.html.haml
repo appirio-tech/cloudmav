@@ -6,14 +6,18 @@
 	= stylesheet_link_tag "codemav"
 	= javascript_include_tag :defaults
 	= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Cuprum&subset=latin"
+	= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Droid+Sans&subset=latin"
 	= csrf_meta_tag
 %body
 	.container_16
 		#header
 			.grid_8
 				%h1 codemav
-			
-		.clearfix
+			.grid_8
+				= render :partial => "shared/login_info"
+			.clearfix
 		
-		.grid_16
-			= yield
+		#content
+			.grid_16
+				= yield
+			.clearfix

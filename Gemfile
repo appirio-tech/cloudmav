@@ -5,6 +5,9 @@ gem 'pg'
 gem 'haml'
 gem 'json'
 gem 'devise'
+gem "mongoid", "~>2.0.0.beta" 
+gem "bson_ext"
+gem "mongo"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily
