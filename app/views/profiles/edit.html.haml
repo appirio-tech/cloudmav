@@ -1,0 +1,9 @@
+
+%h2 Edit Profile
+
+= form_for @user, :url => { :action => :update, :controller => :profiles }  do |f|
+	= render :partial => "shared/errors", :locals => { :o => @user, :o_name => "User" }
+	%p= f.label :name
+	%p= f.text_field :name
+ 	
+	%p= f.submit "Save"

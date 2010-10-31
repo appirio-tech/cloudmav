@@ -4,6 +4,6 @@
 	= "|"
 	= link_to "Login", login_path
 - else
-	= link_to "You are logged in as #{current_user.email}", "/"
+	= link_to "You are logged in as #{current_user.email}", profile_path(current_user.profile_id)
 	= "|"
 	= link_to "Logout", logout_path

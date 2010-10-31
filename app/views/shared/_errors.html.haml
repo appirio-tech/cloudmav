@@ -1,0 +1,11 @@
+- if o.errors.any?
+  #error_explanation
+    %h2
+      =pluralize(o.errors.count, "error")
+      prohibited this 
+      = o_name
+      from being saved:
+    %ul
+    - o.errors.full_messages.each do |msg|
+      %li
+        = msg

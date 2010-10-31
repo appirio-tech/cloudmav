@@ -6,6 +6,8 @@ Codemav::Application.routes.draw do
     get 'logout', :to => "devise/sessions#destroy"
   end
   
+  resources :profiles
+  
   root :to => "pages#home"
   
 end
