@@ -7,6 +7,7 @@ Codemav::Application.routes.draw do
   end
   
   resources :profiles
+  resources :stack_overflow_profiles
   
   root :to => "pages#home"
   

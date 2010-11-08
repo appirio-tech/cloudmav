@@ -9,19 +9,13 @@ class ProfilesController < ApplicationController
   end
   
   def update
-    @profile = @user.profile
+    @profile = current_user.profile
     if @profile.update_attributes(params)
       flash[:notice] = "Profile updated"
-      redirect_to profile_path(@user, @profile)
+      redirect_to profile_path(@profile)
     else
       render "edit"
     end
-  end
-  
-  private 
-  
-  def set_user
-    @user = User.find(params[:user_id])
   end
   
 end

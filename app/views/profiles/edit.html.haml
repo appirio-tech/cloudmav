@@ -1,8 +1,8 @@
 
 %h2 Edit Profile
 
-= form_for @user, :url => { :action => :update, :controller => :profiles }  do |f|
-	= render :partial => "shared/errors", :locals => { :o => @user, :o_name => "User" }
+= form_for @profile  do |f|
+	= render :partial => "shared/errors", :locals => { :o => @profile, :o_name => "Profile" }
 	%p= f.label :name
 	%p= f.text_field :name
  	

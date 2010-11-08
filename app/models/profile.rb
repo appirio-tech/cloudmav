@@ -5,4 +5,6 @@ class Profile
   field :email
   
   referenced_in :user
+  
+  references_one :stack_overflow_profile
 end
