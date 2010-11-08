@@ -4,5 +4,5 @@ class Profile
   field :name
   field :email
   
-  references_one :user
+  referenced_in :user
 end
