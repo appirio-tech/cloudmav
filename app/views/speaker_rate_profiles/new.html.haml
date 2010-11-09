@@ -7,13 +7,9 @@
 		%p
 			Just go to Speaker Rate, find your id, and enter it here. We can then synch your StackOverflow profile with your account.
 		
-	= form_for @stack_overflow_profile do |f|
-		%table.biggie
-			%tr
-				%td= f.label :stack_overflow_id, "StackOverflow Id"
-				%td= f.text_field :stack_overflow_id
-			%tr
-				%td
-				%td= f.submit "Synch"
+	= form_for @speaker_rate_profile do |f|
+		.label= f.label :speaker_rate_id, "Speaker Rate Id"
+		.control= f.text_field :speaker_rate_id
+		.submit= f.submit "Synch", :disable_with => "Synching"
 	
-.clearfix
+.clear

@@ -6,7 +6,7 @@
 	.large
 		.grid_4
 			%h4 StackOverflow
-		.clearfix
+		.clear
 		.grid_4
 			= link_to "Go to my StackOverflow Profile", @profile.stack_overflow_profile.url
 		.clearfix
@@ -14,9 +14,9 @@
 			Reputation
 		.grid_2
 			= @profile.stack_overflow_profile.reputation
-		.clearfix
+		.clear
 		.grid_2
 			Badges
 		.grid_2
 			= stack_overflow_badges(@profile.stack_overflow_profile)
-		.clearfix
+		.clear

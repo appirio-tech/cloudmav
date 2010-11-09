@@ -7,4 +7,5 @@ class Profile
   referenced_in :user
   
   references_one :stack_overflow_profile
+  references_one :speaker_rate_profile
 end

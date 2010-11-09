@@ -10,6 +10,7 @@ class SpeakerRateProfilesController < ApplicationController
     @speaker_rate_profile.profile = current_profile
     
     current_profile.save!
+    @speaker_rate_profile.save!
     
     redirect_to current_profile
   end

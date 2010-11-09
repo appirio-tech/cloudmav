@@ -10,6 +10,7 @@ class StackOverflowProfilesController < ApplicationController
     @stack_overflow_profile.profile = current_profile
     
     current_profile.save!
+    @stack_overflow_profile.save!
     
     redirect_to current_profile
   end
