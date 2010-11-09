@@ -10,6 +10,8 @@ Codemav::Application.routes.draw do
   resources :stack_overflow_profiles
   resources :speaker_rate_profiles
   
+  resources :people_searches
+  
   root :to => "pages#home"
   
 end

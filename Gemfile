@@ -8,6 +8,7 @@ gem 'devise'
 gem "mongoid", "~>2.0.0.beta" 
 gem "bson_ext"
 gem "mongo"
+gem "geokit"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily

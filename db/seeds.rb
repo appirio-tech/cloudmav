@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+User.destroy_all
+Profile.destroy_all
+StackOverflowProfile.destroy_all
+SpeakerRateProfile.destroy_all
