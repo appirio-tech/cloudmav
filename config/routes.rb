@@ -9,6 +9,11 @@ Codemav::Application.routes.draw do
   resources :profiles
   resources :stack_overflow_profiles
   resources :speaker_rate_profiles
+  resources :git_hub_profiles do
+    collection do
+      get "synch"
+    end
+  end
   
   resources :people_searches
   

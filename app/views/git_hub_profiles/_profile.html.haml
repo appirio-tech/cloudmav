@@ -1,0 +1,28 @@
+- if @profile.git_hub_profile.nil? && current_profile == @profile
+	%p 
+		Do you have a GitHub account? 
+		= link_to "Add Your GitHub Account", new_git_hub_profile_path
+-else
+	.large
+		.grid_4
+			%h4 GitHub
+			= link_to "synch", synch_git_hub_profiles_path
+		.clear
+		.grid_4
+			= link_to "Go to my GitHub Profile", @profile.git_hub_profile.url
+		.clearfix
+		.grid_2
+			Repositories
+		.grid_2
+			= @profile.git_hub_profile.repository_count
+		.clear
+		.grid_2
+			Gists
+		.grid_2
+			= @profile.git_hub_profile.gist_count
+		.clear
+		.grid_2
+			Followers
+		.grid_2
+			= @profile.git_hub_profile.followers_count
+		.clear

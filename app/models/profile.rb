@@ -12,6 +12,7 @@ class Profile
   
   references_one :stack_overflow_profile
   references_one :speaker_rate_profile
+  references_one :git_hub_profile
   
   index [[ :coordinates, Mongo::GEO2D ]]
     

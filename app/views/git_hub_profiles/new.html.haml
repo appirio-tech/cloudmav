@@ -1,0 +1,19 @@
+%h2 Synch with your GitHub Account
+
+.grid_7
+	.large
+		You can find your GitHub username by looking at the url for your profile. Or just what username you use to login.
+		= image_tag "git_hub_find_id.png"
+		%p
+			Just go to GitHub, find your id, and enter it here. We can then synch your GitHub profile with your account.
+		
+	= form_for @git_hub_profile do |f|
+		%table.biggie
+			%tr
+				%td= f.label :username, "GitHub username"
+				%td= f.text_field :username
+			%tr
+				%td
+				%td= f.submit "Synch"
+	
+.clearfix
