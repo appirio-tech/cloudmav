@@ -1,11 +1,11 @@
 class ProfilesController < ApplicationController
   
   def show
-    @profile = Profile.find(params[:id])
+    @profile = Profile.find_by_id(params[:id]).first
   end
   
   def edit
-    @profile = Profile.find(params[:id])
+    @profile = Profile.find_by_id(params[:id]).first
   end
   
   def update

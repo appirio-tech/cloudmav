@@ -17,6 +17,10 @@ Codemav::Application.routes.draw do
   
   resources :people_searches
   
+  namespace :api do
+    resources :profiles
+  end
+  
   root :to => "pages#home"
   
 end

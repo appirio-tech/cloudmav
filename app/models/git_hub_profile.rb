@@ -14,4 +14,15 @@ class GitHubProfile
     GitHubService.synch(self)
     save!
   end
+  
+  def as_json(opts={})
+    { 
+      :git_hub_id => git_hub_id,
+      :username => username,
+      :gist_count => gist_count,
+      :repository_count => repository_count,
+      :followers_count => followers_count,
+      :url => url
+    }
+  end
 end

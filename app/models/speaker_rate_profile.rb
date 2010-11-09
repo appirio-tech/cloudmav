@@ -6,4 +6,12 @@ class SpeakerRateProfile
   field :rating
   
   referenced_in :profile
+  
+  def as_json(opts={})
+    { 
+      :speaker_rate_id => speaker_rate_id,
+      :rating => rating,
+      :url => url
+    }
+  end
 end

@@ -7,7 +7,7 @@ class GitHubProfilesController < ApplicationController
   def create
     @git_hub_profile = GitHubProfile.new(params[:git_hub_profile])
     @git_hub_profile.profile = current_profile
-    @git_hub_profile.save!
+    @git_hub_profile.synch!
     
     redirect_to current_profile
   end
