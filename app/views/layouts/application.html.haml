@@ -9,15 +9,18 @@
 	= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Droid+Sans&subset=latin"
 	= csrf_meta_tag
 %body
-	.container_16
-		#header
+	#header
+		.container_16
 			.grid_8
-				%h1 codemav
+				= image_tag "blue_code_mav2.png"
 			.grid_8
 				= render :partial => "shared/login_info"
-			.clearfix
+			.clear
+		.clear
+	.clear
 		
-		#content
-			.grid_16
-				= yield
-			.clearfix
+	#content
+		.container_16
+			= yield
+		.clear
+	.clear
