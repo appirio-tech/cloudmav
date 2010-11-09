@@ -3,7 +3,23 @@
 
 = form_for @profile  do |f|
 	= render :partial => "shared/errors", :locals => { :o => @profile, :o_name => "Profile" }
-	%p= f.label :name
-	%p= f.text_field :name
- 	
-	%p= f.submit "Save"
+	.label= f.label :name
+	.control= f.text_field :name
+	
+	.fieldset
+		%legend Location
+		=f.text_area :location, :size=>'20x3', :id=>:location, :class=>:location
+		=f.hidden_field :lat, :id=>:lat
+		=f.hidden_field :lng, :id=>:lng
+		
+	.submit= f.submit "Save"
+
+:javascript
+	$(document).ready(function() {		
+		$('#location')
+		.bind('auto-geocoder.onGeocodeSuccess', function(e, results, status) {
+			$("#lng").val(results[0].geometry.location.lng());
+			$("#lat").val(results[0].geometry.location.lat());
+		})
+		.autoGeocoder();
+	});

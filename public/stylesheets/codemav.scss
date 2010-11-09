@@ -9,8 +9,37 @@ $light_blue: #415173;
 $blue: #2D406B;
 $dark_blue: #212736;
 $contrast: #E03F00;
+$font_family: 'Droid Sans', arial, serif;
+
+a {
+	font-family: $font_family;
+}
+
+.jquery-auto-geocoder-map {
+	width: 150px;
+	height: 150px;
+}
+
+$form_font_size:1.1em;
+form {
+	p {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	label {
+		color:$blue;
+		font-size:$form_font_size;
+	}
+	input {
+		font-size:$form_font_size;
+	}
+	textarea {
+		font-size:$form_font_size;
+	}
+}
 
 #header {
+	margin-top: 10px;
 	margin-bottom: 10px;
 	h1 { 
 		font-family: 'Cuprum', arial, serif;
@@ -29,17 +58,3 @@ $contrast: #E03F00;
 	}
 }
 
-$form_font_size:1.1em;
-form {
-	p {
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
-	label {
-		color:$blue;
-		font-size:$form_font_size;
-	}
-	input {
-		font-size:$form_font_size;
-	}
-}

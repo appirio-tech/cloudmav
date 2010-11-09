@@ -3,6 +3,9 @@ class Profile
 
   field :name
   field :email
+  field :location
+  field :lat
+  field :lng
   
   referenced_in :user
   
