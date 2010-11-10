@@ -8,11 +8,11 @@
 	
 	.fieldset
 		%legend Location
-		=f.text_area :location, :size=>'20x3', :id=>:location, :class=>:location
-		=f.hidden_field :lat, :id=>:lat
-		=f.hidden_field :lng, :id=>:lng
+		= text_area_tag "description", nil, :size=>'20x3', :id=>:location, :class=>:location
+		= hidden_field_tag :lat, :id=>:lat
+		= hidden_field_tag :lng, :id=>:lng
 		
-	.submit= f.submit "Save"
+	.submit= f.submit "Save", :disable_with => "Saving..."
 
 :javascript
 	$(document).ready(function() {		

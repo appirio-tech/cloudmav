@@ -4,21 +4,15 @@ class Profile
   field :api_id, :type => Integer
   field :name
   field :email
-  field :location, :type => String
-  field :coordinates, :type => Array
-  field :lat, :type => Float
-  field :lng, :type => Float
   
   referenced_in :user
   
-  references_one :stack_overflow_profile
-  references_one :speaker_rate_profile
-  references_one :git_hub_profile
-  
-  index [[ :coordinates, Mongo::GEO2D ]]
+  embeds_one :stack_overflow_profile
+  embeds_one :speaker_rate_profile
+  embeds_one :git_hub_profile
+  embeds_one :location
     
   before_create :set_api_id
-  before_save :update_coordinates
   
   scope :find_by_id, lambda { |id| { :where => { :api_id => id } } }
   
@@ -45,16 +39,7 @@ class Profile
   protected
   
   def set_api_id
-    puts "test"
     self.api_id = Profile.count + 1
-    puts "api id is #{api_id}"
   end 
-  
-  def update_coordinates
-    unless lat.nil? || lng.nil?
-      puts "update #{lat}, #{lng}"
-      self.coordinates = [lat, lng]
-    end
-  end
   
 end
