@@ -1,7 +1,8 @@
-- if @profile.stack_overflow_profile.nil? && current_profile == @profile
-	%p 
-		Do you have a StackOverflow account? 
-		= link_to "Add Your StackOverflow Account", new_stack_overflow_profile_path
+- if @profile.stack_overflow_profile.nil?
+	- if current_profile == @profile
+		%p 
+			Do you have a StackOverflow account? 
+			= link_to "Add Your StackOverflow Account", new_stack_overflow_profile_path
 -else
 	.large
 		.grid_4

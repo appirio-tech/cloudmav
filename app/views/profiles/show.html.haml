@@ -1,7 +1,8 @@
 
 .grid_6
-	%h2= @profile.name
-	= link_to "Edit profile", edit_profile_path(@profile)
+	%h2= @profile.display_name
+	- if @profile == current_profile
+		= link_to "Edit profile", edit_profile_path(@profile)
 .clear
 
 #map_canvas{:style => "width:150px;height:150px;"}

@@ -22,6 +22,11 @@ class Profile
   
   scope :find_by_id, lambda { |id| { :where => { :api_id => id } } }
   
+  def display_name
+    name unless name.nil?
+    user.email
+  end
+  
   def to_param
     "#{api_id}"
   end

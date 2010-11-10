@@ -1,7 +1,8 @@
-- if @profile.speaker_rate_profile.nil? && current_profile == @profile
-	%p 
-		Do you have a Speaker Rate account? 
-		= link_to "Add Your Speaker Rate Account", new_speaker_rate_profile_path
+- if @profile.speaker_rate_profile.nil?
+	- if current_profile == @profile
+		%p 
+			Do you have a Speaker Rate account? 
+			= link_to "Add Your Speaker Rate Account", new_speaker_rate_profile_path
 -else
 	.large
 		.grid_4

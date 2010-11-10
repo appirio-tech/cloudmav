@@ -6,6 +6,7 @@ class ProfilesController < ApplicationController
   
   def edit
     @profile = Profile.find_by_id(params[:id]).first
+    redirect_to @profile unless @profile == current_profile
   end
   
   def update
