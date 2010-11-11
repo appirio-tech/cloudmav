@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
   
   def show
     @profile = Profile.find_by_id(params[:id]).first
+    render :not_found if @profile.nil?
   end
   
   def edit
@@ -12,7 +13,6 @@ class ProfilesController < ApplicationController
   def update
     @profile = current_profile
     @profile.update_attributes(params[:profile])
-    # @profile.location = get_location if has_location?
     
     if @profile.save!
       flash[:notice] = "Profile updated"
