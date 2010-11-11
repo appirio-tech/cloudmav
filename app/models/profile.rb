@@ -1,8 +1,12 @@
 require 'geokit'
+require 'gravtastic'
 
 class Profile
   include Mongoid::Document
   include Badgeable::Subject
+  include Gravtastic
+
+  is_gravtastic!
 
   field :api_id, :type => Integer
   field :name, :type => String

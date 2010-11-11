@@ -10,6 +10,7 @@ gem "bson_ext"
 gem "mongo"
 gem "geokit"
 gem "badgeable"
+gem "gravtastic"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily

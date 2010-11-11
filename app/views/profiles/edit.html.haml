@@ -5,7 +5,9 @@
 	= render :partial => "shared/errors", :locals => { :o => @profile, :o_name => "Profile" }
 	.label= f.label :name
 	.control= f.text_field :name
-	
+	.label= f.label :email
+	.control= f.text_field :email
+		
 	.fieldset
 		%legend Location
 		= f.text_area :location, :size=>'20x3', :id=>:location, :class=>:location
