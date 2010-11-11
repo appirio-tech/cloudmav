@@ -11,7 +11,10 @@ class StackOverflowService
     result = JSON.parse(response.body)
     
     profile.url = result["profileUrl"]
-    profile.reputation = result["reputation"].sub!(",","").to_i
+    # reputation = result["reputation"].sub!(",","").to_i
+    # puts "rep? #{result["reputation"]}"
+    # puts "rep = #{reputation}"
+    profile.reputation = result["reputation"]
     profile.badge_html = result["badgeHtml"]
   end
   
