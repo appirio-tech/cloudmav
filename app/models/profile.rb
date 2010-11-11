@@ -1,3 +1,5 @@
+require 'geokit'
+
 class Profile
   include Mongoid::Document
   include Badgeable::Subject
@@ -49,6 +51,21 @@ class Profile
     result[:git_hub] = git_hub_profile.as_json unless git_hub_profile.nil?
     result[:speaker_rate] = speaker_rate_profile.as_json unless speaker_rate_profile.nil?
     return result
+  end
+  
+  class << self
+    def near_loc(location)
+      response = Geokit::Geocoders::MultiGeocoder.geocode(location)
+      near(:coordinates => [response.lat, response.lng, 1])
+    end
+    
+    def stack_overflow
+      where(:stack_overflow_profile.exists => true)
+    end
+    
+    def top_stack_overflow
+      stack_overflow.desc('stack_overflow_profile.reputation')
+    end
   end
   
   protected

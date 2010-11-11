@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  
   protect_from_forgery
   
   helper :all
@@ -6,5 +7,9 @@ class ApplicationController < ActionController::Base
   
   def current_profile
     current_user.profile
+  end
+  
+  def geocode(location)
+    MultiGeocoder.geocode(location)
   end
 end

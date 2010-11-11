@@ -7,7 +7,11 @@ Codemav::Application.routes.draw do
   end
   
   resources :profiles
-  resources :stack_overflow_profiles
+  resources :stack_overflow_profiles do
+    collection do
+      get "synch"
+    end
+  end
   resources :speaker_rate_profiles
   resources :git_hub_profiles do
     collection do
@@ -15,6 +19,11 @@ Codemav::Application.routes.draw do
     end
   end
   
+  resources :scoreboards do
+    collection do
+      get "stack_overflow"
+    end
+  end
   resources :people_searches
   
   namespace :api do

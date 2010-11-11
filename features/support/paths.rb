@@ -11,6 +11,8 @@ module NavigationHelpers
       profile_path(User.where(:email => @user.email).first.profile)
     when /the people search page/
       new_people_search_path
+    when /the StackOverflow scoreboard page/
+      stack_overflow_scoreboards_path
 
     else
       begin

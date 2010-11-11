@@ -3,3 +3,4 @@ Factory.define :user do |u|
   u.password "secret"
   u.password_confirmation "secret"
 end
+

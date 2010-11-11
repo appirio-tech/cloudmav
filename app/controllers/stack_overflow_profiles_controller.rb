@@ -12,4 +12,9 @@ class StackOverflowProfilesController < ApplicationController
     redirect_to current_profile
   end
   
+  def synch
+    current_profile.stack_overflow_profile.synch!
+    
+    redirect_to current_profile
+  end
 end

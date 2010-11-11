@@ -1,0 +1,7 @@
+
+%ul
+	- @profiles.each do |p|
+		%li
+			%p= p.name
+			%p= p.stack_overflow_profile.reputation
+	

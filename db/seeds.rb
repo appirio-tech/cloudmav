@@ -9,4 +9,4 @@ User.destroy_all
 Profile.destroy_all
 StackOverflowProfile.destroy_all
 SpeakerRateProfile.destroy_all
-Location.destroy_all
+GitHubProfile.destroy_all
