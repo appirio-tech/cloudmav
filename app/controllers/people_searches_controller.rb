@@ -8,7 +8,7 @@ class PeopleSearchesController < ApplicationController
   
   def create
     result = MultiGeocoder.geocode(params[:location])
-    @people = Profile.near(:coordinates => [ result.lat, result.lng, 30 ])
+    @people = Profile.near(:coordinates => [ result.lat, result.lng, 1 ])
   end
   
 end

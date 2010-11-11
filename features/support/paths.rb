@@ -9,6 +9,8 @@ module NavigationHelpers
       new_user_registration_path
     when /my profile page/
       profile_path(User.where(:email => @user.email).first.profile)
+    when /the people search page/
+      new_people_search_path
 
     else
       begin

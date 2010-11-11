@@ -12,7 +12,7 @@ class ProfilesController < ApplicationController
   def update
     @profile = current_profile
     @profile.update_attributes(params[:profile])
-    @profile.location = get_location if has_location?
+    # @profile.location = get_location if has_location?
     
     if @profile.save!
       flash[:notice] = "Profile updated"

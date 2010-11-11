@@ -14,6 +14,7 @@ require 'cucumber/web/tableish'
 
 require 'webrat'
 require 'webrat/core/matchers'
+require 'geokit'
 
 Webrat.configure do |config|
   config.mode = :rack

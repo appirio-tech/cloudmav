@@ -12,5 +12,5 @@ end
 
 Then /^I should be awarded the "([^"]*)" badge$/ do |name|
   profile = User.find(@user.id).profile
-  puts "badges: #{profile.badges.to_a.inspect}"
+  assert profile.has_badge_named?(name)
 end

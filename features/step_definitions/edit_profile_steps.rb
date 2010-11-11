@@ -23,10 +23,10 @@ Then /^my name should be updated to "([^"]*)"$/ do |name|
 end
 
 When /^I change my location$/ do
-  @location = Factory.build(:location)
-  fill_in :description, :with => @location.description
-  fill_in :lat, :with => @location.lat
-  fill_in :lng, :with => @location.lng
+  @location = { :location => "Houston, TX", :lat => 30, :lng => -90 }
+  fill_in :location, :with => @location[:location]
+  fill_in :lat, :with => @location[:lat]
+  fill_in :lng, :with => @location[:lng]
   click_button "Save"
   And %Q{I am redirected}
 end
@@ -34,8 +34,9 @@ end
 Then /^my location should be updated$/ do
   profile = Profile.find(@user.profile.id)
   
-  profile.location.description.should == @location.description
-  profile.location.lat.should == @location.lat
-  profile.location.lng.should == @location.lng
+  profile.location.should == @location[:location]
+  profile.lat.should == @location[:lat]
+  profile.lng.should == @location[:lng]
+  profile.coordinates.should_not be_nil
 end
 

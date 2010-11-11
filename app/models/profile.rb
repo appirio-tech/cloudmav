@@ -6,12 +6,26 @@ class Profile
   field :name
   field :email
   
+  field :lat, :type => Float
+  field :lng, :type => Float
+  field :location, :type => String
+  field :coordinates, :type => Array
+  
+  index [[ :coordinates, Mongo::GEO2D ]]
+  
+  before_save :update_coordinates
+  
+  def update_coordinates
+    unless lat.nil? || lng.nil?
+      self.coordinates = [lat, lng]
+    end
+  end
+  
   referenced_in :user
   
   embeds_one :stack_overflow_profile
   embeds_one :speaker_rate_profile
   embeds_one :git_hub_profile
-  embeds_one :location
     
   before_create :set_api_id
   
