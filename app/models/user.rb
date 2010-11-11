@@ -11,7 +11,7 @@ class User
   protected
   def add_profile
     if self.profile.nil?
-       self.profile = Profile.new 
+       self.profile = Profile.new(:email => self.email)
      end
   end
 end

@@ -20,3 +20,9 @@ Then /^I should have a profile$/ do
   user.profile.should_not be_nil
 end
 
+Then /^my profile email should be my user email$/ do
+  user = User.where(:email => @user.email).first
+  user.profile.email.should == @user.email
+end
+
+

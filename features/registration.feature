@@ -11,3 +11,4 @@ Feature: Registration
 		And I register with my information
 		Then I should be registered
 		And I should have a profile
+		And my profile email should be my user email
