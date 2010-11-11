@@ -6,12 +6,9 @@ class StackOverflowProfilesController < ApplicationController
   
   def create
     @stack_overflow_profile = StackOverflowProfile.new(params[:stack_overflow_profile])
-    StackOverflowService.synch(@stack_overflow_profile)
     @stack_overflow_profile.profile = current_profile
-    
-    current_profile.save!
-    @stack_overflow_profile.save!
-    
+    @stack_overflow_profile.synch!
+        
     redirect_to current_profile
   end
   

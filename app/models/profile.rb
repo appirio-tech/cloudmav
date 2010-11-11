@@ -1,5 +1,6 @@
 class Profile
   include Mongoid::Document
+  include Badgeable::Subject
 
   field :api_id, :type => Integer
   field :name

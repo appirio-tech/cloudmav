@@ -6,7 +6,13 @@ class StackOverflowProfile
   field :url
   field :badge_html
   
-  referenced_in :profile
+  embedded_in :profile, :inverse_of => :stack_overflow_profile
+  
+  def synch!
+    StackOverflowService.synch(self)
+    profile.save!
+    self.save!
+  end
   
   def as_json(opts={})
     { 
