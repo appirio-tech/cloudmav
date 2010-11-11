@@ -5,8 +5,8 @@ class Profile
   include Badgeable::Subject
 
   field :api_id, :type => Integer
-  field :name
-  field :email
+  field :name, :type => String
+  field :email, :type => String
   
   field :lat, :type => Float
   field :lng, :type => Float
@@ -34,7 +34,7 @@ class Profile
   scope :find_by_id, lambda { |id| { :where => { :api_id => id } } }
   
   def display_name
-    name unless name.nil?
+    return self.name unless self.name.nil?
     user.email
   end
   
