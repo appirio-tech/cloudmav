@@ -35,6 +35,7 @@ class Profile
   
   def display_name
     return self.name unless self.name.nil?
+    return self.email unless self.email.nil?
     user.email
   end
   
