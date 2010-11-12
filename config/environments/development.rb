@@ -30,5 +30,7 @@ Codemav::Application.configure do
     :password             => 'pennyM00n',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
+    
+  PAPERCLIP_CONFIG = {}
 end
 

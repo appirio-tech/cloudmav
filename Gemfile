@@ -12,6 +12,7 @@ gem "geokit"
 gem "badgeable"
 gem "gravtastic"
 gem "grackle"
+gem "paperclip"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily
