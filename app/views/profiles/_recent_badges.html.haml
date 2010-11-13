@@ -1,0 +1,9 @@
+.section#recent_badges
+	%h3 Recent Badges
+	%ul
+		- @profile.badges.each do |b|
+			%li
+				.badge
+					.badge_image
+					= b.name
+.clear

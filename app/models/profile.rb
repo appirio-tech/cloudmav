@@ -38,8 +38,8 @@ class Profile
   scope :find_by_id, lambda { |id| { :where => { :api_id => id } } }
   
   def display_name
-    return self.name unless self.name.nil?
-    return self.email unless self.email.nil?
+    return self.name unless self.name.blank?
+    return self.email unless self.email.blank?
     user.email
   end
   

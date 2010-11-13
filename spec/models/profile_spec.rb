@@ -28,6 +28,15 @@ describe Profile do
         profile.display_name.should == "John Doe"
       end
     end
+    
+    context "empty name" do
+      it "should use the profile email address" do
+        user = User.new(:email => "test@email.com")
+        profile = Profile.new(:user => user)
+        profile.name = ""
+        profile.display_name.should == "test@email.com"
+      end
+    end
   end
   
 end

@@ -1,6 +1,9 @@
 a {
   font-family: "Droid Sans", arial, serif; }
 
+hr {
+  border: 1px solid #0477bf; }
+
 .jquery-auto-geocoder-map {
   width: 150px;
   height: 150px; }
@@ -9,7 +12,7 @@ form p {
   margin-top: 10px;
   margin-bottom: 10px; }
 form label {
-  color: #2d406b;
+  color: #0477bf;
   font-size: 1.1em; }
 form input {
   font-size: 1.1em; }
@@ -25,8 +28,77 @@ form textarea {
 
 #content {
   font-family: 'Droid Sans', arial, serif;
-  font-size: 1em; }
+  font-size: 1em;
+  margin-top: 20px; }
   #content h2 {
     font-size: 2em;
-    color: #2d406b;
+    color: #0d0d0d;
     text-transform: lowercase; }
+
+#profile_pic {
+  border: 1px solid #0d0d0d; }
+
+#recent_badges {
+  height: 75px; }
+  #recent_badges h3 {
+    width: 120px; }
+  #recent_badges .badge .badge_image {
+    width: 50px;
+    height: 50px; }
+
+#languages {
+  height: 75px; }
+
+#technologies {
+  height: 75px; }
+
+#disciplines {
+  height: 75px; }
+
+#current_employment {
+  height: 75px; }
+
+#top_colleagues {
+  height: 75px; }
+
+.menu {
+  border-bottom: 1px solid #0477bf;
+  margin: 0;
+  margin-top: 15px;
+  padding-bottom: 19px;
+  padding-left: 10px; }
+  .menu ul, .menu li {
+    display: inline;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px; }
+  .menu a:link, .menu a:visited {
+    background: #f2f2f2;
+    border: 1px solid #0477bf;
+    color: #0d0d0d;
+    float: left;
+    font-size: small;
+    font-weight: normal;
+    line-height: 14px;
+    margin-right: 8px;
+    padding: 2px 10px 2px 10px;
+    text-decoration: none; }
+  .menu a:link.active, .menu a:visited.active {
+    background: white;
+    border-bottom: 1px solid white;
+    color: #0477bf; }
+  .menu a:hover {
+    color: #f00; }
+
+.section {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px solid #CCCCCC;
+  padding: 10px;
+  margin-top: 10px; }
+  .section h3 {
+    position: relative;
+    top: -15px;
+    color: #0477bf;
+    font-size: .75em;
+    background: white; }

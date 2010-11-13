@@ -1,9 +1,48 @@
 
+.grid_2
+	= image_tag @profile.gravatar_url, :id => :profile_pic
 .grid_6
 	%h2= @profile.display_name
 	- if @profile == current_profile
 		= link_to "Edit profile", edit_profile_path(@profile)
-	= image_tag @profile.gravatar_url
+.grid_8
+	%nbsp
+.clear
+
+%hr
+
+.grid_4
+	= render :partial => "basic_info"
+.grid_4
+	= render :partial => "languages"
+.grid_4
+	= render :partial => "technologies"
+.grid_4
+	= render :partial => "disciplines"
+.clear
+
+.menu
+	%ul
+		%li= link_to "Snapshot", @profile
+		%li= link_to "Experience", "/"
+		%li= link_to "Contributing", "/"
+		%li= link_to "Speaking", "/"
+		%li= link_to "Writing", "/"
+		%li= link_to "Code", "/"
+.clear	
+
+.grid_8
+	= render :partial => "current_employment"
+.grid_8
+	= render :partial => 'recent_badges'
+.clear
+
+.grid_8
+	= render :partial => "recent_blog_posts"
+.grid_4
+	= render :partial => "recent_activity"
+.grid_4
+	= render :partial => "recent_tweets"
 .clear
 
 #map_canvas{:style => "width:150px;height:150px;"}
@@ -11,7 +50,7 @@
 = render :partial => 'stack_overflow_profiles/profile'
 = render :partial => 'speaker_rate_profiles/profile'
 = render :partial => 'git_hub_profiles/profile'
-= render :partial => 'badges'
+
 
 - unless @profile.location.nil?
 	:javascript

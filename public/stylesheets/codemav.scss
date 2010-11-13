@@ -4,15 +4,27 @@
 // dark blue 212736
 // orange E03F00
 
-$lightest_blue: #6279B5;
-$light_blue: #415173;
-$blue: #2D406B;
-$dark_blue: #212736;
+$lightest_blue: #73B2D9;
+$light_blue: #35AAF2;
+$blue: #0477BF;
+$off_white: #F2F2F2;
+$dark_gray: #8d8d8d;
+$gray: #595959;
+$black: #0D0D0D;
 $contrast: #E03F00;
+$white: #FFFFFF;
 $font_family: 'Droid Sans', arial, serif;
+
+@mixin corners($radius: 5px) {
+	border-radius: $radius;
+	-moz-border-radius: $radius;	
+}
 
 a {
 	font-family: $font_family;
+}
+hr {
+	border: 1px solid $blue;
 }
 
 .jquery-auto-geocoder-map {
@@ -50,11 +62,93 @@ form {
 #content {
 	font-family: 'Droid Sans', arial, serif;
 	font-size: 1em;
-	
+	margin-top: 20px;
 	h2 {
 		font-size: 2em;
-		color:$blue;
+		color:$black;
 		text-transform: lowercase;
 	}
 }
 
+#profile_pic {
+	border: 1px solid $black;
+}
+#recent_badges {
+	height: 75px;
+	h3 {
+		width: 120px;
+	}
+	.badge {
+		.badge_image {
+			width: 50px;
+			height: 50px;
+		}
+	}
+}
+
+#languages {
+	height: 75px;
+}
+#technologies {
+	height: 75px;
+}
+#disciplines {
+	height: 75px;
+}
+#current_employment {
+	height: 75px;
+}
+#top_colleagues {
+	height: 75px;
+}
+
+.menu {
+	border-bottom: 1px solid $blue;
+	margin: 0;
+	margin-top:15px;
+	padding-bottom: 19px;
+	padding-left: 10px;
+	ul, li {
+		display: inline;
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;		
+	}
+	a:link, a:visited	{
+		background: $off_white;
+		border: 1px solid $blue;
+		color: $black;
+		float: left;
+		font-size: small;
+		font-weight: normal;
+		line-height: 14px;
+		margin-right: 8px;
+		padding: 2px 10px 2px 10px;
+		text-decoration: none;
+	}
+
+	a:link.active, a:visited.active	{
+		background: $white;
+		border-bottom: 1px solid $white;
+		color: $blue;
+	}
+
+	a:hover	{
+		color: #f00;
+	}
+}
+
+
+.section {
+	@include corners;
+	border: 1px solid #CCCCCC;
+	padding: 10px;
+	margin-top:10px;
+	h3 {
+		position:relative;
+		top:-15px;
+		color: $blue;
+		font-size: .75em;
+		background: $white;
+	}
+}
