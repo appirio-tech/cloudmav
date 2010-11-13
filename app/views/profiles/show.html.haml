@@ -5,6 +5,7 @@
 	%h2= @profile.display_name
 	- if @profile == current_profile
 		= link_to "Edit profile", edit_profile_path(@profile)
+	= render :partial => "profile_icons"
 .grid_8
 	%nbsp
 .clear
@@ -44,27 +45,3 @@
 .grid_4
 	= render :partial => "recent_tweets"
 .clear
-
-#map_canvas{:style => "width:150px;height:150px;"}
-
-= render :partial => 'stack_overflow_profiles/profile'
-= render :partial => 'speaker_rate_profiles/profile'
-= render :partial => 'git_hub_profiles/profile'
-
-
-- unless @profile.location.nil?
-	:javascript
-		$(document).ready(function($) {
-			var myLatlng = new google.maps.LatLng(#{@profile.lat},#{@profile.lng});
-			var myOptions = {
-			  zoom: 14,
-			  center: myLatlng,
-			  mapTypeId: google.maps.MapTypeId.ROADMAP
-			}
-			var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-		  var flatLatLng = new google.maps.LatLng(#{@profile.lat},#{@profile.lng});
-		  var beachMarker = new google.maps.Marker({
-		      position: flatLatLng,
-		      map: map
-		  });
-		});
