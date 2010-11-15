@@ -1,8 +1,12 @@
 #basic_info
-	%ul
-		%li= @profile.email
-		%li
-			- if @profile.location.blank?
-				= "lives in #{link_to "not set", edit_profile_path(@profile)}".html_safe
-			- else
-				= "lives in #{@profile.location}"
+	%table
+		%tr
+			%td Email
+			%td= @profile.email
+		%tr
+			%td Lives in
+			%td
+				- if @profile.location.blank?
+					= link_to "not set", edit_profile_path(@profile)
+				- else
+					= @profile.location
