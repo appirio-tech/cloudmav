@@ -1,0 +1,9 @@
+%h2 Add a Company to CodeMav
+
+= form_for @company, :html => {:multipart => true} do |f|
+	.label= f.label :name
+	.control= f.text_field :name
+	.label= f.label :logo
+	.control=f.file_field :logo
+	= f.hidden_field :logo_cache
+	.submit= f.submit "Add Company", :disable_with => "Adding Company..."
