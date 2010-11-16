@@ -1,0 +1,23 @@
+%h2 Add User Group
+
+= form_for @user_group do |f|
+	.label= f.label :name
+	.control= f.text_field :name
+	
+	.fieldset
+		%legend Location
+		= f.text_area :location, :size=>'20x3', :id=>:location, :class=>:location
+		= f.hidden_field :lat, :id => :lat
+		= f.hidden_field :lng, :id => :lng
+
+	.submit= f.submit "Add", :disable_with => "Adding..."
+
+:javascript
+	$(document).ready(function() {		
+		$('#location')
+		.bind('auto-geocoder.onGeocodeSuccess', function(e, results, status) {
+			$("#lng").val(results[0].geometry.location.lng());
+			$("#lat").val(results[0].geometry.location.lat());
+		})
+		.autoGeocoder();
+	});

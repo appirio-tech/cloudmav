@@ -27,6 +27,7 @@ Codemav::Application.routes.draw do
   resources :people_searches
   
   resources :companies
+  resources :user_groups
   
   namespace :api do
     resources :profiles
