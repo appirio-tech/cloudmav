@@ -13,6 +13,11 @@ module NavigationHelpers
       new_people_search_path
     when /the StackOverflow scoreboard page/
       stack_overflow_scoreboards_path
+      
+    when /the add a company page/
+      new_company_path
+    when /the company "(.*)" page/
+      company_path(Company.where(:name => $1).first)
 
     else
       begin

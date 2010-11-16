@@ -7,6 +7,6 @@ Feature: Companies
 	Scenario: Add Company
 	
 		Given I am logged in
-		When I add a company
+		When I add a company "Acme Corp"
 		Then the company should be added
-		And I should be on the company page
+		And I should be on the company "Acme Corp" page

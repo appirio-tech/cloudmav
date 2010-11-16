@@ -1,5 +1,6 @@
 #profile_icons
 	%ul
-		%li.icon
-			.left= image_tag "stack_overflow_icon.png"
-			.score= @profile.stack_overflow_profile.reputation
+		- unless @profile.stack_overflow_profile.nil?
+			%li.icon
+				.left= image_tag "stack_overflow_icon.png"
+				.score= @profile.stack_overflow_profile.reputation
