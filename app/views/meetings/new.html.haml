@@ -1,0 +1,10 @@
+%h2= "Schedule a new meeting for #{@user_group.name}"
+
+= form_for [@user_group, @meeting] do |f|
+	.label= f.label :title
+	.control= f.text_field :title
+	.label= f.label :summary
+	.control= f.text_area :summary
+
+	.submit= f.submit "Add", :disable_with => "Adding..."
+	

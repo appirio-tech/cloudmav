@@ -19,6 +19,12 @@ module NavigationHelpers
     when /the company "(.*)" page/
       company_path(Company.where(:name => $1).first)
 
+    # User Groups
+    when /the add a user group page/
+      new_user_group_path
+    when /the "(.*)" user group page/
+      user_group_path(UserGroup.where(:name => $1).first)
+      
     else
       begin
         page_name =~ /the (.*) page/

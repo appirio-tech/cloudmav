@@ -1,13 +1,12 @@
-class UserGroup
+class Meeting
   include Mongoid::Document
 
-  field :name, :type => String
+  field :title, :type => String
+  field :start, :type => DateTime
+  field :end, :type => DateTime
+  field :summary, :type => String
   
-  embeds_many :meetings
-  
-  def schedule_new_meeting
-    meetings.build(:lat => self.lat, :lng => self.lng, :location => self.location, :coordinates => self.coordinates)
-  end
+  embedded_in :user_group, :inverse_of => :meeting
   
   field :lat, :type => Float
   field :lng, :type => Float
