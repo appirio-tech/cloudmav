@@ -10,6 +10,7 @@ $blue: #0477BF;
 $off_white: #F2F2F2;
 $dark_gray: #8d8d8d;
 $gray: #595959;
+$light_gray: #868686;
 $black: #0D0D0D;
 $contrast: #E03F00;
 $white: #FFFFFF;
@@ -20,9 +21,16 @@ $font_family: 'Droid Sans', arial, serif;
 	-moz-border-radius: $radius;	
 }
 
+h2 {
+	font-size: 2em;
+	color:$black;
+	margin-bottom: 15px;
+}
+
 a {
 	font-family: $font_family;
 }
+
 hr {
 	border: 1px solid $blue;
 }
@@ -39,11 +47,15 @@ hr {
 	height: 150px;
 }
 
-$form_font_size:1.1em;
+$form_font_size:1em;
+$form_top_margin:10px;
 form {
 	p {
 		margin-top: 10px;
 		margin-bottom: 10px;
+	}
+	.label {
+		margin-top:$form_top_margin;
 	}
 	label {
 		color:$blue;
@@ -51,9 +63,34 @@ form {
 	}
 	input {
 		font-size:$form_font_size;
+		margin-top:$form_top_margin;
+		border: 1px solid $gray;
+		padding: 4px;
+		&:focus {
+			border: 1px solid $light_blue;
+		}
+	}
+	input[type=submit] {
+		@include corners;
+		border: 1px solid $gray;
+		background: $blue;
+		color:$white;
+		padding: 7px;
+		font-size: .9em;
+		&:hover {
+			background: $light_blue;
+			border: 1px solid $blue;
+		}
 	}
 	textarea {
 		font-size:$form_font_size;
+		margin-top:$form_top_margin;
+		height: 100px;
+		border: 1px solid $gray;
+		padding: 4px;
+		&:focus {
+			border: 1px solid $light_blue;
+		}
 	}
 }
 
@@ -70,11 +107,6 @@ form {
 	font-family: 'Droid Sans', arial, serif;
 	font-size: 1em;
 	margin-top: 20px;
-	h2 {
-		font-size: 2em;
-		color:$black;
-		text-transform: lowercase;
-	}
 }
 
 #profile_pic {

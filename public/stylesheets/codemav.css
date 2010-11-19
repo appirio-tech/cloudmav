@@ -1,3 +1,8 @@
+h2 {
+  font-size: 2em;
+  color: #0d0d0d;
+  margin-bottom: 15px; }
+
 a {
   font-family: "Droid Sans", arial, serif; }
 
@@ -17,13 +22,37 @@ hr {
 form p {
   margin-top: 10px;
   margin-bottom: 10px; }
+form .label {
+  margin-top: 10px; }
 form label {
   color: #0477bf;
-  font-size: 1.1em; }
+  font-size: 1em; }
 form input {
-  font-size: 1.1em; }
+  font-size: 1em;
+  margin-top: 10px;
+  border: 1px solid #595959;
+  padding: 4px; }
+  form input:focus {
+    border: 1px solid #35aaf2; }
+form input[type=submit] {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px solid #595959;
+  background: #0477bf;
+  color: white;
+  padding: 7px;
+  font-size: .9em; }
+  form input[type=submit]:hover {
+    background: #35aaf2;
+    border: 1px solid #0477bf; }
 form textarea {
-  font-size: 1.1em; }
+  font-size: 1em;
+  margin-top: 10px;
+  height: 100px;
+  border: 1px solid #595959;
+  padding: 4px; }
+  form textarea:focus {
+    border: 1px solid #35aaf2; }
 
 #header {
   margin-top: 10px;
@@ -36,10 +65,6 @@ form textarea {
   font-family: 'Droid Sans', arial, serif;
   font-size: 1em;
   margin-top: 20px; }
-  #content h2 {
-    font-size: 2em;
-    color: #0d0d0d;
-    text-transform: lowercase; }
 
 #profile_pic {
   border: 1px solid #0d0d0d; }
