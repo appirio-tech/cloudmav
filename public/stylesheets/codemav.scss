@@ -14,11 +14,15 @@ $light_gray: #868686;
 $black: #0D0D0D;
 $contrast: #E03F00;
 $white: #FFFFFF;
-$font_family: 'Droid Sans', arial, serif;
+$droid: 'Droid Sans', arial, serif;
 
 @mixin corners($radius: 5px) {
 	border-radius: $radius;
 	-moz-border-radius: $radius;	
+}
+
+body {
+	font-family: $droid;
 }
 
 h2 {
@@ -28,7 +32,7 @@ h2 {
 }
 
 a {
-	font-family: $font_family;
+	font-family: $droid;
 }
 
 hr {
@@ -211,5 +215,16 @@ form {
 		color: $blue;
 		font-size: .75em;
 		background: $white;
+	}
+}
+
+#beta_login {
+	margin-top: 100px;
+	margin-right: auto;
+	p {
+		margin-top:10px;
+	}
+	form {
+		margin-top: 10px;
 	}
 }

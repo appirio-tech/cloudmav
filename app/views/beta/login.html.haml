@@ -1,0 +1,35 @@
+!!! XML
+!!!
+%html{ :lang => "en", "xml:lang" => "en", :xmlns => 'http://www.w3.org/1999/xhtml' }
+	%head
+		%title Codemav
+		= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Cuprum&subset=latin"
+		= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Droid+Sans&subset=latin"
+		= stylesheet_link_tag "reset"
+		= stylesheet_link_tag "960"
+		= stylesheet_link_tag "codemav"
+		= javascript_include_tag "jquery-1.4.2.min"
+		= javascript_include_tag "jquery-ui-1.8.5.custom.min"
+		= javascript_include_tag "rails"
+		= csrf_meta_tag
+		= yield(:header)
+	%body.container_16#beta_login
+		.prefix_4.grid_8
+			= image_tag "codemav_logo.png"
+		.clear
+		.prefix_4.grid_8
+			%p
+				CodeMav is currently being tested to ensure a high quality of service and functionality. Be sure to check back later once the testing has been completed. Thanks for your patience!
+			%p
+				If you have a beta key, please enter it below to have access to the website.
+		.clear
+		.prefix_5.grid_8
+			- form_tag do |f|
+				= password_field_tag :beta_key, '', :id => 'beta_key'
+				= submit_tag "Enter Beta Key", :disable_with => "Validating..."
+		.clear
+
+:javascript
+	$(document).ready(function($) {
+		$('#beta_key').focus();
+	})
