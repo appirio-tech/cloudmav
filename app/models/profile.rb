@@ -1,5 +1,6 @@
 require 'geokit'
 require 'gravtastic'
+require 'score_it'
 
 class Profile
   include Mongoid::Document

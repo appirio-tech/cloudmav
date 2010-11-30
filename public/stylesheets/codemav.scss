@@ -76,7 +76,7 @@ form {
 	}
 	input[type=submit] {
 		@include corners;
-		border: 1px solid $gray;
+		border: 1px solid $light_gray;
 		background: $blue;
 		color:$white;
 		padding: 7px;
@@ -117,8 +117,15 @@ form {
 	border: 1px solid $black;
 }
 #profile_icons {
+	margin-top: 10px;
 	.icon {
+		float: left;
+		margin-right: 15px;
+		.image {
+			float: left;
+		}
 		.score {
+			float: left;
 			font-size: 1.5em;
 			position: relative;
 			top: 15px;

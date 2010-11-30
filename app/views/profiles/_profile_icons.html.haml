@@ -1,6 +1,8 @@
 #profile_icons
-	%ul
-		- unless @profile.stack_overflow_profile.nil?
-			%li.icon
-				.left= image_tag "stack_overflow_icon.png"
-				.score= @profile.stack_overflow_profile.reputation
+	.icon
+		.image= image_tag "codemav_icon.png"
+		.score= @profile.total_score
+	- unless @profile.stack_overflow_profile.nil?
+		.icon
+			.image= image_tag "stack_overflow_icon.png"
+			.score= @profile.stack_overflow_profile.reputation
