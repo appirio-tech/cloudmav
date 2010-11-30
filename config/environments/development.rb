@@ -1,3 +1,5 @@
+require 'score_it'
+
 Codemav::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
 
@@ -38,5 +40,6 @@ Codemav::Application.configure do
     config.s3_secret_access_key = 'lS6yGtJigI+VMAMmToQXzdrMLJRz8EQ0spY29MHv'
     config.s3_bucket = 'codemav_test'
   end
+  
 end
 

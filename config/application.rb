@@ -18,5 +18,9 @@ module Codemav
     config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
     config.filter_parameters += [:password, :password_confirmation]
+    
+    # config.to_prepare do
+    #   ScoreIt::Dsl.class_eval(File.read("#{Rails.root}/lib/scores.rb"))
+    # end
   end
 end
