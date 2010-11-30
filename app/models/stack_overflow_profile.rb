@@ -2,7 +2,7 @@ class StackOverflowProfile
   include Mongoid::Document
   
   field :stack_overflow_id
-  field :reputation, :type => Integer
+  field :reputation, :type => Integer, :default => 0
   field :url
   field :badge_html
   

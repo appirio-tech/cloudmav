@@ -5,6 +5,7 @@ class Profile
   include Mongoid::Document
   include Badgeable::Subject
   include Gravtastic
+  include ScoreIt::Subject
 
   is_gravtastic!
 
