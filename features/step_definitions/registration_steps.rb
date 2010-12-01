@@ -3,6 +3,7 @@ end
 
 When /^I register with my information$/ do
   @user = Factory.build(:user)
+  fill_in :username, :with => @user.username
   fill_in :email, :with => @user.email
   fill_in :password, :with => @user.password
   fill_in "Password confirmation", :with => @user.password_confirmation

@@ -1,6 +1,7 @@
 .grid_16
 	%h2 Sign in
 	= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+		= devise_error_messages!
 		- if resource.errors.any?
 			#error_explanation
 				%h2 You couldn't sign into CodeMav because...
@@ -8,15 +9,16 @@
 					- resource.errors.full_messages.each do |msg|
 						%li= msg
 					
-		.label= f.label :email
-		.control= f.text_field :email
+		.label= f.label :username
+		.control= f.text_field :username
 		
 		.label= f.label :password
 		.control= f.password_field :password
 			
 		- if devise_mapping.rememberable?
-			.label= f.check_box :remember_me
-			.control= f.label :remember_me
+			.control
+				= f.check_box :remember_me
+				= f.label :remember_me
 		
 		.submit= f.submit "Sign in", :disable_with => "Signing in..."
 

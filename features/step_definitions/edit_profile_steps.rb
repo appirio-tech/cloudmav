@@ -1,7 +1,7 @@
 Given /^I am logged in$/ do
   @user = Factory.create(:user)
   And %Q{I go to the login page}
-  fill_in :email, :with => @user.email
+  fill_in :username, :with => @user.username
   fill_in :password, :with => 'secret'
   click_button "Sign in"
   And %Q{I am redirected}

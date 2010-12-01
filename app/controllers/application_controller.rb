@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
   end
   
   def beta_protection
+    return if Rails.env.test?
     unless session[:beta_invite_code] == BetaController::KEY
       flash[:notice] = "Please enter your beta key"
       redirect_to beta_login_path
