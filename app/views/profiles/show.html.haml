@@ -1,47 +1,47 @@
+#profile
+	.grid_2
+		= image_tag @profile.gravatar_url, :id => :profile_pic
+	.grid_14
+		%h2
+			.username= @profile.username
+			.profile_name= "(#{@profile.display_name})"
+			- if @profile == current_profile
+				= link_to "edit profile", edit_profile_path(@profile)
+		= render :partial => "profile_icons"
+	.clear
+	
+	%hr{:style => "margin-top: 20px;margin-bottom: 20px"}
 
-.grid_2
-	= image_tag @profile.gravatar_url, :id => :profile_pic
-.grid_6
-	%h2= @profile.display_name
-	- if @profile == current_profile
-		= link_to "Edit profile", edit_profile_path(@profile)
-	= render :partial => "profile_icons"
-.grid_8
-	%nbsp
-.clear
+	.grid_4
+		= render :partial => "basic_info"
+	.grid_4
+		= render :partial => "languages"
+	.grid_4
+		= render :partial => "technologies"
+	.grid_4
+		= render :partial => "disciplines"
+	.clear
 
-%hr
+	.menu
+		%ul
+			%li= link_to "Snapshot", @profile
+			%li= link_to "Experience", "/"
+			%li= link_to "Contributing", "/"
+			%li= link_to "Speaking", "/"
+			%li= link_to "Writing", "/"
+			%li= link_to "Code", "/"
+	.clear	
 
-.grid_4
-	= render :partial => "basic_info"
-.grid_4
-	= render :partial => "languages"
-.grid_4
-	= render :partial => "technologies"
-.grid_4
-	= render :partial => "disciplines"
-.clear
+	.grid_8
+		= render :partial => "current_employment"
+	.grid_8
+		= render :partial => 'recent_badges'
+	.clear
 
-.menu
-	%ul
-		%li= link_to "Snapshot", @profile
-		%li= link_to "Experience", "/"
-		%li= link_to "Contributing", "/"
-		%li= link_to "Speaking", "/"
-		%li= link_to "Writing", "/"
-		%li= link_to "Code", "/"
-.clear	
-
-.grid_8
-	= render :partial => "current_employment"
-.grid_8
-	= render :partial => 'recent_badges'
-.clear
-
-.grid_8
-	= render :partial => "recent_blog_posts"
-.grid_4
-	= render :partial => "recent_activity"
-.grid_4
-	= render :partial => "recent_tweets"
-.clear
+	.grid_8
+		= render :partial => "recent_blog_posts"
+	.grid_4
+		= render :partial => "recent_activity"
+	.grid_4
+		= render :partial => "recent_tweets"
+	.clear

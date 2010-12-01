@@ -39,10 +39,12 @@ class Profile
   
   scope :find_by_id, lambda { |id| { :where => { :api_id => id } } }
   
+  def username
+    self.user.username
+  end
+  
   def display_name
-    return self.name unless self.name.blank?
-    return self.email unless self.email.blank?
-    user.email
+    (self.name.blank?) ? self.email : self.name
   end
   
   def to_param
