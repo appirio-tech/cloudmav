@@ -7,7 +7,13 @@ h2 {
   margin-bottom: 15px; }
 
 a {
-  font-family: "Droid Sans", arial, serif; }
+  font-family: "Droid Sans", arial, serif;
+  text-decoration: none;
+  color: #0477bf; }
+  a:visited {
+    color: #0477bf; }
+  a:hover {
+    color: #35aaf2; }
 
 hr {
   border: 1px solid #0477bf; }
@@ -82,12 +88,38 @@ form textarea {
   .field_with_errors input {
     border: 2px solid #cb2324; }
 
+.photo {
+  border: 1px solid #eeeeee; }
+
 #header {
   margin-top: 10px;
   margin-bottom: 10px; }
   #header h1 {
     font-family: 'Cuprum', arial, serif;
     font-size: 5em; }
+
+#login_panel {
+  border: solid 1px #eeeeee;
+  padding: 5px;
+  font-size: 0.9em;
+  height: 40px;
+  width: 250px; }
+  #login_panel .avatar {
+    float: left;
+    margin-right: 10px; }
+  #login_panel .logout {
+    float: right; }
+    #login_panel .logout a {
+      font-size: 0.8em; }
+  #login_panel .username a {
+    font-size: 1.1em; }
+  #login_panel .points {
+    margin-top: 5px; }
+    #login_panel .points img {
+      margin-right: 5px;
+      float: left; }
+    #login_panel .points .score {
+      padding-top: 1px; }
 
 #content {
   font-family: 'Droid Sans', arial, serif;

@@ -34,6 +34,14 @@ h2 {
 
 a {
 	font-family: $droid;
+	text-decoration: none;
+	color: $blue;
+	&:visited {
+		color: $blue;
+	}
+	&:hover {
+		color: $light_blue;
+	}
 }
 
 hr {
@@ -132,12 +140,49 @@ $error_background: #FFDFDF;
 	}
 }
 
+.photo {
+	border: 1px solid $offwhite;
+}
+
 #header {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	h1 { 
 		font-family: 'Cuprum', arial, serif;
 		font-size: 5em;
+	}
+}
+
+#login_panel {
+	border: solid 1px $offwhite;
+	padding: 5px;
+	font-size: 0.9em;
+	height: 40px;
+	width: 250px;
+	.avatar {
+		float:left;
+		margin-right: 10px;
+	}
+	.logout {
+		float:right;
+		a {
+			font-size: 0.8em;
+		}
+	}
+	.username {
+		a {
+			font-size: 1.1em;
+		}
+	}
+	.points {
+		margin-top: 5px;
+		img {
+			margin-right: 5px;
+			float:left;
+		}
+		.score {
+			padding-top: 1px;
+		}
 	}
 }
 

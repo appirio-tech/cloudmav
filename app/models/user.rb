@@ -8,6 +8,8 @@ class User
   
   references_one :profile
   
+  field :username, :type => String
+  
   protected
   def add_profile
     if self.profile.nil?
