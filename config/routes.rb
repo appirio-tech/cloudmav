@@ -6,6 +6,7 @@ Codemav::Application.routes.draw do
     get "login", :to => "devise/sessions#new"
     get 'logout', :to => "devise/sessions#destroy"
   end
+  match 'after_sign_in_path_for', :to => 'profile#show', :as => :after_sign_in_path_for
   
   resources :profiles
   resources :stack_overflow_profiles do

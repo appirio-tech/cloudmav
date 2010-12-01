@@ -107,7 +107,30 @@ form {
 	background-color: $offwhite;
 }
 
-
+$error_border: #CB2324;
+$error_background: #FFDFDF;
+#error_explanation {
+	border: 2px solid $error_border;
+	background-color: $error_background;
+	padding: 7px;
+	padding-bottom: 10px;
+	h2 {
+		font-size: 1.2em;
+	}
+	ul {
+		list-style: disc;
+		li {
+			margin-left:20px;
+		}
+	}
+}
+.field_with_errors {
+	margin: 0px;
+	padding: 0px;
+	input {
+		border: 2px solid $error_border;
+	}
+}
 
 #header {
 	margin-top: 10px;
