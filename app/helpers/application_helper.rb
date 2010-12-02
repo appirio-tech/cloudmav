@@ -12,5 +12,10 @@ module ApplicationHelper
     end
     return fl.html_safe
   end
-  
+
+  def js_date(date)
+    return escape_javascript "new Date()" if date.nil?
+    escape_javascript "new Date(#{date.year}, #{date.month - 1}, #{date.day})"
+  end
+    
 end

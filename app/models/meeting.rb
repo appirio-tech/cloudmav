@@ -6,6 +6,9 @@ class Meeting
   field :end, :type => DateTime
   field :summary, :type => String
   
+  validates_presence_of :title
+  validates_presence_of :summary
+  
   embedded_in :user_group, :inverse_of => :meeting
   
   field :lat, :type => Float

@@ -1,6 +1,6 @@
 #profile
 	.grid_2
-		= image_tag @profile.gravatar_url, :id => :profile_pic
+		= image_tag @profile.gravatar_url(:size => 100), :id => :profile_pic
 	.grid_14
 		%h2
 			.username= @profile.username

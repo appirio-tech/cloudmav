@@ -138,10 +138,30 @@ $error_background: #FFDFDF;
 	input {
 		border: 2px solid $error_border;
 	}
+	textarea {
+		border: 2px solid $error_border;
+	}
 }
 
 .photo {
 	border: 1px solid $offwhite;
+}
+
+.set_location {
+	// border: 1px solid $light_gray;
+	// padding: 10px;
+	width: 450px;
+	margin-top: 15px;
+	legend {
+		color: $blue;
+	}
+	textarea {
+		float:left;
+		margin-right: 10px;
+	}
+	.jquery-auto-geocoder-map {
+		border: 1px solid $light_gray;
+	}
 }
 
 #header {

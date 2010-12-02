@@ -4,6 +4,6 @@
 
 %h3 Meetings
 %ul
-	- @user_group.meetings do |m|
+	- @meetings.each do |m|
 		%li= m.title
 	

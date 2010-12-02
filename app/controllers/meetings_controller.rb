@@ -7,7 +7,6 @@ class MeetingsController < ApplicationController
   
   def create
     @meeting = @user_group.meetings.build(params[:meeting])
-
     if @meeting.save
       redirect_to @user_group
     else

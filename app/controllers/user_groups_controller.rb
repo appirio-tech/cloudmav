@@ -6,6 +6,7 @@ class UserGroupsController < ApplicationController
   
   def show
     @user_group = UserGroup.find(params[:id])
+    @meetings = @user_group.meetings
   end
   
   def new

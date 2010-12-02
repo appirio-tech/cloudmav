@@ -8,7 +8,7 @@
 	.label= f.label :email
 	.control= f.text_field :email
 		
-	.fieldset
+	.fieldset.set_location
 		%legend Location
 		= f.text_area :location, :size=>'20x3', :id=>:location, :class=>:location
 		= f.hidden_field :lat, :id => :lat
