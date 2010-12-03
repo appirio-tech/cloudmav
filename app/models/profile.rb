@@ -1,12 +1,14 @@
 require 'geokit'
 require 'gravtastic'
 require 'score_it'
+require 'virgil'
 
 class Profile
   include Mongoid::Document
   include Badgeable::Subject
   include Gravtastic
   include ScoreIt::Subject
+  include Virgil::Teachable
 
   is_gravtastic!
 

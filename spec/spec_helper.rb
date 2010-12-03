@@ -4,6 +4,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'geokit'
 require 'score_it'
+require 'virgil'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -13,6 +14,9 @@ RSpec.configure do |config|
 
   config.mock_with :mocha
 
+  config.before :each do
+    Mongoid.master.collections.select {|c| c.name !~ /system/ }.each(&:drop)
+  end
   # # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

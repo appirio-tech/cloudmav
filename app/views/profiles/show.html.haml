@@ -14,34 +14,12 @@
 
 	.grid_4
 		= render :partial => "basic_info"
-	.grid_4
-		= render :partial => "languages"
-	.grid_4
-		= render :partial => "technologies"
-	.grid_4
-		= render :partial => "disciplines"
+	
 	.clear
 
-	.menu
+	#tabs
 		%ul
-			%li= link_to "Snapshot", @profile
-			%li= link_to "Experience", "/"
-			%li= link_to "Contributing", "/"
-			%li= link_to "Speaking", "/"
-			%li= link_to "Writing", "/"
-			%li= link_to "Code", "/"
-	.clear	
-
-	.grid_8
-		= render :partial => "current_employment"
-	.grid_8
-		= render :partial => 'recent_badges'
-	.clear
-
-	.grid_8
-		= render :partial => "recent_blog_posts"
-	.grid_4
-		= render :partial => "recent_activity"
-	.grid_4
-		= render :partial => "recent_tweets"
-	.clear
+			%li= link_to "Experience", "#experience"
+			%li= link_to "Community", "#community"
+		#experience= render :partial => "experience"
+		#community= render :partial => "community"

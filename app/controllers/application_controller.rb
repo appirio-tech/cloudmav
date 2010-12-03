@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :beta_protection
-  
+
   helper :all
   helper_method :current_profile
   
