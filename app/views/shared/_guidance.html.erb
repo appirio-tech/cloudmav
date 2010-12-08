@@ -1,0 +1,11 @@
+
+<% unless @guidance.nil? %>
+	<div id='guidance'>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			$("#guidance").append("<%= escape_javascript(render :partial => @guidance.partial_location) %>");
+		});
+	</script>
+		
+<% end %>

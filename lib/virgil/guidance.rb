@@ -14,4 +14,8 @@ class Guidance
   def partial?
     partial
   end
+  
+  def partial_location
+    "guidance/#{self.partial}"
+  end
 end

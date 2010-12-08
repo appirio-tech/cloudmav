@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :beta_protection
+  before_filter :get_guidance
 
   helper :all
   helper_method :current_profile
@@ -20,5 +21,11 @@ class ApplicationController < ActionController::Base
       redirect_to beta_login_path
       return false
     end
+  end
+  
+  def get_guidance
+    return if current_user.nil?
+    @guidance = current_profile.get_guidance
+    puts "guidance is #{@guidance.inspect}"
   end
 end
