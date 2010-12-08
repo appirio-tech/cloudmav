@@ -3,8 +3,8 @@
 		= image_tag @profile.gravatar_url(:size => 100), :id => :profile_pic
 	.grid_14
 		%h2
-			.username= @profile.username
-			.profile_name= "(#{@profile.display_name})"
+			.username= @profile.display_name
+			.profile_name= "(#{@profile.username})"
 			- if @profile == current_profile
 				= link_to "edit profile", edit_profile_path(@profile)
 		= render :partial => "profile_icons"
@@ -16,10 +16,3 @@
 		= render :partial => "basic_info"
 	
 	.clear
-
-	#tabs
-		%ul
-			%li= link_to "Experience", "#experience"
-			%li= link_to "Community", "#community"
-		#experience= render :partial => "experience"
-		#community= render :partial => "community"

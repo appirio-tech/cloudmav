@@ -5,6 +5,10 @@ class PeopleSearchesController < ApplicationController
   
   def create
     @people = Profile.near_loc(params[:location])
+    
+    respond_to do |format|
+      format.js {}
+    end
   end
   
 end

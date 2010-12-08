@@ -21,7 +21,7 @@
 		.label= f.label :password_confirmation
 		.control= f.password_field :password_confirmation
 	
-		.submit= f.submit "Sign up"
+		.submit= f.submit "Register", :disable_with => "Registering..."
 
 	%br
 	= render :partial => "devise/shared/links"

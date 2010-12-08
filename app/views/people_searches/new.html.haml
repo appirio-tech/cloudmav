@@ -1,6 +1,7 @@
-%h1 people search
-
-= form_tag people_searches_path do |f|
-	= label_tag "Location"
-	= text_field_tag "location"
-	= submit_tag "Search", :disable_with => "Searching..."
+.grid_16
+	= form_tag people_searches_path, :remote => true do |f|
+		Search for people near
+		= text_field_tag "location"
+		= submit_tag "Search", :disable_with => "Searching..."
+	#people_search_results
+.clear

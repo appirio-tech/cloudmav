@@ -1,0 +1,15 @@
+
+- if @people.empty?
+	No one was found near that location.
+- else
+	- @people.each do |p|
+		%hr
+		.person_search_result
+			.image= image_tag p.gravatar_url(:size => 60), :class => :photo
+			.name= p.name
+			.username= "(#{p.username})"
+			.points
+				= image_tag "codemav_point_icon.png"
+				.score= p.total_score
+		.clear
+		

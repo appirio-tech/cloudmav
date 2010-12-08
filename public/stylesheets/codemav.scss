@@ -22,6 +22,14 @@ $droid: 'Droid Sans', arial, serif;
 	-moz-border-radius: $radius;	
 }
 
+@mixin gradient($from, $to) {
+	/* gecko based browsers */
+	background: -moz-linear-gradient(top, $from, $to);
+
+	/* webkit based browsers */
+	background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+}
+
 body {
 	font-family: $droid;
 }
@@ -212,6 +220,17 @@ $error_background: #FFDFDF;
 	margin-top: 20px;
 }
 
+#subheader {
+	background: $blue;
+	padding: 7px;
+	a {
+		color: $white;
+		&:hover {
+			color: $light_blue;
+		}
+	}
+}
+
 #profile_pic {
 	border: 1px solid $black;
 }
@@ -357,4 +376,43 @@ $error_background: #FFDFDF;
 		}		
 	}
 
+}
+
+#people_search_results {
+	margin-top: 20px;
+	hr {
+		border: 1px solid $black;
+	}
+	.photo {
+		border: 1px solid $black;
+		float: left;
+		margin-left: 20px;
+	}
+	.person_search_result {
+		.name {
+			float: left;
+			font-size: 16pt;
+			font-weight:bold;
+			margin-left: 10px;
+			color: $blue;
+		}
+		.username {
+			font-size: 10pt;
+			padding-top: 5px;
+			margin-bottom: 5px;
+			position:relative;
+			left:10px;
+		}
+	}
+	.points {
+		margin-top: 15px;
+		img {
+			margin-right: 5px;
+			margin-left: 15px;
+			float:left;
+		}
+		.score {
+			padding-top: 1px;
+		}
+	}
 }
