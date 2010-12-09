@@ -15,6 +15,7 @@ class Profile
   field :api_id, :type => Integer
   field :name, :type => String
   field :email, :type => String
+  field :username, :type => String
   
   field :lat, :type => Float
   field :lng, :type => Float
@@ -37,8 +38,6 @@ class Profile
   embeds_one :speaker_rate_profile
   embeds_one :git_hub_profile
     
-  before_create :set_api_id
-  
   scope :find_by_id, lambda { |id| { :where => { :api_id => id } } }
   
   def username
@@ -56,6 +55,7 @@ class Profile
   def as_json(opts={})
     result = { 
       :id => api_id,
+      :username => username,
       :name => name
     }
     result[:stack_overflow] = stack_overflow_profile.as_json unless stack_overflow_profile.nil?
@@ -78,11 +78,5 @@ class Profile
       stack_overflow.desc('stack_overflow_profile.reputation')
     end
   end
-  
-  protected
-  
-  def set_api_id
-    self.api_id = Profile.count + 1
-  end 
   
 end

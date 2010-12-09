@@ -5,6 +5,7 @@ require 'rspec/rails'
 require 'geokit'
 require 'score_it'
 require 'virgil'
+require 'json'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
