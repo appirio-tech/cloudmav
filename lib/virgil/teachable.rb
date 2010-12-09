@@ -20,14 +20,18 @@ module Virgil
       def learn(name)
         guidance = Guidance.where(:title => name).first
         return if has_knowledge?(guidance)
-        k = Knowledge.new
-        k.guidance = guidance
-        new_knowledge = Knowledge.new(:guidance => guidance)
-        self.knowledges << new_knowledge
+        knowledge = Knowledge.new(:guidance_id => guidance.id)
+        self.knowledges << knowledge
+        knowledge.save
+      end
+      
+      def knows?(title)
+        guidance = Guidance.where(:title => title).first
+        return false if guidance.nil?
+        has_knowledge?(guidance)
       end
       
       def get_guidance
-        ids = self.knowledges.map{ |k| k.guidance_id }
         Guidance.unlearned_by(self).asc(:priority).first
       end
     end

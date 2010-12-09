@@ -2,7 +2,7 @@ module ScoreIt
   module Score
     
     def score(points, point_type, name, options = {}, &block)
-      after_callback = options[:after] || :create
+      after_callback = options[:after] || :save
       config = ScoreIt::Config.new
       config.instance_eval(&block)
       method_name = "earn_#{make_methodable name}_#{make_methodable point_type}".to_sym

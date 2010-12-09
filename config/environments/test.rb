@@ -1,3 +1,6 @@
+require 'score_it'
+require 'virgil'
+
 Codemav::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
 

@@ -8,6 +8,6 @@
 	= form_for @stack_overflow_profile do |f|
 		.label= f.label :stack_overflow_id, "StackOverflow Id"
 		.control= f.text_field :stack_overflow_id
-		.submit= f.submit "Synch"
+		.submit= f.submit "Synch", :disable_with => "Synching..."
 	
 .clear

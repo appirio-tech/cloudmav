@@ -33,6 +33,7 @@ module ScoreIt
         return if scoring
         scoring = Scoring.new(:name => name, :point_type => point_type, :score => points)
         self.scorings << scoring
+        scoring.save
       end
     end
   end

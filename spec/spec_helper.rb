@@ -11,7 +11,6 @@ require 'virgil'
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
-
   config.mock_with :mocha
 
   config.before :each do

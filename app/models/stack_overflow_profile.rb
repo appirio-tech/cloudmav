@@ -10,7 +10,7 @@ class StackOverflowProfile
   
   def synch!
     StackOverflowService.synch(self)
-    profile.save!
+    self.profile.save!
     self.save!
   end
   

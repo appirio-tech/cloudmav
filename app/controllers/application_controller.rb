@@ -26,6 +26,5 @@ class ApplicationController < ActionController::Base
   def get_guidance
     return if current_user.nil?
     @guidance = current_profile.get_guidance
-    puts "guidance is #{@guidance.inspect}"
   end
 end

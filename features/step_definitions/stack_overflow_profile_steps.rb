@@ -14,3 +14,17 @@ Then /^I should be awarded the "([^"]*)" badge$/ do |name|
   profile = User.find(@user.id).profile
   assert profile.has_badge_named?(name)
 end
+
+Then /^I should have (\d+) coder points$/ do |number|
+  profile = User.find(@user.id).profile
+  profile.score(:coder_points).should == number.to_i
+end
+
+Then /^I should learned "([^"]*)"$/ do |title|
+  profile = User.find(@user.id).profile
+  profile.knows?(title).should == true
+end
+
+Given /^there are guidances$/ do
+  Virgil::Dsl.class_eval(File.read('lib/guidance.rb'))
+end
