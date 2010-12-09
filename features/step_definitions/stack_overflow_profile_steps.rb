@@ -12,7 +12,7 @@ end
 
 Then /^I should be awarded the "([^"]*)" badge$/ do |name|
   profile = User.find(@user.id).profile
-  assert profile.has_badge_named?(name)
+  profile.has_badge_named?(name).should == true
 end
 
 Then /^I should have (\d+) coder points$/ do |number|

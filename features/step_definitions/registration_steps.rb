@@ -8,7 +8,7 @@ When /^I register with my information$/ do
   fill_in :password, :with => @user.password
   fill_in "Password confirmation", :with => @user.password_confirmation
 
-  click_button "Sign up"
+  click_button "Register"
 end
 
 Then /^I should be registered$/ do

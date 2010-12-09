@@ -8,11 +8,12 @@ class GitHubProfile
   field :followers_count
   field :url
   
-  referenced_in :profile
+  embedded_in :profile, :inverse_of => :git_hub_profile
   
   def synch!
     GitHubService.synch(self)
-    save!
+    self.profile.save!
+    self.save!
   end
   
   def as_json(opts={})

@@ -6,3 +6,12 @@ learn "Synching with your Stackoverflow Account" do
     !p.stack_overflow_profile.nil?
   end
 end
+
+learn "Synching with your GitHub Account" do      
+  thing Profile
+  subject :profile
+  partial :synch_git_hub
+  conditions do |p|
+    !p.git_hub_profile.nil?
+  end
+end
