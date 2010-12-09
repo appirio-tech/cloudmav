@@ -11,6 +11,7 @@ $off_white: #F2F2F2;
 $dark_gray: #8d8d8d;
 $gray: #595959;
 $light_gray: #868686;
+$light_black: #202121;
 $black: #0D0D0D;
 $contrast: #E03F00;
 $white: #FFFFFF;
@@ -176,6 +177,14 @@ $error_background: #FFDFDF;
 	}
 }
 
+.text_content {
+	p {
+		margin-top:5px;
+		margin-bottom:15px;
+		font-size:1.2em;
+	}
+}
+
 #header {
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -186,11 +195,13 @@ $error_background: #FFDFDF;
 }
 
 #footer {
-	background: $black;
+	border-top: 5px solid $black;
+	background: $light_black;
 	margin-top: 30px;
 	width: 100%;
 	bottom: 0px;
 	position:fixed;
+	height: 50px;
 }
 
 #login_panel {

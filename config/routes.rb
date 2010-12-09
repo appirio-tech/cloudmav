@@ -1,6 +1,8 @@
 Codemav::Application.routes.draw do
   match 'beta' => "beta#login", :as =>:beta_login, :via=>[:get, :post]
   
+  match 'api_documentation' => 'pages#api_documentation', :as => :api_documentation
+  
   devise_for :users do
     get "confirmation", :to => "devise/users#confirmation"
     get "login", :to => "devise/sessions#new"
