@@ -6,3 +6,7 @@
 		.icon
 			.image= image_tag "stack_overflow_icon.png"
 			.score= @profile.stack_overflow_profile.reputation
+	- unless @profile.git_hub_profile.nil?
+		.icon
+			.image= image_tag "git_hub_logo.png"
+			.score= @profile.git_hub_profile.followers_count

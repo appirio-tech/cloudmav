@@ -8,8 +8,6 @@
 			.image= image_tag p.gravatar_url(:size => 60), :class => :photo
 			.name= p.name
 			.username= "(#{p.username})"
-			.points
-				= image_tag "codemav_point_icon.png"
-				.score= p.total_score
+			= render :partial => "shared/points", :locals => { :profile => p }
 		.clear
 		

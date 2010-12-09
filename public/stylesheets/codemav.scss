@@ -206,16 +206,6 @@ $error_background: #FFDFDF;
 			font-size: 1.1em;
 		}
 	}
-	.points {
-		margin-top: 5px;
-		img {
-			margin-right: 5px;
-			float:left;
-		}
-		.score {
-			padding-top: 1px;
-		}
-	}
 }
 
 #content {
@@ -391,33 +381,35 @@ $error_background: #FFDFDF;
 		border: 1px solid $black;
 		float: left;
 		margin-left: 20px;
+		margin-right: 10px;
 	}
 	.person_search_result {
 		.name {
 			float: left;
 			font-size: 16pt;
 			font-weight:bold;
-			margin-left: 10px;
 			color: $blue;
 		}
 		.username {
 			font-size: 10pt;
 			padding-top: 5px;
-			margin-bottom: 5px;
+			margin-bottom: 10px;
 			position:relative;
 			left:10px;
 		}
 	}
-	.points {
-		margin-top: 15px;
-		img {
-			margin-right: 5px;
-			margin-left: 15px;
-			float:left;
-		}
-		.score {
-			padding-top: 1px;
-		}
+}
+
+.points {
+	margin-top: 5px;
+	img {
+		margin-right: 5px;
+		float:left;
+	}
+	.score {
+		padding-top: 1px;
+		float:left;
+		margin-right: 10px;
 	}
 }
 

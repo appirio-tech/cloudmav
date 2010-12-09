@@ -1,0 +1,11 @@
+.points
+	= image_tag "codemav_point_icon.png"
+	.score= profile.total_score
+	- unless profile.stack_overflow_profile.nil?
+		= image_tag "stack_overflow_rep_icon.png"
+		.score= profile.stack_overflow_profile.reputation
+	- unless profile.git_hub_profile.nil?
+		= image_tag "github_followers_icon.png"
+		.score= profile.git_hub_profile.followers_count
+	%br
+.clear

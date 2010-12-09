@@ -130,13 +130,6 @@ form textarea {
       font-size: 0.8em; }
   #login_panel .username a {
     font-size: 1.1em; }
-  #login_panel .points {
-    margin-top: 5px; }
-    #login_panel .points img {
-      margin-right: 5px;
-      float: left; }
-    #login_panel .points .score {
-      padding-top: 1px; }
 
 #content {
   font-family: 'Droid Sans', arial, serif;
@@ -271,27 +264,29 @@ form textarea {
   #people_search_results .photo {
     border: 1px solid #0d0d0d;
     float: left;
-    margin-left: 20px; }
+    margin-left: 20px;
+    margin-right: 10px; }
   #people_search_results .person_search_result .name {
     float: left;
     font-size: 16pt;
     font-weight: bold;
-    margin-left: 10px;
     color: #0477bf; }
   #people_search_results .person_search_result .username {
     font-size: 10pt;
     padding-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     position: relative;
     left: 10px; }
-  #people_search_results .points {
-    margin-top: 15px; }
-    #people_search_results .points img {
-      margin-right: 5px;
-      margin-left: 15px;
-      float: left; }
-    #people_search_results .points .score {
-      padding-top: 1px; }
+
+.points {
+  margin-top: 5px; }
+  .points img {
+    margin-right: 5px;
+    float: left; }
+  .points .score {
+    padding-top: 1px;
+    float: left;
+    margin-right: 10px; }
 
 #guidance {
   float: right; }

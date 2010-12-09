@@ -11,6 +11,4 @@
 				= link_to "sign out", logout_path
 			.username
 				= link_to current_user.username, current_user.profile
-			.points
-				= image_tag "codemav_point_icon.png"
-				.score= current_profile.total_score
+			= render :partial => "shared/points", :locals => { :profile => current_profile }
