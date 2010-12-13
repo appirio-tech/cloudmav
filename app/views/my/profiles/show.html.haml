@@ -3,7 +3,7 @@
 	
 	%hr
 	.grid_4
-		= render :partial => "basic_info"
+		= render :partial => "shared/profile/basic_info"
 	.clear
 	
 	.grid_16
@@ -17,10 +17,9 @@
 			#summary.tab_content
 				Summary
 			#code.tab_content
-				= render :partial => "code"
+				= render :partial => "shared/profile/code"
 			#writing.tab_content
-				Hello World!
+				= render :partial => "shared/profile/writing"
 			#speaking.tab_content
 				Good bye suckers
 	.clear
-.clear	

@@ -1,0 +1,13 @@
+%h2 Writing
+
+%p= pluralize @profile.blogs.count, "blog", "blogs"
+%p= pluralize @profile.blog_posts.count, "posts", "posts"
+
+- if current_profile == @profile
+	= link_to "Add Blog", new_my_blog_path 
+%ul
+	- @profile.blogs.each do |b|
+		- if current_profile == @profile
+			%li= link_to b.title, [:my, b]
+		- else
+			%li= link_to b.title, '/'

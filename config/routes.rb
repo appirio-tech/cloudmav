@@ -10,6 +10,7 @@ Codemav::Application.routes.draw do
   end
   
   namespace :my do
+    resources :profiles
     resources :blogs do
       resources :posts
     end

@@ -12,7 +12,13 @@ module CodeMav
     
     module InstanceMethods
       
-
+      
+      def blog_posts
+        posts = []
+        self.blogs.each { |b| posts.concat b.posts }
+        return posts
+      end
+      
     end
   end
 end

@@ -1,0 +1,10 @@
+.grid_2
+	= image_tag @profile.gravatar_url(:size => 100), :id => :profile_pic
+.grid_14
+	%h2
+		.username= @profile.display_name
+		.profile_name= "(#{@profile.username})"
+		- if @profile == current_profile
+			= link_to "edit profile", edit_my_profile_path(@profile)
+	= render :partial => "shared/profile/icons"
+.clear
