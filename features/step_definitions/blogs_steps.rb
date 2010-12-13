@@ -33,3 +33,9 @@ Then /^the post should be added to my blog$/ do
   profile.blogs.first.posts.select{ |p| p.title == @post.title }.first.should_not be_nil
 end
 
+Then /^I should have (\d+) writer points$/ do |number|
+  profile = User.find(@user.id).profile
+  profile.score(:writer_points).should == number.to_i
+end
+
+

@@ -14,3 +14,8 @@ badge "Git r Done" do
     !git.profile.nil?
   end
 end
+
+badge "iBlog" do
+  thing Blog
+  subject :profile
+end

@@ -13,7 +13,7 @@ class My::BlogsController < My::MyController
     current_profile.blogs << @blog
     if @blog.save
       current_profile.save
-      redirect_to current_profile
+      redirect_to [:my, @blog]
     else
       render :new
     end

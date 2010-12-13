@@ -24,3 +24,12 @@ learn "To set my location" do
     !p.location.nil?
   end
 end
+
+learn "Adding a blog to your profile" do
+  thing Profile
+  subject :profile
+  partial :adding_a_blog
+  conditions do |p|
+    p.blogs.any?
+  end
+end
