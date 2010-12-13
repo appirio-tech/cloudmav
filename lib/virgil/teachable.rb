@@ -32,7 +32,7 @@ module Virgil
       end
       
       def get_guidance
-        Guidance.unlearned_by(self).asc(:priority).first
+        Guidance.unlearned_by(self).random
       end
     end
   end

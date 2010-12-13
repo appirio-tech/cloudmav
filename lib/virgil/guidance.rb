@@ -18,4 +18,15 @@ class Guidance
   def partial_location
     "guidance/#{self.partial}"
   end
+  
+  class << self
+    def random
+      index = rand(count)
+      all.to_a[index]
+    end
+    
+    def exclude(guidance)
+      excludes(:title => guidance.title)
+    end
+  end
 end
