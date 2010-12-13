@@ -14,5 +14,20 @@
 
 	.grid_4
 		= render :partial => "basic_info"
-	
 	.clear
+	
+	.grid_16
+		%ul.tabs{:style => "margin-top:15px;"}
+			%li= link_to "Summary", "#summary"
+			%li= link_to "Writing", "#writing"
+			%li= link_to "Speaking", "#speaking"
+	
+		.tab_container
+			#summary.tab_content
+				Summary
+			#writing.tab_content
+				Hello World!
+			#speaking.tab_content
+				Good bye suckers
+	.clear
+.clear	
