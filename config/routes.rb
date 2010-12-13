@@ -9,6 +9,12 @@ Codemav::Application.routes.draw do
     get 'logout', :to => "devise/sessions#destroy"
   end
   
+  namespace :my do
+    resources :blogs do
+      resources :posts
+    end
+  end
+  
   resources :profiles
   resources :stack_overflow_profiles do
     collection do

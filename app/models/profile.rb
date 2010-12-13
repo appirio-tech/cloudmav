@@ -2,6 +2,7 @@ require 'geokit'
 require 'gravtastic'
 require 'score_it'
 require 'virgil'
+require 'profile_modules/writer_module'
 
 class Profile
   include Mongoid::Document
@@ -9,6 +10,7 @@ class Profile
   include Gravtastic
   include ScoreIt::Subject
   include Virgil::Teachable
+  include CodeMav::WriterModule
 
   is_gravtastic!
 
