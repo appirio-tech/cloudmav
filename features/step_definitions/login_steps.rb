@@ -12,3 +12,13 @@ end
 Then /^I should be logged in$/ do
   And %Q{I should see "#{@user.username}"}
 end
+
+Given /^I am logged in$/ do
+  @user = Factory.create(:user)
+  And %Q{I go to the login page}
+  fill_in :username, :with => @user.username
+  fill_in :password, :with => 'secret'
+  click_button "Sign in"
+  And %Q{I am redirected}
+  @profile = User.find(@user.id).profile
+end

@@ -1,0 +1,14 @@
+%h2 Add post
+
+= form_for [:my, @blog, @post] do |f|
+	.label=f.label :title
+	.control=f.text_field :title
+	.label=f.label :written_on
+	.control
+		%input{:type => "text", :id => "written_on", :name => "written_on"}
+	.submit= f.submit "Add", :disable_with => "Adding..."
+	
+	:javascript
+		jQuery(function() {		
+			$("#written_on").datepicker();	
+			$("#written_on").datepicker("setDate", #{js_date @post.written_on});

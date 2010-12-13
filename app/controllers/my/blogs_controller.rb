@@ -1,5 +1,9 @@
 class My::BlogsController < My::MyController
   
+  def show
+    @blog = current_profile.blogs.find(params[:id])
+  end
+  
   def new
     @blog = Blog.new
   end
