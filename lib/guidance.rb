@@ -15,3 +15,12 @@ learn "Synching with your GitHub Account" do
     !p.git_hub_profile.nil?
   end
 end
+
+learn "To set my location" do
+  thing Profile
+  subject :profile
+  partial :set_location
+  conditions do |p|
+    !p.location.nil?
+  end
+end

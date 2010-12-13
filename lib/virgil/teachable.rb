@@ -19,7 +19,7 @@ module Virgil
       
       def learn(name)
         guidance = Guidance.where(:title => name).first
-        return if has_knowledge?(guidance)
+        return if has_knowledge?(guidance) or guidance.nil?
         knowledge = Knowledge.new(:guidance_id => guidance.id)
         self.knowledges << knowledge
         knowledge.save
