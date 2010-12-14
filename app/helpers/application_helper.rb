@@ -17,5 +17,9 @@ module ApplicationHelper
     return escape_javascript "new Date()" if date.nil?
     escape_javascript "new Date(#{date.year}, #{date.month - 1}, #{date.day})"
   end
-    
+  
+  def show_date(date)
+    date.strftime("%m/%d/%y")
+  end
+  
 end
