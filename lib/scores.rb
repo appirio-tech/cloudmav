@@ -21,3 +21,11 @@ score 10, :writer_points, "for having a blog", :after => :save do
     p.has_badge_named?("iBlog")
   end
 end
+
+score 10, :speaker_points, "for having a SpeakerRate Account", :after => :save do
+  thing Profile
+  subject :profile
+  conditions do |p|
+    !p.speaker_rate_profile.nil?
+  end
+end

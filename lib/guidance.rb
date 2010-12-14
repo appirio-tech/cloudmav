@@ -33,3 +33,12 @@ learn "Adding a blog to your profile" do
     p.blogs.any?
   end
 end
+
+learn "Syncing with your SpeakerRate Account" do      
+  thing Profile
+  subject :profile
+  partial :sync_speaker_rate
+  conditions do |p|
+    !p.speaker_rate_profile.nil?
+  end
+end

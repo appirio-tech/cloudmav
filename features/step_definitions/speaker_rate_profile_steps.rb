@@ -9,3 +9,8 @@ Then /^I should have a SpeakerRate profile$/ do
   profile = User.find(@user.id).profile
   profile.speaker_rate_profile.should_not be_nil
 end
+
+Then /^I should have (\d+) speaker points$/ do |number|
+  profile = User.find(@user.id).profile
+  profile.score(:speaker_points).should == number.to_i
+end
