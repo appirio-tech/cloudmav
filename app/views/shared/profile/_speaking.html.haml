@@ -3,6 +3,8 @@
 %p= pluralize @profile.talks.count, "talk", "talks"
 %p= pluralize @profile.presentations.count, "presentation", "presentations"
 
+= render :partial => "speaker_rate_profiles/profile"
+
 - if current_profile == @profile
 	= link_to "Add Talk", new_my_talk_path 
 %ul
