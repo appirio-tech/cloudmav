@@ -17,6 +17,11 @@ Codemav::Application.routes.draw do
     resources :talks do
       resources :presentations
     end
+    resources :speaker_rate_profiles do
+      collection do 
+        get "synch"
+      end
+    end
   end
   
   resources :profiles
@@ -25,7 +30,6 @@ Codemav::Application.routes.draw do
       get "synch"
     end
   end
-  resources :speaker_rate_profiles
   resources :git_hub_profiles do
     collection do
       get "synch"

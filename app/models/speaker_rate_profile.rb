@@ -5,7 +5,13 @@ class SpeakerRateProfile
   field :url
   field :rating
   
-  referenced_in :profile
+  embedded_in :profile, :inverse_of => :speaker_rate_profile
+  
+  def synch!
+    SpeakerRateService.synch(self)
+    self.profile.save!
+    self.save!
+  end
   
   def as_json(opts={})
     { 
