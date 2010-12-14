@@ -7,8 +7,8 @@ class SpeakerRateProfile
   
   embedded_in :profile, :inverse_of => :speaker_rate_profile
   
-  def synch!
-    SpeakerRateService.synch(self)
+  def sync!
+    SpeakerRateService.sync(self)
     self.profile.save!
     self.save!
   end
