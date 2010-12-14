@@ -14,7 +14,9 @@ Codemav::Application.routes.draw do
     resources :blogs do
       resources :posts
     end
-    resources :talks
+    resources :talks do
+      resources :presentations
+    end
   end
   
   resources :profiles

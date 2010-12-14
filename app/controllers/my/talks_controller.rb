@@ -4,6 +4,10 @@ class My::TalksController < My::MyController
     @talks = current_profile.talks
   end
   
+  def show
+    @talk = current_profile.talks.find(params[:id])
+  end
+  
   def new
     @talk = Talk.new
   end

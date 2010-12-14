@@ -1,0 +1,16 @@
+.grid_16
+	%h2 Add a presentation
+	
+	= form_for [:my, @talk, @presentation] do |f|
+		.label= f.label :presentation_date
+		.control
+			%input{:type => "text", :id => "presentation_date", :name => "presentation_date"}
+		.submit= f.submit "Add", :disable_with => "Adding..."
+			
+	:javascript
+		jQuery(function() {		
+			$("#presentation_date").datepicker();	
+			$("#presentation_date").datepicker("setDate", #{js_date @presentation.presentation_date});
+			});
+			
+.clear

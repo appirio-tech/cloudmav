@@ -6,5 +6,6 @@ class Talk
   field :slides_url, :type => String
   
   embedded_in :profile, :inverse_of => :talk
+  embeds_many :presentations
     
 end
