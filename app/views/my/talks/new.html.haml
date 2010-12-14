@@ -1,0 +1,13 @@
+.grid_16
+	%h2 Add a talk
+	
+	= form_for [:my, @talk] do |f|
+		.label= f.label :title
+		.control= f.text_field :title
+		.label= f.label :description
+		.control= f.text_area :description
+		.label= f.label :slides_url
+		.control= f.text_field :slides_url
+		.submit= f.submit "Add", :disable_with => "Adding..."
+		
+.clear

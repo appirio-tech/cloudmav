@@ -3,6 +3,7 @@ require 'gravtastic'
 require 'score_it'
 require 'virgil'
 require 'profile_modules/writer_module'
+require 'profile_modules/speaker_module'
 
 class Profile
   include Mongoid::Document
@@ -11,6 +12,7 @@ class Profile
   include ScoreIt::Subject
   include Virgil::Teachable
   include CodeMav::WriterModule
+  include CodeMav::SpeakerModule
 
   is_gravtastic!
 
