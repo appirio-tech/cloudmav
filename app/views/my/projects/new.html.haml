@@ -1,0 +1,21 @@
+.grid_16
+
+	%h2 Add project
+	
+	= form_for [:my, @project] do |f|
+		.label= f.label :name
+		.control= f.text_field :name
+		.label Duration
+		.control
+			%input{:type => "text", :id => "start_date", :name => "start_date"}
+			%input{:type => "text", :id => "end_date", :name => "end_date"}
+		.submit= f.submit "Add", :disable_with => "Adding..."
+
+	:javascript
+		jQuery(function() {		
+			$("#start_date").datepicker();	
+			$("#start_date").datepicker("setDate", #{js_date @project.start_date});
+
+			$("#end_date").datepicker();	
+			$("#end_date").datepicker("setDate", #{js_date @project.end_date});
+.clear

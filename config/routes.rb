@@ -22,6 +22,7 @@ Codemav::Application.routes.draw do
         get "synch"
       end
     end
+    resources :projects
   end
   
   resources :profiles

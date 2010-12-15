@@ -4,6 +4,7 @@ require 'score_it'
 require 'virgil'
 require 'profile_modules/writer_module'
 require 'profile_modules/speaker_module'
+require 'profile_modules/experience_module'
 
 class Profile
   include Mongoid::Document
@@ -13,6 +14,7 @@ class Profile
   include Virgil::Teachable
   include CodeMav::WriterModule
   include CodeMav::SpeakerModule
+  include CodeMav::ExperienceModule
 
   is_gravtastic!
 
