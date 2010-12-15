@@ -9,6 +9,7 @@
 	.grid_16
 		%ul.tabs{:style => "margin-top:15px;"}
 			%li= link_to "Summary", "#summary"
+			%li= link_to "Experience", "#experience"
 			%li= link_to "Code", "#code"
 			%li= link_to "Writing", "#writing"
 			%li= link_to "Speaking", "#speaking"
@@ -16,6 +17,8 @@
 		.tab_container
 			#summary.tab_content
 				Summary
+			#experience.tab_content
+				= render :partial => "shared/profile/experience"
 			#code.tab_content
 				= render :partial => "shared/profile/code"
 			#writing.tab_content
