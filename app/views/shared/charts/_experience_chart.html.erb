@@ -13,19 +13,32 @@
 					text: 'Experience'
 				},
 				xAxis: {
-				         categories: [<%= @profile.experiences.map{|e| "'#{e.name}'"}.join(",") %>],
+				         categories: [" "],
 				         title: {
 				            text: null
+				         }
+				      },
+				yAxis: {
+				         min: 0,
+				         title: {
+				            text: "Weeks"
+				         }
+				      },
+				tooltip: {
+				         formatter: function() {
+				            return ''+
+				                this.series.name +': '+ this.y +' weeks';
 				         }
 				      },
 				series: []
 		};
 		
-		
+		<% @profile.experiences.each do |e| %>
 			options.series.push({
-				name: 'Experience',
-				data: [<%= @profile.experiences.map{|e| e.duration.total }.join(",") %>]
+				name: '<%= e.name %>',
+				data: [<%= e.duration.weeks %>]
 			});
+		<% end %>
 		
 		var chart = new Highcharts.Chart(options);
 	});
