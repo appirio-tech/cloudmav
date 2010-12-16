@@ -12,6 +12,14 @@ module CodeMav
     
     module InstanceMethods
       
+      def calculate_experience
+        self.experiences.each{|e| e.destroy}
+        self.projects.each do |project|
+          project_xp = project.get_xp
+          
+        end
+      end
+      
     end
   end
 end

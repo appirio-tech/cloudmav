@@ -22,4 +22,13 @@ class Project
       self.technologies << technology
     end
   end
+  
+  def get_xp
+    starts = Time.parse(self.start_date.to_s)
+    ends = Time.parse(self.end_date.to_s) 
+    duration = Duration.new(:seconds => ends - starts)
+    xp = {}
+    technologies.each{ |t| xp[t.name] = duration }
+    return xp
+  end
 end
