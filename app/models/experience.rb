@@ -1,3 +1,5 @@
+require 'duration/mongoid'
+
 class Experience
   include Mongoid::Document
   

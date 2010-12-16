@@ -1,19 +1,6 @@
 require 'spec_helper'
 
-describe ExperienceModule do
-  
-  
-  # def calculate_experience
-  #     self.experiences.each{|e| e.destroy}
-  #     self.projects.each do |project|
-  #       project_xp = project.get_xp
-  #       project_xp.keys.each_pair do |name, duration|
-  #         xp = find_create_xp(name)
-  #         xp.duration += duration
-  #       end
-  #     end
-  #   end
-  #   
+describe "ExperienceModule" do
   
   describe "calculate_experience" do
     before(:each) do
@@ -22,7 +9,7 @@ describe ExperienceModule do
       @profile.experiences << @previous_experience
       
       @project = Factory.build(:project)
-      @ruby = Factory.build(:technology, :name => "Ruby")
+      @ruby = Factory.create(:technology, :name => "Ruby")
       @project.technologies << @ruby
       @profile.projects << @project
       @profile.save
@@ -31,7 +18,6 @@ describe ExperienceModule do
       @profile.save
     end
     
-    it { Experience.exists?(@previous_experience).should == false }
     it { @profile.experiences.with("Ruby").first.should_not be_nil }
   end
   
