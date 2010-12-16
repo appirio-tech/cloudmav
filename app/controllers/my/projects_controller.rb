@@ -6,8 +6,11 @@ class My::ProjectsController < My::MyController
   
   def create
     @project = Project.new(params[:project])
-    @project.start_date = Date.parse(params[:start_date])
-    @project.end_date = Date.parse(params[:end_date])
+    puts "params #{params.inspect}"
+    set_date(@project, :start_date)
+    set_date(@project, :end_date)
+    # @project.start_date = set_date_from_param[:start_date]
+    # @project.end_date = set_date_from_param[:end_date]
     current_profile.projects << @project
     
     if @project.save

@@ -27,4 +27,12 @@ class ApplicationController < ActionController::Base
     return if current_user.nil?
     @guidance = current_profile.get_guidance
   end
+  
+  private 
+  
+  def set_date(model, param_name)
+    puts "date is #{params[param_name]}"
+    date = Date.strptime(params[param_name], '%m/%d/%Y')
+    model.send("#{param_name.to_s}=", date)
+  end
 end
