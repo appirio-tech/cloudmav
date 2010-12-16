@@ -6,13 +6,14 @@
 		var options = {
 		    chart: {
 		        renderTo: 'chart-container',
-		        defaultSeriesType: 'bar'
+		        defaultSeriesType: 'bar',
+						width: 400,
 		    },
 				title: {
 					text: 'Experience'
 				},
 				xAxis: {
-				         categories: ["Experience"],
+				         categories: [<%= @profile.experiences.map{|e| "'#{e.name}'"}.join(",") %>],
 				         title: {
 				            text: null
 				         }
@@ -20,12 +21,12 @@
 				series: []
 		};
 		
-		<% @profile.experiences.each do |e| %>
+		
 			options.series.push({
-				name: '<%= e.name %>',
-				data: [<%= e.duration.total %>]
+				name: 'Experience',
+				data: [<%= @profile.experiences.map{|e| e.duration.total }.join(",") %>]
 			});
-		<% end %>
+		
 		var chart = new Highcharts.Chart(options);
 	});
 	
