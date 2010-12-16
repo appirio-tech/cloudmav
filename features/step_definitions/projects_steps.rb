@@ -27,3 +27,8 @@ end
 Then /^technology "([^"]*)" should be added$/ do |name|
   Technology.where(:name => name).first.should_not be_nil
 end
+
+Then /^I should have experience in "([^"]*)"$/ do |name|
+  profile = Profile.find(@profile.id)
+  profile.experiences.with(name).first.should_not be_nil
+end

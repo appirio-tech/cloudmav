@@ -18,5 +18,7 @@ Feature: Projects
 		Then the project should be added
 		And technology "Ruby" should be added
 		And technology "C#" should be added
+		And I should have experience in "Ruby"
+		And I should have experience in "C#"
 
 	
