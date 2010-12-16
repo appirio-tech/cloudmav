@@ -9,6 +9,8 @@
 		.control
 			%input{:type => "text", :id => "start_date", :name => "start_date"}
 			%input{:type => "text", :id => "end_date", :name => "end_date", :style => "margin-right: 5px;"}
+		.label Technologies
+		.control= text_area_tag :technologies
 		.submit= f.submit "Add", :disable_with => "Adding..."
 
 	:javascript

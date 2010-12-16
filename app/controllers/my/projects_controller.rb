@@ -9,6 +9,7 @@ class My::ProjectsController < My::MyController
     current_profile.projects << @project
     
     if @project.save
+      @project.set_technologies!(params[:technologies])
       redirect_to [:my, current_profile]
     else
       render :new
