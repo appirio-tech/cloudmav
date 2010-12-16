@@ -24,6 +24,7 @@ class Project
   end
   
   def get_xp
+    return {} if self.start_date.nil? or self.end_date.nil?
     starts = Time.parse(self.start_date.to_s)
     ends = Time.parse(self.end_date.to_s) 
     duration = Duration.new(:seconds => ends - starts)
