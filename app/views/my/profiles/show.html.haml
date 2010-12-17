@@ -6,6 +6,10 @@
 		= render :partial => "shared/profile/basic_info"
 	.clear
 	
+	= render :partial => "my_profile_menu"
+	
+	= render :partial => "shared/profile/summary"
+	
 	.grid_16
 		%ul.tabs{:style => "margin-top:15px;"}
 			%li= link_to "Summary", "#summary"
@@ -16,7 +20,7 @@
 	
 		.tab_container
 			#summary.tab_content
-				= render :partial => "shared/profile/summary"
+				
 			#experience.tab_content
 				= render :partial => "shared/profile/experience"
 			#code.tab_content

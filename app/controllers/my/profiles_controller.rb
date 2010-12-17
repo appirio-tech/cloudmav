@@ -1,18 +1,11 @@
 class My::ProfilesController < My::MyController
+  before_filter :set_profile
   
-  def show
-    @profile = current_profile
-  end
-  
-  def edit
-    @profile = current_profile
+  def experience
   end
   
   def update
-    @profile = current_profile
-    @profile.update_attributes(params[:profile])
-    
-    if @profile.save!
+    if @profile.update_attributes(params[:profile])
       flash[:notice] = "Profile updated"
       redirect_to @profile
     else
@@ -20,4 +13,9 @@ class My::ProfilesController < My::MyController
     end
   end
   
+  protected
+  
+  def set_profile
+    @profile = current_profile
+  end
 end
