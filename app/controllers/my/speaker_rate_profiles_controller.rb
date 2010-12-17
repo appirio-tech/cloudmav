@@ -12,10 +12,4 @@ class My::SpeakerRateProfilesController < My::MyController
     redirect_to [:my, current_profile]
   end
   
-  def synch
-    current_profile.speaker_rate_profile.sync!
-    
-    redirect_to [:my, current_profile]
-  end
-  
 end

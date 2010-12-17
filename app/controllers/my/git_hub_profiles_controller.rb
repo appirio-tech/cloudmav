@@ -1,4 +1,4 @@
-class GitHubProfilesController < ApplicationController
+class My::GitHubProfilesController < My::MyController
   
   def new
     @git_hub_profile = GitHubProfile.new
@@ -11,10 +11,5 @@ class GitHubProfilesController < ApplicationController
     
     redirect_to current_profile
   end
-  
-  def synch
-    current_profile.git_hub_profile.synch!
-    
-    redirect_to current_profile
-  end
+
 end
