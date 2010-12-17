@@ -9,7 +9,7 @@ describe BloggerSyncService do
       @blog.blog_type = "Blogger"
       @blog.rss = "http://www.theabsentmindedcoder.com/feeds/posts/default"
       @profile.blogs << @blog
-      BloggerSyncService.sync(@profile, @blog)
+      BloggerSyncService.sync(@blog)
       @profile.save
     end
     

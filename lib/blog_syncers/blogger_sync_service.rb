@@ -4,7 +4,7 @@ require 'open-uri'
 
 class BloggerSyncService
   
-  def self.sync(profile, blog)
+  def self.sync(blog)
     
     source = blog.rss + "?alt=rss&max-results=999"
     puts "source = #{source}"
@@ -18,7 +18,7 @@ class BloggerSyncService
         post.title = i.title
         post.url = i.link
         post.written_on = i.date
-        blog.posts << post
+        # blog.posts << post
         # post.save
         # blog.save
       end

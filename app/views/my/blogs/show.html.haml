@@ -1,6 +1,6 @@
 .grid_16
 	%h2= @blog.title
-
+	= link_to "Edit", edit_my_blog_path(@blog)
 	= link_to "Add Post", new_my_blog_post_path(@blog)
 	%ul
 		- @blog.posts.each do |p|

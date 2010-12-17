@@ -1,11 +1,6 @@
 .grid_16
 	%h2 Add a new blog to CodeMav
-	= form_for [:my, @blog] do |f|
-		.label=f.label :title
-		.control=f.text_field :title
-		.label=f.label :url
-		.control=f.text_field :url
-		.submit=f.submit "Add", :disable_with => "Adding..."
+	= render :partial => "form", :locals => { :action_text => "Add", :disable_text => "Adding..."}
 	
 .clear
 	

@@ -11,8 +11,10 @@ module Codemav
       g.test_framework  :rspec, :fixture => false
     end
     
-    config.autoload_paths += %W( #{config.root}/lib ) if config.respond_to?(:autoload_paths)
-    config.autoload_paths += %W( #{config.root}/lib/blog_syncers ) if config.respond_to?(:autoload_paths)
+    if config.respond_to?(:autoload_paths)
+      config.autoload_paths += %W( #{config.root}/lib ) 
+      config.autoload_paths += %W( #{config.root}/lib/blog_syncers )
+    end
     
     config.encoding = "utf-8"
     

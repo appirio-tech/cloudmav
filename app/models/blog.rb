@@ -10,7 +10,9 @@ class Blog
   embedded_in :profile, :inverse_of => :blog
 
   def sync!
-    
+    if self.blog_type == "Blogger"
+      BloggerSyncService.sync(self)
+    end
   end
   
 end

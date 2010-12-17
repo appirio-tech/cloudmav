@@ -1,0 +1,10 @@
+= form_for [:my, @blog] do |f|
+	.label=f.label :title
+	.control=f.text_field :title
+	.label=f.label :url
+	.control=f.text_field :url
+	.label=f.label :rss
+	.control=f.text_field :rss
+	.label=f.label :blog_type
+	.control=f.text_field :blog_type
+	.submit=f.submit action_text, :disable_with => disable_text
