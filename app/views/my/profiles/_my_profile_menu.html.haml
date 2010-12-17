@@ -1,8 +1,13 @@
 #profile_menu.grid_16
 	%ul
-		%li= link_to "Summary", my_profile_path(@profile)
-		%li= link_to "Experience", experience_my_profile_path(@profile)
-		%li= link_to "Code", code_my_profile_path(@profile)
-		%li= link_to "Writing", writing_my_profile_path(@profile)
-		%li= link_to "Speaking", speaking_my_profile_path(@profile)
+		%li{:class => (@tab == "summary") ? "selected" : ""}
+			= link_to "Summary", my_profile_path(@profile)
+		%li{:class => (@tab == "experience") ? "selected" : ""}
+			= link_to "Experience", experience_my_profile_path(@profile)
+		%li{:class => (@tab == "code") ? "selected" : ""}
+			= link_to "Code", code_my_profile_path(@profile)
+		%li{:class => (@tab == "writing") ? "selected" : ""}
+			= link_to "Writing", writing_my_profile_path(@profile)
+		%li{:class => (@tab == "speaking") ? "selected" : ""}
+			= link_to "Speaking", speaking_my_profile_path(@profile)
 .clear

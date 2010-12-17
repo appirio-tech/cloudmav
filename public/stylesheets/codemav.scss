@@ -439,5 +439,30 @@ $error_background: #FFDFDF;
 
 #guidance {
 	float:right;
-	
+}
+
+#profile_menu {
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-size: 14pt;
+	ul {
+		float: left;
+		width: 100%;
+	}
+	li {
+		float: left;
+		margin: 0 1em 0 0;
+	}
+	a {
+		padding-bottom: 2px;
+		color: $blue;
+		&:hover {
+			border-bottom: 3px solid $blue;
+		}
+	}
+	.selected {
+		a{
+			border-bottom: 3px solid $black;
+		}
+	}
 }
