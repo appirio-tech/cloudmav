@@ -1,15 +1,23 @@
-%h2 Speaking
+.grid_16
+	%p= pluralize @profile.talks.count, "talk", "talks"
+	%p= pluralize @profile.presentations.count, "presentation", "presentations"
 
-%p= pluralize @profile.talks.count, "talk", "talks"
-%p= pluralize @profile.presentations.count, "presentation", "presentations"
 
-= render :partial => "shared/profile/speaker_rate"
+.grid_8
+	%h3 Talks
+	- if current_profile == @profile
+		= link_to "Add Talk", new_my_talk_path 
+	%ul
+		- @profile.talks.each do |t|
+			- if current_profile == @profile
+				%li
+					%p= link_to t.title, [:my, t]
+					- if t.presentations.any?
+						%p= "Presented #{pluralize t.presentations.count, 'time', 'times' }"
+			- else
+				%li= link_to t.title, '/'
 
-- if current_profile == @profile
-	= link_to "Add Talk", new_my_talk_path 
-%ul
-	- @profile.talks.each do |t|
-		- if current_profile == @profile
-			%li= link_to t.title, [:my, t]
-		- else
-			%li= link_to t.title, '/'
+.grid_8
+	= render :partial => "shared/profile/speaker_rate"
+.clear
+

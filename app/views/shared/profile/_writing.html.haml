@@ -1,13 +1,25 @@
-%h2 Writing
+.grid_16
+	%p= pluralize @profile.blogs.count, "blog", "blogs"
+	%p= pluralize @profile.blog_posts.count, "posts", "posts"
+.clear
 
-%p= pluralize @profile.blogs.count, "blog", "blogs"
-%p= pluralize @profile.blog_posts.count, "posts", "posts"
-
-- if current_profile == @profile
-	= link_to "Add Blog", new_my_blog_path 
-%ul
-	- @profile.blogs.each do |b|
-		- if current_profile == @profile
-			%li= link_to b.title, [:my, b]
-		- else
-			%li= link_to b.title, '/'
+.grid_8
+	%h3 My blogs
+	- if current_profile == @profile
+		= link_to "Add Blog", new_my_blog_path 
+	%ul
+		- @profile.blogs.each do |b|
+			- if current_profile == @profile
+				%li= link_to b.title, [:my, b]
+			- else
+				%li= link_to b.title, '/'
+				
+.grid_8
+	%h3 Last 5 blog posts
+	%ul
+		- @profile.blog_posts.first(5).each do |p|
+			%li
+				%p= link_to p.title, p.url
+				%p= show_date p.written_on
+		
+.clear

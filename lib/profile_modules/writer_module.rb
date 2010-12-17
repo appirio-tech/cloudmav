@@ -16,7 +16,7 @@ module CodeMav
       def blog_posts
         posts = []
         self.blogs.each { |b| posts.concat b.posts }
-        return posts
+        return posts.sort{|x,y| y.written_on <=> x.written_on }
       end
       
     end
