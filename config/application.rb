@@ -12,6 +12,7 @@ module Codemav
     end
     
     config.autoload_paths += %W( #{config.root}/lib ) if config.respond_to?(:autoload_paths)
+    config.autoload_paths += %W( #{config.root}/lib/blog_syncers ) if config.respond_to?(:autoload_paths)
     
     config.encoding = "utf-8"
     

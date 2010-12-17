@@ -19,5 +19,19 @@ class My::BlogsController < My::MyController
     end
   end  
   
+  def edit
+    @blog = current_profile.blogs.find(param[:id])
+  end
+  
+  def update
+    @blog = current_profile.blogs.find(param[:id])
+    if @blog.update_attributes(params[:blog])
+      @blog.sync!
+      current_profile.save
+      redirect_to [:my, @blog]
+    else
+      render :edit
+    end
+  end
   
 end
