@@ -1,8 +1,10 @@
 .right
 	- unless user_signed_in? 
-		= link_to "Register", new_user_registration_path
-		= " or "
-		= link_to "Sign in", login_path
+		#signin_panel
+			= link_to "Sign in", login_path
+			= " or "
+			= link_to "Register", new_user_registration_path
+			
 	-else
 		#login_panel
 			.avatar
