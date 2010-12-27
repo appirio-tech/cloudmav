@@ -20,13 +20,14 @@
 	= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Cuprum&subset=latin"
 	= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Droid+Sans&subset=latin"
 	= csrf_meta_tag
-	
+	= favicon_link_tag 'codemav_icon.png', :rel => 'apple-touch-icon', :type => 'image/png'
 	= render :partial => "shared/get_satisfaction"
 %body
 	#header
 		.container_16
 			.grid_16
-				= link_to image_tag("main_code_mav_logo.png"), root_path
+				.title_icon= link_to image_tag("main_code_mav_icon.png"), root_path 
+				.title_text= link_to image_tag("code_mav_title_text.png"), root_path
 				= render :partial => "shared/login_info"
 				= render :partial => "shared/guidance"
 			.clear

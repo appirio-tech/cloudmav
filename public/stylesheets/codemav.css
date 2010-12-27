@@ -114,11 +114,23 @@ form textarea {
   font-size: 1.2em; }
 
 #header {
-  margin-top: 10px;
-  margin-bottom: 10px; }
+  /* gecko based browsers */
+  background: -moz-linear-gradient(top, #181d20, #12171b);
+  /* webkit based browsers */
+  background: -webkit-gradient(linear, left top, left bottom, from(#181d20), to(#12171b));
+  padding-top: 10px;
+  height: 80px; }
   #header h1 {
     font-family: 'Cuprum', arial, serif;
     font-size: 5em; }
+  #header .title_icon {
+    position: absolute;
+    top: 10px;
+    left: 50px; }
+  #header .title_text {
+    position: absolute;
+    top: 30px;
+    left: 165px; }
 
 #content {
   min-height: 400px; }
@@ -152,7 +164,9 @@ form textarea {
 
 #subheader {
   background: #0477bf;
-  padding: 7px; }
+  padding: 7px;
+  border-top: 2px solid #6F4200;
+  height: 30px; }
   #subheader a {
     color: white; }
     #subheader a:hover {

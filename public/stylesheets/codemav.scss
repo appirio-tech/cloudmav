@@ -187,11 +187,22 @@ $error_background: #FFDFDF;
 }
 
 #header {
-	margin-top: 10px;
-	margin-bottom: 10px;
+	@include gradient(#181D20, #12171B);
+	padding-top: 10px;
+	height: 80px;
 	h1 { 
 		font-family: 'Cuprum', arial, serif;
 		font-size: 5em;
+	}
+	.title_icon {
+		position:absolute;
+		top: 10px;
+		left: 50px;
+	}
+	.title_text {
+		position:absolute;
+		top: 30px;
+		left: 165px;
 	}
 }
 
@@ -244,6 +255,8 @@ $error_background: #FFDFDF;
 			color: $light_blue;
 		}
 	}
+	border-top: 2px solid #6F4200;
+	height: 30px;
 }
 
 #profile_pic {

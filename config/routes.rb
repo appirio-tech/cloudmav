@@ -10,13 +10,13 @@ Codemav::Application.routes.draw do
   end
   
   namespace :my do
-    resources :profiles do
-      member do
+    resource :profile do
+      # member do
         get 'experience'
         get 'code'
         get 'writing'
         get 'speaking'
-      end
+      # end
     end
     resources :blogs do
       resources :posts
@@ -30,7 +30,7 @@ Codemav::Application.routes.draw do
     resources :projects
   end
   
-  resources :profiles
+  # resources :profiles
   
   resources :scoreboards do
     collection do
