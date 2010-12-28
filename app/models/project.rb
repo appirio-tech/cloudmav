@@ -9,6 +9,10 @@ class Project
   embedded_in :profile, :inverse_of => :project
   references_many :technologies, :stored_as => :array
   
+  validate :start_before_end, :if => :start_and_end_date_not_nil
+  
+  
+  
   def set_technologies!(technologies_string)
     self.technologies = []
     technology_names = technologies_string.split(',').map{|s| s.strip.camelize }
@@ -32,4 +36,16 @@ class Project
     technologies.each{ |t| xp[t.name] = duration }
     return xp
   end
+  
+  protected
+    def start_before_end
+      if start_date > end_date
+        errors.add("start_date", "must be before end date") 
+        errors.add("end_date", "must be after start date")
+      end
+    end
+    
+    def start_and_end_date_not_nil
+      !self.start_date.nil? && !self.end_date.nil?
+    end
 end

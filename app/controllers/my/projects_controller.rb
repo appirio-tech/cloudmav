@@ -10,7 +10,7 @@ class My::ProjectsController < My::MyController
     set_date(@project, :start_date)
     set_date(@project, :end_date)
     current_profile.projects << @project
-    
+
     if @project.save
       @project.set_technologies!(params[:technologies])
       current_profile.calculate_experience
