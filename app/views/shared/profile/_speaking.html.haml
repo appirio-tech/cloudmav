@@ -1,12 +1,15 @@
 .grid_16
-	%p= pluralize @profile.talks.count, "talk", "talks"
-	%p= pluralize @profile.presentations.count, "presentation", "presentations"
-
+	%table
+		%tr
+			%td= pluralize @profile.talks.count, "talk", "talks"
+			%td= pluralize @profile.presentations.count, "presentation", "presentations"
+.clear
 
 .grid_8
-	%h3 Talks
-	- if current_profile == @profile
-		= link_to "Add Talk", new_my_talk_path 
+	%h2.page_title 
+		.title Talks
+		- if current_profile == @profile
+			.link= link_to "add a talk", new_my_talk_path 
 	%ul
 		- @profile.talks.each do |t|
 			- if current_profile == @profile
@@ -18,6 +21,7 @@
 				%li= link_to t.title, '/'
 
 .grid_8
+	%br
 	= render :partial => "shared/profile/speaker_rate"
 .clear
 

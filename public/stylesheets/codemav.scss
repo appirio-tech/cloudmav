@@ -42,30 +42,39 @@ $main_font: $droid;
 	background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
 }
 
+@mixin title {
+	font-family: $title_font;
+
+	font-weight:normal;	
+}
+
 body {
 	font-family: $main_font;
 	font-size: 11pt;
 }
 
 h1 {
-	font-family: $title_font;
+	@include title;
 	font-size: 36pt;
-	font-weight:normal;
 	color:$light_blue;
 	margin-bottom: 15px;	
 }
 
 h2 {
-	font-family: $title_font;
+	@include title;
 	font-size: 36pt;
-	font-weight:normal;
+	color:$light_black;
+	margin-bottom: 15px;
+}
+h3 {
+	@include title;
+	font-size: 24pt;
 	color:$light_black;
 	margin-bottom: 15px;
 }
 h4 {
-	font-family: $title_font;
-	font-size: 14pt;
-	font-weight:normal;
+	@include title;
+	font-size: 16pt;
 	color:$light_black;
 	margin-bottom: 5px;	
 }
@@ -195,6 +204,24 @@ $error_background: #FFDFDF;
 	textarea {
 		border: 2px solid $error_border;
 	}
+}
+
+.page_title {
+	border-top: 1px solid $gray;
+	.title {
+		color: $blue;
+		float:left;
+		font-size: 24pt;
+		margin-top: 3px;
+	}
+	.link {
+		float: left;
+		margin-top: 8px;
+		margin-left: 10px;
+	}
+	margin-top: 5px;
+	margin-bottom:5px;	
+	height: 20px;
 }
 
 .photo {
