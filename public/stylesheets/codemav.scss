@@ -46,7 +46,6 @@ body {
 }
 
 h2 {
-	font-family: $title_font;
 	font-size: 36px;
 	font-weight:normal;
 	color:$light_black;
@@ -210,7 +209,7 @@ $error_background: #FFDFDF;
 	.title_icon {
 		position:absolute;
 		top: 10px;
-		left: 50px;
+		left: 40px;
 	}
 	.title_text {
 		position:absolute;
@@ -278,6 +277,16 @@ $error_background: #FFDFDF;
 	}
 	border-top: 3px solid $brown;
 	height: 30px;
+}
+
+#menu {
+	margin-top: 4px;
+	a {
+		font-size: 14pt;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 #profile_pic {
