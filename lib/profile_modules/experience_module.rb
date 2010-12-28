@@ -19,11 +19,8 @@ module CodeMav
           project_xp = project.get_xp
           project_xp.each_pair do |name, duration|
             xp = find_create_xp(name)
-            if xp.duration.nil?
-              xp.duration = duration
-            else
-              xp.duration += duration
-            end
+            xp.duration = 0 if xp.duration.nil?
+            xp.duration += duration unless duration.nil?
           end
         end
       end

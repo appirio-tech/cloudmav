@@ -31,7 +31,9 @@ class ApplicationController < ActionController::Base
   private 
   
   def set_date(model, param_name)
-    date = Date.parse(params[param_name])
+    # puts "d : #{params[param_name]}"
+    # date = Date.parse(params[param_name])
+    date = Date.strptime(params[param_name], '%m/%d/%Y')
     model.send("#{param_name.to_s}=", date)
   end
 end
