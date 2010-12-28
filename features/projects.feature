@@ -33,4 +33,13 @@ Feature: Projects
 		Then the project should not be added
 		And I should get the error message "Start date must be before end date"
 		And I should get the error message "End date must be after start date"
-	
+		
+	Scenario: Project with same start and end date
+
+		When I enter my project information
+		And I enter the start date as "12/10/2010"
+		And I enter the end date as "12/10/2010"
+		And I enter the technologies "C#"
+		And I add the project
+		Then the project should be added
+		And the experience with "C#" should have a duration
