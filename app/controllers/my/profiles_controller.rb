@@ -24,7 +24,7 @@ class My::ProfilesController < My::MyController
   def update
     if @profile.update_attributes(params[:profile])
       flash[:notice] = "Profile updated"
-      redirect_to @profile
+      redirect_to [:my, @profile]
     else
       render "edit"
     end

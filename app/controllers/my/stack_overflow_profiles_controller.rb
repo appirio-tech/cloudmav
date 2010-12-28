@@ -9,7 +9,7 @@ class My::StackOverflowProfilesController < My::MyController
     @stack_overflow_profile.profile = current_profile
     @stack_overflow_profile.synch!
         
-    redirect_to current_profile
+    redirect_to [:my, current_profile]
   end
   
 end

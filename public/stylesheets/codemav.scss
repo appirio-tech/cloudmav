@@ -19,13 +19,15 @@ $contrast: #E03F00;
 $white: #FFFFFF;
 $offwhite: #EEEEEE;
 $brown: #6F4200;
+$error_background:#F0A8A8;
+$error_border:#900;
 $dark_blue: #001626;
 $not_quite_as_dark_blue: #003459;
 $droid: 'Droid Sans', arial, serif;
 $pt: 'PT Sans', arial, serif;
 $droid_serif: 'Droid Serif', arial, serif;
-$title_font: 'Georgia';
-$main_font: $pt;
+$title_font: $pt;
+$main_font: $droid;
 
 @mixin corners($radius: 5px) {
 	border-radius: $radius;
@@ -42,10 +44,19 @@ $main_font: $pt;
 
 body {
 	font-family: $main_font;
-	font-size: 13pt;
+	font-size: 11pt;
+}
+
+h1 {
+	font-family: $title_font;
+	font-size: 36px;
+	font-weight:normal;
+	color:$light_blue;
+	margin-bottom: 15px;	
 }
 
 h2 {
+	font-family: $title_font;
 	font-size: 36px;
 	font-weight:normal;
 	color:$light_black;
@@ -133,12 +144,22 @@ form {
 	}
 }
 
-.notice {
-	border: 1px solid $gray;
+.flash {
 	padding: 5px;
 	text-align:center;
-	margin-bottom: 15px;
+	margin-bottom: 15px;	
+}
+.notice {
+	border: 2px solid $gray;
 	background-color: $offwhite;
+}
+.alert {
+	border: 2px solid $error_border;
+	background-color: $error_background;
+}
+.error {
+	border: 2px solid $error_border;
+	background-color: $error_background;	
 }
 
 $error_border: #CB2324;
@@ -170,7 +191,7 @@ $error_background: #FFDFDF;
 }
 
 .photo {
-	border: 1px solid $black;
+	border: 1px solid $light_gray;
 }
 
 .set_location {
@@ -239,24 +260,26 @@ $error_background: #FFDFDF;
 }
 
 #login_panel {
-	border: solid 1px $offwhite;
+	@include gradient($white, $off_white);
+	border: solid 1px $black;
 	padding: 5px;
 	font-size: 0.9em;
-	height: 40px;
-	width: 250px;
+	height: 55px;
+	width: 270px;
 	.avatar {
 		float:left;
 		margin-right: 10px;
 	}
 	.logout {
 		float:right;
+		margin-top: 3px;
 		a {
-			font-size: 0.8em;
+			font-size: 10pt;
 		}
 	}
 	.username {
 		a {
-			font-size: 1.1em;
+			font-size: 14pt;
 		}
 	}
 }
@@ -301,11 +324,14 @@ $error_background: #FFDFDF;
 			float: left;
 		}
 		.score {
-			float: left;
-			font-size: 1.5em;
-			position: relative;
-			top: 15px;
-			left: 10px;
+			font-size: 22pt;
+			float:right;
+			margin-left: 10px;
+			margin-top: 3px;
+			.description {
+				font-size: 10pt;
+				color: $dark_gray;	
+			}
 		}
 	}
 }
@@ -472,11 +498,13 @@ $error_background: #FFDFDF;
 	img {
 		margin-right: 5px;
 		float:left;
+		height: 25px;
 	}
 	.score {
-		padding-top: 1px;
+		padding-top: 5px;
 		float:left;
 		margin-right: 10px;
+		font-size:12pt;
 	}
 }
 
@@ -501,6 +529,7 @@ $error_background: #FFDFDF;
 		color: $blue;
 		&:hover {
 			border-bottom: 3px solid $blue;
+			text-decoration: none;
 		}
 	}
 	.selected {

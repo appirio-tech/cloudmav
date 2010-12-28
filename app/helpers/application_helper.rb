@@ -1,7 +1,7 @@
 module ApplicationHelper
   
   def flashy
-    f_names = [:notice, :error, :warning, :message, :success]
+    f_names = [:notice, :error, :warning, :message, :success, :alert]
     fl = ''
 
     for name in f_names
@@ -19,6 +19,7 @@ module ApplicationHelper
   end
   
   def show_date(date)
+    return "" if date.nil?
     date.strftime("%m/%d/%y")
   end
   

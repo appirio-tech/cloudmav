@@ -1,15 +1,23 @@
 body {
+  font-family: "Droid Sans", arial, serif;
+  font-size: 11pt; }
+
+h1 {
   font-family: "PT Sans", arial, serif;
-  font-size: 13pt; }
+  font-size: 36px;
+  font-weight: normal;
+  color: #0477bf;
+  margin-bottom: 15px; }
 
 h2 {
+  font-family: "PT Sans", arial, serif;
   font-size: 36px;
   font-weight: normal;
   color: #202121;
   margin-bottom: 15px; }
 
 a {
-  font-family: "PT Sans", arial, serif;
+  font-family: "Droid Sans", arial, serif;
   text-decoration: none;
   color: #003459; }
   a:visited {
@@ -70,12 +78,22 @@ form textarea {
   form textarea:focus {
     border: 1px solid #0477bf; }
 
-.notice {
-  border: 1px solid #595959;
+.flash {
   padding: 5px;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 15px; }
+
+.notice {
+  border: 2px solid #595959;
   background-color: #eeeeee; }
+
+.alert {
+  border: 2px solid #990000;
+  background-color: #f0a8a8; }
+
+.error {
+  border: 2px solid #990000;
+  background-color: #f0a8a8; }
 
 #error_explanation {
   border: 2px solid #cb2324;
@@ -98,7 +116,7 @@ form textarea {
     border: 2px solid #cb2324; }
 
 .photo {
-  border: 1px solid #0d0d0d; }
+  border: 1px solid #868686; }
 
 .set_location {
   width: 450px;
@@ -155,20 +173,25 @@ form textarea {
     font-size: 16pt; }
 
 #login_panel {
-  border: solid 1px #eeeeee;
+  /* gecko based browsers */
+  background: -moz-linear-gradient(top, white, #f2f2f2);
+  /* webkit based browsers */
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#f2f2f2));
+  border: solid 1px #0d0d0d;
   padding: 5px;
   font-size: 0.9em;
-  height: 40px;
-  width: 250px; }
+  height: 55px;
+  width: 270px; }
   #login_panel .avatar {
     float: left;
     margin-right: 10px; }
   #login_panel .logout {
-    float: right; }
+    float: right;
+    margin-top: 3px; }
     #login_panel .logout a {
-      font-size: 0.8em; }
+      font-size: 10pt; }
   #login_panel .username a {
-    font-size: 1.1em; }
+    font-size: 14pt; }
 
 #content {
   font-size: 1em;
@@ -202,11 +225,13 @@ form textarea {
     #profile_icons .icon .image {
       float: left; }
     #profile_icons .icon .score {
-      float: left;
-      font-size: 1.5em;
-      position: relative;
-      top: 15px;
-      left: 10px; }
+      font-size: 22pt;
+      float: right;
+      margin-left: 10px;
+      margin-top: 3px; }
+      #profile_icons .icon .score .description {
+        font-size: 10pt;
+        color: #8d8d8d; }
 
 #basic_info table tr td:first-child {
   font-size: 1em;
@@ -332,11 +357,13 @@ form textarea {
   margin-top: 5px; }
   .points img {
     margin-right: 5px;
-    float: left; }
-  .points .score {
-    padding-top: 1px;
     float: left;
-    margin-right: 10px; }
+    height: 25px; }
+  .points .score {
+    padding-top: 5px;
+    float: left;
+    margin-right: 10px;
+    font-size: 12pt; }
 
 #guidance {
   float: right; }
@@ -355,6 +382,7 @@ form textarea {
     padding-bottom: 2px;
     color: #003459; }
     #profile_menu a:hover {
-      border-bottom: 3px solid #003459; }
+      border-bottom: 3px solid #003459;
+      text-decoration: none; }
   #profile_menu .selected a {
     border-bottom: 3px solid #0d0d0d; }

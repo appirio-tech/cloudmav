@@ -8,7 +8,9 @@
 				%ul
 					- resource.errors.full_messages.each do |msg|
 						%li= msg
-					
+		%ul
+			- resource.errors.full_messages.each do |msg|
+				%li= msg		
 		.label= f.label :username
 		.control= f.text_field :username
 		
