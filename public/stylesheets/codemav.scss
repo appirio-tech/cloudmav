@@ -49,7 +49,7 @@ body {
 
 h1 {
 	font-family: $title_font;
-	font-size: 36px;
+	font-size: 36pt;
 	font-weight:normal;
 	color:$light_blue;
 	margin-bottom: 15px;	
@@ -57,10 +57,17 @@ h1 {
 
 h2 {
 	font-family: $title_font;
-	font-size: 36px;
+	font-size: 36pt;
 	font-weight:normal;
 	color:$light_black;
 	margin-bottom: 15px;
+}
+h4 {
+	font-family: $title_font;
+	font-size: 14pt;
+	font-weight:normal;
+	color:$light_black;
+	margin-bottom: 5px;	
 }
 
 a {
@@ -535,6 +542,32 @@ $error_background: #FFDFDF;
 	.selected {
 		a{
 			border-bottom: 3px solid $black;
+		}
+	}
+}
+
+.info_box {
+	border: 1px solid $gray;
+	padding: 5px;
+	.info_logo {
+		position: relative;
+		top: -12px;
+		left: -12px;
+		img { 
+			width: 120px;
+			
+		}
+	}
+	table {
+		margin-top: 10px;
+		td {
+			font-size:1.3em;
+		}
+		td:first-child {
+			font-size:1em;
+			color: $gray;
+			padding-right: 10px;
+			text-transform: lowercase;
 		}
 	}
 }

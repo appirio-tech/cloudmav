@@ -4,17 +4,24 @@ body {
 
 h1 {
   font-family: "PT Sans", arial, serif;
-  font-size: 36px;
+  font-size: 36pt;
   font-weight: normal;
   color: #0477bf;
   margin-bottom: 15px; }
 
 h2 {
   font-family: "PT Sans", arial, serif;
-  font-size: 36px;
+  font-size: 36pt;
   font-weight: normal;
   color: #202121;
   margin-bottom: 15px; }
+
+h4 {
+  font-family: "PT Sans", arial, serif;
+  font-size: 14pt;
+  font-weight: normal;
+  color: #202121;
+  margin-bottom: 5px; }
 
 a {
   font-family: "Droid Sans", arial, serif;
@@ -386,3 +393,22 @@ form textarea {
       text-decoration: none; }
   #profile_menu .selected a {
     border-bottom: 3px solid #0d0d0d; }
+
+.info_box {
+  border: 1px solid #595959;
+  padding: 5px; }
+  .info_box .info_logo {
+    position: relative;
+    top: -12px;
+    left: -12px; }
+    .info_box .info_logo img {
+      width: 120px; }
+  .info_box table {
+    margin-top: 10px; }
+    .info_box table td {
+      font-size: 1.3em; }
+    .info_box table td:first-child {
+      font-size: 1em;
+      color: #595959;
+      padding-right: 10px;
+      text-transform: lowercase; }

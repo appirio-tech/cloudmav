@@ -1,18 +1,14 @@
-- if @profile.speaker_rate_profile.nil?
-	- if current_profile == @profile
-		%p 
-			Do you have a Speaker Rate account? 
-			= link_to "Add Your Speaker Rate Account", new_my_speaker_rate_profile_path
--else
-	.large
-		.grid_4
-			%h4 Speaker Rate
-		.clear
-		.grid_4
-			= link_to "Go to my Speaker Rate Profile", @profile.speaker_rate_profile.url
-		.clear
-		.grid_2
-			Rating
-		.grid_2
-			= @profile.speaker_rate_profile.rating
-		.clear
+.grid_4.info_box
+	.info_logo= link_to image_tag("speaker_rate.png"), "http://www.speakerrate.com"
+	- if @profile.speaker_rate_profile.nil?
+		- if current_profile == @profile
+			%p 
+				Do you have a Speaker Rate account? 
+				= link_to "Add Your Speaker Rate Account", new_my_speaker_rate_profile_path
+	-else
+		= link_to "Go to my Speaker Rate Profile", @profile.speaker_rate_profile.url
+		%table
+			%tr
+				%td Rating
+				%td= @profile.speaker_rate_profile.rating
+.clear
