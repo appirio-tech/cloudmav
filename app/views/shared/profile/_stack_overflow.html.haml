@@ -1,23 +1,16 @@
-- if @profile.stack_overflow_profile.nil?
-	- if current_profile == @profile
+.grid_4.info_box
+	.info_logo= link_to image_tag("stack_over_flow_info_logo.png"), "http://www.stackoverflow.com"
+	- if @profile.stack_overflow_profile.nil? && current_profile == @profile
 		%p 
 			Do you have a StackOverflow account? 
 			= link_to "Add Your StackOverflow Account", new_my_stack_overflow_profile_path
--else
-	.large
-		.grid_4
-			%h4 StackOverflow
-		.clear
-		.grid_4
-			= link_to "Go to my StackOverflow Profile", @profile.stack_overflow_profile.url
-		.clearfix
-		.grid_2
-			Reputation
-		.grid_2
-			= @profile.stack_overflow_profile.reputation
-		.clear
-		.grid_2
-			Badges
-		.grid_2
-			= stack_overflow_badges(@profile.stack_overflow_profile)
-		.clear
+	-else
+		= link_to "Go to my StackOverflow Profile", @profile.stack_overflow_profile.url
+		%table
+			%tr
+				%td Reputation
+				%td= @profile.stack_overflow_profile.reputation
+			%tr
+				%td Badges
+				%td= stack_overflow_badges(@profile.stack_overflow_profile)
+.clear
