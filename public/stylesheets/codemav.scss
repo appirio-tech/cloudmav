@@ -207,7 +207,7 @@ $error_background: #FFDFDF;
 }
 
 .page_title {
-	border-top: 1px solid $gray;
+	border-top: 7px solid $off_white;
 	.title {
 		color: $blue;
 		float:left;
@@ -369,6 +369,20 @@ $error_background: #FFDFDF;
 		}
 	}
 }
+
+
+.count {
+	font-size: 26pt;
+	float:left;
+}
+.count_of {
+	font-size: 16pt;
+	color: $gray;
+	float:left;	
+	margin-top:13px;
+	margin-left:10px;
+}
+
 #basic_info {
 	table {
 		tr { 
@@ -596,5 +610,14 @@ $error_background: #FFDFDF;
 			padding-right: 10px;
 			text-transform: lowercase;
 		}
+	}
+}
+
+.list {
+	li {
+		margin-left: 10px;
+	}
+	.item_title {
+		font-size: 16pt;
 	}
 }

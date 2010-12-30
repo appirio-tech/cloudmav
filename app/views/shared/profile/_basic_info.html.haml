@@ -1,12 +1,14 @@
-#basic_info
-	%table
-		%tr
-			%td Email
-			%td= @profile.email
-		%tr
-			%td Lives in
-			%td
-				- if @profile.location.blank?
-					= link_to "not set", edit_my_profile_path(@profile)
-				- else
-					= @profile.location
+.grid_16
+	#basic_info{:style=> "margin-top:10px;"}
+		%table
+			%tr
+				%td Email
+				%td= @profile.email
+			%tr
+				%td Lives in
+				%td
+					- if @profile.location.blank?
+						= link_to "not set", edit_my_profile_path(@profile)
+					- else
+						= @profile.location
+.clear

@@ -1,26 +1,29 @@
 .grid_16
 	%table
 		%tr
-			%td= pluralize @profile.talks.count, "talk", "talks"
-			%td= pluralize @profile.presentations.count, "presentation", "presentations"
+			%td
+				.count= @profile.talks.count
+				.count_of= @profile.talks.count > 1 ? "talks" : "talks"
+			%td{:style =>"padding-left:30px;"}
+				.count= @profile.presentations.count
+				.count_of= @profile.presentations.count > 1 ? "presentations" : "presentations"
 .clear
 
-.grid_8
+.grid_10
 	%h2.page_title 
 		.title Talks
 		- if current_profile == @profile
 			.link= link_to "add a talk", new_my_talk_path 
-	%ul
+	%ul.list
 		- @profile.talks.each do |t|
 			- if current_profile == @profile
 				%li
-					%p= link_to t.title, [:my, t]
+					.item_title= link_to t.title, [:my, t]
 					- if t.presentations.any?
 						%p= "Presented #{pluralize t.presentations.count, 'time', 'times' }"
 			- else
 				%li= link_to t.title, '/'
-
-.grid_8
+.grid_4
 	%br
 	= render :partial => "shared/profile/speaker_rate"
 .clear

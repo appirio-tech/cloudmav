@@ -46,3 +46,8 @@ Then /^I should get the error message "([^"]*)"$/ do |message|
   And %Q{I should see "#{message}" within "#error_explanation"}
 end
 
+Then /^the experience with "([^"]*)" should have a duration$/ do |technology|
+  profile = Profile.find(@profile.id)
+  experience = profile.experience_with(technology)
+  experience.duration.should_not be_nil
+end
