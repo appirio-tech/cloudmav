@@ -33,7 +33,6 @@
 				.title_icon= link_to image_tag("main_code_mav_icon.png"), root_path 
 				.title_text= link_to image_tag("code_mav_title_text.png"), root_path
 				= render :partial => "shared/login_info"
-				= render :partial => "shared/guidance"
 			.clear
 		.clear
 	.clear
@@ -47,6 +46,7 @@
 		
 	#content
 		.container_16
+			= render :partial => "shared/guidance"
 			= flashy
 			= yield
 		.clear

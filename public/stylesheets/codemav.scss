@@ -257,19 +257,15 @@ $error_background: #FFDFDF;
 	@include gradient($black, $dark_blue);
 	padding-top: 10px;
 	height: 80px;
-	h1 { 
-		font-family: 'Cuprum', arial, serif;
-		font-size: 5em;
-	}
 	.title_icon {
 		position:absolute;
 		top: 10px;
-		left: 40px;
+		left: 20px;
 	}
 	.title_text {
 		position:absolute;
 		top: 28px;
-		left: 165px;
+		left: 135px;
 	}
 }
 
@@ -557,7 +553,15 @@ $error_background: #FFDFDF;
 }
 
 #guidance {
-	float:right;
+	// float:right;
+	// position:absolute;
+	// top: 90px;
+	// left: 500px;
+	// right: 50px;
+	border: 1px solid $gray;
+	background: $off_white;
+	padding: 7px;
+	margin-bottom: 10px;
 }
 
 #profile_menu {
