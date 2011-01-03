@@ -30,7 +30,9 @@ Codemav::Application.routes.draw do
     resources :projects
   end
   
-  # resources :profiles
+  resources :blogs do
+    resources :posts
+  end
   
   resources :scoreboards do
     collection do

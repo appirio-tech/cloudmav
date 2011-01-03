@@ -1,25 +1,55 @@
 .grid_16
-	%p= pluralize @profile.blogs.count, "blog", "blogs"
-	%p= pluralize @profile.blog_posts.count, "posts", "posts"
+	%table
+		%tr
+			%td
+				.count= @profile.blogs.count
+				.count_of= @profile.blogs.count > 1 ? "blogs" : "blog"
+			%td{:style =>"padding-left:30px;"}
+				.count= @profile.posts.count
+				.count_of= @profile.posts.count > 1 ? "posts" : "post"
 .clear
 
-.grid_8
-	%h3 My blogs
-	- if current_profile == @profile
-		= link_to "Add Blog", new_my_blog_path 
-	%ul
-		- @profile.blogs.each do |b|
-			- if current_profile == @profile
-				%li= link_to b.title, [:my, b]
-			- else
-				%li= link_to b.title, '/'
-				
-.grid_8
-	%h3 Last 5 blog posts
-	%ul
-		- @profile.blog_posts.first(5).each do |p|
+
+.grid_10
+	%h2.page_title 
+		.title Blog Posts
+	= will_paginate @blog_posts
+	%ul.list
+		- @blog_posts.each do |p|
 			%li
-				%p= link_to p.title, p.url
+				.item_title= link_to p.title, p.url
 				%p= show_date p.written_on
+	= page_entries_info @blog_posts
+	
+.grid_6
+	%h2.page_title 
+		.title Blogs
+	- if current_profile == @profile
+		= link_to "Add Blog", new_my_blog_path
+	%ul.list
+		- @profile.blogs.each do |b|
+			%li
+				.item_title= b.title
+.clear
+
+
+/ .grid_8
+/ 	%h3 My blogs
+/ 	- if current_profile == @profile
+/ 		= link_to "Add Blog", new_my_blog_path 
+/ 	%ul
+/ 		- @profile.blogs.each do |b|
+/ 			- if current_profile == @profile
+/ 				%li= link_to b.title, [:my, b]
+/ 			- else
+/ 				%li= link_to b.title, '/'
+/ 				
+/ .grid_8
+/ 	%h3 Last 5 blog posts
+/ 	%ul
+/ 		- @profile.blog_posts.first(5).each do |p|
+/ 			%li
+/ 				%p= link_to p.title, p.url
+/ 				%p= show_date p.written_on
 		
 .clear

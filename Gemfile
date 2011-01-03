@@ -16,6 +16,7 @@ gem 'fog'
 gem 'rmagick'
 gem "carrierwave"
 gem "ruby-duration"
+gem "will_paginate"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily

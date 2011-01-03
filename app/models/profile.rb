@@ -10,7 +10,7 @@ class Profile
   include Mongoid::Document
   include Badgeable::Subject
   include Gravtastic
-  include ScoreIt::Subject
+  include ScoreIt::Subject 
   include Virgil::Teachable
   include CodeMav::WriterModule
   include CodeMav::SpeakerModule

@@ -15,6 +15,7 @@ class My::ProfilesController < My::MyController
 
   def writing
     @tab = "writing"
+    @blog_posts = current_profile.posts.paginate(:page => params[:page], :per_page => 5, :order => 'written_on DESC')
   end
   
   def speaking

@@ -14,6 +14,7 @@ describe BloggerSyncService do
     end
     
     it { @blog.posts.count.should > 0 }
+    it { @profile.posts.count.should > 0 }
   end
   
 end

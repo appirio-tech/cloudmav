@@ -17,6 +17,7 @@ class BloggerSyncService
         post.title = i.title
         post.url = i.link
         post.written_on = i.date
+        blog.profile.posts << post
       end
     end
   end
