@@ -17,6 +17,8 @@ gem 'rmagick'
 gem "carrierwave"
 gem "ruby-duration"
 gem "will_paginate"
+gem "httparty"
+gem "nokogiri"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily

@@ -38,6 +38,7 @@ GEM
     carrierwave (0.5.1)
       activesupport (~> 3.0)
     configuration (1.2.0)
+    crack (0.1.8)
     cucumber (0.10.0)
       builder (>= 2.1.2)
       diff-lcs (~> 1.1.2)
@@ -78,6 +79,8 @@ GEM
       oauth
     gravtastic (3.1.0)
     haml (3.0.25)
+    httparty (0.6.1)
+      crack (= 0.1.8)
     i18n (0.4.2)
     json (1.4.6)
     launchy (0.3.7)
@@ -171,11 +174,13 @@ DEPENDENCIES
   grackle
   gravtastic
   haml
+  httparty
   json
   launchy
   mocha
   mongo
   mongoid (~> 2.0.0.beta)
+  nokogiri
   rails (= 3.0.0)
   rmagick
   rspec-rails (>= 2.0.0.beta.22)
