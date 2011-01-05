@@ -19,6 +19,7 @@ gem "ruby-duration"
 gem "will_paginate"
 gem "httparty"
 gem "nokogiri"
+gem "speaker_rate"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily

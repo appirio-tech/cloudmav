@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SpeakerRateService do
+describe SpeakerRateProfile do
   
   describe "sync" do
     before(:each) do
