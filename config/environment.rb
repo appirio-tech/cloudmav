@@ -5,5 +5,5 @@ require File.expand_path('../application', __FILE__)
 Codemav::Application.initialize!
 
 
-SLIDE_SHARE_API_KEY = "IUKyhLLC"
-SLIDE_SHARE_SECRET = "PdZ8enD1"
+SlideShare.API_KEY = "IUKyhLLC"
+SlideShare.SECRET = "PdZ8enD1"

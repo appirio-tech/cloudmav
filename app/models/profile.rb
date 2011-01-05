@@ -42,6 +42,7 @@ class Profile
   
   embeds_one :stack_overflow_profile
   embeds_one :speaker_rate_profile
+  embeds_one :slide_share_profile
   embeds_one :git_hub_profile
     
   scope :find_by_id, lambda { |id| { :where => { :api_id => id } } }

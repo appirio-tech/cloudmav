@@ -20,6 +20,7 @@ gem "will_paginate"
 gem "httparty"
 gem "nokogiri"
 gem "speaker_rate"
+gem "slide_share"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily
