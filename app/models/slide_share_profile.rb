@@ -34,6 +34,7 @@ class SlideShareProfile
       talk.title = ss_talk["Title"]
       talk.description = ss_talk["Description"]
       talk.slides_url = ss_talk["DownloadUrl"]
+      talk.slides_thumbnail = ss_talk["ThumbnailURL"]
       return talk
     end
 end

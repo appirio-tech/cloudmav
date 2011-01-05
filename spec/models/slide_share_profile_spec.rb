@@ -13,6 +13,9 @@ describe SlideShareProfile do
     
     it { @slide_share_profile.url.should_not be_nil }
     it { @profile.talks.should_not be_empty }
+    it "should set the thumbnail" do
+      @profile.talks.each {|t| t.slides_thumbnail.should_not be_nil }
+    end
   end
   
 end
