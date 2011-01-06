@@ -9,6 +9,7 @@ Feature: Talks
 		Given I am logged in
 		When I add a talk
 		Then the talk should be added
+		And I should have 20 speaker points
 		
 	Scenario: Add a presentation
 	
