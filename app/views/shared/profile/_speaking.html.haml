@@ -18,6 +18,8 @@
 		- @profile.talks.each do |t|
 			- if current_profile == @profile
 				%li
+					- unless t.slides_thumbnail.nil?
+						.item_pic= image_tag t.slides_thumbnail
 					.item_title= link_to t.title, [:my, t]
 					- if t.presentations.any?
 						%p= "Presented #{pluralize t.presentations.count, 'time', 'times' }"
@@ -26,5 +28,6 @@
 .grid_4
 	%br
 	= render :partial => "shared/profile/speaker_rate"
+	= render :partial => "shared/profile/slide_share"
 .clear
 
