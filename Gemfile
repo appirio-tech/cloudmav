@@ -15,7 +15,7 @@ gem "grackle"
 gem 'fog'
 gem 'rmagick'
 gem "carrierwave"
-gem "ruby-duration"
+gem "ruby-duration" 
 gem "will_paginate"
 gem "httparty" 
 gem "nokogiri"
