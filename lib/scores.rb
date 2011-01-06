@@ -29,3 +29,11 @@ score 10, :speaker_points, "for having a SpeakerRate Account", :after => :save d
     !p.speaker_rate_profile.nil?
   end
 end
+
+score 10, :speaker_points, "for having a SlideShare Account", :after => :save do
+  thing Profile
+  subject :profile
+  conditions do |p|
+    !p.slide_share_profile.nil?
+  end
+end

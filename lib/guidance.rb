@@ -37,8 +37,17 @@ end
 learn "Syncing with your SpeakerRate Account" do      
   thing Profile
   subject :profile
-  partial :sync_speaker_rate
+  partial :synch_speaker_rate
   conditions do |p|
     !p.speaker_rate_profile.nil?
+  end
+end
+
+learn "Syncing with your SlideShare Account" do      
+  thing Profile
+  subject :profile
+  partial :synch_slide_share
+  conditions do |p|
+    !p.slide_share_profile.nil?
   end
 end
