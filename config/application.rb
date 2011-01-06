@@ -15,6 +15,7 @@ module Codemav
       config.autoload_paths += %W( #{config.root}/lib ) 
       config.autoload_paths += %W( #{config.root}/lib/blog_syncers )
       config.autoload_paths += %W( #{config.root}/lib/apis )
+      config.autoload_paths += %W( #{config.root}/lib/that_just_happened )
     end
     
     config.encoding = "utf-8"
