@@ -17,7 +17,7 @@ gem 'rmagick'
 gem "carrierwave"
 gem "ruby-duration"
 gem "will_paginate"
-gem "httparty"
+gem "httparty" 
 gem "nokogiri"
 gem "speaker_rate"
 gem "slide_share"
