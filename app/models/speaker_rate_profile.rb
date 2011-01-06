@@ -14,10 +14,7 @@ class SpeakerRateProfile
     
     self.rating = speaker["rating"]
     
-    speaker["talks"].each do |sr_talk|
-      talk = create_talk(sr_talk)
-      self.profile.talks << talk
-    end
+    speaker["talks"].each {|t| create_talk(t) unless already_has_talk?(t) }
     
     self.profile.save!
     self.save!
@@ -36,12 +33,20 @@ class SpeakerRateProfile
       self.url = "http://speakerrate.com/speakers/#{self.speaker_rate_id}"
     end
     
+    def already_has_talk?(sr_talk)
+      self.profile.talks.where(:imported_id => sr_talk["id"]).first
+    end
+    
     def create_talk(sr_talk)
       talk = Talk.new
       talk.title = sr_talk["title"]
       talk.description = sr_talk["info"]["text"]
       talk.slides_url = sr_talk["slides_url"]
-      talk.presentations << Presentation.new(:presentation_date => DateTime.parse(sr_talk["when"]))
-      return talk
+      talk.imported_id = sr_talk["id"]
+      self.profile.talks << talk
+      talk.save
+      
+      p = Presentation.new(:presentation_date => DateTime.parse(sr_talk["when"]))
+      talk.add_presentation(p)
     end
 end
