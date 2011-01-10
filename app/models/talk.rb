@@ -7,10 +7,24 @@ class Talk
   field :slides_thumbnail, :type => String
   field :imported_id, :type => String
   
-  embedded_in :profile, :inverse_of => :talk
+  referenced_in :profile, :inverse_of => :talks
   embeds_many :presentations
   
   def add_presentation(presentation)
     self.profile.earn("for presentation", 20, :speaker_points)
   end
+  
+  def self.search(query, options = {})
+    search = Sunspot.new_search(Talk)
+    search.build do
+      keywords query do
+      end
+    end
+    search.execute
+  end
+  # include Sunspot::Mongoid
+  # searchable do
+  #   text :title
+  #   text :description
+  # end
 end

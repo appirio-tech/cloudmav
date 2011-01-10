@@ -1,0 +1,9 @@
+.grid_16
+	
+	= form_tag talk_searches_path, :remote => true do |f|
+		%h4
+			Looking for talks on 
+			= text_field_tag "search"
+			= submit_tag "Search", :disable_with => "Searching..."
+	#talk_search_results
+.clear

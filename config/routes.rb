@@ -34,6 +34,7 @@ Codemav::Application.routes.draw do
   resources :blogs do
     resources :posts
   end
+  resources :talks
   
   resources :scoreboards do
     collection do
@@ -41,6 +42,7 @@ Codemav::Application.routes.draw do
     end
   end
   resources :people_searches
+  resources :talk_searches
   
   resources :companies
   resources :user_groups do

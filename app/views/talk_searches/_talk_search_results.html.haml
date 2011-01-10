@@ -1,0 +1,13 @@
+
+- if @talks.empty?
+	No talks were found.
+- else
+	- @talks.each do |t|
+		%hr
+		.talk_search_result
+			- unless t.slides_thumbnail.nil?
+				.slide_pic= image_tag t.slides_thumbnail
+			.talk_title= link_to t.title, t
+			- if t.presentations.any?
+				%p= "Presented #{pluralize t.presentations.count, 'time', 'times' }"
+		.clear

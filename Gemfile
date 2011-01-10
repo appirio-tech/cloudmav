@@ -21,6 +21,9 @@ gem "httparty"
 gem "nokogiri"
 gem "speaker_rate"
 gem "slide_share"
+gem "sunspot"
+gem "sunspot_rails"
+gem "sunspot_mongoid"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily

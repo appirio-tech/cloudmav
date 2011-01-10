@@ -4,6 +4,7 @@ class PeopleSearchesController < ApplicationController
   end
   
   def create
+    puts "here"
     @people = Profile.near_loc(params[:location])
     
     respond_to do |format|

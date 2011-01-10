@@ -3,7 +3,7 @@ module CodeMav
     def self.included(receiver)
       receiver.class_eval do
         
-        embeds_many :talks
+        references_many :talks
         
       end
       
