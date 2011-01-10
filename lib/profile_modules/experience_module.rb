@@ -18,16 +18,11 @@ module CodeMav
         self.projects.each do |project|
           project_xp = project.get_xp
           project_xp.each_pair do |name, duration|
-            puts "duration is #{duration.inspect}"
             xp = find_create_xp(name)
-            # xp.duration = 0 if xp.duration.nil?
-            puts "#{xp.duration} + #{duration}"
-            # xp.duration += duration unless duration.nil?
-            a = xp.duration + duration
-            xp.duration = xp.duration + duration unless duration.nil?
-            xp.duration = a
-            puts "xp dur = #{xp.duration.inspect}"
-            puts "a #{a.inspect}"
+            unless duration.nil?
+              sum = xp.duration + duration
+              xp.duration= sum.to_i
+            end
           end
         end
       end
@@ -40,15 +35,12 @@ module CodeMav
         def find_create_xp(name)
           xp = self.experiences.with(name).first
           unless xp
-            puts "creating.."
             xp = Experience.new
             xp.name = name
             xp.technology = Technology.named(name).first
-            # xp.duration = Duration.new(0)
             xp.duration = 0
             self.experiences << xp
           end
-          puts "xp create = #{xp.duration.inspect}"
           return xp
         end
     end
