@@ -6,7 +6,7 @@ class Talk
   field :slides_url, :type => String
   field :slides_thumbnail, :type => String
   field :imported_id, :type => String
-  field :tags, :type => Array
+  field :tags, :type => Array, :default => []
   
   referenced_in :profile, :inverse_of => :talks
   embeds_many :presentations
