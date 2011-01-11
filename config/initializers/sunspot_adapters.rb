@@ -12,7 +12,7 @@ module SunspotAdapters
   end    
 end
 
-[Talk].each do |klass|
+[Talk, Profile].each do |klass|
   Sunspot::Adapters::InstanceAdapter.register(SunspotAdapters::InstanceAdapter, klass)
   Sunspot::Adapters::DataAccessor.register(SunspotAdapters::DataAccessor, klass)
 end

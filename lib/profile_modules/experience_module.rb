@@ -13,6 +13,10 @@ module CodeMav
     
     module InstanceMethods
       
+      def experience_tags
+        self.projects.map{|p| p.technologies }.flatten.map{|t| t.name}
+      end
+      
       def calculate_experience
         self.experiences.each{|e| e.destroy}
         self.projects.each do |project|

@@ -12,6 +12,10 @@ module CodeMav
     
     module InstanceMethods
       
+      def speaker_tags
+        []
+      end
+      
       def presentations
         presentations = []
         self.talks.each { |t| presentations.concat t.presentations }

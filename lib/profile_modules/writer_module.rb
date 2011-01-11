@@ -13,6 +13,9 @@ module CodeMav
     
     module InstanceMethods
       
+      def writer_tags
+        []
+      end
       
       # def blog_posts
       #   posts = []

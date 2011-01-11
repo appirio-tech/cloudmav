@@ -59,6 +59,10 @@ class Profile
     "#{api_id}"
   end
   
+  def tags
+    self.experience_tags + self.writer_tags + self.speaker_tags
+  end
+  
   def as_json(opts={})
     result = { 
       :id => api_id,
@@ -83,6 +87,15 @@ class Profile
     
     def top_stack_overflow
       stack_overflow.desc('stack_overflow_profile.reputation')
+    end
+    
+    def search(query, options = {})
+      search = Sunspot.new_search(Profile)
+      search.build do
+        keywords query do
+        end
+      end
+      search.execute
     end
   end
   

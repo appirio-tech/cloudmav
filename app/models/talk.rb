@@ -22,9 +22,5 @@ class Talk
     end
     search.execute
   end
-  # include Sunspot::Mongoid
-  # searchable do
-  #   text :title
-  #   text :description
-  # end
+
 end

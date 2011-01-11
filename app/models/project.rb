@@ -11,8 +11,6 @@ class Project
   
   validate :start_before_end, :if => :start_and_end_date_not_nil
   
-  
-  
   def set_technologies!(technologies_string)
     self.technologies = []
     technology_names = technologies_string.split(',').map{|s| s.strip.camelize }

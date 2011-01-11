@@ -6,7 +6,7 @@
 		%hr
 		.person_search_result
 			.image= image_tag p.gravatar_url(:size => 60), :class => :photo
-			.name= link_to p.name, p
+			.name= link_to p.display_name, p
 			.username= "(#{p.username})"
 			= render :partial => "shared/points", :locals => { :profile => p }
 		.clear
