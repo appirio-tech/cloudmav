@@ -6,7 +6,6 @@ class Talk
   field :slides_url, :type => String
   field :slides_thumbnail, :type => String
   field :imported_id, :type => String
-  field :tags_text, :type => String
   field :tags, :type => Array
   
   referenced_in :profile, :inverse_of => :talks
@@ -20,6 +19,10 @@ class Talk
   
   def add_to_index
     Sunspot.index!(self) unless Rails.env.test?
+  end
+  
+  def tags_text
+    self.tags.join(", ")
   end
   
   def tags_text=(value)
