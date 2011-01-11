@@ -1,16 +1,15 @@
 require 'spec_helper'
 
-describe BloggerSyncService do
+describe WordpressSyncService do
   
   describe "sync" do
     before(:each) do
       @profile = Factory.create(:profile)
       @blog = Blog.new
-      @blog.blog_type = "Blogger"
-      # @blog.rss = "http://www.theabsentmindedcoder.com/feeds/posts/default"
-      @blog.url = "http://www.theabsentmindedcoder.com"
+      @blog.blog_type = "Wordpress"
+      @blog.rss = "http://claudiolassala.wordpress.com/"
       @profile.blogs << @blog
-      BloggerSyncService.sync(@blog)
+      WordpressSyncService.sync(@blog)
       @profile.save
     end
     

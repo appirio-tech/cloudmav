@@ -3,8 +3,8 @@ module CodeMav
     def self.included(receiver)
       receiver.class_eval do
         
-        embeds_many :blogs
-        embeds_many :posts
+        references_many :blogs
+        references_many :posts
         
       end
       

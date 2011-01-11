@@ -3,12 +3,15 @@ When /^I add a blog$/ do
   visit new_my_blog_path
   fill_in :title, :with => @blog.title
   fill_in :url, :with => @blog.url
+  # And "show me the page"
+  select "Blogger", :from => "blog_type"
   click_button "Add"
   And %Q{I should be redirected}
 end
 
 Then /^the blog should be added to my profile$/ do
   profile = User.find(@user.id).profile
+  Blog.where(:title => @blog.title).first.should_not be_nil
   profile.blogs.select{ |b| b.title == @blog.title }.first.should_not be_nil
 end
 

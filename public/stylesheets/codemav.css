@@ -83,6 +83,10 @@ form input[type=submit] {
   form input[type=submit]:hover {
     background: #0477bf;
     border: 1px solid #003459; }
+form select {
+  font-size: 12pt;
+  margin-top: 10px;
+  padding: 4px; }
 form textarea {
   font-size: 12pt;
   margin-top: 10px;
@@ -460,7 +464,12 @@ form textarea {
       width: 60px;
       height: 60px; }
   .list .item_title {
-    font-size: 18pt; }
+    font-size: 18pt;
+    float: left; }
+  .list .item_link {
+    float: left;
+    margin-left: 10px;
+    margin-top: 7px; }
 
 #points_summary table {
   font-size: 18pt;

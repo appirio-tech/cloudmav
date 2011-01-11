@@ -5,6 +5,6 @@ class Post
   field :written_on, :type => DateTime  
   field :url, :type => String
   
-  embedded_in :blog, :inverse_of => :posts
-  embedded_in :profile, :inverse_of => :posts
+  referenced_in :blog, :inverse_of => :posts
+  referenced_in :profile, :inverse_of => :posts
 end

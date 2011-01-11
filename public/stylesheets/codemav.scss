@@ -148,6 +148,11 @@ form {
 			border: 1px solid $blue;
 		}
 	}
+	select {
+		font-size:$form_font_size;
+		margin-top:$form_top_margin;
+		padding: 4px;
+	}
 	textarea {
 		font-size:$form_font_size;
 		margin-top:$form_top_margin;
@@ -635,6 +640,12 @@ $error_background: #FFDFDF;
 	}
 	.item_title {
 		font-size: 18pt;
+		float:left;
+	}
+	.item_link {
+		float:left;
+		margin-left: 10px;
+		margin-top: 7px;
 	}
 }
 

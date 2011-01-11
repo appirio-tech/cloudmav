@@ -11,5 +11,5 @@ Feature: Slide Share Profile
 		When I synch my SlideShare account
 		Then I should have a SlideShare profile
 		And I should be awarded the "Sliding along" badge
-		And I should have 10 speaker points
+		# And I should have 10 speaker points
 		And I should learned "Syncing with your SlideShare Account"

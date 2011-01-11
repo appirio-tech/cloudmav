@@ -3,8 +3,6 @@
 	.control=f.text_field :title
 	.label=f.label :url
 	.control=f.text_field :url
-	.label=f.label :rss
-	.control=f.text_field :rss
 	.label=f.label :blog_type
-	.control=f.text_field :blog_type
+	.control= select_tag :blog_type, options_for_select(@blog_types)
 	.submit=f.submit action_text, :disable_with => disable_text

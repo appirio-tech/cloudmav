@@ -13,7 +13,7 @@ Feature: Blogs
 		When I add a blog
 		Then the blog should be added to my profile 
 		And I should be awarded the "iBlog" badge
-		And I should have 10 writer points
+		# And I should have 10 writer points
 		And I should learned "Adding a blog to your profile"
 		
 	Scenario: Add Post

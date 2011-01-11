@@ -30,6 +30,8 @@
 		- @profile.blogs.each do |b|
 			%li
 				.item_title= b.title
+				- if current_profile == @profile
+					.item_link= link_to "edit", edit_my_blog_path(b)
 .clear
 
 
