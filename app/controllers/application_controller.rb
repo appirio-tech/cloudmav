@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_profile
   
   def current_profile
+    return nil if current_user.nil?
     current_user.profile
   end
   

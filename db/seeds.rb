@@ -6,3 +6,59 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 Mongoid.master.collections.select {|c| c.name !~ /system/ }.each(&:drop)
+
+u = User.new
+u.username = "kevinwlee"
+u.email = "kevinwlee@chaione.com"
+u.password = "test123"
+u.password_confirmation = "test123"
+u.save
+
+p = u.profile
+p.name = "Kevin W Lee"
+
+project = Project.new
+project.name = "Bizeeti"
+project.start_date = DateTime.parse("1/11/2010")
+project.end_date = DateTime.parse("13/1/2011")
+p.projects << project
+project.save
+project.set_technologies!("iPhone")
+
+project = Project.new
+project.name = "Fampus"
+project.start_date = DateTime.parse("1/6/2010")
+project.end_date = DateTime.parse("13/9/2010")
+p.projects << project
+project.save
+project.set_technologies!("Rails")
+
+project.save
+
+u = User.new
+u.username = "flux88"
+u.email = "flux88@chaione.com"
+u.password = "test123"
+u.password_confirmation = "test123"
+u.save
+
+p = u.profile
+p.name = "Ben Scheirman"
+
+project = Project.new
+project.name = "Bizeeti"
+project.start_date = DateTime.parse("1/11/2010")
+project.end_date = DateTime.parse("13/1/2011")
+p.projects << project
+project.save
+project.set_technologies!("iPhone")
+
+project = Project.new
+project.name = "Safecell"
+project.start_date = DateTime.parse("1/6/2009")
+project.end_date = DateTime.parse("13/9/2010")
+p.projects << project
+project.save
+project.set_technologies!("Rails")
+
+project.save
