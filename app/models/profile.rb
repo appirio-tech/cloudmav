@@ -30,10 +30,11 @@ class Profile
   
   index [[ :coordinates, Mongo::GEO2D ]]
   
-  before_save :update_coordinates, :add_to_index
+  before_save :update_coordinates
+  before_save :add_to_index
   
   def add_to_index
-    Sunspot.index!(self)
+    Sunspot.index!(self) unless Rails.env.test?
   end
   
   def update_coordinates

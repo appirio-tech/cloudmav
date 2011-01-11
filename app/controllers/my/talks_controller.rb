@@ -25,4 +25,19 @@ class My::TalksController < My::MyController
     end
   end
   
+  def edit
+    @talk = Talk.find(params[:id])
+  end
+  
+  def update
+    @talk = Talk.find(params[:id])
+    if @talk.update_attributes(params[:talk])
+      flash[:notice] = "'#{@talk.title}' saved"
+      redirect_to @talk
+    else
+      flash[:error] = "There was an error when trying to save your talk"
+      render :edit
+    end
+  end
+  
 end

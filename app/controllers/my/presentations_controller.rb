@@ -16,7 +16,7 @@ class My::PresentationsController < My::MyController
     if @presentation.save
       @talk.save
       flash[:notice] = "A presentation of #{@talk.title} has been added"
-      redirect_to [:my, @talk]
+      redirect_to @talk
     else
       render :new
     end

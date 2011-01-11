@@ -11,6 +11,13 @@ Feature: Talks
 		Then the talk should be added
 		And I should have 10 speaker points
 		
+	Scenario: Edit a talk
+	
+		Given I am logged in
+		And I have a talk
+		When I edit the talk
+		Then the talk should be updated
+		
 	Scenario: Add a presentation
 	
 		Given I am logged in

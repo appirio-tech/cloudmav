@@ -15,16 +15,13 @@
 		- if current_profile == @profile
 			.link= link_to "add a talk", new_my_talk_path 
 	%ul.list
-		- @profile.talks.each do |t|
-			- if current_profile == @profile
-				%li
-					- unless t.slides_thumbnail.nil?
-						.item_pic= image_tag t.slides_thumbnail
-					.item_title= link_to t.title, [:my, t]
-					- if t.presentations.any?
-						%p= "Presented #{pluralize t.presentations.count, 'time', 'times' }"
-			- else
-				%li= link_to t.title, '/'
+		- @profile.talks.each do |t|		
+			%li
+				- unless t.slides_thumbnail.nil?
+					.item_pic= image_tag t.slides_thumbnail
+				.item_title= link_to t.title, t
+				- if t.presentations.any?
+					%p= "Presented #{pluralize t.presentations.count, 'time', 'times' }"
 .grid_4
 	%br
 	= render :partial => "shared/profile/speaker_rate"

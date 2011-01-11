@@ -33,3 +33,16 @@ Then /^the presentation should be added$/ do
   profile = User.find(@user.id).profile
   profile.presentations.select{ |p| p.talk == profile.talks.first }.first.should_not be_nil
 end
+
+When /^I edit the talk$/ do
+  visit edit_my_talk_path(@talk)
+  fill_in :title, :with => "Updated Talk"
+  click_button "Save"
+  And %Q{I should be redirected}
+end
+
+Then /^the talk should be updated$/ do
+  talk = Talk.find(@talk.id)
+  talk.title.should == "Updated Talk"
+end
+

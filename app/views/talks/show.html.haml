@@ -1,0 +1,21 @@
+.grid_16
+	%h2= @talk.title
+	%p
+		- if can? :edit, @talk
+			= link_to "Edit", edit_my_talk_path(@talk)
+	%p
+		- if can? :add_presentation, @talk
+			= link_to "Add Presentation", new_my_talk_presentation_path(@talk)
+		
+	- unless @talk.slides_thumbnail.nil?
+		= image_tag @talk.slides_thumbnail
+	%p= @talk.description
+	.tags= @talk.tags
+	
+	- unless @talk.presentations.empty?
+		%p Presented on
+		%ul.list
+			- @talk.presentations.each do |p|
+				%li.item_title= show_date p.presentation_date
+			
+.clear
