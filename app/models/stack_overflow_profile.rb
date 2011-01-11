@@ -11,10 +11,10 @@ class StackOverflowProfile
   def synch!
     return if stack_overflow_id.nil?
     
-    flair = StackOverflow.get_flair(self.stack_overflow_id)
-    self.url = flair["profileUrl"]
-    self.reputation = flair["reputation"]
-    self.badge_html = flair["badgeHtml"]
+    user = StackOverflow.get_user(self.stack_overflow_id)
+    self.url = "http://www.stackoverflow.com/#{stack_overflow_id}"
+    self.reputation = user["reputation"]
+    self.badge_html = user["badgeHtml"]
     self.profile.save!
     self.save!
   end
