@@ -62,3 +62,29 @@ project.save
 project.set_technologies!("Rails")
 
 project.save
+
+########################## CLAUDIO
+
+u = User.new
+u.username = "claudiolassala"
+u.email = "claudiolassala@example.com"
+u.password = "test123"
+u.password_confirmation = "test123"
+u.save
+
+p = u.profile
+p.name = "Claudio Lassala"
+
+talk = Talk.new
+talk.title = "Design Patterns"
+talk.description = "Design patterns and stuff and how they are awesome"
+talk.tags_text = "Design Patters, OOP, C#"
+p.talks << talk
+talk.save
+
+talk = Talk.new
+talk.title = "OOP"
+talk.description = "SOLID and OOP"
+talk.tags_text = "OOP, C#"
+p.talks << talk
+talk.save

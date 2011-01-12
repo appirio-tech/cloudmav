@@ -673,3 +673,44 @@ $error_background: #FFDFDF;
 		font-size: 18pt;
 	}
 }
+
+.tags_section {
+	margin-top: 10px;
+	.tagged_as {
+		float:left;
+		font-size: 10pt;
+		margin-right: 5px;
+	}
+	.tags {
+		color: $gray;
+		font-size: 10pt;
+	}	
+}
+
+
+.talk_search_result {
+	.slide_pic {
+		float:left;
+		margin-right: 10px;
+		margin-top: 5px;
+		img {
+			@extend .photo; 
+			width: 110px;
+		}
+	}
+	.talk_title {
+		font-size: 18pt;
+	}
+	.talk_description {
+		margin-top: 10px;
+	}
+	.talk_given_by {
+		.talk_given_by_pic {
+			float:left;
+			margin-right: 10px;
+		}
+		.talk_given_by_name {
+			width: 100px;
+		}
+	}
+}
