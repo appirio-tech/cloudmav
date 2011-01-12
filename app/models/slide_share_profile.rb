@@ -8,7 +8,7 @@ class SlideShareProfile
   
   before_save :set_url
   
-  def sync!
+  def synch!
     response = SlideShare.get_slideshows_by_user(slide_share_username)
     response["User"]["Slideshow"].each do |ss_talk|
       talk = create_talk(ss_talk)

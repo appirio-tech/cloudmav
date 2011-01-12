@@ -9,7 +9,7 @@ class SpeakerRateProfile
   
   before_save :set_url
   
-  def sync!
+  def synch!
     speaker = SpeakerRate.get_speaker(speaker_rate_id)
     
     self.rating = speaker["rating"]

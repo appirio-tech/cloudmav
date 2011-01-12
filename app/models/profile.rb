@@ -80,7 +80,24 @@ class Profile
     return result
   end
   
+  def synch!
+    stack_overflow_profile.synch! unless stack_overflow_profile.nil?
+    git_hub_profile.synch! unless git_hub_profile.nil?
+    speaker_rate_profile.synch! unless speaker_rate_profile.nil?
+    slide_share_profile.synch! unless slide_share_profile.nil?
+  end
+  
   class << self
+    def synch_all!
+      Profile.all.each do |p|
+        begin
+          p.synch!
+          rescue
+            puts "ERROR on synching #{p.display_name}'s profile"
+        end
+      end
+    end
+    
     def near_loc(location)
       response = Geokit::Geocoders::MultiGeocoder.geocode(location)
       near(:coordinates => [response.lat, response.lng, 1])
