@@ -17,7 +17,7 @@ Given /^I have synched my SlideShare account$/ do
   And %Q{I should be redirected}
 end
 
-Then /^I should not have duplicate talks$/ do
+Then /^I should not have duplicate talks from SlideShare$/ do
   profile = Profile.find(@profile.id)
   profile.talks.where(:title => "Techfest design patterns").count.should == 1
 end

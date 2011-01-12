@@ -21,4 +21,4 @@ Feature: Slide Share Profile
 		And there are guidances
 		And I have synched my SlideShare account
 		When I synch my SlideShare account
-		Then I should not have duplicate talks
+		Then I should not have duplicate talks from SlideShare
