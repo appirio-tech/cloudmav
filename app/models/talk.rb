@@ -11,7 +11,7 @@ class Talk
   referenced_in :profile, :inverse_of => :talks
   embeds_many :presentations
   
-  before_save :add_to_index
+  after_save :add_to_index
     
   def add_presentation(presentation)
     self.profile.earn("for presentation", 20, :speaker_points)
