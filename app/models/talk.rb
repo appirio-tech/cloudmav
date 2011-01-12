@@ -12,13 +12,10 @@ class Talk
   embeds_many :presentations
   
   after_save :add_to_index
+  after_destroy :remove_from_index
     
   def add_presentation(presentation)
     self.profile.earn("for presentation", 20, :speaker_points)
-  end
-  
-  def add_to_index
-    Sunspot.index!(self) unless Rails.env.test?
   end
   
   def tags_text
@@ -38,4 +35,22 @@ class Talk
     search.execute
   end
 
+  private
+    def add_to_index
+      return if Rails.env.test?
+      Sunspot.index!(self) 
+    rescue Errno::ECONNREFUSED
+      puts "We could not index, likely because SOLR isn't running"
+    rescue RSolr::RequestError
+      puts "Solr is hating"
+    end
+
+    def remove_from_index
+      return if Rails.env.test?
+      Sunspot.remove(self)
+    rescue Errno::ECONNREFUSED
+      puts "We could not index, likely because SOLR isn't running"
+    rescue RSolr::RequestError
+      puts "Solr is hating"
+    end
 end
