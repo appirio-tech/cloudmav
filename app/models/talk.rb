@@ -19,6 +19,7 @@ class Talk
   end
   
   def tags_text
+    return "" if self.tags.nil?
     self.tags.join(", ")
   end
   
