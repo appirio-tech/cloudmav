@@ -1,10 +1,10 @@
 .grid_4.info_box
 	.info_logo= link_to image_tag("slide_share_info_logo.png"), "http://www.slideshare.net"
 	- if @profile.slide_share_profile.nil?
-		- if current_profile == @profile
+		- if can? :set_slide_share_profile, @profile
 			%p 
 				Do you have a Slide Share account? 
-				= link_to "Add Your Slide Share Account", new_slide_share_profile_path
+				= link_to "Add it.", new_slide_share_profile_path(:username => @profile.username)
 	-else
 		= link_to "Go to my Slide Share Profile", @profile.slide_share_profile.url
 .clear

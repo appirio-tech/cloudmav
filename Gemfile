@@ -24,7 +24,7 @@ gem "slide_share"
 gem "sunspot"
 gem "sunspot_rails"
 gem "cancan"
-gem "stack_overflow"
+gem "stack_overflow", "0.0.3"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily

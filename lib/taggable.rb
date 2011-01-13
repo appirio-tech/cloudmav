@@ -37,7 +37,10 @@ module CodeMav
           end
         end
       end
-
+      
+      def all_tags
+        self.taggings.map{|t| t.tag.synonyms }.flatten
+      end
     end
   end
 end

@@ -2,7 +2,7 @@
 Sunspot.setup(Talk) do
   text :title
   text :description
-  text :tags
+  text :all_tags 
 end
 
 Sunspot.setup(Profile) do
