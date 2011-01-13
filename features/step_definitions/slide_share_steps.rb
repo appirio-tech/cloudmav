@@ -1,5 +1,5 @@
 When /^I synch my SlideShare account$/ do
-  visit new_my_slide_share_profile_path
+  visit new_slide_share_profile_path(:username => @profile.username)
   fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
   click_button "Synch"
   And %Q{I should be redirected}
@@ -11,7 +11,7 @@ Then /^I should have a SlideShare profile$/ do
 end
 
 Given /^I have synched my SlideShare account$/ do
-  visit new_my_slide_share_profile_path
+  visit new_slide_share_profile_path(:username => @profile.username)
   fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
   click_button "Synch"
   And %Q{I should be redirected}
