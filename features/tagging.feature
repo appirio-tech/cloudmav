@@ -20,3 +20,14 @@ Feature: Tagging
 		When I tag the talk with "C#"
 		Then there should be a "C#" tag
 		And the talk should be tagged with "C#"
+		
+	Scenario: Remove tag
+	
+		Given I am logged in
+		And I have a talk
+		And there is a tag "C#"
+		And there is a tag "LINQ"
+		And the talk is tagged "C#, LINQ"
+		When I tag the talk with "LINQ"
+		Then the talk should be tagged with "LINQ"
+		And the talk should not be tagged with "C#"
