@@ -45,9 +45,4 @@ class TalksController < ApplicationController
     end
   end
   
-  protected
-    def set_profile
-      @profile = Profile.by_username(params[:username]).first
-    end
-  
 end

@@ -32,7 +32,10 @@ class ApplicationController < ActionController::Base
   end
   
   private 
-  
+    def set_profile
+      @profile = Profile.by_username(params[:username]).first
+    end
+    
     def set_date(model, param_name)
       # puts "d : #{params[param_name]}"
       # date = Date.parse(params[param_name])

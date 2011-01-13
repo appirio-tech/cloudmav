@@ -4,7 +4,7 @@ end
 
 When /^I enter my project information$/ do
   @project = Factory.build(:project)
-  visit new_my_project_path
+  visit new_project_path(:username => @profile.username)
   fill_in :name, :with => @project.name
   fill_in :start_date, :with => @project.start_date.strftime("%m/%d/%y")
   fill_in :end_date, :with => @project.end_date.strftime("%m/%d/%y")

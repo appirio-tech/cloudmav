@@ -5,7 +5,8 @@
 	= image_tag "speaker_rate_find_id.png"
 	%p Just go to Speaker Rate, find your id, and enter it here. We can then synch your StackOverflow profile with your account.
 	
-	= form_for [:my, @speaker_rate_profile] do |f|
+	= form_for @speaker_rate_profile do |f|
+		= hidden_field_tag :username, @profile.username
 		.label= f.label :speaker_rate_id, "Speaker Rate Id"
 		.control= f.text_field :speaker_rate_id
 		.submit= f.submit "Synch", :disable_with => "Synching"

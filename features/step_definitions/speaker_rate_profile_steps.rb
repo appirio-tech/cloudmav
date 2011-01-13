@@ -1,5 +1,5 @@
 When /^I synch my SpeakerRate account$/ do
-  visit new_my_speaker_rate_profile_path
+  visit new_speaker_rate_profile_path(:username => @profile.username)
   fill_in "speaker_rate_profile_speaker_rate_id", :with => '10082'
   click_button "Synch"
   And %Q{I should be redirected}
@@ -21,8 +21,8 @@ Then /^I should have my talks from SpeakerRate$/ do
 end
 
 Given /^I synched my SpeakerRate account$/ do
-  visit new_my_speaker_rate_profile_path
-  fill_in "speaker_rate_profile_speaker_rate_id", :with => '10087'
+  visit new_speaker_rate_profile_path(:username => @profile.username)
+  fill_in "speaker_rate_profile_speaker_rate_id", :with => '10082'
   click_button "Synch"
   And %Q{I should be redirected}
 end
