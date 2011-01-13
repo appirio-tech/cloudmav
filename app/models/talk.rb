@@ -1,5 +1,8 @@
+require 'that_just_happened'
+
 class Talk
   include Mongoid::Document
+  include ThatJustHappened::Actor
   
   field :title, :type => String
   field :description, :type => String
@@ -13,6 +16,11 @@ class Talk
   
   after_save :add_to_index
   after_destroy :remove_from_index
+  after_create :talk_added
+  
+  def talk_added
+    profile.just(:added_talk, self, :category => :speaking)
+  end
     
   def add_presentation(presentation)
     self.profile.earn("for presentation", 20, :speaker_points)

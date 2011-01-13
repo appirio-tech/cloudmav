@@ -2,6 +2,7 @@ require 'geokit'
 require 'gravtastic'
 require 'score_it'
 require 'virgil'
+require 'that_just_happened'
 require 'profile_modules/writer_module'
 require 'profile_modules/speaker_module'
 require 'profile_modules/experience_module'
@@ -15,6 +16,7 @@ class Profile
   include CodeMav::WriterModule
   include CodeMav::SpeakerModule
   include CodeMav::ExperienceModule
+  include ThatJustHappened::Subject
 
   is_gravtastic!
 

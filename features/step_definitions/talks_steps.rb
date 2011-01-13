@@ -46,3 +46,7 @@ Then /^the talk should be updated$/ do
   talk.title.should == "Updated Talk"
 end
 
+Then /^I should have just "([^"]*)"$/ do |name|
+  profile = Profile.find(@profile.id)
+  puts profile.happenings.where(:name => name).first
+end
