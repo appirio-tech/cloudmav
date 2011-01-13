@@ -12,5 +12,5 @@
 			.logout
 				= link_to "sign out", logout_path
 			.username
-				= link_to current_user.username, [:my, current_user.profile]
+				= link_to current_user.username, profile_path(current_profile)
 			= render :partial => "shared/points", :locals => { :profile => current_profile }

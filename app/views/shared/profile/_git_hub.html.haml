@@ -3,7 +3,7 @@
 	- if @profile.git_hub_profile.nil? && current_profile == @profile
 		%p 
 			Do you have a GitHub account? 
-			= link_to "Add Your GitHub Account", new_my_git_hub_profile_path
+			= link_to "Add Your GitHub Account", new_git_hub_profile_path
 	-else
 		= link_to "Go to my GitHub Profile", @profile.git_hub_profile.url
 		%table

@@ -4,7 +4,7 @@
 		- if current_profile == @profile
 			%p 
 				Do you have a Speaker Rate account? 
-				= link_to "Add Your Speaker Rate Account", new_my_speaker_rate_profile_path
+				= link_to "Add Your Speaker Rate Account", new_speaker_rate_profile_path
 	-else
 		= link_to "Go to my Speaker Rate Profile", @profile.speaker_rate_profile.url
 		%table

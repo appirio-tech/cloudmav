@@ -3,7 +3,7 @@ module CodeMav
     def self.included(receiver)
       receiver.class_eval do
         
-        embeds_many :projects
+        references_many :projects
         embeds_many :experiences
         
       end

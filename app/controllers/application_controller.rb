@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
   helper :all
   helper_method :current_profile
   
+  rescue_from CanCan::AccessDenied, :with => :access_denied
+  
   def current_profile
     return nil if current_user.nil?
     current_user.profile
@@ -31,10 +33,15 @@ class ApplicationController < ActionController::Base
   
   private 
   
-  def set_date(model, param_name)
-    # puts "d : #{params[param_name]}"
-    # date = Date.parse(params[param_name])
-    date = Date.strptime(params[param_name], '%m/%d/%Y')
-    model.send("#{param_name.to_s}=", date)
-  end
+    def set_date(model, param_name)
+      # puts "d : #{params[param_name]}"
+      # date = Date.parse(params[param_name])
+      date = Date.strptime(params[param_name], '%m/%d/%Y')
+      model.send("#{param_name.to_s}=", date)
+    end
+    
+    def access_denied
+      flash[:error] = "Not authorized to perform that action"
+      redirect_to root_path
+    end
 end

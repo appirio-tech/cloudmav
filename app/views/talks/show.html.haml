@@ -2,10 +2,10 @@
 	%h2= @talk.title
 	%p
 		- if can? :edit, @talk
-			= link_to "Edit", edit_my_talk_path(@talk)
+			= link_to "Edit", edit_talk_path(@talk)
 	%p
 		- if can? :add_presentation, @talk
-			= link_to "Add Presentation", new_my_talk_presentation_path(@talk)
+			= link_to "Add Presentation", new_talk_presentation_path(@talk)
 		
 	- unless @talk.slides_thumbnail.nil?
 		= image_tag @talk.slides_thumbnail

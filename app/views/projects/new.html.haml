@@ -2,8 +2,9 @@
 
 	%h2 Add project
 	
-	= form_for [:my, @project] do |f|
+	= form_for @project do |f|
 		= render :partial => 'shared/errors', :locals => { :o => @project, :error_message => "Sorry we couldn't save your project because:" }
+		= hidden_field_tag :username, @profile.username
 		.label= f.label :name
 		.control= f.text_field :name
 		.label Duration

@@ -21,7 +21,7 @@ class Profile
   field :api_id, :type => Integer
   field :name, :type => String
   field :email, :type => String
-  field :username, :type => String
+  index :username, :type => String
   
   field :lat, :type => Float
   field :lng, :type => Float
@@ -51,7 +51,7 @@ class Profile
   embeds_one :slide_share_profile
   embeds_one :git_hub_profile
     
-  scope :find_by_id, lambda { |id| { :where => { :api_id => id } } }
+  scope :by_username, lambda { |uname| { :where => { :username => uname } } }
   
   def username
     self.user.username
@@ -62,7 +62,7 @@ class Profile
   end
   
   def to_param
-    "#{api_id}"
+    username
   end
   
   def tags

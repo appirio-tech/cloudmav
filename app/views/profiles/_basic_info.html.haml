@@ -8,7 +8,7 @@
 				%td Lives in
 				%td
 					- if @profile.location.blank?
-						= link_to "not set", edit_my_profile_path(@profile)
+						= link_to "not set", edit_profile_path(@profile)
 					- else
 						= @profile.location
 .clear

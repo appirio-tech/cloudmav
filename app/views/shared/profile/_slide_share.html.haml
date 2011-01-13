@@ -4,7 +4,7 @@
 		- if current_profile == @profile
 			%p 
 				Do you have a Slide Share account? 
-				= link_to "Add Your Slide Share Account", new_my_slide_share_profile_path
+				= link_to "Add Your Slide Share Account", new_slide_share_profile_path
 	-else
 		= link_to "Go to my Slide Share Profile", @profile.slide_share_profile.url
 .clear

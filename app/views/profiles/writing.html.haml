@@ -1,0 +1,39 @@
+#profile
+	= render :partial => "header"
+	= render :partial => "profile_menu"
+	
+	.grid_16
+		%table
+			%tr
+				%td
+					.count= @profile.blogs.count
+					.count_of= @profile.blogs.count > 1 ? "blogs" : "blog"
+				%td{:style =>"padding-left:30px;"}
+					.count= @profile.posts.count
+					.count_of= @profile.posts.count > 1 ? "posts" : "post"
+	.clear
+
+
+	.grid_10
+		%h2.page_title 
+			.title Blog Posts
+		= will_paginate @blog_posts
+		%ul.list
+			- @blog_posts.each do |p|
+				%li
+					.item_title= link_to p.title, p.url
+					%p= show_date p.written_on
+		= page_entries_info @blog_posts
+
+	.grid_6
+		%h2.page_title 
+			.title Blogs
+		- if can? :add_blog, @profile
+			= link_to "Add Blog", new_blog_path(:username => @profile.username)
+		%ul.list
+			- @profile.blogs.each do |b|
+				%li
+					.item_title= b.title
+					- if can? :edit, b
+						.item_link= link_to "edit", edit_blog_path(b)
+	.clear

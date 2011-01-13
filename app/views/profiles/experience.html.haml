@@ -1,0 +1,23 @@
+#profile
+	= render :partial => "header"
+	
+	= render :partial => "profile_menu"
+	
+	.grid_16
+		%p= pluralize @profile.projects.count, "project", "projects"
+
+	.grid_6
+		- if can? :add_project, @profile
+			= link_to "Add Project", new_project_path(:username => @profile.username) 
+		%ul
+			- @profile.projects.each do |p|
+				%li= link_to p.name, p
+
+	.grid_6
+		= render :partial => "shared/charts/experience_chart"
+		/ %ul
+		/ 	- @profile.experiences.each do |e|
+		/ 		%li= "#{e.name} | #{e.duration.format("%w %~w and %d %~d")}"
+
+
+	.clear

@@ -1,0 +1,12 @@
+= form_for @talk do |f|
+	- unless @profile.nil?
+		= hidden_field_tag :username, @profile.username
+	.label= f.label :title
+	.control= f.text_field :title
+	.label= f.label :description
+	.control= f.text_area :description
+	.label= f.label :slides_url
+	.control= f.text_field :slides_url
+	.label= f.label :tags_text, "Tags"
+	.control= f.text_area :tags_text
+	.submit= f.submit action_text, :disable_with => disable_text

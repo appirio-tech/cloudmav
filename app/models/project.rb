@@ -6,7 +6,7 @@ class Project
   field :end_date, :type => DateTime
   field :technologies, :type => Array
   
-  embedded_in :profile, :inverse_of => :project
+  referenced_in :profile, :inverse_of => :project
   references_many :technologies, :stored_as => :array
   
   validate :start_before_end, :if => :start_and_end_date_not_nil

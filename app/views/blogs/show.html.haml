@@ -1,0 +1,11 @@
+.grid_16
+	%h2= @blog.title
+	- if can? :edit, @blog
+		= link_to "Edit", edit_blog_path(@blog)
+	- if can? :add_post, @blog
+		= link_to "Add Post", new_blog_post_path(@blog)
+	%ul
+		- @blog.posts.each do |p|
+			%li= p.title
+
+.clear

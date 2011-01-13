@@ -1,4 +1,6 @@
-= form_for [:my, @blog] do |f|
+= form_for @blog do |f|
+	- unless @profile.nil?
+		= hidden_field_tag :username, @profile.username
 	.label=f.label :title
 	.control=f.text_field :title
 	.label=f.label :url
