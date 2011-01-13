@@ -11,7 +11,7 @@ describe StackOverflowProfile do
     end
     
     it { @so_profile.reputation.should > 0 }
-    
+    it { @so_profile.taggings.count.should > 0 }
   end
   
 end

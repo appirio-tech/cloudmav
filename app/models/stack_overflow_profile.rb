@@ -1,5 +1,6 @@
 class StackOverflowProfile
   include Mongoid::Document
+  include CodeMav::Taggable
   
   field :stack_overflow_id
   field :reputation, :type => Integer, :default => 0
@@ -15,6 +16,13 @@ class StackOverflowProfile
     self.url = "http://www.stackoverflow.com/#{stack_overflow_id}"
     self.reputation = user["reputation"]
     self.badge_html = user["badgeHtml"]
+    
+    tags = StackOverflow.get_user_tags(self.stack_overflow_id)
+    tags["tags"].each do |t|
+      tagging = self.find_or_create_tagging(t["name"])
+      tagging.count = t["count"]
+      tagging.save
+    end
     self.profile.save!
     self.save!
   end

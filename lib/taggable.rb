@@ -11,14 +11,26 @@ module CodeMav
     module InstanceMethods
 
       def has_tag?(tag)
-        tag = Tag.named(tag).first
-        return false if tag.nil?
-        !self.taggings.where(:tag_id => tag.id).first.nil?
+        !get_tagging(tag).nil?
+      end
+      
+      def get_tagging(tag)
+        t = Tag.named(tag).first
+        return nil if t.nil?
+        self.taggings.select{|tagging| tagging.tag == t}.first
       end
       
       def tags_text
         return "" if self.taggings.nil?
         self.taggings.join(", ")
+      end
+      
+      def find_or_create_tagging(tag)
+        tagging = get_tagging(tag)
+        return tagging unless tagging.nil?
+        
+        tag!(tag)
+        return get_tagging(tag)
       end
       
       def tag!(tag)
