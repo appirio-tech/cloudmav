@@ -48,5 +48,5 @@ end
 
 Then /^I should have just "([^"]*)"$/ do |name|
   profile = Profile.find(@profile.id)
-  puts profile.happenings.where(:name => name).first
+  profile.happenings.where(:name => name).first.should_not be_nil
 end

@@ -2,7 +2,6 @@ require 'geokit'
 require 'gravtastic'
 require 'score_it'
 require 'virgil'
-require 'that_just_happened'
 require 'profile_modules/writer_module'
 require 'profile_modules/speaker_module'
 require 'profile_modules/experience_module'
@@ -16,7 +15,6 @@ class Profile
   include CodeMav::WriterModule
   include CodeMav::SpeakerModule
   include CodeMav::ExperienceModule
-  include ThatJustHappened::Subject
 
   is_gravtastic!
 
@@ -46,6 +44,7 @@ class Profile
   end
   
   referenced_in :user
+  references_many :happenings
   
   embeds_one :stack_overflow_profile
   embeds_one :speaker_rate_profile
@@ -87,6 +86,16 @@ class Profile
     git_hub_profile.synch! unless git_hub_profile.nil?
     speaker_rate_profile.synch! unless speaker_rate_profile.nil?
     slide_share_profile.synch! unless slide_share_profile.nil?
+  end
+  
+  def just(name, subject, options= {})
+    options[:category] ||= "general"
+    h = Happening.new(:name => name, :category => options[:category])
+    h.subject = subject
+    self.happenings << h
+    self.save
+    subject.save
+    h.save
   end
   
   class << self
