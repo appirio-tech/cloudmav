@@ -58,7 +58,7 @@ class Profile
   end
   
   def display_name
-    (self.name.blank? || self.name.nil?) ? self.email : self.name
+    (self.name.blank? || self.name.nil?) ? self.username : self.name
   end
   
   def to_param
