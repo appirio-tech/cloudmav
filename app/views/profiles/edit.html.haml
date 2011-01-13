@@ -2,7 +2,7 @@
 .grid_16
 	%h2 Edit Profile
 
-	= form_for [:my, @profile]  do |f|
+	= form_for @profile, :url => update_profile_path(@profile) do |f|
 		= render :partial => "shared/errors", :locals => { :o => @profile, :o_name => "Profile" }
 		.label= f.label :name
 		.control= f.text_field :name

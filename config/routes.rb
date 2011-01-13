@@ -44,12 +44,13 @@ Codemav::Application.routes.draw do
     get 'logout', :to => "devise/sessions#destroy"
   end
   
-  resource :profile
   match "/:username" => "profiles#show", :as => :profile
   match "/:username/experience" => "profiles#experience", :as => :profile_experience
   match "/:username/code" => "profiles#code", :as => :profile_code
   match "/:username/writing" => "profiles#writing", :as => :profile_writing
   match "/:username/speaking" => "profiles#speaking", :as => :profile_speaking
+  match "/:username/edit" => "profiles#edit", :as => :edit_profile
+  match "/:username/update" => "profiles#update", :as => :update_profile, :method => :put
   
   root :to => "pages#home"
 end

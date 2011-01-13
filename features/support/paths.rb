@@ -8,7 +8,7 @@ module NavigationHelpers
     when /the registration page/
       new_user_registration_path
     when /my profile page/
-      my_profile_path(User.where(:email => @user.email).first.profile)
+      profile_path(@user.profile)
     when /the people search page/
       new_people_search_path
     when /the StackOverflow scoreboard page/

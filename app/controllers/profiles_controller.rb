@@ -21,13 +21,17 @@ class ProfilesController < ApplicationController
   def speaking
     @tab = "speaking"
   end
-    
+  
+  def edit
+
+  end
+  
   def update
     if @profile.update_attributes(params[:profile])
       flash[:notice] = "Profile updated"
-      redirect_to [:my, @profile]
+      redirect_to @profile
     else
-      render "edit"
+      render :edit
     end
   end
   

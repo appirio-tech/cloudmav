@@ -1,10 +1,13 @@
 When /^I edit my profile$/ do
+  # visit profile_path(@user.profile)
   And %Q{I follow "Edit profile"}
+  # And "show me the page"
 end
 
 When /^I change my name to "([^"]*)"$/ do |name|
   fill_in :name, :with => name
   click_button "Save"
+  # And "show me the page"
   And %Q{I am redirected}
 end
 

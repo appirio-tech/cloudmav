@@ -1,5 +1,5 @@
 When /^I synch my StackOverflow account$/ do
-  visit new_my_stack_overflow_profile_path
+  visit new_stack_overflow_profile_path(:username => @profile.username)
   fill_in "stack_overflow_profile_stack_overflow_id", :with => '60336'
   click_button "Synch"
   And %Q{I should be redirected}
