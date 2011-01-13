@@ -1,0 +1,4 @@
+= form_tag update_speaker_bio_path(:username => @profile.username), :method => :put do
+	.label= label_tag "Tell us a bit about yourself"
+	.control= text_area_tag :speaker_bio, @profile.speaker_bio, :cols => 80, :style => "height:250px;"
+	.submit= submit_tag "Save", :disable_with => "Saving..."

@@ -94,9 +94,6 @@ class Profile
     a = Activity.new(:name => name, :category => options[:category])
     a.subject = subject
     self.activities << a
-    self.save
-    subject.save
-    a.save
   end
   
   class << self

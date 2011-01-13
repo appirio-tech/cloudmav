@@ -6,6 +6,9 @@ Codemav::Application.routes.draw do
   
   resources :activities
   
+  match '/:username/speaker_bio' => "speaker_bio#show", :as => :speaker_bio
+  match '/:username/speaker_bio/edit' => "speaker_bio#edit", :as => :edit_speaker_bio, :method => :get
+  match '/:username/speaker_bio/update' => "speaker_bio#update", :as => :update_speaker_bio, :method => :put
   resources :talks do
     resources :presentations
   end

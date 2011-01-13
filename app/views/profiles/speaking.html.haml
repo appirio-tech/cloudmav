@@ -14,6 +14,11 @@
 					.count_of= @profile.presentations.count > 1 ? "presentations" : "presentations"
 	.clear
 
+	.grid_16
+		- unless @profile.speaker_bio.nil?
+			%p= @profile.speaker_bio
+		= link_to "Set your speaker bio", edit_speaker_bio_path(:username => @profile.username)
+
 	.grid_10
 		%h2.page_title 
 			.title Talks

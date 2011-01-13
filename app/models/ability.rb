@@ -5,6 +5,9 @@ class Ability
     can [:set_speaker_rate_profile, :set_slide_share_profile, :set_stack_overflow_profile, :set_git_hub_profile], Profile do |profile|
       user.profile == profile
     end
+    can [:set_speaker_bio], Profile do |profile|
+      user.profile == profile
+    end
     can [:edit, :add_talk, :add_project, :add_blog], Profile do |profile|
       user.profile == profile
     end

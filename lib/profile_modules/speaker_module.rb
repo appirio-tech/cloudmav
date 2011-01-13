@@ -3,6 +3,7 @@ module CodeMav
     def self.included(receiver)
       receiver.class_eval do
         references_many :talks
+        field :speaker_bio, :type => String
       end
       
       receiver.send(:include, InstanceMethods)
@@ -20,6 +21,10 @@ module CodeMav
         return presentations
       end
       
+      def set_speaker_bio(bio)
+        self.speaker_bio = bio
+        self.just(:set_speaker_bio, self, :category => :speaking)
+      end
     end
   end
 end
