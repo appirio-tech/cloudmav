@@ -1,5 +1,8 @@
+require 'taggable'
+
 class Talk
   include Mongoid::Document
+  include CodeMav::Taggable
   
   field :title, :type => String
   field :description, :type => String
@@ -22,15 +25,6 @@ class Talk
     
   def add_presentation(presentation)
     self.profile.earn("for presentation", 20, :speaker_points)
-  end
-  
-  def tags_text
-    return "" if self.tags.nil?
-    self.tags.join(", ")
-  end
-  
-  def tags_text=(value)
-    self.tags = value.split(',')
   end
   
   def self.search(query, options = {})
