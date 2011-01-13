@@ -17,3 +17,8 @@ Then /^the talk should be tagged with "([^"]*)"$/ do |tag|
   talk = Talk.find(@talk.id)
   talk.has_tag?(tag).should == true
 end
+
+Given /^there is a tag "([^"]*)"$/ do |tag|
+  @tag = Factory.create(:tag, :name => tag)
+end
+
