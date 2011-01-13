@@ -44,7 +44,7 @@ class Profile
   end
   
   referenced_in :user
-  references_many :happenings
+  references_many :activities
   
   embeds_one :stack_overflow_profile
   embeds_one :speaker_rate_profile
@@ -90,12 +90,12 @@ class Profile
   
   def just(name, subject, options= {})
     options[:category] ||= "general"
-    h = Happening.new(:name => name, :category => options[:category])
-    h.subject = subject
-    self.happenings << h
+    a = Activity.new(:name => name, :category => options[:category])
+    a.subject = subject
+    self.activities << a
     self.save
     subject.save
-    h.save
+    a.save
   end
   
   class << self

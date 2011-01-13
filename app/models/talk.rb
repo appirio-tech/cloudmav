@@ -10,7 +10,7 @@ class Talk
   
   referenced_in :profile, :inverse_of => :talks
   embeds_many :presentations
-  embeds_one :happening
+  embeds_one :activity
   
   after_save :add_to_index
   after_destroy :remove_from_index
