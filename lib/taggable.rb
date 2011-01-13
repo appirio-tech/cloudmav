@@ -20,16 +20,20 @@ module CodeMav
         return "" if self.taggings.nil?
         self.taggings.join(", ")
       end
+      
+      def tag!(tag)
+        tagging = Tagging.new
+        tagging.tag = Tag.find_or_create_named(tag) 
+        tagging.save
+        self.taggings << tagging
+        self.save
+      end
 
       def tags_text=(value)
         tag_names = value.split(',')
         tag_names.each do |tag_name|
           unless self.has_tag? tag_name
-            tagging = Tagging.new
-            tagging.tag = Tag.find_or_create_named(tag_name) 
-            tagging.save
-            self.taggings << tagging
-            self.save
+            self.tag!(tag_name)
           end
         end
       end

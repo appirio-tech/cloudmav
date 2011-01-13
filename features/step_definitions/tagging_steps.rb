@@ -9,9 +9,6 @@ When /^I tag the talk with "([^"]*)"$/ do |tag|
   And "I should be redirected"
 end
 
-Then /^there should be a "([^"]*)" tag$/ do |tag|
-  Tag.named(tag).first.should_not be_nil
-end
 
 Then /^the talk should be tagged with "([^"]*)"$/ do |tag|
   talk = Talk.find(@talk.id)
@@ -20,5 +17,28 @@ end
 
 Given /^there is a tag "([^"]*)"$/ do |tag|
   @tag = Factory.create(:tag, :name => tag)
+end
+
+Given /^the talk is tagged "([^"]*)"$/ do |tag|
+  @talk.tag!(tag)
+end
+
+Then /^the talk should not be tagged with "([^"]*)"$/ do |tag|
+  talk = Talk.find(@talk.id)
+  talk.has_tag?(tag).should == false
+end
+
+Given /^there is a tag "([^"]*)" with synonyms "([^"]*)"$/ do |tag, synonyms|
+  @tag = Factory.create(:tag, :name => tag)
+  synonyms.split(',').each {|s| @tag.add_synonym(s) }
+  @tag.save
+end
+
+Then /^there should be a "([^"]*)" tag$/ do |tag|
+  Tag.named(tag).first.should_not be_nil
+end
+
+Then /^there should not be a tag "([^"]*)"$/ do |tag|
+  Tag.where(:name => tag).first.should be_nil
 end
 
