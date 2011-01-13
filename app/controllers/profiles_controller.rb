@@ -23,10 +23,11 @@ class ProfilesController < ApplicationController
   end
   
   def edit
-
+    authorize! :edit, @profile
   end
   
   def update
+    authorize! :edit, @profile
     if @profile.update_attributes(params[:profile])
       flash[:notice] = "Profile updated"
       redirect_to @profile
