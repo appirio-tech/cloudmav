@@ -2,10 +2,8 @@ module CodeMav
   module ExperienceModule
     def self.included(receiver)
       receiver.class_eval do
-        
         references_many :projects
         embeds_many :experiences
-        
       end
       
       receiver.send(:include, InstanceMethods)

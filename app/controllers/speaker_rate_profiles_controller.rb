@@ -1,4 +1,4 @@
-class My::SpeakerRateProfilesController < My::MyController
+class SpeakerRateProfilesController < ApplicationController
   
   def new
     @speaker_rate_profile = SpeakerRateProfile.new

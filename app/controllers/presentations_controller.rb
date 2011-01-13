@@ -1,4 +1,4 @@
-class My::PresentationsController < My::MyController
+class PresentationsController < ApplicationController
   before_filter :set_talk
   
   def index

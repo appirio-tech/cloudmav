@@ -1,4 +1,4 @@
-class My::GitHubProfilesController < My::MyController
+class GitHubProfilesController < ApplicationController
   
   def new
     @git_hub_profile = GitHubProfile.new

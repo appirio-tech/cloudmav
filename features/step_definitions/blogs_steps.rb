@@ -1,9 +1,8 @@
 When /^I add a blog$/ do
   @blog = Factory.build(:blog)
-  visit new_my_blog_path
+  visit new_blog_path(:username => @profile.username)
   fill_in :title, :with => @blog.title
   fill_in :url, :with => @blog.url
-  # And "show me the page"
   select "Blogger", :from => "blog_type"
   click_button "Add"
   And %Q{I should be redirected}
@@ -24,7 +23,7 @@ end
 
 When /^I add a post to my blog$/ do
   @post = Factory.build(:post)
-  visit new_my_blog_post_path(@blog)
+  visit new_blog_post_path(@blog)
   fill_in :title, :with => @post.title
   fill_in :written_on, :with => @post.written_on
   click_button "Add"

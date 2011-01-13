@@ -1,5 +1,5 @@
 When /^I add a talk$/ do
-  visit new_my_talk_path
+  visit new_talk_path(:username => @profile.username)
   @talk = Factory.build(:talk)
   fill_in :title, :with => @talk.title
   fill_in :description, :with => @talk.description
@@ -22,7 +22,7 @@ Given /^I have a talk$/ do
 end
 
 When /^I add a presentation for that talk$/ do
-  visit new_my_talk_presentation_path(@talk)
+  visit new_talk_presentation_path(@talk)
   @presentation = Factory.build(:presentation)
   fill_in :presentation_date, :with => @presentation.presentation_date
   click_button "Add"
@@ -35,7 +35,7 @@ Then /^the presentation should be added$/ do
 end
 
 When /^I edit the talk$/ do
-  visit edit_my_talk_path(@talk)
+  visit edit_talk_path(@talk)
   fill_in :title, :with => "Updated Talk"
   click_button "Save"
   And %Q{I should be redirected}

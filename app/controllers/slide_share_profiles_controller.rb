@@ -1,4 +1,4 @@
-class My::SlideShareProfilesController < My::MyController
+class SlideShareProfilesController < ApplicationController
   
   def new
     @slide_share_profile = SlideShareProfile.new

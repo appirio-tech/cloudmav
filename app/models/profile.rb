@@ -21,7 +21,8 @@ class Profile
   field :api_id, :type => Integer
   field :name, :type => String
   field :email, :type => String
-  index :username, :type => String
+  field :username, :type => String
+  index :username, :unique => true
   
   field :lat, :type => Float
   field :lng, :type => Float

@@ -1,11 +1,9 @@
 module CodeMav
   module WriterModule
     def self.included(receiver)
-      receiver.class_eval do
-        
+      receiver.class_eval do        
         references_many :blogs
-        references_many :posts
-        
+        references_many :posts        
       end
       
       receiver.send(:include, InstanceMethods)

@@ -1,6 +1,6 @@
 %h2 Add post
 
-= form_for [:my, @blog, @post] do |f|
+= form_for [@blog, @post] do |f|
 	.label=f.label :title
 	.control=f.text_field :title
 	.label=f.label :url

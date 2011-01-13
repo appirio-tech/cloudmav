@@ -14,8 +14,7 @@ class PostsController < ApplicationController
     @blog.posts << @post
     if @post.save
       @blog.save
-      current_profile.save
-      redirect_to [:my, @blog]
+      redirect_to @blog
     else
       render :new
     end
@@ -23,7 +22,7 @@ class PostsController < ApplicationController
   
   protected
     def set_blog
-      @blog = current_profile.blogs.find(params[:blog_id])
+      @blog = Blog.find(params[:blog_id])
     end
 
 end

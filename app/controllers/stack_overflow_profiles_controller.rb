@@ -1,4 +1,4 @@
-class My::StackOverflowProfilesController < My::MyController
+class StackOverflowProfilesController < ApplicationController
   
   def new
     @stack_overflow_profile = StackOverflowProfile.new
