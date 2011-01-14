@@ -28,11 +28,16 @@ class Profile
   field :lng, :type => Float
   field :location, :type => String
   field :coordinates, :type => Array
+  field :can_manage_tags, :type => Boolean, :default => false
   
   index [[ :coordinates, Mongo::GEO2D ]]
   
   before_save :update_coordinates
   before_save :add_to_index
+  
+  def can_manage_tags?
+    can_manage_tags
+  end
   
   def add_to_index
     Sunspot.index!(self) unless Rails.env.test?

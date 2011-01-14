@@ -4,6 +4,7 @@ Codemav::Application.routes.draw do
   match 'api_documentation' => 'pages#api_documentation', :as => :api_documentation
   match 'whats_up' => 'activities#index', :as => :whats_up
   
+  resources :tags
   resources :activities
   
   match '/:username/speaker_bio' => "speaker_bio#show", :as => :speaker_bio

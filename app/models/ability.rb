@@ -2,9 +2,16 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    return if user.nil?
+    return if user.profile.nil?
+    
     can [:set_speaker_rate_profile, :set_slide_share_profile, :set_stack_overflow_profile, :set_git_hub_profile], Profile do |profile|
       user.profile == profile
     end
+    if user.profile.can_manage_tags?
+      can [:manage], Tag 
+    end
+    
     can [:set_speaker_bio], Profile do |profile|
       user.profile == profile
     end

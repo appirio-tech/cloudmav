@@ -41,4 +41,12 @@ class Tag
     add_synonym(self.name)
   end
   
+  def synonyms_text
+    return "" if self.synonyms.nil?
+    self.synonyms.join(", ")
+  end
+  
+  def synonyms_text=(value)
+    self.synonyms = value.split(',').map{|s| s.strip }
+  end
 end

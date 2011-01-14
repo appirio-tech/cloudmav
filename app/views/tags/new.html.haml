@@ -1,0 +1,7 @@
+
+= form_for @tag do |f|
+	.label= f.label :name
+	.control= f.text_field :name
+	.label= f.label :synonyms_text
+	.control= f.text_area :synonyms_text
+	.submit= f.submit "Add", :disable_with => "Adding..."

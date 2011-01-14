@@ -18,7 +18,7 @@ Feature: Tagging
 		And I have a talk	
 		And there is a tag "C#"
 		When I tag the talk with "C#"
-		Then there should be a "C#" tag
+		Then there should be a tag "C#"
 		And the talk should be tagged with "C#"
 		
 	Scenario: Remove tag

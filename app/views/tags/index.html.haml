@@ -1,0 +1,16 @@
+.grid_16
+	%h1 Tags
+	
+	%table.simple
+		%tr
+			%th
+			%th Tag
+			%th Synonyms
+			%th Taggings Count
+		- @tags.each do |t|
+			%tr
+				%td= link_to "edit", t
+				%td= t.name
+				%td= t.synonyms.join(", ")
+				%td= t.taggings.count
+		
