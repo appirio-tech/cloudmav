@@ -9,4 +9,21 @@ Feature: Jobs
 		Given I am logged in
 		When I add a job with "ChaiOne"
 		Then the job should be added
+		And there should be the company "ChaiOne" 
+		
+	Scenario: Add a new job with existing company
+	
+		Given I am logged in
+		And there is a company "ChaiOne"
+		When I add a job with "ChaiOne"
+		Then the job should be added
 		And there should be the company "ChaiOne"
+		
+	Scenario: Edit a job
+	
+		Given I am logged in
+		And I have a job
+		When I edit my job
+		Then the job should be updated
+	
+	

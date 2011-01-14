@@ -33,6 +33,7 @@ class Talk
       keywords query do
       end
     end
+    search.spellcheck :collate => true, :extended => true
     search.execute
   end
 
