@@ -11,6 +11,9 @@ class Ability
     if user.profile.can_manage_tags?
       can [:manage], Tag 
     end
+    can [:manage_jobs], Profile do |profile|
+      user.profile == profile
+    end
     
     can [:set_speaker_bio], Profile do |profile|
       user.profile == profile

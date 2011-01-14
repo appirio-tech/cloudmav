@@ -1,0 +1,26 @@
+
+= form_for @job do |f|
+	= hidden_field_tag :username, @profile.username
+	.label= f.label :company_name, "Who did you work for?"
+	.control= f.text_field :company_name
+	.label= f.label :title, "What was your title?"
+	.control= f.text_field :title
+	.label= f.label :description, "How would you describe your job?"
+	.control= f.text_area :description
+	.label How long were you are this job?
+	.control
+		%input{:type => "text", :id => "start_date", :name => "start_date"}
+		%input{:type => "text", :id => "end_date", :name => "end_date", :style => "margin-right: 5px;"}
+	.label= f.label :tags_text, "Care to tag this job?"
+	.control= f.text_area :tags_text
+	.submit= f.submit action_text, :with => disable_text
+	
+	
+	:javascript
+		jQuery(function() {		
+			$("#start_date").datepicker();	
+			$("#start_date").datepicker("setDate", #{js_date @job.start_date});
+
+			$("#end_date").datepicker();	
+			$("#end_date").datepicker("setDate", #{js_date @job.end_date});
+			});

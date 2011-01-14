@@ -24,6 +24,7 @@ Codemav::Application.routes.draw do
       get :callback
     end
   end
+  resources :jobs
   # match '/linkedin/callback' => "linkedin_profiles#callback", :as => :linkedin_callback
   
   resources :speaker_rate_profiles
