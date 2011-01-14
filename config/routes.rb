@@ -19,6 +19,13 @@ Codemav::Application.routes.draw do
     resources :posts
   end
 
+  resources :linkedin_profiles do
+    collection do
+      get :callback
+    end
+  end
+  # match '/linkedin/callback' => "linkedin_profiles#callback", :as => :linkedin_callback
+  
   resources :speaker_rate_profiles
   resources :slide_share_profiles
   resources :stack_overflow_profiles

@@ -11,7 +11,7 @@ gem "mongo"
 gem "geokit"
 gem "badgeable"
 gem "gravtastic"
-gem "grackle"
+# gem "grackle"
 gem 'fog'
 gem 'rmagick'
 gem "carrierwave"
@@ -25,6 +25,7 @@ gem "sunspot"
 gem "sunspot_rails"
 gem "cancan"
 gem "stack_overflow", "0.0.3"
+gem "linkedin"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily
