@@ -19,9 +19,7 @@ class StackOverflowProfile
     
     tags = StackOverflow.get_user_tags(self.stack_overflow_id)
     tags["tags"].each do |t|
-      tagging = self.find_or_create_tagging(t["name"])
-      tagging.count = t["count"]
-      tagging.save
+      self.tag!(t["name"], :count => t["count"])
     end
     self.profile.save!
     self.save!

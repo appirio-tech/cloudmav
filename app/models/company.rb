@@ -12,7 +12,9 @@ class Company
   
   def calculate_tags
     employments.each do |e|
-      e.tags.each {|t| self.tag! t }
+      e.taggings.each do |tagging|
+        self.tag!(tagging.tag.name, :count => tagging.count, :score => tagging.score)
+      end
     end
   end
 end

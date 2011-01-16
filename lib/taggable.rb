@@ -29,17 +29,17 @@ module CodeMav
         self.taggings.join(", ")
       end
       
-      def find_or_create_tagging(tag)
-        tagging = get_tagging(tag)
-        return tagging unless tagging.nil?
+      def tag!(tag, options={})
+        options[:count] ||= 1
+        options[:score] ||= 1
         
-        tag!(tag)
-        return get_tagging(tag)
-      end
-      
-      def tag!(tag)
-        tagging = Tagging.new
-        tagging.tag = Tag.find_or_create_named(tag) 
+        tagging = get_tagging(tag)
+        if tagging.nil?
+          tagging = Tagging.new
+          tagging.tag = Tag.find_or_create_named(tag) 
+        end
+        tagging.count += options[:count]
+        tagging.score += options[:score]
         tagging.save
         self.taggings << tagging
         self.save
