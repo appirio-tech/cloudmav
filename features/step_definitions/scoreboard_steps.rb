@@ -14,7 +14,7 @@ Then /^I should see the top (\d+) users$/ do |number|
   profiles = Profile.all.to_a.reverse {|x,y| x.stack_overflow_profile.reputation <=> y.stack_overflow_profile.reputation }
   # Profile.all.each{|p| puts "profile #{p.inspect}"}
   # puts "profiles #{profiles.collect{|p| p.stack_overflow_profile.reputation }.inspect}"
-  profiles = profiles.first(number.to_i)
+  profiles = profiles.first(number.to_i - 1)
   profiles.each do |p|
     And %Q{I should see "#{p.name}"}
     And %Q{I should see "#{p.stack_overflow_profile.reputation}"}
