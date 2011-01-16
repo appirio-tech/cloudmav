@@ -1,12 +1,11 @@
 Feature: Companies
 
 	As a user
-	I want to manage companies 
-	So that I can relate my work history and find colleagues
-	
-	Scenario: Add Company
-	
-		Given I am logged in
-		When I add a company "Acme Corp"
-		Then the company should be added
-		And I should be on the company "Acme Corp" page
+	I want to view a company's profile
+	So that I can see info about the company
+
+	Scenario: View Company Profile
+
+		Given there is a company
+		When I view the company
+		Then I should see the company's info
