@@ -25,3 +25,7 @@ Given /^I have a stackoverflow profile tagged with "([^"]*)"$/ do |tag|
   so_profile.tag!(tag)
 end
 
+Given /^I have a job tagged with "([^"]*)"$/ do |tag|
+  job = Factory.create(:job, :profile => @profile)
+  job.tag! tag
+end

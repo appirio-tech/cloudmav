@@ -106,7 +106,7 @@ class Profile
       end
     end
     calculate_speaker_tags
-    
+    calculate_experience_tags
   end
   
   class << self
