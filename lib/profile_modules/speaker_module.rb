@@ -25,6 +25,12 @@ module CodeMav
         self.speaker_bio = bio
         self.just(:set_speaker_bio, self, :category => :speaking)
       end
+      
+      def calculate_speaker_tags
+        self.talks.each do |t|
+          t.taggings.each { |tagging| self.tag! tagging.tag.name }
+        end
+      end
     end
   end
 end

@@ -5,6 +5,7 @@ require 'virgil'
 require 'profile_modules/writer_module'
 require 'profile_modules/speaker_module'
 require 'profile_modules/experience_module'
+require 'taggable'
 
 class Profile
   include Mongoid::Document
@@ -15,6 +16,7 @@ class Profile
   include CodeMav::WriterModule
   include CodeMav::SpeakerModule
   include CodeMav::ExperienceModule
+  include CodeMav::Taggable
 
   is_gravtastic!
 
@@ -71,10 +73,6 @@ class Profile
     username
   end
   
-  def tags
-    self.experience_tags + self.writer_tags + self.speaker_tags
-  end
-  
   def as_json(opts={})
     result = { 
       :id => api_id,
@@ -99,6 +97,16 @@ class Profile
     a = Activity.new(:name => name, :category => options[:category])
     a.subject = subject
     self.activities << a
+  end
+  
+  def calculate_tags
+    unless stack_overflow_profile.nil? 
+      stack_overflow_profile.taggings.each do |t|
+        self.tag! t.tag.name
+      end
+    end
+    calculate_speaker_tags
+    
   end
   
   class << self

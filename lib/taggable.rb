@@ -10,6 +10,10 @@ module CodeMav
     
     module InstanceMethods
 
+      def tags
+        self.taggings.map{|t| t.tag.name }
+      end
+      
       def has_tag?(tag)
         !get_tagging(tag).nil?
       end
