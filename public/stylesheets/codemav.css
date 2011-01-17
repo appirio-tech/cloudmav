@@ -148,7 +148,7 @@ form textarea {
     margin-top: 8px;
     margin-left: 10px; }
 
-.photo, .talk_search_result .slide_pic img {
+.photo, .talk_search_result .slide_pic img, .company_search_result .company_logo img, #company .company_logo img {
   border: 1px solid #868686; }
 
 .set_location {
@@ -378,7 +378,7 @@ form textarea {
   margin-top: 20px; }
   #people_search_results hr {
     border: 1px solid #0d0d0d; }
-  #people_search_results .photo, #people_search_results .talk_search_result .slide_pic img, .talk_search_result .slide_pic #people_search_results img {
+  #people_search_results .photo, #people_search_results .talk_search_result .slide_pic img, .talk_search_result .slide_pic #people_search_results img, #people_search_results .company_search_result .company_logo img, .company_search_result .company_logo #people_search_results img, #people_search_results #company .company_logo img, #company .company_logo #people_search_results img {
     border: 1px solid #0d0d0d;
     float: left;
     margin-left: 20px;
@@ -519,3 +519,16 @@ form textarea {
     color: #595959;
     font-size: 12pt;
     margin-top: 5px; }
+
+.company_search_result .company_name {
+  font-size: 18pt; }
+
+.tags {
+  margin-top: 10px; }
+  .tags h3 {
+    font-size: 14pt;
+    border-bottom: 1px solid #595959; }
+  .tags .tag {
+    font-size: 12pt;
+    float: left;
+    margin-right: 5px; }

@@ -5,6 +5,24 @@
 			Search companies
 			= text_field_tag "search", @search
 			= submit_tag "Search", :disable_with => "Searching..."
-	#company_search_results
-		= render :partial => 'company_search_results'
+.clear
+
+#company_search_results
+	- if @companies.nil? 
+
+	- elsif @companies.empty?
+		.grid_16
+			No companies were found.
+		.clear
+	- else
+		- @companies.each do |c|
+			.company_search_result
+				.grid_1
+					.company_logo
+						= image_tag c.logo.thumb.url
+				.grid_4
+					.company_name
+						= link_to c.name, c
+			.clear
+			%hr
 .clear

@@ -1,4 +1,10 @@
-%h2= @company.name
-= image_tag @company.logo.url
-= image_tag @company.logo.medium.url
-= image_tag @company.logo.thumb.url
+.grid_16#company
+	%h2= @company.name
+	- if can? :edit, @company
+		= link_to "edit", edit_company_path(@company)
+	.company_logo
+		= image_tag @company.logo.url
+	.tags
+		%h3 Tags
+		- @company.all_tags.each do |t|
+			.tag= t

@@ -726,3 +726,35 @@ $error_background: #FFDFDF;
 		}
 	}
 }
+
+.company_search_result {
+	.company_logo {
+		img {
+			@extend .photo; 
+		}
+	}
+	.company_name {
+		font-size: 18pt;
+	}
+}
+
+#company {
+	.company_logo {
+		img {
+			@extend .photo; 
+		}
+	}	
+}
+
+.tags {
+	margin-top: 10px;
+	h3 {
+		font-size: 14pt;
+		border-bottom: 1px solid $gray;
+	}
+	.tag {
+		font-size: 12pt;
+		float: left;
+		margin-right: 5px;
+	}
+}

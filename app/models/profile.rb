@@ -31,6 +31,7 @@ class Profile
   field :location, :type => String
   field :coordinates, :type => Array
   field :can_manage_tags, :type => Boolean, :default => false
+  field :is_moderator, :type => Boolean, :default => false
   
   index [[ :coordinates, Mongo::GEO2D ]]
   
@@ -39,6 +40,10 @@ class Profile
   
   def can_manage_tags?
     can_manage_tags
+  end
+  
+  def moderator?
+    is_moderator
   end
   
   def add_to_index

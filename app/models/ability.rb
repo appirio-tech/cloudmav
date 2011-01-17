@@ -14,6 +14,9 @@ class Ability
     can [:manage_jobs], Profile do |profile|
       user.profile == profile
     end
+    if user.profile.moderator?
+      can [:edit], Company
+    end
     
     can [:set_speaker_bio], Profile do |profile|
       user.profile == profile
