@@ -2,7 +2,13 @@
 linkedin results
 
 
-- @positions.each do |p|
-	%p= p.inspect
-	%br
-	%br
+%p Jobs added
+%ul.list
+	- @jobs.each do |j|
+		%li
+			.item_title= j.title
+			.range
+				= show_date j.start_date
+				= show_date j.end_date
+			.description= j.description
+	

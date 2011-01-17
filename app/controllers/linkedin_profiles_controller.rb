@@ -30,6 +30,28 @@ class LinkedinProfilesController < ApplicationController
     @profile = client.profile
     @connections = client.connections
     @positions = client.profile(:fields => %w(positions)).positions
+    
+    @jobs = []
+    @positions.each do |p|
+      unless current_profile.has_job?(p.title)
+        job = Job.new
+        job.title = p.title
+        job.description = p.summary
+        start_year = p.start_year || Time.now.year
+        start_month = p.start_month || 1
+        job.start_date = DateTime.civil(start_year, start_month, 1)
+      
+        end_year = p.end_year
+        end_month = p.end_month 
+        if end_year && end_month
+          job.end_date = DateTime.civil(end_year, end_month, 1)
+        else
+          job.end_date = nil
+        end
+        current_profile.jobs << job
+        @jobs << job
+      end
+    end
   end
   
 end

@@ -40,6 +40,10 @@ module CodeMav
         self.experiences.with(technology_name).first
       end
       
+      def has_job?(title)
+        self.jobs.where(:title => title).first
+      end
+      
       private
         def find_create_xp(name)
           xp = self.experiences.with(name).first
