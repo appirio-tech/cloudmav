@@ -1,5 +1,6 @@
 %h2 Add a Company to CodeMav
 
+= render :partial => "form", :locals => { :action_text => "Add Company", :disable_text => "Adding Company..."}
 = form_for @company, :html => {:multipart => true} do |f|
 	.label= f.label :name
 	.control= f.text_field :name

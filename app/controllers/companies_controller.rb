@@ -1,5 +1,13 @@
 class CompaniesController < ApplicationController
   
+  def show
+    @company = Company.find(params[:id])
+  end
+  
+  def index
+    @companies = Company.all
+  end
+  
   def new
     @company = Company.new
   end
@@ -13,11 +21,18 @@ class CompaniesController < ApplicationController
     end
   end
   
-  def show
+  def edit
     @company = Company.find(params[:id])
   end
   
-  def index
-    @companies = Company.all
+  def update
+    @company = Company.find(params[:id])
+    if @company.update_attributes(params[:company])
+      flash[:notice] = "#{@company.name} updated successfully"
+      redirect_to @company
+    else
+      render :edit
+    end  
   end
+  
 end
