@@ -17,23 +17,13 @@ u.save
 p = u.profile
 p.name = "Kevin W Lee"
 
-project = Project.new
-project.name = "Bizeeti"
-project.start_date = DateTime.parse("1/11/2010")
-project.end_date = DateTime.parse("13/1/2011")
-p.projects << project
-project.save
-project.set_technologies!("iPhone")
-
-project = Project.new
-project.name = "Fampus"
-project.start_date = DateTime.parse("1/6/2010")
-project.end_date = DateTime.parse("13/9/2010")
-p.projects << project
-project.save
-project.set_technologies!("Rails")
-
-project.save
+job = Job.new
+job.company_name = "ChaiOne"
+job.start_date = DateTime.parse("1/8/2010")
+job.end_date = DateTime.parse("13/1/2011")
+p.jobs << job
+job.save
+job.tag! "iPhone"
 
 u = User.new
 u.username = "flux88"
@@ -45,23 +35,14 @@ u.save
 p = u.profile
 p.name = "Ben Scheirman"
 
-project = Project.new
-project.name = "Bizeeti"
-project.start_date = DateTime.parse("1/11/2010")
-project.end_date = DateTime.parse("13/1/2011")
-p.projects << project
-project.save
-project.set_technologies!("iPhone")
-
-project = Project.new
-project.name = "Safecell"
-project.start_date = DateTime.parse("1/6/2009")
-project.end_date = DateTime.parse("13/9/2010")
-p.projects << project
-project.save
-project.set_technologies!("Rails")
-
-project.save
+job = Job.new
+job.company_name = "ChaiOne"
+job.start_date = DateTime.parse("1/10/2009")
+job.end_date = DateTime.parse("13/1/2011")
+p.jobs << job
+job.save
+job.tag! "iPhone"
+job.tag! "Rails"
 
 ########################## CLAUDIO
 
@@ -76,15 +57,33 @@ p = u.profile
 p.name = "Claudio Lassala"
 
 talk = Talk.new
+p.talks << talk
 talk.title = "Design Patterns"
 talk.description = "Design patterns and stuff and how they are awesome"
 talk.tags_text = "Design Patters, OOP, C#"
-p.talks << talk
 talk.save
 
 talk = Talk.new
+p.talks << talk
 talk.title = "OOP"
 talk.description = "SOLID and OOP"
 talk.tags_text = "OOP, C#"
-p.talks << talk
 talk.save
+
+job = Job.new
+job.company_name = "EPS"
+job.start_date = DateTime.parse("1/10/2006")
+job.end_date = DateTime.parse("13/1/2011")
+p.jobs << job
+job.save
+job.tag! "WPF"
+job.tag! "C#"
+
+Company.all.each do |c|
+  c.calculate_tags
+  c.save
+end
+Profile.all.each do |p|
+  p.calculate_tags
+  p.save
+end

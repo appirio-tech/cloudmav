@@ -40,6 +40,7 @@ Codemav::Application.routes.draw do
   end
   resources :people_searches
   resources :talk_searches
+  resources :company_searches
   
   resources :companies
   resources :user_groups do

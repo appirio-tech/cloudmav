@@ -1,0 +1,10 @@
+.grid_16
+	
+	= form_tag company_searches_path do |f|
+		%h4
+			Search companies
+			= text_field_tag "search", @search
+			= submit_tag "Search", :disable_with => "Searching..."
+	#company_search_results
+		= render :partial => 'company_search_results'
+.clear

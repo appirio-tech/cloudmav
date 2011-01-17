@@ -1,8 +1,10 @@
 require 'taggable'
+require 'indexable'
 
 class Talk
   include Mongoid::Document
   include CodeMav::Taggable
+  include CodeMav::Indexable
   
   field :title, :type => String
   field :description, :type => String
@@ -15,8 +17,6 @@ class Talk
   embeds_many :presentations
   embeds_one :activity
   
-  after_save :add_to_index
-  after_destroy :remove_from_index
   after_create :talk_added
   
   def talk_added
@@ -33,26 +33,7 @@ class Talk
       keywords query do
       end
     end
-    search.spellcheck :collate => true, :extended => true
     search.execute
   end
 
-  private
-    def add_to_index
-      return if Rails.env.test?
-      Sunspot.index!(self) 
-    rescue Errno::ECONNREFUSED
-      puts "We could not index, likely because SOLR isn't running"
-    rescue RSolr::RequestError
-      puts "Solr is hating"
-    end
-
-    def remove_from_index
-      return if Rails.env.test?
-      Sunspot.remove(self)
-    rescue Errno::ECONNREFUSED
-      puts "We could not index, likely because SOLR isn't running"
-    rescue RSolr::RequestError
-      puts "Solr is hating"
-    end
 end

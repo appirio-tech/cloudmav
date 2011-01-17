@@ -8,5 +8,10 @@ end
 Sunspot.setup(Profile) do
   text :username
   text :name
-  text :tags
+  text :all_tags
+end
+
+Sunspot.setup(Company) do
+  text :name
+  text :all_tags
 end

@@ -2,6 +2,7 @@
 	= link_to "What's up?", whats_up_path
 	= link_to "Find Peeps", new_people_search_path
 	= link_to "Find Talks", new_talk_search_path
+	= link_to "Find Companies", new_company_search_path
 	- if can? :manage, Tag
 		= link_to "Tags", tags_path
 	/ = link_to "StackOverflow Scoreboard", stack_overflow_scoreboards_path
