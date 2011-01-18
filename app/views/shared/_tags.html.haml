@@ -1,0 +1,8 @@
+.tags
+	%h3 Tags
+	- tags = taggable.all_tags.to_a
+	- if tags.empty?
+		No tags found
+	- else
+		- tags.each do |t|
+			.tag= t

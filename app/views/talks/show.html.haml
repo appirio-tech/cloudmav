@@ -1,21 +1,38 @@
-.grid_16
-	%h2= @talk.title
-	%p
-		- if can? :edit, @talk
-			= link_to "Edit", edit_talk_path(@talk)
-	%p
-		- if can? :add_presentation, @talk
-			= link_to "Add Presentation", new_talk_presentation_path(@talk)
+#talk
+	.grid_16
+		%h2
+			.title
+				= @talk.title
+			.links
+				- if can? :edit, @talk
+					= link_to "edit", edit_talk_path(@talk)
+
 		
-	- unless @talk.slides_thumbnail.nil?
-		= image_tag @talk.slides_thumbnail
-	%p= @talk.description
-	.tags= @talk.tags
+		- unless @talk.slides_thumbnail.nil?
+			= image_tag @talk.slides_thumbnail
+		%p.author
+			talk given by 
+			= link_to @talk.profile.display_name, profile_speaking_path(:username => @talk.profile.username)
+		%p.download_link
+			- if @talk.slides_url
+				to download the slides click
+				= link_to "here", @talk.slides_url
+	.clear
+	.grid_10
+		%h3 Description
+		%p= @talk.description
+	.grid_6
+		= render :partial => "shared/tags", :locals => { :taggable => @talk }
+	.clear	
 	
-	- unless @talk.presentations.empty?
-		%p Presented on
-		%ul.list
-			- @talk.presentations.each do |p|
-				%li.item_title= show_date p.presentation_date
+		%p
+			- if can? :add_presentation, @talk
+				= link_to "Add Presentation", new_talk_presentation_path(@talk)
 			
-.clear
+		- unless @talk.presentations.empty?
+			%p Presented on
+			%ul.list
+				- @talk.presentations.each do |p|
+					%li.item_title= show_date p.presentation_date
+			
+	.clear

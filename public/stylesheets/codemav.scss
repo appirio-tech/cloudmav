@@ -68,10 +68,13 @@ h2 {
 }
 h3 {
 	@include title;
-	font-size: 24pt;
+	font-size: 14pt;
 	color:$light_black;
+	margin-top: 10px;
 	margin-bottom: 15px;
+	border-bottom: 1px solid $gray;
 }
+
 h4 {
 	@include title;
 	font-size: 16pt;
@@ -747,11 +750,6 @@ $error_background: #FFDFDF;
 }
 
 .tags {
-	margin-top: 10px;
-	h3 {
-		font-size: 14pt;
-		border-bottom: 1px solid $gray;
-	}
 	.tag {
 		font-size: 12pt;
 		float: left;
@@ -770,5 +768,24 @@ $error_background: #FFDFDF;
 		border: 1px solid $blue;
 		padding: 5px;
 		margin-top: 5px;
+	}
+}
+
+h2 {
+	.title {
+		float: left;
+	}
+	.links {
+		float: left;
+		font-size: 12pt;
+		margin-left: 10px;
+		margin-top: 26px;
+	}
+	height: 50px;
+}
+
+#talk {
+	.author {
+		font-size: 14pt;
 	}
 }
