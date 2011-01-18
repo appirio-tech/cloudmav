@@ -1,9 +1,9 @@
 .grid_4.info_box
 	.info_logo= link_to image_tag("stack_over_flow_info_logo.png"), "http://www.stackoverflow.com"
-	- if @profile.stack_overflow_profile.nil? && current_profile == @profile
+	- if can? :set_stack_overflow_profile, @profile
 		%p 
 			Do you have a StackOverflow account? 
-			= link_to "Add Your StackOverflow Account", new_stack_overflow_profile_path
+			= link_to "Add Your StackOverflow Account", new_stack_overflow_profile_path(:username => @profile.username)
 	-else
 		= link_to "Go to my StackOverflow Profile", @profile.stack_overflow_profile.url
 		%table

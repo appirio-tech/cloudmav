@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :beta_protection
   before_filter :get_guidance
+  before_filter :unseen_badges
 
   helper :all
   helper_method :current_profile
@@ -46,5 +47,12 @@ class ApplicationController < ActionController::Base
     def access_denied
       flash[:error] = "Not authorized to perform that action"
       redirect_to root_path
+    end
+    
+    def unseen_badges
+      return unless current_user
+      unseen_badgings = current_profile.badgings.unseen.to_a
+      @unseen_badges = unseen_badgings.map(&:badge)
+      unseen_badgings.each {|b| b.mark_as_seen }
     end
 end

@@ -1,0 +1,7 @@
+- if @unseen_badges
+	.earned_badges
+		- @unseen_badges.each do |b|
+			.earned_badge
+				%p You just earned the 
+				%p= "#{b.name} badge!"
+		

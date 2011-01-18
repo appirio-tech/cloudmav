@@ -1,9 +1,9 @@
 .grid_4.info_box
 	.info_logo= link_to image_tag("git_hub_info_logo.png"), "http://www.github.com"
-	- if @profile.git_hub_profile.nil? && current_profile == @profile
+	- if can? :set_git_hub_profile, @profile
 		%p 
 			Do you have a GitHub account? 
-			= link_to "Add Your GitHub Account", new_git_hub_profile_path
+			= link_to "Add Your GitHub Account", new_git_hub_profile_path(:username => @profile.username)
 	-else
 		= link_to "Go to my GitHub Profile", @profile.git_hub_profile.url
 		%table
