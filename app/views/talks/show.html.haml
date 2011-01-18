@@ -17,6 +17,9 @@
 			- if @talk.slides_url
 				to download the slides click
 				= link_to "here", @talk.slides_url
+		%p.give_talk_again
+			- if @talk.willing_to_give_talk_again
+				Willing to give talk again!
 	.clear
 	.grid_10
 		%h3 Description

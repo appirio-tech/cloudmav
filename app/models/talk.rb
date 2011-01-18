@@ -12,6 +12,7 @@ class Talk
   field :slides_thumbnail, :type => String
   field :imported_id, :type => String
   field :tags, :type => Array, :default => []
+  field :willing_to_give_talk_again, :type => Boolean, :default => false
   
   referenced_in :profile, :inverse_of => :talks
   embeds_many :presentations

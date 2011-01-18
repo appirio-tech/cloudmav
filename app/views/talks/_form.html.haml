@@ -1,12 +1,18 @@
 = form_for @talk do |f|
 	- unless @profile.nil?
 		= hidden_field_tag :username, @profile.username
-	.label= f.label :title
+	.label= f.label :title, "What's the talk titled?"
 	.control= f.text_field :title
-	.label= f.label :description
+	.label= f.label :description, "Can you describe the talk?"
 	.control= f.text_area :description
-	.label= f.label :slides_url
+	.label= f.label :slides_url, "Where can someone download the slides?"
 	.control= f.text_field :slides_url
-	.label= f.label :tags_text, "Tags"
+	.label= f.label :willing_to_give_talk_again, "Are you willing to give the talk again?"
+	.control
+		= radio_button "talk", "willing_to_give_talk_again", true
+		Yes
+		= radio_button "talk", "willing_to_give_talk_again", false		
+		No
+	.label= f.label :tags_text, "Care to tag the talk?"
 	.control= f.text_area :tags_text
 	.submit= f.submit action_text, :disable_with => disable_text

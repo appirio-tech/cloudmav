@@ -1,9 +1,9 @@
 When /^I add a talk$/ do
   visit new_talk_path(:username => @profile.username)
   @talk = Factory.build(:talk)
-  fill_in :title, :with => @talk.title
-  fill_in :description, :with => @talk.description
-  fill_in "Slides url", :with => @talk.slides_url
+  fill_in "talk_title", :with => @talk.title
+  fill_in "talk_description", :with => @talk.description
+  fill_in "talk_slides_url", :with => @talk.slides_url
   click_button "Add"
   And %Q{I should be redirected}
 end
@@ -36,7 +36,7 @@ end
 
 When /^I edit the talk$/ do
   visit edit_talk_path(@talk)
-  fill_in :title, :with => "Updated Talk"
+  fill_in "talk_title", :with => "Updated Talk"
   click_button "Save"
   And %Q{I should be redirected}
 end
