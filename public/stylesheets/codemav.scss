@@ -103,6 +103,24 @@ hr {
 	border: 1px solid $blue;
 }
 
+.button {
+	@include corners;
+	border: 1px solid $light_gray;
+	background: $blue;
+	color:$white;
+	padding: 7px;
+	font-size: .9em;
+	margin: 10px;
+	&:visited {
+		color: $white;
+	}
+	&:hover {
+		background: $light_blue;
+		border: 1px solid $blue;
+		color:$white;
+		text-decoration: none;
+	}
+}
 
 .left {
 	float: left;
@@ -787,5 +805,16 @@ h2 {
 #talk {
 	.author {
 		font-size: 14pt;
+	}
+}
+
+.simple {
+	* th {
+		background: $blue;
+		color: $white;
+		padding: 10px;
+	}
+	* td {
+		padding: 10px;
 	}
 }
