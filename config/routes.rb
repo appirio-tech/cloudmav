@@ -14,7 +14,8 @@ Codemav::Application.routes.draw do
     resources :presentations
   end
   resources :projects
-  
+  resources :technologies
+
   resources :blogs do
     resources :posts
   end

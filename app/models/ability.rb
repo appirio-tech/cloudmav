@@ -16,6 +16,7 @@ class Ability
     end
     if user.profile.moderator?
       can [:edit], Company
+      can [:manage], Technology
     end
     
     can [:set_speaker_bio], Profile do |profile|
