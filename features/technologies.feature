@@ -10,3 +10,19 @@ Feature: Technologies
 		And I can manage technology
 		When I add a technology
 		Then the technology should be added
+
+  Scenario: Edit Technology
+
+    Given I am logged in
+    And I can manage technology
+    And there is a technology
+    When I edit a technology
+    Then the technology should be updated
+
+  Scenario: Delete Technology
+
+    Given I am logged in
+    And I can manage technology
+    And there is a technology
+    When I delete a technology
+    Then the techology should be deleted

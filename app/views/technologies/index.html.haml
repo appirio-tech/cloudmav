@@ -5,6 +5,8 @@
 %table
   %tr
     %th Name
-  - @technologies.each do |t|
+    %th
+  - @technologies.each do |technology|
     %tr
-      %td= t.name
+      %td= technology.name
+      %td= button_to "delete", technology, :confirm => "Are you sure?", :method => :delete, :id => "delete_#{technology.id}"

@@ -1,6 +1,4 @@
-
 = form_for @technology do |f|
-	.label= f.label :name
-	.control= f.text_field :name
-	.label= f.label :type
-	.control= 
+  .label= f.label :name
+  .control= f.text_field :name
+  .submit= f.submit "Save", :disable_with => "Saving"

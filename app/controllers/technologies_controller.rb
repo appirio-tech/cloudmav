@@ -22,4 +22,23 @@ class TechnologiesController < ApplicationController
     end
   end
 
+  def edit
+    @technology = Technology.find(params[:id])
+  end
+
+  def update
+    @technology = Technology.find(params[:id])
+
+    if @technology.update_attributes(params[:technology])
+      redirect_to technologies_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @technology = Technology.find(params[:id])
+    @technology.destroy
+    redirect_to technologies_path
+  end
 end
