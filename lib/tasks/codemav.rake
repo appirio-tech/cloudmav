@@ -11,4 +11,12 @@ namespace :codemav do
       profile.save
     end
   end
+
+  desc "Tag talks"
+  task :tag_talks => :environment do
+    Talk.all.each do |talk|
+      talk.calculate_tags
+      talk.save
+    end
+  end
 end

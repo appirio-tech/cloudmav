@@ -30,6 +30,11 @@ module CodeMav
       end
       
       def tag!(tag, options={})
+        tag(tag, options)
+        self.save
+      end
+
+      def tag(tag, options={})
         options[:count] ||= 1
         options[:score] ||= 1
         
@@ -42,7 +47,6 @@ module CodeMav
         tagging.score += options[:score]
         tagging.save
         self.taggings << tagging
-        self.save
       end
 
       def tags_text=(value)
@@ -56,6 +60,14 @@ module CodeMav
       
       def all_tags
         self.taggings.map{|t| t.tag.synonyms }.flatten
+      end
+
+      def find_tags_in(s, tags)
+        Tag.all.each do |tag|
+          tag.synonyms.each do |syn|
+            self.tag(tag.name) if s.include?(syn)
+          end 
+        end
       end
     end
   end
