@@ -9,6 +9,10 @@ Sunspot.setup(Profile) do
   text :username
   text :name
   text :all_tags
+  text :location
+  location :coordinates do
+    Sunspot::Util::Coordinates.new(lat, lng) if [lat, lng].all?
+  end
 end
 
 Sunspot.setup(Company) do

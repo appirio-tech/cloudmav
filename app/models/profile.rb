@@ -138,9 +138,19 @@ class Profile
       stack_overflow.desc('stack_overflow_profile.reputation')
     end
     
+    def geocode(location)
+      response = Geokit::Geocoders::MultiGeocoder.geocode(location)
+      return [response.lat, response.lng]
+    end
+
     def search(query, options = {})
+      coordinates = (options[:near].nil? || options[:near].blank?) ? nil : geocode(options[:near])
+
       search = Sunspot.new_search(Profile)
       search.build do
+        if coordinates
+          with(:coordinates).near(coordinates.first, coordinates.last, :precision => 2, :precision_factor => 2, :boost => 200)
+        end
         keywords query do
         end
       end

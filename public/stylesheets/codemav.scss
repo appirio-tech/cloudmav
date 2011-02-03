@@ -1,5 +1,3 @@
-// lightest blue 6279B5
-// light blue 415173
 // base blue 2D406B
 // dark blue 212736
 // orange E03F00
@@ -30,791 +28,791 @@ $title_font: $pt;
 $main_font: $droid;
 
 @mixin corners($radius: 5px) {
-	border-radius: $radius;
-	-moz-border-radius: $radius;	
+  border-radius: $radius;
+  -moz-border-radius: $radius;  
 }
 
 @mixin gradient($from, $to) {
-	/* gecko based browsers */
-	background: -moz-linear-gradient(top, $from, $to);
+  /* gecko based browsers */
+  background: -moz-linear-gradient(top, $from, $to);
 
-	/* webkit based browsers */
-	background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  /* webkit based browsers */
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
 }
 
 @mixin title {
-	font-family: $title_font;
+  font-family: $title_font;
 
-	font-weight:normal;	
+  font-weight:normal; 
 }
 
 body {
-	font-family: $main_font;
-	font-size: 11pt;
+  font-family: $main_font;
+  font-size: 11pt;
 }
 
 h1 {
-	@include title;
-	font-size: 36pt;
-	color:$light_blue;
-	margin-bottom: 15px;	
+  @include title;
+  font-size: 36pt;
+  color:$light_blue;
+  margin-bottom: 15px;  
 }
 
 h2 {
-	@include title;
-	font-size: 36pt;
-	color:$light_black;
-	margin-bottom: 15px;
+  @include title;
+  font-size: 36pt;
+  color:$light_black;
+  margin-bottom: 15px;
 }
 h3 {
-	@include title;
-	font-size: 14pt;
-	color:$light_black;
-	margin-top: 10px;
-	margin-bottom: 15px;
-	border-bottom: 1px solid $gray;
+  @include title;
+  font-size: 14pt;
+  color:$light_black;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid $gray;
 }
 
 h4 {
-	@include title;
-	font-size: 16pt;
-	color:$light_black;
-	margin-bottom: 5px;	
+  @include title;
+  font-size: 16pt;
+  color:$light_black;
+  margin-bottom: 5px; 
 }
 
 a {
-	font-family: $main_font;
-	text-decoration: none;
-	color: $blue;
-	&:visited {
-		color: $blue;
-	}
-	&:hover {
-		color: $light_blue;
-		text-decoration: underline;
-	}
+  font-family: $main_font;
+  text-decoration: none;
+  color: $blue;
+  &:visited {
+    color: $blue;
+  }
+  &:hover {
+    color: $light_blue;
+    text-decoration: underline;
+  }
 }
 p {
-	margin-top: 5px;
-	margin-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 hr {
-	border: 1px solid $blue;
+  border: 1px solid $blue;
 }
 
 .button {
-	@include corners;
-	border: 1px solid $light_gray;
-	background: $blue;
-	color:$white;
-	padding: 7px;
-	font-size: .9em;
-	margin: 10px;
-	&:visited {
-		color: $white;
-	}
-	&:hover {
-		background: $light_blue;
-		border: 1px solid $blue;
-		color:$white;
-		text-decoration: none;
-	}
+  @include corners;
+  border: 1px solid $light_gray;
+  background: $blue;
+  color:$white;
+  padding: 7px;
+  font-size: .9em;
+  margin: 10px;
+  &:visited {
+    color: $white;
+  }
+  &:hover {
+    background: $light_blue;
+    border: 1px solid $blue;
+    color:$white;
+    text-decoration: none;
+  }
 }
 
 .left {
-	float: left;
+  float: left;
 }
 .right {
-	float: right;
+  float: right;
 }
 
 .jquery-auto-geocoder-map {
-	width: 150px;
-	height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 $form_font_size:12pt;
 $form_top_margin:10px;
 form {
-	p {
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
-	.label {
-		margin-top:$form_top_margin;
-	}
-	label {
-		color:$black;
-		font-size:$form_font_size+2;
-	}
-	input {
-		font-size:$form_font_size;
-		margin-top:$form_top_margin;
-		border: 1px solid $gray;
-		padding: 4px;
-		&:focus {
-			border: 1px solid $light_blue;
-		}
-	}
-	input[type=submit] {
-		@include corners;
-		border: 1px solid $light_gray;
-		background: $blue;
-		color:$white;
-		padding: 7px;
-		font-size: .9em;
-		&:hover {
-			background: $light_blue;
-			border: 1px solid $blue;
-		}
-	}
-	select {
-		font-size:$form_font_size;
-		margin-top:$form_top_margin;
-		padding: 4px;
-	}
-	textarea {
-		font-size:$form_font_size;
-		margin-top:$form_top_margin;
-		height: 100px;
-		border: 1px solid $gray;
-		padding: 4px;
-		&:focus {
-			border: 1px solid $light_blue;
-		}
-	}
+  p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .label {
+    margin-top:$form_top_margin;
+  }
+  label {
+    color:$black;
+    font-size:$form_font_size+2;
+  }
+  input {
+    font-size:$form_font_size;
+    margin-top:$form_top_margin;
+    border: 1px solid $gray;
+    padding: 4px;
+    &:focus {
+      border: 1px solid $light_blue;
+    }
+  }
+  input[type=submit] {
+    @include corners;
+    border: 1px solid $light_gray;
+    background: $blue;
+    color:$white;
+    padding: 7px;
+    font-size: .9em;
+    &:hover {
+      background: $light_blue;
+      border: 1px solid $blue;
+    }
+  }
+  select {
+    font-size:$form_font_size;
+    margin-top:$form_top_margin;
+    padding: 4px;
+  }
+  textarea {
+    font-size:$form_font_size;
+    margin-top:$form_top_margin;
+    height: 100px;
+    border: 1px solid $gray;
+    padding: 4px;
+    &:focus {
+      border: 1px solid $light_blue;
+    }
+  }
 }
 
 .flash {
-	padding: 5px;
-	text-align:center;
-	margin-bottom: 15px;	
+  padding: 5px;
+  text-align:center;
+  margin-bottom: 15px;  
 }
 .notice {
-	border: 2px solid $gray;
-	background-color: $offwhite;
+  border: 2px solid $gray;
+  background-color: $offwhite;
 }
 .alert {
-	border: 2px solid $error_border;
-	background-color: $error_background;
+  border: 2px solid $error_border;
+  background-color: $error_background;
 }
 .error {
-	border: 2px solid $error_border;
-	background-color: $error_background;	
+  border: 2px solid $error_border;
+  background-color: $error_background;  
 }
 
 $error_border: #CB2324;
 $error_background: #FFDFDF;
 #error_explanation {
-	border: 2px solid $error_border;
-	background-color: $error_background;
-	padding: 7px;
-	padding-bottom: 10px;
-	h2 {
-		font-size: 1.2em;
-	}
-	ul {
-		list-style: disc;
-		li {
-			margin-left:20px;
-		}
-	}
+  border: 2px solid $error_border;
+  background-color: $error_background;
+  padding: 7px;
+  padding-bottom: 10px;
+  h2 {
+    font-size: 1.2em;
+  }
+  ul {
+    list-style: disc;
+    li {
+      margin-left:20px;
+    }
+  }
 }
 .field_with_errors {
-	margin: 0px;
-	padding: 0px;
-	input {
-		border: 2px solid $error_border;
-	}
-	textarea {
-		border: 2px solid $error_border;
-	}
+  margin: 0px;
+  padding: 0px;
+  input {
+    border: 2px solid $error_border;
+  }
+  textarea {
+    border: 2px solid $error_border;
+  }
 }
 
 .page_title {
-	border-top: 7px solid $off_white;
-	.title {
-		color: $blue;
-		float:left;
-		font-size: 24pt;
-		margin-top: 3px;
-	}
-	.link {
-		float: left;
-		margin-top: 8px;
-		margin-left: 10px;
-	}
-	margin-top: 5px;
-	margin-bottom:5px;	
-	height: 20px;
+  border-top: 7px solid $off_white;
+  .title {
+    color: $blue;
+    float:left;
+    font-size: 24pt;
+    margin-top: 3px;
+  }
+  .link {
+    float: left;
+    margin-top: 8px;
+    margin-left: 10px;
+  }
+  margin-top: 5px;
+  margin-bottom:5px;  
+  height: 20px;
 }
 
 .photo {
-	border: 1px solid $light_gray;
+  border: 1px solid $light_gray;
 }
 
 .set_location {
-	// border: 1px solid $light_gray;
-	// padding: 10px;
-	width: 450px;
-	margin-top: 15px;
-	legend {
-		color: $blue;
-	}
-	textarea {
-		float:left;
-		margin-right: 10px;
-	}
-	.jquery-auto-geocoder-map {
-		border: 1px solid $light_gray;
-	}
+  // border: 1px solid $light_gray;
+  // padding: 10px;
+  width: 450px;
+  margin-top: 15px;
+  legend {
+    color: $blue;
+  }
+  textarea {
+    float:left;
+    margin-right: 10px;
+  }
+  .jquery-auto-geocoder-map {
+    border: 1px solid $light_gray;
+  }
 }
 
 .text_content {
-	p {
-		margin-top:5px;
-		margin-bottom:15px;
-		font-size:1.2em;
-	}
+  p {
+    margin-top:5px;
+    margin-bottom:15px;
+    font-size:1.2em;
+  }
 }
 
 #header {
-	@include gradient($black, $dark_blue);
-	padding-top: 10px;
-	height: 80px;
-	.title_icon {
-		position:absolute;
-		top: 10px;
-		left: 20px;
-	}
-	.title_text {
-		position:absolute;
-		top: 28px;
-		left: 135px;
-	}
+  @include gradient($black, $dark_blue);
+  padding-top: 10px;
+  height: 80px;
+  .title_icon {
+    position:absolute;
+    top: 10px;
+    left: 20px;
+  }
+  .title_text {
+    position:absolute;
+    top: 28px;
+    left: 135px;
+  }
 }
 
 #content {
-	min-height: 400px;
+  min-height: 400px;
 }
 
 #footer {
-	border-top: 5px solid $black;
-	@include gradient($black, #001626);
-	margin-top: 30px;
-	height: 100px;
+  border-top: 5px solid $black;
+  @include gradient($black, #001626);
+  margin-top: 30px;
+  height: 100px;
 }
 
 #signin_panel {
-	border: solid 2px $brown;
-	background: $white;
-	padding: 10px;
-	a {
-		font-size: 16pt;
-	}
+  border: solid 2px $brown;
+  background: $white;
+  padding: 10px;
+  a {
+    font-size: 16pt;
+  }
 }
 
 #login_panel {
-	@include gradient($white, $off_white);
-	border: solid 1px $black;
-	padding: 5px;
-	font-size: 0.9em;
-	height: 55px;
-	width: 270px;
-	.avatar {
-		float:left;
-		margin-right: 10px;
-	}
-	.logout {
-		float:right;
-		margin-top: 3px;
-		a {
-			font-size: 10pt;
-		}
-	}
-	.username {
-		a {
-			font-size: 14pt;
-		}
-	}
+  @include gradient($white, $off_white);
+  border: solid 1px $black;
+  padding: 5px;
+  font-size: 0.9em;
+  height: 55px;
+  width: 270px;
+  .avatar {
+    float:left;
+    margin-right: 10px;
+  }
+  .logout {
+    float:right;
+    margin-top: 3px;
+    a {
+      font-size: 10pt;
+    }
+  }
+  .username {
+    a {
+      font-size: 14pt;
+    }
+  }
 }
 
 #content {
-	font-size: 1em;
-	margin-top: 20px;
+  font-size: 1em;
+  margin-top: 20px;
 }
 
 #subheader {
-	background: $blue;
-	padding: 7px;
-	a {
-		color: $white;
-		&:hover {
-			color: $light_blue;
-		}
-	}
-	border-top: 3px solid $brown;
-	height: 30px;
+  background: $blue;
+  padding: 7px;
+  a {
+    color: $white;
+    &:hover {
+      color: $light_blue;
+    }
+  }
+  border-top: 3px solid $brown;
+  height: 30px;
 }
 
 #menu {
-	margin-top: 4px;
-	a {
-		font-size: 14pt;
-		padding-left: 10px;
-		&:hover {
-			text-decoration: none;
-		}
-	}
+  margin-top: 4px;
+  a {
+    font-size: 14pt;
+    padding-left: 10px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 #profile_pic {
-	border: 1px solid $black;
+  border: 1px solid $black;
 }
 #profile_icons {
-	margin-top: 10px;
-	.icon {
-		float: left;
-		margin-right: 15px;
-		.image {
-			float: left;
-		}
-		.score {
-			font-size: 22pt;
-			float:right;
-			margin-left: 10px;
-			margin-top: 3px;
-			.description {
-				font-size: 10pt;
-				color: $dark_gray;	
-			}
-		}
-	}
+  margin-top: 10px;
+  .icon {
+    float: left;
+    margin-right: 15px;
+    .image {
+      float: left;
+    }
+    .score {
+      font-size: 22pt;
+      float:right;
+      margin-left: 10px;
+      margin-top: 3px;
+      .description {
+        font-size: 10pt;
+        color: $dark_gray;  
+      }
+    }
+  }
 }
 
 
 .count {
-	font-size: 26pt;
-	float:left;
+  font-size: 26pt;
+  float:left;
 }
 .count_of {
-	font-size: 16pt;
-	color: $gray;
-	float:left;	
-	margin-top:13px;
-	margin-left:10px;
+  font-size: 16pt;
+  color: $gray;
+  float:left; 
+  margin-top:13px;
+  margin-left:10px;
 }
 
 #basic_info {
-	table {
-		tr { 
-			td:first-child {
-				font-size:1em;
-				color: $dark_gray;
-				padding-right: 10px;
-				text-transform: lowercase;
-			}
-		}
-	}
+  table {
+    tr { 
+      td:first-child {
+        font-size:1em;
+        color: $dark_gray;
+        padding-right: 10px;
+        text-transform: lowercase;
+      }
+    }
+  }
 }
 #recent_badges {
-	height: 75px;
-	h3 {
-		width: 120px;
-	}
-	.badge {
-		.badge_image {
-			width: 50px;
-			height: 50px;
-		}
-	}
+  height: 75px;
+  h3 {
+    width: 120px;
+  }
+  .badge {
+    .badge_image {
+      width: 50px;
+      height: 50px;
+    }
+  }
 }
 
 #languages {
-	height: 75px;
+  height: 75px;
 }
 #technologies {
-	height: 75px;
+  height: 75px;
 }
 #disciplines {
-	height: 75px;
+  height: 75px;
 }
 #current_employment {
-	height: 75px;
+  height: 75px;
 }
 #top_colleagues {
-	height: 75px;
+  height: 75px;
 }
 
 .menu {
-	border-bottom: 1px solid $blue;
-	margin: 0;
-	margin-top:15px;
-	padding-bottom: 19px;
-	padding-left: 10px;
-	ul, li {
-		display: inline;
-		list-style-type: none;
-		margin: 0px;
-		padding: 0px;		
-	}
-	a:link, a:visited	{
-		background: $off_white;
-		border: 1px solid $blue;
-		color: $black;
-		float: left;
-		font-size: small;
-		font-weight: normal;
-		line-height: 14px;
-		margin-right: 8px;
-		padding: 2px 10px 2px 10px;
-		text-decoration: none;
-	}
+  border-bottom: 1px solid $blue;
+  margin: 0;
+  margin-top:15px;
+  padding-bottom: 19px;
+  padding-left: 10px;
+  ul, li {
+    display: inline;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;   
+  }
+  a:link, a:visited {
+    background: $off_white;
+    border: 1px solid $blue;
+    color: $black;
+    float: left;
+    font-size: small;
+    font-weight: normal;
+    line-height: 14px;
+    margin-right: 8px;
+    padding: 2px 10px 2px 10px;
+    text-decoration: none;
+  }
 
-	a:link.active, a:visited.active	{
-		background: $white;
-		border-bottom: 1px solid $white;
-		color: $blue;
-	}
+  a:link.active, a:visited.active {
+    background: $white;
+    border-bottom: 1px solid $white;
+    color: $blue;
+  }
 
-	a:hover	{
-		color: #f00;
-	}
+  a:hover {
+    color: #f00;
+  }
 }
 
 
 .section {
-	@include corners;
-	border: 1px solid #CCCCCC;
-	padding: 10px;
-	margin-top:10px;
-	h3 {
-		position:relative;
-		top:-15px;
-		color: $blue;
-		font-size: .75em;
-		background: $white;
-	}
+  @include corners;
+  border: 1px solid #CCCCCC;
+  padding: 10px;
+  margin-top:10px;
+  h3 {
+    position:relative;
+    top:-15px;
+    color: $blue;
+    font-size: .75em;
+    background: $white;
+  }
 }
 
 #beta_login {
-	margin-top: 100px;
-	margin-right: auto;
-	p {
-		margin-top:10px;
-	}
-	form {
-		margin-top: 10px;
-	}
+  margin-top: 100px;
+  margin-right: auto;
+  p {
+    margin-top:10px;
+  }
+  form {
+    margin-top: 10px;
+  }
 }
 
 #profile {
-	h2 {
-		margin-bottom: 30px;
-		.username {
-			float: left;
-			font-size: 24pt;
-		}
-		.profile_name {
-			float: left;
-			font-size: 14pt;
-			font-weight: normal;
-			margin-top: 8px;
-			margin-left: 10px;
-		}
-		a {
-			font-size: 10pt;
-			position: relative;
-			top: 14px;
-			left: 10px;
-		}		
-	}
-	hr{
-		margin-top: 20px;
-		margin-bottom: 20px
-	}
+  h2 {
+    margin-bottom: 10px;
+    .username {
+      float: left;
+      font-size: 24pt;
+    }
+    .profile_name {
+      float: left;
+      font-size: 14pt;
+      font-weight: normal;
+      margin-top: 8px;
+      margin-left: 10px;
+    }
+    a {
+      font-size: 10pt;
+      position: relative;
+      top: 14px;
+      left: 10px;
+    }   
+  }
+  hr{
+    margin-top: 20px;
+    margin-bottom: 20px
+  }
 }
 
 #people_search_results {
-	margin-top: 20px;
-	hr {
-		border: 1px solid $black;
-	}
-	.photo {
-		border: 1px solid $black;
-		float: left;
-		margin-left: 20px;
-		margin-right: 10px;
-	}
-	.person_search_result {
-		.name {
-			float: left;
-			font-size: 16pt;
-			font-weight:bold;
-			color: $blue;
-		}
-		.username {
-			font-size: 10pt;
-			padding-top: 5px;
-			margin-bottom: 10px;
-			position:relative;
-			left:10px;
-		}
-	}
+  margin-top: 20px;
+  hr {
+    border: 1px solid $black;
+  }
+  .photo {
+    border: 1px solid $black;
+    float: left;
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+  .person_search_result {
+    .name {
+      float: left;
+      font-size: 16pt;
+      font-weight:bold;
+      color: $blue;
+    }
+    .username {
+      font-size: 10pt;
+      padding-top: 5px;
+      margin-bottom: 10px;
+      position:relative;
+      left:10px;
+    }
+  }
 }
 
 .points {
-	margin-top: 5px;
-	img {
-		margin-right: 5px;
-		float:left;
-		height: 25px;
-	}
-	.score {
-		padding-top: 5px;
-		float:left;
-		margin-right: 10px;
-		font-size:12pt;
-	}
+  margin-top: 5px;
+  img {
+    margin-right: 5px;
+    float:left;
+    height: 25px;
+  }
+  .score {
+    padding-top: 5px;
+    float:left;
+    margin-right: 10px;
+    font-size:12pt;
+  }
 }
 
 #guidance {
-	// float:right;
-	// position:absolute;
-	// top: 90px;
-	// left: 500px;
-	// right: 50px;
-	border: 1px solid $gray;
-	background: $off_white;
-	padding: 7px;
-	margin-bottom: 10px;
+  // float:right;
+  // position:absolute;
+  // top: 90px;
+  // left: 500px;
+  // right: 50px;
+  border: 1px solid $gray;
+  background: $off_white;
+  padding: 7px;
+  margin-bottom: 10px;
 }
 
 #profile_menu {
-	margin-top: 15px;
-	margin-bottom: 20px;
-	font-size: 16pt;
-	ul {
-		float: left;
-		width: 100%;
-	}
-	li {
-		float: left;
-		margin: 0 1em 0 0;
-	}
-	a {
-		padding-bottom: 2px;
-		color: $blue;
-		&:hover {
-			border-bottom: 3px solid $blue;
-			text-decoration: none;
-		}
-	}
-	.selected {
-		a{
-			border-bottom: 3px solid $black;
-		}
-	}
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 16pt;
+  ul {
+    float: left;
+    width: 100%;
+  }
+  li {
+    float: left;
+    margin: 0 1em 0 0;
+  }
+  a {
+    padding-bottom: 2px;
+    color: $blue;
+    &:hover {
+      border-bottom: 3px solid $blue;
+      text-decoration: none;
+    }
+  }
+  .selected {
+    a{
+      border-bottom: 3px solid $black;
+    }
+  }
 }
 
 .info_box {
-	border: 1px solid $gray;
-	padding: 5px;
-	margin-top:20px;
-	.info_logo {
-		position: relative;
-		top: -20px;
-		left: -20px;
-		img { 
-			border: 1px solid $gray;
-		}
-	}
-	table {
-		margin-top: 10px;
-		td {
-			font-size:1.3em;
-		}
-		td:first-child {
-			font-size:1em;
-			color: $gray;
-			padding-right: 10px;
-			text-transform: lowercase;
-		}
-	}
+  border: 1px solid $gray;
+  padding: 5px;
+  margin-top:20px;
+  .info_logo {
+    position: relative;
+    top: -20px;
+    left: -20px;
+    img { 
+      border: 1px solid $gray;
+    }
+  }
+  table {
+    margin-top: 10px;
+    td {
+      font-size:1.3em;
+    }
+    td:first-child {
+      font-size:1em;
+      color: $gray;
+      padding-right: 10px;
+      text-transform: lowercase;
+    }
+  }
 }
 
 .list {
-	margin-top: 5px;
-	li {
-		clear: both;
-		padding: 10px;
-	}
-	.item_pic {
-		border: 1px solid $gray;
-		float:left;
-		margin-right: 5px;
-		img {
-			width: 60px;
-			height: 60px;
-			
-		}
-	}
-	.item_title {
-		font-size: 18pt;
-		float:left;
-	}
-	.item_link {
-		float:left;
-		margin-left: 10px;
-		margin-top: 7px;
-	}
+  margin-top: 5px;
+  li {
+    clear: both;
+    padding: 10px;
+  }
+  .item_pic {
+    border: 1px solid $gray;
+    float:left;
+    margin-right: 5px;
+    img {
+      width: 60px;
+      height: 60px;
+      
+    }
+  }
+  .item_title {
+    font-size: 18pt;
+    float:left;
+  }
+  .item_link {
+    float:left;
+    margin-left: 10px;
+    margin-top: 7px;
+  }
 }
 
 #points_summary {
-	table {
-		font-size: 18pt;
-		width:200px;
-		margin-bottom: 30px;
-		tr { 
-			td:first-child {
-				padding-right: 10px;
-				text-align:left;
-			}
-			td {
-				text-align:right;
-				padding-bottom: 7px;
-			}
-		}
-	}
+  table {
+    font-size: 18pt;
+    width:200px;
+    margin-bottom: 30px;
+    tr { 
+      td:first-child {
+        padding-right: 10px;
+        text-align:left;
+      }
+      td {
+        text-align:right;
+        padding-bottom: 7px;
+      }
+    }
+  }
 }
 
 #badges {
-	li {
-		font-size: 18pt;
-	}
+  li {
+    font-size: 18pt;
+  }
 }
 
 .tags_section {
-	margin-top: 10px;
-	.tagged_as {
-		float:left;
-		font-size: 10pt;
-		margin-right: 5px;
-	}
-	.tags {
-		color: $gray;
-		font-size: 10pt;
-	}	
+  margin-top: 10px;
+  .tagged_as {
+    float:left;
+    font-size: 10pt;
+    margin-right: 5px;
+  }
+  .tags {
+    color: $gray;
+    font-size: 10pt;
+  } 
 }
 
 
 .talk_search_result {
-	.slide_pic {
-		float:left;
-		margin-right: 10px;
-		margin-top: 5px;
-		img {
-			@extend .photo; 
-			width: 110px;
-		}
-	}
-	.talk_title {
-		font-size: 18pt;
-	}
-	.talk_description {
-		margin-top: 10px;
-	}
-	.talk_given_by {
-		.talk_given_by_pic {
-			float:left;
-			margin-right: 10px;
-		}
-		.talk_given_by_name {
-			width: 100px;
-		}
-	}
+  .slide_pic {
+    float:left;
+    margin-right: 10px;
+    margin-top: 5px;
+    img {
+      @extend .photo; 
+      width: 110px;
+    }
+  }
+  .talk_title {
+    font-size: 18pt;
+  }
+  .talk_description {
+    margin-top: 10px;
+  }
+  .talk_given_by {
+    .talk_given_by_pic {
+      float:left;
+      margin-right: 10px;
+    }
+    .talk_given_by_name {
+      width: 100px;
+    }
+  }
 }
 
 .activities {
-	.activity {
-		font-size: 16pt;
-		margin-top: 10px;
-		.activity_date {
-			color: $gray;
-			font-size: 12pt;
-			margin-top: 5px;
-		}
-	}
+  .activity {
+    font-size: 16pt;
+    margin-top: 10px;
+    .activity_date {
+      color: $gray;
+      font-size: 12pt;
+      margin-top: 5px;
+    }
+  }
 }
 
 .company_search_result {
-	.company_logo {
-		img {
-			@extend .photo; 
-		}
-	}
-	.company_name {
-		font-size: 18pt;
-	}
+  .company_logo {
+    img {
+      @extend .photo; 
+    }
+  }
+  .company_name {
+    font-size: 18pt;
+  }
 }
 
 #company {
-	.company_logo {
-		img {
-			@extend .photo; 
-		}
-	}	
+  .company_logo {
+    img {
+      @extend .photo; 
+    }
+  } 
 }
 
 .tags {
-	.tag {
-		font-size: 12pt;
-		float: left;
-		margin-right: 5px;
-	}
+  .tag {
+    font-size: 12pt;
+    float: left;
+    margin-right: 5px;
+  }
 }
 
 .earned_badges {
-	width: 250px;
-	display: block;
+  width: 250px;
+  display: block;
     margin-left: auto;
     margin-right: auto;
-	margin-bottom: 10px;
-	.earned_badge {
-		display: none;
-		border: 1px solid $blue;
-		padding: 5px;
-		margin-top: 5px;
-	}
+  margin-bottom: 10px;
+  .earned_badge {
+    display: none;
+    border: 1px solid $blue;
+    padding: 5px;
+    margin-top: 5px;
+  }
 }
 
 h2 {
-	.title {
-		float: left;
-	}
-	.links {
-		float: left;
-		font-size: 12pt;
-		margin-left: 10px;
-		margin-top: 26px;
-	}
-	height: 50px;
+  .title {
+    float: left;
+  }
+  .links {
+    float: left;
+    font-size: 12pt;
+    margin-left: 10px;
+    margin-top: 26px;
+  }
+  height: 30px;
 }
 
 #talk {
-	.author {
-		font-size: 14pt;
-	}
+  .author {
+    font-size: 14pt;
+  }
 }
 
 .simple {
-	* th {
-		background: $blue;
-		color: $white;
-		padding: 10px;
-	}
-	* td {
-		padding: 10px;
-	}
+  * th {
+    background: $blue;
+    color: $white;
+    padding: 10px;
+  }
+  * td {
+    padding: 10px;
+  }
 }

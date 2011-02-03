@@ -4,7 +4,7 @@ class PeopleSearchesController < ApplicationController
   end
   
   def create
-    @search = Profile.search(params[:search])
+    @search = Profile.search(params[:search], :near => params[:near])
     @people = @search.results
     # @people = Profile.near_loc(params[:location])
     puts "people ; #{@people.inspect}"

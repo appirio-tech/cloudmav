@@ -1,16 +1,18 @@
 .grid_4.info_box
-	.info_logo= link_to image_tag("stack_over_flow_info_logo.png"), "http://www.stackoverflow.com"
-	- if can? :set_stack_overflow_profile, @profile
-		%p 
-			Do you have a StackOverflow account? 
-			= link_to "Add Your StackOverflow Account", new_stack_overflow_profile_path(:username => @profile.username)
-	-else
-		= link_to "Go to my StackOverflow Profile", @profile.stack_overflow_profile.url
-		%table
-			%tr
-				%td Reputation
-				%td= @profile.stack_overflow_profile.reputation
-			%tr
-				%td Badges
-				%td= stack_overflow_badges(@profile.stack_overflow_profile)
+  .info_logo= link_to image_tag("stack_over_flow_info_logo.png"), "http://www.stackoverflow.com"
+  - if @profile.stack_overflow_profile
+    = link_to "Go to my StackOverflow Profile", @profile.stack_overflow_profile.url
+    %table
+      %tr
+        %td Reputation
+        %td= @profile.stack_overflow_profile.reputation
+      %tr
+        %td Badges
+        %td= stack_overflow_badges(@profile.stack_overflow_profile)
+    
+  - else
+    - if can? :set_stack_overflow_profile, @profile
+      %p 
+        Do you have a StackOverflow account? 
+        = link_to "Add Your StackOverflow Account", new_stack_overflow_profile_path(:username => @profile.username)
 .clear
