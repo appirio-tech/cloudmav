@@ -5,7 +5,8 @@ class Technology
   include CodeMav::Taggable
   
   field :name, :type => String
-  field :technology_type
+
+  referenced_in :technology_type
   
   scope :named, lambda { |name| where(:name => name) }
 
