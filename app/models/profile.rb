@@ -63,6 +63,7 @@ class Profile
   embeds_one :speaker_rate_profile
   embeds_one :slide_share_profile
   embeds_one :git_hub_profile
+  embeds_one :linkedin_profile
     
   scope :by_username, lambda { |uname| { :where => { :username => uname } } }
   

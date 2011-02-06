@@ -8,6 +8,9 @@ class Ability
     can [:set_speaker_rate_profile, :set_slide_share_profile, :set_stack_overflow_profile, :set_git_hub_profile], Profile do |profile|
       user.profile == profile
     end
+    can [:set_linked_in_profile], Profile do |profile|
+      user.profile == profile
+    end
     if user.profile.can_manage_tags?
       can [:manage], Tag 
     end

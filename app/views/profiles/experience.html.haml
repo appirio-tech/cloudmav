@@ -1,26 +1,15 @@
 #profile
-	= render :partial => "header"
-	
-	= render :partial => "profile_menu"
-	.grid_16
-		= link_to "LinkedIn", new_linkedin_profile_path
-	
-	
-	.grid_16
-		%p= pluralize @profile.projects.count, "project", "projects"
+  = render :partial => "header"
+  
+  = render :partial => "profile_menu"
+  .grid_10
+    %ul
+      - @profile.jobs.each do |j|
+        %li= render :partial => "jobs/job", :locals => { :job => j }
 
-	.grid_6
-		- if can? :add_project, @profile
-			= link_to "Add Project", new_project_path(:username => @profile.username) 
-		%ul
-			- @profile.projects.each do |p|
-				%li= link_to p.name, p
+    &nbsp;
 
-	.grid_6
-		= render :partial => "shared/charts/experience_chart"
-		/ %ul
-		/ 	- @profile.experiences.each do |e|
-		/ 		%li= "#{e.name} | #{e.duration.format("%w %~w and %d %~d")}"
+  .grid_6
+    = render :partial => "shared/profile/linkedin"
 
-
-	.clear
+.clear

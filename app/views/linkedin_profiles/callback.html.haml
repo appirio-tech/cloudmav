@@ -1,14 +1,16 @@
 
-linkedin results
+%h2 Jobs going to be added
 
+= form_tag confirm_linkedin_profiles_path, :method => :post do
+  = hidden_field_tag :username, @profile.username
+  .submit= submit_tag "Add Jobs", :disable_with => "Adding Jobs..."
 
-%p Jobs added
 %ul.list
-	- @jobs.each do |j|
-		%li
-			.item_title= j.title
-			.range
-				= show_date j.start_date
-				= show_date j.end_date
-			.description= j.description
-	
+  - @jobs.each do |j|
+    %li
+      .item_title= j.title
+      .range
+        = show_date j.start_date
+        = show_date j.end_date
+      .description= j.description
+  

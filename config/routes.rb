@@ -23,6 +23,7 @@ Codemav::Application.routes.draw do
   resources :linkedin_profiles do
     collection do
       get :callback
+      post :confirm
     end
   end
   resources :jobs
