@@ -26,6 +26,8 @@ gem "sunspot_rails"
 gem "cancan"
 gem "stack_overflow", "0.0.3"
 gem "linkedin"
+gem "delayed_job"
+gem "delayed_job_mongoid"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily

@@ -3,6 +3,7 @@ require 'indexable'
 
 class Talk
   include Mongoid::Document
+  include Mongoid::Timestamps
   include CodeMav::Taggable
   include CodeMav::Indexable
   
@@ -16,12 +17,12 @@ class Talk
   referenced_in :profile, :inverse_of => :talks
   embeds_many :presentations
   embeds_one :activity
+  references_many :events, :inverse_of => :talk
   
   after_create :talk_added
-  before_save :calculate_tags
   
   def talk_added
-    profile.just(:added_talk, self, :category => :speaking)
+    TalkAddedEvent.create(:profile => self.profile, :talk => self)
   end
     
   def add_presentation(presentation)

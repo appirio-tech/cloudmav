@@ -38,7 +38,7 @@ score 10, :speaker_points, "for having a SlideShare Account", :after => :save do
   end
 end
 
-score 10, :speaker_points, "for a talk" do
-  thing Talk
-  subject :profile
-end
+#score 10, :speaker_points, "for a talk" do
+#  thing Talk
+#  subject :profile
+#end

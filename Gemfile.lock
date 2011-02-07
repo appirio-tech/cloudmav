@@ -48,6 +48,13 @@ GEM
       term-ansicolor (~> 1.0.5)
     cucumber-rails (0.3.2)
       cucumber (>= 0.8.0)
+    daemons (1.1.0)
+    delayed_job (2.1.3)
+      activesupport (~> 3.0)
+      daemons
+    delayed_job_mongoid (1.0.2)
+      delayed_job (~> 2.1.1)
+      mongoid (~> 2.0.0.rc)
     devise (1.1.5)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 1.0.2)
@@ -185,6 +192,8 @@ DEPENDENCIES
   carrierwave
   cucumber (>= 0.8.5)
   cucumber-rails
+  delayed_job
+  delayed_job_mongoid
   devise
   factory_girl_rails
   fakeweb
