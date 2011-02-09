@@ -11,9 +11,11 @@ class User
   field :username, :type => String
   
   protected
+
   def add_profile
     if self.profile.nil?
        self.profile = Profile.new(:email => self.email, :api_id => self.username, :username => self.username)
      end
   end
+
 end

@@ -1,5 +1,7 @@
 class Blog
   include Mongoid::Document
+  include Mongoid::Timestamps
+  include CodeMav::Eventable
   
   field :title, :type => String
   field :url, :type => String

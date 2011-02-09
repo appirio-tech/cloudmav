@@ -3,8 +3,8 @@ class TalkAddedEvent < Event
   referenced_in :talk, :inverse_of => :events
 
   def do_work
-    find_tags_in(title, Tag.all)
-    find_tags_in(description, Tag.all)
+    talk.find_tags_in(talk.title, Tag.all)
+    talk.find_tags_in(talk.description, Tag.all)
   end
 
   def score_points

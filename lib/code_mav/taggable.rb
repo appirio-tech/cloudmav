@@ -69,6 +69,10 @@ module CodeMav
           end 
         end
       end
+
+      def clear_tags!
+        self.taggings.destroy_all
+      end
     end
   end
 end

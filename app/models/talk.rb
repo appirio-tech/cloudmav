@@ -1,6 +1,3 @@
-require 'taggable'
-require 'indexable'
-
 class Talk
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -19,13 +16,6 @@ class Talk
   embeds_many :presentations
   embeds_one :activity
     
-  def add_presentation(presentation)
-    self.profile.earn("for presentation", 20, :speaker_points)
-  end
-
-  def calculate_tags
-      end
-  
   def self.search(query, options = {})
     search = Sunspot.new_search(Talk)
     search.build do

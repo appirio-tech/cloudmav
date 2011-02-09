@@ -2,17 +2,18 @@ module CodeMav
   module SpeakerModule
     def self.included(receiver)
       receiver.class_eval do
-        references_many :talks
-        field :speaker_bio, :type => String
+        references_many :talks, :inverse_of => :profile
+        references_one :speaker_profile, :inverse_of => :profile
+        before_create :create_speaker_profile
       end
       
       receiver.send(:include, InstanceMethods)
     end
     
     module InstanceMethods
-      
-      def speaker_tags
-        []
+
+      def create_speaker_profile
+        self.speaker_profile = SpeakerProfile.new
       end
       
       def presentations
@@ -20,15 +21,16 @@ module CodeMav
         self.talks.each { |t| presentations.concat t.presentations }
         return presentations
       end
-      
-      def set_speaker_bio(bio)
-        self.speaker_bio = bio
-        self.just(:set_speaker_bio, self, :category => :speaking)
+
+      def speaker_tags
+        speaker_profile.tags
       end
       
       def calculate_speaker_tags
-        self.talks.each do |t|
-          t.taggings.each { |tagging| self.tag! tagging.tag.name }
+        self.speaker_profile.clear_tags!
+
+        self.talks.each do |talk|
+          talk.tags.each{|tag| speaker_profile.tag! tag }
         end
       end
     end

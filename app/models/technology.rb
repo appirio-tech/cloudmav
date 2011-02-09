@@ -1,5 +1,3 @@
-require 'taggable'
-
 class Technology
   include Mongoid::Document
   include CodeMav::Taggable

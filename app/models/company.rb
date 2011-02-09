@@ -1,6 +1,3 @@
-require 'taggable'
-require 'indexable'
-
 class Company
   include Mongoid::Document
   include CodeMav::Taggable
