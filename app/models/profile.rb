@@ -59,11 +59,11 @@ class Profile
   referenced_in :user
   references_many :activities
   
-  embeds_one :stack_overflow_profile
-  embeds_one :speaker_rate_profile
-  embeds_one :slide_share_profile
-  embeds_one :git_hub_profile
-  embeds_one :linkedin_profile
+  references_one :stack_overflow_profile
+  references_one :speaker_rate_profile
+  references_one :slide_share_profile
+  references_one :git_hub_profile
+  references_one :linkedin_profile
     
   scope :by_username, lambda { |uname| { :where => { :username => uname } } }
   
@@ -111,12 +111,7 @@ class Profile
   end
   
   def calculate_tags
-    unless stack_overflow_profile.nil? 
-      stack_overflow_profile.taggings.each do |t|
-        self.tag! t.tag.name
-      end
-    end
-    calculate_speaker_tags
+        calculate_speaker_tags
     calculate_experience_tags
   end
   

@@ -7,8 +7,9 @@ class StackOverflowProfile
   field :url, :type => String
   field :badge_html
   
-  embedded_in :profile, :inverse_of => :stack_overflow_profile
-
+  referenced_in :profile, :inverse_of => :stack_overflow_profile
+  references_many :events, :inverse_of => :stack_overflow_profile
+  
   after_create :added_stack_overflow_profile
 
   def added_stack_overflow_profile

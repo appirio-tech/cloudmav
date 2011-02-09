@@ -7,6 +7,12 @@ class SynchedStackOverflowEvent < Event
     self.category = "Synch"
   end
 
+  def do_work
+    stack_overflow_profile.tags.each do |t|
+      profile.tag! t
+    end
+  end
+
   def award_badges
     if stack_overflow_profile.reputation > 10000
       profile.award_badge("I'm kind of a Big Deal", :description => "For having a StackOverflow reputation over 10k")
