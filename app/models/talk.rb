@@ -6,6 +6,7 @@ class Talk
   include Mongoid::Timestamps
   include CodeMav::Taggable
   include CodeMav::Indexable
+  include CodeMav::Eventable
   
   field :title, :type => String
   field :description, :type => String
@@ -17,13 +18,6 @@ class Talk
   referenced_in :profile, :inverse_of => :talks
   embeds_many :presentations
   embeds_one :activity
-  references_many :events, :inverse_of => :talk
-  
-  after_create :talk_added
-  
-  def talk_added
-    TalkAddedEvent.create(:profile => self.profile, :talk => self)
-  end
     
   def add_presentation(presentation)
     self.profile.earn("for presentation", 20, :speaker_points)
