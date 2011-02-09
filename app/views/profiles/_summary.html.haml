@@ -1,24 +1,6 @@
-.grid_6#points_summary
-	%h2.page_title 
-		.title CodeMav Points
-	%table
-		%tr
-			%td Coder
-			%td= @profile.score(:coder_points)
-		%tr
-			%td Writer
-			%td= @profile.score(:writer_points)
-		%tr
-			%td Speaker
-			%td= @profile.score(:speaker_points)
-	%h2.page_title 
-		.title Badges
-	%ul#badges
-		- @profile.badges.each do |b|
-			%li= b.name
-.grid_4
-	%br
+.grid_10
+
 .grid_6
-	/ = render :partial => "shared/charts/score_chart"
+  = render :partial => "badges"
 
 .clear

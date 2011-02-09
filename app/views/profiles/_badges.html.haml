@@ -1,0 +1,12 @@
+%h3 Badges
+
+%ul#badges
+  - @profile.badges.each do |b|
+    %li.badge{:title => b.name}
+      = image_tag "silver_badge.png"
+
+:javascript
+  $(function(){
+    $('.badge').tinyTips('title');
+  });
+

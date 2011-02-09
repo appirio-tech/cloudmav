@@ -1,3 +1,10 @@
+h3 {
+  border-bottom: 1px solid #ababab;
+  color: #424242;
+  font-size: 12pt;
+  padding-bottom: 5px;
+  margin-bottom: 5px; }
+
 #profile_header #profile_pic {
   border: 1px solid #d6d6d6;
   padding: 3px; }
@@ -48,4 +55,32 @@
   color: white; }
 
 #profile_content {
-  background: white; }
+  background: white;
+  border: 1px solid #d6d6d6;
+  border-top: 1px solid white; }
+
+#profile_menu {
+  margin-top: 20px;
+  font-size: 9pt;
+  font-weight: bold; }
+  #profile_menu ul {
+    margin-left: -9px; }
+  #profile_menu li {
+    float: left;
+    margin: 0px;
+    margin-right: 4px;
+    text-transform: uppercase;
+    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #3f9ff8; }
+    #profile_menu li a {
+      color: white; }
+  #profile_menu .selected {
+    border-top: 3px solid #3f9ff8;
+    background: white; }
+    #profile_menu .selected a {
+      color: black; }
+
+#badges li {
+  float: left; }

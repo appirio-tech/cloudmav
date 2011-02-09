@@ -558,33 +558,6 @@ $error_background: #FFDFDF;
   margin-bottom: 10px;
 }
 
-#profile_menu {
-  margin-top: 15px;
-  margin-bottom: 20px;
-  font-size: 16pt;
-  ul {
-    float: left;
-    width: 100%;
-  }
-  li {
-    float: left;
-    margin: 0 1em 0 0;
-  }
-  a {
-    padding-bottom: 2px;
-    color: $blue;
-    &:hover {
-      border-bottom: 3px solid $blue;
-      text-decoration: none;
-    }
-  }
-  .selected {
-    a{
-      border-bottom: 3px solid $black;
-    }
-  }
-}
-
 .info_box {
   border: 1px solid $gray;
   padding: 5px;
@@ -638,23 +611,6 @@ $error_background: #FFDFDF;
   }
 }
 
-#points_summary {
-  table {
-    font-size: 18pt;
-    width:200px;
-    margin-bottom: 30px;
-    tr { 
-      td:first-child {
-        padding-right: 10px;
-        text-align:left;
-      }
-      td {
-        text-align:right;
-        padding-bottom: 7px;
-      }
-    }
-  }
-}
 
 #badges {
   li {
@@ -785,3 +741,13 @@ h2 {
     padding: 10px;
   }
 }
+.tooltip {
+	display:none;
+	background:transparent url(/tools/img/tooltip/black_arrow.png);
+	font-size:12px;
+	height:70px;
+	width:160px;
+	padding:25px;
+	color:#fff;	
+}
+

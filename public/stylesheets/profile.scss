@@ -3,6 +3,7 @@ $white: #ffffff;
 $near_black: #424242;
 $light_gray: #ABABAB;
 $lightest_gray: #D6D6D6;
+$blue: #3F9FF8;
 
 $gray_background: #EAEAEA;
 $gray_foreground: #818181;
@@ -13,6 +14,14 @@ $dark_foreground: #ffffff;
 @mixin corners($radius: 5px) {
   border-radius: $radius;
   -moz-border-radius: $radius;  
+}
+
+h3 {
+  border-bottom: 1px solid $light_gray;
+  color: $near_black;
+  font-size: 12pt;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 #profile_header {
@@ -85,4 +94,41 @@ $dark_foreground: #ffffff;
 
 #profile_content {
   background: $white;
+  border: 1px solid $lightest_gray;
+  border-top: 1px solid $white;
+}
+
+#profile_menu {
+  margin-top: 20px;
+  font-size: 9pt;
+  font-weight: bold;
+  ul {
+    margin-left: -9px;
+  }
+  li {
+    float: left;
+    margin: 0px;
+    margin-right: 4px;
+    text-transform: uppercase;
+    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: $blue;
+    a {
+      color: $white;
+    }
+  }
+  .selected {
+    border-top: 3px solid $blue;
+    background: $white;
+    a {
+      color: $black;
+    }
+  }
+}
+
+#badges {
+  li {
+    float: left;
+  }
 }
