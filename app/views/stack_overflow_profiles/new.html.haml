@@ -1,14 +1,14 @@
-.grid_16
-	%h2 Synch with your StackOverflow Account
+.grid_16.text_content
+  %h2 Synch with your StackOverflow Account
 
-	%p You can find your StackOverflow id by looking at the url for your profile.
-	= image_tag "stack_overflow_find_id.png", :class => :photo
-	%p Just go to StackOverflow, find your id, and enter it here. We can then synch your StackOverflow profile with your account.
-		
-	= form_for @stack_overflow_profile do |f|
-		= hidden_field_tag :username, @profile.username
-		.label= f.label :stack_overflow_id, "StackOverflow Id"
-		.control= f.text_field :stack_overflow_id
-		.submit= f.submit "Synch", :disable_with => "Synching..."
-	
+  %p You can find your StackOverflow id by looking at the url for your profile.
+  = image_tag "stack_overflow_find_id.png", :class => :photo
+  %p Just go to StackOverflow, find your id, and enter it here. We can then synch your StackOverflow profile with your account.
+    
+  = form_for @stack_overflow_profile do |f|
+    = hidden_field_tag :username, @profile.username
+    .label= f.label :stack_overflow_id, "StackOverflow Id"
+    .control= f.text_field :stack_overflow_id
+    .submit= f.submit "Synch", :disable_with => "Synching..."
+  
 .clear

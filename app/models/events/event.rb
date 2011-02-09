@@ -13,6 +13,13 @@ class Event
     category = "Default"
   end
 
+  def perform
+    do_work if self.respond_to? :do_work
+    score_points if self.respond_to? :score_points
+    award_badges if self.respond_to? :award_badges
+    profile.save
+  end
+
   def add_to_jobs
     Delayed::Job.enqueue self 
   end

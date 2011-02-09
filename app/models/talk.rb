@@ -30,9 +30,7 @@ class Talk
   end
 
   def calculate_tags
-    find_tags_in(title, Tag.all)
-    find_tags_in(description, Tag.all)
-  end
+      end
   
   def self.search(query, options = {})
     search = Sunspot.new_search(Talk)
