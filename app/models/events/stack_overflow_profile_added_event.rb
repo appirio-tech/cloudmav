@@ -7,7 +7,7 @@ class StackOverflowProfileAddedEvent < Event
   end
 
   def score_points
-    profile.earn("for adding a Stack Overflow", 10, :coder_points) 
+    profile.earn("for adding Stack Overflow", 10, :coder_points) 
   end
 
   def set_info

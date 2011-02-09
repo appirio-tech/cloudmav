@@ -8,8 +8,15 @@ class GitHubProfile
   field :followers_count
   field :url
   
-  embedded_in :profile, :inverse_of => :git_hub_profile
-  
+  referenced_in :profile, :inverse_of => :git_hub_profile
+  references_many :events, :inverse_of => :git_hub_profile
+
+  after_create :add_git_hub
+
+  def add_git_hub
+    GitHubProfileAddedEvent.create(:profile => profile, :git_hub_profile => self)
+  end
+
   def synch!
     GitHubService.synch(self)
     self.profile.save!
