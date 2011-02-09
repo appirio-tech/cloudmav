@@ -3,14 +3,15 @@ class Event
   include Mongoid::Timestamps
 
   field :category, :type => String
+  field :public, :type => Boolean
 
   referenced_in :profile, :inverse_of => :events
 
-  before_create :set_category
+  before_create :set_info
   after_create :add_to_jobs
 
-  def set_category
-    category = "Default"
+  def set_info
+    self.category = "Default"
   end
 
   def perform

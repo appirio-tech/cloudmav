@@ -1,10 +1,3 @@
-score 10, :coder_points, "for having a SO Account", :after => :save do      
-  thing Profile
-  subject :profile
-  conditions do |p|
-    !p.stack_overflow_profile.nil?
-  end
-end
 
 score 10, :coder_points, "for having a GitHub Account", :after => :save do      
   thing Profile

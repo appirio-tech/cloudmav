@@ -15,7 +15,8 @@ class TalkAddedEvent < Event
     profile.award_badge("Yap yap yap", :description => "For having a talk")
   end
 
-  def set_category
+  def set_info
+    self.public = true
     self.category = "Speaking"
   end
 
