@@ -16,6 +16,14 @@ $dark_foreground: #ffffff;
   -moz-border-radius: $radius;  
 }
 
+h2 {
+  border-bottom: 1px solid $light_gray;
+  color: $near_black;
+  font-size: 14pt;
+  padding-bottom: 5px;
+  margin-bottom: 3px;
+}
+
 h3 {
   border-bottom: 1px solid $light_gray;
   color: $near_black;
@@ -96,6 +104,7 @@ h3 {
   background: $white;
   border: 1px solid $lightest_gray;
   border-top: 1px solid $white;
+  padding-bottom: 50px;
 }
 
 #profile_menu {
@@ -132,3 +141,49 @@ h3 {
     float: left;
   }
 }
+
+.info_box {
+  border: 1px solid $light_gray;
+  background: $lightest_gray;
+  @include corners;
+  margin-top:20px;
+  padding: 1px;
+  width: 250px;
+  .info_logo {
+    background: $white;
+  }
+  .info {
+    padding: 5px;
+  }
+  font-size: 11pt;
+  table {
+    margin-top: 10px;
+    td {
+      font-size:1.3em;
+    }
+    td:first-child {
+      font-size:1em;
+      padding-right: 10px;
+      text-transform: lowercase;
+    }
+  }
+}
+
+#count_box {
+ margin-top: 10px;
+ margin-bottom: 10px;
+ .space{
+    width: 30px;
+  }
+  .count {
+    font-size: 12pt;
+    font-weight:bold;
+    color: #545454;
+  }
+  .count_of {
+    font-size: 12pt;
+    padding-left: 5px;
+    color: #7E7E7E;
+  }
+}
+

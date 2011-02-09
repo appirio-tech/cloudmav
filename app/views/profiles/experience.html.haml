@@ -1,15 +1,16 @@
 #profile
   = render :partial => "header"
-  
   = render :partial => "profile_menu"
-  .grid_10
-    %ul
-      - @profile.jobs.each do |j|
-        %li= render :partial => "jobs/job", :locals => { :job => j }
+  #profile_content
 
-    &nbsp;
+    .grid_9
+      %ul
+        - @profile.jobs.each do |j|
+          %li= render :partial => "jobs/job", :locals => { :job => j }
+      &nbsp;
 
-  .grid_6
-    = render :partial => "shared/profile/linkedin"
+    .grid_6
+      = render :partial => "shared/profile/linkedin"
+    .clear
 
 .clear

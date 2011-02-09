@@ -183,10 +183,13 @@ form textarea {
   .set_location .jquery-auto-geocoder-map {
     border: 1px solid #868686; }
 
-.text_content p {
-  margin-top: 5px;
-  margin-bottom: 15px;
-  font-size: 1.2em; }
+.text_content {
+  background: white;
+  padding: 10px; }
+  .text_content p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1.2em; }
 
 #header {
   padding-top: 5px;
@@ -264,17 +267,6 @@ form textarea {
       #profile_icons .icon .score .description {
         font-size: 10pt;
         color: #8d8d8d; }
-
-.count {
-  font-size: 26pt;
-  float: left; }
-
-.count_of {
-  font-size: 16pt;
-  color: #595959;
-  float: left;
-  margin-top: 13px;
-  margin-left: 10px; }
 
 #basic_info table tr td:first-child {
   font-size: 1em;
@@ -355,26 +347,6 @@ form textarea {
   #beta_login form {
     margin-top: 10px; }
 
-#profile h2 {
-  margin-bottom: 10px; }
-  #profile h2 .username {
-    float: left;
-    font-size: 24pt; }
-  #profile h2 .profile_name {
-    float: left;
-    font-size: 14pt;
-    font-weight: normal;
-    margin-top: 8px;
-    margin-left: 10px; }
-  #profile h2 a {
-    font-size: 10pt;
-    position: relative;
-    top: 14px;
-    left: 10px; }
-#profile hr {
-  margin-top: 20px;
-  margin-bottom: 20px; }
-
 #people_search_results {
   margin-top: 20px; }
   #people_search_results hr {
@@ -402,45 +374,27 @@ form textarea {
   padding: 7px;
   margin-bottom: 10px; }
 
-.info_box {
-  border: 1px solid #595959;
-  padding: 5px;
-  margin-top: 20px; }
-  .info_box .info_logo {
-    position: relative;
-    top: -20px;
-    left: -20px; }
-    .info_box .info_logo img {
-      border: 1px solid #595959; }
-  .info_box table {
-    margin-top: 10px; }
-    .info_box table td {
-      font-size: 1.3em; }
-    .info_box table td:first-child {
-      font-size: 1em;
-      color: #595959;
-      padding-right: 10px;
-      text-transform: lowercase; }
-
 .list {
   margin-top: 5px; }
   .list li {
     clear: both;
     padding: 10px; }
   .list .item_pic {
-    border: 1px solid #595959;
+    border: 2px solid #EBEBEB;
     float: left;
-    margin-right: 5px; }
+    margin-right: 15px; }
     .list .item_pic img {
-      width: 60px;
-      height: 60px; }
+      width: 50px;
+      height: 50px; }
   .list .item_title {
-    font-size: 18pt;
-    float: left; }
-  .list .item_link {
-    float: left;
-    margin-left: 10px;
-    margin-top: 7px; }
+    font-size: 12pt;
+    margin-top: 7px;
+    font-weight: bold; }
+    .list .item_title a {
+      color: #0d0d0d;
+      text-decoration: none; }
+      .list .item_title a:hover {
+        color: #3f9ff8; }
 
 #badges li {
   font-size: 18pt; }
@@ -498,16 +452,6 @@ form textarea {
     border: 1px solid #003459;
     padding: 5px;
     margin-top: 5px; }
-
-h2 {
-  height: 30px; }
-  h2 .title {
-    float: left; }
-  h2 .links {
-    float: left;
-    font-size: 12pt;
-    margin-left: 10px;
-    margin-top: 26px; }
 
 #talk .author {
   font-size: 14pt; }

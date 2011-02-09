@@ -1,14 +1,15 @@
-.grid_4.info_box
-	.info_logo= link_to image_tag("speaker_rate_info_logo.png"), "http://www.speakerrate.com"
-	- if @profile.speaker_rate_profile.nil?
-		- if can? :set_speaker_rate_profile, @profile
-			%p 
-				Do you have a Speaker Rate account? 
-				= link_to "Add Your Speaker Rate Account", new_speaker_rate_profile_path(:username => @profile.username)
-	-else
-		= link_to "Go to my Speaker Rate Profile", @profile.speaker_rate_profile.url
-		%table
-			%tr
-				%td Rating
-				%td= @profile.speaker_rate_profile.rating
+.info_box
+  .info_logo= link_to image_tag("speaker_rate_info_logo.png"), "http://www.speakerrate.com"
+  .info
+    - if @profile.speaker_rate_profile.nil?
+      - if can? :set_speaker_rate_profile, @profile
+        %p 
+          Do you have a Speaker Rate account? 
+          = link_to "Add Your Speaker Rate Account", new_speaker_rate_profile_path(:username => @profile.username)
+    -else
+      = link_to "Go to my Speaker Rate Profile", @profile.speaker_rate_profile.url
+      %table
+        %tr
+          %td Rating
+          %td= @profile.speaker_rate_profile.rating
 .clear

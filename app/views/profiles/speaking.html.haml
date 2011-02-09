@@ -1,39 +1,46 @@
 #profile
-	= render :partial => "header"
-	
-	= render :partial => "profile_menu"
-	
-	.grid_16
-		%table
-			%tr
-				%td
-					.count= @profile.talks.count
-					.count_of= @profile.talks.count > 1 ? "talks" : "talks"
-				%td{:style =>"padding-left:30px;"}
-					.count= @profile.presentations.count
-					.count_of= @profile.presentations.count > 1 ? "presentations" : "presentations"
-	.clear
+  = render :partial => "header"
+  = render :partial => "profile_menu"
+  
+  #profile_content
+    .grid_16
+      %table#count_box
+        %tr
+          %td.count= @profile.talks.count
+          %td.count_of= @profile.talks.count > 1 ? "talks" : "talks"
+          %td.space
+          %td.count= @profile.presentations.count
+          %td.count_of= @profile.presentations.count > 1 ? "presentations" : "presentations"
+      - unless @profile.speaker_bio.nil?
+        %p= @profile.speaker_bio
+      = link_to "Set your speaker bio", edit_speaker_bio_path(:username => @profile.username)
+      %br
+      %br
+    .clear
 
-	.grid_16
-		- unless @profile.speaker_bio.nil?
-			%p= @profile.speaker_bio
-		= link_to "Set your speaker bio", edit_speaker_bio_path(:username => @profile.username)
+    .grid_9
+      %h2 Talks
+      - if can? :add_talk, @profile
+        .link= link_to "add a talk", new_talk_path(:username => @profile.username)
+      %ul.list
+        - @profile.talks.each do |talk|    
+          %li
+            .item_pic
+              - unless talk.slides_thumbnail.nil?
+                = image_tag talk.slides_thumbnail
+              -else
+                = image_tag "default_talk.png"
+            .item_title= link_to talk.title, talk
+            .item_description= truncate(talk.description, :length => 40)
+            - if talk.presentations.any?
+              %p= "Presented #{pluralize talk.presentations.count, 'time', 'times' }"
+      &nbsp;
 
-	.grid_10
-		%h2.page_title 
-			.title Talks
-			- if can? :add_talk, @profile
-				.link= link_to "add a talk", new_talk_path(:username => @profile.username)
-		%ul.list
-			- @profile.talks.each do |t|		
-				%li
-					- unless t.slides_thumbnail.nil?
-						.item_pic= image_tag t.slides_thumbnail
-					.item_title= link_to t.title, t
-					- if t.presentations.any?
-						%p= "Presented #{pluralize t.presentations.count, 'time', 'times' }"
-	.grid_4
-		%br
-		= render :partial => "shared/profile/speaker_rate"
-		= render :partial => "shared/profile/slide_share"
-	.clear
+    .grid_6
+      = render :partial => "shared/profile/speaker_rate"
+      = render :partial => "shared/profile/slide_share"
+
+    .clear
+
+  .clear
+

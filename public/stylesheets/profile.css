@@ -1,3 +1,10 @@
+h2 {
+  border-bottom: 1px solid #ababab;
+  color: #424242;
+  font-size: 14pt;
+  padding-bottom: 5px;
+  margin-bottom: 3px; }
+
 h3 {
   border-bottom: 1px solid #ababab;
   color: #424242;
@@ -57,7 +64,8 @@ h3 {
 #profile_content {
   background: white;
   border: 1px solid #d6d6d6;
-  border-top: 1px solid white; }
+  border-top: 1px solid white;
+  padding-bottom: 50px; }
 
 #profile_menu {
   margin-top: 20px;
@@ -84,3 +92,39 @@ h3 {
 
 #badges li {
   float: left; }
+
+.info_box {
+  border: 1px solid #ababab;
+  background: #d6d6d6;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  margin-top: 20px;
+  padding: 1px;
+  width: 250px;
+  font-size: 11pt; }
+  .info_box .info_logo {
+    background: white; }
+  .info_box .info {
+    padding: 5px; }
+  .info_box table {
+    margin-top: 10px; }
+    .info_box table td {
+      font-size: 1.3em; }
+    .info_box table td:first-child {
+      font-size: 1em;
+      padding-right: 10px;
+      text-transform: lowercase; }
+
+#count_box {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  #count_box .space {
+    width: 30px; }
+  #count_box .count {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #545454; }
+  #count_box .count_of {
+    font-size: 12pt;
+    padding-left: 5px;
+    color: #7E7E7E; }

@@ -1,9 +1,11 @@
-%h3 Badges
+#profile_badges
+  %h3 Badges
 
-%ul#badges
-  - @profile.badges.each do |b|
-    %li.badge{:title => b.name}
-      = image_tag "silver_badge.png"
+  %ul#badges
+    - @profile.badges.each do |b|
+      %li.badge{:title => b.name}
+        = image_tag "silver_badge.png"
+.clear
 
 :javascript
   $(function(){

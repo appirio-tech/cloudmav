@@ -1,39 +1,39 @@
 #profile
-	= render :partial => "header"
-	= render :partial => "profile_menu"
-	
-	.grid_16
-		%table
-			%tr
-				%td
-					.count= @profile.blogs.count
-					.count_of= @profile.blogs.count > 1 ? "blogs" : "blog"
-				%td{:style =>"padding-left:30px;"}
-					.count= @profile.posts.count
-					.count_of= @profile.posts.count > 1 ? "posts" : "post"
-	.clear
+  = render :partial => "header"
+  = render :partial => "profile_menu"
+  #profile_content
+    .grid_16
+      %table#count_box
+        %tr
+          %td.count= @profile.blogs.count
+          %td.count_of= @profile.blogs.count > 1 ? "blogs" : "blog"
+          %td.space
+          %td.count= @profile.posts.count
+          %td.count_of= @profile.posts.count > 1 ? "posts" : "post"
+    .clear
+    .grid_9
+      %h2 Blog posts
+      = will_paginate @blog_posts
+      %ul.list
+        - @blog_posts.each do |p|
+          %li
+            .item_title= link_to p.title, p.url
+            %p= show_date p.written_on
+      = page_entries_info @blog_posts
+      &nbsp;
 
+    .grid_6
+      - if can? :add_blog, @profile
+        = link_to "Add Blog", new_blog_path(:username => @profile.username), :class => "button"
+      - @profile.blogs.each do |b|
+        .info_box
+          .info_logo= b.title
+          .info
+            - if can? :edit, b
+              .item_link= link_to "edit", edit_blog_path(b)
+        .clear
 
-	.grid_10
-		%h2.page_title 
-			.title Blog Posts
-		= will_paginate @blog_posts
-		%ul.list
-			- @blog_posts.each do |p|
-				%li
-					.item_title= link_to p.title, p.url
-					%p= show_date p.written_on
-		= page_entries_info @blog_posts
+    .clear
+  .clear
+.clear
 
-	.grid_6
-		%h2.page_title 
-			.title Blogs
-		- if can? :add_blog, @profile
-			= link_to "Add Blog", new_blog_path(:username => @profile.username)
-		%ul.list
-			- @profile.blogs.each do |b|
-				%li
-					.item_title= b.title
-					- if can? :edit, b
-						.item_link= link_to "edit", edit_blog_path(b)
-	.clear
