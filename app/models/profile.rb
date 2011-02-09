@@ -78,6 +78,11 @@ class Profile
   def to_param
     username
   end
+
+  def location_text
+    return "not set" if location.nil?
+    location
+  end
   
   def as_json(opts={})
     result = { 

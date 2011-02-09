@@ -1,6 +1,8 @@
 body {
-  font-family: "Droid Sans", arial, serif;
-  font-size: 11pt; }
+  font-family: "Arial";
+  font-size: 10pt;
+  background-image: url("../images/background.png");
+  backgrond-repeat: repeat-x repeat-y; }
 
 h1 {
   font-family: "PT Sans", arial, serif;
@@ -33,7 +35,7 @@ h4 {
   margin-bottom: 5px; }
 
 a {
-  font-family: "Droid Sans", arial, serif;
+  font-family: "Arial";
   text-decoration: none;
   color: #003459; }
   a:visited {
@@ -187,20 +189,11 @@ form textarea {
   font-size: 1.2em; }
 
 #header {
-  /* gecko based browsers */
-  background: -moz-linear-gradient(top, #0d0d0d, #001626);
-  /* webkit based browsers */
-  background: -webkit-gradient(linear, left top, left bottom, from(#0d0d0d), to(#001626));
-  padding-top: 10px;
-  height: 80px; }
+  padding-top: 5px;
+  background: #373737;
+  height: 50px; }
   #header .title_icon {
-    position: absolute;
-    top: 10px;
-    left: 20px; }
-  #header .title_text {
-    position: absolute;
-    top: 28px;
-    left: 135px; }
+    float: left; }
 
 #content {
   min-height: 400px; }
@@ -229,8 +222,8 @@ form textarea {
   border: solid 1px #0d0d0d;
   padding: 5px;
   font-size: 0.9em;
-  height: 55px;
-  width: 270px; }
+  height: 40px;
+  width: 200px; }
   #login_panel .avatar {
     float: left;
     margin-right: 10px; }
@@ -246,26 +239,15 @@ form textarea {
   font-size: 1em;
   margin-top: 20px; }
 
-#subheader {
-  background: #003459;
-  padding: 7px;
-  border-top: 3px solid #6f4200;
-  height: 30px; }
-  #subheader a {
-    color: white; }
-    #subheader a:hover {
-      color: #0477bf; }
-
 #menu {
-  margin-top: 4px; }
+  margin-top: 15px; }
   #menu a {
-    font-size: 14pt;
+    font-size: 12pt;
+    font-weight: bold;
+    color: white;
     padding-left: 10px; }
     #menu a:hover {
       text-decoration: none; }
-
-#profile_pic {
-  border: 1px solid #0d0d0d; }
 
 #profile_icons {
   margin-top: 10px; }
@@ -413,18 +395,6 @@ form textarea {
     margin-bottom: 10px;
     position: relative;
     left: 10px; }
-
-.points {
-  margin-top: 5px; }
-  .points img {
-    margin-right: 5px;
-    float: left;
-    height: 25px; }
-  .points .score {
-    padding-top: 5px;
-    float: left;
-    margin-right: 10px;
-    font-size: 12pt; }
 
 #guidance {
   border: 1px solid #595959;

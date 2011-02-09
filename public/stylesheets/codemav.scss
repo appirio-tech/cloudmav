@@ -25,7 +25,10 @@ $droid: 'Droid Sans', arial, serif;
 $pt: 'PT Sans', arial, serif;
 $droid_serif: 'Droid Serif', arial, serif;
 $title_font: $pt;
-$main_font: $droid;
+$main_font: 'Arial' ;
+
+$dark_background: #373737;
+$emphasis_dark_background: #1A1A1A;
 
 @mixin corners($radius: 5px) {
   border-radius: $radius;
@@ -48,7 +51,9 @@ $main_font: $droid;
 
 body {
   font-family: $main_font;
-  font-size: 11pt;
+  font-size: 10pt;
+  background-image: url("../images/background.png");
+  backgrond-repeat: repeat-x repeat-y;
 }
 
 h1 {
@@ -278,18 +283,11 @@ $error_background: #FFDFDF;
 }
 
 #header {
-  @include gradient($black, $dark_blue);
-  padding-top: 10px;
-  height: 80px;
+  padding-top: 5px;
+  background: $dark_background;
+  height: 50px;
   .title_icon {
-    position:absolute;
-    top: 10px;
-    left: 20px;
-  }
-  .title_text {
-    position:absolute;
-    top: 28px;
-    left: 135px;
+    float:left;
   }
 }
 
@@ -318,8 +316,8 @@ $error_background: #FFDFDF;
   border: solid 1px $black;
   padding: 5px;
   font-size: 0.9em;
-  height: 55px;
-  width: 270px;
+  height: 40px;
+  width: 200px;
   .avatar {
     float:left;
     margin-right: 10px;
@@ -343,23 +341,12 @@ $error_background: #FFDFDF;
   margin-top: 20px;
 }
 
-#subheader {
-  background: $blue;
-  padding: 7px;
-  a {
-    color: $white;
-    &:hover {
-      color: $light_blue;
-    }
-  }
-  border-top: 3px solid $brown;
-  height: 30px;
-}
-
 #menu {
-  margin-top: 4px;
+  margin-top: 15px;
   a {
-    font-size: 14pt;
+    font-size: 12pt;
+    font-weight: bold;
+    color: $white;
     padding-left: 10px;
     &:hover {
       text-decoration: none;
@@ -367,9 +354,6 @@ $error_background: #FFDFDF;
   }
 }
 
-#profile_pic {
-  border: 1px solid $black;
-}
 #profile_icons {
   margin-top: 10px;
   .icon {
@@ -559,21 +543,6 @@ $error_background: #FFDFDF;
       position:relative;
       left:10px;
     }
-  }
-}
-
-.points {
-  margin-top: 5px;
-  img {
-    margin-right: 5px;
-    float:left;
-    height: 25px;
-  }
-  .score {
-    padding-top: 5px;
-    float:left;
-    margin-right: 10px;
-    font-size:12pt;
   }
 }
 

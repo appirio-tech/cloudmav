@@ -1,0 +1,19 @@
+
+%ul#points
+  %li.selected
+    .points= @profile.total_score
+    .description points
+  %li
+    .points= @profile.score(:coder_points)
+    .description code
+  %li
+    .points= @profile.score(:writer_points)
+    .description writing
+  %li
+    .points= @profile.score(:speaker_points)
+    .description speaking
+  - unless @profile.stack_overflow_profile.nil?
+    %li
+      .image= image_tag "stack_overflow_points_icon.png"
+      .points= @profile.stack_overflow_profile.reputation
+      .description rep

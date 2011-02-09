@@ -1,61 +1,52 @@
 %html
 %head
-	%title Codemav
-	= stylesheet_link_tag "reset"
-	= stylesheet_link_tag "960"
-	= stylesheet_link_tag "codemav"
-	= stylesheet_link_tag "tabs"
+  %title Codemav
+  = stylesheet_link_tag "reset"
+  = stylesheet_link_tag "960"
+  = stylesheet_link_tag "codemav"
+  = stylesheet_link_tag "tabs"
+  = stylesheet_link_tag "profile.css"
 
-	= javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false"
-	= javascript_include_tag "jquery-1.4.2.min"
-	= javascript_include_tag "jquery-ui-1.8.5.custom.min"
-	= javascript_include_tag "jquery.auto-geocoder"
-	= javascript_include_tag "rails"
-	= javascript_include_tag "jquery-calendrical-0.1/jquery.calendrical.js"
-	= javascript_include_tag "tabs.js"
-	= javascript_include_tag "highcharts.js"
-	= javascript_include_tag "jquery.qtip-1.0.0-rc3.min.js"
-	= javascript_include_tag "application.js"
-	= javascript_include_tag "badges.js"
-	= stylesheet_link_tag "calendrical.css"
-	= stylesheet_link_tag "flick/jquery-ui-1.8.6.custom"
+  = javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false"
+  = javascript_include_tag "jquery-1.4.2.min"
+  = javascript_include_tag "jquery-ui-1.8.5.custom.min"
+  = javascript_include_tag "jquery.auto-geocoder"
+  = javascript_include_tag "rails"
+  = javascript_include_tag "jquery-calendrical-0.1/jquery.calendrical.js"
+  = javascript_include_tag "tabs.js"
+  = javascript_include_tag "highcharts.js"
+  = javascript_include_tag "jquery.qtip-1.0.0-rc3.min.js"
+  = javascript_include_tag "application.js"
+  = javascript_include_tag "badges.js"
+  = stylesheet_link_tag "calendrical.css"
+  = stylesheet_link_tag "flick/jquery-ui-1.8.6.custom"
 
-	= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Cuprum&subset=latin"
-	= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Droid+Sans&subset=latin"
-	= stylesheet_link_tag "http://fonts.googleapis.com/css?family=PT+Sans&subset=latin"
-	= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Droid+Serif&subset=latin"
-	= csrf_meta_tag
-	= favicon_link_tag 'codemav_icon.png', :rel => 'apple-touch-icon', :type => 'image/png'
-	= render :partial => "shared/get_satisfaction"
+  = csrf_meta_tag
+  = favicon_link_tag 'codemav_icon.png', :rel => 'apple-touch-icon', :type => 'image/png'
+  = render :partial => "shared/get_satisfaction"
+  = yield :head
 %body
-	#header
-		.container_16
-			.grid_16
-				.title_icon= link_to image_tag("main_code_mav_icon.png"), root_path 
-				.title_text= link_to image_tag("code_mav_title_text.png"), root_path
-				= render :partial => "shared/login_info"
-			.clear
-		.clear
-	.clear
-	
-	#subheader
-		.container_16
-			.grid_16
-				= render :partial => "shared/menu"
-			.clear
-	.clear
-		
-	#content
-		.container_16
-			= render :partial => 'shared/recent_badges'
-			= render :partial => "shared/guidance"
-			= flashy
-			= yield
-		.clear
-	.clear
-	
-	#footer
-		.container_16
-			= render :partial => "shared/footer"
-		.clear
-	.clear
+  #header
+    .container_16
+      .grid_16
+        .title_icon= link_to image_tag("main_code_mav_logo.png"), root_path 
+        = render :partial => "shared/login_info"
+        = render :partial => "shared/menu"
+      .clear
+    .clear
+  .clear
+  
+  #content
+    .container_16
+      = render :partial => 'shared/recent_badges'
+      = render :partial => "shared/guidance"
+      = flashy
+      = yield
+    .clear
+  .clear
+  
+  #footer
+    .container_16
+      = render :partial => "shared/footer"
+    .clear
+  .clear
