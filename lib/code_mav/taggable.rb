@@ -2,6 +2,8 @@ module CodeMav
   module Taggable
     def self.included(receiver)
       receiver.class_eval do
+        field :tags_text, :type => String
+
         references_many :taggings
       end
       
@@ -9,6 +11,12 @@ module CodeMav
     end
     
     module InstanceMethods
+
+      def retag
+        unless TagEvent.pending_for(self.id).first
+          TagEvent.create(:taggable_id => self.id, :class_name => self.class.to_s)
+        end
+      end
 
       def tags
         self.taggings.map{|t| t.tag.name }
@@ -22,11 +30,6 @@ module CodeMav
         t = Tag.named(tag).first
         return nil if t.nil?
         self.taggings.select{|tagging| tagging.tag == t}.first
-      end
-      
-      def tags_text
-        return "" if self.taggings.nil?
-        self.taggings.join(", ")
       end
       
       def tag!(tag, options={})
@@ -49,13 +52,19 @@ module CodeMav
         self.taggings << tagging
       end
 
-      def tags_text=(value)
-        tag_names = value.split(',')
-        tag_names.each do |tag_name|
-          unless self.has_tag? tag_name
-            self.tag!(tag_name)
-          end
+      def calculate_tags!
+        @tags = []
+        @tags << get_tags_from_tags_text
+        @tags << get_other_tags if self.respond_to?(:get_other_tags)
+        @tags.flatten.each do |t|
+          self.tag(t)
         end
+        self.tags_text = @tags.join(", ")
+        self.save
+      end
+
+      def get_tags_from_tags_text
+        self.tags_text.split(',').map{|s| s.strip}
       end
       
       def all_tags
@@ -63,11 +72,13 @@ module CodeMav
       end
 
       def find_tags_in(s, tags)
+        tags = []
         Tag.all.each do |tag|
           tag.synonyms.each do |syn|
-            self.tag(tag.name) if s.include?(syn)
+            tags << tag.name if s.include?(syn)
           end 
         end
+        return tags
       end
 
       def clear_tags!

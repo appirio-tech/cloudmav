@@ -4,6 +4,8 @@
   #profile_content
 
     .grid_9
+      - if can? :manage_jobs, @profile
+        = link_to "Add Job", new_job_path(:username => @profile.username)
       %ul
         - @profile.jobs.each do |j|
           %li= render :partial => "jobs/job", :locals => { :job => j }

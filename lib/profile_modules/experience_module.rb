@@ -2,9 +2,7 @@ module CodeMav
   module ExperienceModule
     def self.included(receiver)
       receiver.class_eval do
-        references_many :jobs
-        references_many :projects
-        embeds_many :experiences
+        references_many :jobs, :inverse_of => :profile
       end
       
       receiver.send(:include, InstanceMethods)
