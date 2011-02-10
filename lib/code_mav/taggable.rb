@@ -53,18 +53,16 @@ module CodeMav
       end
 
       def calculate_tags!
-        @tags = []
-        @tags << get_tags_from_tags_text
-        @tags << get_other_tags if self.respond_to?(:get_other_tags)
-        @tags.flatten.each do |t|
-          self.tag(t)
-        end
+        set_tags_from_tags_text
+        set_other_tags if self.respond_to?(:set_other_tags)
         self.tags_text = @tags.join(", ")
         self.save
       end
 
-      def get_tags_from_tags_text
-        self.tags_text.split(',').map{|s| s.strip}
+      def set_tags_from_tags_text
+        self.tags_text.split(',').map{|s| s.strip}.each do |t|
+          self.tag t
+        end
       end
       
       def all_tags
