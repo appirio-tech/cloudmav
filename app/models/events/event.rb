@@ -7,7 +7,7 @@ class Event
   field :in_process, :type => Boolean, :default => false
   field :completed, :type => Boolean, :default => false
 
-  referenced_in :profile, :inverse_of => :events
+  scope :pending, lambda { where(:in_process => false, :completed => false) }
 
   before_create :set_info
   after_create :add_to_jobs
@@ -21,10 +21,7 @@ class Event
     self.save
 
     do_work if self.respond_to? :do_work
-    score_points if self.respond_to? :score_points
-    award_badges if self.respond_to? :award_badges
-    profile.save
-
+        
     self.completed = true
     self.save
   end
@@ -32,6 +29,5 @@ class Event
   def add_to_jobs
     Delayed::Job.enqueue self 
   end
-
 
 end

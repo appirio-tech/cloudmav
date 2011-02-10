@@ -5,8 +5,10 @@ module CodeMav
       receiver.class_eval %Q{
         references_many :events, :inverse_of => :#{receiver.to_s.underscore}
         after_create :create_added_event
-        after_save :create_updated_event
+        after_update :create_updated_event
         after_destroy :create_deleted_event
+
+        attr_accessor :dont_send_events
       }
     
       receiver.send(:include, InstanceMethods)
@@ -14,11 +16,9 @@ module CodeMav
     
     module InstanceMethods
 
-      def class_name_as_symbol
-        self.class.to_s.underscore.to_sym
-      end
-
       def create_added_event
+        return if @dont_send_events
+
         event_name = "#{self.class.to_s}AddedEvent"
         if Kernel.const_defined?(event_name)
           event = Kernel.const_get(event_name).new

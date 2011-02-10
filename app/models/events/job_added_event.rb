@@ -1,9 +1,9 @@
-class JobAddedEvent < Event
+class JobAddedEvent < ProfileEvent
 
   referenced_in :job, :inverse_of => :events
 
-  def do_work
-    job.retag
+  def other_work
+    job.retag!
   end
 
   def award_badges

@@ -1,4 +1,4 @@
-class TalkAddedEvent < Event
+class TalkAddedEvent < ProfileEvent
 
   referenced_in :talk, :inverse_of => :events
 

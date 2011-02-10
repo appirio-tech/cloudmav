@@ -1,33 +1,54 @@
-class TagEvent
-  include Mongoid::Document
-  include Mongoid::Timestamps
-
+class TagEvent < Event
   field :taggable_id, :type => String
   field :class_name, :type => String
-  field :in_process, :type => Boolean, :default => false
-  field :completed, :type => Boolean, :default => false
 
-  scope :pending_for, lambda { |id| where(:object_id => id) }
+  scope :tag_for, lambda { |id| where(:taggable_id => id) }
 
-  after_create :add_to_jobs
-
-  def perform
-    self.in_process = true
-    self.save
-
-    if Kernel.const_defined?(class_name)
-      model = Kernel.const_get(class_name)
-      o = model.find(taggable_id)
-      o.calculate_tags!
+  attr_accessor :taggable_object
+  attr_accessor :model_name
+  
+  def taggable
+    if @taggable_object.nil? && Kernel.const_defined?(class_name)
+      @model_name = Kernel.const_get(class_name)
+      @taggable_object = @model_name.find(taggable_id)
     end
+    @taggable_object
+  end 
 
-    self.completed = true
-    self.save
+  def do_work
+    set_tags_from_tags_text
+    set_tags if self.respond_to?(:set_tags)
+
+    @model_name.skip_callback(:update, :after, :create_updated_event)
+    taggable.save
+    @model_name.set_callback(:update, :after, :create_updated_event)
   end
 
-  def add_to_jobs
-    Delayed::Job.enqueue self 
+  def tag(tag, options={})
+    options[:count] ||= 1
+    options[:score] ||= 1
+    
+    tagging = get_tagging(tag)
+    if tagging.nil?
+      tagging = Tagging.new
+      tagging.tag = Tag.find_or_create_named(tag) 
+    end
+    tagging.count += options[:count]
+    tagging.score += options[:score]
+    tagging.save
+    taggable.taggings << tagging
   end
 
+  def get_tagging(tag)
+    t = Tag.named(tag).first
+    return nil if t.nil?
+    self.taggings.select{|tagging| tagging.tag == t}.first
+  end
 
+  def set_tags_from_tags_text
+    taggable.tags_text.split(',').map{|s| s.strip}.each do |t|
+      tag t
+    end
+  end
+      
 end
