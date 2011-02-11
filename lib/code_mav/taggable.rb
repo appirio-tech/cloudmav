@@ -31,6 +31,10 @@ module CodeMav
       def tags
         self.taggings.map{|t| t.tag.name }
       end
+
+      def all_tags
+        self.taggings.map{|t| t.tag.synonyms}.flatten
+      end
       
       def has_tag?(tag)
         tags.include?(tag)
