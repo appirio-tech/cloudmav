@@ -299,10 +299,11 @@ $error_background: #FFDFDF;
 }
 
 #footer {
-  border-top: 5px solid $black;
-  @include gradient($black, #001626);
+  background: $dark_background;
   margin-top: 30px;
-  height: 100px;
+  color: $light_gray;
+  padding-top:10px;
+  padding-bottom:10px;
 }
 
 #signin_panel {
@@ -315,26 +316,41 @@ $error_background: #FFDFDF;
 }
 
 #login_panel {
-  @include gradient($white, $off_white);
-  border: solid 1px $black;
   padding: 5px;
+  margin-top: 3px;
   font-size: 0.9em;
-  height: 40px;
   width: 200px;
+  height: 28px;
+  @include corners;
+  background: $emphasis_dark_background;
   .avatar {
     float:left;
     margin-right: 10px;
+    img {
+      @include corners;
+    }
   }
   .logout {
     float:right;
-    margin-top: 3px;
+    padding-top: 7px;
     a {
+      color: $light_gray;
       font-size: 10pt;
+      font-weight: bold;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
   .username {
+    padding-top: 5px;
     a {
-      font-size: 14pt;
+      font-size: 11pt;
+      font-weight:bold;
+      color: $white;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }

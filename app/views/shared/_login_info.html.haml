@@ -2,14 +2,13 @@
 	- unless user_signed_in? 
 		#signin_panel
 			= link_to "Sign in", login_path
-			= " or "
 			= link_to "Register", new_user_registration_path
 			
 	-else
 		#login_panel
 			.avatar
-				= image_tag current_profile.gravatar_url(:size => 30), :class => :photo
+				= image_tag current_profile.gravatar_url(:size => 27), :class => :photo
 			.logout
-				= link_to "sign out", logout_path
+				= link_to "Logout", logout_path
 			.username
 				= link_to current_user.username, profile_path(current_profile)

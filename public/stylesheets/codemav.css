@@ -202,13 +202,11 @@ form textarea {
   min-height: 400px; }
 
 #footer {
-  border-top: 5px solid #0d0d0d;
-  /* gecko based browsers */
-  background: -moz-linear-gradient(top, #0d0d0d, #001626);
-  /* webkit based browsers */
-  background: -webkit-gradient(linear, left top, left bottom, from(#0d0d0d), to(#001626));
+  background: #373737;
   margin-top: 30px;
-  height: 100px; }
+  color: #868686;
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 #signin_panel {
   border: solid 2px #6f4200;
@@ -218,25 +216,37 @@ form textarea {
     font-size: 16pt; }
 
 #login_panel {
-  /* gecko based browsers */
-  background: -moz-linear-gradient(top, white, #f2f2f2);
-  /* webkit based browsers */
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#f2f2f2));
-  border: solid 1px #0d0d0d;
   padding: 5px;
+  margin-top: 3px;
   font-size: 0.9em;
-  height: 40px;
-  width: 200px; }
+  width: 200px;
+  height: 28px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  background: #1a1a1a; }
   #login_panel .avatar {
     float: left;
     margin-right: 10px; }
+    #login_panel .avatar img {
+      border-radius: 5px;
+      -moz-border-radius: 5px; }
   #login_panel .logout {
     float: right;
-    margin-top: 3px; }
+    padding-top: 7px; }
     #login_panel .logout a {
-      font-size: 10pt; }
-  #login_panel .username a {
-    font-size: 14pt; }
+      color: #868686;
+      font-size: 10pt;
+      font-weight: bold; }
+      #login_panel .logout a:hover {
+        text-decoration: none; }
+  #login_panel .username {
+    padding-top: 5px; }
+    #login_panel .username a {
+      font-size: 11pt;
+      font-weight: bold;
+      color: white; }
+      #login_panel .username a:hover {
+        text-decoration: none; }
 
 #content {
   font-size: 1em;
