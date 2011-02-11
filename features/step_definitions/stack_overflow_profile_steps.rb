@@ -28,3 +28,15 @@ end
 Given /^there are guidances$/ do
   Virgil::Dsl.class_eval(File.read('lib/guidance.rb'))
 end
+
+Then /^my StackOverflow profile should be tagged$/ do
+  profile = User.find(@user.id).profile
+  stack_overflow_profile = profile.stack_overflow_profile
+  stack_overflow_profile.tags.count.should > 0
+end
+
+Then /^my profile should have my StackOverflow profile tags$/ do
+  profile = User.find(@user.id).profile
+  profile.tags.count.should > 0
+end
+

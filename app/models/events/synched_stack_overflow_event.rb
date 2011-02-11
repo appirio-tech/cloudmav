@@ -1,16 +1,9 @@
-class SynchedStackOverflowEvent < Event
+class SynchedStackOverflowEvent < SynchEvent
 
   referenced_in :stack_overflow_profile, :inverse_of => :events
 
-  def set_info
-    self.public = false
-    self.category = "Synch"
-  end
-
   def do_work
-    stack_overflow_profile.tags.each do |t|
-      profile.tag! t
-    end
+    stack_overflow_profile.retag!
   end
 
   def award_badges

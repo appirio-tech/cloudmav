@@ -2,7 +2,6 @@ require 'geokit'
 require 'gravtastic'
 require 'score_it'
 require 'virgil'
-require 'profile_modules/writer_module'
 
 class Profile
   include Mongoid::Document
@@ -105,11 +104,6 @@ class Profile
     a = Activity.new(:name => name, :category => options[:category])
     a.subject = subject
     self.activities << a
-  end
-  
-  def calculate_tags
-        calculate_speaker_tags
-    calculate_experience_tags
   end
   
   class << self

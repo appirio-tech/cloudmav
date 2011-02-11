@@ -6,6 +6,7 @@ class StackOverflowProfile
   field :reputation, :type => Integer, :default => 0
   field :url, :type => String
   field :badge_html
+  field :stack_overflow_tags
   
   referenced_in :profile, :inverse_of => :stack_overflow_profile
   references_many :events, :inverse_of => :stack_overflow_profile
@@ -24,14 +25,19 @@ class StackOverflowProfile
     self.url = "http://www.stackoverflow.com/#{stack_overflow_id}"
     self.reputation = user["reputation"]
     self.badge_html = user["badgeHtml"]
-    
     tags = StackOverflow.get_user_tags(self.stack_overflow_id)
+    so_tags = {}
     tags["tags"].each do |t|
-      self.tag!(t["name"], :count => t["count"])
+      so_tags[t["name"]] = t["count"]
     end
+    self.stack_overflow_tags = so_tags.to_yaml
     self.profile.save!
     self.save!
     SynchedStackOverflowEvent.create(:profile => self.profile, :stack_overflow_profile => self)
+  end
+
+  def related_items
+    [profile]
   end
   
   def as_json(opts={})

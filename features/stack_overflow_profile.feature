@@ -13,3 +13,5 @@ Feature: StackOverflowProfile
 		And I should be awarded the "Stack Junkie" badge
 		And I should have 10 coder points
 		And I should learned "Synching with your Stackoverflow Account"
+    And my StackOverflow profile should be tagged
+    And my profile should have my StackOverflow profile tags
