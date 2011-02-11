@@ -1,0 +1,3 @@
+class CompanyUpdatedEvent < CompanyEvent
+
+end

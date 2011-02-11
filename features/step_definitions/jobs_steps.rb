@@ -5,7 +5,7 @@ end
 
 When /^I add a job with "([^"]*)"$/ do |company_name|
   visit new_job_path(:username => @profile.username)
-  @job = Factory.build(:job)
+  @job = Factory.build(:job, :company => nil)
   fill_in "job_company_name", :with => company_name
   fill_in "job_title", :with => @job.title
   fill_in "job_description", :with => @job.description
@@ -60,8 +60,11 @@ Then /^the job should be tagged with "([^"]*)"$/ do |tags|
   end
 end
 
-Then /^the company "([^"]*)" should be tagged with "([^"]*)"$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
+Then /^the company "([^"]*)" should be tagged with "([^"]*)"$/ do |company_name, tags|
+  company = Company.named(company_name).first
+  tags.split(',').map{|s| s.strip}.each do |t|
+    company.has_tag?(t).should == true
+  end
 end
 
 Then /^my experience profile should be tagged with "([^"]*)"$/ do |arg1|

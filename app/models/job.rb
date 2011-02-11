@@ -11,7 +11,11 @@ class Job
   field :imported_id, :type => String
   field :company_name, :type => String
   
-  referenced_in :company, :inverse_of => :jobs
+  referenced_in :company, :inverse_of => :employments
   referenced_in :profile, :inverse_of => :jobs
+
+  def related_items
+    [company, profile]
+  end
   
 end

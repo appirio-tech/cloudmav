@@ -36,8 +36,6 @@ module CodeMav
         tags.include?(tag)
       end
       
-
-      
       def find_tags_in(s, tags)
         tags = []
         Tag.all.each do |tag|

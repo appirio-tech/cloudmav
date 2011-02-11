@@ -1,0 +1,2 @@
+class CompanyAddedEvent < CompanyEvent
+end

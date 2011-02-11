@@ -19,9 +19,13 @@ class TagEvent < Event
     set_tags_from_tags_text
     set_tags if self.respond_to?(:set_tags)
 
-    @model_name.skip_callback(:update, :after, :create_updated_event)
+    taggable.turn_off_events if taggable.respond_to? :turn_off_events
     taggable.save
-    @model_name.set_callback(:update, :after, :create_updated_event)
+    taggable.turn_on_events if taggable.respond_to? :turn_on_events
+
+    if taggable.respond_to? :related_items
+      taggable.related_items.each{|t| t.retag! unless t.nil? }
+    end
   end
 
   def tag(tag, options={})
@@ -42,10 +46,12 @@ class TagEvent < Event
   def get_tagging(tag)
     t = Tag.named(tag).first
     return nil if t.nil?
-    self.taggings.select{|tagging| tagging.tag == t}.first
+    taggable.taggings.select{|tagging| tagging.tag == t}.first
   end
 
   def set_tags_from_tags_text
+    return if taggable.tags_text.nil?
+
     taggable.tags_text.split(',').map{|s| s.strip}.each do |t|
       tag t
     end
