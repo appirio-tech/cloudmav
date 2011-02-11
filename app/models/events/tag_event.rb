@@ -24,7 +24,9 @@ class TagEvent < Event
     taggable.turn_on_events if taggable.respond_to? :turn_on_events
 
     if taggable.respond_to? :related_items
-      taggable.related_items.each{|t| t.retag! unless t.nil? }
+      taggable.related_items.each do |t| 
+        t.retag! unless t.nil?
+      end
     end
   end
 

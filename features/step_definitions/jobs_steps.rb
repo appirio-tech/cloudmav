@@ -67,7 +67,10 @@ Then /^the company "([^"]*)" should be tagged with "([^"]*)"$/ do |company_name,
   end
 end
 
-Then /^my experience profile should be tagged with "([^"]*)"$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then /^my experience profile should be tagged with "([^"]*)"$/ do |tags|
+  profile = Profile.find(@profile.id)
+  tags.split(',').map{|s| s.strip}.each do |t|
+    profile.experience_profile.has_tag?(t).should == true
+  end
 end
 

@@ -3,7 +3,6 @@ require 'gravtastic'
 require 'score_it'
 require 'virgil'
 require 'profile_modules/writer_module'
-require 'profile_modules/experience_module'
 
 class Profile
   include Mongoid::Document

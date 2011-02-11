@@ -15,7 +15,7 @@ class Job
   referenced_in :profile, :inverse_of => :jobs
 
   def related_items
-    [company, profile]
+    [company, profile.experience_profile]
   end
   
 end
