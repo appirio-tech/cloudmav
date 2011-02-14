@@ -650,9 +650,22 @@ $error_background: #FFDFDF;
 
 .tags {
   .tag {
-    font-size: 12pt;
+   .tag_score {
+     @include corners;
+     background: #EAEAEA;
+     float:left;
+     margin-right: 5px;
+     color: #686868;
+     padding: 1px;
+     font-size: 9pt;
+     font-weight:bold;
+    }
+    @include corners;
+    border: 1px solid #EAEAEA;
+    padding: 3px;
+    font-size: 10pt;
     float: left;
-    margin-right: 5px;
+    margin-right: 10px;
   }
 }
 

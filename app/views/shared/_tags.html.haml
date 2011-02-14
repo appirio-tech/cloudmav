@@ -1,7 +1,9 @@
 .tags
-	%h3 Tags
-	- if tags.empty?
-		No tags 
-	- else
-		- tags.each do |tag|
-			.tag= tag
+  %h3 Tags
+  - if taggable.nil? || taggable.taggings.empty?
+    No tags 
+  - else
+    - taggable.taggings.each do |tagging|
+      .tag
+        .tag_score= number_with_precision tagging.score, :precision => 0
+        = tagging
