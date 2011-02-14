@@ -15,11 +15,6 @@ Then /^I should be awarded the "([^"]*)" badge$/ do |name|
   profile.has_badge_named?(name).should == true
 end
 
-Then /^I should have (\d+) coder points$/ do |number|
-  profile = User.find(@user.id).profile
-  profile.score(:coder_points).should == number.to_i
-end
-
 Then /^I should learned "([^"]*)"$/ do |title|
   profile = User.find(@user.id).profile
   profile.knows?(title).should == true

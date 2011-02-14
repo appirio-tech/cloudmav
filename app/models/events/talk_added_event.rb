@@ -2,11 +2,6 @@ class TalkAddedEvent < ProfileEvent
 
   referenced_in :talk, :inverse_of => :events
 
-  def do_work
-    talk.find_tags_in(talk.title, Tag.all)
-    talk.find_tags_in(talk.description, Tag.all)
-  end
-
   def score_points
     profile.earn("for adding a talk", 10, :speaker_points) 
   end
@@ -16,8 +11,12 @@ class TalkAddedEvent < ProfileEvent
   end
 
   def set_info
-    self.public = true
+    self.is_public = true
     self.category = "Speaking"
+  end
+
+  def description
+    "Added the talk #{talk.title}"
   end
 
 end

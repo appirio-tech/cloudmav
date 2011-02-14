@@ -10,7 +10,6 @@ Feature: Talks
 		When I add a talk
 		Then the talk should be added
 		And I should have 10 speaker points
-		And I should have just "added_talk"
 		
 	Scenario: Edit a talk
 	
