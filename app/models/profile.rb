@@ -1,4 +1,3 @@
-require 'geokit'
 require 'gravtastic'
 require 'score_it'
 require 'virgil'
@@ -13,6 +12,7 @@ class Profile
   include CodeMav::SpeakerModule
   include CodeMav::ExperienceModule
   include CodeMav::Taggable
+  include CodeMav::Locatable
 
   is_gravtastic!
 
@@ -22,16 +22,9 @@ class Profile
   field :username, :type => String
   index :username, :unique => true
   
-  field :lat, :type => Float
-  field :lng, :type => Float
-  field :location, :type => String
-  field :coordinates, :type => Array
   field :can_manage_tags, :type => Boolean, :default => false
   field :is_moderator, :type => Boolean, :default => false
   
-  index [[ :coordinates, Mongo::GEO2D ]]
-  
-  before_save :update_coordinates
   before_save :add_to_index
   
   def can_manage_tags?
@@ -44,12 +37,6 @@ class Profile
   
   def add_to_index
     Sunspot.index!(self) unless Rails.env.test?
-  end
-  
-  def update_coordinates
-    unless lat.nil? || lng.nil?
-      self.coordinates = [lat, lng]
-    end
   end
   
   referenced_in :user
@@ -75,11 +62,6 @@ class Profile
     username
   end
 
-  def location_text
-    return "not set" if location.nil?
-    location
-  end
-  
   def as_json(opts={})
     result = { 
       :id => api_id,
@@ -99,13 +81,6 @@ class Profile
     slide_share_profile.synch! unless slide_share_profile.nil?
   end
   
-  def just(name, subject, options= {})
-    options[:category] ||= "general"
-    a = Activity.new(:name => name, :category => options[:category])
-    a.subject = subject
-    self.activities << a
-  end
-  
   class << self
     def synch_all!
       Profile.all.each do |p|
@@ -116,12 +91,7 @@ class Profile
         end
       end
     end
-    
-    def near_loc(location)
-      response = Geokit::Geocoders::MultiGeocoder.geocode(location)
-      near(:coordinates => [response.lat, response.lng, 1])
-    end
-    
+   
     def stack_overflow
       where(:stack_overflow_profile.exists => true)
     end
@@ -130,11 +100,6 @@ class Profile
       stack_overflow.desc('stack_overflow_profile.reputation')
     end
     
-    def geocode(location)
-      response = Geokit::Geocoders::MultiGeocoder.geocode(location)
-      return [response.lat, response.lng]
-    end
-
     def search(query, options = {})
       coordinates = (options[:near].nil? || options[:near].blank?) ? nil : geocode(options[:near])
 
