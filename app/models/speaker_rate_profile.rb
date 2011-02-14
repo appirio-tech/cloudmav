@@ -1,11 +1,13 @@
 class SpeakerRateProfile
   include Mongoid::Document
+  include Mongoid::Timestamps
+  include CodeMav::Eventable
   
   field :speaker_rate_id
   field :url
   field :rating
   
-  embedded_in :profile, :inverse_of => :speaker_rate_profile
+  referenced_in :profile, :inverse_of => :speaker_rate_profile
   
   before_save :set_url
   
@@ -46,7 +48,6 @@ class SpeakerRateProfile
       self.profile.talks << talk
       talk.save
       
-      p = Presentation.new(:presentation_date => DateTime.parse(sr_talk["when"]))
-      talk.add_presentation(p)
+      Presentation.create(:presentation_date => DateTime.parse(sr_talk["when"], :talk => talk))
     end
 end

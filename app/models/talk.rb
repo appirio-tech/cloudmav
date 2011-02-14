@@ -13,8 +13,7 @@ class Talk
   field :willing_to_give_talk_again, :type => Boolean, :default => false
   
   referenced_in :profile, :inverse_of => :talks
-  embeds_many :presentations
-  embeds_one :activity
+  references_many :presentations, :inverse_of => :talk
     
   def self.search(query, options = {})
     search = Sunspot.new_search(Talk)

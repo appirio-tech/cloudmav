@@ -10,11 +10,6 @@ Then /^I should have a StackOverflow profile$/ do
   profile.stack_overflow_profile.should_not be_nil
 end
 
-Then /^I should be awarded the "([^"]*)" badge$/ do |name|
-  profile = User.find(@user.id).profile
-  profile.has_badge_named?(name).should == true
-end
-
 Then /^I should learned "([^"]*)"$/ do |title|
   profile = User.find(@user.id).profile
   profile.knows?(title).should == true

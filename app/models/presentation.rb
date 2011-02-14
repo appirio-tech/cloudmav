@@ -5,6 +5,6 @@ class Presentation
   
   field :presentation_date, :type => DateTime
   
-  embedded_in :talk, :inverse_of => :presentation
+  referenced_in :talk, :inverse_of => :presentation
 
 end
