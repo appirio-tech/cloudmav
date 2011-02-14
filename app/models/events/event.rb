@@ -10,6 +10,7 @@ class Event
   field :subject_class_name, :type => String
 
   scope :pending, lambda { where(:in_process => false, :completed => false) }
+  scope :public, lambda { where(:is_public => true) }
 
   before_create :set_base_info
   after_create :add_to_jobs
@@ -39,6 +40,14 @@ class Event
 
   def subject
     subject_class.find(subject_id)
+  end
+
+  def icon_url
+    "event_icons/default.png"
+  end
+
+  def description
+    self.to_s
   end
 
 end

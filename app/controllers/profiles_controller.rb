@@ -3,6 +3,7 @@ class ProfilesController < ApplicationController
   
   def show
     @tab = "summary"
+    @profile_events = ProfileEvent.public.for_profile(@profile)
   end
   
   def code

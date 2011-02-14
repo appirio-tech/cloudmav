@@ -15,4 +15,8 @@ class StackOverflowProfileAddedEvent < ProfileEvent
     self.category = "Code"
   end
 
+  def description
+    "Added StackOverflow account"
+  end
+
 end

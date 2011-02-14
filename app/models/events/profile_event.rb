@@ -2,6 +2,8 @@ class ProfileEvent < Event
 
   referenced_in :profile, :inverse_of => :events
 
+  scope :for_profile, lambda { |profile| where(:profile_id => profile.id) }
+
   def set_info
     self.profile = subject.profile
   end
