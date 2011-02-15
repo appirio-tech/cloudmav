@@ -4,13 +4,13 @@ end
 
 Given /^I have a talk tagged with "([^"]*)"$/ do |tag|
   @talk = Factory.create(:talk, :profile => @profile)
-  @talk.tag!(tag)
+  @talk.tags_text = tag
+  @talk.save
 end
 
 When /^my profile's tags are calculated$/ do
   profile = Profile.find(@profile.id)
-  profile.calculate_tags
-  profile.save
+  profile.retag!
 end
 
 Then /^my profile should have a "([^"]*)" tag$/ do |tag|
@@ -22,10 +22,12 @@ Given /^I have a stackoverflow profile tagged with "([^"]*)"$/ do |tag|
   profile = Profile.find(@profile.id)
   so_profile = Factory.create(:stack_overflow_profile, :profile => profile)
   profile.save
-  so_profile.tag!(tag)
+  so_profile.tags_text = tag
+  so_profile.save
 end
 
 Given /^I have a job tagged with "([^"]*)"$/ do |tag|
   job = Factory.create(:job, :profile => @profile)
-  job.tag! tag
+  job.tags_text = tag
+  job.save
 end

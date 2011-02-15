@@ -1,6 +1,7 @@
 class StackOverflowProfile
   include Mongoid::Document
   include CodeMav::Taggable
+  include CodeMav::Eventable
   
   field :stack_overflow_id
   field :reputation, :type => Integer, :default => 0
@@ -10,12 +11,6 @@ class StackOverflowProfile
   
   referenced_in :profile, :inverse_of => :stack_overflow_profile
   references_many :events, :inverse_of => :stack_overflow_profile
-  
-  after_create :added_stack_overflow_profile
-
-  def added_stack_overflow_profile
-    StackOverflowProfileAddedEvent.create(:profile => self.profile, :stack_overflow_profile => self)
-  end
   
   def synch!
     return if stack_overflow_id.nil?
