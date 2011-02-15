@@ -3,8 +3,7 @@ Given /^I am a user$/ do
 end
 
 When /^I am awarded a badge "([^"]*)"$/ do |title|
-  profile =  Profile.find(@profile.id).first
-  profile.award_badge(title)
+  User.find(@user.id).profile.award_badge(title)
 end
 
 Then /^I should be awarded the "([^"]*)" badge$/ do |name|

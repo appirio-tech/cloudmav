@@ -3,7 +3,6 @@ class JobEvent < ProfileEvent
   referenced_in :job, :inverse_of => :events
 
   def set_info
-    super
     self.category = "Experience"
     self.is_public = true
   end

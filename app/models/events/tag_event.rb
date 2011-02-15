@@ -16,6 +16,8 @@ class TagEvent < Event
   end 
 
   def do_work
+    taggable.clear_tags!
+
     set_tags_from_tags_text
     set_tags if self.respond_to?(:set_tags)
 
@@ -58,5 +60,14 @@ class TagEvent < Event
       tag t
     end
   end
-      
+
+  def find_tags_in(s)
+    Tag.all.each do |tag|
+      tag.synonyms.each do |syn|
+        tag(tag.name) if s.include?(syn)
+      end 
+    end
+  end
+
+     
 end

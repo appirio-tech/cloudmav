@@ -20,7 +20,8 @@ Given /^there is a tag "([^"]*)"$/ do |tag|
 end
 
 Given /^the talk is tagged "([^"]*)"$/ do |tag|
-  @talk.tag!(tag)
+  @talk.tags_text = tag
+  @talk.save
 end
 
 Then /^the talk should not be tagged with "([^"]*)"$/ do |tag|

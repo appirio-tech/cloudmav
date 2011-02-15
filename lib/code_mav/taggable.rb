@@ -39,17 +39,11 @@ module CodeMav
       def has_tag?(tag)
         tags.include?(tag)
       end
-      
-      def find_tags_in(s, tags)
-        tags = []
-        Tag.all.each do |tag|
-          tag.synonyms.each do |syn|
-            tags << tag.name if s.include?(syn)
-          end 
-        end
-        return tags
-      end
 
+      def get_tagging(name)
+        self.taggings.select{|t| t.tag.name == name}.first
+      end
+      
       def clear_tags!
         self.taggings.destroy_all
       end

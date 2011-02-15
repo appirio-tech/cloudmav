@@ -1,6 +1,4 @@
-class TalkAddedEvent < ProfileEvent
-
-  referenced_in :talk, :inverse_of => :events
+class TalkAddedEvent < TalkEvent
 
   def score_points
     profile.earn("for adding a talk", 10, :speaker_points) 
@@ -8,11 +6,6 @@ class TalkAddedEvent < ProfileEvent
 
   def award_badges
     profile.award_badge("Yap yap yap", :description => "For having a talk")
-  end
-
-  def set_info
-    self.is_public = true
-    self.category = "Speaking"
   end
 
   def description
