@@ -23,17 +23,6 @@ module CodeMav
         return presentations
       end
 
-      def speaker_tags
-        speaker_profile.tags
-      end
-      
-      def calculate_speaker_tags
-        self.speaker_profile.clear_tags!
-
-        self.talks.each do |talk|
-          talk.tags.each{|tag| speaker_profile.tag! tag }
-        end
-      end
     end
   end
 end

@@ -11,4 +11,11 @@ class TalkEvent < ProfileEvent
     talk.retag!
   end
 
+  def icon_url
+    if talk.slides_thumbnail.nil?
+      return super
+    else
+      talk.slides_thumbnail
+    end
+  end
 end

@@ -69,5 +69,10 @@ class TagEvent < Event
     end
   end
 
-     
+  def import_tags_from(other_taggable)
+    other_taggable.taggings.each do |tagging|
+      tag tagging.tag.name, :count => tagging.count, :score => tagging.score
+    end
+  end
+    
 end

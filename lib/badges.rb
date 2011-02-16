@@ -4,7 +4,3 @@ badge "iBlog" do
   subject :profile
 end
 
-badge "Sliding along" do
-  thing SlideShareProfile
-  subject :profile
-end

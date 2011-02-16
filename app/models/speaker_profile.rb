@@ -8,4 +8,8 @@ class SpeakerProfile
 
   referenced_in :profile, :inverse_of => :speaker_profile
 
+  def related_items
+    [profile]
+  end
+
 end

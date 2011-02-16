@@ -30,15 +30,18 @@
                 = image_tag talk.slides_thumbnail
               -else
                 = image_tag "default_talk.png"
-            .item_title= link_to talk.title, talk
-            .item_description= truncate(talk.description, :length => 40)
-            - if talk.presentations.any?
-              %p= "Presented #{pluralize talk.presentations.count, 'time', 'times' }"
+            .item_info
+              .item_title= link_to talk.title, talk
+              .item_description
+                = truncate(talk.description, :length => 60)
+                - if talk.presentations.any?
+                  %p= "Presented #{pluralize talk.presentations.count, 'time', 'times' }"
       &nbsp;
 
     .grid_6
       = render :partial => "shared/profile/speaker_rate"
       = render :partial => "shared/profile/slide_share"
+      = render :partial => "shared/tags", :locals => { :taggable => @profile.speaker_profile }
 
     .clear
 

@@ -2,11 +2,11 @@ class ProfileTagEvent < TagEvent
 
   def set_tags
 
-    if taggable.stack_overflow_profile
-      taggable.stack_overflow_profile.taggings.each do |tagging|
-        tag tagging.tag.name, :count => tagging.count
-      end
-    end
+    @profile = taggable
+
+    import_tags_from(@profile.experience_profile)
+    import_tags_from(@profile.speaker_profile)
+    import_tags_from(@profile.stack_overflow_profile) if @profile.stack_overflow_profile
 
   end
 

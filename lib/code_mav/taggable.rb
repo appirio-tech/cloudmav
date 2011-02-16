@@ -47,6 +47,7 @@ module CodeMav
       def clear_tags!
         self.taggings.destroy_all
       end
+
     end
   end
 end

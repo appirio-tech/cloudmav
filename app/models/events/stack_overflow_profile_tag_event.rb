@@ -6,6 +6,8 @@ class StackOverflowProfileTagEvent < TagEvent
   SO_COUNT = 1
 
   def set_tags
+    return if taggable.stack_overflow_tags.nil?
+
     so_tags = YAML.load(taggable.stack_overflow_tags)
     so_tags.each do |so_tag|
       tag so_tag[SO_NAME], :count => so_tag[SO_COUNT]

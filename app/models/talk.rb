@@ -24,4 +24,8 @@ class Talk
     search.execute
   end
 
+  def related_items
+    [profile.speaker_profile]
+  end
+
 end
