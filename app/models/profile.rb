@@ -13,6 +13,7 @@ class Profile
   include CodeMav::ExperienceModule
   include CodeMav::Taggable
   include CodeMav::Locatable
+  include CodeMav::Indexable
 
   is_gravtastic!
 
@@ -25,18 +26,12 @@ class Profile
   field :can_manage_tags, :type => Boolean, :default => false
   field :is_moderator, :type => Boolean, :default => false
   
-  before_save :add_to_index
-  
   def can_manage_tags?
     can_manage_tags
   end
   
   def moderator?
     is_moderator
-  end
-  
-  def add_to_index
-    Sunspot.index!(self) unless Rails.env.test?
   end
   
   referenced_in :user

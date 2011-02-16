@@ -307,18 +307,21 @@ $error_background: #FFDFDF;
 }
 
 #signin_panel {
-  border: solid 2px $brown;
-  background: $white;
-  padding: 10px;
+  margin-top:14px;
   a {
-    font-size: 16pt;
+    font-size: 12pt;
+    font-weight: bold;
+    color: $white;
+    padding-left: 10px;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
 #login_panel {
   padding: 5px;
   margin-top: 3px;
-  font-size: 0.9em;
   width: 200px;
   height: 28px;
   @include corners;
@@ -333,6 +336,7 @@ $error_background: #FFDFDF;
   .logout {
     float:right;
     padding-top: 7px;
+    margin-right: 5px;
     a {
       color: $light_gray;
       font-size: 10pt;
@@ -407,6 +411,7 @@ $error_background: #FFDFDF;
     }
   }
 }
+
 #recent_badges {
   height: 75px;
   h3 {
@@ -528,15 +533,13 @@ $error_background: #FFDFDF;
 }
 
 #guidance {
-  // float:right;
-  // position:absolute;
-  // top: 90px;
-  // left: 500px;
-  // right: 50px;
-  border: 1px solid $gray;
-  background: $off_white;
+  @include corners;
+  border: 1px solid #E2E2E2;
+  background: #EFEFEF;
   padding: 7px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: #797979;
+  text-align: center;
 }
 
 
@@ -679,16 +682,14 @@ $error_background: #FFDFDF;
 }
 
 .earned_badges {
-  width: 250px;
-  display: block;
-    margin-left: auto;
-    margin-right: auto;
-  margin-bottom: 10px;
   .earned_badge {
-    display: none;
-    border: 1px solid $blue;
-    padding: 5px;
-    margin-top: 5px;
+    @include corners;
+    border: 1px solid #E2E2E2;
+    background: #FFFAE5;
+    padding: 7px;
+    margin-bottom: 15px;
+    color: #797979;
+    text-align: center;
   }
 }
 

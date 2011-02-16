@@ -209,16 +209,18 @@ form textarea {
   padding-bottom: 10px; }
 
 #signin_panel {
-  border: solid 2px #6f4200;
-  background: white;
-  padding: 10px; }
+  margin-top: 14px; }
   #signin_panel a {
-    font-size: 16pt; }
+    font-size: 12pt;
+    font-weight: bold;
+    color: white;
+    padding-left: 10px; }
+    #signin_panel a:hover {
+      text-decoration: none; }
 
 #login_panel {
   padding: 5px;
   margin-top: 3px;
-  font-size: 0.9em;
   width: 200px;
   height: 28px;
   border-radius: 5px;
@@ -232,7 +234,8 @@ form textarea {
       -moz-border-radius: 5px; }
   #login_panel .logout {
     float: right;
-    padding-top: 7px; }
+    padding-top: 7px;
+    margin-right: 5px; }
     #login_panel .logout a {
       color: #868686;
       font-size: 10pt;
@@ -379,10 +382,14 @@ form textarea {
     left: 10px; }
 
 #guidance {
-  border: 1px solid #595959;
-  background: #f2f2f2;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px solid #E2E2E2;
+  background: #EFEFEF;
   padding: 7px;
-  margin-bottom: 10px; }
+  margin-bottom: 15px;
+  color: #797979;
+  text-align: center; }
 
 .list {
   margin-top: 5px; }
@@ -472,17 +479,15 @@ form textarea {
     font-size: 9pt;
     font-weight: bold; }
 
-.earned_badges {
-  width: 250px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px; }
-  .earned_badges .earned_badge {
-    display: none;
-    border: 1px solid #003459;
-    padding: 5px;
-    margin-top: 5px; }
+.earned_badges .earned_badge {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: 1px solid #E2E2E2;
+  background: #FFFAE5;
+  padding: 7px;
+  margin-bottom: 15px;
+  color: #797979;
+  text-align: center; }
 
 #talk .author {
   font-size: 14pt; }
