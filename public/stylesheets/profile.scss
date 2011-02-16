@@ -109,6 +109,7 @@ h3 {
   border: 1px solid $lightest_gray;
   border-top: 1px solid $white;
   padding-bottom: 50px;
+  padding-top: 20px;
 }
 
 #profile_menu {
@@ -123,17 +124,29 @@ h3 {
     margin: 0px;
     margin-right: 4px;
     text-transform: uppercase;
-    padding: 15px;
+    padding-right: 20px;
     padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 9px;
     background: $blue;
+    border-top: 3px solid $blue;
+    border-left: 1px solid $blue;
+    border-right: 1px solid $blue;
+    img {
+      float: left;
+    }
     a {
       color: $white;
+      margin-left: 7px;
+      position: relative;
+      top: 6px;
     }
   }
   .selected {
-    border-top: 3px solid $blue;
     background: $white;
+    border-left: 1px solid $lightest_gray;
+    border-right: 1px solid $lightest_gray;
+
     a {
       color: $black;
     }
