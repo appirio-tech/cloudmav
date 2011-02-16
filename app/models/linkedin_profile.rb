@@ -3,7 +3,7 @@ class LinkedinProfile
   
   field :url, :type => String
 
-  embedded_in :profile, :inverse_of => :linkedin_profile
+  referenced_in :profile, :inverse_of => :linkedin_profile
 
   def get_jobs(client)
     positions = client.profile(:fields => %w(positions)).positions
@@ -26,6 +26,7 @@ class LinkedinProfile
     job.imported_id = position.id
     job.title = position.title
     job.description = position.summary
+    job.company_name = position.company.name unless position.company.nil?
     start_year = position.start_year || Time.now.year
     start_month = position.start_month || 1
     job.start_date = DateTime.civil(start_year, start_month, 1)

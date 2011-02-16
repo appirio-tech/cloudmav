@@ -1,5 +1,5 @@
 
-%h2 Jobs going to be added
+%h2 Your jobs on LinkedIn
 
 = form_tag confirm_linkedin_profiles_path, :method => :post do
   = hidden_field_tag :username, @profile.username
@@ -7,10 +7,5 @@
 
 %ul.list
   - @jobs.each do |j|
-    %li
-      .item_title= j.title
-      .range
-        = show_date j.start_date
-        = show_date j.end_date
-      .description= j.description
-  
+    = render :partial => "jobs/job", :locals => { :job => j }
+

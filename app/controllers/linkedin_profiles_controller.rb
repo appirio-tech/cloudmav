@@ -4,21 +4,15 @@ class LinkedinProfilesController < ApplicationController
   before_filter :set_profile, :only => [:new, :create, :confirm]
 
   def new
-    @linkedin_profile = LinkedinProfile.new
-  end
-  
-  def create
-    create_client
-    request_token = @client.request_token(:oauth_callback => callback_linkedin_profiles_url)
-    session[:rtoken] = request_token.token
-    session[:rsecret] = request_token.secret
-
-    unless @profile.linkedin_profile
+    if @profile.linkedin_profile.nil?
       @profile.linkedin_profile = LinkedinProfile.new
       @profile.linkedin_profile.save
       @profile.save
     end
-
+    create_client
+    request_token = @client.request_token(:oauth_callback => callback_linkedin_profiles_url)
+    session[:rtoken] = request_token.token
+    session[:rsecret] = request_token.secret
     session[:profile_id] = @profile.id
     redirect_to @client.request_token.authorize_url
   end

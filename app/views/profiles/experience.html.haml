@@ -4,15 +4,18 @@
   #profile_content
 
     .grid_9
+      %h2 Jobs
+      %br
       - if can? :manage_jobs, @profile
-        = link_to "Add Job", new_job_path(:username => @profile.username)
-      %ul
+        = link_to "Add Job", new_job_path(:username => @profile.username), :class => "button"
+      %ul.list
         - @profile.jobs.each do |j|
-          %li= render :partial => "jobs/job", :locals => { :job => j }
+          = render :partial => "jobs/job", :locals => { :job => j }
       &nbsp;
 
     .grid_6
       = render :partial => "shared/profile/linkedin"
+      = render :partial => "shared/tags", :locals => { :taggable => @profile.experience_profile }
     .clear
 
 .clear
