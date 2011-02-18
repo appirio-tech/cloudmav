@@ -6,7 +6,7 @@ class SlideShareProfile
   field :slide_share_username
   field :url
   
-  embedded_in :profile, :inverse_of => :slide_share_profile
+  referenced_in :profile, :inverse_of => :slide_share_profile
   
   before_save :set_url
   

@@ -5,8 +5,8 @@ class TalkUpdatedEvent < TalkEvent
   end
 
   def set_info
-    super
     self.is_public = false
+    self.category = "Speaing"
   end
 
 end

@@ -9,7 +9,6 @@ When /^I tag the talk with "([^"]*)"$/ do |tag|
   And "I should be redirected"
 end
 
-
 Then /^the talk should be tagged with "([^"]*)"$/ do |tag|
   talk = Talk.find(@talk.id)
   talk.has_tag?(tag).should == true
@@ -22,6 +21,7 @@ end
 Given /^the talk is tagged "([^"]*)"$/ do |tag|
   @talk.tags_text = tag
   @talk.save
+  @talk.retag!
 end
 
 Then /^the talk should not be tagged with "([^"]*)"$/ do |tag|
