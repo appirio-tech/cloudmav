@@ -1,8 +1,10 @@
 When /^I synch my SpeakerRate account$/ do
-  visit new_speaker_rate_profile_path(:username => @profile.username)
-  fill_in "speaker_rate_profile_speaker_rate_id", :with => '10082'
-  click_button "Synch"
-  And %Q{I should be redirected}
+  VCR.use_cassette('speaker_rate', :record => :new_episodes) do
+    visit new_speaker_rate_profile_path(:username => @profile.username)
+    fill_in "speaker_rate_profile_speaker_rate_id", :with => '10082'
+    click_button "Synch"
+    And %Q{I should be redirected}
+  end
 end
 
 Then /^I should have a SpeakerRate profile$/ do
@@ -16,10 +18,12 @@ Then /^I should have my talks from SpeakerRate$/ do
 end
 
 Given /^I synched my SpeakerRate account$/ do
-  visit new_speaker_rate_profile_path(:username => @profile.username)
-  fill_in "speaker_rate_profile_speaker_rate_id", :with => '10082'
-  click_button "Synch"
-  And %Q{I should be redirected}
+  VCR.use_cassette('speaker_rate', :record => :new_episodes) do
+    visit new_speaker_rate_profile_path(:username => @profile.username)
+    fill_in "speaker_rate_profile_speaker_rate_id", :with => '10082'
+    click_button "Synch"
+    And %Q{I should be redirected}
+  end
 end
 
 Then /^I should not have duplicate talks from SpeakerRate$/ do

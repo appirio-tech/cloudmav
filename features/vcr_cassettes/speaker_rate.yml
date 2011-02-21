@@ -1,0 +1,40 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://speakerrate.com:80/speakers/10082.json
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - Apache/2.2.9 (Ubuntu) Phusion_Passenger/3.0.2
+      x-powered-by: 
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.2
+      etag: 
+      - "\"5738e9825c8c4d2f7d19bdcab684202b\""
+      x-runtime: 
+      - "16"
+      cache-control: 
+      - private, max-age=0, must-revalidate
+      set-cookie: 
+      - _spkr8_session=BAh7BzoPc2Vzc2lvbl9pZCIlNWI5NWUxYzRlYTdlMzg5ZDM1YTg5M2FkY2Q5MGFjYTA6DnJldHVybl90byIZL3NwZWFrZXJzLzEwMDgyLmpzb24%3D--376fa56fa682c516bea335c1d1eae0eeb4583d32; domain=.speakerrate.com; path=/; expires=Mon, 07-Mar-2011 15:55:48 GMT; HttpOnly
+      status: 
+      - "200"
+      content-type: 
+      - application/json; charset=utf-8
+      content-length: 
+      - "2584"
+      date: 
+      - Mon, 21 Feb 2011 15:55:48 GMT
+      x-varnish: 
+      - "645690261"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+    body: "{\"name\":\"rookieone\",\"company\":\"ChaiOne\",\"cached_content_rating\":4.95,\"updated_at\":\"2010/12/23 23:40:38 +0000\",\"biography\":{\"text\":\"\",\"filter_styles\":null,\"smart\":null,\"fold_lines\":null,\"filter_html\":null},\"twitter_username\":\"RookieOne\",\"title\":\"Lead Developer\",\"company_website\":\"http://www.chaione.com\",\"cached_rating\":4.88,\"cached_delivery_rating\":4.8,\"id\":10082,\"talks\":[{\"event_id\":612,\"cached_content_rating\":null,\"updated_at\":\"2010/10/09 21:17:48 +0000\",\"title\":\"Virtual Brown Bag\",\"timezone\":null,\"info\":{\"text\":\"Introduction to the Virtual Brown bag online sessions.\",\"filter_styles\":null,\"smart\":null,\"fold_lines\":null,\"filter_html\":null},\"featured\":false,\"cached_rating\":null,\"cached_delivery_rating\":null,\"id\":4758,\"talk_url\":\"http://houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/278/Default.aspx\",\"rating\":null,\"slideshare_key\":null,\"slides_url\":\"http://www.lassala.net/files/presentations/claudiolassala-houstontechfest2010.zip\",\"series_id\":null,\"when\":\"2010/10/09 12:00:00 +0000\",\"is_spam\":false,\"room\":\"\",\"location\":\"\",\"created_at\":\"2010/10/08 04:59:39 +0000\"},{\"event_id\":612,\"cached_content_rating\":4.95,\"updated_at\":\"2010/12/23 22:56:01 +0000\",\"title\":\"Design Patterns\",\"timezone\":null,\"info\":{\"text\":\"Design Patterns are often used every day by every developer in one way or another. A basic understanding of patterns and how to implement them is very useful for all .NET developer, and this session tries to clarify design patterns in a way that everybody can understand and start thinking about patterns in a more natural way. Attendees will learn:   The definitions of some of the main patterns, how patterns improve code quality, how to implement and use the patterns. covered such as Command, Observer, Adapter, Strategy, Factory, etc.\",\"filter_styles\":null,\"smart\":null,\"fold_lines\":null,\"filter_html\":null},\"featured\":false,\"cached_rating\":4.88,\"cached_delivery_rating\":4.8,\"id\":4757,\"talk_url\":\"http://houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/212/Default.aspx\",\"rating\":4.88,\"slideshare_key\":null,\"slides_url\":\"http://www.lassala.net/files/presentations/claudiolassala-houstontechfest2010.zip\",\"series_id\":null,\"when\":\"2010/10/09 10:30:00 +0000\",\"is_spam\":false,\"room\":\"\",\"location\":\"\",\"created_at\":\"2010/10/08 04:58:07 +0000\"}],\"rating\":4.88,\"linkedin_url\":null,\"is_spam\":false,\"avatar_url\":\"/avatars/10082/thumb/stream.17678.0\",\"talk_count\":2,\"personal_website\":\"http://www.theabsentmindedcoder.com\",\"location\":\"Houston, TX\",\"created_at\":\"2010/10/08 05:23:19 +0000\"}"
+    http_version: "1.1"

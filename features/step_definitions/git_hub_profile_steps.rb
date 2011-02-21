@@ -1,8 +1,10 @@
 When /^I synch my GitHub account$/ do
-  visit new_git_hub_profile_path(:username => @profile.username)
-  fill_in "git_hub_profile_username", :with => 'rookieone'
-  click_button "Synch"
-  And %Q{I should be redirected}
+  VCR.use_cassette("github", :record => :new_episodes) do
+    visit new_git_hub_profile_path(:username => @profile.username)
+    fill_in "git_hub_profile_username", :with => 'rookieone'
+    click_button "Synch"
+    And %Q{I should be redirected}
+  end
 end
 
 Then /^I should have a GitHub profile$/ do

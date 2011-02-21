@@ -1,8 +1,10 @@
 When /^I synch my StackOverflow account$/ do
-  visit new_stack_overflow_profile_path(:username => @profile.username)
-  fill_in "stack_overflow_profile_stack_overflow_id", :with => '60336'
-  click_button "Synch"
-  And %Q{I should be redirected}
+  VCR.use_cassette("stack_overflow", :record => :all) do
+    visit new_stack_overflow_profile_path(:username => @profile.username)
+    fill_in "stack_overflow_profile_stack_overflow_id", :with => '60336'
+    click_button "Synch"
+    And %Q{I should be redirected}
+  end
 end
 
 Then /^I should have a StackOverflow profile$/ do

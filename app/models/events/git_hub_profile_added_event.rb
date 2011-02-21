@@ -1,4 +1,4 @@
-class GitHubProfileAddedEvent < Event
+class GitHubProfileAddedEvent < ProfileEvent
 
   referenced_in :git_hub_profile, :inverse_of => :events
 
@@ -11,7 +11,7 @@ class GitHubProfileAddedEvent < Event
   end
 
   def set_info
-    self.public = true
+    self.is_public = true
     self.category = "Code"
   end
 

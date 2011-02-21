@@ -1,8 +1,10 @@
 %li
   .item_pic
-    - if job.company.logo.nil?
+    - if job.company.nil?
       = image_tag "experience.png"
-    - else 
+    - elsif job.company.logo.nil?
+      = image_tag "experience.png"
+    - else
       = image_tag job.company.logo.url
   .item_info
     .item_title
