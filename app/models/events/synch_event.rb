@@ -1,5 +1,4 @@
 class SynchEvent < Event
-
   referenced_in :profile, :inverse_of => :events
 
   def do_work

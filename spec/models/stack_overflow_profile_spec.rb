@@ -4,10 +4,11 @@ describe StackOverflowProfile do
   
   describe "synch" do
     before(:each) do
-      @profile = Profile.new
-      @so_profile = StackOverflowProfile.new(:stack_overflow_id => 60336)
-      @profile.stack_overflow_profile = @so_profile
-      @so_profile.synch!
+      @profile = Factory.create(:profile)
+      @so_profile = StackOverflowProfile.create(:stack_overflow_id => 60336, :profile => @profile)
+      VCR.use_cassette("stack_overflow", :record => :new_episodes) do
+        @so_profile.synch!
+      end
     end
     
     it { @so_profile.reputation.should > 0 }

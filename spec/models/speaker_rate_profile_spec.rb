@@ -5,10 +5,10 @@ describe SpeakerRateProfile do
   describe "sync" do
     before(:each) do
       @profile = Factory.create(:profile) 
-      @speaker_rate_profile = SpeakerRateProfile.new(:speaker_rate_id => 10082)
-      @profile.speaker_rate_profile = @speaker_rate_profile
-      @profile.save!
-      @speaker_rate_profile.sync!
+      @speaker_rate_profile = SpeakerRateProfile.create(:speaker_rate_id => 10082, :profile => @profile)
+      VCR.use_cassette("speaker_rate", :record => :new_episodes) do
+        @speaker_rate_profile.synch!
+      end
     end
     
     it { @speaker_rate_profile.url.should_not be_nil }

@@ -11,6 +11,11 @@ require 'json'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+VCR.config do |c|
+  c.cassette_library_dir = 'specs/vcr_cassettes'
+  c.stub_with :fakeweb
+end
+
 RSpec.configure do |config|
   config.mock_with :mocha
 

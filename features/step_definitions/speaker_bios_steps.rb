@@ -5,5 +5,5 @@ end
 
 Then /^I should have a speaker bio$/ do
   profile = Profile.find(@profile.id)
-  profile.speaker_bio.should == "My speaker bio"
+  profile.speaker_profile.speaker_bio.should == "My speaker bio"
 end

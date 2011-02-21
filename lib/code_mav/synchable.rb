@@ -12,6 +12,7 @@ module CodeMav
           event = Kernel.const_get(event_name).new
           event.subject_class_name = self.class.to_s
           event.subject_id = self.id
+          event.profile = self.profile
           event.send("#{self.class.to_s.underscore}=", self)
           event.save
         end

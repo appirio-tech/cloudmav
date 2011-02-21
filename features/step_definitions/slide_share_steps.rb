@@ -1,8 +1,10 @@
 When /^I synch my SlideShare account$/ do
-  visit new_slide_share_profile_path(:username => @profile.username)
-  fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
-  click_button "Synch"
-  And %Q{I should be redirected}
+  VCR.use_cassette("slide_share", :record => :new_episodes) do
+    visit new_slide_share_profile_path(:username => @profile.username)
+    fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
+    click_button "Synch"
+    And %Q{I should be redirected}
+  end
 end
 
 Then /^I should have a SlideShare profile$/ do
@@ -11,10 +13,12 @@ Then /^I should have a SlideShare profile$/ do
 end
 
 Given /^I have synched my SlideShare account$/ do
-  visit new_slide_share_profile_path(:username => @profile.username)
-  fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
-  click_button "Synch"
-  And %Q{I should be redirected}
+  VCR.use_cassette("slide_share", :record => :new_episodes) do
+    visit new_slide_share_profile_path(:username => @profile.username)
+    fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
+    click_button "Synch"
+    And %Q{I should be redirected}
+  end
 end
 
 Then /^I should not have duplicate talks from SlideShare$/ do
