@@ -5,10 +5,10 @@ describe SlideShareProfile do
   describe "sync" do
     before(:each) do
       @profile = Factory.create(:profile) 
-      @slide_share_profile = SlideShareProfile.new(:slide_share_username => "rookieone")
-      @profile.slide_share_profile = @slide_share_profile
-      @profile.save!
-      @slide_share_profile.sync!
+      @slide_share_profile = SlideShareProfile.create(:slide_share_username => "rookieone", :profile => @profile)
+      VCR.use_cassette("slide_share", :record => :new_episodes) do
+        @slide_share_profile.synch!
+      end
     end
     
     it { @slide_share_profile.url.should_not be_nil }
