@@ -1,7 +1,7 @@
 require 'net/http'
 require 'json'
 
-class GitHubProfileSynchEvent < Event
+class GitHubProfileSynchEvent < SynchEvent
   referenced_in :git_hub_profile, :inverse_of => :events
 
   def do_work
