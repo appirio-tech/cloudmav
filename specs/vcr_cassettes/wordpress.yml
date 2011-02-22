@@ -1,0 +1,750 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://claudiolassala.wordpress.com:80/feed/
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx
+      date: 
+      - Tue, 22 Feb 2011 15:35:35 GMT
+      content-type: 
+      - text/xml; charset=UTF-8
+      transfer-encoding: 
+      - chunked
+      x-hacker: 
+      - If you're reading this, you should visit automattic.com/jobs and apply to join the fun, mention this header.
+      x-pingback: 
+      - http://claudiolassala.wordpress.com/xmlrpc.php
+      last-modified: 
+      - Tue, 22 Feb 2011 12:58:33 GMT
+      etag: 
+      - "\"4d4fd38efa6dc1ef8037a824fa37e040\""
+      x-nc: 
+      - HIT luv 45
+    body: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\
+      <rss version=\"2.0\"\n\
+      \txmlns:content=\"http://purl.org/rss/1.0/modules/content/\"\n\
+      \txmlns:wfw=\"http://wellformedweb.org/CommentAPI/\"\n\
+      \txmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n\
+      \txmlns:atom=\"http://www.w3.org/2005/Atom\"\n\
+      \txmlns:sy=\"http://purl.org/rss/1.0/modules/syndication/\"\n\
+      \txmlns:slash=\"http://purl.org/rss/1.0/modules/slash/\"\n\
+      \txmlns:georss=\"http://www.georss.org/georss\" xmlns:geo=\"http://www.w3.org/2003/01/geo/wgs84_pos#\" xmlns:media=\"http://search.yahoo.com/mrss/\"\n\
+      \t>\n\n\
+      <channel>\n\
+      \t<title>Claudio Lassala&#039;s Blog</title>\n\
+      \t<atom:link href=\"http://claudiolassala.wordpress.com/feed/\" rel=\"self\" type=\"application/rss+xml\" />\n\
+      \t<link>http://claudiolassala.wordpress.com</link>\n\
+      \t<description>Why do we do this again...?</description>\n\
+      \t<lastBuildDate>Tue, 22 Feb 2011 12:58:33 +0000</lastBuildDate>\n\
+      \t<language>en</language>\n\
+      \t<sy:updatePeriod>hourly</sy:updatePeriod>\n\
+      \t<sy:updateFrequency>1</sy:updateFrequency>\n\
+      \t<generator>http://wordpress.com/</generator>\n\
+      <cloud domain='claudiolassala.wordpress.com' port='80' path='/?rsscloud=notify' registerProcedure='' protocol='http-post' />\n\
+      <image>\n\
+      \t\t<url>http://s2.wp.com/i/buttonw-com.png</url>\n\
+      \t\t<title>Claudio Lassala&#039;s Blog</title>\n\
+      \t\t<link>http://claudiolassala.wordpress.com</link>\n\
+      \t</image>\n\
+      \t<atom:link rel=\"search\" type=\"application/opensearchdescription+xml\" href=\"http://claudiolassala.wordpress.com/osd.xml\" title=\"Claudio Lassala&#039;s Blog\" />\n\
+      \t<atom:link rel='hub' href='http://claudiolassala.wordpress.com/?pushpress=hub'/>\n\
+      \t\t<item>\n\
+      \t\t<title>Speaking at the Agile.NET conference this week</title>\n\
+      \t\t<link>http://claudiolassala.wordpress.com/2011/02/21/speaking-at-the-agile-net-conference-this-week/</link>\n\
+      \t\t<comments>http://claudiolassala.wordpress.com/2011/02/21/speaking-at-the-agile-net-conference-this-week/#comments</comments>\n\
+      \t\t<pubDate>Mon, 21 Feb 2011 17:20:13 +0000</pubDate>\n\
+      \t\t<dc:creator>claudiolassala</dc:creator>\n\
+      \t\t\t\t<category><![CDATA[Presentations]]></category>\n\
+      \t\t<category><![CDATA[Software Development]]></category>\n\n\
+      \t\t<guid isPermaLink=\"false\">https://claudiolassala.wordpress.com/2011/02/21/speaking-at-the-agile-net-conference-this-week/</guid>\n\
+      \t\t<description><![CDATA[I\xE2\x80\x99ll be speaking at the Agile.NET in Houston this coming Friday, February 25th. I\xE2\x80\x99ll be doing one session: Beyond the Core Concepts of OOP \xE2\x80\x93 SOLID You\xE2\x80\x99ve been learning about the core concepts of Object-Oriented Programming (OOP) for quite some time now: Abstraction, Encapsulation, Inheritance, and Polymorphism. When you thought you knew it all, all [...]<img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=507&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></description>\n\
+      \t\t\t<content:encoded><![CDATA[<p>I\xE2\x80\x99ll be speaking at the <a href=\"http://www.agiledotnet.com/\" target=\"_blank\">Agile.NET</a> in Houston this coming Friday, February 25th. I\xE2\x80\x99ll be doing one session:</p>\n\
+      <p><strong>Beyond the Core Concepts of OOP \xE2\x80\x93 SOLID</strong>\n\
+      <p><em>You\xE2\x80\x99ve been learning about the core concepts of Object-Oriented Programming (OOP) for quite some time now: Abstraction, Encapsulation, Inheritance, and Polymorphism. When you thought you knew it all, all of a sudden the cool kids are talking about all these principles such as \xE2\x80\x9CSingle Responsibility Principle\xE2\x80\x9D, \xE2\x80\x9COpen/Closed Principle\xE2\x80\x9D, \xE2\x80\x9CDependency Inversion Principle\xE2\x80\x9D, as well as Inversion of Control containers, etc. This session presents those concepts so the attendees can understand what they are and start using right away.</em>\n\
+      <p>I\xE2\x80\x99m looking forward to it. There will be good content there, and I\xE2\x80\x99ll be seeing some old buddies.</p>\n\
+      <p>Hope to see some of you there! <img style=\"border-style:none;\" class=\"wlEmoticon wlEmoticon-smile\" alt=\"Smile\" src=\"http://claudiolassala.files.wordpress.com/2011/02/wlemoticon-smile.png?w=620\"></p>\n\
+      <p>QUICK UPDATE: you can get 25% off the $49.99 price with the code <strong>ADN-H</strong>.</p>\n\
+      <br />  <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gocomments/claudiolassala.wordpress.com/507/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/comments/claudiolassala.wordpress.com/507/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godelicious/claudiolassala.wordpress.com/507/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/delicious/claudiolassala.wordpress.com/507/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gofacebook/claudiolassala.wordpress.com/507/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/facebook/claudiolassala.wordpress.com/507/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gotwitter/claudiolassala.wordpress.com/507/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/twitter/claudiolassala.wordpress.com/507/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gostumble/claudiolassala.wordpress.com/507/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/stumble/claudiolassala.wordpress.com/507/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godigg/claudiolassala.wordpress.com/507/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/digg/claudiolassala.wordpress.com/507/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/goreddit/claudiolassala.wordpress.com/507/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/reddit/claudiolassala.wordpress.com/507/\" /></a> <img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=507&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></content:encoded>\n\
+      \t\t\t<wfw:commentRss>http://claudiolassala.wordpress.com/2011/02/21/speaking-at-the-agile-net-conference-this-week/feed/</wfw:commentRss>\n\
+      \t\t<slash:comments>0</slash:comments>\n\
+      \t\n\
+      \t\t<media:content url=\"http://1.gravatar.com/avatar/1ec317f57c98711dbdafbc543691b4e7?s=96&#38;d=identicon&#38;r=G\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">claudiolassala</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/02/wlemoticon-smile.png\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">Smile</media:title>\n\
+      \t\t</media:content>\n\
+      \t</item>\n\
+      \t\t<item>\n\
+      \t\t<title>Material from my talk at the C# UG in Houston on February 15th 2011</title>\n\
+      \t\t<link>http://claudiolassala.wordpress.com/2011/02/17/material-from-my-talk-at-the-c-ug-in-houston-on-february-15th-2011/</link>\n\
+      \t\t<comments>http://claudiolassala.wordpress.com/2011/02/17/material-from-my-talk-at-the-c-ug-in-houston-on-february-15th-2011/#comments</comments>\n\
+      \t\t<pubDate>Thu, 17 Feb 2011 14:59:33 +0000</pubDate>\n\
+      \t\t<dc:creator>claudiolassala</dc:creator>\n\
+      \t\t\t\t<category><![CDATA[Presentations]]></category>\n\
+      \t\t<category><![CDATA[Software Development]]></category>\n\n\
+      \t\t<guid isPermaLink=\"false\">https://claudiolassala.wordpress.com/2011/02/17/material-from-my-talk-at-the-c-ug-in-houston-on-february-15th-2011/</guid>\n\
+      \t\t<description><![CDATA[I\xE2\x80\x99d like to thank everybody who came to my talk on Tuesday, at the C# user group in Houston. It was a lot of fun. The topic was: Improving My C# Claudio has been both learning and sharing several things at the Virtual Brown Bag (http://virtualbrownbag.com), and he has compiled a list of useful things [...]<img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=505&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></description>\n\
+      \t\t\t<content:encoded><![CDATA[<p>I\xE2\x80\x99d like to thank everybody who came to my talk on Tuesday, at the <a href=\"http://houstoncsusergroup.wordpress.com/2011/02/09/february-advanced-c-sig/\">C# user group in Houston</a>. It was a lot of fun. The topic was:</p>\n\
+      <p><strong>Improving My C#</strong></p>\n\
+      <p><em>Claudio has been both learning and sharing several things at the Virtual Brown Bag (</em><a href=\"http://virtualbrownbag.com/\"><em>http://virtualbrownbag.com</em></a><em>), and he has compiled a list of useful things that have improved his C#, including writing better tests with xUnit/SubSpec, using Mercurial as a source control system, using the dynamic features of C# 4, some refactorings, and a couple of other things.</em></p>\n\
+      <p>I\xE2\x80\x99ve uploaded the session material to SpeakerRate. Go there to download it, and please, <a href=\"http://speakerrate.com/talks/5624-improving-my-c\" target=\"_blank\">rate the session</a> and give me some feedback so I can improve this talk for next time.</p>\n\
+      <br />  <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gocomments/claudiolassala.wordpress.com/505/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/comments/claudiolassala.wordpress.com/505/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godelicious/claudiolassala.wordpress.com/505/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/delicious/claudiolassala.wordpress.com/505/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gofacebook/claudiolassala.wordpress.com/505/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/facebook/claudiolassala.wordpress.com/505/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gotwitter/claudiolassala.wordpress.com/505/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/twitter/claudiolassala.wordpress.com/505/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gostumble/claudiolassala.wordpress.com/505/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/stumble/claudiolassala.wordpress.com/505/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godigg/claudiolassala.wordpress.com/505/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/digg/claudiolassala.wordpress.com/505/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/goreddit/claudiolassala.wordpress.com/505/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/reddit/claudiolassala.wordpress.com/505/\" /></a> <img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=505&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></content:encoded>\n\
+      \t\t\t<wfw:commentRss>http://claudiolassala.wordpress.com/2011/02/17/material-from-my-talk-at-the-c-ug-in-houston-on-february-15th-2011/feed/</wfw:commentRss>\n\
+      \t\t<slash:comments>0</slash:comments>\n\
+      \t\n\
+      \t\t<media:content url=\"http://1.gravatar.com/avatar/1ec317f57c98711dbdafbc543691b4e7?s=96&#38;d=identicon&#38;r=G\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">claudiolassala</media:title>\n\
+      \t\t</media:content>\n\
+      \t</item>\n\
+      \t\t<item>\n\
+      \t\t<title>How I&#8217;m Using Evernote</title>\n\
+      \t\t<link>http://claudiolassala.wordpress.com/2011/01/10/how-im-using-evernote/</link>\n\
+      \t\t<comments>http://claudiolassala.wordpress.com/2011/01/10/how-im-using-evernote/#comments</comments>\n\
+      \t\t<pubDate>Mon, 10 Jan 2011 15:41:46 +0000</pubDate>\n\
+      \t\t<dc:creator>claudiolassala</dc:creator>\n\
+      \t\t\t\t<category><![CDATA[Productivity]]></category>\n\n\
+      \t\t<guid isPermaLink=\"false\">https://claudiolassala.wordpress.com/?p=503</guid>\n\
+      \t\t<description><![CDATA[I\xE2\x80\x99ve been using Evernote for about a year and a half now. I have shared at the Virtual Brown Bag how I\xE2\x80\x99m currently using it. Since I got great feedback from that, I\xE2\x80\x99ve incorporated it into my \xE2\x80\x9Cproductivity\xE2\x80\x9D session, and I figured I should write a post to document it. I\xE2\x80\x99ve been changing the way [...]<img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=503&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></description>\n\
+      \t\t\t<content:encoded><![CDATA[<p>I\xE2\x80\x99ve been using <a href=\"http://www.evernote.com\" target=\"_blank\">Evernote</a> for about a year and a half now. I have shared at the <a href=\"http://www.virtualbrownbag.com\" target=\"_blank\">Virtual Brown Bag</a> <a href=\"https://sites.google.com/site/vbbwiki/main_page/2010-09-02\" target=\"_blank\">how I\xE2\x80\x99m currently using it</a>. Since I got great feedback from that, I\xE2\x80\x99ve incorporated it into my \xE2\x80\x9Cproductivity\xE2\x80\x9D session, and I figured I should write a post to document it. I\xE2\x80\x99ve been changing the way I use it over time, as I try out different things, so I\xE2\x80\x99ll post updates in case I make changes that I feel work best for me.</p>\n\
+      <h2>What the heck is Evernote?!</h2>\n\
+      <p>I like the succinct explanation on their site:</p>\n\
+      <ul>\n\
+      <li>Capture anything</li>\n\
+      <li>Access anywhere</li>\n\
+      <li>Find things fast</li>\n\
+      </ul>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/whatsevernote.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"whatsevernote\" src=\"http://claudiolassala.files.wordpress.com/2011/01/whatsevernote_thumb.jpg?w=616&#038;h=367\" border=\"0\" alt=\"whatsevernote\" width=\"616\" height=\"367\" /></a></p>\n\
+      <p>Very simple concept: I can capture anything (text notes, audio notes, photos, emails, web clips, etc.) using a variety of clients (Windows/Mac, browser-based interface, iPhone, iPad, Android\xE2\x80\xA6), access it anywhere (in any of those devices), and find things really fast.</p>\n\
+      <p>I\xE2\x80\x99ve always been terrible at taking notes and finding them later. Pencil and paper have never worked for me. Electronically, I have tried from the old-fashioned (but still effective) text file sitting on my desktop, to Microsoft OneNote. I\xE2\x80\x99ve used OneNote for awhile, but the fact I could only used it on my computer sort of ruined things for me, as I wanted to be able to use it also on my PocketPC at the time. I\xE2\x80\x99ve also tried to use MS Outlook for some time, loosely following the recommendations from <a onclick=\"return mugicPopWin(this,event);\" oncontextmenu=\"mugicRightClick(this);\" href=\"http://www.amazon.com/Take-Back-Your-Life-Microsoft/dp/0735623430/ref=sr_1_1?ie=UTF8&amp;qid=1294295023&amp;sr=8-1\" target=\"_blank\">Take Your Life Back</a> (which in turn describes how to use MS Outlook to implement <a onclick=\"return mugicPopWin(this,event);\" oncontextmenu=\"mugicRightClick(this);\" href=\"http://www.amazon.com/Getting-Things-Done-Stress-Free-Productivity/dp/0142000280/ref=sr_1_1?ie=UTF8&amp;qid=1294295113&amp;sr=8-1\" target=\"_blank\">Getting Things Done</a>).</p>\n\
+      <p>When Evernote first came out as a beta, I looked into it and thought it was going to be an awesome thing. Once they\xE2\x80\x99ve stabilized the platform, I started using it with a free account, and it didn\xE2\x80\x99t take long for me to switch to a premium account.</p>\n\
+      <h2>Capture Anything</h2>\n\
+      <p>How often do we \xE2\x80\x9Ckeep things at the back of our minds\xE2\x80\x9D? I know I used to do a lot of that, and invariably, things get lost. I\xE2\x80\x99ve been dumping pretty much everything into Evernote: quick ideas, things I\xE2\x80\x99d like to try, articles I should read, notes about books I\xE2\x80\x99ve read, meeting notes, pictures of whiteboards, links, audio notes of all sorts, etc. I then organize my notes daily, so I can review them and maybe enhance them after having sat on the idea for a few hours, and also so that I can organize them by applying \xE2\x80\x9Ctags\xE2\x80\x9D and moving them into \xE2\x80\x9Cnotebooks\xE2\x80\x9D; that way, I have great chances to find my notes later as fast as possible.</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-notetypes.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"evernote-notetypes\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-notetypes_thumb.jpg?w=641&#038;h=481\" border=\"0\" alt=\"evernote-notetypes\" width=\"641\" height=\"481\" /></a></p>\n\
+      <p>I will walk you through some of the things I\xE2\x80\x99ve been capturing\xE2\x80\xA6</p>\n\
+      <h3>Capturing Interesting Things Found on Twitter</h3>\n\
+      <p>Whenever I\xE2\x80\x99m in some place waiting for something (maybe waiting in line at the grocery store, or waiting for somebody somewhere\xE2\x80\xA6), I pick up my iPhone, run my twitter client (I use <a href=\"http://www.echofon.com/\" target=\"_blank\">Echofon</a>), and do some speed reading through the twitter stream. If I\xE2\x80\xA6</p>\n\
+      <ol>\n\
+      <li>find something that seems interesting</li>\n\
+      <li>I \xE2\x80\x9Cretweet\xE2\x80\x9D it\xE2\x80\xA6</li>\n\
+      <li>\xE2\x80\xA6as a direct message to my Evernote alias (D myen)</li>\n\
+      <li>which sends that tweet straight to my Evernote account</li>\n\
+      </ol>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/evernotetweet.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"evernotetweet\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evernotetweet_thumb.jpg?w=624&#038;h=312\" border=\"0\" alt=\"evernotetweet\" width=\"624\" height=\"312\" /></a></p>\n\
+      <p>That has been a great source for me to have things to share at the Virtual Brown Bag: as I revisit the tweet later and gather more information about it, I apply a \xE2\x80\x9Cbrown bag\xE2\x80\x9D tag to it. When we\xE2\x80\x99re about to start a Virtual Brown Bag, I filter my notes by that tag, so I always have a pool of things I could share at the meeting.</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-brownbag.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"evernote-brownbag\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-brownbag_thumb.jpg?w=640&#038;h=475\" border=\"0\" alt=\"evernote-brownbag\" width=\"640\" height=\"475\" /></a></p>\n\
+      <p>Of course, I capture those tweets in any of the twitter clients I use, since always it\xE2\x80\x99s necessary is to send a direct message to <em>myen</em> (D myen). Just for completeness sake, I use <a href=\"http://www.echofon.com/\" target=\"_blank\">Echofon</a> on the iPhone, <a onclick=\"return mugicPopWin(this,event);\" oncontextmenu=\"mugicRightClick(this);\" href=\"http://itunes.apple.com/us/app/twitter/id333903271?mt=8\" target=\"_blank\">Twitter client</a> on the iPad, and <a href=\"http://www.tweetdeck.com\" target=\"_blank\">TweetDeck</a> on the PC.</p>\n\
+      <h3>Capturing Interesting Blog Posts</h3>\n\
+      <p>Similarly to tweets, I capture blog posts for later reading (and/or sharing at the Virtual Brown Bag). On the iPhone, I use <a href=\"http://reederapp.com/\" target=\"_blank\">Reeder</a> as my blog reader. Whenever I\xE2\x80\xA6</p>\n\
+      <ol>\n\
+      <li>Find an interesting post</li>\n\
+      <li>I mail the article\xE2\x80\xA6</li>\n\
+      <li>\xE2\x80\xA6to my Evernote special email alias (when you sign up for Evernote, you\xE2\x80\x99re given a special email alias; any email sent to that alias is automatically put into your Evernote account)</li>\n\
+      </ol>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-blog.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border:0;\" title=\"evernote-blog\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-blog_thumb.jpg?w=634&#038;h=320\" border=\"0\" alt=\"evernote-blog\" width=\"634\" height=\"320\" /></a></p>\n\
+      <p>I use Google Reader on my PC to follow blogs, and there I follow the same process: if I find an interesting post, I email it to my Evernote account right from there:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-googlereader.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"evernote-googlereader\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-googlereader_thumb.jpg?w=629&#038;h=409\" border=\"0\" alt=\"evernote-googlereader\" width=\"629\" height=\"409\" /></a></p>\n\
+      <h3>Capturing Emails in MS Outlook</h3>\n\
+      <p>The Evernote Windows client adds an \xE2\x80\x9CAdd to Evernote\xE2\x80\x9D button to MS Outlook, so one can send things from Outlook straight into Evernote.</p>\n\
+      <h3>Capturing Webclips or Entire Pages</h3>\n\
+      <p>I used to use a free program called Onfolio to capture either web clips or entire pages a couple of years ago. That was a great tool to save that content and take it with me offline. Also, if the page or website ever went away, I\xE2\x80\x99d still have that content with me. However, at some point Microsoft acquired Onfolio, and I *think* they\xE2\x80\x99ve buried it under one of their \xE2\x80\x9CLive\xE2\x80\x9D initiatives, and I haven\xE2\x80\x99t heard much about it ever since.</p>\n\
+      <p>I\xE2\x80\x99ve experienced a little bit with <a href=\"http://www.instapaper.com/u\" target=\"_blank\">Instapaper</a> for a few months, but I just didn\xE2\x80\x99t feel like paying 5 bucks for their iPad app, when I already have an awesome Evernote app that gives me pretty much the same functionality and more.</p>\n\
+      <p>Evernote has integration with all the major web browsers out there. It adds an \xE2\x80\x9CAdd to Evernote\xE2\x80\x9D button to the browser; when you push it, it either sends the selected clip on the page to Evernote, or it sends the entire page if you want.</p>\n\
+      <p>I use the awesome <a href=\"http://lab.arc90.com/experiments/readability/\" target=\"_blank\">Readability</a> bookmarklet to clean up the page I\xE2\x80\x99m looking at, and then I send it to Evernote to either read later or store it for future reference.</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/evernotereadlater.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"evernotereadlater\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evernotereadlater_thumb.jpg?w=653&#038;h=265\" border=\"0\" alt=\"evernotereadlater\" width=\"653\" height=\"265\" /></a></p>\n\
+      <h3>Capturing Whiteboard</h3>\n\
+      <p>I always walk to my whiteboard to write notes, ideas, draw diagrams to put some things out of my head, and stuff like that. As soon as I\xE2\x80\x99m done doing so, I pick up my iPhone, take a snapshot of the whiteboard, and send it straight to Evernote.</p>\n\
+      <h3>Capturing Ideas for Gifts</h3>\n\
+      <p>I\xE2\x80\x99ve been terrible at trying to remember what would make good gifts for friends and family. Now, for instance, if I\xE2\x80\x99m somewhere with a friend or relative, and he or she seems to really like something around (a bottle of wine, a sunglass, a perfume\xE2\x80\xA6 whatever), I capture a snapshot of the thing, and tag it as \xE2\x80\x9Cgift ideas\xE2\x80\x9D in Evernote. I started doing this just recently, but it\xE2\x80\x99s been working out really well.</p>\n\
+      <h3>Capturing Information About Location of Places</h3>\n\
+      <p>Sometimes I drive by a place and think \xE2\x80\x9Cdang, that place is cool\xE2\x80\xA6 I should come here when I get a chance\xE2\x80\x9D. Of course, later I either forget about it, or forget where the place was. Guess what? Now I just take a snapshot of the place. Creating a note in Evernote on a mobile device adds geolocation coordinates to the note, so later I can pull the note up, show it on the map, and get directions to it.</p>\n\
+      <p>I\xE2\x80\x99m starting to do that with different places I\xE2\x80\x99m driving by, such as skateparks, RC tracks (or any place that\xE2\x80\x99d be cool to take my RC car to), restaurants, etc.</p>\n\
+      <h3>Capturing Audio Notes</h3>\n\
+      <p>I\xE2\x80\x99ve been using my Evernote on my iPhone to capture a couple types of audio notes:</p>\n\
+      <ul>\n\
+      <li>When I\xE2\x80\x99m driving around and can\xE2\x80\x99t stop to take notes, but really need to remember something later, I just hit the new audio note button in Evernote and record the thing; later, I process my notes and take appropriate action;</li>\n\
+      <li>When I\xE2\x80\x99m at band practice and new song ideas, arrangements, etc, come up, I create an audio note, and tag it accordingly (\xE2\x80\x9Criff\xE2\x80\x9D, \xE2\x80\x9Carrangement\xE2\x80\x9D, \xE2\x80\x9Clyrics\xE2\x80\x9D, \xE2\x80\x9Cmelody\xE2\x80\x9D, etc.);</li>\n\
+      </ul>\n\
+      <h3>Capturing Personal Documents</h3>\n\
+      <p>Before going on vacation to Brazil last year, I\xE2\x80\x99ve decided to scan all of my personal documents (credit cards, bank cards, insurance information such as cards, policies, photos of insured stuff, passports, drivers license, etc.) and put it on Evernote.</p>\n\
+      <p>The idea is: when you\xE2\x80\x99re on vacation with family and kids, there\xE2\x80\x99s lots of distractions that make it easy for you to lose your documents. At that moment, it\xE2\x80\x99s very hard to remember important information contained in your personal documents.\xC2\xA0 I also want to have that information handy because I usually need to look them up for a variety of reasons.</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-personaldocs.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"evernote-personaldocs\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-personaldocs_thumb.jpg?w=641&#038;h=478\" border=\"0\" alt=\"evernote-personaldocs\" width=\"641\" height=\"478\" /></a></p>\n\
+      <h3>Capturing License Keys</h3>\n\
+      <h3>Anytime I receive an email with license keys for whatever software, I send the whole email into Evernote, and tag it with \xE2\x80\x9Clicense key\xE2\x80\x9D. No more hassle looking those suckers up!</h3>\n\
+      <h3>Capturing Daily Log</h3>\n\
+      <p>I\xE2\x80\x99ve always had problems of this sort:</p>\n\
+      <ul>\n\
+      <li>\xE2\x80\x9C\xE2\x80\xA6have I called that company to tell about that problem\xE2\x80\xA6?\xE2\x80\x9D, or</li>\n\
+      <li>\xE2\x80\x9C\xE2\x80\xA6I remember I called them, but don\xE2\x80\x99t remember when\xE2\x80\xA6\xE2\x80\x9D, or</li>\n\
+      <li>\xE2\x80\x9C\xE2\x80\xA6I know I called them last week, but I don\xE2\x80\x99t remember who I talked to, or any important details of the conversation\xE2\x80\x9D, or</li>\n\
+      <li>\xE2\x80\x9C\xE2\x80\xA6I feel like I got a lot done last week, but I really can\xE2\x80\x99t remember what the heck I did\xE2\x80\xA6\xE2\x80\x9D</li>\n\
+      </ul>\n\
+      <p>Somebody once said, \xE2\x80\x9C<a href=\"http://lifehacker.com/5477231/it-didnt-happen-if-you-didnt-write-it-down\" target=\"_blank\">It didn\xE2\x80\x99t happen if you didn\xE2\x80\x99t write it down!</a>\xE2\x80\x9D. For the last 6 months or so I\xE2\x80\x99ve been keeping a brief daily log. Every day I create a new text note titled \xE2\x80\x9CYYYY-MM-DD\xE2\x80\x9D, and tag it \xE2\x80\x9Cdaily log\xE2\x80\x9D. In such a note, I enter things like:</p>\n\
+      <ul>\n\
+      <li>\xE2\x80\x9CCalled person X. Was told to call whoever else at this number: 999-999-9999\xE2\x80\x9D</li>\n\
+      <li>\xE2\x80\x9CImplemented this\xE2\x80\x9D</li>\n\
+      <li>\xE2\x80\x9CFound this bug on\xE2\x80\x9D</li>\n\
+      <li>etc\xE2\x80\xA6</li>\n\
+      </ul>\n\
+      <p>Next morning, I review that note to see if there\xE2\x80\x99s any actionable item I need to take care of, or maybe I need to create separate notes to provide more information about something. And then I start a new note for the new day.</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-dailylog.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"evernote-dailylog\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-dailylog_thumb.jpg?w=640&#038;h=480\" border=\"0\" alt=\"evernote-dailylog\" width=\"640\" height=\"480\" /></a></p>\n\
+      <h3>Capturing Session Notes</h3>\n\
+      <p>In the past, every time I was about to do a presentation, I\xE2\x80\x99d review my session material, and jot down some notes on a piece of paper. Or, maybe I\xE2\x80\x99d create a temporary text or doc file with my notes, which I\xE2\x80\x99d print out. I\xE2\x80\x99d then do my presentation, use my notes, and throw it away. Then comes a time I need to do the same presentation again, guess what? Yeah, I\xE2\x80\x99d create my notes all over again. I know, very stupid.\xC2\xA0 <img class=\"wlEmoticon wlEmoticon-sadsmile\" style=\"border-style:none;\" src=\"http://claudiolassala.files.wordpress.com/2011/01/wlemoticon-sadsmile.png?w=620\" alt=\"Sad smile\" /></p>\n\
+      <p>Of course now I\xE2\x80\x99m putting my all my session notes into Evernote, tagged as \xE2\x80\x9Cpresentation\xE2\x80\x9D. I put text notes, snapshots, steps I want to make sure I follow, etc. It\xE2\x80\x99s very easy to lose the train of thought in the middle of a presentation when you get interruptions, things that don\xE2\x80\x99t go right, etc. That\xE2\x80\x99s why I like having a note with my general workflow for the session.</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-sessionnotes.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"evernote-sessionnotes\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-sessionnotes_thumb.jpg?w=638&#038;h=476\" border=\"0\" alt=\"evernote-sessionnotes\" width=\"638\" height=\"476\" /></a></p>\n\
+      <h3>Capturing Song Lyrics, Tabs, Chords\xE2\x80\xA6</h3>\n\
+      <p>I usually remember how to play the songs I write pretty well, but have a time remembering anything else. When I pick up my acoustic guitar to just play some cover tunes for fun, I always have to look up lyrics, tabs, chords, etc. I\xE2\x80\x99m now adding that all to Evernote.</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-tabs.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"evernote-tabs\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-tabs_thumb.jpg?w=637&#038;h=475\" border=\"0\" alt=\"evernote-tabs\" width=\"637\" height=\"475\" /></a></p>\n\
+      <p>I understand there are iPhone/iPad apps out there that makes really easy to play along songs like that, but I rather have those things as simple notes that I can access on any of my devices whenever I want.</p>\n\
+      <h2>Access Anywhere<strong> </strong></h2>\n\
+      <p>I access my notes roughly\xE2\x80\xA6</p>\n\
+      <ul>\n\
+      <li>45% of the time on the PC (using the <a href=\"http://www.evernote.com/about/download/windows.php\" target=\"_blank\">Windows client</a>)</li>\n\
+      <li>30% off the time on the iPad</li>\n\
+      <li>20% of the time on the iPhone</li>\n\
+      <li>5% off the time on the PC using the browser-based client</li>\n\
+      </ul>\n\
+      <p>The rational for those numbers is:</p>\n\
+      <ul>\n\
+      <li>I\xE2\x80\x99m on average 8-10 hours a day in front of my computer, so it\xE2\x80\x99s a lot easier to use the Windows Client there;</li>\n\
+      <li>Most of the time I have my iPad with me, so that\xE2\x80\x99s what I use if I\xE2\x80\x99m not on the PC;</li>\n\
+      <li>I always have my iPhone with me any place I go, so that\xE2\x80\x99s what I use if I can\xE2\x80\x99t use either my PC or my iPad;</li>\n\
+      <li>And finally, if I happen to have nothing with me, but can get to a computer connected to the web, I can at least use the web-browser Evernote client (which is pretty good, by the way).</li>\n\
+      </ul>\n\
+      <h2>Find Things Fast</h2>\n\
+      <p>Back in the days when I was using MS Outlook to organize things, I\xE2\x80\x99d create several folders and deep levels of hierarchy, and put things into those folders accordingly. That was the only way I could have any hope to find stuff I was looking for. Nowadays, its search capabilities are certainly a lot better, but I don\xE2\x80\x99t really care, as I\xE2\x80\x99ve gone away from using emails and folder to organize my stuff.</p>\n\
+      <p>The organization and search features in Evernote allow me to find what I\xE2\x80\x99m looking for really fast.</p>\n\
+      <h3>Organizing Notes</h3>\n\
+      <p>In Evernote, I use the following to organize my notes so I can find them later:</p>\n\
+      <ul>\n\
+      <li><strong>Notebooks</strong>: think of them as folders. Even though there\xE2\x80\x99s support for several folders and hierarchies, I only use about a dozen, and I\xE2\x80\x99ll be reducing that number to probably 6 or 7. I also don\xE2\x80\x99t use a folder hierarchy; with the tagging system (see next), I don\xE2\x80\x99t currently have a need any more levels than that. Every new note goes straight to my \xE2\x80\x9CInbox\xE2\x80\x9D notebook, which I try to cleanup daily, by applying tags to notes and moving them to a more appropriate notebook. Some of the other notebooks I have are \xE2\x80\x9Cprojects\xE2\x80\x9D, \xE2\x80\x9Cnotes/references\xE2\x80\x9D, and \xE2\x80\x9Carchive\xE2\x80\x9D. I\xE2\x80\x99ve recently created a \xE2\x80\x9Cmusic\xE2\x80\x9D notebook (where I have those lyrics, tabs, chords, for songs that I play), which I\xE2\x80\x99ve set on my iPad to go offline, so I can access those notes anytime even if I don\xE2\x80\x99t have internet connection.</li>\n\
+      <li><strong>Tags</strong>: I create several tags, which I then apply to notes as appropriate. I have tags such as \xE2\x80\x9Cdaily log\xE2\x80\x9D, \xE2\x80\x9Cbrown bag\xE2\x80\x9D (for things I may share at the Virtual Brown Bag), \xE2\x80\x9Cbrown bag log\xE2\x80\x9D (for things that have been shared), \xE2\x80\x9Cread later\xE2\x80\x9D, \xE2\x80\x9Cwatch later\xE2\x80\x9D, specific projects, \xE2\x80\x9Clicense key\xE2\x80\x9D, \xE2\x80\x9Ctax report YYYY\xE2\x80\x9D (one for each year), \xE2\x80\x9Cgift ideas\xE2\x80\x9D, \xE2\x80\x9Ctablature\xE2\x80\x9D, \xE2\x80\x9Cchords\xE2\x80\x9D, \xE2\x80\x9Clyrics\xE2\x80\x9D, etc.</li>\n\
+      </ul>\n\
+      <h3>Searching For Notes</h3>\n\
+      <p>Notes can be found by typing something in the search box. By default, it\xE2\x80\x99ll look in the title and body of notes. You can also filter the notes being shown by clicking on a specific notebook, and/or specific tags:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-vbblog.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border:0;\" title=\"evernote-vbblog\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-vbblog_thumb.jpg?w=638&#038;h=473\" border=\"0\" alt=\"evernote-vbblog\" width=\"638\" height=\"473\" /></a></p>\n\
+      <p>Other criteria can be applied to the filter, based on attributes of notes, such as when the <a href=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-attributes.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;float:right;padding-top:0;border:0;\" title=\"evernote-attributes\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-attributes_thumb.jpg?w=186&#038;h=506\" border=\"0\" alt=\"evernote-attributes\" width=\"186\" height=\"506\" align=\"right\" /></a>note has been created or modified, what special kind of things it contains (images, audio, ink, attachment\xE2\x80\xA6), what\xE2\x80\x99s the source of the note (emailed to Evernote, Email, Mobile, etc.). If there\xE2\x80\x99s a search that I always perform with the same criteria, I can save that search, and access it later through the list of Saved Searches.</p>\n\
+      <p>For example, like I mentioned before, I create a daily note where I keep my log of activities for that day. Those notes are tagged with \xE2\x80\x9Cdaily log\xE2\x80\x9D, and I put them in my \xE2\x80\x9CArchive\xE2\x80\x9D notebook. I\xE2\x80\x99ve have a saved query (named \xE2\x80\x9CMonthly Log\xE2\x80\x9D) that shows me all my daily log notes created in the current month. I run that search when I need a refresher as to what I\xE2\x80\x99ve done in the month.</p>\n\
+      <p>Evernote defines searches with a special, simple, syntax, that can be typed directly into the search box as well. For instance, my \xE2\x80\x9CMonthly Log\xE2\x80\x9D search is defined like this:</p>\n\
+      <p><strong>notebook:Archive tag:&#8221;daily log&#8221; created:month</strong></p>\n\
+      <p>Check out the <a href=\"http://www.evernote.com/about/support/Evernote-Windows-Guide.pdf\" target=\"_blank\">Evernote for Windows User Guide</a> to learn more about how to perform more complex searches.</p>\n\
+      <p>Another saved search I have is one that shows me all the notes that don\xE2\x80\x99t have any tag. I use it because I prefer to have all notes tagged, which helps me filtering and finding faster later. Such a search can be simply defined like so:</p>\n\
+      <p><strong>-tag:*</strong></p>\n\
+      <p>It worth point out that Evernote finds stuff in images as well. One a note containing an image gets to the servers, it goes through an OCR process (Optical Character Recognition), and Evernote then indexes the image. When you perform a search later, it\xE2\x80\x99ll will find words in those images:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-attr.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border:0;\" title=\"evernote-attr\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-attr_thumb.jpg?w=636&#038;h=474\" border=\"0\" alt=\"evernote-attr\" width=\"636\" height=\"474\" /></a></p>\n\
+      <p>Finding words in a snapshot of source code like I showed above is simple, but Evernote also does a pretty good job at finding handwritten words, which comes in handy for me since I take lots of pictures of whiteboards:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/evrernote-ocr.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border:0;\" title=\"evrernote-ocr\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evrernote-ocr_thumb.jpg?w=642&#038;h=479\" border=\"0\" alt=\"evrernote-ocr\" width=\"642\" height=\"479\" /></a></p>\n\
+      <p>Evernote also searches inside PDF files, and I love it! In the past I\xE2\x80\x99ve also had trouble organizing and finding stuff in my PDF e-books. What I\xE2\x80\x99ve been doing now is just to add all my e-books to Evernote; I can now easily find which one of my e-books talk about whatever it is that I\xE2\x80\x99m searching for. Since I can get to it both in my iPhone and on my iPad, I have access to my library all the time!</p>\n\
+      <h3>What\xE2\x80\x99s free and what one has to pay for?</h3>\n\
+      <p>Here\xE2\x80\x99s a snapshot straight out of their website as of today:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-premium.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"evernote-premium\" src=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-premium_thumb.jpg?w=634&#038;h=478\" border=\"0\" alt=\"evernote-premium\" width=\"634\" height=\"478\" /></a></p>\n\
+      <p>Honestly, $45 bucks for something that has encouraged me to write such a lengthy blog post seems to be well worthy. I have paid a lot more money for things that didn\xE2\x80\x99t give me a 10th back. And no, I\xE2\x80\x99m not getting any kick back here.\xC2\xA0 <img class=\"wlEmoticon wlEmoticon-smile\" style=\"border-style:none;\" src=\"http://claudiolassala.files.wordpress.com/2011/01/wlemoticon-smile.png?w=620\" alt=\"Smile\" /></p>\n\
+      <h3>Where do I learn more?</h3>\n\
+      <p>I strongly recommend you download and read the <a href=\"http://www.evernote.com/about/support/Evernote-Windows-Guide.pdf\" target=\"_blank\">Evernote for Windows User Guide</a>. This is actually one of the PDF files I have in my Evernote, as I\xE2\x80\x99m always using that as a reference to learn some shortcuts and ways to customize searches.</p>\n\
+      <p>Also make sure to check out their <a href=\"http://blog.evernote.com/\" target=\"_blank\">blog and podcast</a>; it\xE2\x80\x99s a great way to learn a little more about some features that maybe you didn\xE2\x80\x99t know about, as well as learning about how other people are using Evernote for sorts of things.</p>\n\
+      <p>And finally, I\xE2\x80\x99ve also been keeping an eye on this feature called \xE2\x80\x9C<a href=\"http://www.evernote.com/about/trunk/\" target=\"_blank\">the Trunk</a>\xE2\x80\x9D: there I can find information about other applications and hardware that integrates with Evernote, such as <a href=\"http://www.evernote.com/about/trunk/items/dial2do?lang=en&amp;layout=default&amp;source=home\" target=\"_blank\">Voice2Note</a> (converts your voice notes to text) and the <a href=\"http://www.evernote.com/about/trunk/items/livescribe?lang=en&amp;layout=default&amp;source=home\" target=\"_blank\">Livescribe Smartpens</a>.</p>\n\
+      <h2>Summary</h2>\n\
+      <p>Unloading stuff from my mind into Evernote has been great. I used to try to keep everything in my mind, and of course, I\xE2\x80\x99d keep forgetting important things. Now I don\xE2\x80\x99t even bother: just dump into Evernote, and look for it when I need it.</p>\n\
+      <p>Do you use Evernote? Let me know how you use it. As I\xE2\x80\x99ve mentioned before, I keep looking for new things or different ways to optimize how I use this tool.</p>\n\
+      <br />  <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gocomments/claudiolassala.wordpress.com/503/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/comments/claudiolassala.wordpress.com/503/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godelicious/claudiolassala.wordpress.com/503/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/delicious/claudiolassala.wordpress.com/503/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gofacebook/claudiolassala.wordpress.com/503/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/facebook/claudiolassala.wordpress.com/503/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gotwitter/claudiolassala.wordpress.com/503/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/twitter/claudiolassala.wordpress.com/503/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gostumble/claudiolassala.wordpress.com/503/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/stumble/claudiolassala.wordpress.com/503/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godigg/claudiolassala.wordpress.com/503/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/digg/claudiolassala.wordpress.com/503/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/goreddit/claudiolassala.wordpress.com/503/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/reddit/claudiolassala.wordpress.com/503/\" /></a> <img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=503&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></content:encoded>\n\
+      \t\t\t<wfw:commentRss>http://claudiolassala.wordpress.com/2011/01/10/how-im-using-evernote/feed/</wfw:commentRss>\n\
+      \t\t<slash:comments>6</slash:comments>\n\
+      \t\n\
+      \t\t<media:content url=\"http://1.gravatar.com/avatar/1ec317f57c98711dbdafbc543691b4e7?s=96&#38;d=identicon&#38;r=G\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">claudiolassala</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/whatsevernote_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">whatsevernote</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-notetypes_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evernote-notetypes</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evernotetweet_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evernotetweet</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-brownbag_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evernote-brownbag</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-blog_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evernote-blog</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-googlereader_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evernote-googlereader</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evernotereadlater_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evernotereadlater</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-personaldocs_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evernote-personaldocs</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-dailylog_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evernote-dailylog</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/wlemoticon-sadsmile.png\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">Sad smile</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-sessionnotes_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evernote-sessionnotes</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-tabs_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evernote-tabs</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-vbblog_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evernote-vbblog</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-attributes_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evernote-attributes</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-attr_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evernote-attr</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evrernote-ocr_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evrernote-ocr</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/evernote-premium_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">evernote-premium</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2011/01/wlemoticon-smile.png\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">Smile</media:title>\n\
+      \t\t</media:content>\n\
+      \t</item>\n\
+      \t\t<item>\n\
+      \t\t<title>What Does Your Work Environment Look Like?</title>\n\
+      \t\t<link>http://claudiolassala.wordpress.com/2010/12/02/what-does-your-work-environment-look-like/</link>\n\
+      \t\t<comments>http://claudiolassala.wordpress.com/2010/12/02/what-does-your-work-environment-look-like/#comments</comments>\n\
+      \t\t<pubDate>Thu, 02 Dec 2010 15:28:18 +0000</pubDate>\n\
+      \t\t<dc:creator>claudiolassala</dc:creator>\n\
+      \t\t\t\t<category><![CDATA[Productivity]]></category>\n\
+      \t\t<category><![CDATA[Software Development]]></category>\n\
+      \t\t<category><![CDATA[Pomodoro Techinique Evernote iPad]]></category>\n\n\
+      \t\t<guid isPermaLink=\"false\">https://claudiolassala.wordpress.com/2010/12/02/what-does-your-work-environment-look-like/</guid>\n\
+      \t\t<description><![CDATA[Don\xE2\x80\x99t you ever wonder what somebody else\xE2\x80\x99s work environment look like? I do. I enjoy seeing how people set up their work area, hoping that I can pick up some nice tips. I also notice that very often when we have somebody visiting our offices here (people attending training, clients, etc.), they are always poking [...]<img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=468&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></description>\n\
+      \t\t\t<content:encoded><![CDATA[<p>Don\xE2\x80\x99t you ever wonder what somebody else\xE2\x80\x99s work environment look like? I do. I enjoy seeing how people set up their work area, hoping that I can pick up some nice tips. I also notice that very often when we have somebody visiting our offices here (people attending training, clients, etc.), they are always poking around to check out our work areas.</p>\n\
+      <p>So here\xE2\x80\x99s what mine looks like:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/12/devenv.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"devenv\" border=\"0\" alt=\"devenv\" src=\"http://claudiolassala.files.wordpress.com/2010/12/devenv_thumb.jpg?w=616&#038;h=457\" width=\"616\" height=\"457\"></a> </p>\n\
+      <ol>\n\
+      <li>Dual monitors: yeah, baby! I love those big monitors in front of me! I absolutely hate when I have to work for too long on a setup where I don\xE2\x80\x99t have dual monitors (this is how I usually <a href=\"http://claudiolassala.wordpress.com/2007/04/30/organizing-windows-and-multiple-monitors/\" target=\"_blank\">organize VS for dual monitors</a>);\n\
+      <li>Laptop: I&#8217; always have my laptop there on the side for anything that are secondary to the work I\xE2\x80\x99m doing (research, TweetDeck, messenger, Windows Live Writer\xE2\x80\xA6). Depending on what it is that I\xE2\x80\x99m doing, I may <a href=\"http://www.hanselman.com/blog/LessVirtualMoreMachineWindows7AndTheMagicOfBootToVHD.aspx\" target=\"_blank\">boot from a VHD</a> that I have setup as a development environment (as one computer is busy, I do work on the other one);\n\
+      <li>iPad: I usually have my iPad right there with a book, article, or something like that loaded. That way I get to read a few paragraphs here and there, as I wait for a build to complete, for VS to come back to life, or things like that. </li>\n\
+      </ol>\n\
+      <p>Of course, there\xE2\x80\x99s also a bunch of pictures there as a reminder to what\xE2\x80\x99s <strong>really </strong>important, and I also, I have a decent view when the whether is nice outside. </p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/12/view5.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"view[5]\" border=\"0\" alt=\"view[5]\" src=\"http://claudiolassala.files.wordpress.com/2010/12/view5_thumb.jpg?w=641&#038;h=446\" width=\"641\" height=\"446\"></a> </p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/12/beanbag5.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;float:right;border-top:0;border-right:0;padding-top:0;\" title=\"beanbag[5]\" border=\"0\" alt=\"beanbag[5]\" align=\"right\" src=\"http://claudiolassala.files.wordpress.com/2010/12/beanbag5_thumb.jpg?w=189&#038;h=240\" width=\"189\" height=\"240\"></a><a href=\"http://claudiolassala.files.wordpress.com/2010/12/funkychair.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;float:left;border-top:0;border-right:0;padding-top:0;\" title=\"funkychair\" border=\"0\" alt=\"funkychair\" align=\"left\" src=\"http://claudiolassala.files.wordpress.com/2010/12/funkychair_thumb.jpg?w=172&#038;h=166\" width=\"172\" height=\"166\"></a>The funky chair: the first time I saw one of those chairs was several years ago, when I client came to our office and brought one of those (he had some bad back problems). I just thought the chair was weird. Then, a few years ago a friend of mine had one of his house that he didn\xE2\x80\x99t use and told me I could have it if I wanted. I said, well, what the hell, let me give it a shot. It felt kind of weird for the first couple of days, but then I got used to it, and now I really miss it when I don\xE2\x80\x99t have it. Every once in a while, though, just to do something different, I work for one <a href=\"http://www.pomodorotechnique.com/\" target=\"_blank\">pomodoro</a> or two sitting on the cool bean bags that we have in the office.</p>\n\
+      <p>Let\xE2\x80\x99s see\xE2\x80\xA6 what else\xE2\x80\xA6. ah, of course, there\xE2\x80\x99s a whiteboard right behind me that I use all the time. I usually walk to it, sketch something out, take a photo with my iPhone and send it straight to <a href=\"http://www.evernote.com\" target=\"_blank\">Evernote</a>. </p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/12/whiteboard5.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"whiteboard[5]\" border=\"0\" alt=\"whiteboard[5]\" src=\"http://claudiolassala.files.wordpress.com/2010/12/whiteboard5_thumb.jpg?w=636&#038;h=528\" width=\"636\" height=\"528\"></a> </p>\n\
+      <p>And finally, there\xE2\x80\x99s one of those mini basketball hoops for when I\xE2\x80\x99m taking short breaks. <img style=\"border-style:none;\" class=\"wlEmoticon wlEmoticon-smile\" alt=\"Smile\" src=\"http://claudiolassala.files.wordpress.com/2010/12/wlemoticon-smile1.png?w=620\"></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/12/basketball.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"basketball\" border=\"0\" alt=\"basketball\" src=\"http://claudiolassala.files.wordpress.com/2010/12/basketball_thumb.jpg?w=221&#038;h=240\" width=\"221\" height=\"240\"></a> </p>\n\
+      <p> What about you? What does your work environment look like?</p>\n\
+      <br />  <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gocomments/claudiolassala.wordpress.com/468/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/comments/claudiolassala.wordpress.com/468/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godelicious/claudiolassala.wordpress.com/468/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/delicious/claudiolassala.wordpress.com/468/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gofacebook/claudiolassala.wordpress.com/468/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/facebook/claudiolassala.wordpress.com/468/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gotwitter/claudiolassala.wordpress.com/468/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/twitter/claudiolassala.wordpress.com/468/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gostumble/claudiolassala.wordpress.com/468/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/stumble/claudiolassala.wordpress.com/468/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godigg/claudiolassala.wordpress.com/468/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/digg/claudiolassala.wordpress.com/468/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/goreddit/claudiolassala.wordpress.com/468/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/reddit/claudiolassala.wordpress.com/468/\" /></a> <img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=468&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></content:encoded>\n\
+      \t\t\t<wfw:commentRss>http://claudiolassala.wordpress.com/2010/12/02/what-does-your-work-environment-look-like/feed/</wfw:commentRss>\n\
+      \t\t<slash:comments>2</slash:comments>\n\
+      \t\n\
+      \t\t<media:content url=\"http://1.gravatar.com/avatar/1ec317f57c98711dbdafbc543691b4e7?s=96&#38;d=identicon&#38;r=G\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">claudiolassala</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/12/devenv_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">devenv</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/12/view5_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">view[5]</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/12/beanbag5_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">beanbag[5]</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/12/funkychair_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">funkychair</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/12/whiteboard5_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">whiteboard[5]</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/12/wlemoticon-smile1.png\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">Smile</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/12/basketball_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">basketball</media:title>\n\
+      \t\t</media:content>\n\
+      \t</item>\n\
+      \t\t<item>\n\
+      \t\t<title>Delivering Some WPF Courses at CODE Training Next Week</title>\n\
+      \t\t<link>http://claudiolassala.wordpress.com/2010/12/01/delivering-some-wpf-courses-at-code-training-next-week/</link>\n\
+      \t\t<comments>http://claudiolassala.wordpress.com/2010/12/01/delivering-some-wpf-courses-at-code-training-next-week/#comments</comments>\n\
+      \t\t<pubDate>Wed, 01 Dec 2010 22:31:00 +0000</pubDate>\n\
+      \t\t<dc:creator>claudiolassala</dc:creator>\n\
+      \t\t\t\t<category><![CDATA[CODE Announcements]]></category>\n\
+      \t\t<category><![CDATA[Presentations]]></category>\n\
+      \t\t<category><![CDATA[Software Development]]></category>\n\
+      \t\t<category><![CDATA[WPF]]></category>\n\n\
+      \t\t<guid isPermaLink=\"false\">https://claudiolassala.wordpress.com/2010/12/01/delivering-some-wpf-courses-at-code-training-next-week/</guid>\n\
+      \t\t<description><![CDATA[Next week I\xE2\x80\x99ll be delivering two WPF courses at the upcoming CODE Training. In fact, next week will be the \xE2\x80\x9CXAML week\xE2\x80\x9D. I\xE2\x80\x99ll be doing the Intro to WPF and Silverlight day, and the Building WPF Business Applications day. Make sure to check out the links for more information. There\xE2\x80\x99s still a little time left [...]<img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=454&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></description>\n\
+      \t\t\t<content:encoded><![CDATA[<p>Next week I\xE2\x80\x99ll be delivering two WPF courses at the upcoming <a href=\"http://codemag.com/training\" target=\"_blank\">CODE Training</a>. In fact, next week will be the \xE2\x80\x9CXAML week\xE2\x80\x9D. I\xE2\x80\x99ll be doing the <a href=\"http://codemag.com/Training/Detail/acf638c8-272d-4956-a004-f63632970edb\" target=\"_blank\">Intro to WPF and Silverlight</a> day, and the <a href=\"http://codemag.com/Training/Detail/8d72db75-c507-43c6-8918-b2868040e26a\" target=\"_blank\">Building WPF Business Applications</a> day. </p>\n\
+      <p>Make sure to check out the links for more information. There\xE2\x80\x99s still a little time left to sign up. Hope to see some of you next week! <img style=\"border-style:none;\" class=\"wlEmoticon wlEmoticon-smile\" alt=\"Smile\" src=\"http://claudiolassala.files.wordpress.com/2010/12/wlemoticon-smile.png?w=620\"></p>\n\
+      <br />  <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gocomments/claudiolassala.wordpress.com/454/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/comments/claudiolassala.wordpress.com/454/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godelicious/claudiolassala.wordpress.com/454/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/delicious/claudiolassala.wordpress.com/454/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gofacebook/claudiolassala.wordpress.com/454/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/facebook/claudiolassala.wordpress.com/454/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gotwitter/claudiolassala.wordpress.com/454/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/twitter/claudiolassala.wordpress.com/454/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gostumble/claudiolassala.wordpress.com/454/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/stumble/claudiolassala.wordpress.com/454/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godigg/claudiolassala.wordpress.com/454/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/digg/claudiolassala.wordpress.com/454/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/goreddit/claudiolassala.wordpress.com/454/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/reddit/claudiolassala.wordpress.com/454/\" /></a> <img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=454&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></content:encoded>\n\
+      \t\t\t<wfw:commentRss>http://claudiolassala.wordpress.com/2010/12/01/delivering-some-wpf-courses-at-code-training-next-week/feed/</wfw:commentRss>\n\
+      \t\t<slash:comments>1</slash:comments>\n\
+      \t\n\
+      \t\t<media:content url=\"http://1.gravatar.com/avatar/1ec317f57c98711dbdafbc543691b4e7?s=96&#38;d=identicon&#38;r=G\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">claudiolassala</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/12/wlemoticon-smile.png\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">Smile</media:title>\n\
+      \t\t</media:content>\n\
+      \t</item>\n\
+      \t\t<item>\n\
+      \t\t<title>Mocks, Stubs, Rhino, all that stuff</title>\n\
+      \t\t<link>http://claudiolassala.wordpress.com/2010/11/21/mocks-stubs-rhino-all-that-stuff/</link>\n\
+      \t\t<comments>http://claudiolassala.wordpress.com/2010/11/21/mocks-stubs-rhino-all-that-stuff/#comments</comments>\n\
+      \t\t<pubDate>Mon, 22 Nov 2010 00:25:56 +0000</pubDate>\n\
+      \t\t<dc:creator>claudiolassala</dc:creator>\n\
+      \t\t\t\t<category><![CDATA[Presentations]]></category>\n\
+      \t\t<category><![CDATA[Software Development]]></category>\n\
+      \t\t<category><![CDATA[Virtual Brown Bag]]></category>\n\
+      \t\t<category><![CDATA[mock rhino article]]></category>\n\n\
+      \t\t<guid isPermaLink=\"false\">https://claudiolassala.wordpress.com/?p=451</guid>\n\
+      \t\t<description><![CDATA[At this week\xE2\x80\x99s Virtual Brown Bag, we\xE2\x80\x99ve tackled mocks, stubs, Rhino mocks, and related things, since that was one of most voted suggestions from our folks VBBers. Mark Wilkinson had mentioned he could do a quick intro to Rhino since he had just presented on that topic, so that was great: the more people sharing, [...]<img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=451&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></description>\n\
+      \t\t\t<content:encoded><![CDATA[<p>At <a href=\"https://sites.google.com/site/vbbwiki/main_page/2010-11-18\" target=\"_blank\">this week\xE2\x80\x99s</a> <a href=\"http://virtualbrownbag.com/\" target=\"_blank\">Virtual Brown Bag</a>, we\xE2\x80\x99ve tackled mocks, stubs, Rhino mocks, and related things, since that was one of most voted suggestions from our folks VBBers. Mark Wilkinson had mentioned he could do a quick intro to Rhino since he had just presented on that topic, so that was great: the more people sharing, the better. Make sure to check out the notes and video.</p>\n\
+      <p>I\xE2\x80\x99ve also written an <a href=\"http://www.code-magazine.com/article.aspx?quickid=0906061&amp;page=1\" target=\"_blank\">article</a> on this topic for CODE Magazine a couple of issues ago, and here\xE2\x80\x99s a <a href=\"http://live.ineta.org/Presentation/ViewVideo/89\" target=\"_blank\">video</a> out of a presentation on the same topic that I did at Houston TechFest last year.</p>\n\
+      <p>Also, check out this <a href=\"http://georgemauer.net/blog/rhino-mocks-intro/\" target=\"_blank\">great post</a> by George.</p>\n\
+      <p>Please keep your <a href=\"http://virtualbrownbag.com/topic_suggestions\" target=\"_blank\">suggestions</a> coming, and vote for the ones that are out there. We won\xE2\x80\x99t have a Virtual Brown Bag this Thursday, since it\xE2\x80\x99s Thanksgiving and most people are going to be taking the day off, but we\xE2\x80\x99ll back next week! Happy \xE2\x80\x9Coversized bird celebrations\xE2\x80\x9D for all of you.  <img style=\"border-style:none;\" class=\"wlEmoticon wlEmoticon-smile\" alt=\"Smile\" src=\"http://claudiolassala.files.wordpress.com/2010/11/wlemoticon-smile2.png?w=620\"></p>\n\
+      <br />  <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gocomments/claudiolassala.wordpress.com/451/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/comments/claudiolassala.wordpress.com/451/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godelicious/claudiolassala.wordpress.com/451/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/delicious/claudiolassala.wordpress.com/451/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gofacebook/claudiolassala.wordpress.com/451/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/facebook/claudiolassala.wordpress.com/451/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gotwitter/claudiolassala.wordpress.com/451/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/twitter/claudiolassala.wordpress.com/451/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gostumble/claudiolassala.wordpress.com/451/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/stumble/claudiolassala.wordpress.com/451/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godigg/claudiolassala.wordpress.com/451/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/digg/claudiolassala.wordpress.com/451/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/goreddit/claudiolassala.wordpress.com/451/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/reddit/claudiolassala.wordpress.com/451/\" /></a> <img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=451&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></content:encoded>\n\
+      \t\t\t<wfw:commentRss>http://claudiolassala.wordpress.com/2010/11/21/mocks-stubs-rhino-all-that-stuff/feed/</wfw:commentRss>\n\
+      \t\t<slash:comments>0</slash:comments>\n\
+      \t\n\
+      \t\t<media:content url=\"http://1.gravatar.com/avatar/1ec317f57c98711dbdafbc543691b4e7?s=96&#38;d=identicon&#38;r=G\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">claudiolassala</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/wlemoticon-smile2.png\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">Smile</media:title>\n\
+      \t\t</media:content>\n\
+      \t</item>\n\
+      \t\t<item>\n\
+      \t\t<title>You Have Been Deleted!!</title>\n\
+      \t\t<link>http://claudiolassala.wordpress.com/2010/11/18/you-have-been-deleted/</link>\n\
+      \t\t<comments>http://claudiolassala.wordpress.com/2010/11/18/you-have-been-deleted/#comments</comments>\n\
+      \t\t<pubDate>Thu, 18 Nov 2010 17:43:44 +0000</pubDate>\n\
+      \t\t<dc:creator>claudiolassala</dc:creator>\n\
+      \t\t\t\t<category><![CDATA[Software Development]]></category>\n\
+      \t\t<category><![CDATA[DDD CQRS User Experience]]></category>\n\n\
+      \t\t<guid isPermaLink=\"false\">https://claudiolassala.wordpress.com/2010/11/18/you-have-been-deleted/</guid>\n\
+      \t\t<description><![CDATA[A few Virtual Brown Bag\xE2\x80\x99s ago, we\xE2\x80\x99ve decided to talk about Domain-Driven Design, since that was top-most voted topic suggested by attendees. From there we ended up getting to Command-Query Responsibility Segregation (CQRS), and when we get there, there\xE2\x80\x99s no way not to mention either Udi Dahan\xE2\x80\x99s or Greg Young\xE2\x80\x99s thoughts on it. I first [...]<img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=428&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></description>\n\
+      \t\t\t<content:encoded><![CDATA[<p>A few <a href=\"https://sites.google.com/site/vbbwiki/main_page/2010-11-04\" target=\"_blank\">Virtual Brown Bag</a>\xE2\x80\x99s ago, we\xE2\x80\x99ve decided to talk about Domain-Driven Design, since that was top-most voted topic suggested by attendees. From there we ended up getting to <a href=\"http://cqrsinfo.com/\" target=\"_blank\">Command-Query Responsibility Segregation (CQRS)</a>, and when we get there, there\xE2\x80\x99s no way not to mention either <a href=\"http://www.udidahan.com/2009/12/09/clarified-cqrs/\" target=\"_blank\">Udi Dahan\xE2\x80\x99s</a> or <a href=\"http://herdingcode.com/?p=189\" target=\"_blank\">Greg Young\xE2\x80\x99s</a> thoughts on it. </p>\n\
+      <p>I first saw Greg presenting about CQRS at DevTeach one or two years ago. Then I saw Udi\xE2\x80\x99s presentation at TechEd Europe last year. I\xE2\x80\x99ve also listened to the <a href=\"http://herdingcode.com/?p=189\" target=\"_blank\">interview with Greg on Herding Code</a> (twice), and I recommended you do too!</p>\n\
+      <p>In fact, I recommend you check out what those guys have to say in the resources I\xE2\x80\x99ve linked to in this post, because they\xE2\x80\x99re a lot more knowledgeable on these things than I am. In this post I\xE2\x80\x99ll just babble about things I have been thinking around this area.</p>\n\
+      <h2>It\xE2\x80\x99s 2010 already\xE2\x80\xA6 Wake up! </h2>\n\
+      <p>We are still doing several things in software the way we used to do 20 years ago. That has got to stop! The other day, one of my twitter buddies said something along these lines: \xE2\x80\x9C<em>\xE2\x80\xA6trying to explain to my 8-year old son what a floppy disk is as I tell him which one is the Save button\xE2\x80\xA6</em>\xE2\x80\x9D.</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/floppy1.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;float:left;padding-top:0;border-width:0;\" title=\"floppy1\" border=\"0\" alt=\"floppy1\" align=\"left\" src=\"http://claudiolassala.files.wordpress.com/2010/11/floppy1_thumb.jpg?w=240&#038;h=134\" width=\"240\" height=\"134\"></a></p>\n\
+      <p>Why do we still use floppy disks as an icon for Save buttons? I haven\xE2\x80\x99t personally seen a floppy disk in several years. My 10-year old daughter has never seen one. Several non-computer savvy people might have seen one of those years ago, but didn\xE2\x80\x99t even know what they were.</p>\n\
+      <p>I\xE2\x80\x99ve noticed that the <a onclick=\"return mugicPopWin(this,event);\" oncontextmenu=\"mugicRightClick(this);\" href=\"http://itunes.apple.com/us/app/drawing-pad/id358207332?mt=8\" target=\"_blank\">Drawing Pad</a> app on the iPad uses a USB plug image. Is that better?&nbsp; <a href=\"http://claudiolassala.files.wordpress.com/2010/11/usb.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;float:right;padding-top:0;border-width:0;\" title=\"usb\" border=\"0\" alt=\"usb\" align=\"right\" src=\"http://claudiolassala.files.wordpress.com/2010/11/usb_thumb.jpg?w=148&#038;h=172\" width=\"148\" height=\"172\"></a> </p>\n\
+      <p>Well, I guess so; most people using computers nowadays are likely to have used \xE2\x80\x9Cpen drives\xE2\x80\x9D to copy some data around, I guess.</p>\n\
+      <p>On the flip side, I\xE2\x80\x99ve noticed that GMail doesn\xE2\x80\x99t even have a \xE2\x80\x9Csave\xE2\x80\x9D button when a \xE2\x80\x9Ccontact\xE2\x80\x9D is being edited. I suppose that makes sense: why do I have to explicitly push a \xE2\x80\x9Csave\xE2\x80\x9D button? Any app could just save stuff in the background as I work. If there\xE2\x80\x99s any problem with the data (such as a business rule violation), then it could just tell me. <a href=\"http://www.evernote.com\" target=\"_blank\">Evernote</a> also works like that: no need to push any button to save anything, I\xE2\x80\x99ve never lost any data, and I can always find whatever I\xE2\x80\x99m looking for.</p>\n\
+      <h2>Most Applications Don\xE2\x80\x99t Really Represent the \xE2\x80\x9CReal World\xE2\x80\x9D</h2>\n\
+      <p>Software applications are supposed to automate and make easier things that we do in the so-called \xE2\x80\x9CReal World\xE2\x80\x9D. Most applications fail miserably at that.</p>\n\
+      <p>Let\xE2\x80\x99s think about what we do in real life when we\xE2\x80\x99re \xE2\x80\x9Ccreating data\xE2\x80\x9D with pen and paper. For instance, maybe we\xE2\x80\x99re filling out an expense report. Once we\xE2\x80\x99re done, we don\xE2\x80\x99t have an action for \xE2\x80\x9Csaving\xE2\x80\x9D that data. The form may just sit there at our desk, until we take it to the person who\xE2\x80\x99s responsible for collecting those reports. <a href=\"http://claudiolassala.files.wordpress.com/2010/11/form.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;float:right;border-top:0;border-right:0;padding-top:0;\" title=\"form\" border=\"0\" alt=\"form\" align=\"right\" src=\"http://claudiolassala.files.wordpress.com/2010/11/form_thumb.jpg?w=240&#038;h=157\" width=\"240\" height=\"157\"></a> </p>\n\
+      <p>Isn\xE2\x80\x99t that similar to \xE2\x80\x9Csaving the data\xE2\x80\x9D? I don\xE2\x80\x99t think so. </p>\n\
+      <p>I think something like \xE2\x80\x9Csubmit expenses for reimbursement\xE2\x80\x9D would be a lot more appropriate (provided that\xE2\x80\x99s what the actual business workflow calls for when paying out reimbursements). Or maybe, if you\xE2\x80\x99re unsure as to whether you\xE2\x80\x99ve provided the correct data in the form, you may want to \xE2\x80\x9Csubmit expenses for review\xE2\x80\x9D, which may pipe your data through a different workflow.</p>\n\
+      <p>In real life, do people validate your forms as you\xE2\x80\x99re filling them out, or when you submit it to the person responsible for collecting it? It\xE2\x80\x99s usually the latter. The form may have initial constraints for validation, though (\xE2\x80\x9C<em>if you responded yes on question X, please provided some extra Y information</em>\xE2\x80\x9D), in order to optimize the flow.</p>\n\
+      <p>Once the form has been submitted, it may undergo different levels of validation, depending on how the data is going to be used. Again, it depends on the workflow.</p>\n\
+      <p>So, bottom line regarding \xE2\x80\x9Csave\xE2\x80\x9D is: applications should allow the user to create data, and decide what to do with it. The user may decide \xE2\x80\x9Chey, I\xE2\x80\x99m not done yet\xE2\x80\xA6 just hold on to it for me here, I\xE2\x80\x99ll come back to it later with more details, and then I\xE2\x80\x99ll send it to whoever or wherever I should when appropriate\xE2\x80\x9D.</p>\n\
+      <h2><em>Oh, But This Grid Can Handle Millions of Rows!!</em></h2>\n\
+      <p>I see people getting all excited about how this 3rd party grid or that other one is capable of showing millions of rows. Why the heck would a user need that number of rows on a grid?! The user probably needs to scroll through all that data in order to find what he\xE2\x80\x99s looking for. </p>\n\
+      <p>Then the developer thinks \xE2\x80\x9Cyeah, but this grid makes it very easy to set visual alerts so the user can spot those rows he\xE2\x80\x99s interested in\xE2\x80\x9D. Why not tailor the app&nbsp; so to allow the user to ask questions and have answers provided? In other words, when a user goes to a screen in an app, the intent isn\xE2\x80\x99t something like \xE2\x80\x9C<em>I want to see as many rows as it\xE2\x80\x99s possible</em>\xE2\x80\x9D. Instead, the user is often looking for specific data to make some decisions. </p>\n\
+      <p>Maybe the user has the following task at hand: \xE2\x80\x9C<em>hey, I need to send out a <strong>thank you</strong> card to all customers whose birthday is within the next month, but only for those customers don\xE2\x80\x99t owe us money</em>\xE2\x80\x9D. The app should simply offer a \xE2\x80\x9C<em>send out thank you card</em>\xE2\x80\x9D option. No need for grids with millions of rows.</p>\n\
+      <p><em>\xE2\x80\x9CSo what about editable grids?\xE2\x80\x9D</em>, one might ask. After all, those grids are all about allowing the user to perform blazing fast data entry, right? Hmm, nope. Hardly ever have I seen a situation where the user goes cell by cell, row by row, changing data as she tabs her way through the entire grid. When a user wants to edit data, she normally has a very specific set of data that needs to be edited: \xE2\x80\x9C<em>several customers have changed their number of dependents</em>\xE2\x80\x9D, \xE2\x80\x9C<em>the area code has changed from 123 to 987 on phone numbers for all customers in zip code 98765</em>\xE2\x80\x9D. Why not allow the user to express her intent and have the app produce the UI that best fits for fast data entry based on that?</p>\n\
+      <p>Grids have traditionally sucked at allowing for \xE2\x80\x9Cin-place\xE2\x80\x9D edit. It usually takes quite a bit of work to get the hosted controls (DatePickers, DropDowns, etc.) to work well. Why go through all that pain? Why not just give the user a UI tailored to each task that needs to be accomplished?</p>\n\
+      <h2>Have You Ever Been Deleted?</h2>\n\
+      <p>We have taught users to \xE2\x80\x9Cdelete\xE2\x80\x9D stuff, and now they want to delete anything in a way that makes no sense at all when compared to the real world. Users want to \xE2\x80\x9C<em>delete employee</em>\xE2\x80\x9D, \xE2\x80\x9C<em>delete product</em>\xE2\x80\x9D, etc. </p>\n\
+      <p>Have you ever had an employer walk to you and say \xE2\x80\x9C<em>you have been deleted!</em>\xE2\x80\x9D? Probably not. Employees are \xE2\x80\x9C<em>fired</em>\xE2\x80\x9D, \xE2\x80\x9C<em>transferred to another branch of the company</em>\xE2\x80\x9D, etc. If somebody simply \xE2\x80\x9Cdeletes\xE2\x80\x9D an employee from the system, nobody other than the user (who may end up forgetting) will know the reason why the employee doesn\xE2\x80\x99t exist in the system anymore. Udi Dahan has a <a href=\"http://www.udidahan.com/2009/09/01/dont-delete-just-dont/\" target=\"_blank\">great post</a> about this. You should read it.</p>\n\
+      <h2>Earth: from Flat, to Round, to Tabular</h2>\n\
+      <p>The client says: \xE2\x80\x9C<em>My customers come to my web store and place orders for some of our products</em>\xE2\x80\x9D. Several developers barely hear the end of that sentence and are already thinking \xE2\x80\x9C<em>yeah, I\xE2\x80\x99ll have a customers table, with a primary key, with fields to store first name and last name, and an orders table with a foreign key that links an order back to a customer, and it\xE2\x80\x99ll also have an order items table, which in turn has a foreign key linking it back to the orders table. The order items table also has a foreign key that links an item to a row in my products table\xE2\x80\xA6.</em>\xE2\x80\x9D.</p>\n\
+      <p>Most developers tend to design the application with the database in mind, as if the world was tabular, and that design bleeds through the objects in the application, all the way up to the UI. Creating UI\xE2\x80\x99s modeled after a database\xE2\x80\xA6 that\xE2\x80\x99s why users think of \xE2\x80\x9C<em>deleting</em>\xE2\x80\x9D an employee, as opposed to \xE2\x80\x9C<em>firing</em>\xE2\x80\x9D an employee. We need to stop doing that.</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/tabularearth.gif\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;border-top:0;margin-right:auto;border-right:0;padding-top:0;\" title=\"tabularearth\" border=\"0\" alt=\"tabularearth\" src=\"http://claudiolassala.files.wordpress.com/2010/11/tabularearth_thumb.gif?w=531&#038;h=365\" width=\"531\" height=\"365\"></a></p>\n\
+      <p>Think of another example: the \xE2\x80\x9Cemployee screen\xE2\x80\x9D has a \xE2\x80\x9Csalary\xE2\x80\x9D field. The user may go in there and change it. Easy. But what about the intent? <strong>Why</strong> does the user want to change the salary? There\xE2\x80\x99s probably several reasons for that: </p>\n\
+      <ul>\n\
+      <li>maybe the employee has been promoted;</li>\n\
+      <li>maybe he is now working only part-time;</li>\n\
+      <li>maybe the salary was entered incorrectly originally and the user needs to fix it. </li>\n\
+      </ul>\n\
+      <p>Whatever the case might be, there could be lots of things that should happen when the value changes:</p>\n\
+      <ul>\n\
+      <li>maybe an email should be sent to both the employee and his manager; </li>\n\
+      <li>maybe the payroll system needs to be updated; </li>\n\
+      <li>maybe the accountant has to be informed. </li>\n\
+      </ul>\n\
+      <p>These things shouldn\xE2\x80\x99t be conveyed to the user simply by providing her a TextBox with the employee\xE2\x80\x99s salary on it.</p>\n\
+      <p>Another typical case of a UI built driven by the database design is any screen with lots of \xE2\x80\x9Cenabled/disabled\xE2\x80\x9D type of logic (\xE2\x80\x9C<em>if this checkbox is checked, and that date is greater than X, and the sun and the moon\xE2\x80\xA6 blah blah blah, then that control should be disabled</em>\xE2\x80\x9D). </p>\n\
+      <p>Several years ago I\xE2\x80\x99ve worked in an application where there was a form with well over 50 controls, several of them being checkboxes, and there was some crazy enabled/disabled logic there. Every single developer on the team had worked on that screen, and everybody hated doing so, since even the smallest change could break behavior. Funny thing is that controls were grouped together in the UI, conveying some sort of workflow. So why did we have to stick everything into a single form, instead of creating simpler, task-oriented forms?</p>\n\
+      <p>Let me know your thoughts on all of this. I\xE2\x80\x99ll sure have more posts on this subject.</p>\n\
+      <br />  <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gocomments/claudiolassala.wordpress.com/428/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/comments/claudiolassala.wordpress.com/428/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godelicious/claudiolassala.wordpress.com/428/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/delicious/claudiolassala.wordpress.com/428/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gofacebook/claudiolassala.wordpress.com/428/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/facebook/claudiolassala.wordpress.com/428/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gotwitter/claudiolassala.wordpress.com/428/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/twitter/claudiolassala.wordpress.com/428/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gostumble/claudiolassala.wordpress.com/428/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/stumble/claudiolassala.wordpress.com/428/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godigg/claudiolassala.wordpress.com/428/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/digg/claudiolassala.wordpress.com/428/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/goreddit/claudiolassala.wordpress.com/428/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/reddit/claudiolassala.wordpress.com/428/\" /></a> <img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=428&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></content:encoded>\n\
+      \t\t\t<wfw:commentRss>http://claudiolassala.wordpress.com/2010/11/18/you-have-been-deleted/feed/</wfw:commentRss>\n\
+      \t\t<slash:comments>6</slash:comments>\n\
+      \t\n\
+      \t\t<media:content url=\"http://1.gravatar.com/avatar/1ec317f57c98711dbdafbc543691b4e7?s=96&#38;d=identicon&#38;r=G\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">claudiolassala</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/floppy1_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">floppy1</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/usb_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">usb</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/form_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">form</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/tabularearth_thumb.gif\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">tabularearth</media:title>\n\
+      \t\t</media:content>\n\
+      \t</item>\n\
+      \t\t<item>\n\
+      \t\t<title>Setting and tracking some small goals&#8230;</title>\n\
+      \t\t<link>http://claudiolassala.wordpress.com/2010/11/05/setting-and-tracking-some-small-goals/</link>\n\
+      \t\t<comments>http://claudiolassala.wordpress.com/2010/11/05/setting-and-tracking-some-small-goals/#comments</comments>\n\
+      \t\t<pubDate>Fri, 05 Nov 2010 15:49:31 +0000</pubDate>\n\
+      \t\t<dc:creator>claudiolassala</dc:creator>\n\
+      \t\t\t\t<category><![CDATA[Productivity]]></category>\n\n\
+      \t\t<guid isPermaLink=\"false\">https://claudiolassala.wordpress.com/2010/11/05/setting-and-tracking-some-small-goals/</guid>\n\
+      \t\t<description><![CDATA[A month or two ago, George was telling me about 42goals.com; as the site says \xE2\x80\x9Cit\xE2\x80\x99s a simple tool to track daily goals\xE2\x80\x9D. A thought I\xE2\x80\x99d give it a try. People use it to set and track simple goals such as decreasing the amount of coffee they drink, setting distances they want to run, and [...]<img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=388&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></description>\n\
+      \t\t\t<content:encoded><![CDATA[<p>A month or two ago, <a href=\"http://georgemauer.net/blog/\" target=\"_blank\">George</a> was telling me about <a href=\"http://www.42goals.com\" target=\"_blank\">42goals.com</a>; as the site says \xE2\x80\x9Cit\xE2\x80\x99s a simple tool to track daily goals\xE2\x80\x9D. A thought I\xE2\x80\x99d give it a try. </p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/42goals.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:block;float:none;margin-left:auto;margin-right:auto;padding-top:0;border-width:0;\" title=\"42goals\" border=\"0\" alt=\"42goals\" src=\"http://claudiolassala.files.wordpress.com/2010/11/42goals_thumb.jpg?w=500&#038;h=387\" width=\"500\" height=\"387\"></a></p>\n\
+      <p>People use it to set and track simple goals such as decreasing the amount of coffee they drink, setting distances they want to run, and other things of that sort.</p>\n\
+      <p>I\xE2\x80\x99ve used it for a month now, and am planning on using it for at least another couple of months. In the first month I\xE2\x80\x99ve tracked things such as how many <a href=\"http://www.pomodorotechnique.com/\" target=\"_blank\">pomodoros</a> I can accomplish in a month, how many pushups, and some other small things I\xE2\x80\x99ve been trying to get better at.</p>\n\
+      <p>I had set my expectations for the full month based on my guess as to how much I\xE2\x80\x99d get done daily. As it turns out, my estimates were <strong>very </strong>off. My best estimate came to be about 56% of the actual numbers. The worst one was about 23%. I think the two reasons for it were:</p>\n\
+      <ol>\n\
+      <li>I had set the goals to a number a little higher than what I *thought* I was kind of accomplishing, but not tracking\xE2\x80\xA6\n\
+      <li>Some weekdays I\xE2\x80\x99d just forget about the goals, or just be too tired to care. Most weekends I\xE2\x80\x99d totally forget about everything.</li>\n\
+      </ol>\n\
+      <p>For the second month, I\xE2\x80\x99ve decided to track the same goals, but now I\xE2\x80\x99m putting down estimates based on the numbers I\xE2\x80\x99ve accomplished in the first month, increasing them by about 10%. So all I need is to do a little better than I did last month. If I get into the habit where I at least don\xE2\x80\x99t forget about the goals, hopefully my numbers will improve within a few months.</p>\n\
+      <p>As time goes by, I\xE2\x80\x99ll probably be changing my list of goals, by either adding and/or removing goals. Here are some of the goals I\xE2\x80\x99m thinking of adding to the list:</p>\n\
+      <ul>\n\
+      <li>Play guitar exercises for 10 minutes daily\n\
+      <li>Improvise solos on the guitar for 10 minutes daily\n\
+      <li>Practice speed reading for 10 minutes daily\n\
+      <li>Spend 20 minutes every day learning something</li>\n\
+      </ul>\n\
+      <p>We\xE2\x80\x99ll see. I\xE2\x80\x99ll keep blogging about how this is working for me.</p>\n\
+      <br />  <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gocomments/claudiolassala.wordpress.com/388/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/comments/claudiolassala.wordpress.com/388/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godelicious/claudiolassala.wordpress.com/388/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/delicious/claudiolassala.wordpress.com/388/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gofacebook/claudiolassala.wordpress.com/388/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/facebook/claudiolassala.wordpress.com/388/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gotwitter/claudiolassala.wordpress.com/388/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/twitter/claudiolassala.wordpress.com/388/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gostumble/claudiolassala.wordpress.com/388/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/stumble/claudiolassala.wordpress.com/388/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godigg/claudiolassala.wordpress.com/388/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/digg/claudiolassala.wordpress.com/388/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/goreddit/claudiolassala.wordpress.com/388/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/reddit/claudiolassala.wordpress.com/388/\" /></a> <img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=388&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></content:encoded>\n\
+      \t\t\t<wfw:commentRss>http://claudiolassala.wordpress.com/2010/11/05/setting-and-tracking-some-small-goals/feed/</wfw:commentRss>\n\
+      \t\t<slash:comments>0</slash:comments>\n\
+      \t\n\
+      \t\t<media:content url=\"http://1.gravatar.com/avatar/1ec317f57c98711dbdafbc543691b4e7?s=96&#38;d=identicon&#38;r=G\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">claudiolassala</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/42goals_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">42goals</media:title>\n\
+      \t\t</media:content>\n\
+      \t</item>\n\
+      \t\t<item>\n\
+      \t\t<title>A Good Example of Liskov Substitution Principle</title>\n\
+      \t\t<link>http://claudiolassala.wordpress.com/2010/11/04/a-good-example-of-liskov-substitution-principle/</link>\n\
+      \t\t<comments>http://claudiolassala.wordpress.com/2010/11/04/a-good-example-of-liskov-substitution-principle/#comments</comments>\n\
+      \t\t<pubDate>Thu, 04 Nov 2010 16:42:37 +0000</pubDate>\n\
+      \t\t<dc:creator>claudiolassala</dc:creator>\n\
+      \t\t\t\t<category><![CDATA[Clean Code]]></category>\n\
+      \t\t<category><![CDATA[Software Development]]></category>\n\
+      \t\t<category><![CDATA[Virtual Brown Bag]]></category>\n\
+      \t\t<category><![CDATA[SOLID]]></category>\n\n\
+      \t\t<guid isPermaLink=\"false\">https://claudiolassala.wordpress.com/2010/11/04/a-good-example-of-liskov-substitution-principle/</guid>\n\
+      \t\t<description><![CDATA[It\xE2\x80\x99s usually not easy to find good examples that explain the Liskov Substitution Principle (LSP) to developers. But really, how hard could it be? The definition is so simple: \xE2\x80\x9CWhat is wanted here is something like the following substitution property: If for each object o1 of type S there is an object o2 of type [...]<img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=385&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></description>\n\
+      \t\t\t<content:encoded><![CDATA[<p>It\xE2\x80\x99s usually not easy to find good examples that explain the <a href=\"http://en.wikipedia.org/wiki/Liskov_substitution_principle\" target=\"_blank\">Liskov Substitution Principle</a> (LSP) to developers. But really, how hard could it be? The definition is so simple:</p>\n\
+      <p><i>\xE2\x80\x9CWhat is wanted here is something like the following substitution property: If for each object o1 of type S there is an object o2 of type T such that for all programs P defined in terms of T, the behavior of P is unchanged when o1 is substituted for o2 then S is a subtype of T.\xE2\x80\x9D</i></p>\n\
+      <p>Say what? I don\xE2\x80\x99t know about you, but that kind of definition usually flies way over my head. Some people use the <em><a href=\"http://stackoverflow.com/questions/56860/what-is-the-liskov-substitution-principle\" target=\"_blank\">Rectangle versus Square</a></em> example to explain the principle, which is a good one, but that doesn\xE2\x80\x99t necessarily relate to things we normally do.</p>\n\
+      <p>I like <a href=\"http://www.objectmentor.com/resources/articles/lsp.pdf\" target=\"_blank\">Uncle Bob\xE2\x80\x99s definition</a> a lot better:</p>\n\
+      <p><em>\xE2\x80\x9CFunctions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.\xE2\x80\x9D</em></p>\n\
+      <p>Recently we\xE2\x80\x99ve run across a violation to that principle in a project. We have an interface defined like so:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/persistedresource.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"persistedresource\" border=\"0\" alt=\"persistedresource\" src=\"http://claudiolassala.files.wordpress.com/2010/11/persistedresource_thumb.jpg?w=615&#038;h=208\" width=\"615\" height=\"208\"></a> </p>\n\
+      <p>It\xE2\x80\x99s a very small interface that represents resources that can be loaded in memory, and persisted afterwards in case there were changes to it.</p>\n\
+      <p>Let\xE2\x80\x99s pretend we have the following implementations of that interface:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/appsettings.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"appsettings\" border=\"0\" alt=\"appsettings\" src=\"http://claudiolassala.files.wordpress.com/2010/11/appsettings_thumb.jpg?w=615&#038;h=298\" width=\"615\" height=\"298\"></a> </p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/usersettings.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"usersettings\" border=\"0\" alt=\"usersettings\" src=\"http://claudiolassala.files.wordpress.com/2010/11/usersettings_thumb.jpg?w=615&#038;h=337\" width=\"615\" height=\"337\"></a> </p>\n\
+      <p>The actual implementation of those methods doesn\xE2\x80\x99t matter here; just assume that the real implementation loads and persists application and user settings.</p>\n\
+      <p>Somewhere in the application we have some way to retrieve a list of instances of implementations of that interface, kind of like this:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/loadall6.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"loadall[6]\" border=\"0\" alt=\"loadall[6]\" src=\"http://claudiolassala.files.wordpress.com/2010/11/loadall6_thumb.jpg?w=615&#038;h=234\" width=\"615\" height=\"234\"></a> </p>\n\
+      <p>Some place else, we have a method that takes in a list of those objects, and call Persist on them:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/persist.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"persist\" border=\"0\" alt=\"persist\" src=\"http://claudiolassala.files.wordpress.com/2010/11/persist_thumb.jpg?w=615&#038;h=124\" width=\"615\" height=\"124\"></a> </p>\n\
+      <p>And somewhere else we may use those methods, like so:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/loadsave6.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"loadsave[6]\" border=\"0\" alt=\"loadsave[6]\" src=\"http://claudiolassala.files.wordpress.com/2010/11/loadsave6_thumb.jpg?w=615&#038;h=153\" width=\"615\" height=\"153\"></a> </p>\n\
+      <p>Everything works great, until a new class is added to the system in order to handle, let\xE2\x80\x99s say, some \xE2\x80\x9Cspecial settings\xE2\x80\x9D:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/specialsettings.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"specialsettings\" border=\"0\" alt=\"specialsettings\" src=\"http://claudiolassala.files.wordpress.com/2010/11/specialsettings_thumb.jpg?w=615&#038;h=321\" width=\"615\" height=\"321\"></a> </p>\n\
+      <p>It looks like the Load method does whatever stuff it\xE2\x80\x99s supposed to do in order to handle loading these special settings. The Persist method, on the other hand, throws a NotImplementedException. As it turns out, those settings are meant to be read-only, therefore, the Persist method can\xE2\x80\x99t really do anything.</p>\n\
+      <p>The system is told to load the new class along with the other ones that implement that same interface: </p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/loadspecial6.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"loadspecial[6]\" border=\"0\" alt=\"loadspecial[6]\" src=\"http://claudiolassala.files.wordpress.com/2010/11/loadspecial6_thumb.jpg?w=615&#038;h=242\" width=\"615\" height=\"242\"></a> </p>\n\
+      <p>Now when we run the app everything should still work fine, until we hit the code that tries to persist all of those loaded resources, at which point we get a big and fat \xE2\x80\x9CNotImplementedException\xE2\x80\x9D. </p>\n\
+      <p>One (horrible) way to address this would be to change the SaveAll method:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/newsaveall.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"newsaveall\" border=\"0\" alt=\"newsaveall\" src=\"http://claudiolassala.files.wordpress.com/2010/11/newsaveall_thumb.jpg?w=615&#038;h=234\" width=\"615\" height=\"234\"></a> </p>\n\
+      <p>If the specific resource being processed is of type SpecialSettings, we skip that one. Brilliant! Well, maybe not. Let\xE2\x80\x99s look back at a simplified definition of the Liskov Substitution Principle:</p>\n\
+      <p><em>\xE2\x80\x9CAn object should be substitutable by its base class (or interface).\xE2\x80\x9D</em></p>\n\
+      <p>Looking at the SaveAll method it should be clear that \xE2\x80\x9CSpecialSettings\xE2\x80\x9D is NOT substitutable by its \xE2\x80\x9CIPersistedResource\xE2\x80\x9D interface; if we call Persist on it, the app blows up, so we need change the method to take that one problem into consideration. One could say \xE2\x80\x9C<em>well, let\xE2\x80\x99s change the Persist method on that class so it won\xE2\x80\x99t throw an exception anymore</em>\xE2\x80\x9D. Hmm, having a method on a class that when called won\xE2\x80\x99t do what its name implies is just bad\xE2\x80\xA6 really, really bad.</p>\n\
+      <p>Write this down: anytime you see code that takes in some sort of baseclass or interface and then performs a check such as \xE2\x80\x9Cif (someObject is SomeType)\xE2\x80\x9D, there\xE2\x80\x99s a very good chance that that\xE2\x80\x99s an LSP violation. I\xE2\x80\x99ve done that, and I know so have you, let\xE2\x80\x99s be honest.</p>\n\
+      <p>Another great definition for LSP comes from this motivational poster that the folks at <a href=\"http://www.lostechies.com\">Los Techies</a> put together:</p>\n\
+      <p><a href=\"http://www.lostechies.com/cfs-filesystemfile.ashx/__key/CommunityServer.Blogs.Components.WeblogFiles/derickbailey/LiskovSubtitutionPrinciple_5F00_52BB5162.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"liskov-lostechies\" border=\"0\" alt=\"liskov-lostechies\" src=\"http://claudiolassala.files.wordpress.com/2010/11/liskov-lostechies.jpg?w=615&#038;h=489\" width=\"615\" height=\"489\"></a> </p>\n\
+      <h1>So what\xE2\x80\x99s the fix?</h1>\n\
+      <p>The fix here is to tailor the interface based on what each client needs (<a href=\"http://www.objectmentor.com/resources/articles/isp.pdf\">Interface Segregation Principle, or ISP</a>). The LoadAll method (which is one client of those classes) is really only concerned about the \xE2\x80\x9CLoad\xE2\x80\x9D capability, whereas the \xE2\x80\x9CSaveAll\xE2\x80\x9D method (another client) is only concerned about the \xE2\x80\x9CPersist\xE2\x80\x9D capability. In other words, these is what those clients need:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/newsaveload.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"NewSaveLoad\" border=\"0\" alt=\"NewSaveLoad\" src=\"http://claudiolassala.files.wordpress.com/2010/11/newsaveload_thumb.jpg?w=615&#038;h=351\" width=\"615\" height=\"351\"></a> </p>\n\
+      <p>The SaveAll takes in something tailored to its needs, <em>IPersistResource</em>\xE2\x80\x99s, and the same goes for LoadAll, which only cares about <em>ILoadResource</em>\xE2\x80\x99s (in the real app, the actual instantiation of these classes happen somewhere else). This is what the granular new interfaces look like:</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/granularinterfaces.jpg\"><img style=\"background-image:none;border-bottom:0;border-left:0;padding-left:0;padding-right:0;display:inline;border-top:0;border-right:0;padding-top:0;\" title=\"granularinterfaces\" border=\"0\" alt=\"granularinterfaces\" src=\"http://claudiolassala.files.wordpress.com/2010/11/granularinterfaces_thumb.jpg?w=615&#038;h=347\" width=\"615\" height=\"347\"></a> </p>\n\
+      <p>Yup, it\xE2\x80\x99s pretty much the former \xE2\x80\x9CIPersistedResource\xE2\x80\x9D split up into two separate interfaces, tailored to their client needs. Both the UserSettings and ApplicationSettings classes can implement these two interfaces, whereas the SpecialSettings class would only implement <em>ILoadResource</em>; this way, it isn\xE2\x80\x99t forced to implement interface members it can\xE2\x80\x99t handle.</p>\n\
+      <p>Very often people ask what\xE2\x80\x99s the most appropriate number of members in an interface. In the real world example I gave here, the original interface had only 2 members; one could say that was small enough, but as it turns out, it wasn\xE2\x80\x99t. The IPersistedResource interface was doing too much (both loading *and* persisting stuff) based on the clients that use its implementers. In the end, two interfaces with a single method on them fit the bill a lot better. <em>Interfaces with single responsibility</em>? Yup, <a href=\"http://www.objectmentor.com/resources/articles/srp.pdf\">Single Responsibility Principle (SRP)</a>; as with design patterns, sometimes <a href=\"http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod\">SOLID principles</a> go hand in hand together.</p>\n\
+      <br />  <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gocomments/claudiolassala.wordpress.com/385/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/comments/claudiolassala.wordpress.com/385/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godelicious/claudiolassala.wordpress.com/385/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/delicious/claudiolassala.wordpress.com/385/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gofacebook/claudiolassala.wordpress.com/385/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/facebook/claudiolassala.wordpress.com/385/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gotwitter/claudiolassala.wordpress.com/385/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/twitter/claudiolassala.wordpress.com/385/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gostumble/claudiolassala.wordpress.com/385/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/stumble/claudiolassala.wordpress.com/385/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godigg/claudiolassala.wordpress.com/385/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/digg/claudiolassala.wordpress.com/385/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/goreddit/claudiolassala.wordpress.com/385/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/reddit/claudiolassala.wordpress.com/385/\" /></a> <img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=385&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></content:encoded>\n\
+      \t\t\t<wfw:commentRss>http://claudiolassala.wordpress.com/2010/11/04/a-good-example-of-liskov-substitution-principle/feed/</wfw:commentRss>\n\
+      \t\t<slash:comments>2</slash:comments>\n\
+      \t\n\
+      \t\t<media:content url=\"http://1.gravatar.com/avatar/1ec317f57c98711dbdafbc543691b4e7?s=96&#38;d=identicon&#38;r=G\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">claudiolassala</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/persistedresource_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">persistedresource</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/appsettings_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">appsettings</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/usersettings_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">usersettings</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/loadall6_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">loadall[6]</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/persist_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">persist</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/loadsave6_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">loadsave[6]</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/specialsettings_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">specialsettings</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/loadspecial6_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">loadspecial[6]</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/newsaveall_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">newsaveall</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/liskov-lostechies.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">liskov-lostechies</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/newsaveload_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">NewSaveLoad</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/granularinterfaces_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">granularinterfaces</media:title>\n\
+      \t\t</media:content>\n\
+      \t</item>\n\
+      \t\t<item>\n\
+      \t\t<title>Hallelujah! We&#8217;re done with the 2000-piece Jigsaw Puzzle</title>\n\
+      \t\t<link>http://claudiolassala.wordpress.com/2010/11/03/hallelujah-were-done-with-the-2000-piece-jigsaw-puzzle/</link>\n\
+      \t\t<comments>http://claudiolassala.wordpress.com/2010/11/03/hallelujah-were-done-with-the-2000-piece-jigsaw-puzzle/#comments</comments>\n\
+      \t\t<pubDate>Thu, 04 Nov 2010 01:23:32 +0000</pubDate>\n\
+      \t\t<dc:creator>claudiolassala</dc:creator>\n\
+      \t\t\t\t<category><![CDATA[Hobbies]]></category>\n\
+      \t\t<category><![CDATA[jigsaw puzzle]]></category>\n\n\
+      \t\t<guid isPermaLink=\"false\">https://claudiolassala.wordpress.com/2010/11/03/hallelujah-were-done-with-the-2000-piece-jigsaw-puzzle/</guid>\n\
+      \t\t<description><![CDATA[Holy Cow, that took us a while\xE2\x80\xA6&#160; Several months ago, while at Barnes &#38; Noble with the family, I\xE2\x80\x99ve decided to pick up a big 2000-piece jigsaw puzzle (ok, it may not be that big to some people, but I\xE2\x80\x99m sure I had never picked up one with more than 200 hundred pieces or so\xE2\x80\xA6). [...]<img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=360&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></description>\n\
+      \t\t\t<content:encoded><![CDATA[<p>Holy Cow, that took us a while\xE2\x80\xA6&nbsp; <img style=\"border-style:none;\" class=\"wlEmoticon wlEmoticon-smile\" alt=\"Smile\" src=\"http://claudiolassala.files.wordpress.com/2010/11/wlemoticon-smile1.png?w=620\"></p>\n\
+      <p>Several months ago, while at Barnes &amp; Noble with the family, I\xE2\x80\x99ve decided to pick up a big 2000-piece jigsaw puzzle (ok, it may not be that big to some people, but I\xE2\x80\x99m sure I had never picked up one with more than 200 hundred pieces or so\xE2\x80\xA6). I figured that\xE2\x80\x99d be something we\xE2\x80\x99d enjoy engaging together. I\xE2\x80\x99ve always appreciated the \xE2\x80\x9Cold\xE2\x80\x9D Manhattan skyline, from watching so many episodes of Friends, so that\xE2\x80\x99s the image I chose.</p>\n\
+      <p>The first one or two months into this \xE2\x80\x9Cproject\xE2\x80\x9D went very smooth, but boy, the last several months after that dragged really bad. The main problem was that sky. Over 300 pieces of the puzzle probably go in there, and they all look pretty much the same! Fortunately, the wife was decided to finish that off, picked up the slack, and managed to pull it off.</p>\n\
+      <p>Now I just need to get some puzzle glue, put it on a frame, and hang it on the wall.</p>\n\
+      <p>I hear we may be picking up a 5000-piece one. I\xE2\x80\x99ll try to make sure we don\xE2\x80\x99t get one where there\xE2\x80\x99s a large section with pieces that all look the same. <img style=\"border-style:none;\" class=\"wlEmoticon wlEmoticon-smile\" alt=\"Smile\" src=\"http://claudiolassala.files.wordpress.com/2010/11/wlemoticon-smile1.png?w=620\"></p>\n\
+      <p>&nbsp;</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/01.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"01\" border=\"0\" alt=\"01\" src=\"http://claudiolassala.files.wordpress.com/2010/11/01_thumb.jpg?w=400&#038;h=262\" width=\"400\" height=\"262\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/02.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"02\" border=\"0\" alt=\"02\" src=\"http://claudiolassala.files.wordpress.com/2010/11/02_thumb.jpg?w=500&#038;h=269\" width=\"500\" height=\"269\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/03.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"03\" border=\"0\" alt=\"03\" src=\"http://claudiolassala.files.wordpress.com/2010/11/03_thumb.jpg?w=500&#038;h=306\" width=\"500\" height=\"306\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/04.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"04\" border=\"0\" alt=\"04\" src=\"http://claudiolassala.files.wordpress.com/2010/11/04_thumb.jpg?w=500&#038;h=240\" width=\"500\" height=\"240\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/05.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"05\" border=\"0\" alt=\"05\" src=\"http://claudiolassala.files.wordpress.com/2010/11/05_thumb.jpg?w=500&#038;h=275\" width=\"500\" height=\"275\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/06.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"06\" border=\"0\" alt=\"06\" src=\"http://claudiolassala.files.wordpress.com/2010/11/06_thumb.jpg?w=500&#038;h=265\" width=\"500\" height=\"265\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/07.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"07\" border=\"0\" alt=\"07\" src=\"http://claudiolassala.files.wordpress.com/2010/11/07_thumb.jpg?w=500&#038;h=254\" width=\"500\" height=\"254\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/08.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"08\" border=\"0\" alt=\"08\" src=\"http://claudiolassala.files.wordpress.com/2010/11/08_thumb.jpg?w=500&#038;h=296\" width=\"500\" height=\"296\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/09.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"09\" border=\"0\" alt=\"09\" src=\"http://claudiolassala.files.wordpress.com/2010/11/09_thumb.jpg?w=500&#038;h=262\" width=\"500\" height=\"262\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/10.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"10\" border=\"0\" alt=\"10\" src=\"http://claudiolassala.files.wordpress.com/2010/11/10_thumb.jpg?w=500&#038;h=240\" width=\"500\" height=\"240\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/11.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"11\" border=\"0\" alt=\"11\" src=\"http://claudiolassala.files.wordpress.com/2010/11/11_thumb.jpg?w=500&#038;h=225\" width=\"500\" height=\"225\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/12.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"12\" border=\"0\" alt=\"12\" src=\"http://claudiolassala.files.wordpress.com/2010/11/12_thumb.jpg?w=500&#038;h=315\" width=\"500\" height=\"315\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/13.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"13\" border=\"0\" alt=\"13\" src=\"http://claudiolassala.files.wordpress.com/2010/11/13_thumb.jpg?w=500&#038;h=271\" width=\"500\" height=\"271\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/14.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"14\" border=\"0\" alt=\"14\" src=\"http://claudiolassala.files.wordpress.com/2010/11/14_thumb.jpg?w=500&#038;h=310\" width=\"500\" height=\"310\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/15.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"15\" border=\"0\" alt=\"15\" src=\"http://claudiolassala.files.wordpress.com/2010/11/15_thumb.jpg?w=500&#038;h=265\" width=\"500\" height=\"265\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/16.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"16\" border=\"0\" alt=\"16\" src=\"http://claudiolassala.files.wordpress.com/2010/11/16_thumb.jpg?w=500&#038;h=296\" width=\"500\" height=\"296\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/17.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"17\" border=\"0\" alt=\"17\" src=\"http://claudiolassala.files.wordpress.com/2010/11/17_thumb.jpg?w=500&#038;h=254\" width=\"500\" height=\"254\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/18.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"18\" border=\"0\" alt=\"18\" src=\"http://claudiolassala.files.wordpress.com/2010/11/18_thumb.jpg?w=500&#038;h=273\" width=\"500\" height=\"273\"></a></p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/19.jpg\"><img style=\"background-image:none;padding-left:0;padding-right:0;display:inline;padding-top:0;border-width:0;\" title=\"19\" border=\"0\" alt=\"19\" src=\"http://claudiolassala.files.wordpress.com/2010/11/19_thumb.jpg?w=500&#038;h=375\" width=\"500\" height=\"375\"></a></p>\n\
+      <p>Click on the image below to see an Animated Gif!</p>\n\
+      <p><a href=\"http://claudiolassala.files.wordpress.com/2010/11/jigsawpuzzle-3000ny.gif\"><img style=\"display:inline;\" title=\"JigsawPuzzle-3000NY\" alt=\"JigsawPuzzle-3000NY\" src=\"http://claudiolassala.files.wordpress.com/2010/11/jigsawpuzzle-3000ny_thumb.gif?w=499&#038;h=374\" width=\"499\" height=\"374\"></a></p>\n\
+      <br />  <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gocomments/claudiolassala.wordpress.com/360/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/comments/claudiolassala.wordpress.com/360/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godelicious/claudiolassala.wordpress.com/360/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/delicious/claudiolassala.wordpress.com/360/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gofacebook/claudiolassala.wordpress.com/360/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/facebook/claudiolassala.wordpress.com/360/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gotwitter/claudiolassala.wordpress.com/360/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/twitter/claudiolassala.wordpress.com/360/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/gostumble/claudiolassala.wordpress.com/360/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/stumble/claudiolassala.wordpress.com/360/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/godigg/claudiolassala.wordpress.com/360/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/digg/claudiolassala.wordpress.com/360/\" /></a> <a rel=\"nofollow\" href=\"http://feeds.wordpress.com/1.0/goreddit/claudiolassala.wordpress.com/360/\"><img alt=\"\" border=\"0\" src=\"http://feeds.wordpress.com/1.0/reddit/claudiolassala.wordpress.com/360/\" /></a> <img alt=\"\" border=\"0\" src=\"http://stats.wordpress.com/b.gif?host=claudiolassala.wordpress.com&amp;blog=16423636&amp;post=360&amp;subd=claudiolassala&amp;ref=&amp;feed=1\" width=\"1\" height=\"1\" />]]></content:encoded>\n\
+      \t\t\t<wfw:commentRss>http://claudiolassala.wordpress.com/2010/11/03/hallelujah-were-done-with-the-2000-piece-jigsaw-puzzle/feed/</wfw:commentRss>\n\
+      \t\t<slash:comments>0</slash:comments>\n\
+      \t\n\
+      \t\t<media:content url=\"http://1.gravatar.com/avatar/1ec317f57c98711dbdafbc543691b4e7?s=96&#38;d=identicon&#38;r=G\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">claudiolassala</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/wlemoticon-smile1.png\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">Smile</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/wlemoticon-smile1.png\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">Smile</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/01_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">01</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/02_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">02</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/03_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">03</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/04_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">04</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/05_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">05</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/06_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">06</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/07_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">07</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/08_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">08</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/09_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">09</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/10_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">10</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/11_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">11</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/12_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">12</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/13_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">13</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/14_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">14</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/15_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">15</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/16_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">16</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/17_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">17</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/18_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">18</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/19_thumb.jpg\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">19</media:title>\n\
+      \t\t</media:content>\n\n\
+      \t\t<media:content url=\"http://claudiolassala.files.wordpress.com/2010/11/jigsawpuzzle-3000ny_thumb.gif\" medium=\"image\">\n\
+      \t\t\t<media:title type=\"html\">JigsawPuzzle-3000NY</media:title>\n\
+      \t\t</media:content>\n\
+      \t</item>\n\
+      \t</channel>\n\
+      </rss>"
+    http_version: "1.1"

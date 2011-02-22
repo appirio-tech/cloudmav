@@ -4,14 +4,15 @@ describe BloggerSyncService do
   
   describe "sync" do
     before(:each) do
-      @profile = Factory.create(:profile)
-      @blog = Blog.new
-      @blog.blog_type = "Blogger"
-      # @blog.rss = "http://www.theabsentmindedcoder.com/feeds/posts/default"
-      @blog.url = "http://www.theabsentmindedcoder.com"
-      @profile.blogs << @blog
-      BloggerSyncService.sync(@blog)
-      @profile.save
+      VCR.use_cassette("blogger", :record => :new_episodes) do
+        @profile = Factory.create(:profile)
+        @blog = Blog.new
+        @blog.blog_type = "Blogger"
+        @blog.url = "www.theabsentmindedcoder.com"
+        @profile.blogs << @blog
+        BloggerSyncService.sync(@blog)
+        @profile.save
+      end
     end
     
     it { @blog.posts.count.should > 0 }

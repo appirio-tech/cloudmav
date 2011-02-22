@@ -19,6 +19,7 @@ class BloggerSyncService
           post.written_on = i.date
           post.blog = blog
           post.profile = blog.profile
+          post.save
         end
       end
       blog.save

@@ -3,39 +3,20 @@ require 'spec_helper'
 describe Profile do
   
   describe "display name" do
-    context "no name and no email" do
-      it "should use the user email address" do
-        user = User.new(:email => "test@email.com")
-        profile = Profile.new(:user => user)
-        profile.display_name.should == "test@email.com"
-      end
+    before(:each) do
+      @user = User.new(:email => "test@email.com", :username => "username")
+      @profile = Profile.new(:user => @user)
     end
-    
     context "no name" do
-      it "should use the profile email address" do
-        user = User.new(:email => "test@email.com")
-        profile = Profile.new(:user => user)
-        profile.email = "somethingnew@email.com"
-        profile.display_name.should == "somethingnew@email.com"
-      end
+      it { @profile.display_name.should == "username" }
     end
-    
     context "use name" do
-      it "should use the profile name" do
-        user = User.new(:email => "test@email.com")
-        profile = Profile.new(:user => user)
-        profile.name = "John Doe"
-        profile.display_name.should == "John Doe"
-      end
+      before(:each) { @profile.name = "Name" }
+      it { @profile.display_name.should == "Name" }
     end
-    
     context "empty name" do
-      it "should use the profile email address" do
-        user = User.new(:email => "test@email.com")
-        profile = Profile.new(:user => user)
-        profile.name = ""
-        profile.display_name.should == "test@email.com"
-      end
+      before(:each) { @profile.name = "" }
+      it { @profile.display_name.should == "username" }
     end
   end
   

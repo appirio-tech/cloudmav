@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "Learn to synch with Stack Overflow" do
   before(:each) do
     Virgil::Dsl.class_eval(File.read('spec/lib/virgil/stackoverflow_guidance.rb'))
-    @profile = Profile.new
+    @profile = Factory.create(:profile)
   end
   
   context "Has not synched" do
@@ -16,7 +16,7 @@ describe "Learn to synch with Stack Overflow" do
   
   context "Has synched" do
     before(:each) do
-      @profile.stack_overflow_profile = StackOverflowProfile.new
+      StackOverflowProfile.create(:profile => @profile)
       @profile.save
       @guidance = @profile.get_guidance
     end
