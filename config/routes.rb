@@ -59,6 +59,12 @@ Codemav::Application.routes.draw do
     get 'logout', :to => "devise/sessions#destroy"
   end
   
+  resources :profiles do
+    collection do
+      post :search
+    end
+  end
+
   match "/:username" => "profiles#show", :as => :profile
   match "/:username/experience" => "profiles#experience", :as => :profile_experience
   match "/:username/code" => "profiles#code", :as => :profile_code

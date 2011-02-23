@@ -1,0 +1,23 @@
+.grid_16
+  = form_tag search_profiles_path do |f|
+    Search for people
+    = text_field_tag :search
+    near
+    = text_field_tag :near
+    = submit_tag "Search", :disable_with => "Searching..."
+.clear
+
+.grid_16
+  - unless @profiles.nil?
+    - if @profiles.empty?
+      Oh no! No one was found. But searching is free.. so knock yourself out.
+    - else
+      %ul.list
+        - @profiles.each do |p|
+          %li
+            .item_pic= image_tag p.gravatar_url(:size => 60)
+            .item_info
+              .item_title= link_to p.display_name, profile_path(p)
+              .item_description= "(#{p.username})"
+          
+.clear

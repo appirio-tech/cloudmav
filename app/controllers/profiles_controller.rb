@@ -1,5 +1,15 @@
 class ProfilesController < ApplicationController
-  before_filter :set_profile
+  before_filter :set_profile, :except => [:index, :search]
+
+  def index
+  end
+
+  def search
+    search = params[:search] || ""
+    near = params[:near] || ""
+    @profiles = Profile.search(search, :near => near).results
+    render :index
+  end
   
   def show
     @tab = "summary"
