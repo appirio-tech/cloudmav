@@ -5,7 +5,7 @@ describe BloggerSyncService do
   describe "sync" do
     before(:each) do
       VCR.use_cassette("blogger", :record => :new_episodes) do
-        @profile = Factory.create(:profile)
+        @profile = Factory.create(:user).profile
         @blog = Blog.new
         @blog.blog_type = "Blogger"
         @blog.url = "www.theabsentmindedcoder.com"

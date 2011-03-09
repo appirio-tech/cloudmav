@@ -5,7 +5,7 @@ describe WordpressSyncService do
   describe "sync" do
     before(:each) do
       VCR.use_cassette("wordpress", :record => :new_episodes) do
-        @profile = Factory.create(:profile)
+        @profile = Factory.create(:user).profile
         @blog = Blog.new
         @blog.blog_type = "Wordpress"
         @blog.rss = "http://claudiolassala.wordpress.com/"
