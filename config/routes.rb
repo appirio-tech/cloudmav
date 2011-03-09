@@ -58,8 +58,10 @@ Codemav::Application.routes.draw do
     get "login", :to => "devise/sessions#new"
     get 'logout', :to => "devise/sessions#destroy"
   end
+
   
   resources :profiles do
+    resources :followings
     collection do
       post :search
     end

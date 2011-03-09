@@ -24,7 +24,8 @@ class ApplicationController < ActionController::Base
   
   private 
     def set_profile
-      @profile = Profile.by_username(params[:username]).first
+      username = params[:username] || params[:profile_id]
+      @profile = Profile.by_username(username).first
     end
     
     def set_date(model, param_name)

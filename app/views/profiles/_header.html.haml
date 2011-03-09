@@ -1,7 +1,7 @@
 #profile_header
   .grid_2
     = image_tag @profile.gravatar_url(:size => 90), :id => :profile_pic
-  .grid_14
+  .grid_12
     .profile_name= @profile.display_name
     .user_name= "(#{@profile.username})"
     - if @profile == current_profile
@@ -16,5 +16,9 @@
         %td= @profile.email
     .clear
     = render :partial => "points"
+  .grid_2
+    - if can? :follow, @profile
+      = form_for [@profile, Following.new] do |f|
+        .submit= f.submit "Follow", :disable_with => "Following..."
   .clear
 .clear

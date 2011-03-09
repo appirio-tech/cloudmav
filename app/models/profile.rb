@@ -14,6 +14,7 @@ class Profile
   include CodeMav::Taggable
   include CodeMav::Locatable
   include CodeMav::Indexable
+  include CodeMav::Followable
 
   is_gravtastic!
 
@@ -44,6 +45,7 @@ class Profile
   references_one :linkedin_profile
     
   scope :by_username, lambda { |uname| { :where => { :username => uname } } }
+  scope :named, lambda { |name| { :where => { :name => name } } }
   
   def username
     self.user.username
