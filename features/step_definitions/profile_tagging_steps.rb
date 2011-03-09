@@ -1,5 +1,5 @@
 Given /^I have a profile$/ do
-  @profile = Factory.create(:profile)
+  @profile = Factory.create(:user).profile
 end
 
 Given /^I have a talk tagged with "([^"]*)"$/ do |tag|

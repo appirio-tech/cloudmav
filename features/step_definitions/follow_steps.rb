@@ -2,7 +2,6 @@ When /^I follow the user "([^"]*)"$/ do |username|
   visit profile_path(:username => username)
   click_button "Follow"
   And "I should be redirected"
-  And "show me the page"
 end
 
 Then /^I should be following "([^"]*)"$/ do |username|
@@ -12,7 +11,7 @@ Then /^I should be following "([^"]*)"$/ do |username|
 end
 
 Then /^"([^"]*)" should have me as a follower$/ do |username|
-  profile 
-
+  profile = Profile.by_username(username).first
+  profile.follower?(@profile).should == true 
 end
  
