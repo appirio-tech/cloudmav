@@ -16,6 +16,7 @@ module CodeMav
           event.send("#{self.class.to_s.underscore}=", self)
           event.save
         end
+        save
       end
 
     end
