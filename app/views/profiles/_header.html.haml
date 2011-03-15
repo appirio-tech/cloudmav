@@ -7,6 +7,10 @@
     - if @profile == current_profile
       .edit_profile_link
         = link_to "edit profile", edit_profile_path(@profile)
+    - if can? :view_widgets, @profile
+      .view_widgets_link
+        |
+        = link_to "get widgets", profile_widgets_path(@profile)
     .clear
     %table
       %tr

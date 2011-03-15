@@ -5,6 +5,9 @@ class Ability
     return if user.nil?
     return if user.profile.nil?
     
+    can :view_widgets, Profile do |profile|
+      user.profile == profile
+    end
     can [:set_speaker_rate_profile, :set_slide_share_profile, :set_stack_overflow_profile, :set_git_hub_profile], Profile do |profile|
       user.profile == profile
     end

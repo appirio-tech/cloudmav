@@ -1,0 +1,25 @@
+(function(){
+  document.write('<table class="codemav_basic_widget">');
+
+  document.write('<tr>');
+  document.write('<td rowspan=2>');
+  document.write('<%= image_tag "codemav_icon.png", :size => "45x45" %>');
+  document.write('</td>');
+  document.write('<td>');
+  document.write('<p class="codemav_username"><%= @profile.username %></p>');
+  document.write('</td>');
+  document.write('<td rowspan=2>');
+  document.write('<p class="codemav_points"><%= @profile.total_score %></p>');
+  document.write('</td>');
+  document.write('</tr>');
+
+
+  document.write('<tr>');
+  document.write('<td>');
+  document.write('</td>');
+  document.write('</tr>');
+
+  document.write('</table>');
+
+  document.write('</div>');
+  })()

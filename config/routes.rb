@@ -59,9 +59,13 @@ Codemav::Application.routes.draw do
     get 'logout', :to => "devise/sessions#destroy"
   end
 
+  namespace :widget do
+    match "/:username" => "profiles#show", :as => :profile
+  end
   
   resources :profiles do
     resources :followings
+    resources :widgets
     collection do
       post :search
     end
