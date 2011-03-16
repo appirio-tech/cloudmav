@@ -17,8 +17,8 @@ module CodeMav
 
         event_name = "#{self.class.to_s}TagEvent"
         event = nil
-        if Kernel.const_defined?(event_name)
-          event = Kernel.const_get(event_name).new
+        if Object.const_defined?(event_name)
+          event = Object.const_get(event_name).new
         else
           event = TagEvent.new
         end
