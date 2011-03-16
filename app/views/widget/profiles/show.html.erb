@@ -2,14 +2,14 @@
   document.write('<%= stylesheet_link_tag "basic_widget.css" %>');
   document.write('<div class="codemav_basic_widget">');
 
-  document.write('<%= image_tag "codemav_icon.png", :class => "codemav_icon", :size => "50x50" %>');
+  document.write('<%= image_tag "codemav_icon.png", :class => "codemav_icon", :size => "43x43" %>');
 
   document.write('<div class="codemav_name_and_subpoints">');
   document.write('<%= link_to @profile.username, profile_url(@profile), :class => "codemav_username" %>');
 
   document.write('<div class="codemav_subpoints_section">');
   <% unless @profile.stack_overflow_profile.nil? %>
-    document.write('<%= image_tag 'stack_overflow_widget_icon.png', :height => 25, :class => "codemav_subpoints_icon" %>');
+    document.write('<%= image_tag 'stack_overflow_widget_icon.png', :height => 20, :class => "codemav_subpoints_icon" %>');
     document.write('<div class="codemav_subpoints"><%= @profile.stack_overflow_profile.reputation %></div>');
   <% end %>
   document.write('</div>');
