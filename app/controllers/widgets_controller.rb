@@ -3,6 +3,7 @@ class WidgetsController < ApplicationController
 
   def index
     authorize! :view_widgets, @profile
+    @host = request.host
   end
 
 end
