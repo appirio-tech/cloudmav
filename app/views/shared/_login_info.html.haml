@@ -1,8 +1,8 @@
 .right
 	- unless user_signed_in? 
 		#signin_panel
-			= link_to "Sign in", login_path
-			= link_to "Register", new_user_registration_path
+			= link_to "Sign in", login_path, :class => "menu_nav"
+			= link_to "Register", new_user_registration_path, :class => "menu_nav"
 			
 	-else
 		#login_panel

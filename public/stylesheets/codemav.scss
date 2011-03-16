@@ -335,25 +335,28 @@ $error_background: #FFDFDF;
   }
   .logout {
     float:right;
-    padding-top: 7px;
-    margin-right: 5px;
+    margin-top: 8px;
     a {
+      @include corners(3);
       color: $light_gray;
       font-size: 10pt;
       font-weight: bold;
+      padding: 3px;
       &:hover {
         text-decoration: none;
+        background: $light_gray;
+        color: $emphasis_dark_background;
       }
     }
   }
   .username {
-    padding-top: 5px;
+    padding-top: 6px;
     a {
       font-size: 11pt;
       font-weight:bold;
       color: $white;
       &:hover {
-        text-decoration: none;
+        text-decoration: underline;
       }
     }
   }
@@ -366,14 +369,17 @@ $error_background: #FFDFDF;
 
 #menu {
   margin-top: 15px;
-  a {
-    font-size: 12pt;
-    font-weight: bold;
-    color: $white;
-    padding-left: 10px;
-    &:hover {
-      text-decoration: none;
-    }
+}
+
+a.menu_nav {
+  @include corners;
+  font-size: 12pt;
+  font-weight: bold;
+  color: $white;
+  padding: 7px;
+  &:hover {
+    text-decoration: none;
+    background: $emphasis_dark_background;
   }
 }
 
