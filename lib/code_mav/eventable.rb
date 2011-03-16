@@ -47,16 +47,12 @@ module CodeMav
       private
 
       def create_event_named(event_name, options = {})
-        if Kernel.const_defined?(event_name)
-          #puts "************************"
-          #puts "creating event #{event_name} > #{self.inspect}"
-          event = Kernel.const_get(event_name).new
+        if Object.const_defined?(event_name)
+          event = Object.const_get(event_name).new
           event.subject_class_name = self.class.to_s
           event.subject_id = self.id
           event.send("#{self.class.to_s.underscore}=", options[:self_value] || self)
           event.save
-          #puts "Events now #{Event.all.to_a}"
-          #puts "************************"
         end
       end
 

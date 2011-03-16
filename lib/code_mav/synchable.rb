@@ -8,8 +8,8 @@ module CodeMav
 
       def synch!
         event_name = "#{self.class.to_s}SynchEvent"
-        if Kernel.const_defined?(event_name)
-          event = Kernel.const_get(event_name).new
+        if Object.const_defined?(event_name)
+          event = Object.const_get(event_name).new
           event.subject_class_name = self.class.to_s
           event.subject_id = self.id
           event.profile = self.profile
