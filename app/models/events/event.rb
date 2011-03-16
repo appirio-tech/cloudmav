@@ -27,6 +27,7 @@ class Event
     do_work if self.respond_to? :do_work
         
     self.completed = true
+    self.in_process = false
     self.save
   end
 
