@@ -36,7 +36,7 @@ class Event
   end
 
   def subject_class
-    Kernel.const_get(subject_class_name)
+    Object.const_get(subject_class_name)
   end
 
   def subject

@@ -8,8 +8,8 @@ class TagEvent < Event
   attr_accessor :model_name
   
   def taggable
-    if @taggable_object.nil? && Kernel.const_defined?(class_name)
-      @model_name = Kernel.const_get(class_name)
+    if @taggable_object.nil? && Object.const_defined?(class_name)
+      @model_name = Object.const_get(class_name)
       @taggable_object = @model_name.find(taggable_id)
     end
     @taggable_object
