@@ -7,7 +7,7 @@ class StackOverflowProfileSynchEvent < SynchEvent
     
     user = StackOverflow.get_user(stack_overflow_profile.stack_overflow_id)
     stack_overflow_profile.profile.name = user["display_name"] if stack_overflow_profile.profile.name.nil?
-    stack_overflow_profile.url = "http://www.stackoverflow.com/#{stack_overflow_profile.stack_overflow_id}"
+    stack_overflow_profile.url = "http://www.stackoverflow.com/users/#{stack_overflow_profile.stack_overflow_id}"
     stack_overflow_profile.reputation = user["reputation"]
     stack_overflow_profile.badge_html = user["badgeHtml"]
     tags = StackOverflow.get_user_tags(stack_overflow_profile.stack_overflow_id)

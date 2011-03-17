@@ -7,7 +7,7 @@
           Do you have a Speaker Rate account? 
           = link_to "Add Your Speaker Rate Account", new_speaker_rate_profile_path(:username => @profile.username)
     -else
-      = link_to "Go to my Speaker Rate Profile", @profile.speaker_rate_profile.url
+      = link_to "Go to my Speaker Rate Profile", @profile.speaker_rate_profile.url, :target => "_blank"
       %table
         %tr
           %td Rating

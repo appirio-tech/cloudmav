@@ -2,7 +2,7 @@
   .info_logo= link_to image_tag("stack_over_flow_info_logo.png"), "http://www.stackoverflow.com"
   .info
     - if @profile.stack_overflow_profile
-      = link_to "Go to my StackOverflow Profile", @profile.stack_overflow_profile.url
+      = link_to "Go to my StackOverflow Profile", @profile.stack_overflow_profile.url, :target => "_blank"
       %table
         %tr
           %td Reputation

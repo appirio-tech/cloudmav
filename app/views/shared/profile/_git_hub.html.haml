@@ -2,7 +2,7 @@
   .info_logo= link_to image_tag("git_hub_info_logo.png"), "http://www.github.com"
   .info
     - if @profile.git_hub_profile
-      = link_to "Go to my GitHub Profile", @profile.git_hub_profile.url
+      = link_to "Go to my GitHub Profile", @profile.git_hub_profile.url, :target => "_blank"
       %table
         %tr
           %td Repositories

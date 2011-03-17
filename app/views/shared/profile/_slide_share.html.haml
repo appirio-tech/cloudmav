@@ -7,5 +7,5 @@
           Do you have a Slide Share account? 
           = link_to "Add it.", new_slide_share_profile_path(:username => @profile.username)
     -else
-      = link_to "Go to my Slide Share Profile", @profile.slide_share_profile.url
+      = link_to "Go to my Slide Share Profile", @profile.slide_share_profile.url, :target => "_blank"
 .clear
