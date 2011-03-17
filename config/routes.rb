@@ -3,7 +3,10 @@ Codemav::Application.routes.draw do
   
   match 'api_documentation' => 'pages#api_documentation', :as => :api_documentation
   match 'whats_up' => 'activities#index', :as => :whats_up
-  
+
+  resources :contacts
+  match 'contact' => 'contacts#new', :as => :contact
+
   resources :tags
   resources :activities
   

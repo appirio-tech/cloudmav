@@ -304,6 +304,19 @@ $error_background: #FFDFDF;
   color: $light_gray;
   padding-top:10px;
   padding-bottom:10px;
+
+  a {
+      @include corners;
+      font-size: 10pt;
+      font-weight: bold;
+      color: $white;
+      &:hover {
+        text-decoration: underline;
+      }
+  }
+  .copyright {
+    margin-top:10px;
+  }
 }
 
 #signin_panel {
