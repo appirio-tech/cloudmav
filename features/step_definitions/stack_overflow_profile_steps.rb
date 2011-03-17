@@ -2,7 +2,7 @@ When /^I synch my StackOverflow account$/ do
   VCR.use_cassette("stack_overflow", :record => :all) do
     visit new_stack_overflow_profile_path(:username => @profile.username)
     fill_in "stack_overflow_profile_stack_overflow_id", :with => '60336'
-    click_button "Synch"
+    click_button "Save"
     And %Q{I should be redirected}
   end
 end
@@ -30,5 +30,23 @@ end
 Then /^my profile should have my StackOverflow profile tags$/ do
   profile = User.find(@user.id).profile
   profile.tags.count.should > 0
+end
+
+Given /^I have a StackOverflow profile$/ do
+  @stack_overflow_profile = Factory.create(:stack_overflow_profile, :profile => @profile)
+end
+
+When /^I edit my StackOverflow profile$/ do
+  VCR.use_cassette("stack_overflow_update", :record => :all) do
+    visit edit_stack_overflow_profile_path(@stack_overflow_profile, :username => @profile.username)
+    fill_in "stack_overflow_profile_stack_overflow_id", :with => "60336"
+    click_button "Save"
+    And %Q{I should be redirected}
+  end
+end
+
+Then /^my StackOverflow profile should be updated$/ do
+  @stack_overflow_profile.reload
+  @stack_overflow_profile.stack_overflow_id.should == "60336"
 end
 
