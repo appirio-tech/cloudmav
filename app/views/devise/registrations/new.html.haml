@@ -26,3 +26,14 @@
   %br
   = render :partial => "devise/shared/links"
 .clear
+
+:javascript
+  var changing_value = true;
+
+  $("#user_username").keyup(function(){
+    if (changing_value) {
+      changing_value = false;
+      this.value = this.value.toLowerCase();
+      changing_value = true;
+    }
+  });
