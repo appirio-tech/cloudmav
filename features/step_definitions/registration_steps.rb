@@ -26,4 +26,12 @@ Then /^my profile email should be my user email$/ do
   user.profile.email.should == @user.email
 end
 
+Then /^I should be redirected to my profile page$/ do
+  And "I should be redirected"
+  user = User.where(:email => @user.email).first
+  current_path = URI.parse(current_url).path
+  current_path.should == profile_path(user.profile)
+end
+
+
 

@@ -21,6 +21,10 @@ class ApplicationController < ActionController::Base
     return if current_user.nil?
     @guidance = current_profile.get_guidance
   end
+
+  def after_sign_in_path_for(user)
+    profile_path(user.profile)
+  end
   
   private 
     def set_profile
