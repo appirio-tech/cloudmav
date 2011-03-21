@@ -2,6 +2,7 @@ class User
   include Mongoid::Document
 
   before_create :add_profile       
+  before_create :downcase_username
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
@@ -9,6 +10,10 @@ class User
   references_one :profile
   
   field :username, :type => String
+
+  def downcase_username
+    self.username=username.downcase
+  end
   
   protected
 
