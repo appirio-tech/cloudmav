@@ -1,5 +1,10 @@
 class JobsController < ApplicationController
   before_filter :set_profile, :only => [:new, :create]
+
+  def show
+    @job = Job.find(params[:id])
+  end
+
   def new
     authorize! :manage_jobs, @profile
     @job = Job.new

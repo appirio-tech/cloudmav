@@ -14,8 +14,17 @@ class Job
   referenced_in :company, :inverse_of => :employments
   referenced_in :profile, :inverse_of => :jobs
 
+  before_save :set_company_name
+
   def related_items
     [company, profile.experience_profile]
   end
   
+  def set_company_name
+    unless company.nil?
+      if company_name != company.name
+        company_name = company.name
+      end
+    end
+  end
 end

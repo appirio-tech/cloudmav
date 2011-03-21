@@ -1,0 +1,9 @@
+.grid_16
+  %h1 Job
+
+  %p= link_to "Experience Profile", profile_experience_path(@job.profile)
+
+  %p= @job.title
+  %p= @job.description
+  %p= @job.company_name
+  %p #{show_date @job.start_date} - #{show_date @job.end_date}
