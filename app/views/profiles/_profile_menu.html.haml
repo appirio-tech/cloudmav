@@ -29,6 +29,11 @@
         = image_tag "tabs/speaking_selected.png"
       - else
         = image_tag "tabs/speaking_unselected.png"
-
       = link_to "Speaking", profile_speaking_path(@profile)
+    %li{:class => (@tab == "social") ? "selected" : ""}
+      - if @tab == "social"
+        = image_tag "tabs/social_selected.png"
+      - else
+        = image_tag "tabs/social_unselected.png"
+      = link_to "Social", profile_social_path(@profile)
 .clear

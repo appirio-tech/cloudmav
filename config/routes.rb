@@ -79,6 +79,7 @@ Codemav::Application.routes.draw do
   match "/:username/code" => "profiles#code", :as => :profile_code
   match "/:username/writing" => "profiles#writing", :as => :profile_writing
   match "/:username/speaking" => "profiles#speaking", :as => :profile_speaking
+  match "/:username/social" => "profiles#social", :as => :profile_social
   match "/:username/edit" => "profiles#edit", :as => :edit_profile
   match "/:username/update" => "profiles#update", :as => :update_profile, :method => :put
   
