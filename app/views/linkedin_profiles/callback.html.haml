@@ -1,9 +1,12 @@
 
 %h2 Your jobs on LinkedIn
 
+%p
+  We found these jobs on your LinkedIn Profile. 
+  
 = form_tag confirm_linkedin_profiles_path, :method => :post do
   = hidden_field_tag :username, @profile.username
-  .submit= submit_tag "Add Jobs", :disable_with => "Adding Jobs..."
+  .submit= submit_tag "Add my LinkedIn Jobs to CodeMav", :disable_with => "Adding..."
 
 %ul.list
   - @jobs.each do |j|
