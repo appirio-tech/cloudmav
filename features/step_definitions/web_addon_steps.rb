@@ -25,11 +25,6 @@ Then /^I should be sent to the (.+) page$/ do |page_name|
   Then "I should be on the #{page_name} page"
 end
 
-When /^I leave the admin section for the home page$/ do
-  setup_subdomain_for_school @school
-  visit "/"
-end
-
 # Click link
 
 When /^(?:|I )click the "([^\"]*)" link$/ do |link|
