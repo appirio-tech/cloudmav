@@ -18987,3 +18987,386 @@ REQUESTING PAGE: GET /username1 with {} and HTTP headers {"HTTP_REFERER"=>"/user
 REQUESTING PAGE: GET /talks/4d90d5a8b263b3655d00000c with {} and HTTP headers {"HTTP_REFERER"=>"/username1"}
 REQUESTING PAGE: GET /talks/4d90d5a8b263b3655d00000c/presentations/new with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d5a8b263b3655d00000c"}
 REQUESTING PAGE: POST /talks/4d90d5a8b263b3655d00000c/presentations with {"utf8"=>"\xE2\x9C\x93", "presentation_date"=>"3/10/2010", "hour_presentation_time"=>"8", "minute_presentation_time"=>"30", "ampm_presentation_time"=>"PM", "presentation"=>{"audience"=>"Some peeps", "url"=>"http://www.example.com"}, "commit"=>"Schedule Presentation"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d5a8b263b3655d00000c/presentations/new"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username2", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username2 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /blogs/new?username=username2 with {} and HTTP headers {"HTTP_REFERER"=>"/username2"}
+REQUESTING PAGE: POST /blogs with {"utf8"=>"\xE2\x9C\x93", "username"=>"username2", "blog"=>{"title"=>"My Blog 1", "url"=>"www.myblog.com"}, "blog_type"=>"Blogger", "commit"=>"Add"} and HTTP headers {"HTTP_REFERER"=>"/blogs/new?username=username2"}
+REQUESTING PAGE: GET /blogs/4d90d6d8b263b3662000001e with {} and HTTP headers {"HTTP_REFERER"=>"/blogs"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username3", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username3 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /blogs/4d90d6dab263b3662000002d/posts/new with {} and HTTP headers {"HTTP_REFERER"=>"/username3"}
+REQUESTING PAGE: POST /blogs/4d90d6dab263b3662000002d/posts with {"utf8"=>"\xE2\x9C\x93", "post"=>{"title"=>"my blog post 1", "url"=>""}, "written_on"=>"2010-12-25T00:00:00-06:00", "commit"=>"Add"} and HTTP headers {"HTTP_REFERER"=>"/blogs/4d90d6dab263b3662000002d/posts/new"}
+REQUESTING PAGE: GET /blogs/4d90d6dab263b3662000002d with {} and HTTP headers {"HTTP_REFERER"=>"/blogs/4d90d6dab263b3662000002d/posts"}
+REQUESTING PAGE: GET /companies/4d90d6dab263b36620000034 with {} and HTTP headers {}
+REQUESTING PAGE: GET /contact with {} and HTTP headers {}
+REQUESTING PAGE: POST /contacts with {"utf8"=>"\xE2\x9C\x93", "contact"=>{"name"=>"Joe", "email"=>"joe@example.com", "subject"=>"Subject", "description"=>"Description"}, "commit"=>"Submit"} and HTTP headers {"HTTP_REFERER"=>"/contact"}
+REQUESTING PAGE: GET / with {} and HTTP headers {"HTTP_REFERER"=>"/contacts"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username9", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username9 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /username9 with {} and HTTP headers {"HTTP_REFERER"=>"/username9"}
+REQUESTING PAGE: GET /username9/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username9"}
+REQUESTING PAGE: POST /username9/update with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "profile"=>{"name"=>"John", "email"=>"test10@email.com", "location"=>"", "lat"=>"", "lng"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/username9/edit"}
+REQUESTING PAGE: GET /username9 with {} and HTTP headers {"HTTP_REFERER"=>"/username9/update"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username10", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username10 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /username10 with {} and HTTP headers {"HTTP_REFERER"=>"/username10"}
+REQUESTING PAGE: GET /username10/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username10"}
+REQUESTING PAGE: POST /username10/update with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "profile"=>{"name"=>"", "email"=>"test11@email.com", "location"=>"Houston, TX", "lat"=>"30", "lng"=>"-90"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/username10/edit"}
+REQUESTING PAGE: GET /username10 with {} and HTTP headers {"HTTP_REFERER"=>"/username10/update"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username11", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username11 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /l33t_coder with {} and HTTP headers {"HTTP_REFERER"=>"/username11"}
+REQUESTING PAGE: POST /profiles/l33t_coder/followings with {"utf8"=>"\xE2\x9C\x93", "commit"=>"Follow"} and HTTP headers {"HTTP_REFERER"=>"/l33t_coder"}
+REQUESTING PAGE: GET /l33t_coder with {} and HTTP headers {"HTTP_REFERER"=>"/profiles/l33t_coder/followings"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username12", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username12 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /git_hub_profiles/new?username=username12 with {} and HTTP headers {"HTTP_REFERER"=>"/username12"}
+REQUESTING PAGE: POST /git_hub_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username12", "git_hub_profile"=>{"username"=>"rookieone"}, "commit"=>"Synch"} and HTTP headers {"HTTP_REFERER"=>"/git_hub_profiles/new?username=username12"}
+REQUESTING PAGE: GET /username12/code with {} and HTTP headers {"HTTP_REFERER"=>"/git_hub_profiles"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username13", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username13 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /jobs/new?username=username13 with {} and HTTP headers {"HTTP_REFERER"=>"/username13"}
+REQUESTING PAGE: POST /jobs with {"utf8"=>"\xE2\x9C\x93", "username"=>"username13", "job"=>{"company_name"=>"ChaiOne", "title"=>"Developer", "description"=>"I did awesome stuff", "tags_text"=>"rails, ruby"}, "start_date"=>"09/28/10", "end_date"=>"02/28/11", "commit"=>"Add"} and HTTP headers {"HTTP_REFERER"=>"/jobs/new?username=username13"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username14", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username14 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username15", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username15 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/4d90d6e1b263b366200000f5 with {} and HTTP headers {"HTTP_REFERER"=>"/username15"}
+REQUESTING PAGE: GET /talks/4d90d6e1b263b366200000f5/presentations/new with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d6e1b263b366200000f5"}
+REQUESTING PAGE: POST /talks/4d90d6e1b263b366200000f5/presentations with {"utf8"=>"\xE2\x9C\x93", "presentation_date"=>"3/10/2010", "hour_presentation_time"=>"8", "minute_presentation_time"=>"30", "ampm_presentation_time"=>"PM", "presentation"=>{"audience"=>"Some peeps", "url"=>"http://www.example.com"}, "commit"=>"Schedule Presentation"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d6e1b263b366200000f5/presentations/new"}
+REQUESTING PAGE: GET /users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username19", "email"=>"test21@email.com", "password"=>"secret", "password_confirmation"=>"secret"}, "commit"=>"Register"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_up"}
+REQUESTING PAGE: GET /username19 with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username20", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username20 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /slide_share_profiles/new?username=username20 with {} and HTTP headers {"HTTP_REFERER"=>"/username20"}
+REQUESTING PAGE: POST /slide_share_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username20", "slide_share_profile"=>{"slide_share_username"=>"rookieone"}, "commit"=>"Synch"} and HTTP headers {"HTTP_REFERER"=>"/slide_share_profiles/new?username=username20"}
+REQUESTING PAGE: GET /username20/speaking with {} and HTTP headers {"HTTP_REFERER"=>"/slide_share_profiles"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username21", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username21 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /slide_share_profiles/new?username=username21 with {} and HTTP headers {"HTTP_REFERER"=>"/username21"}
+REQUESTING PAGE: POST /slide_share_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username21", "slide_share_profile"=>{"slide_share_username"=>"rookieone"}, "commit"=>"Synch"} and HTTP headers {"HTTP_REFERER"=>"/slide_share_profiles/new?username=username21"}
+REQUESTING PAGE: GET /username21/speaking with {} and HTTP headers {"HTTP_REFERER"=>"/slide_share_profiles"}
+REQUESTING PAGE: GET /slide_share_profiles/new?username=username21 with {} and HTTP headers {"HTTP_REFERER"=>"/username21/speaking"}
+REQUESTING PAGE: POST /slide_share_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username21", "slide_share_profile"=>{"slide_share_username"=>"rookieone"}, "commit"=>"Synch"} and HTTP headers {"HTTP_REFERER"=>"/slide_share_profiles/new?username=username21"}
+REQUESTING PAGE: GET /username21/speaking with {} and HTTP headers {"HTTP_REFERER"=>"/slide_share_profiles"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username22", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username22 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /username22/speaker_bio/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username22"}
+REQUESTING PAGE: POST /username22/speaker_bio/update with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "speaker_bio"=>"My speaker bio", "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/username22/speaker_bio/edit"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username23", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username23 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /speaker_rate_profiles/new?username=username23 with {} and HTTP headers {"HTTP_REFERER"=>"/username23"}
+REQUESTING PAGE: POST /speaker_rate_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username23", "speaker_rate_profile"=>{"speaker_rate_id"=>"10082"}, "commit"=>"Synch"} and HTTP headers {"HTTP_REFERER"=>"/speaker_rate_profiles/new?username=username23"}
+REQUESTING PAGE: GET /username23/speaking with {} and HTTP headers {"HTTP_REFERER"=>"/speaker_rate_profiles"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username24", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username24 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /speaker_rate_profiles/new?username=username24 with {} and HTTP headers {"HTTP_REFERER"=>"/username24"}
+REQUESTING PAGE: POST /speaker_rate_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username24", "speaker_rate_profile"=>{"speaker_rate_id"=>"10082"}, "commit"=>"Synch"} and HTTP headers {"HTTP_REFERER"=>"/speaker_rate_profiles/new?username=username24"}
+REQUESTING PAGE: GET /username24/speaking with {} and HTTP headers {"HTTP_REFERER"=>"/speaker_rate_profiles"}
+REQUESTING PAGE: GET /speaker_rate_profiles/new?username=username24 with {} and HTTP headers {"HTTP_REFERER"=>"/username24/speaking"}
+REQUESTING PAGE: POST /speaker_rate_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username24", "speaker_rate_profile"=>{"speaker_rate_id"=>"10082"}, "commit"=>"Synch"} and HTTP headers {"HTTP_REFERER"=>"/speaker_rate_profiles/new?username=username24"}
+REQUESTING PAGE: GET /username24/speaking with {} and HTTP headers {"HTTP_REFERER"=>"/speaker_rate_profiles"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username25", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username25 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /stack_overflow_profiles/new?username=username25 with {} and HTTP headers {"HTTP_REFERER"=>"/username25"}
+REQUESTING PAGE: POST /stack_overflow_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username25", "stack_overflow_profile"=>{"stack_overflow_id"=>"60336"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/stack_overflow_profiles/new?username=username25"}
+REQUESTING PAGE: GET /username25/code with {} and HTTP headers {"HTTP_REFERER"=>"/stack_overflow_profiles"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username26", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username26 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /stack_overflow_profiles/4d90d6eeb263b36620000248/edit?username=username26 with {} and HTTP headers {"HTTP_REFERER"=>"/username26"}
+REQUESTING PAGE: POST /stack_overflow_profiles/4d90d6eeb263b36620000248 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "username"=>"username26", "stack_overflow_profile"=>{"stack_overflow_id"=>"60336"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/stack_overflow_profiles/4d90d6eeb263b36620000248/edit?username=username26"}
+REQUESTING PAGE: GET /username26/code with {} and HTTP headers {"HTTP_REFERER"=>"/stack_overflow_profiles/4d90d6eeb263b36620000248"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username27", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username27 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/4d90d6efb263b3662000027a/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username27"}
+REQUESTING PAGE: POST /talks/4d90d6efb263b3662000027a with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "talk"=>{"title"=>"Talk 3", "description"=>"description of the talk", "slides_url"=>"slides.com", "willing_to_give_talk_again"=>"true", "tags_text"=>"C#"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d6efb263b3662000027a/edit"}
+REQUESTING PAGE: GET /talks/4d90d6efb263b3662000027a with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d6efb263b3662000027a"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username28", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username28 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/4d90d6f0b263b36620000293/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username28"}
+REQUESTING PAGE: POST /talks/4d90d6f0b263b36620000293 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "talk"=>{"title"=>"Talk 4", "description"=>"description of the talk", "slides_url"=>"slides.com", "willing_to_give_talk_again"=>"true", "tags_text"=>"C#"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d6f0b263b36620000293/edit"}
+REQUESTING PAGE: GET /talks/4d90d6f0b263b36620000293 with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d6f0b263b36620000293"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username29", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username29 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/4d90d6f1b263b366200002ac/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username29"}
+REQUESTING PAGE: POST /talks/4d90d6f1b263b366200002ac with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "talk"=>{"title"=>"Talk 5", "description"=>"description of the talk", "slides_url"=>"slides.com", "willing_to_give_talk_again"=>"true", "tags_text"=>"LINQ"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d6f1b263b366200002ac/edit"}
+REQUESTING PAGE: GET /talks/4d90d6f1b263b366200002ac with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d6f1b263b366200002ac"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username30", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username30 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/4d90d6f2b263b366200002d9/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username30"}
+REQUESTING PAGE: POST /talks/4d90d6f2b263b366200002d9 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "talk"=>{"title"=>"Talk 6", "description"=>"description of the talk", "slides_url"=>"slides.com", "willing_to_give_talk_again"=>"true", "tags_text"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d6f2b263b366200002d9/edit"}
+REQUESTING PAGE: GET /talks/4d90d6f2b263b366200002d9 with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d6f2b263b366200002d9"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username31", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username31 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/4d90d6f4b263b36620000303/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username31"}
+REQUESTING PAGE: POST /talks/4d90d6f4b263b36620000303 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "talk"=>{"title"=>"Talk 7", "description"=>"description of the talk", "slides_url"=>"slides.com", "willing_to_give_talk_again"=>"true", "tags_text"=>"c_sharp"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d6f4b263b36620000303/edit"}
+REQUESTING PAGE: GET /talks/4d90d6f4b263b36620000303 with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d6f4b263b36620000303"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username32", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username32 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /tags/new with {} and HTTP headers {"HTTP_REFERER"=>"/username32"}
+REQUESTING PAGE: POST /tags with {"utf8"=>"\xE2\x9C\x93", "tag"=>{"name"=>"WPF", "synonyms_text"=>""}, "commit"=>"Add"} and HTTP headers {"HTTP_REFERER"=>"/tags/new"}
+REQUESTING PAGE: GET /tags with {} and HTTP headers {"HTTP_REFERER"=>"/tags"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username33", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username33 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /tags/4d90d6f5b263b36620000323/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username33"}
+REQUESTING PAGE: POST /tags/4d90d6f5b263b36620000323 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "tag"=>{"synonyms_text"=>"Windows Presentation Foundation"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/tags/4d90d6f5b263b36620000323/edit"}
+REQUESTING PAGE: GET /tags with {} and HTTP headers {"HTTP_REFERER"=>"/tags/4d90d6f5b263b36620000323"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username34", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username34 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/new?username=username34 with {} and HTTP headers {"HTTP_REFERER"=>"/username34"}
+REQUESTING PAGE: POST /talks with {"utf8"=>"\xE2\x9C\x93", "username"=>"username34", "talk"=>{"title"=>"Talk 8", "description"=>"description of the talk", "slides_url"=>"slides.com", "willing_to_give_talk_again"=>"true", "tags_text"=>""}, "commit"=>"Add Talk"} and HTTP headers {"HTTP_REFERER"=>"/talks/new?username=username34"}
+REQUESTING PAGE: GET /talks/4d90d6f6b263b3662000032b with {} and HTTP headers {"HTTP_REFERER"=>"/talks"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username35", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username35 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/4d90d6f6b263b3662000033c/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username35"}
+REQUESTING PAGE: POST /talks/4d90d6f6b263b3662000033c with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "talk"=>{"title"=>"Updated Talk", "description"=>"description of the talk", "slides_url"=>"slides.com", "willing_to_give_talk_again"=>"true", "tags_text"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d6f6b263b3662000033c/edit"}
+REQUESTING PAGE: GET /talks/4d90d6f6b263b3662000033c with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d6f6b263b3662000033c"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username36", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username36 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username37", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username37 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /technologies/new with {} and HTTP headers {"HTTP_REFERER"=>"/username37"}
+REQUESTING PAGE: POST /technologies with {"utf8"=>"\xE2\x9C\x93", "technology"=>{"name"=>"Technology 1"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/technologies/new"}
+REQUESTING PAGE: GET /technologies/4d90d6f8b263b36620000364 with {} and HTTP headers {"HTTP_REFERER"=>"/technologies"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username38", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username38 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /technologies/4d90d6f9b263b3662000036a/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username38"}
+REQUESTING PAGE: POST /technologies/4d90d6f9b263b3662000036a with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "technology"=>{"name"=>"Updated name"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/technologies/4d90d6f9b263b3662000036a/edit"}
+REQUESTING PAGE: GET /technologies with {} and HTTP headers {"HTTP_REFERER"=>"/technologies/4d90d6f9b263b3662000036a"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username39", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username39 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /technologies with {} and HTTP headers {"HTTP_REFERER"=>"/username39"}
+REQUESTING PAGE: POST /technologies/4d90d6f9b263b36620000370 with {"_method"=>"delete"} and HTTP headers {"HTTP_REFERER"=>"/technologies"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username40", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username40 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /user_groups/new with {} and HTTP headers {"HTTP_REFERER"=>"/username40"}
+REQUESTING PAGE: POST /user_groups with {"utf8"=>"\xE2\x9C\x93", "user_group"=>{"name"=>"Houston C#", "location"=>"", "lat"=>"", "lng"=>""}, "commit"=>"Add"} and HTTP headers {"HTTP_REFERER"=>"/user_groups/new"}
+REQUESTING PAGE: GET /user_groups/4d90d6fab263b36620000378 with {} and HTTP headers {"HTTP_REFERER"=>"/user_groups"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username41", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username41 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /user_groups/4d90d6fab263b3662000037e with {} and HTTP headers {"HTTP_REFERER"=>"/username41"}
+REQUESTING PAGE: GET /user_groups/4d90d6fab263b3662000037e/meetings/new with {} and HTTP headers {"HTTP_REFERER"=>"/user_groups/4d90d6fab263b3662000037e"}
+REQUESTING PAGE: POST /user_groups/4d90d6fab263b3662000037e/meetings with {"utf8"=>"\xE2\x9C\x93", "meeting"=>{"title"=>"New Meeting", "summary"=>"Summary of new meeting", "location"=>"Someplace", "lat"=>"100.0", "lng"=>"100.0"}, "start_time"=>"6:00pm", "start_date"=>"12/1/2010", "end_time"=>"9:00pm", "end_date"=>"12/1/2010", "commit"=>"Schedule"} and HTTP headers {"HTTP_REFERER"=>"/user_groups/4d90d6fab263b3662000037e/meetings/new"}
+REQUESTING PAGE: GET /user_groups/4d90d6fab263b3662000037e with {} and HTTP headers {"HTTP_REFERER"=>"/user_groups/4d90d6fab263b3662000037e/meetings"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username2", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username2 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /blogs/new?username=username2 with {} and HTTP headers {"HTTP_REFERER"=>"/username2"}
+REQUESTING PAGE: POST /blogs with {"utf8"=>"\xE2\x9C\x93", "username"=>"username2", "blog"=>{"title"=>"My Blog 1", "url"=>"www.myblog.com"}, "blog_type"=>"Blogger", "commit"=>"Add"} and HTTP headers {"HTTP_REFERER"=>"/blogs/new?username=username2"}
+REQUESTING PAGE: GET /blogs/4d90d738b263b366a500001e with {} and HTTP headers {"HTTP_REFERER"=>"/blogs"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username3", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username3 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /blogs/4d90d739b263b366a500002d/posts/new with {} and HTTP headers {"HTTP_REFERER"=>"/username3"}
+REQUESTING PAGE: POST /blogs/4d90d739b263b366a500002d/posts with {"utf8"=>"\xE2\x9C\x93", "post"=>{"title"=>"my blog post 1", "url"=>""}, "written_on"=>"2010-12-25T00:00:00-06:00", "commit"=>"Add"} and HTTP headers {"HTTP_REFERER"=>"/blogs/4d90d739b263b366a500002d/posts/new"}
+REQUESTING PAGE: GET /blogs/4d90d739b263b366a500002d with {} and HTTP headers {"HTTP_REFERER"=>"/blogs/4d90d739b263b366a500002d/posts"}
+REQUESTING PAGE: GET /companies/4d90d739b263b366a5000034 with {} and HTTP headers {}
+REQUESTING PAGE: GET /contact with {} and HTTP headers {}
+REQUESTING PAGE: POST /contacts with {"utf8"=>"\xE2\x9C\x93", "contact"=>{"name"=>"Joe", "email"=>"joe@example.com", "subject"=>"Subject", "description"=>"Description"}, "commit"=>"Submit"} and HTTP headers {"HTTP_REFERER"=>"/contact"}
+REQUESTING PAGE: GET / with {} and HTTP headers {"HTTP_REFERER"=>"/contacts"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username9", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username9 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /username9 with {} and HTTP headers {"HTTP_REFERER"=>"/username9"}
+REQUESTING PAGE: GET /username9/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username9"}
+REQUESTING PAGE: POST /username9/update with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "profile"=>{"name"=>"John", "email"=>"test10@email.com", "location"=>"", "lat"=>"", "lng"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/username9/edit"}
+REQUESTING PAGE: GET /username9 with {} and HTTP headers {"HTTP_REFERER"=>"/username9/update"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username10", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username10 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /username10 with {} and HTTP headers {"HTTP_REFERER"=>"/username10"}
+REQUESTING PAGE: GET /username10/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username10"}
+REQUESTING PAGE: POST /username10/update with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "profile"=>{"name"=>"", "email"=>"test11@email.com", "location"=>"Houston, TX", "lat"=>"30", "lng"=>"-90"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/username10/edit"}
+REQUESTING PAGE: GET /username10 with {} and HTTP headers {"HTTP_REFERER"=>"/username10/update"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username11", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username11 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /l33t_coder with {} and HTTP headers {"HTTP_REFERER"=>"/username11"}
+REQUESTING PAGE: POST /profiles/l33t_coder/followings with {"utf8"=>"\xE2\x9C\x93", "commit"=>"Follow"} and HTTP headers {"HTTP_REFERER"=>"/l33t_coder"}
+REQUESTING PAGE: GET /l33t_coder with {} and HTTP headers {"HTTP_REFERER"=>"/profiles/l33t_coder/followings"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username12", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username12 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /git_hub_profiles/new?username=username12 with {} and HTTP headers {"HTTP_REFERER"=>"/username12"}
+REQUESTING PAGE: POST /git_hub_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username12", "git_hub_profile"=>{"username"=>"rookieone"}, "commit"=>"Synch"} and HTTP headers {"HTTP_REFERER"=>"/git_hub_profiles/new?username=username12"}
+REQUESTING PAGE: GET /username12/code with {} and HTTP headers {"HTTP_REFERER"=>"/git_hub_profiles"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username13", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username13 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /jobs/new?username=username13 with {} and HTTP headers {"HTTP_REFERER"=>"/username13"}
+REQUESTING PAGE: POST /jobs with {"utf8"=>"\xE2\x9C\x93", "username"=>"username13", "job"=>{"company_name"=>"ChaiOne", "title"=>"Developer", "description"=>"I did awesome stuff", "tags_text"=>"rails, ruby"}, "start_date"=>"09/28/10", "end_date"=>"02/28/11", "commit"=>"Add"} and HTTP headers {"HTTP_REFERER"=>"/jobs/new?username=username13"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username14", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username14 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username15", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username15 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/4d90d740b263b366a50000f5 with {} and HTTP headers {"HTTP_REFERER"=>"/username15"}
+REQUESTING PAGE: GET /talks/4d90d740b263b366a50000f5/presentations/new with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d740b263b366a50000f5"}
+REQUESTING PAGE: POST /talks/4d90d740b263b366a50000f5/presentations with {"utf8"=>"\xE2\x9C\x93", "presentation_date"=>"3/10/2010", "hour_presentation_time"=>"8", "minute_presentation_time"=>"30", "ampm_presentation_time"=>"PM", "presentation"=>{"audience"=>"Some peeps", "url"=>"http://www.example.com"}, "commit"=>"Schedule Presentation"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d740b263b366a50000f5/presentations/new"}
+REQUESTING PAGE: GET /users/sign_up with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username19", "email"=>"test21@email.com", "password"=>"secret", "password_confirmation"=>"secret"}, "commit"=>"Register"} and HTTP headers {"HTTP_REFERER"=>"/users/sign_up"}
+REQUESTING PAGE: GET /username19 with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username20", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username20 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /slide_share_profiles/new?username=username20 with {} and HTTP headers {"HTTP_REFERER"=>"/username20"}
+REQUESTING PAGE: POST /slide_share_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username20", "slide_share_profile"=>{"slide_share_username"=>"rookieone"}, "commit"=>"Synch"} and HTTP headers {"HTTP_REFERER"=>"/slide_share_profiles/new?username=username20"}
+REQUESTING PAGE: GET /username20/speaking with {} and HTTP headers {"HTTP_REFERER"=>"/slide_share_profiles"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username21", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username21 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /slide_share_profiles/new?username=username21 with {} and HTTP headers {"HTTP_REFERER"=>"/username21"}
+REQUESTING PAGE: POST /slide_share_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username21", "slide_share_profile"=>{"slide_share_username"=>"rookieone"}, "commit"=>"Synch"} and HTTP headers {"HTTP_REFERER"=>"/slide_share_profiles/new?username=username21"}
+REQUESTING PAGE: GET /username21/speaking with {} and HTTP headers {"HTTP_REFERER"=>"/slide_share_profiles"}
+REQUESTING PAGE: GET /slide_share_profiles/new?username=username21 with {} and HTTP headers {"HTTP_REFERER"=>"/username21/speaking"}
+REQUESTING PAGE: POST /slide_share_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username21", "slide_share_profile"=>{"slide_share_username"=>"rookieone"}, "commit"=>"Synch"} and HTTP headers {"HTTP_REFERER"=>"/slide_share_profiles/new?username=username21"}
+REQUESTING PAGE: GET /username21/speaking with {} and HTTP headers {"HTTP_REFERER"=>"/slide_share_profiles"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username22", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username22 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /username22/speaker_bio/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username22"}
+REQUESTING PAGE: POST /username22/speaker_bio/update with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "speaker_bio"=>"My speaker bio", "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/username22/speaker_bio/edit"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username23", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username23 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /speaker_rate_profiles/new?username=username23 with {} and HTTP headers {"HTTP_REFERER"=>"/username23"}
+REQUESTING PAGE: POST /speaker_rate_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username23", "speaker_rate_profile"=>{"speaker_rate_id"=>"10082"}, "commit"=>"Synch"} and HTTP headers {"HTTP_REFERER"=>"/speaker_rate_profiles/new?username=username23"}
+REQUESTING PAGE: GET /username23/speaking with {} and HTTP headers {"HTTP_REFERER"=>"/speaker_rate_profiles"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username24", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username24 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /speaker_rate_profiles/new?username=username24 with {} and HTTP headers {"HTTP_REFERER"=>"/username24"}
+REQUESTING PAGE: POST /speaker_rate_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username24", "speaker_rate_profile"=>{"speaker_rate_id"=>"10082"}, "commit"=>"Synch"} and HTTP headers {"HTTP_REFERER"=>"/speaker_rate_profiles/new?username=username24"}
+REQUESTING PAGE: GET /username24/speaking with {} and HTTP headers {"HTTP_REFERER"=>"/speaker_rate_profiles"}
+REQUESTING PAGE: GET /speaker_rate_profiles/new?username=username24 with {} and HTTP headers {"HTTP_REFERER"=>"/username24/speaking"}
+REQUESTING PAGE: POST /speaker_rate_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username24", "speaker_rate_profile"=>{"speaker_rate_id"=>"10082"}, "commit"=>"Synch"} and HTTP headers {"HTTP_REFERER"=>"/speaker_rate_profiles/new?username=username24"}
+REQUESTING PAGE: GET /username24/speaking with {} and HTTP headers {"HTTP_REFERER"=>"/speaker_rate_profiles"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username25", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username25 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /stack_overflow_profiles/new?username=username25 with {} and HTTP headers {"HTTP_REFERER"=>"/username25"}
+REQUESTING PAGE: POST /stack_overflow_profiles with {"utf8"=>"\xE2\x9C\x93", "username"=>"username25", "stack_overflow_profile"=>{"stack_overflow_id"=>"60336"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/stack_overflow_profiles/new?username=username25"}
+REQUESTING PAGE: GET /username25/code with {} and HTTP headers {"HTTP_REFERER"=>"/stack_overflow_profiles"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username26", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username26 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /stack_overflow_profiles/4d90d74cb263b366a5000248/edit?username=username26 with {} and HTTP headers {"HTTP_REFERER"=>"/username26"}
+REQUESTING PAGE: POST /stack_overflow_profiles/4d90d74cb263b366a5000248 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "username"=>"username26", "stack_overflow_profile"=>{"stack_overflow_id"=>"60336"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/stack_overflow_profiles/4d90d74cb263b366a5000248/edit?username=username26"}
+REQUESTING PAGE: GET /username26/code with {} and HTTP headers {"HTTP_REFERER"=>"/stack_overflow_profiles/4d90d74cb263b366a5000248"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username27", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username27 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/4d90d74eb263b366a500027a/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username27"}
+REQUESTING PAGE: POST /talks/4d90d74eb263b366a500027a with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "talk"=>{"title"=>"Talk 3", "description"=>"description of the talk", "slides_url"=>"slides.com", "willing_to_give_talk_again"=>"true", "tags_text"=>"C#"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d74eb263b366a500027a/edit"}
+REQUESTING PAGE: GET /talks/4d90d74eb263b366a500027a with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d74eb263b366a500027a"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username28", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username28 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/4d90d74fb263b366a5000293/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username28"}
+REQUESTING PAGE: POST /talks/4d90d74fb263b366a5000293 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "talk"=>{"title"=>"Talk 4", "description"=>"description of the talk", "slides_url"=>"slides.com", "willing_to_give_talk_again"=>"true", "tags_text"=>"C#"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d74fb263b366a5000293/edit"}
+REQUESTING PAGE: GET /talks/4d90d74fb263b366a5000293 with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d74fb263b366a5000293"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username29", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username29 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/4d90d750b263b366a50002ac/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username29"}
+REQUESTING PAGE: POST /talks/4d90d750b263b366a50002ac with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "talk"=>{"title"=>"Talk 5", "description"=>"description of the talk", "slides_url"=>"slides.com", "willing_to_give_talk_again"=>"true", "tags_text"=>"LINQ"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d750b263b366a50002ac/edit"}
+REQUESTING PAGE: GET /talks/4d90d750b263b366a50002ac with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d750b263b366a50002ac"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username30", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username30 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/4d90d751b263b366a50002d9/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username30"}
+REQUESTING PAGE: POST /talks/4d90d751b263b366a50002d9 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "talk"=>{"title"=>"Talk 6", "description"=>"description of the talk", "slides_url"=>"slides.com", "willing_to_give_talk_again"=>"true", "tags_text"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d751b263b366a50002d9/edit"}
+REQUESTING PAGE: GET /talks/4d90d751b263b366a50002d9 with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d751b263b366a50002d9"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username31", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username31 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/4d90d753b263b366a5000303/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username31"}
+REQUESTING PAGE: POST /talks/4d90d753b263b366a5000303 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "talk"=>{"title"=>"Talk 7", "description"=>"description of the talk", "slides_url"=>"slides.com", "willing_to_give_talk_again"=>"true", "tags_text"=>"c_sharp"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d753b263b366a5000303/edit"}
+REQUESTING PAGE: GET /talks/4d90d753b263b366a5000303 with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d753b263b366a5000303"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username32", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username32 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /tags/new with {} and HTTP headers {"HTTP_REFERER"=>"/username32"}
+REQUESTING PAGE: POST /tags with {"utf8"=>"\xE2\x9C\x93", "tag"=>{"name"=>"WPF", "synonyms_text"=>""}, "commit"=>"Add"} and HTTP headers {"HTTP_REFERER"=>"/tags/new"}
+REQUESTING PAGE: GET /tags with {} and HTTP headers {"HTTP_REFERER"=>"/tags"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username33", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username33 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /tags/4d90d754b263b366a5000323/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username33"}
+REQUESTING PAGE: POST /tags/4d90d754b263b366a5000323 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "tag"=>{"synonyms_text"=>"Windows Presentation Foundation"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/tags/4d90d754b263b366a5000323/edit"}
+REQUESTING PAGE: GET /tags with {} and HTTP headers {"HTTP_REFERER"=>"/tags/4d90d754b263b366a5000323"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username34", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username34 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/new?username=username34 with {} and HTTP headers {"HTTP_REFERER"=>"/username34"}
+REQUESTING PAGE: POST /talks with {"utf8"=>"\xE2\x9C\x93", "username"=>"username34", "talk"=>{"title"=>"Talk 8", "description"=>"description of the talk", "slides_url"=>"slides.com", "willing_to_give_talk_again"=>"true", "tags_text"=>""}, "commit"=>"Add Talk"} and HTTP headers {"HTTP_REFERER"=>"/talks/new?username=username34"}
+REQUESTING PAGE: GET /talks/4d90d755b263b366a500032b with {} and HTTP headers {"HTTP_REFERER"=>"/talks"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username35", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username35 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /talks/4d90d755b263b366a500033c/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username35"}
+REQUESTING PAGE: POST /talks/4d90d755b263b366a500033c with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "talk"=>{"title"=>"Updated Talk", "description"=>"description of the talk", "slides_url"=>"slides.com", "willing_to_give_talk_again"=>"true", "tags_text"=>""}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d755b263b366a500033c/edit"}
+REQUESTING PAGE: GET /talks/4d90d755b263b366a500033c with {} and HTTP headers {"HTTP_REFERER"=>"/talks/4d90d755b263b366a500033c"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username36", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username36 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /technologies/new with {} and HTTP headers {"HTTP_REFERER"=>"/username36"}
+REQUESTING PAGE: POST /technologies with {"utf8"=>"\xE2\x9C\x93", "technology"=>{"name"=>"Technology 1"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/technologies/new"}
+REQUESTING PAGE: GET /technologies/4d90d756b263b366a5000353 with {} and HTTP headers {"HTTP_REFERER"=>"/technologies"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username37", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username37 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /technologies/4d90d757b263b366a5000359/edit with {} and HTTP headers {"HTTP_REFERER"=>"/username37"}
+REQUESTING PAGE: POST /technologies/4d90d757b263b366a5000359 with {"utf8"=>"\xE2\x9C\x93", "_method"=>"put", "technology"=>{"name"=>"Updated name"}, "commit"=>"Save"} and HTTP headers {"HTTP_REFERER"=>"/technologies/4d90d757b263b366a5000359/edit"}
+REQUESTING PAGE: GET /technologies with {} and HTTP headers {"HTTP_REFERER"=>"/technologies/4d90d757b263b366a5000359"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username38", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username38 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /technologies with {} and HTTP headers {"HTTP_REFERER"=>"/username38"}
+REQUESTING PAGE: POST /technologies/4d90d757b263b366a500035f with {"_method"=>"delete"} and HTTP headers {"HTTP_REFERER"=>"/technologies"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username39", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username39 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /user_groups/new with {} and HTTP headers {"HTTP_REFERER"=>"/username39"}
+REQUESTING PAGE: POST /user_groups with {"utf8"=>"\xE2\x9C\x93", "user_group"=>{"name"=>"Houston C#", "location"=>"", "lat"=>"", "lng"=>""}, "commit"=>"Add"} and HTTP headers {"HTTP_REFERER"=>"/user_groups/new"}
+REQUESTING PAGE: GET /user_groups/4d90d758b263b366a5000367 with {} and HTTP headers {"HTTP_REFERER"=>"/user_groups"}
+REQUESTING PAGE: GET /login with {} and HTTP headers {}
+REQUESTING PAGE: POST /users/sign_in with {"utf8"=>"\xE2\x9C\x93", "user"=>{"username"=>"username40", "password"=>"secret", "remember_me"=>"0"}, "commit"=>"Sign in"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET /username40 with {} and HTTP headers {"HTTP_REFERER"=>"/users/sign_in"}
+REQUESTING PAGE: GET /user_groups/4d90d758b263b366a500036d with {} and HTTP headers {"HTTP_REFERER"=>"/username40"}
+REQUESTING PAGE: GET /user_groups/4d90d758b263b366a500036d/meetings/new with {} and HTTP headers {"HTTP_REFERER"=>"/user_groups/4d90d758b263b366a500036d"}
+REQUESTING PAGE: POST /user_groups/4d90d758b263b366a500036d/meetings with {"utf8"=>"\xE2\x9C\x93", "meeting"=>{"title"=>"New Meeting", "summary"=>"Summary of new meeting", "location"=>"Someplace", "lat"=>"100.0", "lng"=>"100.0"}, "start_time"=>"6:00pm", "start_date"=>"12/1/2010", "end_time"=>"9:00pm", "end_date"=>"12/1/2010", "commit"=>"Schedule"} and HTTP headers {"HTTP_REFERER"=>"/user_groups/4d90d758b263b366a500036d/meetings/new"}
+REQUESTING PAGE: GET /user_groups/4d90d758b263b366a500036d with {} and HTTP headers {"HTTP_REFERER"=>"/user_groups/4d90d758b263b366a500036d/meetings"}

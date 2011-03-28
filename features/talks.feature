@@ -18,9 +18,4 @@ Feature: Talks
 		When I edit the talk
 		Then the talk should be updated
 		
-	Scenario: Add a presentation
-	
-		Given I am logged in
-		And I have a talk
-		When I add a presentation for that talk
-		Then the presentation should be added
+
