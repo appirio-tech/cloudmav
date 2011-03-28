@@ -1,16 +1,21 @@
 .grid_16
-	%h2 Add a presentation
-	
-	= form_for [@talk, @presentation] do |f|
-		.label= f.label :presentation_date
-		.control
-			%input{:type => "text", :id => "presentation_date", :name => "presentation_date"}
-		.submit= f.submit "Add", :disable_with => "Adding..."
-			
-	:javascript
-		jQuery(function() {		
-			$("#presentation_date").datepicker();	
-			$("#presentation_date").datepicker("setDate", #{js_date @presentation.presentation_date});
-			});
-			
+  %h2 Add a presentation
+  
+  = form_for [@talk, @presentation] do |f|
+    .label= f.label "When are you giving the presentation?"
+    .control
+      %input{:type => "text", :id => "presentation_date", :name => "presentation_date"}
+      = codemav_time_select "presentation_time", nil
+    .label= f.label "Who are you giving the presentation to?"
+    .control= f.text_field :audience
+    .label=f.label "Do you have a url for the presentation for more information?"
+    .control= f.text_field :url
+    .submit= f.submit "Schedule Presentation", :disable_with => "Scheduling..."
+      
+  :javascript
+    jQuery(function() {   
+      $("#presentation_date").datepicker(); 
+      $("#presentation_date").datepicker("setDate", #{js_date @presentation.presentation_date});
+      });
+      
 .clear

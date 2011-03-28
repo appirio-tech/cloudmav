@@ -21,19 +21,6 @@ Given /^I have a talk$/ do
   profile.save
 end
 
-When /^I add a presentation for that talk$/ do
-  visit new_talk_presentation_path(@talk)
-  @presentation = Factory.build(:presentation)
-  fill_in :presentation_date, :with => @presentation.presentation_date
-  click_button "Add"
-  And %Q{I should be redirected}
-end
-
-Then /^the presentation should be added$/ do
-  profile = User.find(@user.id).profile
-  profile.presentations.select{ |p| p.talk == profile.talks.first }.first.should_not be_nil
-end
-
 When /^I edit the talk$/ do
   visit edit_talk_path(@talk)
   fill_in "talk_title", :with => "Updated Talk"

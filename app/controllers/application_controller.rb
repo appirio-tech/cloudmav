@@ -36,6 +36,14 @@ class ApplicationController < ActionController::Base
       date = Date.strptime(params[param_name], '%m/%d/%Y')
       model.send("#{param_name.to_s}=", date)
     end
+
+    def get_datetime(date_param, time_param)
+      hour = params["hour_#{time_param}"]
+      minute = params["minute_#{time_param}"]
+      ampm = params["ampm_#{time_param}"]
+      date = Date.strptime(params[date_param], '%m/%d/%Y')
+      DateTime.parse("#{date.to_s} #{hour}:#{minute} #{ampm}")
+    end
     
     def access_denied
       flash[:error] = "Not authorized to perform that action"

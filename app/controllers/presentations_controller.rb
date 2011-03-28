@@ -10,7 +10,10 @@ class PresentationsController < ApplicationController
   end
   
   def create
+    authorize! :add_presentation, @talk
+
     @presentation = Presentation.new(params[:presentation])
+    @presentation.presentation_date = get_datetime("presentation_date", "presentation_time")
     @talk.presentations << @presentation
         
     if @presentation.save

@@ -4,6 +4,8 @@ class Presentation
   include CodeMav::Eventable
   
   field :presentation_date, :type => DateTime
+  field :audience, :type => String
+  field :url, :type => String
   
   referenced_in :talk, :inverse_of => :presentations
 
