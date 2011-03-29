@@ -1,10 +1,12 @@
-%h2 Activities
-
 %ul.list
   - events.each do |event|
     %li
       .item_pic= image_tag event.icon_url
       .item_info
-        .item_title= event.description
-        .item_description= show_date event.created_at
+        .item_title
+          - if event.url?
+            = link_to event.description, event.url
+          -else
+            = event.description
+        .item_description= show_date event.date
 

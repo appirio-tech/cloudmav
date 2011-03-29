@@ -16,7 +16,7 @@ class StackOverflowProfileAddedEvent < ProfileEvent
   end
 
   def description
-    "Added StackOverflow account"
+    "added StackOverflow account to CodeMav"
   end
 
 end

@@ -12,7 +12,7 @@ Feature: Slide Share Profile
     Then I should have a SlideShare profile
     And I should import my talks from SlideShare
     And I should be awarded the "Sliding along" badge
-    And I should have 30 speaker points
+    And I should have 40 speaker points
     And I should learned "Syncing with your SlideShare Account"
     
   Scenario: Synching again

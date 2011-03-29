@@ -29,8 +29,8 @@ module ScoreIt
       end
       
       def earn(name, points, point_type)
-        scoring = self.scorings.select{|s| s.name == name && s.point_type == point_type}.first
-        return if scoring
+        #scoring = self.scorings.select{|s| s.name == name && s.point_type == point_type}.first
+        #return if scoring
         scoring = Scoring.new(:name => name, :point_type => point_type, :score => points)
         self.scorings << scoring
         scoring.save

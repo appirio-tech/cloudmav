@@ -13,11 +13,12 @@ class ProfilesController < ApplicationController
   
   def show
     @tab = "summary"
-    @profile_events = ProfileEvent.public.for_profile(@profile)
+    @profile_events = ProfileEvent.public.for_profile(@profile).order_by(:date.desc)
   end
   
   def code
     @tab = "code"
+    @code_events = ProfileEvent.public.for_profile(@profile).categorized_as("Code").order_by(:date.desc)
   end
   
   def experience

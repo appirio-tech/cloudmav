@@ -8,12 +8,18 @@ class Event
   field :completed, :type => Boolean, :default => false
   field :subject_id, :type => String
   field :subject_class_name, :type => String
+  field :date, :type => DateTime
 
   scope :pending, lambda { where(:in_process => false, :completed => false) }
   scope :public, lambda { where(:is_public => true) }
+  scope :categorized_as, lambda { |cat| where(:category => cat) }
 
   before_create :set_base_info
   after_create :add_to_jobs
+
+  def url?
+    false
+  end
 
   def set_base_info
     self.category = "Default"
@@ -22,6 +28,7 @@ class Event
 
   def perform
     self.in_process = true
+    self.date = self.created_at if self.date.nil?
     self.save
 
     do_work if self.respond_to? :do_work

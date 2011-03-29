@@ -5,6 +5,7 @@ class StackOverflowAnswerAddedEvent < ProfileEvent
   def set_info
     self.is_public = true
     self.category = "Code"
+    self.date = stack_overflow_answer.date
   end
 
   def description
@@ -13,6 +14,14 @@ class StackOverflowAnswerAddedEvent < ProfileEvent
     else
       %Q{posted an answer to "#{stack_overflow_answer.title}" on StackOverflow}
     end
+  end
+
+  def url?
+    true
+  end
+
+  def url
+    stack_overflow_answer.url
   end
 
 end

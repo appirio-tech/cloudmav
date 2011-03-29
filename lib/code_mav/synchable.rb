@@ -7,6 +7,7 @@ module CodeMav
     module InstanceMethods
 
       def synch!
+        save
         event_name = "#{self.class.to_s}SynchEvent"
         if Object.const_defined?(event_name)
           event = Object.const_get(event_name).new
@@ -16,7 +17,6 @@ module CodeMav
           event.send("#{self.class.to_s.underscore}=", self)
           event.save
         end
-        save
       end
 
     end

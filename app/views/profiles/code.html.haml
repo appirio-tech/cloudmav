@@ -3,6 +3,7 @@
   = render :partial => "profile_menu"
   #profile_content
     .grid_9
+      = render :partial => "shared/events", :locals => {:events => @code_events}
       &nbsp;
 
     .grid_6

@@ -6,7 +6,7 @@ describe StackOverflowProfile do
     before(:each) do
       @profile = Factory.create(:user).profile
       @so_profile = StackOverflowProfile.create(:stack_overflow_id => 60336, :profile => @profile)
-      VCR.use_cassette("stack_overflow", :record => :new_episodes) do
+      VCR.use_cassette("stack_overflow", :record => :all) do
         @so_profile.synch!
       end
     end
