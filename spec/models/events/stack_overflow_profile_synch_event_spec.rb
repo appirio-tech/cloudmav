@@ -7,6 +7,7 @@ describe "StackOverflowProfileSynchEvent" do
       @profile = Factory.create(:user).profile
       @so_profile = StackOverflowProfile.new(:stack_overflow_id => 363881)
       @profile.stack_overflow_profile = @so_profile
+      @so_profile.save
       @so_profile.expects(:retag!)
       event = StackOverflowProfileSynchEvent.new(:stack_overflow_profile => @so_profile)
 
@@ -20,6 +21,8 @@ describe "StackOverflowProfileSynchEvent" do
     it { @so_profile.stack_overflow_tags.should_not be_nil }
     it { @so_profile.questions.count.should > 0 }
     it { @so_profile.answers.count.should > 0 }
+    it { StackOverflowQuestionAddedEvent.count.should == @so_profile.questions.count }
+    it { StackOverflowAnswerAddedEvent.count.should == @so_profile.answers.count }
   end
 
   describe "synch" do
@@ -27,6 +30,7 @@ describe "StackOverflowProfileSynchEvent" do
       @profile = Factory.create(:user).profile
       @so_profile = StackOverflowProfile.new(:stack_overflow_id => 363881)
       @profile.stack_overflow_profile = @so_profile
+      @so_profile.save
       @so_profile.stubs(:retag!)
       event = StackOverflowProfileSynchEvent.new(:stack_overflow_profile => @so_profile)
 
@@ -43,6 +47,8 @@ describe "StackOverflowProfileSynchEvent" do
     it { @so_profile.stack_overflow_tags.should_not be_nil }
     it { @so_profile.questions.count.should == @question_count }
     it { @so_profile.answers.count.should == @answer_count }
+    it { StackOverflowQuestionAddedEvent.count.should == @question_count }
+    it { StackOverflowAnswerAddedEvent.count.should == @answer_count }
   end
 
 end
