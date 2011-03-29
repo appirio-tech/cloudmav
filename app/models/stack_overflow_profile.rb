@@ -11,6 +11,8 @@ class StackOverflowProfile
   field :stack_overflow_tags
   
   referenced_in :profile, :inverse_of => :stack_overflow_profile
+  embeds_many :questions, :class_name => "StackOverflowQuestion"
+  embeds_many :answers, :class_name => "StackOverflowAnswer"
   
   def related_items
     [profile]
