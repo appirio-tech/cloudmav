@@ -1,4 +1,6 @@
 #profile_header
+  .right
+    = render :partial => "evernote"
   .grid_2
     = image_tag @profile.gravatar_url(:size => 90), :id => :profile_pic
   .grid_12
