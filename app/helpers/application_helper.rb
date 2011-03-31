@@ -23,4 +23,9 @@ module ApplicationHelper
     date.strftime("%m/%d/%y")
   end
   
+  def pointify(points)
+    return points if points < 1000
+    result = ((points / 1000) * 10).round.to_f / 10
+    "#{result} k"
+  end
 end

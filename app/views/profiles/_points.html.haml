@@ -13,7 +13,7 @@
     .points= @profile.score(:speaker_points)
     .description speaking
   - unless @profile.stack_overflow_profile.nil?
-    %li{:style => "width: 60px"}
+    %li{:style => "width: 80px"}
       .image= image_tag "stack_overflow_points_icon.png"
-      .points= @profile.stack_overflow_profile.reputation
+      .points= pointify @profile.stack_overflow_profile.reputation
       .description rep
