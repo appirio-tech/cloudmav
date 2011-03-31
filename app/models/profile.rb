@@ -18,6 +18,7 @@ class Profile
 
   is_gravtastic!
 
+  field :showcase, :type => Boolean, :default => false
   field :api_id, :type => Integer
   field :name, :type => String
   field :email, :type => String
@@ -46,6 +47,7 @@ class Profile
     
   scope :by_username, lambda { |uname| { :where => { :username => uname } } }
   scope :named, lambda { |name| { :where => { :name => name } } }
+  scope :showcase, lambda { where(:showcase => true) }
   
   def username
     self.user.username
