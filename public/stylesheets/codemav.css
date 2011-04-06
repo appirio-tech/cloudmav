@@ -535,3 +535,43 @@ a.menu_nav {
   background-image: url("../images/required.png");
   background-repeat: no-repeat;
   background-position: right; }
+
+.event_load {
+  background-image: url("../images/ajax-loader.gif");
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.more_events {
+  background-image: url("../images/transparent.gif");
+  text-align: center; }
+
+.filter {
+  border-bottom: 1px solid #ccc;
+  list-style: none outside none;
+  margin-top: -5px;
+  overflow: hidden; }
+  .filter ul {
+    margin: 0; }
+    .filter ul li {
+      display: inline;
+      float: left;
+      font-weight: bold;
+      padding: 15px 0 8px 5px; }
+      .filter ul li a {
+        background: #eaeaea;
+        color: #818181;
+        font-size: 12px;
+        padding: 3px 5px;
+        border-radius: 2px;
+        -moz-border-radius: 2px; }
+        .filter ul li a:hover {
+          background: #818181;
+          color: #fff;
+          text-decoration: none; }
+    .filter ul li:first-child {
+      padding-left: 10px; }
+    .filter ul li.active a {
+      background: #373737;
+      color: white;
+      cursor: text;
+      text-shadow: none; }

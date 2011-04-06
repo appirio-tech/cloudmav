@@ -1,12 +1,22 @@
-%ul.list
-  - events.each do |event|
-    %li
-      .item_pic= image_tag event.icon_url
-      .item_info
-        .item_title
-          - if event.url?
-            = link_to event.description, event.url
-          -else
-            = event.description
-        .item_description= show_date event.date
+#event_feed
+  .filter
+    %ul
+      %li.active
+        = link_to "All", profile_events_path(:profile_id => @profile.username, :filter => "All"), :remote => true 
+      %li
+        = link_to "Experience", profile_events_path(:profile_id => @profile.username, :filter => "Experience"), :remote => true 
+      %li
+        = link_to "Code", profile_events_path(:profile_id => @profile.username, :filter => "Code"), :remote => true 
+      %li
+        = link_to "Writing", profile_events_path(:profile_id => @profile.username, :filter => "Writing"), :remote => true 
+      %li
+        = link_to "Speaking", profile_events_path(:profile_id => @profile.username, :filter => "Speaking"), :remote => true 
+      %li
+        = link_to "Social", profile_events_path(:profile_id => @profile.username, :filter => "Social"), :remote => true 
 
+
+
+
+  %ul.list#events
+    = render :partial => "events/event", :collection => events, :as => :event
+    %li.event_load &nbsp; 

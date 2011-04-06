@@ -28,7 +28,11 @@ $title_font: $pt;
 $main_font: 'Arial' ;
 $hover_blue: #3F9FF8;
 
+$gray_background: #EAEAEA;
+$gray_foreground: #818181;
+
 $dark_background: #373737;
+$dark_foreground: #ffffff;
 $emphasis_dark_background: #1A1A1A;
 
 @mixin corners($radius: 5px) {
@@ -749,4 +753,55 @@ a.menu_nav {
   background-image: url("../images/required.png");
   background-repeat: no-repeat;
   background-position: right;
+}
+
+.event_load {
+  background-image: url("../images/ajax-loader.gif");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.more_events {
+  background-image: url("../images/transparent.gif");
+  text-align:center;
+}
+
+.filter {
+  border-bottom: 1px solid #ccc;
+  list-style: none outside none;
+  margin-top: -5px;
+  overflow: hidden;
+  ul { 
+    margin: 0;
+    li {
+      display: inline;
+      float: left;
+      font-weight: bold;
+      padding: 15px 0 8px 5px;    
+      a {
+        background: $gray_background;
+        color: $gray_foreground;
+        font-size: 12px;
+        padding: 3px 5px;
+        @include corners(2px);
+        &:hover {
+          background: $gray_foreground;
+          color: #fff;
+          text-decoration: none;
+
+        }
+      }
+
+    }
+    li:first-child {
+      padding-left: 10px;
+    }
+    li.active a {
+        background: $dark_background;
+        color: $dark_foreground;
+        cursor: text;
+        text-shadow: none;
+    }
+  }
+
 }

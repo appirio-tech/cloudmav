@@ -67,6 +67,7 @@ Codemav::Application.routes.draw do
   end
   
   resources :profiles do
+    resources :events
     resources :followings
     resources :widgets
     collection do

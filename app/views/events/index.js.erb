@@ -1,0 +1,5 @@
+$("<%= escape_javascript(render :partial => "events/event", :collection => @profile_events, :as => :event) %>").insertBefore(".event_load");
+$(".event_load").slideUp('slow');
+$("#events>li[data-type=event]").slideDown('slow');
+
+

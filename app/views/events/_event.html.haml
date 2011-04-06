@@ -1,0 +1,9 @@
+%li{"data-type" => "event", :style => "display:none" }
+  .item_pic= image_tag event.icon_url
+  .item_info
+    .item_title
+      - if event.url?
+        = link_to event.description, event.url
+      -else
+        = event.description
+    .item_description= show_date event.date
