@@ -6,10 +6,14 @@ class BloggerSyncService
   
   def self.sync(blog)
     begin
-      blog.rss = "http://" + blog.url + "/feeds/posts/default?alt=rss&max-results=999"
+      blog.rss = "http://" + blog.url + "/feeds/posts/default?alt=rss&max-results=1"
       content = ""
       open(blog.rss) do |s| content = s.read end
       rss = RSS::Parser.parse(content, false)
+      
+      if blog.title.nil? || blog.title.blank?
+        blog.title = rss.channel.title
+      end
     
       rss.items.each do |i|
         unless blog.posts.where(:title => i.title).first
@@ -24,6 +28,7 @@ class BloggerSyncService
       end
       blog.save
     rescue
+      puts "Blog Sync error: #{$!}"
     end
   end
   
