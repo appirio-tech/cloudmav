@@ -1,10 +1,16 @@
 = form_for @blog do |f|
-	- unless @profile.nil?
-		= hidden_field_tag :username, @profile.username
-	.label=f.label :title
-	.control=f.text_field :title
-	.label=f.label :url
-	.control=f.text_field :url
-	.label=f.label :blog_type
-	.control= select_tag :blog_type, options_for_select(@blog_types)
-	.submit=f.submit action_text, :disable_with => disable_text
+  - unless @profile.nil?
+    = hidden_field_tag :username, @profile.username
+
+  .label=f.label :blog_type
+  .control= select_tag :blog_type, options_for_select(@blog_types)
+
+  .label=f.label :url
+  .control=f.text_field :url, :class => :required
+  .hint We use the url of the blog to pull the rss feed
+
+  .label=f.label :title
+  .control=f.text_field :title
+  .hint If you don't feel like typing we can just pull the title from the rss feed
+  
+  .submit=f.submit action_text, :disable_with => disable_text

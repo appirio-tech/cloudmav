@@ -11,6 +11,8 @@ class Blog
   references_many :posts
   referenced_in :profile, :inverse_of => :blog
 
+  validates_presence_of :url
+
   BLOG_PROVIDERS = ["Blogger", "Wordpress"]
   
   def self.get_providers
