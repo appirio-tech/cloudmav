@@ -1,0 +1,21 @@
+.info_box
+  .info_logo
+    = link_to image_tag("icons/twitter_logo.png"), "http://www.twitter.com"
+    -if can?(:set_twitter_profile, @profile) && @profile.twitter_profile
+      .edit
+        = link_to "edit", edit_profile_twitter_profile_path(@profile, @profile.twitter_profile)
+  .info
+    - if @profile.twitter_profile
+      = link_to "Go to my Twitter page", @profile.twitter_profile.url, :target => "_blank"
+      %table
+        %tr
+          %td Followers
+          %td= @profile.twitter_profile.followers_count
+      
+    - else
+      - if can? :set_twitter_profile, @profile
+        %p 
+          Do you have a Twitter account? 
+          = link_to "Add Twitter", new_profile_twitter_profile_path(@profile)
+.clear
+

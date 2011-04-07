@@ -4,6 +4,7 @@ class TwitterProfile
   include CodeMav::Synchable
 
   field :username, :type => String
+  field :url, :type => String
   field :followers_count, :type => Integer
 
   referenced_in :profile, :inverse_of => :twitter_profile

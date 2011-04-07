@@ -33,6 +33,10 @@ class ProfilesController < ApplicationController
   def speaking
     @tab = "speaking"
   end
+
+  def social
+    @tab = "social"
+  end
   
   def edit
     authorize! :edit, @profile

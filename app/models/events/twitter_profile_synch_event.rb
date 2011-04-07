@@ -10,6 +10,7 @@ class TwitterProfileSynchEvent < SynchEvent
     profile.location = twitter_info.location unless profile.location
 
     twitter_profile.followers_count = twitter_info.followers_count
+    twitter_profile.url = "http://www.twitter.com/#{twitter_profile.username}"
 
     twitter_profile.profile.save!
     twitter_profile.save!
