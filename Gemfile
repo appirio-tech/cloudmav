@@ -30,6 +30,7 @@ gem "delayed_job"
 gem "delayed_job_mongoid"
 gem "target_api", "0.0.1"
 gem "less"
+gem "twitter"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily

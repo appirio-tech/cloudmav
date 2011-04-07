@@ -51,3 +51,14 @@ learn "Syncing with your SlideShare Account" do
     !p.slide_share_profile.nil?
   end
 end
+
+learn "Synching your Twitter Account" do      
+  thing Profile
+  subject :profile
+  partial :synch_twitter
+  conditions do |p|
+    !p.twitter_profile.nil?
+  end
+end
+
+

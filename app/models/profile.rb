@@ -40,6 +40,7 @@ class Profile
   references_many :activities
   
   references_one :stack_overflow_profile
+  references_one :twitter_profile
   references_one :speaker_rate_profile
   references_one :slide_share_profile
   references_one :git_hub_profile

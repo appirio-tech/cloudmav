@@ -67,6 +67,7 @@ Codemav::Application.routes.draw do
   end
   
   resources :profiles do
+    resources :twitter_profiles
     resources :events
     resources :followings
     resources :widgets
