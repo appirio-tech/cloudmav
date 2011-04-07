@@ -3,8 +3,25 @@
   = render :partial => "profile_menu"
   #profile_content
     .grid_9
-      = render :partial => "shared/events", :locals => {:events => @profile_events}
-      &nbsp;
+      #event_feed
+        .filter
+          %ul
+            %li.active
+              = link_to "All", profile_events_path(:profile_id => @profile.username, :filter => "All"), :remote => true 
+            %li
+              = link_to "Experience", profile_events_path(:profile_id => @profile.username, :filter => "Experience"), :remote => true 
+            %li
+              = link_to "Code", profile_events_path(:profile_id => @profile.username, :filter => "Code"), :remote => true 
+            %li
+              = link_to "Writing", profile_events_path(:profile_id => @profile.username, :filter => "Writing"), :remote => true 
+            %li
+              = link_to "Speaking", profile_events_path(:profile_id => @profile.username, :filter => "Speaking"), :remote => true 
+            %li
+              = link_to "Social", profile_events_path(:profile_id => @profile.username, :filter => "Social"), :remote => true 
+
+        %ul.list#events
+          = render :partial => "events/event", :collection => @profile_events, :as => :event
+          %li.event_load &nbsp; 
 
       %br
     .grid_6

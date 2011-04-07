@@ -3,7 +3,9 @@
   = render :partial => "profile_menu"
   #profile_content
     .grid_9
-      = render :partial => "shared/events", :locals => {:events => @code_events}
+      %ul.list#events
+        = render :partial => "events/event", :collection => @code_events, :as => :event
+        %li.event_load &nbsp; 
       &nbsp;
 
     .grid_6

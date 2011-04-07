@@ -14,9 +14,6 @@
       %li
         = link_to "Social", profile_events_path(:profile_id => @profile.username, :filter => "Social"), :remote => true 
 
-
-
-
   %ul.list#events
     = render :partial => "events/event", :collection => events, :as => :event
     %li.event_load &nbsp; 

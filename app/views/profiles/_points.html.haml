@@ -12,6 +12,9 @@
   %li
     .points= @profile.score(:speaker_points)
     .description speaking
+  %li
+    .points= @profile.score(:social_points)
+    .description social
   - unless @profile.stack_overflow_profile.nil?
     %li{:style => "width: 80px"}
       .image= image_tag "stack_overflow_points_icon.png"
