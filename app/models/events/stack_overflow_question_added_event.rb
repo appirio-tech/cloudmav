@@ -12,4 +12,8 @@ class StackOverflowQuestionAddedEvent < ProfileEvent
     %Q{asked "#{stack_overflow_question.title}?" on StackOverflow}
   end
 
+  def icon_url
+    "event_icons/stackoverflow_question.png"
+  end
+ 
 end

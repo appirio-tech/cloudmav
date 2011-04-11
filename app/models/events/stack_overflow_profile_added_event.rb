@@ -19,4 +19,8 @@ class StackOverflowProfileAddedEvent < ProfileEvent
     "added StackOverflow account to CodeMav"
   end
 
+  def icon_url
+    "event_icons/stackoverflow.png"
+  end
+
 end

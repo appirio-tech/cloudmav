@@ -24,4 +24,8 @@ class StackOverflowAnswerAddedEvent < ProfileEvent
     stack_overflow_answer.url
   end
 
+  def icon_url
+    "event_icons/stackoverflow_answer.png"
+  end
+ 
 end
