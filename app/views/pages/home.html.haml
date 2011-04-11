@@ -1,20 +1,42 @@
-- content_for :head do
-  = stylesheet_link_tag "home"
+- content_for :css do
+  %link{:rel => "stylesheet/less", :type => "text/css", :href =>"/stylesheets/home.less"}
+
+.grid_16
+  .home_image
+    = image_tag "home_services.png"
+.clear
 
 .grid_10
   .side_description
-    CodeMav is where developers can come to setup their definitive online profile. A developer can synch with all the disparate services they use and contribute to. Now in one location you can find your friends and coworkers blogs, twitter account, StackOverflow reputation, and their speaking materials.
 
+    %h1 Many to One
+
+    %p 
+      Tired of having to sharing all your separate profiles with your friends?
+
+    %p
+      You have StackOverflow, LinkedIn, GitHub, Twitter, the list goes on and on.
+
+    %p
+      Now you can just share one profile. Your CodeMav profile. 
+
+    %p
+      CodeMav is where developers can setup their definitive online profile. 
+      
+    %p
+      In one location you can find your friends and coworkers blogs, twitter account, StackOverflow reputation, and their speaking materials.
+
+    %p
+      With the event log you can also keep track of what they are doing. What StackOverflow questions they've asked or answered. What open source projects are they contributing to on GitHub. What conference they are speaking at next. 
+
+    %p
+      
+
+.grid_6
   .home_side_module
-    %h2.module_title Beta
+    %h2.module_title Beta!
 
-    %p CodeMav is currently beta but we wanted people to start using the system because even the basic features are exciting. 
-  .clear
-    
-  .home_side_module
-    %h2 News
-
-    %p News and stuff
+    %p CodeMav is currently beta but we wanted people to start using the system because even the basic features are exciting. So create a profile, connect to your other online profiles through our synch services. Give us feedback on what you would like to see next!
   .clear
 
   .home_side_module
