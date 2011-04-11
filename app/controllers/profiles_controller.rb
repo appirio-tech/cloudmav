@@ -55,7 +55,9 @@ class ProfilesController < ApplicationController
   protected
     def set_profile
       @profile = Profile.by_username(params[:username]).first
-      flash[:error] = "Sorry but we couldn't find a profile for #{params[:username]}"
-      redirect_to root_path unless @profile
+      unless @profile
+        flash[:error] = "Sorry but we couldn't find a profile for #{params[:username]}"
+        redirect_to root_path 
+      end
     end
 end

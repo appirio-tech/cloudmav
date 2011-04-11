@@ -29,5 +29,9 @@ class JobEvent < ProfileEvent
     job.company = c
     job.company_name = c.name
   end
+
+  def icon_url
+    "event_icons/experience.png"
+  end
  
 end
