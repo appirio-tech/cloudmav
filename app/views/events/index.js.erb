@@ -1,5 +1,16 @@
 $("<%= escape_javascript(render :partial => "events/event", :collection => @profile_events, :as => :event) %>").insertBefore(".event_load");
-$(".event_load").slideUp('slow');
 $("#events>li[data-type=event]").slideDown('slow');
 
+$(".event_load").slideUp('slow');
+$(".more_events").slideDown();
 
+$("#filter").val("<%= @filter %>");
+$("#page").val("<%= @page.to_i + 1 %>");
+
+<% if @profile_events.count < 5 %>
+  $("#more_events").val("No more to load");
+  $("#more_events").attr("disabled", "true");
+<% else %>
+  $("#more_events").val("Click to load more");
+  $("#more_events").removeAttr("disabled");
+<% end %>

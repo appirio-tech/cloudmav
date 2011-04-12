@@ -18,15 +18,13 @@ $(document).ready(function(){
   // Event Feed filter
   $(".event_load").hide();
   $("#events>li[data-type=event]").slideDown('slow');
- // $("#more_activity").click(function(){
- //   $(".more_activity").hide();
- //   $(".activity_load").slideDown();
- // });
+  $("#more_events").click(function(){
+    $(".more_events").hide();
+    $(".event_load").slideDown();
+  });
   $("#event_feed div.filter a").click(function(){
-//alert("filter");
-    //$(".more_activity").hide();
+    $(".more_events").hide();
 
-   //$("#events>li[data-type=event]").slideUp('slow').remove();
     $("#events>li[data-type=event]").slideUp('slow', function() {
       $(this).remove();
     });

@@ -2,15 +2,13 @@ class EventsController < ApplicationController
   before_filter :set_profile
 
   def index
-    query = ProfileEvent.public.for_profile(@profile)
-    
-    if (params[:filter]) 
-      puts "FILTER"
-      puts "*****************************"
-      query = query.categorized_as(params[:filter]) unless params[:filter] == "All"
-    end
+    @filter = params[:filter] || "All"
+    @page = params[:page] || 1
 
-    @profile_events = query.order_by(:date.desc)
+    query = ProfileEvent.public.for_profile(@profile)
+    query = query.categorized_as(@filter) unless @filter == "All"
+
+    @profile_events = query.order_by(:date.desc).paginate(:page => @page, :per_page => 10)
 
     respond_to do |wants|
       wants.html {}

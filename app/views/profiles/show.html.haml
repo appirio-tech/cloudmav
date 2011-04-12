@@ -6,10 +6,11 @@
       #event_feed
         .filter
           %ul
+            %li Filter :
             %li.active
-              = link_to "All", profile_events_path(:profile_id => @profile.username, :filter => "All"), :remote => true 
+              = link_to "All", profile_events_path(@profile, :filter => "All"), :remote => true 
             %li
-              = link_to "Experience", profile_events_path(:profile_id => @profile.username, :filter => "Experience"), :remote => true 
+              = link_to "Experience", profile_events_path(@profile, :filter => "Experience"), :remote => true 
             %li
               = link_to "Code", profile_events_path(:profile_id => @profile.username, :filter => "Code"), :remote => true 
             %li
@@ -22,7 +23,11 @@
         %ul.list#events
           = render :partial => "events/event", :collection => @profile_events, :as => :event
           %li.event_load &nbsp; 
-
+          %li.more_events
+            = form_tag profile_events_path(@profile), :remote => true, :method => :get do |f|
+              = hidden_field_tag :filter, "All"
+              = hidden_field_tag :page, 2
+              = submit_tag "Click to load more", :id => "more_events"
       %br
     .grid_6
       = render :partial => "badges"

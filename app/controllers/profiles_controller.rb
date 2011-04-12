@@ -13,7 +13,7 @@ class ProfilesController < ApplicationController
   
   def show
     @tab = "summary"
-    @profile_events = ProfileEvent.public.for_profile(@profile).order_by(:date.desc)
+    @profile_events = ProfileEvent.public.for_profile(@profile).order_by(:date.desc).paginate(:page => 1, :per_page => 10)
   end
   
   def code
