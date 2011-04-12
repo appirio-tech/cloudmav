@@ -1,0 +1,55 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.absentmindedcoder.com:80/feeds/posts/default?alt=rss&max-results=1
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx
+      date: 
+      - Tue, 12 Apr 2011 04:12:36 GMT
+      content-type: 
+      - text/html
+      transfer-encoding: 
+      - chunked
+      vary: 
+      - Accept-Encoding
+      expires: 
+      - Tue, 12 Apr 2011 04:12:35 GMT
+      cache-control: 
+      - no-cache
+    body: <html><head><meta http-equiv="refresh" content="0;url=http://search.consolidated.net/index.php?origURL=http://www.absentmindedcoder.com/feeds/posts/default"/></head><body><script>window.location="http://search.consolidated.net/index.php?origURL="+escape(window.location)+"&r="+escape(document.referrer);</script></body></html>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.absentmindedcoder.com:80/feeds/posts/default?alt=rss&max-results=999
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx
+      date: 
+      - Tue, 12 Apr 2011 04:13:20 GMT
+      content-type: 
+      - text/html
+      transfer-encoding: 
+      - chunked
+      vary: 
+      - Accept-Encoding
+      expires: 
+      - Tue, 12 Apr 2011 04:13:19 GMT
+      cache-control: 
+      - no-cache
+    body: <html><head><meta http-equiv="refresh" content="0;url=http://search.consolidated.net/index.php?origURL=http://www.absentmindedcoder.com/feeds/posts/default"/></head><body><script>window.location="http://search.consolidated.net/index.php?origURL="+escape(window.location)+"&r="+escape(document.referrer);</script></body></html>
+    http_version: "1.1"

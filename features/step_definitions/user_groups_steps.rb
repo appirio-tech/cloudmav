@@ -1,9 +1,8 @@
 When /^I add a user group "([^"]*)"$/ do |name|
   @user_group = Factory.build(:user_group, :name => name)
   And %Q{I am on the add a user group page}
-  fill_in :name, :with => @user_group.name
+  fill_in "user_group_name", :with => @user_group.name
   click_button "Add"
-  And %Q{I should be redirected}
 end
 
 Then /^the user group should be added$/ do
@@ -18,15 +17,14 @@ end
 When /^I schedule a new meeting on "([^"]*)" for "([^"]*)"$/ do |date, user_group_name |
   And %Q{I am on the "#{user_group_name}" user group page} 
   And %Q{I follow "Schedule a meeting"}
-  fill_in :title, :with => "New Meeting"
-  fill_in :summary, :with => "Summary of new meeting"
-  fill_in :start_time, :with => "6:00pm"
-  fill_in :start_date, :with => date
-  fill_in :end_time, :with => "9:00pm"
-  fill_in :end_date, :with => date
+  fill_in "meeting_title", :with => "New Meeting"
+  fill_in "meeting_summary", :with => "Summary of new meeting"
+  fill_in "start_time", :with => "6:00pm"
+  fill_in "start_date", :with => date
+  fill_in "end_time", :with => "9:00pm"
+  fill_in "end_date", :with => date
 		
   click_button "Schedule"
-  And "I should be redirected"
 end
 
 Then /^the meeting should be scheduled for "([^"]*)"$/ do |user_group_name|

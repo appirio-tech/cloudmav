@@ -5,7 +5,6 @@ When /^I add a talk$/ do
   fill_in "talk_description", :with => @talk.description
   fill_in "talk_slides_url", :with => @talk.slides_url
   click_button "Add"
-  And %Q{I should be redirected}
 end
 
 Then /^the talk should be added$/ do
@@ -25,7 +24,6 @@ When /^I edit the talk$/ do
   visit edit_talk_path(@talk)
   fill_in "talk_title", :with => "Updated Talk"
   click_button "Save"
-  And %Q{I should be redirected}
 end
 
 Then /^the talk should be updated$/ do

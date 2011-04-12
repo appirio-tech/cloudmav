@@ -3,10 +3,9 @@ Given /^I have an account$/ do
 end
 
 When /^I login$/ do
-  fill_in :username, :with => @user.username
-  fill_in :password, :with => @user.password
+  fill_in "user_username", :with => @user.username
+  fill_in "user_password", :with => @user.password
   click_button "Sign in"
-  And %Q{I should be redirected}
 end
 
 Then /^I should be logged in$/ do
@@ -16,9 +15,8 @@ end
 Given /^I am logged in$/ do
   @user = Factory.create(:user)
   And %Q{I go to the login page}
-  fill_in :username, :with => @user.username
-  fill_in :password, :with => 'secret'
+  fill_in "user_username", :with => @user.username
+  fill_in "user_password", :with => 'secret'
   click_button "Sign in"
-  And %Q{I am redirected}
   @profile = User.find(@user.id).profile
 end

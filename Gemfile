@@ -40,7 +40,8 @@ group :development, :test do
   gem 'launchy'
 	gem "rspec-rails", ">= 2.0.0.beta.22"
 	gem 'factory_girl_rails'
-  gem "webrat", "= 0.7.2.beta.1"
+  gem 'capybara'
+  #gem "webrat", "= 0.7.2.beta.1"
 	gem "fakeweb"
 	gem "mocha"
   gem "vcr"

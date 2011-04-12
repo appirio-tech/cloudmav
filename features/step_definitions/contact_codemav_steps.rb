@@ -1,12 +1,11 @@
 When /^I contact CodeMav$/ do
   visit contact_path
   @contact = Factory.build(:contact)
-  fill_in :name, :with => @contact.name
-  fill_in :email, :with => @contact.email
-  fill_in :subject, :with => @contact.subject
-  fill_in :description, :with => @contact.description
+  fill_in "contact_name", :with => @contact.name
+  fill_in "contact_email", :with => @contact.email
+  fill_in "contact_subject", :with => @contact.subject
+  fill_in "contact_description", :with => @contact.description
   click_button "Submit"
-  And "I am redirected"
 end
 
 Then /^CodeMav should receive a contact email$/ do

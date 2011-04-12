@@ -31,9 +31,16 @@ module CodeMav
     module InstanceMethods
 
       def update_coordinates
-        unless lat.nil? || lng.nil?
-          self.coordinates = [lat, lng]
+        return if Rails.env.test?
+        return if location.nil? || location.blank?
+
+        if lat.nil? || lng.nil?
+          response = Geokit::Geocoders::MultiGeocoder.geocode(location)
+          self.lat = response.lat
+          self.lng = response.lng
         end
+
+        self.coordinates = [self.lat, self.lng]
       end
 
       def location_text

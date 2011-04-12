@@ -3,7 +3,6 @@ When /^I synch my StackOverflow account$/ do
     visit new_stack_overflow_profile_path(:username => @profile.username)
     fill_in "stack_overflow_profile_stack_overflow_id", :with => '60336'
     click_button "Save"
-    And %Q{I should be redirected}
   end
 end
 
@@ -41,7 +40,6 @@ When /^I edit my StackOverflow profile$/ do
     visit edit_stack_overflow_profile_path(@stack_overflow_profile, :username => @profile.username)
     fill_in "stack_overflow_profile_stack_overflow_id", :with => "60336"
     click_button "Save"
-    And %Q{I should be redirected}
   end
 end
 

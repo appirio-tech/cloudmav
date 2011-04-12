@@ -45,6 +45,7 @@ class ProfilesController < ApplicationController
   def update
     authorize! :edit, @profile
     if @profile.update_attributes(params[:profile])
+      @profile.location = params[:location]
       flash[:notice] = "Profile updated"
       redirect_to @profile
     else

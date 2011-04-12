@@ -8,7 +8,6 @@ When /^I add the tag "([^"]*)"$/ do |tag|
   visit new_tag_path
   fill_in :name, :with => tag
   click_button "Add"
-  And "I should be redirected"
 end
 
 Then /^there should be a tag "([^"]*)"$/ do |tag|
@@ -20,7 +19,6 @@ When /^I change the tag "([^"]*)"'s synonyms to "([^"]*)"$/ do |tag, synonyms|
   visit edit_tag_path(tag)
   fill_in :synonyms, :with => synonyms
   click_button "Save"
-  And "I should be redirected"
 end
 
 Then /^the tag "([^"]*)"'s synonyms should be "([^"]*)"$/ do |tag, synonyms|

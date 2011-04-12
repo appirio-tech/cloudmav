@@ -9,7 +9,6 @@ When /^I add a technology$/ do
   @technology = Factory.build(:technology)
   fill_in :name, :with => @technology.name
   click_button "Save"
-  And "I should be redirected"
 end
 
 Then /^the technology should be added$/ do
@@ -25,7 +24,6 @@ When /^I edit a technology$/ do
   visit edit_technology_path(@technology)
   fill_in :name, :with => "Updated name"
   click_button "Save"
-  And "I should be redirected"
 end
 
 Then /^the technology should be updated$/ do

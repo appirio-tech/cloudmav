@@ -3,7 +3,6 @@ When /^I synch my SpeakerRate account$/ do
     visit new_speaker_rate_profile_path(:username => @profile.username)
     fill_in "speaker_rate_profile_speaker_rate_id", :with => '10082'
     click_button "Synch"
-    And %Q{I should be redirected}
   end
 end
 
@@ -22,7 +21,6 @@ Given /^I synched my SpeakerRate account$/ do
     visit new_speaker_rate_profile_path(:username => @profile.username)
     fill_in "speaker_rate_profile_speaker_rate_id", :with => '10082'
     click_button "Synch"
-    And %Q{I should be redirected}
   end
 end
 

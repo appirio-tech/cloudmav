@@ -24,7 +24,7 @@
     # This is your Google Maps geocoder key. 
     # See http://www.google.com/apis/maps/signup.html
     # and http://www.google.com/apis/maps/documentation/#Geocoding_Examples
-    Geokit::Geocoders::google = 'REPLACE_WITH_YOUR_GOOGLE_KEY'
+    Geokit::Geocoders::google = 'ABQIAAAAt-XBCWWKyTD3Jqw-4RZ2hhQCClFxSqTzZ54reAW6QS98L-qoaRSSAxpQkyz4FF91zaL_WbodZknkvQ'
 
     # You can also set multiple API KEYS for different domains that may be directed to this same application.
     # The domain from which the current user is being directed will automatically be updated for Geokit via
@@ -57,7 +57,7 @@
     # Be aware that there are Terms of Use restrictions on how you can use the 
     # various geocoders.  Make sure you read up on relevant Terms of Use for each
     # geocoder you are going to use.
-    Geokit::Geocoders::provider_order = [:google,:us]
+    Geokit::Geocoders::provider_order = [:google]
 
     # The IP provider order. Valid symbols are :ip,:geo_plugin.
     # As before, make sure you read up on relevant Terms of Use for each.

@@ -12,24 +12,23 @@ require 'cucumber/rails/world'
 require 'cucumber/rails/active_record'
 require 'cucumber/web/tableish'
 
-require 'webrat'
-require 'webrat/core/matchers'
-require 'geokit'
-require 'score_it'
-require 'virgil'
-
-Webrat.configure do |config|
-  config.mode = :rack
-  config.open_error_files = true # Set to true if you want error pages to pop up in the browser
-end
-
-World(Webrat::Methods)
-World(Webrat::Matchers)
+require 'capybara/rails'
+require 'capybara/cucumber'
+require 'capybara/session'
+#require 'cucumber/rails/capybara_javascript_emulation' # Lets you click links with onclick javascript handlers without using @culerity or @javascript
 
 VCR.config do |c|
   c.cassette_library_dir = 'features/vcr_cassettes'
   c.stub_with :fakeweb
 end
+
+
+# Capybara defaults to XPath selectors rather than Webrat's default of CSS3. In
+# order to ease the transition to Capybara we set the default here. If you'd
+# prefer to use XPath just remove this line and adjust any selectors in your
+# steps to use the XPath syntax.
+Capybara.default_selector = :css
+Capybara.ignore_hidden_elements = false
 
 # If you set this to false, any error raised from within your app will bubble 
 # up to your step definition and out to cucumber unless you catch it somewhere
@@ -57,13 +56,14 @@ ActionController::Base.allow_rescue = false
 Cucumber::Rails::World.use_transactional_fixtures = true
 # How to clean your database when transactions are turned off. See
 # http://github.com/bmabey/database_cleaner for more info.
-# if defined?(ActiveRecord::Base)
-#   begin
-#     require 'database_cleaner'
-#     DatabaseCleaner.strategy = :truncation
-#   rescue LoadError => ignore_if_database_cleaner_not_present
-#   end
-# end
+if defined?(ActiveRecord::Base)
+  begin
+    require 'database_cleaner'
+    DatabaseCleaner.strategy = :truncation
+  rescue LoadError => ignore_if_database_cleaner_not_present
+  end
+end
+
 Before do
   # Explicitly drop all non-system Mongoid collections, since database_cleaner
   # doesn't appear to handle them correctly

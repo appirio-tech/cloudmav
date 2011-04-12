@@ -3,7 +3,6 @@ When /^I synch my Twitter account$/ do
     visit new_profile_twitter_profile_path(@profile)
     fill_in "twitter_profile_username", :with => 'rookieone'
     click_button "Save"
-    And %Q{I should be redirected}
   end
 end
 
@@ -36,7 +35,6 @@ When /^I edit my Twitter profile$/ do
     visit edit_profile_twitter_profile_path(@profile, @twitter_profile)
     fill_in "twitter_profile_username", :with => "rookieone"
     click_button "Save"
-    And %Q{I should be redirected}
   end
 end
 
