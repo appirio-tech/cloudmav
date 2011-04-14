@@ -21,7 +21,7 @@ module Codemav
     
     config.encoding = "utf-8"
     
-    config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+    config.action_mailer.default_url_options = { :host => 'www.codemav.com' }
 
     config.filter_parameters += [:password, :password_confirmation]
   end
