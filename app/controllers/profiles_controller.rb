@@ -18,7 +18,7 @@ class ProfilesController < ApplicationController
   
   def code
     @tab = "code"
-    @code_events = ProfileEvent.public.for_profile(@profile).categorized_as("Code").order_by(:date.desc)
+    @code_events = ProfileEvent.public.for_profile(@profile).categorized_as("Code").order_by(:date.desc).paginate(:page => 1, :per_page => 10)
   end
   
   def experience

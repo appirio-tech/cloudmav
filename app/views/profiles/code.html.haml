@@ -3,9 +3,26 @@
   = render :partial => "profile_menu"
   #profile_content
     .grid_9
+      #event_feed
+        .filter
+          %ul
+            %li Filter :
+            %li.active
+              = link_to "All", profile_events_path(@profile, :filter => "Code"), :remote => true 
+            %li
+              = link_to "StackOverflow", profile_events_path(@profile, :filter => "Code", :subfilter => "StackOverflow"), :remote => true 
+            %li
+              = link_to "GitHub", profile_events_path(@profile, :filter => "Code", :subfilter => "GitHub"), :remote => true 
+
       %ul.list#events
         = render :partial => "events/event", :collection => @code_events, :as => :event
         %li.event_load &nbsp; 
+        %li.more_events
+          = form_tag profile_events_path(@profile), :remote => true, :method => :get do |f|
+            = hidden_field_tag :filter, "Code"
+            = hidden_field_tag :subfilter, "All"
+            = hidden_field_tag :page, 2
+            = submit_tag "Click to load more", :id => "more_events"
       &nbsp;
 
     .grid_6

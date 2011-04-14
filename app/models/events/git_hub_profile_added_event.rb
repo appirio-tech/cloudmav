@@ -13,6 +13,7 @@ class GitHubProfileAddedEvent < ProfileEvent
   def set_info
     self.is_public = true
     self.category = "Code"
+    self.subcategory = "GitHub"
   end
 
 end

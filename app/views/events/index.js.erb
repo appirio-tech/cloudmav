@@ -5,6 +5,7 @@ $(".event_load").slideUp('slow');
 $(".more_events").slideDown();
 
 $("#filter").val("<%= @filter %>");
+$("#subfilter").val("<%= @subfilter %>");
 $("#page").val("<%= @page.to_i + 1 %>");
 
 <% if @profile_events.count < 5 %>

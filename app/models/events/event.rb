@@ -3,6 +3,7 @@ class Event
   include Mongoid::Timestamps
 
   field :category, :type => String
+  field :subcategory, :type => String
   field :is_public, :type => Boolean, :default => false
   field :in_process, :type => Boolean, :default => false
   field :completed, :type => Boolean, :default => false
@@ -13,6 +14,7 @@ class Event
   scope :pending, lambda { where(:in_process => false, :completed => false) }
   scope :public, lambda { where(:is_public => true) }
   scope :categorized_as, lambda { |cat| where(:category => cat) }
+  scope :subcategorized_as, lambda { |cat| where(:subcategory => cat) }
 
   before_create :set_base_info
   after_create :add_to_jobs
@@ -23,6 +25,7 @@ class Event
 
   def set_base_info
     self.category = "Default"
+    self.subcategory = "Default"
     set_info if respond_to? :set_info
   end
 

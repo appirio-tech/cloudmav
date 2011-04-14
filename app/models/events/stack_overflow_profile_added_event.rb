@@ -13,6 +13,7 @@ class StackOverflowProfileAddedEvent < ProfileEvent
   def set_info
     self.is_public = true
     self.category = "Code"
+    self.subcategory = "StackOverflow"
   end
 
   def description
