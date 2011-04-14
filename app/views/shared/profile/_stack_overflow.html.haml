@@ -3,7 +3,7 @@
     = link_to image_tag("stack_over_flow_info_logo.png"), "http://www.stackoverflow.com"
     -if can?(:set_stack_overflow_profile, @profile) && @profile.stack_overflow_profile
       .edit
-        = link_to "edit", edit_stack_overflow_profile_path(@profile.stack_overflow_profile, :username => @profile.username)
+        = link_to "edit", edit_profile_stack_overflow_profile_path(@profile, @profile.stack_overflow_profile)
   .info
     - if @profile.stack_overflow_profile
       = link_to "Go to my StackOverflow Profile", @profile.stack_overflow_profile.url, :target => "_blank"
@@ -19,5 +19,5 @@
       - if can? :set_stack_overflow_profile, @profile
         %p 
           Do you have a StackOverflow account? 
-          = link_to "Add Your StackOverflow Account", new_stack_overflow_profile_path(:username => @profile.username)
+          = link_to "Add Your StackOverflow Account", new_profile_stack_overflow_profile_path(@profile)
 .clear

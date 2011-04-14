@@ -1,6 +1,6 @@
 When /^I synch my StackOverflow account$/ do
   VCR.use_cassette("stack_overflow", :record => :all) do
-    visit new_stack_overflow_profile_path(:username => @profile.username)
+    visit new_profile_stack_overflow_profile_path(@profile)
     fill_in "stack_overflow_profile_stack_overflow_id", :with => '60336'
     click_button "Save"
   end
@@ -37,7 +37,7 @@ end
 
 When /^I edit my StackOverflow profile$/ do
   VCR.use_cassette("stack_overflow_update", :record => :all) do
-    visit edit_stack_overflow_profile_path(@stack_overflow_profile, :username => @profile.username)
+    visit edit_profile_stack_overflow_profile_path(@profile, @stack_overflow_profile)
     fill_in "stack_overflow_profile_stack_overflow_id", :with => "60336"
     click_button "Save"
   end

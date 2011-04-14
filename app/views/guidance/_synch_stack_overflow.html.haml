@@ -1,5 +1,5 @@
 %p
 	Did you know you can 
-	= link_to "sync", new_stack_overflow_profile_path(:username => current_profile.username)
+	= link_to "sync", new_profile_stack_overflow_profile_path(current_profile)
 	your StackOverflow account with your CodeMav profile?
-	= link_to "Really?! Show me", new_stack_overflow_profile_path(:username => current_profile.username)
+	= link_to "Really?! Show me", new_profile_stack_overflow_profile_path(current_profile)
