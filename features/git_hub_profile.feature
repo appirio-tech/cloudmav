@@ -10,6 +10,7 @@ Feature: GitHubProfile
     And there are guidances
     When I synch my GitHub account
     Then I should have a GitHub profile
+    And I should have a collection of my repos
     And I should be awarded the "Git R Done" badge
     And I should have 10 coder points
     And I should learned "Synching with your GitHub Account"

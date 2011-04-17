@@ -11,6 +11,7 @@ class GitHubProfile
   field :url
   
   referenced_in :profile, :inverse_of => :git_hub_profile
+  references_many :repositories, :inverse_of => :git_hub_profile, :class_name => "GitHubRepository"
   
   def as_json(opts={})
     { 
