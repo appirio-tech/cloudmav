@@ -1,23 +1,28 @@
-- if @profile.git_hub_profile || can?(:set_git_hub_profile, @profile)
+- if @git_hub_profile || can?(:set_git_hub_profile, @profile)
   .info_box
     .info_logo= link_to image_tag("git_hub_info_logo.png"), "http://www.github.com"
     .info
-      - if @profile.git_hub_profile
-        = link_to "Go to my GitHub Profile", @profile.git_hub_profile.url, :target => "_blank"
+      - if @git_hub_profile
+        = link_to "Go to my GitHub Profile", @git_hub_profile.url, :target => "_blank"
         %table
           %tr
             %td Repositories
-            %td= @profile.git_hub_profile.repository_count
+            %td= @git_hub_profile.repository_count
           %tr
             %td Gists
-            %td= @profile.git_hub_profile.gist_count
+            %td= @git_hub_profile.gist_count
           %tr
             %td Followers
-            %td= @profile.git_hub_profile.followers_count
+            %td= @git_hub_profile.followers_count
 
       - else
         - if can? :set_git_hub_profile, @profile
-          %p 
+          - @git_hub_profile = GitHubProfile.new
+          %p{:id => :add_git_hub_section} 
             Do you have a GitHub account? 
-            = link_to "Add Your GitHub Account", new_profile_git_hub_profile_path(@profile)
+            %a{:rel => "#synch_git_hub"} Yes
+          #synch_git_hub.overlay
+            = render :partial => "git_hub_profiles/form"
+          = render :partial => "git_hub_profiles/synch"
+
   .clear
