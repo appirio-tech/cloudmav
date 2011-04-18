@@ -16,4 +16,8 @@ class GitHubProfileAddedEvent < ProfileEvent
     self.subcategory = "GitHub"
   end
 
+  def description
+    %Q{added GitHub to CodeMav}
+  end
+
 end

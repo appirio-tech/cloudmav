@@ -1,6 +1,6 @@
 When /^I synch my GitHub account$/ do
   VCR.use_cassette("github", :record => :new_episodes) do
-    visit new_git_hub_profile_path(:username => @profile.username)
+    visit new_profile_git_hub_profile_path(@profile)
     fill_in "git_hub_profile_username", :with => 'rookieone'
     click_button "Synch"
   end
@@ -14,5 +14,6 @@ end
 Then /^I should have a collection of my repos$/ do
   profile = User.find(@user.id).profile
   profile.git_hub_profile.repositories.count.should > 0
+  GitHubRepositoryAddedEvent.count.should > 0
 end
 

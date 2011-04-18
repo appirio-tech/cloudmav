@@ -12,4 +12,8 @@ class GitHubRepository
 
   referenced_in :git_hub_profile, :inverse_of => :repositories
 
+  def profile
+    self.git_hub_profile.profile
+  end
+
 end
