@@ -70,6 +70,8 @@ class TagEvent < Event
   end
 
   def import_tags_from(other_taggable)
+    return if other_taggable.nil?
+
     other_taggable.taggings.each do |tagging|
       tag tagging.tag.name, :count => tagging.count, :score => tagging.score
     end

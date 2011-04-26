@@ -1,6 +1,7 @@
 class GitHubProfile
   include Mongoid::Document
   include CodeMav::Eventable
+  include CodeMav::Taggable
   include CodeMav::Synchable
   
   field :git_hub_id
@@ -12,6 +13,10 @@ class GitHubProfile
   
   referenced_in :profile, :inverse_of => :git_hub_profile
   references_many :repositories, :inverse_of => :git_hub_profile, :class_name => "GitHubRepository"
+
+  def related_items
+    [profile.coder_profile]
+  end
   
   def as_json(opts={})
     { 

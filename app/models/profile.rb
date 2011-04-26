@@ -10,6 +10,7 @@ class Profile
   include Virgil::Teachable
   include CodeMav::WriterModule
   include CodeMav::SpeakerModule
+  include CodeMav::CoderModule
   include CodeMav::ExperienceModule
   include CodeMav::Taggable
   include CodeMav::Locatable
@@ -38,12 +39,10 @@ class Profile
   
   referenced_in :user
   references_many :activities
-  
-  references_one :stack_overflow_profile
+
   references_one :twitter_profile
   references_one :speaker_rate_profile
   references_one :slide_share_profile
-  references_one :git_hub_profile
   references_one :linkedin_profile
     
   scope :by_username, lambda { |uname| { :where => { :username => uname } } }

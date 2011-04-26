@@ -17,3 +17,14 @@ Then /^I should have a collection of my repos$/ do
   GitHubRepositoryAddedEvent.count.should > 0
 end
 
+Then /^my GitHub profile should be tagged$/ do
+  profile = User.find(@user.id).profile
+  git_hub_profile = profile.git_hub_profile
+  git_hub_profile.tags.count.should > 0
+end
+
+Then /^my profile should have my GitHub profile tags$/ do
+  profile = User.find(@user.id).profile
+  profile.tags.count.should > 0
+end
+

@@ -14,3 +14,6 @@ Feature: GitHubProfile
     And I should be awarded the "Git R Done" badge
     And I should have 10 coder points
     And I should learned "Synching with your GitHub Account"
+    And my GitHub profile should be tagged
+    And my profile should have my GitHub profile tags
+

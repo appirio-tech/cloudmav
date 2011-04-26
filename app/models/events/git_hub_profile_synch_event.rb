@@ -32,6 +32,7 @@ class GitHubProfileSynchEvent < SynchEvent
       repository.save
     end
 
+    git_hub_profile.retag!
   end
 
 end
