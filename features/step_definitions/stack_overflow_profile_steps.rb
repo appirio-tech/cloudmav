@@ -48,3 +48,19 @@ Then /^my StackOverflow profile should be updated$/ do
   @stack_overflow_profile.stack_overflow_id.should == "60336"
 end
 
+Then /^I should see their StackOverflow profile$/ do
+  And %Q{I should see "Go to my StackOverflow Profile"}
+end
+
+Given /^the other user has a StackOverflow profile$/ do
+  VCR.use_cassette("other stackoverflow", :record => :all) do
+    Factory.create(:stack_overflow_profile, :stack_overflow_id => "60336", :profile => @other_user.profile)
+    @other_user.profile.save
+  end
+end
+
+Then /^I should not see their StackOverflow profile$/ do
+  And %Q{I should not see "Go to my StackOverflow Profile"}
+end
+
+

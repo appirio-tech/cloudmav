@@ -28,4 +28,4 @@ Feature: GitHubProfile
     Given there is another user
     And the other user has a GitHub profile
     When I view their code profile
-    Then I should not see their GitHub profile
+    Then I should see their GitHub profile

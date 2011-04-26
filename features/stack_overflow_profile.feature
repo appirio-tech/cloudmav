@@ -23,3 +23,16 @@ Feature: StackOverflowProfile
     Given I have a StackOverflow profile
     When I edit my StackOverflow profile
     Then my StackOverflow profile should be updated
+
+  Scenario: Don't see StackOverflow on users without StackOverflow
+
+    Given there is another user
+    When I view their code profile
+    Then I should not see their StackOverflow profile
+
+  Scenario: See StackOverflow on users with StackOverflow
+
+    Given there is another user
+    And the other user has a StackOverflow profile
+    When I view their code profile
+    Then I should see their StackOverflow profile

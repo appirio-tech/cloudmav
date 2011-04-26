@@ -1,23 +1,24 @@
-.info_box
-  .info_logo
-    = link_to image_tag("stack_over_flow_info_logo.png"), "http://www.stackoverflow.com"
-    -if can?(:set_stack_overflow_profile, @profile) && @profile.stack_overflow_profile
-      .edit
-        = link_to "edit", edit_profile_stack_overflow_profile_path(@profile, @profile.stack_overflow_profile)
-  .info
-    - if @profile.stack_overflow_profile
-      = link_to "Go to my StackOverflow Profile", @profile.stack_overflow_profile.url, :target => "_blank"
-      %table
-        %tr
-          %td Reputation
-          %td= @profile.stack_overflow_profile.reputation
-        %tr
-          %td Badges
-          %td= stack_overflow_badges(@profile.stack_overflow_profile)
-      
-    - else
-      - if can? :set_stack_overflow_profile, @profile
-        %p 
-          Do you have a StackOverflow account? 
-          = link_to "Add Your StackOverflow Account", new_profile_stack_overflow_profile_path(@profile)
-.clear
+- if @stack_overflow_profile || can?(:set_stack_overflow_profile, @profile)
+  .info_box#stack_overflow_info
+    .info_logo
+      = link_to image_tag("stack_over_flow_info_logo.png"), "http://www.stackoverflow.com"
+      -if can?(:set_stack_overflow_profile, @profile) && @stack_overflow_profile
+        .edit
+          = link_to "edit", edit_profile_stack_overflow_profile_path(@profile, @stack_overflow_profile)
+    .info
+      - if @stack_overflow_profile
+        = link_to "Go to my StackOverflow Profile", @stack_overflow_profile.url, :target => "_blank"
+        %table
+          %tr
+            %td Reputation
+            %td= @stack_overflow_profile.reputation
+          %tr
+            %td Badges
+            %td= stack_overflow_badges(@stack_overflow_profile)
+        
+      - else
+        - if can? :set_stack_overflow_profile, @profile
+          %p 
+            Do you have a StackOverflow account? 
+            = link_to "Add Your StackOverflow Account", new_profile_stack_overflow_profile_path(@profile)
+  .clear
