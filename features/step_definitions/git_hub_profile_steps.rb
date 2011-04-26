@@ -28,3 +28,21 @@ Then /^my profile should have my GitHub profile tags$/ do
   profile.tags.count.should > 0
 end
 
+When /^I view their code profile$/ do
+  visit profile_code_path(@other_user.profile)
+end
+
+Given /^the other user has a GitHub profile$/ do
+  VCR.use_cassette("other github", :record => :new_episodes) do
+    Factory.create(:git_hub_profile, :username => "rookieone", :profile => @other_user.profile)
+  end
+end
+
+Then /^I should not see their GitHub profile$/ do
+  And %Q{I should not see "#git_hub_info"}
+end
+
+Then /^I should see their GitHub profile$/ do
+  And %Q{I should see "#git_hub_info"}
+end
+
