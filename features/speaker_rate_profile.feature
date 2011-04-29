@@ -22,3 +22,16 @@ Feature: Speaker Rate Profile
 		And I synched my SpeakerRate account
 		When I synch my SpeakerRate account
 		Then I should not have duplicate talks from SpeakerRate
+
+  Scenario: Don't see SpeakerRate on users without SpeakerRate
+
+    Given there is another user
+    When I view their speaker profile
+    Then I should not see their SpeakerRate profile
+
+  Scenario: See SpeakerRate on users with SpeakerRate
+
+    Given there is another user
+    And the other user has a SpeakerRate profile
+    When I view their speaker profile
+    Then I should see their SpeakerRate profile
