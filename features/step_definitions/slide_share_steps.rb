@@ -1,6 +1,6 @@
 When /^I synch my SlideShare account$/ do
   VCR.use_cassette("slide_share", :record => :new_episodes) do
-    visit new_slide_share_profile_path(:username => @profile.username)
+    visit new_profile_slide_share_profile_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
     click_button "Synch"
   end
@@ -13,7 +13,7 @@ end
 
 Given /^I have synched my SlideShare account$/ do
   VCR.use_cassette("slide_share", :record => :new_episodes) do
-    visit new_slide_share_profile_path(:username => @profile.username)
+    visit new_profile_slide_share_profile_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
     click_button "Synch"
   end
@@ -28,3 +28,19 @@ Then /^I should import my talks from SlideShare$/ do
   profile = Profile.find(@profile.id)
   profile.talks.where(:title => "Techfest design patterns").count.should == 1
 end
+
+Then /^I should not see their SlideShare profile$/ do
+  page.has_no_selector?("#slide_share_info").should == true
+end
+
+Given /^the other user has a SlideShare profile$/ do
+  VCR.use_cassette('other slide_share ', :record => :new_episodes) do
+    Factory.create(:slide_share_profile, :slide_share_username => "rookieone", :profile => @other_user.profile)
+    @other_user.profile.save
+  end
+end
+
+Then /^I should see their SlideShare profile$/ do
+  page.has_selector?("#slide_share_info").should == true
+end
+

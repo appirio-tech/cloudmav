@@ -22,3 +22,16 @@ Feature: Slide Share Profile
     And I have synched my SlideShare account
     When I synch my SlideShare account
     Then I should not have duplicate talks from SlideShare
+
+  Scenario: Don't see SlideShare on users without SlideShare
+
+    Given there is another user
+    When I view their speaker profile
+    Then I should not see their SlideShare profile
+
+  Scenario: See SlideShare on users with SlideShare
+
+    Given there is another user
+    And the other user has a SlideShare profile
+    When I view their speaker profile
+    Then I should see their SlideShare profile

@@ -32,7 +32,6 @@ Codemav::Application.routes.draw do
   resources :jobs
   # match '/linkedin/callback' => "linkedin_profiles#callback", :as => :linkedin_callback
   
-  resources :slide_share_profiles
   resources :projects
   
   resources :scoreboards do
@@ -68,6 +67,7 @@ Codemav::Application.routes.draw do
     resources :stack_overflow_profiles
     resources :git_hub_profiles
     resources :speaker_rate_profiles
+    resources :slide_share_profiles
     resources :events
     resources :followings
     resources :widgets

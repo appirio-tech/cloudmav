@@ -29,29 +29,6 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://www.absentmindedcoder.com:80/feeds/posts/default?alt=rss&max-results=999
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 302
-      message: Found
-    headers: 
-      date: 
-      - Thu, 14 Apr 2011 17:10:29 GMT
-      server: 
-      - Apache/2.2.3 (Red Hat)
-      location: 
-      - http://search2.comcast.com/?cat=dnsr&con=ds&url=www.absentmindedcoder.com
-      content-length: 
-      - "0"
-      content-type: 
-      - text/html; charset=UTF-8
-    body: 
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
     uri: http://search2.comcast.com:80/?cat=dnsr&con=ds&url=www.absentmindedcoder.com
     body: 
     headers: 
@@ -263,4 +240,31 @@
       \r\n\
       </body>\r\n\
       </html>"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.absentmindedcoder.com:80/feeds/posts/default?alt=rss&max-results=999
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx
+      date: 
+      - Fri, 29 Apr 2011 14:54:43 GMT
+      content-type: 
+      - text/html
+      transfer-encoding: 
+      - chunked
+      vary: 
+      - Accept-Encoding
+      expires: 
+      - Fri, 29 Apr 2011 14:54:42 GMT
+      cache-control: 
+      - no-cache
+    body: <html><head><meta http-equiv="refresh" content="0;url=http://search.consolidated.net/index.php?origURL=http://www.absentmindedcoder.com/feeds/posts/default"/></head><body><script>window.location="http://search.consolidated.net/index.php?origURL="+escape(window.location)+"&r="+escape(document.referrer);</script></body></html>
     http_version: "1.1"

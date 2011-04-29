@@ -1,12 +1,11 @@
 .grid_16
-	%h1 Synch with your Slide Share Account
+  %h1 Synch with your Slide Share Account
 
-	%p Just enter your Slide Share username and we can then synch with your account
-	
-	= form_for @slide_share_profile do |f|
-		= hidden_field_tag :username, @profile.username
-		.label= f.label :slide_share_username, "Username"
-		.control= f.text_field :slide_share_username
-		.submit= f.submit "Synch", :disable_with => "Synching"
-	
+  %p Just enter your Slide Share username and we can then synch with your account
+  
+  = form_for [@profile, @slide_share_profile] do |f|
+    .label= f.label :slide_share_username, "Username"
+    .control= f.text_field :slide_share_username
+    .submit= f.submit "Synch", :disable_with => "Synching"
+  
 .clear
