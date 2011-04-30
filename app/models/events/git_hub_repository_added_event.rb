@@ -13,4 +13,8 @@ class GitHubRepositoryAddedEvent < ProfileEvent
     %Q{created #{git_hub_repository.name} repository}
   end
 
+  def icon_url
+    "event_icons/github.png"
+  end
+
 end

@@ -20,4 +20,8 @@ class GitHubProfileAddedEvent < ProfileEvent
     %Q{added GitHub to CodeMav}
   end
 
+  def icon_url
+    "event_icons/github.png"
+  end
+
 end
