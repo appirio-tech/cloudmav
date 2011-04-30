@@ -5,6 +5,9 @@ module CodeMav
         field :tags_text, :type => String
 
         references_many :taggings
+
+
+
       end
       
       receiver.send(:include, InstanceMethods)
@@ -46,6 +49,10 @@ module CodeMav
       
       def clear_tags!
         self.taggings.destroy_all
+      end
+
+      def taggings_by_score
+        self.taggings.sort{|x,y| y.score <=> x.score}
       end
 
     end
