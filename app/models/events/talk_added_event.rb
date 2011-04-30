@@ -9,7 +9,7 @@ class TalkAddedEvent < TalkEvent
   end
 
   def description
-    "Added the talk #{talk.title}"
+    "added the talk #{talk.title}"
   end
 
 end

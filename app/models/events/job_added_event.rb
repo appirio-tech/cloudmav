@@ -5,7 +5,7 @@ class JobAddedEvent < JobEvent
   end
 
   def description
-    "Added #{job.title} job with #{job.company_name}"
+    "added #{job.title} job with #{job.company_name}"
   end
 
 end

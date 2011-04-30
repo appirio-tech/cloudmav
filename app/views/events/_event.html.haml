@@ -2,6 +2,11 @@
   .item_pic= image_tag event.icon_url
   .item_info
     .item_title
+      - if event.profile
+        - if event.profile == current_profile
+          You 
+        -else
+          #{event.profile.display_name} 
       - if event.url?
         = link_to event.description, event.url
       -else
