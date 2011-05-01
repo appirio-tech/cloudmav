@@ -28,4 +28,12 @@ module ApplicationHelper
     result = ((points / 1000) * 10).round.to_f / 10
     "#{result} k"
   end
+
+  def video_html(video_url)
+    return if video_url.blank?
+    embedly_api = Embedly::API.new 
+    result = embedly_api.oembed :url => video_url
+    result.first.html.html_safe if result.first
+  end
+
 end

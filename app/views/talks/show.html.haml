@@ -30,11 +30,14 @@
     %p
       - if can? :add_presentation, @talk
         = link_to "Schedule a presentation", new_talk_presentation_path(@talk), :class => "button"
-      
+    %br
+    %br
+
     - unless @talk.presentations.empty?
-      %p Presented on
+      %h3 Presentations 
       %ul.list
         - @talk.presentations.each do |p|
-          %li.item_title= show_date p.presentation_date
+          %li
+            = link_to "Presented to #{p.audience} on #{show_date p.presentation_date}", [@talk, p]
       
   .clear

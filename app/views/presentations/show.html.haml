@@ -1,0 +1,12 @@
+.grid_16
+  %h2
+    .title
+      = @talk.title
+    .links
+    - if can? :edit, @talk
+      = link_to "edit", edit_talk_presentation_path(@talk, @presentation)
+      
+  - if @presentation.video?
+    = video_html @presentation.video_url
+
+.clear

@@ -4,8 +4,14 @@ class PresentationsController < ApplicationController
   def index
     @presentations = current_profile.presentations
   end
+
+  def show
+    @presentation = Presentation.find(params[:id])
+  end
   
   def new
+    authorize! :add_presentation, @talk
+    
     @presentation = Presentation.new
   end
   
@@ -22,6 +28,25 @@ class PresentationsController < ApplicationController
       redirect_to @talk
     else
       render :new
+    end
+  end
+
+  def edit
+    @presentation = Presentation.find(params[:id])
+
+    authorize! :edit, @presentation
+  end
+
+  def update
+    @presentation = Presentation.find(params[:id])
+
+    authorize! :edit, @presentation
+
+    if @presentation.update_attributes(params[:presentation])
+      flash[:notice] = "Presentation was updated"
+      redirect_to [@talk, @presentation]
+    else
+      render :edit
     end
   end
   
