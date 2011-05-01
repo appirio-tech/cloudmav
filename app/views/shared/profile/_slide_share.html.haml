@@ -2,11 +2,14 @@
   .info_box#slide_share_info
     .info_logo= link_to image_tag("slide_share_info_logo.png"), "http://www.slideshare.net"
     .info
-      - if @slide_share_profile.nil?
+      - if @slide_share_profile
+        = link_to "Go to my Slide Share Profile", @profile.slide_share_profile.url, :target => "_blank"
+      - else
         - if can? :set_slide_share_profile, @profile
+          - @slide_share_profile = SlideShareProfile.new
           %p 
             Do you have a Slide Share account? 
-            = link_to "Add it.", new_profile_slide_share_profile_path(@profile)
-      -else
-        = link_to "Go to my Slide Share Profile", @profile.slide_share_profile.url, :target => "_blank"
+            %a{:rel => "#synch_slide_share"} Yes
+      #synch_slide_share.overlay
+        = render :partial => "slide_share_profiles/form"
   .clear
