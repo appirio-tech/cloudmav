@@ -10,7 +10,10 @@
             %td= @speaker_rate_profile.rating
       -else
         - if can? :set_speaker_rate_profile, @profile
+          - @speaker_rate_profile = SpeakerRateProfile.new
           %p 
             Do you have a Speaker Rate account? 
-            = link_to "Add Your Speaker Rate Account", new_profile_speaker_rate_profile_path(@profile)
+            %a{:rel => "#synch_speaker_rate"} Yes
+      #synch_speaker_rate.overlay
+        = render :partial => "speaker_rate_profiles/form"
   .clear
