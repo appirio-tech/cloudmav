@@ -18,6 +18,14 @@
         
       - else
         - if can? :set_stack_overflow_profile, @profile
+          - @stackoverflow_profile = StackOverflowProfile.new
+          %p{:id => :add_stack_overflow_section} 
+            Do you have a StackOverflow account? 
+            %a{:rel => "#synch_stack_overflow"} Yes
+          #synch_stack_overflow.overlay
+            = render :partial => "git_hub_profiles/form"
+          = render :partial => "git_hub_profiles/synch"
+
           %p 
             Do you have a StackOverflow account? 
             = link_to "Add Your StackOverflow Account", new_profile_stack_overflow_profile_path(@profile)
