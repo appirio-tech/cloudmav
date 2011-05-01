@@ -3,9 +3,7 @@ When /^I schedule a presentation$/ do
   click_link "Schedule a presentation"
   @presentation = Factory.build(:presentation)
   fill_in "presentation_date", :with => "3/10/2010"
-  select "8", :from => "hour_presentation_time"
-  select "30", :from => "minute_presentation_time"
-  select "PM", :from => "ampm_presentation_time"
+  fill_in "presentation_time", :with => "8:30pm"
   fill_in "presentation_audience", :with => @presentation.audience
   fill_in "presentation_url", :with => @presentation.url
   click_button "Schedule Presentation"

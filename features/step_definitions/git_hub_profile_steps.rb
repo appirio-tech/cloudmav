@@ -2,7 +2,7 @@ When /^I synch my GitHub account$/ do
   VCR.use_cassette("github", :record => :new_episodes) do
     visit new_profile_git_hub_profile_path(@profile)
     fill_in "git_hub_profile_username", :with => 'rookieone'
-    click_button "Synch"
+    click_button "Save"
   end
 end
 

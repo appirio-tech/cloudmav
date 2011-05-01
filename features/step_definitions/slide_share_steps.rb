@@ -2,7 +2,7 @@ When /^I synch my SlideShare account$/ do
   VCR.use_cassette("slide_share", :record => :new_episodes) do
     visit new_profile_slide_share_profile_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
-    click_button "Synch"
+    click_button "Save"
   end
 end
 
@@ -15,7 +15,7 @@ Given /^I have synched my SlideShare account$/ do
   VCR.use_cassette("slide_share", :record => :new_episodes) do
     visit new_profile_slide_share_profile_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
-    click_button "Synch"
+    click_button "Save"
   end
 end
 

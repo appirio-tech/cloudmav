@@ -1,0 +1,18 @@
+= form_for [@talk, @presentation] do |f|
+  .label= f.label "When are you giving the presentation?"
+  .control
+    = text_field_tag :presentation_date
+    = text_field_tag :presentation_time
+  .label= f.label :audience, "Who are you giving the presentation to?"
+  .control= f.text_field :audience
+  .label=f.label :url, "Do you have a url for the presentation for more information?"
+  .control= f.text_field :url
+  .label= f.label :video_url_input, "If you have a link to a video recording of the presentation, please enter your link below"
+  .control= f.text_field :video_url_input
+  .submit= f.submit "Schedule Presentation", :disable_with => "Scheduling..."
+    
+:javascript
+  $(function() {
+    $("#presentation_date").calendricalDate();
+    $("#presentation_time").calendricalTime();
+  });

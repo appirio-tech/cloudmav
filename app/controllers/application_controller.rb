@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_profile
   
   rescue_from CanCan::AccessDenied, :with => :access_denied
+  rescue_from RSolr::RequestError, :with => :solr_error
   
   def current_profile
     return nil if current_user.nil?
@@ -38,16 +39,17 @@ class ApplicationController < ActionController::Base
     end
 
     def get_datetime(date_param, time_param)
-      hour = params["hour_#{time_param}"]
-      minute = params["minute_#{time_param}"]
-      ampm = params["ampm_#{time_param}"]
-      date = Date.strptime(params[date_param], '%m/%d/%Y')
-      DateTime.parse("#{date.to_s} #{hour}:#{minute} #{ampm}")
+      date = Date.strptime(date_param, '%m/%d/%Y')
+      DateTime.parse("#{date.to_s} #{time_param}")
     end
     
     def access_denied
       flash[:error] = "Not authorized to perform that action"
       redirect_to root_path
+    end
+
+    def solr_error
+      
     end
     
     def unseen_badges

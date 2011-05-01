@@ -2,7 +2,7 @@ When /^I synch my SpeakerRate account$/ do
   VCR.use_cassette('speaker_rate', :record => :new_episodes) do
     visit new_profile_speaker_rate_profile_path(@profile)
     fill_in "speaker_rate_profile_speaker_rate_id", :with => '10082'
-    click_button "Synch"
+    click_button "Save"
   end
 end
 
@@ -20,7 +20,7 @@ Given /^I synched my SpeakerRate account$/ do
   VCR.use_cassette('speaker_rate', :record => :new_episodes) do
     visit new_profile_speaker_rate_profile_path(@profile)
     fill_in "speaker_rate_profile_speaker_rate_id", :with => '10082'
-    click_button "Synch"
+    click_button "Save"
   end
 end
 

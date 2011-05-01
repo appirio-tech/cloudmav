@@ -31,6 +31,7 @@ gem "delayed_job_mongoid"
 gem "target_api", "0.0.1"
 gem "less"
 gem "twitter"
+gem "embedly"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily
@@ -38,11 +39,11 @@ group :development, :test do
   gem 'cucumber', ">= 0.8.5"
   gem 'spork'
   gem 'launchy'
-	gem "rspec-rails", ">= 2.0.0.beta.22"
-	gem 'factory_girl_rails'
+  gem "rspec-rails", ">= 2.0.0.beta.22"
+  gem 'factory_girl_rails'
   gem 'capybara'
   #gem "webrat", "= 0.7.2.beta.1"
-	gem "fakeweb"
-	gem "mocha"
+  gem "fakeweb"
+  gem "mocha"
   gem "vcr"
 end
