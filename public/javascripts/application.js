@@ -6,6 +6,11 @@ $(document).ready(function(){
     $('.flash').delay(5000).slideUp('slow');
   });
 
+  // overlay
+  $("a[rel]").overlay({
+    top: 160,
+    mask: '#fff'
+  });
 
   // Filter buttons for modules
   // 
