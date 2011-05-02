@@ -26,11 +26,13 @@ class Presentation
   end
 
   def date_string
-
+    return if presentation_date.nil?
+    self.presentation_date.strftime('%m/%d/%Y')
   end
 
   def time_string
-
+    return if presentation_date.nil?
+    self.presentation_date.strftime('%I:%M%p')
   end
 
 end

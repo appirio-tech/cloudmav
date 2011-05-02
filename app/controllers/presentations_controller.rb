@@ -19,7 +19,7 @@ class PresentationsController < ApplicationController
     authorize! :add_presentation, @talk
 
     @presentation = Presentation.new(params[:presentation])
-    @presentation.presentation_date = get_datetime(params["presentation_date"], params["presentation_time"])
+    @presentation.presentation_date = get_datetime(params["presentation"]["date_string"], params["presentation"]["time_string"])
     @talk.presentations << @presentation
         
     if @presentation.save
@@ -41,6 +41,8 @@ class PresentationsController < ApplicationController
     @presentation = Presentation.find(params[:id])
 
     authorize! :edit, @presentation
+
+    @presentation.presentation_date = get_datetime(params["presentation"]["date_string"], params["presentation"]["time_string"])
 
     if @presentation.update_attributes(params[:presentation])
       flash[:notice] = "Presentation was updated"

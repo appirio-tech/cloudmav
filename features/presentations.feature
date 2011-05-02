@@ -10,3 +10,11 @@ Feature: Presentations
     And I have a talk
     When I schedule a presentation
     Then the presentation should be added
+
+  Scenario: Edit a presentation
+
+    Given I am logged in
+    And I have a talk
+    And the talk has a presentation
+    When I edit the presentation
+    Then the presentation should be edited
