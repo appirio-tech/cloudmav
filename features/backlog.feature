@@ -16,3 +16,10 @@ Feature: Backlog
     And I added a backlog item
     When I update my backlog item
     Then the backlog item should be updated
+
+  Scenario: View backlog items
+
+    Given I am a visitor
+    And there is a backlog item titled "User Group Meeting!"
+    When I view the backlog
+    Then I should see the backlog item "User Group Meeting!"

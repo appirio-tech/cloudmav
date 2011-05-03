@@ -25,4 +25,15 @@ Then /^the backlog item should be updated$/ do
   backlog_item.title.should == "updated title"
 end
 
+Given /^there is a backlog item titled "([^"]*)"$/ do |title|
+  @backlog_item = Factory.create(:backlog_item, :title => title, :author => Factory.create(:user).profile)
+end
+
+When /^I view the backlog$/ do
+  visit backlog_path
+end
+
+Then /^I should see the backlog item "([^"]*)"$/ do |title|
+  And %Q{I should see "#{title}"}
+end
 
