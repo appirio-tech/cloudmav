@@ -1,0 +1,11 @@
+.grid_16
+
+  %h1 Backlog
+
+  %ul#backlog
+    = render :partial => "backlog_items/backlog_item", :collection => @backlog_items, :as => :backlog_item
+
+.clear
+
+
+

@@ -40,6 +40,7 @@ class Ability
     can [:edit, :add_post], Blog do |blog|
       user.profile == blog.profile
     end
+    can [:create], BacklogItem
 
     can [:follow], Profile do |profile|
       user.profile != profile

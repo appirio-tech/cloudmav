@@ -4,6 +4,9 @@ Codemav::Application.routes.draw do
   match 'api_documentation' => 'pages#api_documentation', :as => :api_documentation
   match 'whats_up' => 'activities#index', :as => :whats_up
 
+  match '/backlog' => "backlog_items#index", :as => :backlog
+  resources :backlog_items
+
   resources :contacts
   match 'contact' => 'contacts#new', :as => :contact
 
