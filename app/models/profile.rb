@@ -44,6 +44,8 @@ class Profile
   references_one :speaker_rate_profile
   references_one :slide_share_profile
   references_one :linkedin_profile
+
+  references_many :backlog_items
     
   scope :by_username, lambda { |uname| { :where => { :username => uname } } }
   scope :named, lambda { |name| { :where => { :name => name } } }

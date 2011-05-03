@@ -1,0 +1,7 @@
+= form_for @backlog_item do |f|
+  .label= f.label :title
+  .control= f.text_field :title
+  .label= f.label :description
+  .control= f.text_area :description
+
+  .submit= f.submit "Save", :disable_with => "Saving"

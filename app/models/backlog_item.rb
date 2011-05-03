@@ -9,5 +9,8 @@ class BacklogItem
   field :description, :type => String
 
   validates_presence_of :title
+  validates_presence_of :author
+
+  referenced_in :author, :class_name => "Profile", :inverse_of => :backlog_items
 
 end

@@ -41,6 +41,9 @@ class Ability
       user.profile == blog.profile
     end
     can [:create], BacklogItem
+    can [:edit], BacklogItem do |backlog_item|
+      user.profile == backlog_item.author
+    end
 
     can [:follow], Profile do |profile|
       user.profile != profile
