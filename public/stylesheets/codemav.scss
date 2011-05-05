@@ -35,6 +35,8 @@ $dark_background: #373737;
 $dark_foreground: #ffffff;
 $emphasis_dark_background: #1A1A1A;
 
+$shadow: #868686; 
+
 @mixin corners($radius: 5px) {
   border-radius: $radius;
   -moz-border-radius: $radius;  
@@ -46,6 +48,12 @@ $emphasis_dark_background: #1A1A1A;
 
   /* webkit based browsers */
   background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+}
+
+@mixin drop_shadow() {
+  -moz-box-shadow: 5px 5px 2px $shadow; /* Firefox 3.6 and earlier */
+  -webkit-box-shadow: 5px 5px 2px $shadow; /* Safari and Chrome */
+  box-shadow: 5px 5px 2px $shadow;
 }
 
 @mixin title {
@@ -821,9 +829,23 @@ a.menu_nav {
         text-shadow: none;
     }
   }
-
 }
 
 .overlay {
   width: 450px
+}
+
+#backlog {
+  .backlog_item {
+    float: left;
+    width: 200px;
+    height: 200px;
+    @include drop_shadow();
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid $light_gray;
+    .title {
+      font-size: 14px;
+    }
+  }
 }

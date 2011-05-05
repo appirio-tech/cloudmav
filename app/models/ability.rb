@@ -48,5 +48,7 @@ class Ability
     can [:follow], Profile do |profile|
       user.profile != profile
     end
+
+    can [:view], "Board"
   end
 end

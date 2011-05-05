@@ -2,6 +2,9 @@
 
   %h1 Backlog
 
+  - if can? :create, BacklogItem
+    = link_to "add item", new_backlog_item_path
+
   %ul#backlog
     = render :partial => "backlog_items/backlog_item", :collection => @backlog_items, :as => :backlog_item
 

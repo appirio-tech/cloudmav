@@ -1,0 +1,19 @@
+.grid_10
+  #backlog_items
+    - @backlog_items.each do |i|
+      .backlog_item
+        %p= i.title
+
+.grid_6
+  #event_feed
+    .filter
+      %ul
+        %li Filter :
+        %li.active
+          = link_to "All", profile_events_path(current_profile, :filter => "All"), :remote => true 
+
+    %ul.list#events
+      = render :partial => "events/event", :collection => @events, :as => :event
+      %li.event_load &nbsp; 
+
+.clear

@@ -6,6 +6,7 @@ Codemav::Application.routes.draw do
 
   match '/backlog' => "backlog_items#index", :as => :backlog
   resources :backlog_items
+  resource :board, :only => [:show]
 
   resources :contacts
   match 'contact' => 'contacts#new', :as => :contact
