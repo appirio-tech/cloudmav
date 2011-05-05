@@ -54,6 +54,6 @@ class PresentationsController < ApplicationController
   
   protected
     def set_talk
-      @talk = current_profile.talks.find(params[:talk_id])
+      @talk = Talk.find(params[:talk_id])
     end
 end
