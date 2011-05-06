@@ -6,6 +6,7 @@ class SlideShareProfile
   
   field :slide_share_username
   field :url
+  field :slides_count, :type => Integer, :default => 0
   
   referenced_in :profile, :inverse_of => :slide_share_profile
  

@@ -64,3 +64,8 @@ Then /^I should see a slideshow$/ do
   page.should have_css("#slideshow")
 end
 
+Then /^I should have a slide count on my SlideShare profile$/ do
+  profile = User.find(@user.id).profile
+  profile.slide_share_profile.slides_count.should_not == 0
+end
+

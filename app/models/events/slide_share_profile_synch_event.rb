@@ -7,6 +7,7 @@ class SlideShareProfileSynchEvent < SynchEvent
       create_talk(ss_talk) unless has_talk?(ss_talk)
     end
     slide_share_profile.url = "http://www.speakerrate.net/#{slide_share_profile.slide_share_username}"
+    slide_share_profile.slides_count = response["User"]["Slideshow"].count
     profile.save!
     slide_share_profile.save!
   end
