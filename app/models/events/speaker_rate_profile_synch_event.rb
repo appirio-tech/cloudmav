@@ -22,6 +22,7 @@ class SpeakerRateProfileSynchEvent < SynchEvent
     talk.description = sr_talk["info"]["text"]
     talk.slides_url = sr_talk["slides_url"]
     talk.imported_id = sr_talk["id"]
+    talk.imported_from = "SpeakerRate"
     profile.talks << talk
     talk.save
     

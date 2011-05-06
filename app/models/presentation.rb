@@ -10,6 +10,8 @@ class Presentation
   field :slides_url, :type => String
   field :slides_thumbnail, :type => String 
   field :slideshow_html, :type => String
+  field :imported_id, :type => String
+  field :imported_from, :type => String
 
   referenced_in :talk, :inverse_of => :presentations
 

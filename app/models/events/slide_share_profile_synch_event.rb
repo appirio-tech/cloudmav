@@ -21,6 +21,7 @@ class SlideShareProfileSynchEvent < SynchEvent
     talk.title = ss_talk["Title"]
     talk.description = ss_talk["Description"]
     talk.imported_id = ss_talk["ID"]
+    talk.imported_from = "SlideShare"
     profile.talks << talk
     talk.save
     profile.save

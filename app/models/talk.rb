@@ -10,6 +10,7 @@ class Talk
   field :slides_url, :type => String
   field :slides_thumbnail, :type => String
   field :imported_id, :type => String
+  field :imported_from, :type => String
   field :willing_to_give_talk_again, :type => Boolean, :default => true
   
   referenced_in :profile, :inverse_of => :talks

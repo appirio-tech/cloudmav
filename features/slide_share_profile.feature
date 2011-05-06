@@ -24,11 +24,11 @@ Feature: Slide Share Profile
     When I synch my SlideShare account
     Then I should not have duplicate talks from SlideShare
 
-  Scenario: Show Presentation
+  Scenario: Show Talk
 
     Given there is another user
     And the other user has a SlideShare profile
-    When I look at their presentation from SlideShare
+    When I look at their talk from SlideShare
     Then I should be able to download the slides
     And I should see a preview of the slides
     And I should see a slideshow
