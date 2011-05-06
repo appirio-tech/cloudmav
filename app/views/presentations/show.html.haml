@@ -9,4 +9,18 @@
   - if @presentation.video?
     = video_html @presentation.video_url
 
+  %p.download_link
+    - if @presentation.slides_url
+      to download the slides click
+      = link_to "here", @presentation.slides_url, :id => "download_link"
+
+  %p.slides_thumbnail
+    - if @presentation.slides_thumbnail
+      = image_tag @presentation.slides_thumbnail, :id => "slides_thumbnail"
+
+  %p.slideshow
+    - if @presentation.slideshow_html
+      #slideshow
+        = @presentation.slideshow_html.html_safe
+
 .clear

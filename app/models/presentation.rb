@@ -7,7 +7,10 @@ class Presentation
   field :audience, :type => String
   field :url, :type => String
   field :video_url, :type => String
-  
+  field :slides_url, :type => String
+  field :slides_thumbnail, :type => String 
+  field :slideshow_html, :type => String
+
   referenced_in :talk, :inverse_of => :presentations
 
   def profile

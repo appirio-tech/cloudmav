@@ -24,3 +24,16 @@ Feature: TwitterProfile
     When I edit my Twitter profile
     Then my Twitter profile should be updated
 
+  Scenario: Don't see Twitter on users without Twitter
+
+    Given there is another user
+    When I view their social profile
+    Then I should not see their Twitter profile
+
+  Scenario: See Twitter on users with Twitter
+
+    Given there is another user
+    And the other user has a Twitter profile
+    When I view their social profile
+    Then I should see their Twitter profile
+

@@ -27,6 +27,5 @@ class SpeakerRateProfileSynchEvent < SynchEvent
     
     p = talk.presentations.build(:presentation_date => DateTime.parse(sr_talk["when"]))
     p.save
-    p
   end
 end

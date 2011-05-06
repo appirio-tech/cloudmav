@@ -7,6 +7,7 @@
   .info
     - if @profile.twitter_profile
       = link_to "Go to my Twitter page", @profile.twitter_profile.url, :target => "_blank"
+      %p= @profile.twitter_profile.username
       %table
         %tr
           %td Followers

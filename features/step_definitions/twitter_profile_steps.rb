@@ -42,3 +42,24 @@ Then /^my Twitter profile should be updated$/ do
   @twitter_profile.reload
   @twitter_profile.username.should == "rookieone"
 end
+
+When /^I view their social profile$/ do
+  visit profile_social_path
+end
+
+Then /^I should not see their Twitter profile$/ do
+  And %Q{I should not see "Go to my Twitter page"}
+end
+
+Given /^the other user has a Twitter profile$/ do
+  VCR.use_cassette("other stackoverflow", :record => :all) do
+    Factory.create(:stack_overflow_profile, :stack_overflow_id => "60336", :profile => @other_user.profile)
+    @other_user.profile.save
+  end
+  pending # express the regexp above with the code you wish you had
+end
+
+Then /^I should see their Twitter profile$/ do
+  And %Q{I should see "Go to my Twitter page"}
+end
+
