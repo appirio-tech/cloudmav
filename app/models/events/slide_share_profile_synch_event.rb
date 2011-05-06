@@ -25,12 +25,11 @@ class SlideShareProfileSynchEvent < SynchEvent
     talk.save
     profile.save
 
-    p = talk.presentations.build(
+    talk.presentations.create(
       :presentation_date => DateTime.parse(ss_talk["Created"]),
       :slides_url => ss_talk["DownloadUrl"],
       :slides_thumbnail => ss_talk["ThumbnailURL"],
       :slideshow_html => ss_talk["Embed"])
-    p.save
   end
 
 end

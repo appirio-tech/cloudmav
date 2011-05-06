@@ -4,7 +4,7 @@
     .info
       - if @slide_share_profile
         = link_to "Go to my Slide Share Profile", @profile.slide_share_profile.url, :target => "_blank"
-         %table
+        %table
           %tr
             %td Slides count
             %td= @slide_share_profile.slides_count 
