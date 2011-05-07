@@ -10,6 +10,9 @@ namespace :fix do
         puts "user : #{p.username}"
         response["User"]["Slideshow"].each do |ss_talk|
           puts "ss talk #{ss_talk.inspect}"
+          puts "**********"
+          puts "id is #{ss_talk["ID"]}"
+          puts "**********"
           talk = Talk.where(:imported_id => ss_talk["ID"]).first
           if talk
             talk.update_attributes(
