@@ -3,11 +3,12 @@ class SlideShareProfileSynchEvent < SynchEvent
 
   def synch
     response = SlideShare.get_slideshows_by_user(slide_share_profile.slide_share_username)
-    get_talks(response).each do |ss_talk|
+    talks = get_talks(response)
+    talks.each do |ss_talk|
       create_talk(ss_talk) unless has_talk?(ss_talk)
     end
     slide_share_profile.url = "http://www.speakerrate.net/#{slide_share_profile.slide_share_username}"
-    slide_share_profile.slides_count = response["User"]["Slideshow"].count
+    slide_share_profile.slides_count = talks.count
     profile.save!
     slide_share_profile.save!
   end
