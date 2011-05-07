@@ -7,7 +7,9 @@ namespace :fix do
     profiles.each do |p|
       if p.slide_share_profile
         response = SlideShare.get_slideshows_by_user(p.slide_share_profile.slide_share_username)
+        puts "user : #{p.username}"
         response["User"]["Slideshow"].each do |ss_talk|
+          puts "ss talk #{ss_talk.inspect}"
           talk = Talk.where(:imported_id => ss_talk["ID"]).first
           if talk
             talk.update_attributes(
