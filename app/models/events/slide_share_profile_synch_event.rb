@@ -13,21 +13,17 @@ class SlideShareProfileSynchEvent < SynchEvent
   end
 
   def has_talk?(ss_talk)
-    !profile.talks.where(:imported_id => ss_talk["ID"]).first.nil?
+    !profile.talks.where(:imported_id => ss_talk["ID"], :imported_from => "SlideShare").first.nil?
   end
   
   def create_talk(ss_talk)
-    talk = Talk.new
-    talk.title = ss_talk["Title"]
-    talk.description = ss_talk["Description"]
-    talk.imported_id = ss_talk["ID"]
-    talk.imported_from = "SlideShare"
-    profile.talks << talk
-    talk.save
-    profile.save
-
-    talk.presentations.create(
+    profile.talks.create(
+      :title => ss_talk["Title"],
+      :description => ss_talk["Description"],
+      :imported_id => ss_talk["ID"],
+      :imported_from => "SlideShare",
       :presentation_date => DateTime.parse(ss_talk["Created"]),
+      :talk_creation_date => DateTime.parse(ss_talk["Created"]),
       :slides_url => ss_talk["DownloadUrl"],
       :slides_thumbnail => ss_talk["ThumbnailURL"],
       :slideshow_html => ss_talk["Embed"])

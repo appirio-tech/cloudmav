@@ -5,20 +5,34 @@
         = @talk.title
       .links
         - if can? :edit, @talk
-          = link_to "edit", edit_talk_path(@talk)
+          = link_to "edit", edit_profile_talk_path(@profile, @talk)
     
     - unless @talk.slides_thumbnail.nil?
       = image_tag @talk.slides_thumbnail
     %p.author
       talk given by 
-      = link_to @talk.profile.display_name, profile_speaking_path(:username => @talk.profile.username)
-    %p.download_link
-      - if @talk.slides_url
-        to download the slides click
-        = link_to "here", @talk.slides_url
+      = link_to @profile.display_name, profile_speaking_path(@profile)
     %p.give_talk_again
       - if @talk.willing_to_give_talk_again
         Willing to give talk again!
+
+    - if @talk.video?
+      = video_html @talk.video_url
+
+    %p.download_link
+      - if @talk.slides_url
+        to download the slides click
+        = link_to "here", @talk.slides_url, :id => "download_link"
+
+    %p.slides_thumbnail
+      - if @talk.slides_thumbnail
+        = image_tag @talk.slides_thumbnail, :id => "slides_thumbnail"
+
+    %p.slideshow
+      - if @talk.slideshow_html
+        #slideshow
+          = @talk.slideshow_html.html_safe
+
   .clear
   .grid_10
     %h3 Description
@@ -26,18 +40,3 @@
   .grid_6
     = render :partial => "shared/tags", :locals => { :taggable => @talk }
   .clear  
-  .grid_16 
-    %p
-      - if can? :add_presentation, @talk
-        = link_to "Schedule a presentation", new_talk_presentation_path(@talk), :class => "button"
-    %br
-    %br
-
-    - unless @talk.presentations.empty?
-      %h3 Presentations 
-      %ul.list
-        - @talk.presentations.each do |p|
-          %li
-            = link_to "Presented to #{p.audience} on #{show_date p.presentation_date}", [@talk, p]
-      
-  .clear

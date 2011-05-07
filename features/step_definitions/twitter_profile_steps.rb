@@ -44,7 +44,7 @@ Then /^my Twitter profile should be updated$/ do
 end
 
 When /^I view their social profile$/ do
-  visit profile_social_path
+  visit profile_social_path(@other_user.profile)
 end
 
 Then /^I should not see their Twitter profile$/ do
@@ -52,11 +52,10 @@ Then /^I should not see their Twitter profile$/ do
 end
 
 Given /^the other user has a Twitter profile$/ do
-  VCR.use_cassette("other stackoverflow", :record => :all) do
-    Factory.create(:stack_overflow_profile, :stack_overflow_id => "60336", :profile => @other_user.profile)
+  VCR.use_cassette("other twitter", :record => :new_episodes) do
+    Factory.create(:twitter_profile, :username => "rookieone", :profile => @other_user.profile)
     @other_user.profile.save
   end
-  pending # express the regexp above with the code you wish you had
 end
 
 Then /^I should see their Twitter profile$/ do

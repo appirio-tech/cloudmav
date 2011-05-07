@@ -1,5 +1,5 @@
 When /^I add a talk$/ do
-  visit new_talk_path(:username => @profile.username)
+  visit new_profile_talk_path(@profile)
   @talk = Factory.build(:talk)
   fill_in "talk_title", :with => @talk.title
   fill_in "talk_description", :with => @talk.description
@@ -21,7 +21,7 @@ Given /^I have a talk$/ do
 end
 
 When /^I edit the talk$/ do
-  visit edit_talk_path(@talk)
+  visit edit_profile_talk_path(@profile, @talk)
   fill_in "talk_title", :with => "Updated Talk"
   click_button "Save"
 end

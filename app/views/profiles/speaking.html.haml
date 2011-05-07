@@ -8,12 +8,6 @@
         %tr
           %td.count= @profile.talks.count
           %td.count_of= @profile.talks.count > 1 ? "talks" : "talks"
-          %td.space
-          %td.count= @profile.presentations.count
-          %td.count_of= @profile.presentations.count > 1 ? "presentations" : "presentations"
-      //- unless @profile.speaker_bio.nil?
-      //  %p= @profile.speaker_bio
-      //= link_to "Set your speaker bio", edit_speaker_bio_path(:username => @profile.username)
       %br
       %br
     .clear
@@ -21,7 +15,7 @@
     .grid_9
       %h2 Talks
       - if can? :add_talk, @profile
-        .link= link_to "add a talk", new_talk_path(:username => @profile.username)
+        .link= link_to "add a talk", new_profile_talk_path(@profile)
       %ul.list
         - @profile.talks.each do |talk|    
           %li
@@ -31,11 +25,9 @@
               -else
                 = image_tag "default_talk.png"
             .item_info
-              .item_title= link_to talk.title, talk
+              .item_title= link_to talk.title, [@profile, talk]
               .item_description
                 = truncate(talk.description, :length => 60)
-                - if talk.presentations.any?
-                  %p= "Presented #{pluralize talk.presentations.count, 'time', 'times' }"
       &nbsp;
 
     .grid_6

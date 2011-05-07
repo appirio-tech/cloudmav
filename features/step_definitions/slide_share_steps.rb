@@ -45,11 +45,10 @@ Then /^I should see their SlideShare profile$/ do
   page.has_selector?("#slide_share_info").should == true
 end
 
-When /^I look at their presentation from SlideShare$/ do
+When /^I look at their talk from SlideShare$/ do
   p = User.find(@other_user.id).profile
   talk = User.find(@other_user.id).profile.talks.first
-  presentation = talk.presentations.first
-  visit talk_presentation_path(talk, presentation)
+  visit profile_talk_path(p, talk)
 end
 
 Then /^I should be able to download the slides$/ do

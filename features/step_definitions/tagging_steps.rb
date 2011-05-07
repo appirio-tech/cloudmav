@@ -3,7 +3,7 @@ Given /^there is a talk$/ do
 end
 
 When /^I tag the talk with "([^"]*)"$/ do |tag|
-  visit edit_talk_path(@talk)
+  visit edit_profile_talk_path(@profile, @talk)
   fill_in "talk_tags_text", :with => tag
   click_button "Save"
 end

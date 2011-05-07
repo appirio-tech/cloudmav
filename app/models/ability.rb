@@ -34,9 +34,6 @@ class Ability
     can [:edit, :add_presentation], Talk do |talk|
       user.profile == talk.profile
     end
-    can [:edit], Presentation do |presentation|
-      user.profile == presentation.profile
-    end
     can [:edit, :add_post], Blog do |blog|
       user.profile == blog.profile
     end

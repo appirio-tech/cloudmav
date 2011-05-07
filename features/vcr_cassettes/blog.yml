@@ -244,31 +244,6 @@
 - !ruby/struct:VCR::HTTPInteraction 
   request: !ruby/struct:VCR::Request 
     method: :get
-    uri: http://www.absentmindedcoder.com:80/feeds/posts/default?alt=rss&max-results=999
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 302
-      message: Found
-    headers: 
-      date: 
-      - Thu, 05 May 2011 18:54:44 GMT
-      server: 
-      - Apache/2.2.3 (Red Hat)
-      location: 
-      - http://search5.comcast.com/?cat=dnsr&con=dsqcy&url=www.absentmindedcoder.com
-      content-length: 
-      - "0"
-      content-type: 
-      - text/html; charset=UTF-8
-      x-pad: 
-      - avoid browser bug
-    body: 
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
     uri: http://search5.comcast.com:80/?cat=dnsr&con=dsqcy&url=www.absentmindedcoder.com
     body: 
     headers: 
@@ -278,12 +253,12 @@
       message: OK
     headers: 
       date: 
-      - Thu, 05 May 2011 18:54:45 GMT
+      - Fri, 06 May 2011 20:21:58 GMT
       server: 
       - Apache/2.2.3 (Red Hat)
       set-cookie: 
-      - entitlement_cache=deleted; expires=Wed, 05-May-2010 18:54:44 GMT; path=/; domain=.comcast.net
-      - token=201105051805456046; path=/; domain=.comcast.net
+      - entitlement_cache=deleted; expires=Thu, 06-May-2010 20:21:57 GMT; path=/; domain=.comcast.net
+      - token=201105062005586646; path=/; domain=.comcast.net
       transfer-encoding: 
       - chunked
       content-type: 
@@ -375,7 +350,7 @@
       \t\t\t<div class=\"logo\"><a href=\"http://comcast.net/?CM.src=top\" title=\"Home\" accesskey=\"0\" target=\"_top\">Comcast.net<SPAN id=\"logo_link\"></SPAN></a></div>\r\n\
       \t\t</div>\r\n\
       \r\n\
-      \t\t<!-- <div class=\"logo\"></div> -->\r\n                <div class=\"searchField\">\r\n                  \r\n                  <input id=\"search-field\" name=\"q\" type=\"text\" accesskey=\"s\" value=\"www.absentmindedcoder.com\" />\r\n                  <input name=\"qs\" value=\"06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjRTenKjfZAYrIQUATTfbQndE03TQwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvG5MiLJ36v1TOvkoplGgNQpgGUNRTnBEJtg..,YT0zO2s9MjU.\" type=\"hidden\" />\r\n                 \r\n\
+      \t\t<!-- <div class=\"logo\"></div> -->\r\n                <div class=\"searchField\">\r\n                  \r\n                  <input id=\"search-field\" name=\"q\" type=\"text\" accesskey=\"s\" value=\"www.absentmindedcoder.com\" />\r\n                  <input name=\"qs\" value=\"06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjeRzP1n8ZAarKQj1D_slsnr65n3QwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvK5Muj4KmT6cQTLW1LYp3t1GAp8Sn2IAH,YT0zO2s9NDU.\" type=\"hidden\" />\r\n                 \r\n\
       \r\n                 \r\n                </div>\r\n                <button name=\"top_SearchSubmit\" class=\"searchSubmit\" onclick=\"document.top_search.submit();\"></button>\r\n\
       </form>\r\n\
       </div>\r\n\
@@ -396,49 +371,31 @@
       \r\n          </td>\r\n          <td valign=\"top\" width=\"15%\" class=\"disable\">\r\n            <a class=\"disablepage\" href=\"http://dns-opt-out.comcast.net/\">Disable this error service</a>\r\n          </td> \r\n          </table>\r\n          <!-- Start Left Sidebar Wrapper -->\r\n          <!-- narrow_search was here -->\r\n      \t\r\n        <!-- Start Content Wrapper -->\r\n        <div id=\"content-wrapper\">\r\n        <div id=\"content\" class=\"results\">\r\n              <div class=\"module  top\">\r\n\
       <h3 id=\"h-webresults\" class=\"h-webresults\">Search Results</h3>\r\n\
       <h4 id=\"h4-resultsnum\"> for <strong>www.absentmindedcoder.com</strong> </h4>\r\n\
-      <br />\r\n              <div class=\"module sponsor-6\">            \r\n\
-      <h3>Sponsored Links</h3>\r\n\
-      <dl>\r\n\
-      <dt class=\"title\">\r\n  <a class=\"adl1\" target=\"_blank\"  onclick=\"s_objectID='&amp;lid=0A1'\"  href=\"http://0.r.msn.com/?ld=4vQpBuGmsvPmH6MLObxWXc8fToNBdGXXRCGT3vpPbq8GdsfaH5YKij950x986Je9wSglPIP_CJfH3wOU2U7ltbOJjSkfxiR0Mz2uYxjzu_iQHqY4ifYwLQRsG2MPYiGzADQsjL_FML6DW2FzbhZj0STV1nOwRsNex-_KW2Nj6aJlPSXcloeC5n1Y6dCpUx1aeR7HGsUDsNpDcsxl1U54idnJ_eP1pIoBUHyCM_pgOPtE0v0IjEGkTuaSn8Y3mTwmoWNVQJTFPsKyvDwasUH3UNz8LWBcoQJmNzPcSyy5UY4qE_FegVfk5EDGH-yNXPCG9K0t32gQY5b_2B\" onmouseover=\"window.status=''; return true\" onmouseout=\"window.status=''; return true\">Coding and Marking</a>\r\n\
-      </dt>\r\n\
-      <dd>\r\n  <a class=\"adl2\" target=\"_blank\"  onclick=\"s_objectID='&amp;lid=0A2'\"  href=\"http://0.r.msn.com/?ld=4vQpBuGmsvPmH6MLObxWXc8fToNBdGXXRCGT3vpPbq8GdsfaH5YKij950x986Je9wSglPIP_CJfH3wOU2U7ltbOJjSkfxiR0Mz2uYxjzu_iQHqY4ifYwLQRsG2MPYiGzADQsjL_FML6DW2FzbhZj0STV1nOwRsNex-_KW2Nj6aJlPSXcloeC5n1Y6dCpUx1aeR7HGsUDsNpDcsxl1U54idnJ_eP1pIoBUHyCM_pgOPtE0v0IjEGkTuaSn8Y3mTwmoWNVQJTFPsKyvDwasUH3UNz8LWBcoQJmNzPcSyy5UY4qE_FegVfk5EDGH-yNXPCG9K0t32gQY5b_2B\" onmouseover=\"window.status=''; return true\" onmouseout=\"window.status=''; return true\">\r\n    <span class=\"summary\">Hand stamps, Roller <b>Coders</b>, Stencils, Markers.</span><br>\r\n    <span class=\"source\">www.propacksolutions.com</span>\r\n  </a>\r\n\
-      </dd>\r\n\
+      <br />\r\n              <!--top_ads-->\r\n              <div id=\"iframe-results\">www.absentmindedcoder.com </div>\r\n              <div id=\"iframe-offset\">0 </div>\r\n          </div>\r\n          <!--bot_ads-->\r\n          \r\n\
       \r\n\
-      </dl>\r\n\
-      </div>\r\n              <div id=\"iframe-results\">www.absentmindedcoder.com </div>\r\n              <div id=\"iframe-offset\">0 </div>\r\n          </div>\r\n          <div class=\"module sponsor-6\">            \r\n\
-      <h3>Sponsored Links</h3>\r\n\
-      <dl>\r\n\
-      <dt class=\"title\">\r\n  <a class=\"adl1\" target=\"_blank\"  onclick=\"s_objectID='&amp;lid=0A3'\"  href=\"http://0.r.msn.com/?ld=4vQpBuGmsvPmH6MLObxWXc8fToNBdGXXRCGT3vpPbq8GdsfaH5YKij950x986Je9wSglPIP_CJfH3wOU2U7ltbOJjSkfxiR0Mz2uYxjzu_iQHqY4ifYwLQRsG2MPYiGzADQsjL_FML6DW2FzbhZj0STV1nOwRsNex-_KW2Nj6aJlPSXcloeC5n1Y6dCpUx1aeR7HGsUDsNpDcsxl1U54idnJ_eP1pIoBUHyCM_pgOPtE0v0IjEGkTuaSn8Y3mTwmoWNVQJTFPsKyvDwasUH3UNz8LWBcoQJmNzPcSyy5UY4qE_FegVfk5EDGH-yNXPCG9K0t32gQY5b_2B\" onmouseover=\"window.status=''; return true\" onmouseout=\"window.status=''; return true\">Coding and Marking</a>\r\n\
-      </dt>\r\n\
-      <dd>\r\n  <a class=\"adl2\" target=\"_blank\"  onclick=\"s_objectID='&amp;lid=0A4'\"  href=\"http://0.r.msn.com/?ld=4vQpBuGmsvPmH6MLObxWXc8fToNBdGXXRCGT3vpPbq8GdsfaH5YKij950x986Je9wSglPIP_CJfH3wOU2U7ltbOJjSkfxiR0Mz2uYxjzu_iQHqY4ifYwLQRsG2MPYiGzADQsjL_FML6DW2FzbhZj0STV1nOwRsNex-_KW2Nj6aJlPSXcloeC5n1Y6dCpUx1aeR7HGsUDsNpDcsxl1U54idnJ_eP1pIoBUHyCM_pgOPtE0v0IjEGkTuaSn8Y3mTwmoWNVQJTFPsKyvDwasUH3UNz8LWBcoQJmNzPcSyy5UY4qE_FegVfk5EDGH-yNXPCG9K0t32gQY5b_2B\" onmouseover=\"window.status=''; return true\" onmouseout=\"window.status=''; return true\">\r\n    <span class=\"summary\">Hand stamps, Roller <b>Coders</b>, Stencils, Markers.</span><br>\r\n    <span class=\"source\">www.propacksolutions.com</span>\r\n  </a>\r\n\
-      </dd>\r\n\
-      \r\n\
-      </dl>\r\n\
-      </div>\r\n          \r\n\
-      \r\n\
-      <div class=\"next\"><a   onclick=\"s_objectID='&amp;lid=0NE1'\"  href=\"?cat=dnsr&con=dsqcy&q=&url=www.absentmindedcoder.com&qs=06oENya4ZGM2qUkAyqUAwHto0ERUsoIAwNzVn8_-ENonJ5w1aN6BBnUEte9NokE4_A8oJUSSVQaOuhimX2AIgvPFF9aOsqzsAEoUA8042FEjcgckAu9uVzq3Qa237Y2us1amKJ_mJCGZbhl8iZeyeq2bENdmrfSMmkau0JTQq_wI-BvMhDh_RS3p4k-1m9X2QrBD_CaaeNqcy3zeY2_Fks73xM7XqMMZSaT5_C_QHqDt_bTq-tlkgF15uBSWq4cFKZTPWefU5Ec-K_B5aIWks0UnEUFWtOxjnwOv8v9brMRdHr2Vtto5Ph6l6E0V1qDEk-YT8jT50NmdES9-0E3uSd3pdVrEs9CfN3jDqxj6fqhe5ZJnu85Jskqzo1FAgyAVPbKnbyioOBw-c6Os4pF-vk6w5AG9aasL7-feX0oGkjW_tcfLTmtjsDaUtGD1S_Q-NIFqaSIr_Cn2aG3vCnuNXc_bRzautM7DC7H_ydcPn3LhbAryhTPmu1milCLfbH87fMwDfjcc_sJw63FBN99yuw926np8zPJtTJiNqwlH1_dXxqe-nT_Qb_yNQdJbkCP7uH4eRtAmV5VPDqmJQMLH9gQ51gp9xT498PjMI1Nh_j67M61OyFKlz_O9kmL1JUZMkGfKJtZw..&pagination=1&offset=10\">next page</a></div>\r\n\
+      <div class=\"next\"><a   onclick=\"s_objectID='&amp;lid=0NE1'\"  href=\"?cat=dnsr&con=dsqcy&q=&url=www.absentmindedcoder.com&qs=06oENya4ZGM2qEkAzaVAwHNvxfX2cchIxlQtkLYSNTBrtmSEgbPakKtjwelQWZ95FN0IWEmkRtPpqdcBuKtWLCWSVSNTsExIuhH_u-LZrZpoETNNBYZm9RVJ6T6qnLEgqs0N2xAumCJbqaaGeLzQMs0mkX4nSu3Dlp1N6MTsPPNWtEvG3Q2wdzJLuWlCRHOSb4z1Eq36qtgJkRIlUUX6q1_aEtZK9ouJWfysCcHuK7w4ECzolQfF-K3nI69wPiY3ssEJ_BHeDifjETWDyvY-_jxvc5CK2TDQ4xycA8uWaaJmBQMd-i6MYKGMM4AsMg6FKvkV5ETY6-Q2YJtDxZ3q7G4i2wwkVhnwaKOQdzQP3zRrxiolw-Byl46lgaGbC9sQzz_F-qUCjX2k4M-lMPdHb5RlmA_DG3ueGnxnSvkGknB-e96RF9jfcKXkPXHEmhgwjxc5Jyo14j85UBGDZq5dU4DAhaDdTRjSF6NFPP7F5t3XWKWlIgNT4SKPrGHvWl4eRo7KmHSiX5OPVgHKQThnKgWB904QBvalJjeYE7JDzF10_66eTRm3ViUFS3nAmPsHnZCE-h7GGHt_P8&pagination=1&offset=10\">next page</a></div>\r\n\
       \r\n       \r\n        </div>\r\n        </div><!-- /#content-wrapper -->\r\n        <div id=\"sidebar-wrapper\">\r\n\
       \t\t<div id=\"sidebar\">\r\n          <div id=\"left-sidebar-wrapper\">\r\n\
       <div id=\"narrow-search\">\r\n   <h3>Related Searches</h3>\r\n      <ul>\r\n        <li class=\"list-rel-narrow\">\r\n\
-      <a  onclick=\"s_objectID='&amp;lid=0RNL1'\"  href=\"?cat=dnsr&con=dsqcy&q=Absent+Minded&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjRTenKjfZAYrIQUATTfbQndE03TQwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvG5MiLJ36v1TOvkoplGgNQpgGUNRTnBEJtg..,YT0xO0w9QWJzZW50IE1pbmRlZDtSPTE7Uz1NOnIjO2s9NQ..&narrow=1\">Absent Minded</a>\r\n\
+      <a  onclick=\"s_objectID='&amp;lid=0RNL1'\"  href=\"?cat=dnsr&con=dsqcy&q=Absent+Minded&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjeRzP1n8ZAarKQj1D_slsnr65n3QwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvK5Muj4KmT6cQTLW1LYp3t1GAp8Sn2IAH,YT0xO0w9QWJzZW50IE1pbmRlZDtSPTE7Uz1NOnIjO2s9OQ..&narrow=1\">Absent Minded</a>\r\n\
       </li><li class=\"list-rel-narrow\">\r\n\
-      <a  onclick=\"s_objectID='&amp;lid=0RNL2'\"  href=\"?cat=dnsr&con=dsqcy&q=Absent&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjRTenKjfZAYrIQUATTfbQndE03TQwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvG5MiLJ36v1TOvkoplGgNQpgGUNRTnBEJtg..,YT0xO0w9QWJzZW50O1I9MjtTPU06ciM7az01&narrow=1\">Absent</a>\r\n\
+      <a  onclick=\"s_objectID='&amp;lid=0RNL2'\"  href=\"?cat=dnsr&con=dsqcy&q=Absent&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjeRzP1n8ZAarKQj1D_slsnr65n3QwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvK5Muj4KmT6cQTLW1LYp3t1GAp8Sn2IAH,YT0xO0w9QWJzZW50O1I9MjtTPU06ciM7az05&narrow=1\">Absent</a>\r\n\
       </li><li class=\"list-rel-narrow\">\r\n\
-      <a  onclick=\"s_objectID='&amp;lid=0RNL3'\"  href=\"?cat=dnsr&con=dsqcy&q=Minded&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjRTenKjfZAYrIQUATTfbQndE03TQwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvG5MiLJ36v1TOvkoplGgNQpgGUNRTnBEJtg..,YT0xO0w9TWluZGVkO1I9MztTPU06ciM7az01&narrow=1\">Minded</a>\r\n\
+      <a  onclick=\"s_objectID='&amp;lid=0RNL3'\"  href=\"?cat=dnsr&con=dsqcy&q=Minded&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjeRzP1n8ZAarKQj1D_slsnr65n3QwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvK5Muj4KmT6cQTLW1LYp3t1GAp8Sn2IAH,YT0xO0w9TWluZGVkO1I9MztTPU06ciM7az05&narrow=1\">Minded</a>\r\n\
       </li><li class=\"list-rel-narrow\">\r\n\
-      <a  onclick=\"s_objectID='&amp;lid=0RNL4'\"  href=\"?cat=dnsr&con=dsqcy&q=Coder&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjRTenKjfZAYrIQUATTfbQndE03TQwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvG5MiLJ36v1TOvkoplGgNQpgGUNRTnBEJtg..,YT0xO0w9Q29kZXI7Uj00O1M9TTpyIztrPTU.&narrow=1\">Coder</a>\r\n\
+      <a  onclick=\"s_objectID='&amp;lid=0RNL4'\"  href=\"?cat=dnsr&con=dsqcy&q=Coder&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjeRzP1n8ZAarKQj1D_slsnr65n3QwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvK5Muj4KmT6cQTLW1LYp3t1GAp8Sn2IAH,YT0xO0w9Q29kZXI7Uj00O1M9TTpyIztrPTk.&narrow=1\">Coder</a>\r\n\
       </li><li class=\"list-rel-narrow\">\r\n\
-      <a  onclick=\"s_objectID='&amp;lid=0RNL5'\"  href=\"?cat=dnsr&con=dsqcy&q=Real+Estate&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjRTenKjfZAYrIQUATTfbQndE03TQwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvG5MiLJ36v1TOvkoplGgNQpgGUNRTnBEJtg..,YT0xO0w9UmVhbCBFc3RhdGU7Uj01O1M9ZyM7az01&narrow=1\">Real Estate</a>\r\n\
+      <a  onclick=\"s_objectID='&amp;lid=0RNL5'\"  href=\"?cat=dnsr&con=dsqcy&q=Real+Estate&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjeRzP1n8ZAarKQj1D_slsnr65n3QwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvK5Muj4KmT6cQTLW1LYp3t1GAp8Sn2IAH,YT0xO0w9UmVhbCBFc3RhdGU7Uj01O1M9ZyM7az05&narrow=1\">Real Estate</a>\r\n\
       </li><li class=\"list-rel-narrow\">\r\n\
-      <a  onclick=\"s_objectID='&amp;lid=0RNL6'\"  href=\"?cat=dnsr&con=dsqcy&q=Apartment+for+Rent&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjRTenKjfZAYrIQUATTfbQndE03TQwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvG5MiLJ36v1TOvkoplGgNQpgGUNRTnBEJtg..,YT0xO0w9QXBhcnRtZW50IGZvciBSZW50O1I9NjtTPWcjO2s9NQ..&narrow=1\">Apartment for Rent</a>\r\n\
+      <a  onclick=\"s_objectID='&amp;lid=0RNL6'\"  href=\"?cat=dnsr&con=dsqcy&q=Apartment+for+Rent&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjeRzP1n8ZAarKQj1D_slsnr65n3QwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvK5Muj4KmT6cQTLW1LYp3t1GAp8Sn2IAH,YT0xO0w9QXBhcnRtZW50IGZvciBSZW50O1I9NjtTPWcjO2s9OQ..&narrow=1\">Apartment for Rent</a>\r\n\
       </li><li class=\"list-rel-narrow\">\r\n\
-      <a  onclick=\"s_objectID='&amp;lid=0RNL7'\"  href=\"?cat=dnsr&con=dsqcy&q=Personals&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjRTenKjfZAYrIQUATTfbQndE03TQwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvG5MiLJ36v1TOvkoplGgNQpgGUNRTnBEJtg..,YT0xO0w9UGVyc29uYWxzO1I9NztTPWcjO2s9NQ..&narrow=1\">Personals</a>\r\n\
+      <a  onclick=\"s_objectID='&amp;lid=0RNL7'\"  href=\"?cat=dnsr&con=dsqcy&q=Personals&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjeRzP1n8ZAarKQj1D_slsnr65n3QwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvK5Muj4KmT6cQTLW1LYp3t1GAp8Sn2IAH,YT0xO0w9UGVyc29uYWxzO1I9NztTPWcjO2s9OQ..&narrow=1\">Personals</a>\r\n\
       </li><li class=\"list-rel-narrow\">\r\n\
-      <a  onclick=\"s_objectID='&amp;lid=0RNL8'\"  href=\"?cat=dnsr&con=dsqcy&q=Cheap+Airfare&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjRTenKjfZAYrIQUATTfbQndE03TQwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvG5MiLJ36v1TOvkoplGgNQpgGUNRTnBEJtg..,YT0xO0w9Q2hlYXAgQWlyZmFyZTtSPTg7Uz1nIztrPTU.&narrow=1\">Cheap Airfare</a>\r\n\
+      <a  onclick=\"s_objectID='&amp;lid=0RNL8'\"  href=\"?cat=dnsr&con=dsqcy&q=Cheap+Airfare&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjeRzP1n8ZAarKQj1D_slsnr65n3QwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvK5Muj4KmT6cQTLW1LYp3t1GAp8Sn2IAH,YT0xO0w9Q2hlYXAgQWlyZmFyZTtSPTg7Uz1nIztrPTk.&narrow=1\">Cheap Airfare</a>\r\n\
       </li><li class=\"list-rel-narrow\">\r\n\
-      <a  onclick=\"s_objectID='&amp;lid=0RNL9'\"  href=\"?cat=dnsr&con=dsqcy&q=Vacation+Packages&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjRTenKjfZAYrIQUATTfbQndE03TQwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvG5MiLJ36v1TOvkoplGgNQpgGUNRTnBEJtg..,YT0xO0w9VmFjYXRpb24gUGFja2FnZXM7Uj05O1M9ZyM7az01&narrow=1\">Vacation Packages</a>\r\n\
+      <a  onclick=\"s_objectID='&amp;lid=0RNL9'\"  href=\"?cat=dnsr&con=dsqcy&q=Vacation+Packages&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjeRzP1n8ZAarKQj1D_slsnr65n3QwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvK5Muj4KmT6cQTLW1LYp3t1GAp8Sn2IAH,YT0xO0w9VmFjYXRpb24gUGFja2FnZXM7Uj05O1M9ZyM7az05&narrow=1\">Vacation Packages</a>\r\n\
       </li><li class=\"list-rel-narrow\">\r\n\
-      <a  onclick=\"s_objectID='&amp;lid=0RNL10'\"  href=\"?cat=dnsr&con=dsqcy&q=Vegas+Vacation&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjRTenKjfZAYrIQUATTfbQndE03TQwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvG5MiLJ36v1TOvkoplGgNQpgGUNRTnBEJtg..,YT0xO0w9VmVnYXMgVmFjYXRpb247Uj0xMDtTPWcjO2s9NQ..&narrow=1\">Vegas Vacation</a>\r\n\
+      <a  onclick=\"s_objectID='&amp;lid=0RNL10'\"  href=\"?cat=dnsr&con=dsqcy&q=Vegas+Vacation&qs=06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjeRzP1n8ZAarKQj1D_slsnr65n3QwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvK5Muj4KmT6cQTLW1LYp3t1GAp8Sn2IAH,YT0xO0w9VmVnYXMgVmFjYXRpb247Uj0xMDtTPWcjO2s9OQ..&narrow=1\">Vegas Vacation</a>\r\n\
       </li>\r\n      </ul>\r\n\
       <div class=\"clear\"></div>\r\n\
       </div>\r\n\
@@ -450,7 +407,7 @@
       </div><!-- /#stage -->\r\n\
       \r\n\
       <!-- Bottom Search -->\r\n\
-      <div class=\"searchbox bottom\">\r\n    <div class=\"searchboxWrapper\">\r\n        <div class=\"searchPane\">\r\n            <form name=\"bottom_search\" id=\"search-form-bottom\" action=\"\" method=\"get\">\r\n                <input name=\"cat\" id=\"cat\" value=\"dnsr\" type=\"hidden\" />\r\n                <input name=\"con\" id=\"con\" value=\"dsqcy\" type=\"hidden\" />\r\n                <input name=\"form_submit\" value=\"1\" type=\"hidden\" />                \r\n                <div class=\"searchField\">\r\n                     \r\n                    <input id=\"search-fieldBtm\" name=\"q\" type=\"text\" value=\"www.absentmindedcoder.com\" />\r\n                    <input name=\"qs\" value=\"06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjRTenKjfZAYrIQUATTfbQndE03TQwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvG5MiLJ36v1TOvkoplGgNQpgGUNRTnBEJtg..,YT0zO2s9MjU.\" type=\"hidden\" />\r\n                    \r\n                    \r\n                    \r\n                </div>\r\n                <button name=\"bottom_SearchSubmit\" class=\"searchSubmit\" onclick=\"document.bottom_search.submit();\"></button>\r\n            </form>\r\n        </div><!-- /.searchPane -->\r\n    <div class=\"clear\"></div>\r\n    </div><!-- /.searchboxWrapper -->\r\n\
+      <div class=\"searchbox bottom\">\r\n    <div class=\"searchboxWrapper\">\r\n        <div class=\"searchPane\">\r\n            <form name=\"bottom_search\" id=\"search-form-bottom\" action=\"\" method=\"get\">\r\n                <input name=\"cat\" id=\"cat\" value=\"dnsr\" type=\"hidden\" />\r\n                <input name=\"con\" id=\"con\" value=\"dsqcy\" type=\"hidden\" />\r\n                <input name=\"form_submit\" value=\"1\" type=\"hidden\" />                \r\n                <div class=\"searchField\">\r\n                     \r\n                    <input id=\"search-fieldBtm\" name=\"q\" type=\"text\" value=\"www.absentmindedcoder.com\" />\r\n                    <input name=\"qs\" value=\"06oENya4ZG1YS6vOLJwpLiFdjG91ICN4yDSJrXbVF0DKzOvNFWK89mvvBUmxdRySBi0VGsWuayWZRNH6NGsVQueqK0HwzhvKtnSb3pkCfrUg2EYK99pxgI1ozwLlu8knU6cd_cz7YCej_veA3BPoxsrDsAJSXZZ_DeVeVJjeRzP1n8ZAarKQj1D_slsnr65n3QwIocd9HWN6778RBSgJoIGRxJJNitLIWinjvY57w3CUHxfSXnpTfvK5Muj4KmT6cQTLW1LYp3t1GAp8Sn2IAH,YT0zO2s9NDU.\" type=\"hidden\" />\r\n                    \r\n                    \r\n                    \r\n                </div>\r\n                <button name=\"bottom_SearchSubmit\" class=\"searchSubmit\" onclick=\"document.bottom_search.submit();\"></button>\r\n            </form>\r\n        </div><!-- /.searchPane -->\r\n    <div class=\"clear\"></div>\r\n    </div><!-- /.searchboxWrapper -->\r\n\
       </div><!-- /.searchbox -->\r\n\
       \r\n\
       </div><!-- /#stage-wrapper -->\r\n\
@@ -480,4 +437,31 @@
       \r\n\
       </body>\r\n\
       </html>"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.absentmindedcoder.com:80/feeds/posts/default?alt=rss&max-results=999
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx
+      date: 
+      - Sat, 07 May 2011 03:53:25 GMT
+      content-type: 
+      - text/html
+      transfer-encoding: 
+      - chunked
+      vary: 
+      - Accept-Encoding
+      expires: 
+      - Sat, 07 May 2011 03:53:24 GMT
+      cache-control: 
+      - no-cache
+    body: <html><head><meta http-equiv="refresh" content="0;url=http://search.consolidated.net/index.php?origURL=http://www.absentmindedcoder.com/feeds/posts/default"/></head><body><script>window.location="http://search.consolidated.net/index.php?origURL="+escape(window.location)+"&r="+escape(document.referrer);</script></body></html>
     http_version: "1.1"

@@ -11,10 +11,11 @@ class Notifier < ActionMailer::Base
          :subject => "Contact : #{@contact.subject}")
   end
 
-  def presentation_reminder_for(presentation)
-    @presentation = presentation
-    mail(:to => presentation.profile.email,
-         :subject => "Presentation Reminder")
+  def talk_reminder_for(talk)
+    @profile = talk.profile
+    @talk = talk
+    mail(:to => talk.profile.email,
+         :subject => "Talk Reminder")
   end
 
 end

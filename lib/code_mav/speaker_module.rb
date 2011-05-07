@@ -16,12 +16,6 @@ module CodeMav
       def create_speaker_profile
         self.speaker_profile = SpeakerProfile.new
       end
-      
-      def presentations
-        presentations = []
-        self.talks.each { |t| presentations.concat t.presentations }
-        return presentations
-      end
 
     end
   end

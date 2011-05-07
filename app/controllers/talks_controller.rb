@@ -1,5 +1,5 @@
 class TalksController < ApplicationController
-  before_filter :set_profile, :only => [:new, :create]
+  before_filter :set_profile, :only => [:new, :show, :create, :edit, :update]
   
   def index
     @talks = Talk.paginate(:page => params[:page], :per_page => 10, :order => 'created_on DESC')
@@ -24,7 +24,7 @@ class TalksController < ApplicationController
     if @talk.save
       @profile.save
       flash[:notice] = "#{@talk.title} added as one of your talks"
-      redirect_to @talk
+      redirect_to [@profile, @talk]
     else
       render :new
     end
@@ -38,7 +38,7 @@ class TalksController < ApplicationController
     @talk = Talk.find(params[:id])
     if @talk.update_attributes(params[:talk])
       flash[:notice] = "'#{@talk.title}' saved"
-      redirect_to @talk
+      redirect_to [@profile, @talk]
     else
       flash[:error] = "There was an error when trying to save your talk"
       render :edit
