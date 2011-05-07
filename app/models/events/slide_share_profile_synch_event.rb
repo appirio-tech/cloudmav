@@ -3,7 +3,7 @@ class SlideShareProfileSynchEvent < SynchEvent
 
   def synch
     response = SlideShare.get_slideshows_by_user(slide_share_profile.slide_share_username)
-    response["User"]["Slideshow"].each do |ss_talk|
+    get_talks(response).each do |ss_talk|
       create_talk(ss_talk) unless has_talk?(ss_talk)
     end
     slide_share_profile.url = "http://www.speakerrate.net/#{slide_share_profile.slide_share_username}"
@@ -12,8 +12,17 @@ class SlideShareProfileSynchEvent < SynchEvent
     slide_share_profile.save!
   end
 
+  def get_talks(response)
+    slideshow = response["User"]["Slideshow"]
+    if slideshow.is_a? Hash
+      return [slideshow]
+    else
+      return slideshow
+    end
+  end
+
   def has_talk?(ss_talk)
-    !profile.talks.where(:imported_id => ss_talk["ID"], :imported_from => "SlideShare").first.nil?
+    profile.talks.where(:imported_id => ss_talk["ID"], :imported_from => "SlideShare").any?
   end
   
   def create_talk(ss_talk)

@@ -1,0 +1,641 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1304746264&hash=8cdb5245080eecbd1a24ea79ea68c5c60faa72f5&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - "200"
+      x-runtime: 
+      - "21"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-xss-protection: 
+      - "0"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "2699"
+      date: 
+      - Sat, 07 May 2011 05:31:04 GMT
+      x-varnish: 
+      - "1599403758"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>1</Count>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=UKOEaEsVyYJVaa9UoA1jsuJfuys%3D&amp;Expires=1304746564&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1304746446&hash=d296b308a40e4be689064627eeb9f6be091ed9af&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - "200"
+      x-runtime: 
+      - "24"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-xss-protection: 
+      - "0"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "2699"
+      date: 
+      - Sat, 07 May 2011 05:34:07 GMT
+      x-varnish: 
+      - "1599421725"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>1</Count>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=hUJafrXujUTZMcVZxT19t9hM3kY%3D&amp;Expires=1304746747&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1304746568&hash=c0943cf94dd22b6dcf701d7062e66dd28ff8df06&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - "200"
+      x-runtime: 
+      - "17"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-xss-protection: 
+      - "0"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "2699"
+      date: 
+      - Sat, 07 May 2011 05:36:08 GMT
+      x-varnish: 
+      - "1599433956"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>1</Count>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=FQrdUk07XYFKGTGrN2h1AHp8Lm8%3D&amp;Expires=1304746868&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1304746633&hash=daf66bc320f5b0d60c1065b35c2eb2e108896313&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - "200"
+      x-runtime: 
+      - "26"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-xss-protection: 
+      - "0"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "2701"
+      date: 
+      - Sat, 07 May 2011 05:37:14 GMT
+      x-varnish: 
+      - "1599440344"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>1</Count>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=S%2BgNinOM21WVjBaS5awUBaAfY5w%3D&amp;Expires=1304746933&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1304746741&hash=8bf91fe77cae31d741e8cdd890a46d0156b0d229&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - "200"
+      x-runtime: 
+      - "16"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-xss-protection: 
+      - "0"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "2699"
+      date: 
+      - Sat, 07 May 2011 05:39:01 GMT
+      x-varnish: 
+      - "1599450550"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>1</Count>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=GZcwg1xXs4jcfLnZFUqCxL27mC0%3D&amp;Expires=1304747041&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1304746831&hash=01c4433aa9c72c7fc7abcdcc63939a098051f72c&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - "200"
+      x-runtime: 
+      - "23"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-xss-protection: 
+      - "0"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "2701"
+      date: 
+      - Sat, 07 May 2011 05:40:32 GMT
+      x-varnish: 
+      - "1599458432"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>1</Count>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=PYyNeT%2FyXq9WcBO8F0VL36hYwlk%3D&amp;Expires=1304747132&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1304746916&hash=80d369a0c036c6d008fab4de97fd10d42c378df0&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - "200"
+      x-runtime: 
+      - "20"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-xss-protection: 
+      - "0"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "2699"
+      date: 
+      - Sat, 07 May 2011 05:41:57 GMT
+      x-varnish: 
+      - "1599466085"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>1</Count>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=CHRT9tgPUT9o4tjGBv6WvfjR5bE%3D&amp;Expires=1304747217&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1304747038&hash=692a2823eb01b2dfb1614bb621dc8c214e637c94&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - "200"
+      x-runtime: 
+      - "17"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-xss-protection: 
+      - "0"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "2699"
+      date: 
+      - Sat, 07 May 2011 05:43:59 GMT
+      x-varnish: 
+      - "1599476644"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>1</Count>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=aaC8TI5GkZOObIBVFwoa99TBgfc%3D&amp;Expires=1304747339&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1304747206&hash=9103a5ef0e41626d05dde51093b3db6b7dcb1a46&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - "200"
+      x-runtime: 
+      - "34"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-xss-protection: 
+      - "0"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "2703"
+      date: 
+      - Sat, 07 May 2011 05:46:46 GMT
+      x-varnish: 
+      - "1599491720"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>1</Count>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=2lzK8F89HOPiBTT29%2Fx9JVT%2BVG0%3D&amp;Expires=1304747506&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1304747291&hash=ade3e48436bc2d88827b1d84a1c43304d7b62705&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - "200"
+      x-runtime: 
+      - "18"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-xss-protection: 
+      - "0"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "2699"
+      date: 
+      - Sat, 07 May 2011 05:48:11 GMT
+      x-varnish: 
+      - "1599499557"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>1</Count>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=obgpOVJHSjPcyhel1ZysOzAYCO8%3D&amp;Expires=1304747591&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"

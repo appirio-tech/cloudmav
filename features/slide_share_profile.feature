@@ -16,6 +16,14 @@ Feature: Slide Share Profile
     And I should learned "Syncing with your SlideShare Account"
     And I should have a slide count on my SlideShare profile
     
+  Scenario: Synch with account that has only 1 slide
+  
+    Given I am logged in
+    And there are guidances
+    When I synch my SlideShare account that has only 1 slide
+    Then I should have a SlideShare profile
+    And I should import my talks from SlideShare
+
   Scenario: Synching again
   
     Given I am logged in
