@@ -1,0 +1,58 @@
+
+$light_gray: #868686;
+$light_black: #202121;
+$shadow: #A8AAAA; 
+
+@mixin corners($radius: 5px) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;  
+}
+
+@mixin gradient($from, $to) {
+  /* gecko based browsers */
+  background: -moz-linear-gradient(top, $from, $to);
+
+  /* webkit based browsers */
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+}
+
+$ds_large: 3px;
+$ds_small: 1px;
+@mixin drop_shadow() {
+  -moz-box-shadow: $ds_large $ds_large $ds_small $shadow; /* Firefox 3.6 and earlier */
+  -webkit-box-shadow: $ds_large $ds_large $ds_small $shadow; /* Safari and Chrome */
+  box-shadow: $ds_large $ds_large $ds_small $shadow;
+}
+
+#backlog {
+  #backlog_items {
+
+    li {
+      float: left;
+      width: 130px;
+      height: 130px;
+      margin: 10px;
+      padding: 13px;
+    }
+
+    .backlog_item {
+      border: 1px solid $light_gray;
+      @include drop_shadow();
+      .title {
+        font-size: 16px;
+        line-height: 18px;
+      }
+      .description {
+        margin-top: 5px;
+        font-size: 12px;
+        line-height: 14px;
+        color: #444747;
+      }
+    }
+
+    #add_item {
+      border: 1px dotted $light_gray;
+    }
+  }
+
+}

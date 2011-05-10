@@ -2,6 +2,7 @@ class BacklogItemsController < ApplicationController
 
   def index
     @backlog_items = BacklogItem.all.order_by(:created_at.desc)
+    @events = ProfileEvent.public.order_by(:date.desc).paginate(:page => 1, :per_page => 10)
   end
 
   def new

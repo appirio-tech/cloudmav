@@ -1,12 +1,35 @@
-.grid_16
+- content_for :css do
+  = stylesheet_link_tag "backlog"
+  
+.grid_10
 
-  %h1 Backlog
+  #backlog
+    - if current_profile
+      .filter
+        %ul
+          %li Filter :
+          %li.active
+            = link_to "All", backlog_items_path(current_profile, :filter => "All"), :remote => true 
 
-  - if can? :create, BacklogItem
-    = link_to "add item", new_backlog_item_path
+    %ul#backlog_items
+      = render :partial => "backlog_items/backlog_item", :collection => @backlog_items, :as => :backlog_item
+      - if can? :create, BacklogItem
+        %li#add_item
+          = link_to (image_tag("add_backlog_item.png", :alt => "Add a Backlog item")), new_backlog_item_path
 
-  %ul#backlog
-    = render :partial => "backlog_items/backlog_item", :collection => @backlog_items, :as => :backlog_item
+
+.grid_6
+  #event_feed
+    - if current_profile
+      .filter
+        %ul
+          %li Filter :
+          %li.active
+            = link_to "All", profile_events_path(current_profile, :filter => "All"), :remote => true 
+
+    %ul.list#events
+      = render :partial => "events/event", :collection => @events, :as => :event
+      %li.event_load &nbsp; 
 
 .clear
 
