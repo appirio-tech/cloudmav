@@ -23,8 +23,13 @@ module CodeMav
         subject.following_bys.create(:subject => self)
       end
 
+      def unfollow!(subject)
+        self.following_for(subject).destroy
+        subject.following_by_for(self).destroy
+      end
+
       def follows?(subject)
-        !self.followings.select{|f| f.subject_id = subject.id }.first.nil?
+        !following_for(subject).nil?
       end
 
       def followees
@@ -35,8 +40,24 @@ module CodeMav
         self.following_bys.collect{|f| f.subject}
       end
 
+      def friends
+        followees.select{|p| p.follows?(self)}
+      end
+
       def follower?(subject)
-        !self.following_bys.select{|f| f.subject_id = subject.id }.first.nil?
+        !following_by_for(subject).nil?
+      end
+
+      def friend?(subject)
+        self.follows?(subject) && subject.follows?(self)
+      end
+
+      def following_by_for(subject)
+        self.following_bys.where(:subject_id => subject.id).first
+      end
+
+      def following_for(subject)
+        self.followings.where(:subject_id => subject.id).first
       end
 
     end

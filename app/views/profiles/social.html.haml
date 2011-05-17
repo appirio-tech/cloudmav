@@ -4,6 +4,9 @@
   
   #profile_content
     .grid_9
+      %ul#followings
+        = render :partial => "followings/following", :collection => @friends, :as => :profile
+
       &nbsp;
     .grid_6
       = render :partial => "shared/profile/twitter"

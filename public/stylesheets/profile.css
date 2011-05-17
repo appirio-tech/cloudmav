@@ -169,3 +169,39 @@ a[rel] {
   cursor: pointer;
   height: 35px;
   width: 35px; }
+
+#followings [data-type=following] {
+  width: 170px;
+  float: left;
+  margin-bottom: 7px;
+  margin-right: 3px; }
+#followings .following_pic {
+  float: left;
+  border: 1px solid #d6d6d6;
+  padding: 3px; }
+#followings .following_info {
+  float: left;
+  margin-left: 7px; }
+  #followings .following_info .following_username {
+    font-size: 13pt;
+    margin-bottom: 5px; }
+  #followings .following_info .following_points li {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    background: #eaeaea;
+    color: #818181;
+    float: left;
+    text-align: center;
+    padding: 3px;
+    margin-right: 3px;
+    margin-top: 3px; }
+    #followings .following_info .following_points li .points {
+      font-weight: bold;
+      font-size: 9pt; }
+    #followings .following_info .following_points li .description {
+      font-size: 7pt; }
+  #followings .following_info .following_points .stack_overflow {
+    width: 50px; }
+    #followings .following_info .following_points .stack_overflow img {
+      width: 20px;
+      float: left; }
