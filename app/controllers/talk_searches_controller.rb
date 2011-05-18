@@ -1,6 +1,7 @@
 class TalkSearchesController < ApplicationController
   
-  def new
+  def show
+    @talks = Talk.paginate(:page => params[:page], :per_page => 10)
   end
   
   def create

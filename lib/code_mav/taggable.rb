@@ -55,6 +55,11 @@ module CodeMav
         self.taggings.sort{|x,y| y.score <=> x.score}
       end
 
+      def top_tags(options = {})
+        count = options[:count] || 3
+        taggings_by_score.take(count)
+      end
+
     end
   end
 end

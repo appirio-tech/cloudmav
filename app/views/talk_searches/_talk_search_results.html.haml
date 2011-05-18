@@ -1,35 +1,23 @@
 
 - if @talks.empty?
-	No talks were found.
+  #no_results
+    No talks were found.
 - else
-	- @talks.each do |t|
-		.talk_search_result
-			.grid_2
-				.slide_pic
-					- if t.slides_thumbnail.nil?
-						= image_tag "no_slide_preview.png"
-					-else
-						= image_tag t.slides_thumbnail
-			.grid_8
-				.talk_title= link_to t.title, t
-				.talk_description= truncate(t.description, :length=>200)
-				.tags_section 
-					.tagged_as tagged as:
-					.tags
-						= t.tags_text
-			.grid_4
-				.talk_given_by
-					%p talk given by
-					.grid_1
-						.talk_given_by_pic
-							= image_tag t.profile.gravatar_url(:size => 50), :class => :photo
-					.grid_2
-						.talk_given_by_name
-							= t.profile.display_name
-						.talk_given_by_details
-							= render :partial => "shared/points", :locals => { :profile => t.profile }
-			- if t.presentations.any?
-				%p= "Presented #{pluralize t.presentations.count, 'time', 'times' }"
-			.clear
-		.clear
-		%hr
+  %ul.search_results
+    - @talks.each do |talk|
+      %li.talk_search_result
+        .talk_pic
+          - unless talk.slides_thumbnail.nil?
+            = image_tag talk.slides_thumbnail
+          - else
+            = image_tag "default_talk.png"
+        .talk_info
+          .talk_title= talk.title
+          .talk_description= truncate talk.description, :length => 200
+        .talk_author
+          .talk_profile_pic= image_tag talk.profile.gravatar_url(:size => 60)
+          .talk_profile_name= talk.profile.username
+
+        .clear
+
+

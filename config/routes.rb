@@ -41,8 +41,8 @@ Codemav::Application.routes.draw do
       get "stack_overflow"
     end
   end
-  resources :people_searches
-  resources :talk_searches
+
+  resource :talk_search
   resources :company_searches
   
   resources :companies

@@ -1,0 +1,13 @@
+= content_for :css do
+  = stylesheet_link_tag "talk_search" 
+
+
+.grid_16
+  #talk_search_form
+    = form_tag talk_search_path do |f|
+      = text_field_tag "search", "", :placeholder => "Search talks"
+      = submit_tag "Search", :disable_with => "Searching..."
+  #talk_search_results
+    = render :partial => "talk_search_results"
+
+.clear
