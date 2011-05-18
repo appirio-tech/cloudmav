@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
   before_filter :set_profile, :except => [:index, :search]
 
   def index
-    @profiles = Profile.all
+    @profiles = Profile.paginate :page => params[:page], :per_page => 10
   end
 
   def search
