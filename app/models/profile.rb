@@ -102,13 +102,8 @@ class Profile
     end
     
     def search(query, options = {})
-      coordinates = (options[:near].nil? || options[:near].blank?) ? nil : geocode(options[:near])
-
       search = Sunspot.new_search(Profile)
       search.build do
-        if coordinates
-          with(:coordinates).near(coordinates.first, coordinates.last, :precision => 2, :precision_factor => 2, :boost => 200)
-        end
         keywords query do
         end
       end

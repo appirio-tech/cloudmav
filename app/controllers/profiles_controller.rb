@@ -2,12 +2,12 @@ class ProfilesController < ApplicationController
   before_filter :set_profile, :except => [:index, :search]
 
   def index
+    @profiles = Profile.all
   end
 
   def search
-    search = params[:search] || ""
-    near = params[:near] || ""
-    @profiles = Profile.search(search, :near => near).results
+    @search = params[:search] || ""
+    @profiles = Profile.search(@search).results
     render :index
   end
   
