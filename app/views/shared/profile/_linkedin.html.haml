@@ -1,12 +1,17 @@
 .info_box
   .info_logo= link_to image_tag("linkedin_info_logo.png"), "http://www.linkedin.com"
   .info
-    - if @profile.linkedin_profile
-      = link_to "Go to my LinkedIn Profile", @profile.linkedin_profile.url
+    - if @linkedin_profile
+      = link_to "Go to my LinkedIn Profile", @linkedin_profile.url
+      %table
+        %tr
+          %td Last synced on
+          %td= show_date @linkedin_profile.last_synced
+      = link_to "Resync", new_profile_linkedin_profile_path(@profile)
     
     - else
       - if can? :set_linked_in_profile, @profile
         %p 
-          = link_to "Synch your LinkedIn profile", new_linkedin_profile_path(:username => @profile.username)
+          = link_to "Synch your LinkedIn profile", new_profile_linkedin_profile_path(@profile)
 .clear
 

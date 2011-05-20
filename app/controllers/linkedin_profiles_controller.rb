@@ -10,7 +10,7 @@ class LinkedinProfilesController < ApplicationController
       @profile.save
     end
     create_client
-    request_token = @client.request_token(:oauth_callback => callback_linkedin_profiles_url)
+    request_token = @client.request_token(:oauth_callback => callback_profile_linkedin_profiles_url)
     session[:rtoken] = request_token.token
     session[:rsecret] = request_token.secret
     session[:profile_id] = @profile.id

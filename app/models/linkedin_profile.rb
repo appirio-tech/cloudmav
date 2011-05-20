@@ -2,6 +2,7 @@ class LinkedinProfile
   include Mongoid::Document  
   
   field :url, :type => String
+  field :last_synced, :type => DateTime 
 
   referenced_in :profile, :inverse_of => :linkedin_profile
 
@@ -11,6 +12,7 @@ class LinkedinProfile
   end
 
   def synch_jobs!(client)
+    self.last_synced = DateTime.now
     jobs = get_jobs(client)
     jobs.each do |job|
       unless self.profile.jobs.where(:imported_id => job.imported_id).first
@@ -19,6 +21,7 @@ class LinkedinProfile
         profile.save
       end
     end
+    self.save
   end
 
   def get_job_from_position(position)

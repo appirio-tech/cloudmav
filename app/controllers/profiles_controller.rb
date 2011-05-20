@@ -25,6 +25,7 @@ class ProfilesController < ApplicationController
   
   def experience
     @tab = "experience"
+    @linkedin_profile = @profile.linkedin_profile
   end
 
   def writing
