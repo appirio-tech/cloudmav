@@ -1,0 +1,9 @@
+%li
+  - if @talk.slides?
+    %a{:rel => "#slides"}
+      = image_tag "talk/slides.png"
+    #slides.overlay
+      To download the slides click
+      = link_to "here", @talk.slides_url, :id => "download_link"
+  - else
+    = image_tag "talk/slides_off.png"

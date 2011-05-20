@@ -5,9 +5,6 @@ module CodeMav
         field :tags_text, :type => String
 
         references_many :taggings
-
-
-
       end
       
       receiver.send(:include, InstanceMethods)

@@ -1,42 +1,32 @@
+= content_for :css do
+  = stylesheet_link_tag "talk"
+
 #talk
-  .grid_16
-    %h2
-      .title
-        = @talk.title
-      .links
-        - if can? :edit, @talk
-          = link_to "edit", edit_profile_talk_path(@profile, @talk)
+  .grid_4
+    .talk_pic
+      - unless @talk.slides_thumbnail.nil?
+        = image_tag @talk.slides_thumbnail
+      - else
+        = image_tag "default_talk.png"
+    .clear
+    .talk_options
+      %ul
+        = render :partial => "slides"
+        = render :partial => "video"
+
+    .clear
+    .talk_author
+      %h3 talk given by
+      .talk_profile_pic= image_tag @talk.profile.gravatar_url(:size => 60)
+      .talk_profile_name= link_to @talk.profile.name, @talk.profile
+      .talk_profile_username= @talk.profile.username
+    &nbsp;
     
-    - unless @talk.slides_thumbnail.nil?
-      = image_tag @talk.slides_thumbnail
-    %p.author
-      talk given by 
-      = link_to @profile.display_name, profile_speaking_path(@profile)
-    %p.give_talk_again
-      - if @talk.willing_to_give_talk_again
-        Willing to give talk again!
-
-    - if @talk.video?
-      = video_html @talk.video_url
-
-    %p.download_link
-      - if @talk.slides_url
-        to download the slides click
-        = link_to "here", @talk.slides_url, :id => "download_link"
-
-    %p.slides_thumbnail
-      - if @talk.slides_thumbnail
-        = image_tag @talk.slides_thumbnail, :id => "slides_thumbnail"
-
-    %p.slideshow
-      - if @talk.slideshow_html
-        #slideshow
-          = @talk.slideshow_html.html_safe
-
-  .clear
-  .grid_10
-    %h3 Description
-    %p= @talk.description
-  .grid_6
+  .grid_12
+    %h2= @talk.title
+    - if can? :edit, @talk
+      = link_to "edit", edit_profile_talk_path(@profile, @talk)
+    %p.talk_description= @talk.description
     = render :partial => "shared/tags", :locals => { :taggable => @talk }
-  .clear  
+    
+  .clear

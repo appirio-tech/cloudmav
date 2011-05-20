@@ -12,12 +12,14 @@
           - else
             = image_tag "default_talk.png"
         .talk_info
-          .talk_title= talk.title
+          .talk_title= link_to talk.title, profile_talk_path(talk.profile, talk)
           .talk_description= truncate talk.description, :length => 200
+          = render :partial => "shared/simple_tags", :locals => { :taggable => talk }
         .talk_author
           .talk_profile_pic= image_tag talk.profile.gravatar_url(:size => 60)
           .talk_profile_name= talk.profile.username
 
         .clear
+  = will_paginate @talks
 
 

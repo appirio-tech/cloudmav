@@ -45,6 +45,10 @@ class Talk
     end
   end
   
+  def slides?
+    !slides_url.nil?
+  end
+
   def video?
     !video_url.nil?
   end
