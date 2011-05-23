@@ -1,7 +1,7 @@
-class SlideShareProfileSynchEvent < SynchEvent
+class SlideShareProfileSyncEvent < SyncEvent
   referenced_in :slide_share_profile, :inverse_of => :events
 
-  def synch
+  def sync
     response = SlideShare.get_slideshows_by_user(slide_share_profile.slide_share_username)
     talks = get_talks(response)
     talks.each do |ss_talk|

@@ -1,8 +1,8 @@
-class StackOverflowProfileSynchEvent < SynchEvent
+class StackOverflowProfileSyncEvent < SyncEvent
 
   referenced_in :stack_overflow_profile, :inverse_of => :events
 
-  def synch
+  def sync
     return if stack_overflow_profile.stack_overflow_id.nil?
     
     user = StackOverflow.get_user(stack_overflow_profile.stack_overflow_id)
@@ -17,8 +17,8 @@ class StackOverflowProfileSynchEvent < SynchEvent
     end
     stack_overflow_profile.stack_overflow_tags = so_tags.to_yaml
 
-    synch_questions
-    synch_answers
+    sync_questions
+    sync_answers
 
     stack_overflow_profile.profile.save!
     stack_overflow_profile.save!
@@ -32,7 +32,7 @@ class StackOverflowProfileSynchEvent < SynchEvent
     end
   end
 
-  def synch_questions
+  def sync_questions
     questions = StackOverflow.get_user_questions(stack_overflow_profile.stack_overflow_id)
 
     questions.each do |so_question|
@@ -48,7 +48,7 @@ class StackOverflowProfileSynchEvent < SynchEvent
     end
   end
 
-  def synch_answers
+  def sync_answers
     answers = StackOverflow.get_user_answers(stack_overflow_profile.stack_overflow_id)
   
     answers.each do |so_answer|

@@ -1,4 +1,4 @@
-When /^I synch my SpeakerRate account$/ do
+When /^I sync my SpeakerRate account$/ do
   VCR.use_cassette('speaker_rate', :record => :new_episodes) do
     visit new_profile_speaker_rate_profile_path(@profile)
     fill_in "speaker_rate_profile_speaker_rate_id", :with => '10082'
@@ -16,7 +16,7 @@ Then /^I should have my talks from SpeakerRate$/ do
   profile.talks.where(:title => "Virtual Brown Bag").count.should == 1
 end
 
-Given /^I synched my SpeakerRate account$/ do
+Given /^I synced my SpeakerRate account$/ do
   VCR.use_cassette('speaker_rate', :record => :new_episodes) do
     visit new_profile_speaker_rate_profile_path(@profile)
     fill_in "speaker_rate_profile_speaker_rate_id", :with => '10082'

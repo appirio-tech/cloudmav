@@ -27,7 +27,7 @@ class LinkedinProfilesController < ApplicationController
   def confirm
     create_client
     authorize_linked_in
-    @profile.linkedin_profile.synch_jobs!(@client)
+    @profile.linkedin_profile.sync_jobs!(@client)
     redirect_to profile_experience_path(@profile)
   end
 

@@ -1,14 +1,14 @@
 module CodeMav
-  module Synchable
+  module Syncable
     def self.included(receiver)
       receiver.send(:include, InstanceMethods)
     end
     
     module InstanceMethods
 
-      def synch!
+      def sync!
         save
-        event_name = "#{self.class.to_s}SynchEvent"
+        event_name = "#{self.class.to_s}SyncEvent"
         if Object.const_defined?(event_name)
           event = Object.const_get(event_name).new
           event.subject_class_name = self.class.to_s

@@ -8,8 +8,8 @@ class BitBucketProfile
   
   referenced_in :profile
   
-  def synch!
-    BitBucketService.synch(self)
+  def sync!
+    BitBucketService.sync(self)
     save!
   end
   

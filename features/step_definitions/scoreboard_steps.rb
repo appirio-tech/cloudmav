@@ -4,8 +4,7 @@ Given /^there are users with StackOverflow profiles$/ do
     user.profile.stack_overflow_profile = StackOverflowProfile.new(:reputation => 10 * i)
     user.profile.stack_overflow_profile.save
     user.profile.save!
-    user.profile.stack_overflow_profile.synch!
-    # puts "profile is #{so.profile.stack_overflow_profile.inspect}"
+    user.profile.stack_overflow_profile.sync!
   end
 end
 

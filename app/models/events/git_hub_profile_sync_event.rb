@@ -1,10 +1,10 @@
 require 'net/http'
 require 'json'
 
-class GitHubProfileSynchEvent < SynchEvent
+class GitHubProfileSyncEvent < SyncEvent
   referenced_in :git_hub_profile, :inverse_of => :events
 
-  def do_work
+  def sync
     url = URI.parse("http://github.com/api/v2/json/user/show/#{git_hub_profile.username}")
     response = Net::HTTP.get_response url
     result = JSON.parse(response.body)

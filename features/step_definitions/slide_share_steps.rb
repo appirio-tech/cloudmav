@@ -1,4 +1,4 @@
-When /^I synch my SlideShare account$/ do
+When /^I sync my SlideShare account$/ do
   VCR.use_cassette("slide_share", :record => :new_episodes) do
     visit new_profile_slide_share_profile_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
@@ -6,7 +6,7 @@ When /^I synch my SlideShare account$/ do
   end
 end
 
-When /^I synch my SlideShare account that has only (\d+) slide$/ do |num|
+When /^I sync my SlideShare account that has only (\d+) slide$/ do |num|
   VCR.use_cassette("slide_share one_slide", :record => :new_episodes) do
     visit new_profile_slide_share_profile_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => 'togakangaroo'
@@ -19,7 +19,7 @@ Then /^I should have a SlideShare profile$/ do
   profile.slide_share_profile.should_not be_nil
 end
 
-Given /^I have synched my SlideShare account$/ do
+Given /^I have synced my SlideShare account$/ do
   VCR.use_cassette("slide_share", :record => :new_episodes) do
     visit new_profile_slide_share_profile_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
@@ -45,7 +45,7 @@ Given /^the other user has a SlideShare profile$/ do
   VCR.use_cassette('other slide_share ', :record => :new_episodes) do
     Factory.create(:slide_share_profile, :slide_share_username => "rookieone", :profile => @other_user.profile)
     @other_user.profile.save
-    User.find(@other_user.id).profile.slide_share_profile.synch!
+    User.find(@other_user.id).profile.slide_share_profile.sync!
   end
 end
 

@@ -2,7 +2,7 @@ class SpeakerRateProfile
   include Mongoid::Document
   include Mongoid::Timestamps
   include CodeMav::Eventable
-  include CodeMav::Synchable
+  include CodeMav::Syncable
   
   field :speaker_rate_id
   field :url

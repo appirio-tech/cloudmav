@@ -10,7 +10,7 @@ class SpeakerRateProfilesController < ApplicationController
     authorize! :set_speaker_rate_profile, @profile
     @speaker_rate_profile = SpeakerRateProfile.new(params[:speaker_rate_profile])
     @speaker_rate_profile.profile = @profile
-    @speaker_rate_profile.synch!
+    @speaker_rate_profile.sync!
         
     redirect_to profile_speaking_path(@profile)
   end

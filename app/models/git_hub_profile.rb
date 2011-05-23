@@ -2,7 +2,7 @@ class GitHubProfile
   include Mongoid::Document
   include CodeMav::Eventable
   include CodeMav::Taggable
-  include CodeMav::Synchable
+  include CodeMav::Syncable
   
   field :git_hub_id
   field :username

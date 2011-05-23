@@ -10,7 +10,7 @@ class StackOverflowProfilesController < ApplicationController
     authorize! :set_stack_overflow_profile, @profile
     @stack_overflow_profile = StackOverflowProfile.new(params[:stack_overflow_profile])
     @stack_overflow_profile.profile = @profile
-    @stack_overflow_profile.synch!
+    @stack_overflow_profile.sync!
         
     redirect_to profile_code_path(@profile)
   end
@@ -24,7 +24,7 @@ class StackOverflowProfilesController < ApplicationController
     authorize! :set_stack_overflow_profile, @profile
     
     if @profile.stack_overflow_profile.update_attributes(params[:stack_overflow_profile])
-      @profile.stack_overflow_profile.synch!
+      @profile.stack_overflow_profile.sync!
       redirect_to profile_code_path(@profile)
     else
       render :edit

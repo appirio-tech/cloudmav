@@ -1,7 +1,7 @@
-class SpeakerRateProfileSynchEvent < SynchEvent
+class SpeakerRateProfileSyncEvent < SyncEvent
   referenced_in :speaker_rate_profile, :inverse_of => :events
 
-  def synch
+  def sync
     speaker = SpeakerRate.get_speaker(speaker_rate_profile.speaker_rate_id)
     
     speaker_rate_profile.rating = speaker["rating"]

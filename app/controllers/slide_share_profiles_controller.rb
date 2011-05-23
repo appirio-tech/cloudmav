@@ -10,7 +10,7 @@ class SlideShareProfilesController < ApplicationController
     authorize! :set_slide_share_profile, @profile
     @slide_share_profile = SlideShareProfile.new(params[:slide_share_profile])
     @slide_share_profile.profile = @profile
-    @slide_share_profile.synch!
+    @slide_share_profile.sync!
         
     redirect_to profile_speaking_path(@profile)
   end

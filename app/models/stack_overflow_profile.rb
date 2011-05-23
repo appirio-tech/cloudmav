@@ -2,7 +2,7 @@ class StackOverflowProfile
   include Mongoid::Document
   include CodeMav::Taggable
   include CodeMav::Eventable
-  include CodeMav::Synchable
+  include CodeMav::Syncable
   
   field :stack_overflow_id
   field :reputation, :type => Integer, :default => 0

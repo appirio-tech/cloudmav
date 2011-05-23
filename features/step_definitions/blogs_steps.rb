@@ -1,19 +1,17 @@
 When /^I add a blog$/ do
   @blog = Factory.build(:blog)
-  visit new_blog_path(:username => @profile.username)
+  visit profile_writing_path(@profile)
 
-  VCR.use_cassette("blog", :record => :all) do
-    fill_in "blog_title", :with => @blog.title
-    fill_in "blog_url", :with => "www.absentmindedcoder.com"
-    select "Blogger", :from => "blog_type"
+  VCR.use_cassette("blog", :record => :new_episodes) do
+    fill_in "blog_rss", :with => "http://www.theabsentmindedcoder.com/feeds/posts/default?alt=rss"
     click_button "Add"
+    And "show me the page"
   end
 end
 
 Then /^the blog should be added to my profile$/ do
-  profile = User.find(@user.id).profile
-  Blog.where(:title => @blog.title).first.should_not be_nil
-  profile.blogs.select{ |b| b.title == @blog.title }.first.should_not be_nil
+  profile = Profile.find(@profile.id)
+  profile.blogs.first.should_not be_nil
 end
 
 Given /^I have a blog$/ do

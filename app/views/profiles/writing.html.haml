@@ -24,7 +24,10 @@
 
     .grid_6
       - if can? :add_blog, @profile
-        = link_to "Add Blog", new_blog_path(:username => @profile.username), :class => "button"
+        %a{:rel => "#add_blog"} Add Blog
+        #add_blog.overlay
+          - @blog = Blog.new
+          = render :partial => "blogs/form", :locals => { :action_text => "Add", :disable_text => "Adding..." }
       - @profile.blogs.each do |b|
         .info_box
           .info_logo= b.title

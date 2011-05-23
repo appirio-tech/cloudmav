@@ -75,20 +75,20 @@ class Profile
     return result
   end
   
-  def synch!
-    stack_overflow_profile.synch! unless stack_overflow_profile.nil?
-    git_hub_profile.synch! unless git_hub_profile.nil?
-    speaker_rate_profile.synch! unless speaker_rate_profile.nil?
-    slide_share_profile.synch! unless slide_share_profile.nil?
+  def sync!
+    stack_overflow_profile.sync! unless stack_overflow_profile.nil?
+    git_hub_profile.sync! unless git_hub_profile.nil?
+    speaker_rate_profile.sync! unless speaker_rate_profile.nil?
+    slide_share_profile.sync! unless slide_share_profile.nil?
   end
   
   class << self
-    def synch_all!
+    def sync_all!
       Profile.all.each do |p|
         begin
-          p.synch!
+          p.sync!
           rescue
-            puts "ERROR on synching #{p.display_name}'s profile"
+            puts "ERROR on syncing #{p.display_name}'s profile"
         end
       end
     end

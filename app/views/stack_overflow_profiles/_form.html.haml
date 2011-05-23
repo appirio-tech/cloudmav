@@ -1,6 +1,6 @@
 %p You can find your StackOverflow id by looking at the url for your profile.
 = image_tag "stack_overflow_find_id.png", :class => :photo
-%p Just go to StackOverflow, find your id, and enter it here. We can then synch your StackOverflow profile with your account.
+%p Just go to StackOverflow, find your id, and enter it here. We can then sync your StackOverflow profile with your account.
   
 = form_for [@profile, @stack_overflow_profile] do |f|
   .label= f.label :stack_overflow_id, "StackOverflow Id"

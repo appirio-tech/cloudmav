@@ -20,8 +20,8 @@
           - @git_hub_profile = GitHubProfile.new
           %p{:id => :add_git_hub_section} 
             Do you have a GitHub account? 
-            %a{:rel => "#synch_git_hub"} Yes
-          #synch_git_hub.overlay
+            %a{:rel => "#sync_git_hub"} Yes
+          #sync_git_hub.overlay
             = render :partial => "git_hub_profiles/form"
 
   .clear

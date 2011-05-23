@@ -1,4 +1,4 @@
-When /^I synch my Twitter account$/ do
+When /^I sync my Twitter account$/ do
   VCR.use_cassette("twitter", :record => :new_episodes) do
     visit new_profile_twitter_profile_path(@profile)
     fill_in "twitter_profile_username", :with => 'rookieone'

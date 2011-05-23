@@ -1,7 +1,7 @@
 class TwitterProfile
   include Mongoid::Document
   include CodeMav::Eventable
-  include CodeMav::Synchable
+  include CodeMav::Syncable
 
   field :username, :type => String
   field :url, :type => String

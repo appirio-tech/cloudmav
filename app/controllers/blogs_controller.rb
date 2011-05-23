@@ -13,15 +13,15 @@ class BlogsController < ApplicationController
   
   def create
     authorize! :add_blog, @profile
-    @blog = Blog.new(params[:blog])
-    @blog.blog_type = params[:blog_type]
-    
-    @profile.blogs << @blog
+    @blog = @profile.blogs.build(params[:blog]) 
+    puts "save blog"
     if @blog.save
+      puts "save worked"
       @blog.sync!
       @profile.save
       redirect_to @blog
     else
+      puts "oh no!"
       render :new
     end
   end  
@@ -43,8 +43,4 @@ class BlogsController < ApplicationController
     end
   end
   
-  protected
-    def set_profile
-      @profile = Profile.by_username(params[:username]).first
-    end
 end

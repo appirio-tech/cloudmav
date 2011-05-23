@@ -1,8 +1,8 @@
-class TwitterProfileSynchEvent < SynchEvent
+class TwitterProfileSyncEvent < SyncEvent
 
   referenced_in :twitter_profile, :inverse_of => :events
 
-  def synch
+  def sync
     return if twitter_profile.username.nil?
 
     twitter_info = Twitter.user(twitter_profile.username)

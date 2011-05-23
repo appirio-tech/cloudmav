@@ -3,7 +3,7 @@ require 'json'
 
 class GitHubService
   
-  def self.synch(profile)
+  def self.sync(profile)
     url = URI.parse("http://github.com/api/v2/json/user/show/#{profile.username}")
     
     response = Net::HTTP.get_response url

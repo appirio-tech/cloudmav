@@ -1,7 +1,7 @@
 
 class TwitterService
   
-  def self.synch(profile)
+  def self.sync(profile)
     client = Grackle::Client.new
     response = client.users.show? :screen_name=> profile.username
 

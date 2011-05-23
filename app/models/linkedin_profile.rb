@@ -11,7 +11,7 @@ class LinkedinProfile
     return positions.map{|p| get_job_from_position(p)}
   end
 
-  def synch_jobs!(client)
+  def sync_jobs!(client)
     self.last_synced = DateTime.now
     jobs = get_jobs(client)
     jobs.each do |job|

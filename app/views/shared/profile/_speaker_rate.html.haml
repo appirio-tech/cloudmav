@@ -13,7 +13,7 @@
           - @speaker_rate_profile = SpeakerRateProfile.new
           %p 
             Do you have a Speaker Rate account? 
-            %a{:rel => "#synch_speaker_rate"} Yes
-      #synch_speaker_rate.overlay
+            %a{:rel => "#sync_speaker_rate"} Yes
+      #sync_speaker_rate.overlay
         = render :partial => "speaker_rate_profiles/form"
   .clear

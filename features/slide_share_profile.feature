@@ -1,14 +1,14 @@
 Feature: Slide Share Profile 
 
   As a user
-  I want to synch with my Slide Share account
+  I want to sync with my Slide Share account
   So that others can see my slides and my talks
   
-  Scenario: Synch with account
+  Scenario: Sync with account
   
     Given I am logged in
     And there are guidances
-    When I synch my SlideShare account
+    When I sync my SlideShare account
     Then I should have a SlideShare profile
     And I should import my talks from SlideShare
     And I should be awarded the "Sliding along" badge
@@ -16,20 +16,20 @@ Feature: Slide Share Profile
     And I should learned "Syncing with your SlideShare Account"
     And I should have a slide count on my SlideShare profile
     
-  Scenario: Synch with account that has only 1 slide
+  Scenario: Sync with account that has only 1 slide
   
     Given I am logged in
     And there are guidances
-    When I synch my SlideShare account that has only 1 slide
+    When I sync my SlideShare account that has only 1 slide
     Then I should have a SlideShare profile
     And I should import my talks from SlideShare
 
-  Scenario: Synching again
+  Scenario: Syncing again
   
     Given I am logged in
     And there are guidances
-    And I have synched my SlideShare account
-    When I synch my SlideShare account
+    And I have synced my SlideShare account
+    When I sync my SlideShare account
     Then I should not have duplicate talks from SlideShare
 
   Scenario: Show Talk

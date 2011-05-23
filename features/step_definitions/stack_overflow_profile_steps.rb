@@ -1,4 +1,4 @@
-When /^I synch my StackOverflow account$/ do
+When /^I sync my StackOverflow account$/ do
   VCR.use_cassette("stack_overflow", :record => :all) do
     visit new_profile_stack_overflow_profile_path(@profile)
     fill_in "stack_overflow_profile_stack_overflow_id", :with => '60336'

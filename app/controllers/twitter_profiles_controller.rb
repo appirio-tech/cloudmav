@@ -10,7 +10,7 @@ class TwitterProfilesController < ApplicationController
     authorize! :set_twitter_profile, @profile
     @twitter_profile = TwitterProfile.new(params[:twitter_profile])
     @twitter_profile.profile = @profile
-    @twitter_profile.synch!
+    @twitter_profile.sync!
         
     redirect_to profile_social_path(@profile)
   end
@@ -24,7 +24,7 @@ class TwitterProfilesController < ApplicationController
     authorize! :set_twitter_profile, @profile
     
     if @profile.twitter_profile.update_attributes(params[:twitter_profile])
-      @profile.twitter_profile.synch!
+      @profile.twitter_profile.sync!
       redirect_to profile_social_path(@profile)
     else
       render :edit

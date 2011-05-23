@@ -4,7 +4,7 @@ require 'json'
 
 class BitBucketService
   
-  def self.synch(profile)
+  def self.sync(profile)
     # url = URI.parse("https://api.bitbucket.org/1.0/users/#{profile.username}")
     # 
     # response = Net::HTTP.get_response url

@@ -4,7 +4,7 @@
       = link_to image_tag("stack_over_flow_info_logo.png"), "http://www.stackoverflow.com"
       -if can?(:set_stack_overflow_profile, @profile) && @stack_overflow_profile
         .edit
-          %a{:rel => "#synch_stack_overflow"} edit
+          %a{:rel => "#sync_stack_overflow"} edit
     .info
       - if @stack_overflow_profile
         = link_to "Go to my StackOverflow Profile", @stack_overflow_profile.url, :target => "_blank"
@@ -21,7 +21,7 @@
           - @stack_overflow_profile = StackOverflowProfile.new
           %p{:id => :add_stack_overflow_section} 
             Do you have a StackOverflow account? 
-            %a{:rel => "#synch_stack_overflow"} Yes
-      #synch_stack_overflow.overlay
+            %a{:rel => "#sync_stack_overflow"} Yes
+      #sync_stack_overflow.overlay
         = render :partial => "stack_overflow_profiles/form"
   .clear
