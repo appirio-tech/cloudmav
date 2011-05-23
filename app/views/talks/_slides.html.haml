@@ -3,6 +3,9 @@
     %a{:rel => "#slides"}
       = image_tag "talk/slides.png"
     #slides.overlay
+      - unless @talk.slideshow_html.blank?
+        .slideshow
+          = @talk.slideshow_html
       To download the slides click
       = link_to "here", @talk.slides_url, :id => "download_link"
   - else

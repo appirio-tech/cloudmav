@@ -64,11 +64,11 @@ Then /^I should be able to download the slides$/ do
 end
 
 Then /^I should see a preview of the slides$/ do
-  page.should have_css("#slides_thumbnail")
+  page.should have_css(".talk_pic img")
 end
 
 Then /^I should see a slideshow$/ do
-  page.should have_css("#slideshow")
+  page.should have_css(".slideshow")
 end
 
 Then /^I should have a slide count on my SlideShare profile$/ do
