@@ -5,7 +5,6 @@ When /^I add a blog$/ do
   VCR.use_cassette("blog", :record => :new_episodes) do
     fill_in "blog_rss", :with => "http://www.theabsentmindedcoder.com/feeds/posts/default?alt=rss"
     click_button "Add"
-    And "show me the page"
   end
 end
 
@@ -15,7 +14,7 @@ Then /^the blog should be added to my profile$/ do
 end
 
 Given /^I have a blog$/ do
-  @blog = Factory.build(:blog)
+  @blog = Factory.build(:blog, :rss => "http://www.theabsentmindedcoder.com/feeds/posts/default?alt=rss")
   @profile.blogs << @blog
   @blog.save!
   @profile.save!

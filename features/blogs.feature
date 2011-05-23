@@ -16,8 +16,3 @@ Feature: Blogs
 		# And I should have 10 writer points
 		And I should learned "Adding a blog to your profile"
 		
-	Scenario: Add Post
-	
-		Given I have a blog 
-		When I add a post to my blog
-		Then the post should be added to my blog

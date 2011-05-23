@@ -14,12 +14,11 @@ class BlogsController < ApplicationController
   def create
     authorize! :add_blog, @profile
     @blog = @profile.blogs.build(params[:blog]) 
-    puts "save blog"
+
     if @blog.save
-      puts "save worked"
       @blog.sync!
       @profile.save
-      redirect_to @blog
+      redirect_to [@profile, @blog]
     else
       puts "oh no!"
       render :new
@@ -37,7 +36,7 @@ class BlogsController < ApplicationController
 
     if @blog.update_attributes(params[:blog])
       @blog.sync!
-      redirect_to @blog
+      redirect_to [@profile, @blog]
     else
       render :edit
     end
