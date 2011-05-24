@@ -18,9 +18,8 @@ class BlogsController < ApplicationController
     if @blog.save
       @blog.sync!
       @profile.save
-      redirect_to [@profile, @blog]
+      redirect_to profile_writing_path(@profile)
     else
-      puts "oh no!"
       render :new
     end
   end  
@@ -36,7 +35,7 @@ class BlogsController < ApplicationController
 
     if @blog.update_attributes(params[:blog])
       @blog.sync!
-      redirect_to [@profile, @blog]
+      redirect_to profile_writing_path(@profile)
     else
       render :edit
     end

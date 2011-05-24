@@ -13,13 +13,11 @@
     .clear
     .grid_9
       %h2 Blog posts
-      = will_paginate @blog_posts
       %ul.list
         - @blog_posts.each do |p|
           %li
             .item_title= link_to p.title, p.url
             %p= show_date p.written_on
-      = page_entries_info @blog_posts
       &nbsp;
 
     .grid_6
@@ -33,7 +31,7 @@
           .info_logo= b.title
           .info
             - if can? :edit, b
-              .item_link= link_to "edit", edit_blog_path(b)
+              .item_link= link_to "edit", edit_profile_blog_path(@profile, b)
         .clear
 
     .clear

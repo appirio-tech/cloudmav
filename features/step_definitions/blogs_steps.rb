@@ -22,7 +22,7 @@ end
 
 When /^I add a post to my blog$/ do
   @post = Factory.build(:post)
-  visit new_blog_post_path(@blog)
+  visit new_profile_blog_post_path(@blog)
   fill_in "post_title", :with => @post.title
   fill_in "written_on", :with => @post.written_on
   click_button "Add"
