@@ -24,6 +24,8 @@
   = csrf_meta_tag
   = favicon_link_tag 'codemav_icon.png', :rel => 'apple-touch-icon', :type => 'image/png'
   = render :partial => "shared/get_satisfaction"
+  - if Rails.env.production?
+    = render :partial => "shared/analytics"
   = yield :head
 %body
   #header
