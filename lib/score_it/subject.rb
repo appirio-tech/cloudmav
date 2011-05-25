@@ -3,6 +3,9 @@ module ScoreIt
     def self.included(receiver)
       receiver.class_eval do
         field :total_score, :type => Integer, :default => 0
+
+        scope :order_by_score, lambda { order_by([:total_score, :desc]) }
+
         embeds_many :scorings
       end
 
