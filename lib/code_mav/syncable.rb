@@ -1,10 +1,18 @@
 module CodeMav
   module Syncable
     def self.included(receiver)
+      receiver.class_eval do
+        field :last_synced_date, :type => DateTime
+      end
+
       receiver.send(:include, InstanceMethods)
     end
     
     module InstanceMethods
+
+      def synced?
+        !self.last_synced_date.nil?
+      end
 
       def sync!
         save

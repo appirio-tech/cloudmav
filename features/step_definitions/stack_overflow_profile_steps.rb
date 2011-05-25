@@ -54,7 +54,7 @@ end
 
 Given /^the other user has a StackOverflow profile$/ do
   VCR.use_cassette("other stackoverflow", :record => :all) do
-    Factory.create(:stack_overflow_profile, :stack_overflow_id => "60336", :profile => @other_user.profile)
+    Factory.create(:stack_overflow_profile, :stack_overflow_id => "60336", :profile => @other_user.profile, :last_synced_date => DateTime.now)
     @other_user.profile.save
   end
 end

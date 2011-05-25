@@ -7,14 +7,17 @@
           %a{:rel => "#sync_stack_overflow"} edit
     .info
       - if @stack_overflow_profile
-        = link_to "Go to my StackOverflow Profile", @stack_overflow_profile.url, :target => "_blank"
-        %table
-          %tr
-            %td Reputation
-            %td= @stack_overflow_profile.reputation
-          %tr
-            %td Badges
-            %td= stack_overflow_badges(@stack_overflow_profile)
+        - if !@stack_overflow_profile.synced?
+          %p We are still processing. Hit refresh.
+        - else
+          = link_to "Go to my StackOverflow Profile", @stack_overflow_profile.url, :target => "_blank"
+          %table
+            %tr
+              %td Reputation
+              %td= @stack_overflow_profile.reputation
+            %tr
+              %td Badges
+              %td= stack_overflow_badges(@stack_overflow_profile)
         
       - else
         - if can? :set_stack_overflow_profile, @profile

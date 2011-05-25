@@ -10,6 +10,8 @@ class Event
   field :subject_id, :type => String
   field :subject_class_name, :type => String
   field :date, :type => DateTime
+  field :processed_date, :type => DateTime
+  field :error_message, :type => String
 
   scope :pending, lambda { where(:in_process => false, :completed => false) }
   scope :public, lambda { where(:is_public => true) }
@@ -30,6 +32,7 @@ class Event
   end
 
   def perform
+    begin
     self.in_process = true
     self.date = self.created_at if self.date.nil?
     self.save
@@ -38,7 +41,12 @@ class Event
         
     self.completed = true
     self.in_process = false
+    self.processed_date = DateTime.now
     self.save
+    rescue => detail
+      self.error_message = detail.message
+      self.save
+    end
   end
 
   def add_to_jobs

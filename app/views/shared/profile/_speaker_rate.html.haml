@@ -3,11 +3,14 @@
     .info_logo= link_to image_tag("speaker_rate_info_logo.png"), "http://www.speakerrate.com"
     .info
       - if @speaker_rate_profile
-        = link_to "Go to my Speaker Rate Profile", @speaker_rate_profile.url, :target => "_blank"
-        %table
-          %tr
-            %td Rating
-            %td= @speaker_rate_profile.rating
+        - if !@speaker_rate_profile.synced?
+          %p We are still processing. Hit refresh.
+        - else
+          = link_to "Go to my Speaker Rate Profile", @speaker_rate_profile.url, :target => "_blank"
+          %table
+            %tr
+              %td Rating
+              %td= @speaker_rate_profile.rating
       -else
         - if can? :set_speaker_rate_profile, @profile
           - @speaker_rate_profile = SpeakerRateProfile.new

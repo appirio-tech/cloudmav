@@ -3,17 +3,20 @@
     .info_logo= link_to image_tag("git_hub_info_logo.png"), "http://www.github.com"
     .info
       - if @git_hub_profile
-        = link_to "Go to my GitHub Profile", @git_hub_profile.url, :target => "_blank"
-        %table
-          %tr
-            %td Repositories
-            %td= @git_hub_profile.repository_count
-          %tr
-            %td Gists
-            %td= @git_hub_profile.gist_count
-          %tr
-            %td Followers
-            %td= @git_hub_profile.followers_count
+        - if !@git_hub_profile.synced?
+          %p We are still processing. Hit refresh.
+        - else
+          = link_to "Go to my GitHub Profile", @git_hub_profile.url, :target => "_blank"
+          %table
+            %tr
+              %td Repositories
+              %td= @git_hub_profile.repository_count
+            %tr
+              %td Gists
+              %td= @git_hub_profile.gist_count
+            %tr
+              %td Followers
+              %td= @git_hub_profile.followers_count
 
       - else
         - if can? :set_git_hub_profile, @profile

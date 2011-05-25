@@ -3,11 +3,14 @@
     .info_logo= link_to image_tag("slide_share_info_logo.png"), "http://www.slideshare.net"
     .info
       - if @slide_share_profile
-        = link_to "Go to my Slide Share Profile", @profile.slide_share_profile.url, :target => "_blank"
-        %table
-          %tr
-            %td Slides count
-            %td= @slide_share_profile.slides_count 
+        - if !@slide_share_profile.synced?
+          %p We are still processing. Hit refresh.
+        - else
+          = link_to "Go to my Slide Share Profile", @profile.slide_share_profile.url, :target => "_blank"
+          %table
+            %tr
+              %td Slides count
+              %td= @slide_share_profile.slides_count 
       - else
         - if can? :set_slide_share_profile, @profile
           - @slide_share_profile = SlideShareProfile.new

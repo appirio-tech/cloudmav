@@ -10,6 +10,7 @@ Feature: Speaker Rate Profile
 		And there are guidances
 		When I sync my SpeakerRate account
 		Then I should have a SpeakerRate profile
+    And my SpeakerRate profile should be synced
 		And I should have my talks from SpeakerRate
 		And I should be awarded the "I need validation" badge
 		And I should have 30 speaker points

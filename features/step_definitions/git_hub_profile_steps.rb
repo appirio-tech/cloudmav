@@ -34,7 +34,7 @@ end
 
 Given /^the other user has a GitHub profile$/ do
   VCR.use_cassette("other github", :record => :new_episodes) do
-    Factory.create(:git_hub_profile, :username => "rookieone", :profile => @other_user.profile)
+    Factory.create(:git_hub_profile, :username => "rookieone", :profile => @other_user.profile, :last_synced_date => DateTime.now)
     @other_user.profile.save
   end
 end

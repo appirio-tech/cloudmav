@@ -48,3 +48,8 @@ Then /^I should see their SpeakerRate profile$/ do
   page.has_selector?("#speaker_rate_info").should == true
 end
 
+Then /^my SpeakerRate profile should be synced$/ do
+  profile = Profile.find(@profile.id)
+  profile.speaker_rate_profile.should be_synced
+end
+

@@ -3,6 +3,9 @@ class SyncEvent < Event
 
   def do_work
     sync
+    s = subject
+    s.last_synced_date = DateTime.now
+    s.save
     award_badges if respond_to?(:award_badges)
   end
 
