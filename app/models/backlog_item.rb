@@ -7,10 +7,15 @@ class BacklogItem
 
   field :title, :type => String
   field :description, :type => String
+  field :url, :type => String
 
   validates_presence_of :title
   validates_presence_of :author
 
   referenced_in :author, :class_name => "Profile", :inverse_of => :backlog_items
+
+  def url?
+    !url.blank?
+  end
 
 end

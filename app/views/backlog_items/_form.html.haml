@@ -3,10 +3,18 @@
   = javascript_include_tag "jquery.auto-geocoder"
 
 = form_for @backlog_item do |f|
+  %p.instructions All we need is a title and description
   .label= f.label :title
   .control= f.text_field :title
   .label= f.label :description
   .control= f.text_area :description
+
+  %p.instructions But you can also provide some additional information
+
+  .label= f.label :url
+  .control= f.text_field :url
+  .label= f.label :tags_text, "Tags"
+  .control= f.text_area :tags_text
 
   .fieldset.set_location
     %legend Location

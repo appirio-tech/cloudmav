@@ -1,3 +1,8 @@
 %li.backlog_item
   %p.title= backlog_item.title
   %p.description= truncate backlog_item.description, :length => 300
+  %table
+    %tr
+      - if backlog_item.url?
+        %td url
+        %td= link_to backlog_item.url, backlog_item.url

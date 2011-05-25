@@ -162,6 +162,11 @@ form {
   .label {
     margin-top:$form_top_margin;
   }
+  .instructions {
+    font-size: 16pt;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  } 
   label {
     color:$black;
     font-size:$form_font_size+2;
@@ -174,6 +179,9 @@ form {
     &:focus {
       border: 1px solid $light_blue;
     }
+  }
+  input[type=text] {
+    width: 400px;
   }
   input[type=submit] {
     @include corners;

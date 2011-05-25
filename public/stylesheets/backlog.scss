@@ -29,7 +29,7 @@ $ds_small: 1px;
 
     li {
       float: left;
-      width: 145px;
+      width: 240px;
       margin: 10px;
       padding: 13px;
     }
@@ -48,10 +48,19 @@ $ds_small: 1px;
         line-height: 16px;
         color: #444747;
       }
+      table {
+        cell-padding: 3px;
+        margin-top: 15px;
+        tr {
+          td:first-child {
+            padding-right: 10px;
+          }
+        }
+        
+      }
     }
 
     #add_item {
-      border: 1px dotted $light_gray;
     }
   }
 
