@@ -40,4 +40,9 @@ Then /^I should not be following "([^"]*)"$/ do |username|
   profile.follows?(followee).should == false
 end
 
+Then /^there should not be a duplicate following of "([^"]*)"$/ do |username|
+  profile = Profile.find(@profile.id)
+  followee = Profile.by_username(username).first
+  profile.followings.where(:subject_id => followee.id).count.should == 1
+end
  

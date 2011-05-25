@@ -37,6 +37,9 @@ $emphasis_dark_background: #1A1A1A;
 
 $shadow: #868686; 
 
+$gradient_top: #2568C0;
+$gradient_bottom: #4792E8;
+
 @mixin corners($radius: 5px) {
   border-radius: $radius;
   -moz-border-radius: $radius;  
@@ -120,8 +123,8 @@ hr {
 
 .button {
   @include corners;
+  @include gradient($light_blue, $blue);
   border: 1px solid $light_gray;
-  background: $blue;
   color:$white;
   padding: 7px;
   font-size: .9em;
@@ -174,8 +177,9 @@ form {
   }
   input[type=submit] {
     @include corners;
-    border: 1px solid $light_gray;
-    background: $blue;
+    @include gradient($blue, $light_blue);
+    //border: 1px solid $light_gray;
+    //background: $blue;
     color:$white;
     padding: 7px;
     font-size: .9em;

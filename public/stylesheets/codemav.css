@@ -53,8 +53,11 @@ hr {
 .button {
   border-radius: 5px;
   -moz-border-radius: 5px;
+  /* gecko based browsers */
+  background: -moz-linear-gradient(top, #0477bf, #003459);
+  /* webkit based browsers */
+  background: -webkit-gradient(linear, left top, left bottom, from(#0477bf), to(#003459));
   border: 1px solid #868686;
-  background: #003459;
   color: white;
   padding: 7px;
   font-size: .9em;
@@ -95,8 +98,10 @@ form input {
 form input[type=submit] {
   border-radius: 5px;
   -moz-border-radius: 5px;
-  border: 1px solid #868686;
-  background: #003459;
+  /* gecko based browsers */
+  background: -moz-linear-gradient(top, #003459, #0477bf);
+  /* webkit based browsers */
+  background: -webkit-gradient(linear, left top, left bottom, from(#003459), to(#0477bf));
   color: white;
   padding: 7px;
   font-size: .9em; }
