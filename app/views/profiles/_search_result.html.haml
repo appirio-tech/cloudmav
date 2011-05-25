@@ -26,5 +26,7 @@
           .points= pointify profile.stack_overflow_profile.reputation
           .description rep
     = render :partial => "shared/simple_tags", :locals => { :taggable => profile }
+  .social
+    = render :partial => "shared/following", :locals => { :profile => profile }
 
   .clear

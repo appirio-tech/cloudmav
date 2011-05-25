@@ -26,13 +26,6 @@
     .clear
     = render :partial => "points"
   .grid_2
-    - if current_profile
-      - if can? :follow, @profile
-        - if current_profile.follows? @profile
-          = form_for [@profile, current_profile.following_for(@profile)], :html => { :method => :delete } do |f|
-            .submit= f.submit "Following", :disable_with => "Unfollowing...", :id => "unfollow"
-        - else
-          = form_for [@profile, Following.new] do |f|
-            .submit= f.submit "Follow", :disable_with => "Following...", :id => "follow"
+    = render :partial => "shared/following", :locals => { :profile => @profile }
   .clear
 .clear
