@@ -2,6 +2,7 @@ module ScoreIt
   module Subject
     def self.included(receiver)
       receiver.class_eval do
+        field :total_score, :type => Integer, :default => 0
         embeds_many :scorings
       end
 
@@ -16,10 +17,11 @@ module ScoreIt
     end
     
     module InstanceMethods
-      def total_score
-        score = 0
-        self.scorings.each{|s| score += s.score }
-        score
+
+      def calculate_total_score
+        self.total_score = 0
+        self.scorings.each{|s| self.total_score += s.score }
+        save
       end
       
       def score(point_type)
@@ -29,11 +31,10 @@ module ScoreIt
       end
       
       def earn(name, points, point_type)
-        #scoring = self.scorings.select{|s| s.name == name && s.point_type == point_type}.first
-        #return if scoring
         scoring = Scoring.new(:name => name, :point_type => point_type, :score => points)
         self.scorings << scoring
         scoring.save
+        calculate_total_score
       end
     end
   end
