@@ -8,13 +8,32 @@ class FollowingsController < ApplicationController
   def create
     authorize! :follow, @profile
     current_profile.follow!(@profile)
-    redirect_to @profile
+    @current_profile = current_profile
+
+    respond_to do |wants|
+      wants.html {
+        redirect_to @profile
+      }
+      wants.js {}
+      wants.json {
+      }
+    end
   end
 
   def destroy
     authorize! :follow, @profile
     current_profile.unfollow!(@profile)
-    redirect_to @profile
+
+    @current_profile = current_profile
+
+    respond_to do |wants|
+      wants.html {
+        redirect_to @profile
+      }
+      wants.js {}
+      wants.json {
+      }
+    end
   end
 
   private
