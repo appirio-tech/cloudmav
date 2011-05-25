@@ -36,6 +36,7 @@ $ds_small: 1px;
 
     .backlog_item {
       border: 1px solid $light_gray;
+      background: #ffffff;
       @include drop_shadow();
       .title {
         font-size: 16px;
@@ -51,12 +52,13 @@ $ds_small: 1px;
       table {
         cell-padding: 3px;
         margin-top: 15px;
+        margin-bottom: 15px;
         tr {
           td:first-child {
             padding-right: 10px;
+            font-weight: bold;
           }
         }
-        
       }
     }
 

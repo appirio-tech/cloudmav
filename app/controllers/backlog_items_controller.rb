@@ -15,7 +15,8 @@ class BacklogItemsController < ApplicationController
     @backlog_item = BacklogItem.new(params[:backlog_item])
     @backlog_item.author = current_profile
     
-    if (@backlog_item.save)
+    if @backlog_item.save
+      @backlog_item.retag!
       flash[:notice] = "Backlog Item added"
       redirect_to backlog_path
     else
@@ -31,6 +32,7 @@ class BacklogItemsController < ApplicationController
   def update
     @backlog_item = BacklogItem.find(params[:id])
     if @backlog_item.update_attributes(params[:backlog_item])
+      @backlog_item.retag!
       flash[:notice] = "Backlog Item updated"
       redirect_to backlog_path
     else

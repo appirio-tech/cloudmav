@@ -12,6 +12,10 @@ module CodeMav
     
     module InstanceMethods
 
+      def tags?
+        self.taggings.count > 0
+      end
+
       def retag!
         return if TagEvent.pending.tag_for(self.id).first
 

@@ -1,0 +1,3 @@
+class BacklogItemTagEvent < TagEvent
+
+end
