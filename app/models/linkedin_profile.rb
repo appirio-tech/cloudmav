@@ -24,6 +24,12 @@ class LinkedinProfile
     self.save
   end
 
+  def date_valid?(year, month)
+    return false unless year && month
+    return false if year == 0 || month == 0
+    true
+  end
+
   def get_job_from_position(position)
     job = Job.new
     job.imported_id = position.id
@@ -32,11 +38,14 @@ class LinkedinProfile
     job.company_name = position.company.name unless position.company.nil?
     start_year = position.start_year || Time.now.year
     start_month = position.start_month || 1
-    job.start_date = DateTime.civil(start_year, start_month, 1)
+
+    if date_valid?(start_year, start_month)
+      job.start_date = DateTime.civil(start_year, start_month, 1)
+    end
     
     end_year = position.end_year
     end_month = position.end_month 
-    if end_year && end_month
+    if date_valid?(end_year, end_month) 
       job.end_date = DateTime.civil(end_year, end_month, 1)
     else
       job.end_date = nil
