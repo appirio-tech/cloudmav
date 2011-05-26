@@ -21,6 +21,12 @@ class Event
   before_create :set_base_info
   after_create :add_to_jobs
 
+  index :is_public
+  index :completed
+  index :in_process
+  index :category
+  index :subcategory
+
   def url?
     false
   end

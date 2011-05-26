@@ -4,7 +4,9 @@ module ScoreIt
       receiver.class_eval do
         field :total_score, :type => Integer, :default => 0
 
-        scope :order_by_score, lambda { order_by([:total_score, :desc]) }
+        index :total_score
+
+        scope :order_by_score, order_by([:total_score, :desc])
 
         embeds_many :scorings
       end
