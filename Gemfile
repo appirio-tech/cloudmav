@@ -5,7 +5,7 @@ gem 'rails', '3.0.1'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'haml'
 gem 'json'
-gem 'devise'
+gem 'devise', '1.1.5'
 gem "mongoid", "2.0.0.beta.20"
 gem "bson_ext"
 gem "mongo"
