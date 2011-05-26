@@ -33,6 +33,8 @@ gem "less"
 gem "twitter"
 gem "embedly"
 gem "simple-rss"
+gem "rake", "0.8.7"
+gem "heroku"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily
