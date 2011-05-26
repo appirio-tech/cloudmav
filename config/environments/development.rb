@@ -30,7 +30,7 @@ Codemav::Application.configure do
     :port                 => 587,
     :domain               => 'www.codemav.com',
     :user_name            => 'rookieone@gmail.com',
-    :password             => 'pennyM00n',
+    :password             => 'iluv2nap',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
     

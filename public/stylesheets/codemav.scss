@@ -152,7 +152,7 @@ hr {
   height: 150px;
 }
 
-$form_font_size:10pt;
+$form_font_size:12pt;
 $form_top_margin:10px;
 form {
   p {
@@ -180,9 +180,6 @@ form {
       border: 1px solid $light_blue;
     }
   }
-  input[type=text] {
-    width: 400px;
-  }
   input[type=submit] {
     @include corners;
     @include gradient($blue, $light_blue);
@@ -190,7 +187,7 @@ form {
     //background: $blue;
     color:$white;
     padding: 7px;
-    font-size: .9em;
+    font-size: $form_font_size;
     &:hover {
       background: $light_blue;
       border: 1px solid $blue;
