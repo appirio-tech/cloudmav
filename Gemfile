@@ -39,7 +39,6 @@ group :development, :test do
   gem 'ghost' #used to set local routes easily
   gem 'cucumber-rails'
   gem 'cucumber', ">= 0.8.5"
-  gem 'spork'
   gem 'launchy'
   gem "rspec-rails", ">= 2.0.0.beta.22"
   gem 'factory_girl_rails'
