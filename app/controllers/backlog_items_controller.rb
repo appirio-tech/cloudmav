@@ -1,4 +1,5 @@
 class BacklogItemsController < ApplicationController
+  before_filter :authenticate_user!, :only => [:new, :create]
 
   def index
     @backlog_items = BacklogItem.all.order_by(:created_at.desc)

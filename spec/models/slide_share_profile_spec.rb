@@ -7,7 +7,7 @@ describe SlideShareProfile do
       @profile = Factory.create(:user).profile 
       @slide_share_profile = SlideShareProfile.create(:slide_share_username => "rookieone", :profile => @profile)
       VCR.use_cassette("slide_share", :record => :new_episodes) do
-        @slide_share_profile.synch!
+        @slide_share_profile.sync!
       end
     end
     

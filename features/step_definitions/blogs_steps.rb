@@ -8,6 +8,16 @@ When /^I add a blog$/ do
   end
 end
 
+When /^I add a blog "([^"]*)"$/ do |rss|
+  visit profile_writing_path(@profile)
+
+  VCR.use_cassette("blog_#{rss}", :record => :new_episodes) do
+    fill_in "blog_rss", :with => rss 
+    click_button "Add"
+  end
+end
+
+
 Then /^the blog should be added to my profile$/ do
   profile = Profile.find(@profile.id)
   profile.blogs.first.should_not be_nil
@@ -36,6 +46,11 @@ end
 Then /^I should have (\d+) writer points$/ do |number|
   profile = User.find(@user.id).profile
   profile.score(:writer_points).should == number.to_i
+end
+
+Then /^I should have posts$/ do
+  profile = User.find(@user.id).profile
+  profile.posts.count.should > 0
 end
 
 

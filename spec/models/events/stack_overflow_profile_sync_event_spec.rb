@@ -1,18 +1,18 @@
 require 'spec_helper'
 
-describe "StackOverflowProfileSynchEvent" do
+describe "StackOverflowProfileSyncEvent" do
 
-  describe "synch" do
+  describe "sync" do
     before(:each) do
       @profile = Factory.create(:user).profile
       @so_profile = StackOverflowProfile.new(:stack_overflow_id => 363881)
       @profile.stack_overflow_profile = @so_profile
       @so_profile.save
       @so_profile.expects(:retag!)
-      event = StackOverflowProfileSynchEvent.new(:stack_overflow_profile => @so_profile)
+      event = StackOverflowProfileSyncEvent.new(:stack_overflow_profile => @so_profile)
 
-      VCR.use_cassette("stack_overflow_synch_event", :record => :all) do
-        event.synch
+      VCR.use_cassette("stack_overflow_sync_event", :record => :all) do
+        event.sync
       end
     end
 
@@ -25,20 +25,20 @@ describe "StackOverflowProfileSynchEvent" do
     it { StackOverflowAnswerAddedEvent.count.should == @so_profile.answers.count }
   end
 
-  describe "synch" do
+  describe "sync" do
     before(:each) do
       @profile = Factory.create(:user).profile
       @so_profile = StackOverflowProfile.new(:stack_overflow_id => 363881)
       @profile.stack_overflow_profile = @so_profile
       @so_profile.save
       @so_profile.stubs(:retag!)
-      event = StackOverflowProfileSynchEvent.new(:stack_overflow_profile => @so_profile)
+      event = StackOverflowProfileSyncEvent.new(:stack_overflow_profile => @so_profile)
 
-      VCR.use_cassette("stack_overflow_synch_again_event", :record => :all) do
-        event.synch
+      VCR.use_cassette("stack_overflow_sync_again_event", :record => :all) do
+        event.sync
         @question_count = @so_profile.questions.count
         @answer_count = @so_profile.answers.count
-        event.synch
+        event.sync
       end
     end
 

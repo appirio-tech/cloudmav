@@ -32,6 +32,7 @@ gem "target_api", "0.0.1"
 gem "less"
 gem "twitter"
 gem "embedly"
+gem "simple-rss"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily
