@@ -3,7 +3,7 @@
     = image_tag profile.gravatar_url(:size => 50)
   .following_info
     .following_username
-      = profile.username
+      = link_to profile.username, profile
     .clear
     %ul.following_points
       %li
