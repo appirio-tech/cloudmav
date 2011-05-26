@@ -24,15 +24,18 @@
       - if can? :add_blog, @profile
         %a{:rel => "#add_blog"} Add Blog
         #add_blog.overlay
-          - @blog = Blog.new
-          = render :partial => "blogs/form", :locals => { :action_text => "Add", :disable_text => "Adding..." }
+          = render :partial => "blogs/form", :locals => { :blog => Blog.new, :action_text => "Add", :disable_text => "Adding..." }
       - @profile.blogs.each do |b|
         .info_box
-          .info_logo= b.title
+          .info_logo
+            .blog_title= b.title
           .info
             - if can? :edit, b
-              .item_link= link_to "edit", edit_profile_blog_path(@profile, b)
+              .item_link
+                %a{:rel => "#blog_#{b.id}"} edit
         .clear
+        %div{:id => "blog_#{b.id}", :class => "overlay"}
+          = render :partial => "blogs/form", :locals => { :blog => b, :action_text => "Save", :disable_text => "Saving..." }
 
     .clear
   .clear
