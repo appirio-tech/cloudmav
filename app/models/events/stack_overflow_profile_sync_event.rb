@@ -2,6 +2,11 @@ class StackOverflowProfileSyncEvent < SyncEvent
 
   referenced_in :stack_overflow_profile, :inverse_of => :events
 
+  def earn_points
+    rep_points = stack_overflow_profile.reputation / 100
+    stack_overflow_profile.profile.adjust_score("StackOverflow reputation", rep_points, :coder_points)
+  end
+
   def sync
     return if stack_overflow_profile.stack_overflow_id.nil?
     

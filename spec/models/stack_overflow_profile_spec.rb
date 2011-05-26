@@ -9,10 +9,15 @@ describe StackOverflowProfile do
       VCR.use_cassette("stack_overflow", :record => :all) do
         @so_profile.sync!
       end
+      @profile.reload
     end
     
     it { @so_profile.reputation.should > 0 }
     it { @so_profile.taggings.count.should > 0 }
+    it "should earn coder points" do
+      expected_points = 10 + @so_profile.reputation / 100 
+      @profile.score(:coder_points).should == expected_points
+    end
   end
   
 end

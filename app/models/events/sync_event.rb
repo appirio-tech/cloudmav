@@ -7,6 +7,7 @@ class SyncEvent < Event
     s.last_synced_date = DateTime.now
     s.save
     award_badges if respond_to?(:award_badges)
+    earn_points if respond_to?(:earn_points)
   end
 
   def set_info

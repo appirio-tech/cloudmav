@@ -63,4 +63,9 @@ Then /^I should not see their StackOverflow profile$/ do
   And %Q{I should not see "Go to my StackOverflow Profile"}
 end
 
+Then /^I should have coder points for StackOverflow$/ do
+  profile = Profile.find(@profile.id)
+  expected_points = 10 + (profile.stack_overflow_profile.reputation / 100)
+  profile.score(:coder_points).should == expected_points
+end
 

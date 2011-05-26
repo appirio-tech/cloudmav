@@ -13,7 +13,7 @@ Feature: StackOverflowProfile
     When I sync my StackOverflow account
     Then I should have a StackOverflow profile
     And I should be awarded the "Stack Junkie" badge
-    And I should have 10 coder points
+    And I should have coder points for StackOverflow
     And I should learned "Syncing with your Stackoverflow Account"
     And my StackOverflow profile should be tagged
     And my profile should have my StackOverflow profile tags

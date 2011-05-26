@@ -39,6 +39,17 @@ module ScoreIt
         scoring.save
         calculate_total_score
       end
+
+      def adjust_score(name, points, point_type)
+        scoring = self.scorings.select{|s| s.point_type == point_type && s.name == name}.first
+        if scoring.nil?
+          scoring = Scoring.new(:name => name, :point_type => point_type)
+          self.scorings << scoring
+        end
+        scoring.score = points
+        self.save
+        calculate_total_score
+      end
     end
   end
 end
