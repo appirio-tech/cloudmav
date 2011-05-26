@@ -11,6 +11,8 @@ class User
   
   field :username, :type => String
 
+  validates_format_of :username, :with => /\A[a-zA-Z0-9]+\z/, :message => "Only letters and numbers allowed"
+
   def downcase_username
     self.username=username.downcase
   end

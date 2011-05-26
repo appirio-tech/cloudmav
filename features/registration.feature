@@ -13,3 +13,4 @@ Feature: Registration
 		And I should have a profile
 		And my profile email should be my user email
     And I should be redirected to my profile page
+
