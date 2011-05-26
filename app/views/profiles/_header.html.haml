@@ -9,11 +9,10 @@
   .grid_12
     .profile_name= @profile.display_name
     .user_name= "(#{@profile.username})"
-    - if @profile == current_profile
-      .edit_profile_link
+    .profile_actions
+      - if @profile == current_profile
         = link_to "edit profile", edit_profile_path(@profile)
-    - if can? :view_widgets, @profile
-      .view_widgets_link
+      - if can? :view_widgets, @profile
         |
         = link_to "get widgets", profile_widgets_path(@profile)
     .clear
