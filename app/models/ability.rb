@@ -5,6 +5,9 @@ class Ability
     return if user.nil?
     return if user.profile.nil?
     
+    can :tweet, Profile do |profile|
+      user.profile == profile
+    end
     can :view_widgets, Profile do |profile|
       user.profile == profile
     end

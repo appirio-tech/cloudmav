@@ -1,31 +1,34 @@
 - content_for :css do
   = stylesheet_link_tag "backlog"
   
-.grid_10
+.grid_16
+  %h1 Backlog
+.clear
 
+.grid_10
   #backlog
-    - if current_profile
-      .filter
-        %ul
-          %li Filter :
-          %li.active
-            = link_to "All", backlog_items_path(current_profile, :filter => "All"), :remote => true 
+    .filter
+      %h2 News, Events, Ideas, Whatever
+      %ul
+        %li Filter :
+        %li.active
+          = link_to "All", '/'
 
     %ul#backlog_items
+      %li#add_item
+        %a{:href => new_backlog_item_path}
+          %p Have something cool to share? Add it >
+        .clear
       = render :partial => "backlog_items/backlog_item", :collection => @backlog_items, :as => :backlog_item
-      - if can? :create, BacklogItem
-        %li#add_item
-          = link_to (image_tag("add_backlog_item.png", :alt => "Add a Backlog item")), new_backlog_item_path
-
 
 .grid_6
   #event_feed
-    - if current_profile
-      .filter
-        %ul
-          %li Filter :
-          %li.active
-            = link_to "All", profile_events_path(current_profile, :filter => "All"), :remote => true 
+    .filter
+      %h2 Activity Feed
+      %ul
+        %li Filter :
+        %li.active
+          = link_to "All", '/'
 
     %ul.list#events
       = render :partial => "events/event", :collection => @events, :as => :event

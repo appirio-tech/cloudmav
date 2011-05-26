@@ -24,35 +24,46 @@ $ds_small: 1px;
   box-shadow: $ds_large $ds_large $ds_small $shadow;
 }
 
+h1 {
+  font-size: 24pt;
+  font-weight:bold;
+}
+
 #backlog {
   #backlog_items {
-
     li {
-      float: left;
-      width: 240px;
-      margin: 10px;
-      padding: 13px;
+      margin: 5px;
+      padding: 7px;
+      border-bottom: 1px solid $light_gray;
+    }
+
+    #add_item {
+      a {
+        p {
+          font-size: 20pt;
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+      }
     }
 
     .backlog_item {
-      border: 1px solid $light_gray;
-      background: #ffffff;
-      @include drop_shadow();
       .title {
-        font-size: 16px;
-        line-height: 18px;
-        margin-bottom: 10px;
+        font-size: 14pt;
+        margin-bottom: 5px;
       }
       .description {
         margin-top: 5px;
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 12pt;
+        line-height: 130%;
         color: #444747;
+        margin-left: 5px;
       }
       table {
         cell-padding: 3px;
-        margin-top: 15px;
-        margin-bottom: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
         tr {
           td:first-child {
             padding-right: 10px;
@@ -61,9 +72,27 @@ $ds_small: 1px;
         }
       }
     }
+  }
+}
 
-    #add_item {
+.filter {
+  h2 {
+    float: left;
+    font-size: 16pt;
+    margin-bottom: 0px;
+    padding-top: 7px;
+    padding-right: 10px;
+  }
+  ul {
+    float:right;
+  }
+}
+
+
+#event_feed {
+  #events {
+    .item_title {
+      font-weight: normal;
     }
   }
-
 }

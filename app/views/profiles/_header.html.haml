@@ -3,6 +3,8 @@
 
 #profile_header
   .right
+    - if can? :tweet, @profile
+      = render :partial => "tweet_profile"
     = render :partial => "evernote"
   .grid_2
     = image_tag @profile.gravatar_url(:size => 90), :id => :profile_pic

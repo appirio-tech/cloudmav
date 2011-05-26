@@ -5,7 +5,7 @@
     %tr
       - if backlog_item.url?
         %td url
-        %td= link_to backlog_item.url, backlog_item.url
+        %td= link_to backlog_item.url, backlog_item.url, :target => "_blank"
   - if backlog_item.tags?
     = render :partial => "shared/simple_tags", :locals => { :taggable => backlog_item }
     .clear
