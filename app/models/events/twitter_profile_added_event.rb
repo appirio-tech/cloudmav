@@ -16,7 +16,7 @@ class TwitterProfileAddedEvent < ProfileEvent
   end
 
   def description
-    "added Twitter account"
+    "added Twitter account #{twitter_profile.username}"
   end
 
 end

@@ -16,7 +16,7 @@ class SlideShareProfileAddedEvent < ProfileEvent
   end
 
   def description
-    "Added SlideShare account"
+    "added SlideShare account"
   end
 
 end
