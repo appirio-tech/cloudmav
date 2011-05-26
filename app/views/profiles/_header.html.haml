@@ -25,6 +25,7 @@
     .clear
     = render :partial => "points"
   .grid_2
-    = render :partial => "shared/following", :locals => { :profile => @profile }
+    %div{:id => "follow_#{@profile.id}"}
+      = render :partial => "shared/following", :locals => { :profile => @profile }
   .clear
 .clear

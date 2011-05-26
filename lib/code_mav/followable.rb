@@ -19,6 +19,8 @@ module CodeMav
     module InstanceMethods
 
       def follow!(subject)
+        return if self.follows?(subject)
+
         self.followings.create(:subject => subject)
         subject.following_bys.create(:subject => self)
       end

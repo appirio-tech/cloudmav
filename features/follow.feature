@@ -7,33 +7,33 @@ Feature: Follow
   Scenario: Follow another user
 
     Given I am logged in
-    And there is a user "l33t_coder"
-    When I follow the user "l33t_coder"
-    Then I should be following "l33t_coder"
-    And "l33t_coder" should have me as a follower
+    And there is a user "l33tcoder"
+    When I follow the user "l33tcoder"
+    Then I should be following "l33tcoder"
+    And "l33tcoder" should have me as a follower
 
   Scenario: Follow same user
 
     Given I am logged in
-    And there is a user "l33t_coder"
-    When I follow the user "l33t_coder"
-    Then I should be following "l33t_coder"
-    And "l33t_coder" should have me as a follower
-    And there should not be a duplicate following of "l33t_coder"
+    And there is a user "l33tcoder"
+    When I follow the user "l33tcoder"
+    Then I should be following "l33tcoder"
+    And "l33tcoder" should have me as a follower
+    And there should not be a duplicate following of "l33tcoder"
 
   Scenario: Friend another user
 
     Given I am logged in
-    And there is a user "l33t_coder"
-    And user "l33t_coder" is following me
-    When I follow the user "l33t_coder"
-    Then "l33t_coder" should be my friend
-    And I should see "l33t_coder" on my social page
+    And there is a user "l33tcoder"
+    And user "l33tcoder" is following me
+    When I follow the user "l33tcoder"
+    Then "l33tcoder" should be my friend
+    And I should see "l33tcoder" on my social page
   
   Scenario: Unfollow another user from their profile page
 
     Given I am logged in
-    And there is a user "l33t_coder"
-    And I follow the user "l33t_coder"
-    When I unfollow "l33t_coder" from their profile page
-    Then I should not be following "l33t_coder"
+    And there is a user "l33tcoder"
+    And I follow the user "l33tcoder"
+    When I unfollow "l33tcoder" from their profile page
+    Then I should not be following "l33tcoder"
