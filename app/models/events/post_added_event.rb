@@ -3,7 +3,7 @@ class PostAddedEvent < ProfileEvent
   referenced_in :post, :inverse_of => :events
 
   def score_points
-    profile.earn("for adding a post", 5, :writer_points) 
+    profile.earn("for adding a post", 3, :writer_points) 
   end
 
   def set_info
