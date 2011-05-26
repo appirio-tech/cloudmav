@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'rake', '0.8.7'
 gem 'rails', '3.0.1'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'haml'
@@ -33,7 +34,6 @@ gem "less"
 gem "twitter"
 gem "embedly"
 gem "simple-rss"
-gem 'rake', '0.8.7'
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily
