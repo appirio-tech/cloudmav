@@ -11,7 +11,7 @@ Codemav::Application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :domain               => 'www.codemav.com',
-    :user_name            => 'contact@codemav.com',
+    :user_name            => 'admin@codemav.com',
     :password             => 'pennyM00n',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
