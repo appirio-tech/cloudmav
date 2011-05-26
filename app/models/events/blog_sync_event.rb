@@ -26,11 +26,12 @@ class BlogSyncEvent < SyncEvent
   
     rss.items.each do |i|
       unless has_post?(i)
+        pub_date = i.published || i.pubDate
         blog.posts.create(
           :imported_id => i.id,
           :title => i.title,
           :url => i.link,
-          :written_on => i.published,
+          :written_on => pub_date,
           :profile => blog.profile)
       end
     end

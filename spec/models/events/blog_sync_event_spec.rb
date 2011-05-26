@@ -30,6 +30,7 @@ describe "Blog" do
   
     it { Post.count.should > 0 }
     it { @blog.posts.count.should > 0 }
+    it { @blog.posts.first.written_on.should_not be_nil }
   end
 
   describe "lazy coder" do
@@ -44,6 +45,7 @@ describe "Blog" do
       
     it { Post.count.should > 0 }
     it { @blog.posts.count.should > 0 }
+    it { @blog.posts.first.written_on.should_not be_nil }
   end
 
   describe "koby" do
@@ -58,6 +60,7 @@ describe "Blog" do
       
     it { Post.count.should > 1 }
     it { @blog.posts.count.should > 1 }
+    it { @blog.posts.first.written_on.should_not be_nil }
   end
 
 end
