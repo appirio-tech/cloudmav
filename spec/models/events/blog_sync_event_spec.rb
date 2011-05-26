@@ -14,6 +14,8 @@ describe "Blog" do
   
     it { Post.count.should > 0 }
     it { @blog.posts.count.should > 0 }
+    it { @blog.url.should_not be_nil }
+    it { @blog.logo_url.should_not be_nil }
   end
 
   describe "Ryans Blog" do
@@ -28,7 +30,34 @@ describe "Blog" do
   
     it { Post.count.should > 0 }
     it { @blog.posts.count.should > 0 }
+  end
 
+  describe "lazy coder" do
+    before(:each) do
+      VCR.use_cassette("blog_spec_lazycoder", :record => :new_episodes) do
+        @blog = Blog.create(:rss => "lazycoder.com/weblog/feed/")
+        @event = BlogSyncEvent.create(:blog => @blog)
+        @event.sync
+        @blog.reload
+      end
+    end
+      
+    it { Post.count.should > 0 }
+    it { @blog.posts.count.should > 0 }
+  end
+
+  describe "koby" do
+    before(:each) do
+      VCR.use_cassette("blog_spec_koby", :record => :new_episodes) do
+        @blog = Blog.create(:rss => "http://www.mkoby.com/feed")
+        @event = BlogSyncEvent.create(:blog => @blog)
+        @event.sync
+        @blog.reload
+      end
+    end
+      
+    it { Post.count.should > 1 }
+    it { @blog.posts.count.should > 1 }
   end
 
 end

@@ -5,6 +5,7 @@ class JobEvent < ProfileEvent
   def set_info
     self.category = "Experience"
     self.is_public = true
+    self.date = job.start_date
   end
 
   def other_work

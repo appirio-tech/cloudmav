@@ -18,9 +18,12 @@ namespace :codemav do
   task :set_info_on_events => :environment do
     events = Event.all
     events.each do |e|
-      e.set_base_info
-      #e.set_info if e.respond_to? :set_info
-      e.save
+      begin
+        e.set_base_info
+        e.save
+      rescue => details
+        puts "Error #{details}"
+      end
     end
   end
 end

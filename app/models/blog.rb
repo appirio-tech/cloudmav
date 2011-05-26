@@ -7,6 +7,7 @@ class Blog
   field :title, :type => String
   field :url, :type => String
   field :rss, :type => String
+  field :logo_url, :type => String
   
   references_many :posts
   referenced_in :profile, :inverse_of => :blog
