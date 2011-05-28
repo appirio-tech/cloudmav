@@ -2,13 +2,25 @@
   %p.title= backlog_item.title
   %p.description= truncate backlog_item.description, :length => 300
   %table
-    %tr
-      - if backlog_item.url?
+    - if backlog_item.url?
+      %tr
         %td url
         %td= link_to backlog_item.url, backlog_item.url, :target => "_blank"
+    - if backlog_item.start_date
+      %tr
+        %td when 
+        %td
+          = show_date backlog_item.start_date
+          - if backlog_item.end_date
+            = " - #{show_date backlog_item.end_date}"
+  - if backlog_item.imported?
+    .imported_from
+      imported from 
+      = link_to (image_tag "backlog/lanyrd.png"), "http://lanyrd.com", :target => "_blank"
   - if backlog_item.tags?
     = render :partial => "shared/simple_tags", :locals => { :taggable => backlog_item }
     .clear
-    %br
   - if can? :edit, backlog_item
+    %br
     = link_to "edit", edit_backlog_item_path(backlog_item)
+

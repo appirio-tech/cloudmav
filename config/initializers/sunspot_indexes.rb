@@ -19,3 +19,11 @@ Sunspot.setup(Company) do
   text :name
   text :all_tags
 end
+
+Sunspot.setup(BacklogItem) do
+  text :title
+  text :description
+  time :start_date
+  time :end_date
+  text :all_tags
+end
