@@ -23,6 +23,19 @@ describe BacklogItem do
       it { @results.first.should == @ruby_conf }
     end
 
+    context "closer dates first" do
+      before(:each) do
+        @profile = Factory.create(:user).profile
+
+        @net_conf = BacklogItem.create(:title => "dot Net Conf", :start_date => 3.months.from_now)
+        @java_conf = BacklogItem.create(:title => "Java Conf", :start_date => 7.days.from_now)
+        @ruby_conf = BacklogItem.create(:title => "Ruby Conf", :start_date => 6.months.from_now)
+
+        @results = BacklogItem.recommended_items_for_profile(@profile)
+      end
+
+      it { @results.first.should == @java_conf }
+    end
   end
 
 end
