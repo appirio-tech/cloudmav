@@ -1,15 +1,13 @@
 class BacklogItemRecommendationEngine
 
   def self.build_recommendations!
-    count = 0
     Profile.all.each do |p| 
-      count+= 1
-      puts "rec count #{count}"
-      build_recommendations_for_profile!(p)
+      delay.build_recommendations_for_profile!(p.id)
     end
   end
 
-  def self.build_recommendations_for_profile!(profile)
+  def self.build_recommendations_for_profile!(id)
+    profile = Profile.find(id)
     BacklogItem.all.each do |item|
       rec = get_backlog_item_recommendation(profile, item)
       rec.score = 0
