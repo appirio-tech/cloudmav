@@ -13,22 +13,37 @@ module CodeMav
 
         before_save :update_coordinates
 
-        def near_loc(location)
-          response = Geokit::Geocoders::MultiGeocoder.geocode(location)
-          near(:coordinates => [response.lat, response.lng, 1])
-        end   
-        
-        def geocode(location)
-          response = Geokit::Geocoders::MultiGeocoder.geocode(location)
-          return [response.lat, response.lng]
-        end
-
+        scope :with_location, where(:location.exists => true).not_in(:location => [""])
       end
       
       receiver.send(:include, InstanceMethods)
+      receiver.send(:extend, ClassMethods)
     end
     
+    module ClassMethods
+
+      def near_loc(location)
+        response = Geokit::Geocoders::MultiGeocoder.geocode(location)
+        near(:coordinates => [response.lat, response.lng, 1])
+      end   
+
+      def near_locatable(locatable, options = {})
+        distance = options[:distance] || 1
+        near(:coordinates => [locatable.lat, locatable.lng, distance])
+      end
+
+    end
+
     module InstanceMethods
+
+      def has_location?
+        !self.coordinates.nil?
+      end
+
+      def geocode(location)
+        response = Geokit::Geocoders::MultiGeocoder.geocode(location)
+        return [response.lat, response.lng]
+      end
 
       def update_coordinates
         return if Rails.env.test?
@@ -44,10 +59,21 @@ module CodeMav
       end
 
       def location_text
-        return "not set" if location.nil?
+        return "not set" if location.blank?
         location
       end
   
+      def geoloc
+        Geokit::GeoLoc.new(:lat => latitude, :lng => longitude)
+      end
+
+      def distance_to(other)
+        if other.respond_to?(:coordinates)
+          geoloc.distance_to(other.coordinates)
+        else
+          geoloc.distance_to(other)
+        end
+      end
 
     end
 

@@ -46,6 +46,7 @@ class Profile
   references_one :linkedin_profile
 
   references_many :backlog_items
+  embeds_many :backlog_item_recommendations
     
   scope :by_username, lambda { |uname| { :where => { :username => uname } } }
   scope :named, lambda { |name| { :where => { :name => name } } }
