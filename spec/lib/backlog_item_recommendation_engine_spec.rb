@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BacklogItem do
+describe BacklogItemRecommendationEngine do
 
   describe "recommended_items_for_profile" do
     context "similar tags first" do
@@ -17,10 +17,11 @@ describe BacklogItem do
         @ruby_conf = BacklogItem.create(:title => "Ruby Conf", :tags_text => "ruby")
         @ruby_conf.retag!
 
-        @results = BacklogItem.recommended_items_for_profile(@profile)
+        BacklogItemRecommendationEngine.build_recommendations_for_profile!(@profile)
+        @recommendations = @profile.backlog_item_recommendations.order_by([:score, :desc]).map(&:backlog_item)
       end
 
-      it { @results.first.should == @ruby_conf }
+      it { @recommendations.first.should == @ruby_conf }
     end
 
     context "closer dates first" do
@@ -31,26 +32,30 @@ describe BacklogItem do
         @java_conf = BacklogItem.create(:title => "Java Conf", :start_date => 7.days.from_now)
         @ruby_conf = BacklogItem.create(:title => "Ruby Conf", :start_date => 6.months.from_now)
 
-        @results = BacklogItem.recommended_items_for_profile(@profile)
+        BacklogItemRecommendationEngine.build_recommendations_for_profile!(@profile)
+        @recommendations = @profile.backlog_item_recommendations.order_by([:score, :desc]).map(&:backlog_item)
       end
 
-      it { @results.first.should == @java_conf }
+      it { @recommendations.first.should == @java_conf }
     end
 
     context "nearby" do
       before(:each) do
         @profile = Factory.create(:user).profile
+        @profile.lat = -25
+        @profile.lng = 95
         @profile.coordinates = [-25, 95]
         @profile.save
 
-        @net_conf = BacklogItem.create(:title => "dot Net Conf", :coordinates => [-40, 20])
-        @java_conf = BacklogItem.create(:title => "Java Conf", :coordinates => [-25, 95])
-        @ruby_conf = BacklogItem.create(:title => "Ruby Conf", :coordinates => [30, 10])
+        @net_conf = BacklogItem.create(:title => "dot Net Conf", :location => "Somewhere", :coordinates => [-40, 20])
+        @java_conf = BacklogItem.create(:title => "Java Conf", :location => "Somewhere", :coordinates => [-25, 95])
+        @ruby_conf = BacklogItem.create(:title => "Ruby Conf", :location => "Somewhere", :coordinates => [30, 10])
 
-        @results = BacklogItem.recommended_items_for_profile(@profile)
+        BacklogItemRecommendationEngine.build_recommendations_for_profile!(@profile)
+        @recommendations = @profile.backlog_item_recommendations.order_by([:score, :desc]).map(&:backlog_item)
       end
 
-      it { @results.first.should == @java_conf }
+      it { @recommendations.first.should == @java_conf }
     end
   end
 

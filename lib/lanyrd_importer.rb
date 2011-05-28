@@ -13,6 +13,9 @@ class LanyrdImporter
       summary_html = Nokogiri::HTML(summary_html)
       
       content = summary_html.children[1].content
+      loc = content.partition("Topics:").first.split("   ").last
+      i.location = loc if loc
+
       i.tags_text = content.partition("Topics:").last
       i.description = content.partition("  ").first
 
