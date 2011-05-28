@@ -8,9 +8,12 @@ class BacklogItem
   field :title, :type => String
   field :description, :type => String
   field :url, :type => String
+  field :imported_id, :type => String
+  field :imported_from, :type => String
+  field :start_date, :type => DateTime
+  field :end_date, :type => DateTime
 
   validates_presence_of :title
-  validates_presence_of :author
 
   referenced_in :author, :class_name => "Profile", :inverse_of => :backlog_items
 
