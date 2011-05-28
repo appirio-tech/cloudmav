@@ -6,7 +6,7 @@ class BacklogItemsController < ApplicationController
     if current_profile
       @backlog_items = current_profile.backlog_item_recommendations.order_by([:score, :desc]).paginate(:page => 1, :per_page => 10).map(&:backlog_item) 
     else
-      @backlog_items = BacklogItem.paginate(:page => 1, :per_page => 10).order_by(:created_at.desc)
+      @backlog_items = BacklogItem.order_by(:created_at.desc).paginate(:page => 1, :per_page => 10)
     end
     @events = ProfileEvent.public.order_by(:date.desc).paginate(:page => 1, :per_page => 10)
   end
