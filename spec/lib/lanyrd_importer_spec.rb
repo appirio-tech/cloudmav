@@ -15,4 +15,13 @@ describe "Lanyrd Importer" do
     it { BacklogItem.first.start_date.should_not be_nil }
   end
 
+  describe "import topic" do
+    before(:each) do
+      VCR.use_cassette("lanyrd import topic javascript", :record => :new_episodes) do
+        LanyrdImporter.import_from_topic!("javascript")
+      end
+    end
+
+    it { BacklogItem.count.should > 0 }
+  end
 end

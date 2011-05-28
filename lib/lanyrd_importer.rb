@@ -22,7 +22,7 @@ class LanyrdImporter
       loc = content.partition("Topics:").first.split("   ").last
       i.location = loc if loc
 
-      i.tags_text = content.partition("Topics:").last
+      i.tags_text = content.partition("Topics:").last.partition("Speakers:").first
       i.description = content.partition("  ").first
 
       short_conf_name = i.url.partition("http://lanyrd.com/2011/").last[0..-2]
