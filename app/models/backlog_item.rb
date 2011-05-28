@@ -36,27 +36,6 @@ class BacklogItem
       end
       search.execute
     end
-    
-    def recommended_items_for_profile(profile)
-      results = BacklogItem.all.map{|i| {:item => i, :score => 0} }
-
-      results.each do |r|
-        profile.taggings.each do |t|
-          if r[:item].has_tag?(t.tag)
-            r[:score] += t.score * 10
-          end
-        end
-
-        if r[:item].start_date
-          start_date = r[:item].start_date
-          r[:score] += 30 if start_date <= 1.week.from_now
-          r[:score] += 20 if start_date <= 2.weeks.from_now
-          r[:score] += 10 if start_date <= 1.month.from_now
-        end
-      end
-
-      results.sort {|x,y| y[:score] <=> x[:score] }.map{|r| r[:item]}[0..9]
-    end
 
   end
 

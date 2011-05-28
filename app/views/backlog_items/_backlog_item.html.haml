@@ -2,6 +2,10 @@
   %p.title= backlog_item.title
   %p.description= truncate backlog_item.description, :length => 300
   %table
+    - if backlog_item.has_location?
+      %tr
+        %td location
+        %td= backlog_item.location
     - if backlog_item.url?
       %tr
         %td url

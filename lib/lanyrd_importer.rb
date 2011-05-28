@@ -1,5 +1,10 @@
 class LanyrdImporter
 
+  def self.import!
+    topics = ["net", "development", "agile", "altnet"]  
+    topics.each { |t| import_from_topic!(t) }
+  end
+
   def self.import_from_topic!(topic)
     rss = SimpleRSS.parse open("http://lanyrd.com/topics/#{topic}/feed/")
     coder = HTMLEntities.new
