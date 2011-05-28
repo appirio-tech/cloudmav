@@ -43,9 +43,14 @@ class BacklogItemRecommendationEngine
     score = 0
     if backlog_item.start_date
       start_date = backlog_item.start_date
-      score += 20 if start_date <= 1.week.from_now
-      score += 15 if start_date <= 2.weeks.from_now
-      score += 10 if start_date <= 1.month.from_now
+
+      if start_date <= 1.week.from_now
+        score += 20
+      elsif start_date <= 2.weeks.from_now
+        score += 15   
+      elsif start_date <= 1.month.from_now
+        score += 10
+      end
     end
     score
   end
