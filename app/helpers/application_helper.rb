@@ -33,7 +33,10 @@ module ApplicationHelper
     return if video_url.blank?
     embedly_api = Embedly::API.new 
     result = embedly_api.oembed :url => video_url
-    result.first.html.html_safe if result.first
+    return unless result.first
+    unless result.first.html.nil?
+      return result.first.html.html_safe 
+    end
   end
 
 end
