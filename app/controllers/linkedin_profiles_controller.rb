@@ -1,7 +1,15 @@
 require 'linkedin'
 
 class LinkedinProfilesController < ApplicationController
+  before_filter :authenticate_user!
   before_filter :set_profile, :only => [:new, :create, :confirm]
+
+  rescue_from OAuth::Problem, :with => :oauth_error
+
+  def oauth_error
+    flash[:error] = "There was a problem with your authentication with LinkedIn. Give it another shot."
+    redirect_to profile_experience_path(current_profile)
+  end
 
   def new
     if @profile.linkedin_profile.nil?
