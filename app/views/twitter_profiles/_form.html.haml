@@ -1,3 +1,4 @@
 = form_for [@profile, @twitter_profile] do |f|
+  .label= f.label :username, "Twitter username"
   .control= f.text_field :username
   .submit= f.submit "Save", :disable_with => "Saving..."

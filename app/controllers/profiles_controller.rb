@@ -42,6 +42,7 @@ class ProfilesController < ApplicationController
   def social
     @tab = "social"
     @friends = @profile.followees.sort{|x,y| y.total_score <=> x.total_score }
+    @twitter_profile = @profile.twitter_profile
   end
   
   def edit

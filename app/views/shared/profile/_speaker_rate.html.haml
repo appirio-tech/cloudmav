@@ -1,6 +1,10 @@
 - if @speaker_rate_profile || can?(:set_speaker_rate_profile, @profile)
   .info_box#speaker_rate_info
-    .info_logo= link_to image_tag("speaker_rate_info_logo.png"), "http://www.speakerrate.com"
+    .info_logo
+      = link_to image_tag("speaker_rate_info_logo.png"), "http://www.speakerrate.com"
+      -if can?(:set_speaker_rate_profile, @profile) && @speaker_rate_profile
+        .edit
+          %a{:class => "module_link", :rel => "#sync_speaker_rate"} edit
     .info
       - if @speaker_rate_profile
         - if !@speaker_rate_profile.synced?
@@ -16,7 +20,7 @@
           - @speaker_rate_profile = SpeakerRateProfile.new
           %p 
             Do you have a Speaker Rate account? 
-            %a{:rel => "#sync_speaker_rate"} Yes
+            %a{:class => "module_link", :rel => "#sync_speaker_rate"} Yes
       #sync_speaker_rate.overlay
         = render :partial => "speaker_rate_profiles/form"
   .clear

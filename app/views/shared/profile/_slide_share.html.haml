@@ -1,6 +1,10 @@
 - if @slide_share_profile || can?(:set_slide_share_profile, @profile)
   .info_box#slide_share_info
-    .info_logo= link_to image_tag("slide_share_info_logo.png"), "http://www.slideshare.net"
+    .info_logo
+      = link_to image_tag("slide_share_info_logo.png"), "http://www.slideshare.net"
+      -if can?(:set_slide_share_profile, @profile) && @slide_share_profile
+        .edit
+          %a{:class => "module_link", :rel => "#sync_slide_share"} edit
     .info
       - if @slide_share_profile
         - if !@slide_share_profile.synced?
@@ -16,7 +20,7 @@
           - @slide_share_profile = SlideShareProfile.new
           %p 
             Do you have a Slide Share account? 
-            %a{:rel => "#sync_slide_share"} Yes
+            %a{:class => "module_link", :rel => "#sync_slide_share"} Yes
       #sync_slide_share.overlay
         = render :partial => "slide_share_profiles/form"
   .clear

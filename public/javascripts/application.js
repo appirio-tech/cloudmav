@@ -8,7 +8,7 @@ $(document).ready(function(){
   });
 
   // overlay
-  $("a[rel]").overlay({
+  $(".module_link").overlay({
     top: 160,
     mask: '#fff'
   });

@@ -1,6 +1,10 @@
 - if @git_hub_profile || can?(:set_git_hub_profile, @profile)
   .info_box#git_hub_info
-    .info_logo= link_to image_tag("git_hub_info_logo.png"), "http://www.github.com"
+    .info_logo
+      = link_to image_tag("git_hub_info_logo.png"), "http://www.github.com"
+      -if can?(:set_git_hub_profile, @profile) && @git_hub_profile
+        .edit
+          %a{:class => "module_link", :rel => "#sync_git_hub"} edit
     .info
       - if @git_hub_profile
         - if !@git_hub_profile.synced?
@@ -23,8 +27,8 @@
           - @git_hub_profile = GitHubProfile.new
           %p{:id => :add_git_hub_section} 
             Do you have a GitHub account? 
-            %a{:rel => "#sync_git_hub"} Yes
-          #sync_git_hub.overlay
-            = render :partial => "git_hub_profiles/form"
+            %a{:class => "module_link", :rel => "#sync_git_hub"} Yes
+      #sync_git_hub.overlay
+        = render :partial => "git_hub_profiles/form"
 
   .clear

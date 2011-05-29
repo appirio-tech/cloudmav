@@ -8,17 +8,17 @@
           %ul
             %li Filter :
             %li.active
-              = link_to "All", profile_events_path(@profile, :filter => "All"), :remote => true 
+              = link_to "All", profile_events_path(@profile, :filter => "All"), :remote => true, :rel => "nofollow"
             %li
-              = link_to "Experience", profile_events_path(@profile, :filter => "Experience"), :remote => true 
+              = link_to "Experience", profile_events_path(@profile, :filter => "Experience"), :remote => true, :rel => "nofollow" 
             %li
-              = link_to "Code", profile_events_path(:profile_id => @profile.username, :filter => "Code"), :remote => true 
+              = link_to "Code", profile_events_path(@profile, :filter => "Code"), :remote => true, :rel => "nofollow" 
             %li
-              = link_to "Writing", profile_events_path(:profile_id => @profile.username, :filter => "Writing"), :remote => true 
+              = link_to "Writing", profile_events_path(@profile, :filter => "Writing"), :remote => true, :rel => "nofollow" 
             %li
-              = link_to "Speaking", profile_events_path(:profile_id => @profile.username, :filter => "Speaking"), :remote => true 
+              = link_to "Speaking", profile_events_path(@profile, :filter => "Speaking"), :remote => true, :rel => "nofollow" 
             %li
-              = link_to "Social", profile_events_path(:profile_id => @profile.username, :filter => "Social"), :remote => true 
+              = link_to "Social", profile_events_path(@profile, :filter => "Social"), :remote => true, :rel => "nofollow" 
 
         %ul.list#events
           = render :partial => "events/event", :collection => @profile_events, :as => :event

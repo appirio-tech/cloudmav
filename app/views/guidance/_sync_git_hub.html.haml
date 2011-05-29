@@ -1,4 +1,8 @@
 
 %p
-	Have a GitHub account? Be sure to tell CodeMav. 
-	= link_to "Tell us your GitHub username", new_profile_git_hub_profile_path(current_profile)
+  Have a GitHub account? Be sure to tell CodeMav. 
+  %a{:class => "module_link", :rel => "#learn_sync_git_hub"} Tell us your GitHub username
+
+#learn_sync_git_hub.overlay
+  - @git_hub_profile = GitHubProfile.new
+  = render :partial => "git_hub_profiles/form"

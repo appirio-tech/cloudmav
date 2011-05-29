@@ -3,7 +3,7 @@
     = link_to image_tag("icons/twitter_logo.png"), "http://www.twitter.com"
     -if can?(:set_twitter_profile, @profile) && @profile.twitter_profile
       .edit
-        = link_to "edit", edit_profile_twitter_profile_path(@profile, @profile.twitter_profile)
+        %a{:class => "module_link", :rel => "#sync_twitter"} edit
   .info
     - if @profile.twitter_profile
       = link_to "Go to my Twitter page", @profile.twitter_profile.url, :target => "_blank"
@@ -15,8 +15,11 @@
       
     - else
       - if can? :set_twitter_profile, @profile
+        - @twitter_profile = TwitterProfile.new
         %p 
           Do you have a Twitter account? 
-          = link_to "Add Twitter", new_profile_twitter_profile_path(@profile)
+          %a{:class => "module_link", :rel => "#sync_twitter"} Add Twitter
+    #sync_twitter.overlay
+      = render :partial => "twitter_profiles/form"
 .clear
 
