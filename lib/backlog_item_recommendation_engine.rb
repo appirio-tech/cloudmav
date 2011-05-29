@@ -28,13 +28,14 @@ class BacklogItemRecommendationEngine
   end
 
   def self.get_score_for_tags(backlog_item, profile)
-    score = 0
-    profile.taggings.each do |t|
-      if backlog_item.has_tag?(t.tag)
-        score += 10
-      end
-    end
-    score
+    profile_tag_ids = profile.taggings.map{|t| t.tag.id}
+    same_tags = backlog_item.taggings.any_in(:tag_id => profile_tag_ids)
+    10 * same_tags.count
+    #profile.taggings.each do |t|
+    #  if backlog_item.has_tag?(t.tag)
+    #    score += 10
+    #  end
+    #end
   end
 
   def self.get_score_for_dates(backlog_item, profile)

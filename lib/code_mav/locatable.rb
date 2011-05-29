@@ -10,6 +10,7 @@ module CodeMav
         field :coordinates, :type => Array
  
         index [[ :coordinates, Mongo::GEO2D ]]
+        index :location
 
         before_save :update_coordinates
 
