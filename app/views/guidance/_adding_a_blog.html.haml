@@ -1,3 +1,5 @@
 %p
-	Have you added your blog to CodeMav?
-	= link_to "I'll add it right now.", new_profile_blog_path(current_profile)
+  Have you added your blog to CodeMav?
+  %a{:class => "module_link", :rel => "#add_blog"} I'll add it right now.
+  #add_blog.overlay
+    = render :partial => "blogs/form", :locals => { :blog => Blog.new, :action_text => "Add", :disable_text => "Adding..." }

@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_filter :set_profile, :only => [:new, :create]
+  before_filter :set_profile, :only => [:new, :create, :edit, :update]
   
   def show
     @blog = Blog.find(params[:id])
@@ -8,7 +8,6 @@ class BlogsController < ApplicationController
   def new
     authorize! :add_blog, @profile
     @blog = Blog.new
-    @blog_types = Blog.get_providers
   end
   
   def create
@@ -25,14 +24,13 @@ class BlogsController < ApplicationController
   end  
   
   def edit
+    authorize! :add_blog, @profile
     @blog = Blog.find(params[:id])
-    @blog_types = Blog.get_providers
   end
   
   def update
+    authorize! :add_blog, @profile
     @blog = Blog.find(params[:id])
-    @blog.blog_type = params[:blog_type]
-
     if @blog.update_attributes(params[:blog])
       @blog.sync!
       redirect_to profile_writing_path(@profile)
