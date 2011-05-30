@@ -1,0 +1,10 @@
+
+%p
+  Have a Bitbucket account? Be sure to tell CodeMav. 
+  %a{:class => "module_link", :rel => "#learn_sync_bitbucket"} Tell us your Bitbucket username
+
+#learn_sync_bitbucket.overlay
+  - @profile = current_profile
+  - @bitbucket_profile = BitbucketProfile.new
+  = render :partial => "bitbucket_profiles/form"
+

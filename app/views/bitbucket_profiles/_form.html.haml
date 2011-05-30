@@ -1,0 +1,8 @@
+%p Your Bitbucket username is simply the username you login with.
+
+= form_for [@profile, @bitbucket_profile] do |f|
+  .label= f.label :username, "Bitbucket username"
+  .control= f.text_field :username
+  .submit= f.submit "Save", :disable_with => "Saving..."
+
+

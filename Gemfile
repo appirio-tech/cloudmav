@@ -38,6 +38,7 @@ gem "simple-rss"
 gem "htmlentities"
 gem "chronic"
 gem "icalendar"
+gem "bitbucket_api", "0.0.1"
 
 group :development, :test do
   gem 'ghost' #used to set local routes easily

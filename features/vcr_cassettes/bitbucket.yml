@@ -1,0 +1,88 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://github.com:80/api/v2/json/user/show/
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 401
+      message: Unauthorized
+    headers: 
+      server: 
+      - nginx/0.7.67
+      date: 
+      - Mon, 30 May 2011 19:45:51 GMT
+      content-type: 
+      - application/json; charset=utf-8
+      connection: 
+      - keep-alive
+      status: 
+      - 401 Unauthorized
+      x-ratelimit-limit: 
+      - "60"
+      x-ratelimit-remaining: 
+      - "59"
+      x-runtime: 
+      - 2ms
+      content-length: 
+      - "26"
+      cache-control: 
+      - no-cache
+    body: "{\"error\":\"not authorized\"}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.bitbucket.org:443/1.0/users/rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.7.67
+      date: 
+      - Mon, 30 May 2011 20:03:11 GMT
+      content-type: 
+      - application/json; charset=utf-8
+      content-length: 
+      - "629"
+      expires: 
+      - Mon, 30 May 2011 20:03:11 GMT
+      vary: 
+      - Authorization, Cookie
+      last-modified: 
+      - Mon, 30 May 2011 20:03:11 GMT
+      etag: 
+      - "\"461de131fe9ff4174d01da7d06943834\""
+      cache-control: 
+      - max-age=0
+      strict-transport-security: 
+      - max-age=500
+    body: |-
+      {
+          "repositories": [
+              {
+                  "website": "", 
+                  "name": "Design Patterns", 
+                  "followers_count": 1, 
+                  "owner": "rookieone", 
+                  "logo": null, 
+                  "resource_uri": "/api/1.0/repositories/rookieone/design-patterns", 
+                  "slug": "design-patterns", 
+                  "description": ""
+              }
+          ], 
+          "user": {
+              "username": "rookieone", 
+              "first_name": "", 
+              "last_name": "", 
+              "avatar": "https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?d=identicon&s=32", 
+              "resource_uri": "/1.0/users/rookieone"
+          }
+      }
+    http_version: "1.1"

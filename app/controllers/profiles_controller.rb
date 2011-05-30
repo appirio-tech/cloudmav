@@ -20,6 +20,7 @@ class ProfilesController < ApplicationController
     @tab = "code"
     @code_events = ProfileEvent.public.for_profile(@profile).categorized_as("Code").order_by(:date.desc).paginate(:page => 1, :per_page => 10)
     @git_hub_profile = @profile.git_hub_profile
+    @bitbucket_profile = @profile.bitbucket_profile
     @stack_overflow_profile = @profile.stack_overflow_profile
   end
   

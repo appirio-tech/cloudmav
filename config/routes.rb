@@ -58,6 +58,7 @@ Codemav::Application.routes.draw do
     resources :twitter_profiles
     resources :stack_overflow_profiles
     resources :git_hub_profiles
+    resources :bitbucket_profiles
     resources :speaker_rate_profiles
     resources :slide_share_profiles
     resources :events

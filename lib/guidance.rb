@@ -16,6 +16,15 @@ learn "Syncing with your GitHub Account" do
   end
 end
 
+learn "Syncing with your Bitbucket Account" do      
+  thing Profile
+  subject :profile
+  partial :sync_bitbucket
+  conditions do |p|
+    !p.bitbucket_profile.nil?
+  end
+end
+
 learn "To set my location" do
   thing Profile
   subject :profile

@@ -597,8 +597,27 @@ a.menu_nav {
       cursor: text;
       text-shadow: none; }
 
+.module_link {
+  cursor: pointer; }
+
+/* the overlayed element */
 .overlay {
-  width: 450px; }
+  display: none;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 7px solid #373737;
+  width: 450px;
+  text-align: left; }
+
+/* default close button positioned on upper right corner */
+.overlay .close {
+  background-image: url(../images/overlay/close.png);
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+  height: 35px;
+  width: 35px; }
 
 .pagination {
   text-align: center;

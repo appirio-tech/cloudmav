@@ -5,7 +5,13 @@
 	<script type="text/javascript" charset="utf-8">
 		$(document).ready(function(){
 			$("#guidance").append("<%= escape_javascript(render :partial => @guidance.partial_location) %>");
+      // overlay
+      $(".module_link").overlay({
+        top: 160,
+        mask: '#fff'
+      });
 		});
+
 	</script>
 		
 <% end %>
