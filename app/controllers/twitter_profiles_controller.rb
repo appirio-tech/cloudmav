@@ -1,13 +1,12 @@
-class TwitterProfilesController < ApplicationController
-  before_filter :set_profile
+class TwitterProfilesController < LoggedInController
   
   def new
-    authorize! :set_twitter_profile, @profile
+    authorize! :sync_profile, @profile
     @twitter_profile = TwitterProfile.new
   end
   
   def create
-    authorize! :set_twitter_profile, @profile
+    authorize! :sync_profile, @profile
     @twitter_profile = TwitterProfile.new(params[:twitter_profile])
     @twitter_profile.profile = @profile
     @twitter_profile.sync!
@@ -16,12 +15,12 @@ class TwitterProfilesController < ApplicationController
   end
 
   def edit
-    authorize! :set_twitter_profile, @profile
+    authorize! :sync_profile, @profile
     @twitter_profile = @profile.twitter_profile
   end
 
   def update
-    authorize! :set_twitter_profile, @profile
+    authorize! :sync_profile, @profile
     
     if @profile.twitter_profile.update_attributes(params[:twitter_profile])
       @profile.twitter_profile.sync!

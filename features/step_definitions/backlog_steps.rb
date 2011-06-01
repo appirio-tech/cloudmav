@@ -7,6 +7,7 @@ When /^I add an item to the backlog$/ do
 end
 
 Then /^the item should be on the backlog$/ do
+  And "show me the page"
   And %Q{I should see "#{@backlog_item.title}"}
 end
 

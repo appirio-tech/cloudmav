@@ -14,7 +14,7 @@ class Ability
     can :sync_profile, Profile do |profile|
       user.profile == profile
     end
-    can [:set_twitter_profile, :set_speaker_rate_profile, :set_slide_share_profile, :set_stack_overflow_profile, :set_git_hub_profile], Profile do |profile|
+    can [:set_speaker_rate_profile, :set_slide_share_profile, :set_stack_overflow_profile, :set_git_hub_profile], Profile do |profile|
       user.profile == profile
     end
     can [:set_linked_in_profile], Profile do |profile|

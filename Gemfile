@@ -41,6 +41,7 @@ gem "icalendar"
 gem "bitbucket_api", "0.0.1"
 
 group :development, :test do
+  gem 'launchy', '0.4.0'
   gem 'ghost' #used to set local routes easily
   gem 'cucumber-rails', "0.3.2"
   gem 'cucumber', "0.10.0"

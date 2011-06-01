@@ -10,7 +10,8 @@ end
 
 Then /^the talk should be tagged with "([^"]*)"$/ do |tag|
   talk = Talk.find(@talk.id)
-  talk.has_tag?(tag).should == true
+  t = Tag.where(:name => tag).first
+  talk.has_tag?(t).should == true
 end
 
 Given /^there is a tag "([^"]*)"$/ do |tag|
@@ -25,7 +26,8 @@ end
 
 Then /^the talk should not be tagged with "([^"]*)"$/ do |tag|
   talk = Talk.find(@talk.id)
-  talk.has_tag?(tag).should == false
+  t = Tag.where(:name => tag).first
+  talk.has_tag?(t).should == false
 end
 
 Given /^there is a tag "([^"]*)" with synonyms "([^"]*)"$/ do |tag, synonyms|
