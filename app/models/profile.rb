@@ -26,6 +26,7 @@ class Profile
   field :name, :type => String
   field :email, :type => String
   field :username, :type => String
+  field :gravatar_id, :type => String
   index :username, :unique => true
   
   field :can_manage_tags, :type => Boolean, :default => false
@@ -52,6 +53,7 @@ class Profile
   scope :showcase, lambda { where(:showcase => true) }
   
   def username
+    return "" unless self.user
     self.user.username
   end
   

@@ -30,6 +30,8 @@
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>{Title}{block:SearchPage}, {lang:Search results for SearchQuery}{/block:SearchPage}{block:PostSummary}, {PostSummary}{/block:PostSummary}</title>
+    <link href="http://www.codemav.com/stylesheets/960.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="http://www.codemav.com/stylesheets/codemav.css" media="screen" rel="stylesheet" type="text/css">
     {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
     <link rel="shortcut icon" href="{Favicon}" />
     <link rel="apple-touch-icon" href="{PortraitURL-128}"/>
@@ -158,8 +160,9 @@
                     #wrapper #content .post .copy {
                         color: #6e7173;
                         padding: 10px;
-                        font-size: 13px;
-                        line-height: 15px;
+                        font-size: 12pt;
+                        line-height: 130%;
+                        
                     }
                         
                         #wrapper #content .post .copy a {
@@ -261,7 +264,7 @@
                     
                     #wrapper #content .post .title {
                         color: #494949;
-                        font-size: 16px;
+                        font-size: 16pt;
                         font-weight: bold;
                         padding: 10px 10px 0 10px;
                     }
@@ -859,10 +862,27 @@
     <style type="text/css">{CustomCSS}</style>
 </head>
 <body>
+  <div id="header">
+    <div class="container_16">
+      <div class="grid_16">
+        <div class="title_icon"><a href="/"><img alt="Main_code_mav_logo" src="http://www.codemav.com/images/main_code_mav_logo.png"></a></div>
+
+      <div id="menu">
+        <a href="http://codemav.tumblr.com/" class="menu_nav">What's New</a>
+        <a href="http://www.codemav.com/backlog" class="menu_nav">Backlog</a>
+        <a href="http://www.codemav.com/profiles" class="menu_nav">People</a>
+        <a href="http://www.codemav.com/talk_search" class="menu_nav">Talks</a>
+      </div>
+
+      </div>
+
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+  
     <div id="wrapper">
-        <div id='header'>
-          <a href="http://www.codemav.com"><img alt="Main_code_mav_logo" src="http://www.codemav.com/images/main_code_mav_logo.png"></a>
-        </div>
+
         <div id="title">
             <a href="/">
                 {block:IfHeaderImage}<img src="{image:Header}" />{/block:IfHeaderImage}
@@ -1141,6 +1161,22 @@
             //]]>
         </script>
     {/block:IfDisqusShortname}
-    <div id='footer'></div>
+<div id="footer">
+  <div class="container_16">
+    <div class="grid_16">
+      <ul>
+        <li><a href="http://www.codemav.com/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <div class="grid_16 copyright">
+      Copyright © 2011 CodeMav. All Rights Reserved.
+    </div>
+    <div class="clear"></div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+
 </body>
 </html>
