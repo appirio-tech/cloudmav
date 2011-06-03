@@ -52,11 +52,6 @@ class Profile
   scope :named, lambda { |name| { :where => { :name => name } } }
   scope :showcase, lambda { where(:showcase => true) }
   
-  def username
-    return "" unless self.user
-    self.user.username
-  end
-  
   def display_name
     (self.name.blank? || self.name.nil?) ? self.username : self.name
   end
