@@ -77,6 +77,7 @@ class Profile
   def sync!
     stack_overflow_profile.sync! unless stack_overflow_profile.nil?
     git_hub_profile.sync! unless git_hub_profile.nil?
+    bitbucket_profile.sync! unless bitbucket_profile.nil?
     speaker_rate_profile.sync! unless speaker_rate_profile.nil?
     slide_share_profile.sync! unless slide_share_profile.nil?
   end
