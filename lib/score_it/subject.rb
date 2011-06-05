@@ -28,7 +28,6 @@ module ScoreIt
         self.total_score = 0
         self.save
         event = RecalculateScoreEvent.new(:profile => self)
-        puts "event errors #{event.errors.inspect}"
         event.save
       end
 
