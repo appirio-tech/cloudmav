@@ -1,5 +1,7 @@
 class SyncEvent < Event
-  referenced_in :profile, :inverse_of => :events
+  referenced_in :profile, :inverse_of => :events, :index => true
+
+  scope :for_profile, lambda { |profile| where(:profile_id => profile.id) }
 
   def do_work
     sync

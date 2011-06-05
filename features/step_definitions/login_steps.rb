@@ -1,5 +1,6 @@
 Given /^I have an account$/ do
   @user = Factory.create(:user)
+  @profile = @user.profile
 end
 
 When /^I login$/ do

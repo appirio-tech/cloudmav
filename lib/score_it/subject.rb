@@ -23,6 +23,15 @@ module ScoreIt
     
     module InstanceMethods
 
+      def recalculate_score!
+        self.scorings.destroy_all
+        self.total_score = 0
+        self.save
+        event = RecalculateScoreEvent.new(:profile => self)
+        puts "event errors #{event.errors.inspect}"
+        event.save
+      end
+
       def calculate_total_score
         self.total_score = 0
         self.scorings.each{|s| self.total_score += s.score }
