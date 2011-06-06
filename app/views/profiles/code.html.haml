@@ -8,11 +8,14 @@
           %ul
             %li Filter :
             %li.active
-              = link_to "All", profile_events_path(@profile, :filter => "Code"), :remote => true 
+              = link_to "All", profile_events_path(@profile, :filter => "Code"), :remote => true, :rel => "nofollow"
             %li
-              = link_to "StackOverflow", profile_events_path(@profile, :filter => "Code", :subfilter => "StackOverflow"), :remote => true 
+              = link_to "StackOverflow", profile_events_path(@profile, :filter => "Code", :subfilter => "StackOverflow"), :remote => true, :rel => "nofollow"
             %li
-              = link_to "GitHub", profile_events_path(@profile, :filter => "Code", :subfilter => "GitHub"), :remote => true 
+              = link_to "GitHub", profile_events_path(@profile, :filter => "Code", :subfilter => "GitHub"), :remote => true, :rel => "nofollow"
+            %li
+              = link_to "Bitbucket", profile_events_path(@profile, :filter => "Code", :subfilter => "Bitbucket"), :remote => true, :rel => "nofollow"
+
 
       %ul.list#events
         = render :partial => "events/event", :collection => @code_events, :as => :event
