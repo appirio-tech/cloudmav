@@ -10,5 +10,9 @@ class PagesController < ApplicationController
   
   def api_documentation
   end
+
+  def points
+
+  end
   
 end
