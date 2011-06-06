@@ -28,3 +28,15 @@ Feature: BitbucketProfile
    When I view their code profile
    Then I should see their Bitbucket profile
 
+  Scenario: Edit Bitbucket
+
+    Given I am logged in
+    And there are guidances
+    And I have a Bitbucket profile
+    When I edit my Bitbucket id
+    Then I should have a Bitbucket profile
+    And my old Bitbucket events should be deleted
+    And my old repositories should be deleted
+    And I should have my new repositories
+
+

@@ -4,6 +4,7 @@ class SyncEvent < Event
   scope :for_profile, lambda { |profile| where(:profile_id => profile.id) }
 
   def do_work
+    before_sync if respond_to?(:before_sync)
     sync
     s = subject
     s.last_synced_date = DateTime.now

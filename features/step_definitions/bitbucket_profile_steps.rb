@@ -31,4 +31,37 @@ Then /^I should see their Bitbucket profile$/ do
   And %Q{I should see "Go to my Bitbucket Profile"}
 end
 
+Given /^I have a Bitbucket profile$/ do
+  VCR.use_cassette("my bitbucket", :record => :new_episodes) do
+    bb = Factory.create(:bitbucket_profile, :username => "rookieone", :profile => @profile, :last_synced_date => DateTime.now)
+    @profile.save
+    bb.sync!
+  end
+end
+
+When /^I edit my Bitbucket id$/ do
+  VCR.use_cassette("edit bitbucket", :record => :new_episodes) do
+    profile = Profile.find(@profile.id)
+    @old_repositories = profile.bitbucket_profile.repositories.to_a
+    visit profile_code_path(@profile)
+    fill_in "bitbucket_profile_username", :with => "claudiolassala"
+    click_button "bitbucket_profile_submit"
+  end
+end
+
+Then /^my old Bitbucket events should be deleted$/ do
+  repo = BitbucketRepositoryAddedEvent.all.map(&:bitbucket_repository).select{|r| r.name == "Design Patterns"}.first
+  repo.should be_nil
+end
+
+Then /^my old repositories should be deleted$/ do
+  old_ids = @old_repositories.map(&:id)
+  BitbucketRepository.any_in(_id: old_ids).count.should == 0
+end
+
+Then /^I should have my new repositories$/ do
+  profile = Profile.find(@profile.id)
+  profile.bitbucket_profile.repositories.count.should > 0
+end
+
 
