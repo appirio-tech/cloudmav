@@ -7,9 +7,7 @@ class TalkSearchesController < ApplicationController
   def create
     @search = Talk.search(params[:search])
     @talks = @search.results
-    respond_to do |format|
-      format.js {}
-    end
+    render :show
   end
   
 end

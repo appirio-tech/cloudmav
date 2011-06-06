@@ -17,7 +17,7 @@
           = render :partial => "shared/simple_tags", :locals => { :taggable => talk }
         .talk_author
           .talk_profile_pic= image_tag talk.profile.gravatar_url(:size => 60)
-          .talk_profile_name= talk.profile.username
+          .talk_profile_name= link_to talk.profile.username, talk.profile
 
         .clear
   = will_paginate @talks
