@@ -10,7 +10,7 @@
   document.write('<div class="codemav_subpoints_section">');
   <% unless @profile.stack_overflow_profile.nil? %>
     document.write('<%= image_tag 'stack_overflow_widget_icon.png', :height => 20, :class => "codemav_subpoints_icon" %>');
-    document.write('<div class="codemav_subpoints"><%= @profile.stack_overflow_profile.reputation %></div>');
+    document.write('<div class="codemav_subpoints"><%= pointify @profile.stack_overflow_profile.reputation %></div>');
   <% end %>
   document.write('</div>');
   document.write('</div>');
