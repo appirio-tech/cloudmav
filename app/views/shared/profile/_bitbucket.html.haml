@@ -3,8 +3,11 @@
     .info_logo
       = link_to image_tag("bitbucket_info_logo.png"), "http://www.bitbucket.org"
       -if can?(:sync_profile, @profile) && @bitbucket_profile
+        .delete
+          = link_to "delete", [@profile, @bitbucket_profile], :id=> :delete_bitbucket, :confirm => 'Are you sure?', :method => :delete
         .edit
           %a{:class => "module_link", :rel => "#sync_bitbucket"} edit
+
     .info
       - if @bitbucket_profile
         - if !@bitbucket_profile.synced?

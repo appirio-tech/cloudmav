@@ -15,3 +15,9 @@ Then /^I should have the badge "([^"]*)" in my profile$/ do |title|
   @user.profile.reload
   assert @user.profile.has_badge_named?(title)
 end
+
+Then /^I should not have the "([^"]*)" badge$/ do |title|
+  @profile.reload
+  @profile.has_badge_named?(title).should == false
+end
+

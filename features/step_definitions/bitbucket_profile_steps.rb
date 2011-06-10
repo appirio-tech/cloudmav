@@ -64,4 +64,14 @@ Then /^I should have my new repositories$/ do
   profile.bitbucket_profile.repositories.count.should > 0
 end
 
+When /^I delete my Bitbucket profile$/ do
+  visit profile_code_path(@profile)
+  profile = Profile.find(@profile.id)
+  @old_repositories = profile.bitbucket_profile.repositories.to_a
+  click_link "delete_bitbucket"
+end
+
+Then /^I should not have a Bitbucket profile$/ do
+  Profile.find(@profile.id).bitbucket_profile.should be_nil
+end
 

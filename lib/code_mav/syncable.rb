@@ -14,6 +14,18 @@ module CodeMav
         !self.last_synced_date.nil?
       end
 
+      def unsync!
+        event_name = "#{self.class.to_s}UnsyncEvent"
+        if Object.const_defined?(event_name)
+          event = Object.const_get(event_name).new
+          event.subject_class_name = self.class.to_s
+          event.subject_id = self.id
+          event.profile = self.profile
+          event.send("#{self.class.to_s.underscore}=", self)
+          event.save
+        end
+      end
+
       def resync!
         save
         event_name = "#{self.class.to_s}ResyncEvent"

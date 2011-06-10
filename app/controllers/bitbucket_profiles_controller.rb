@@ -30,4 +30,11 @@ class BitbucketProfilesController < LoggedInController
     end
   end
 
+  def destroy
+    authorize! :sync_profile, @profile
+    @bitbucket_profile = BitbucketProfile.find(params[:id])
+    @bitbucket_profile.unsync!
+    redirect_to profile_code_path(@profile)
+  end
+
 end
