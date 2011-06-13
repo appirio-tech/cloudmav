@@ -1,5 +1,4 @@
-class GitHubProfilesController < ApplicationController
-  before_filter :set_profile, :only => [:new, :create]
+class GitHubProfilesController < LoggedInController
   
   def new
     authorize! :set_git_hub_profile, @profile
@@ -13,6 +12,22 @@ class GitHubProfilesController < ApplicationController
     @git_hub_profile.sync!
     
     redirect_to profile_code_path(@profile)
+  end
+
+  def edit
+    authorize! :sync_profile, @profile
+    @git_hub_profile = GitHubProfile.find(params[:id])
+  end
+
+  def update
+    authorize! :sync_profile, @profile
+    @git_hub_profile = GitHubProfile.find(params[:id])
+    if @git_hub_profile.update_attributes(params[:git_hub_profile])
+      @git_hub_profile.resync!
+      redirect_to profile_code_path(@profile)
+    else
+      render :edit
+    end
   end
 
 end

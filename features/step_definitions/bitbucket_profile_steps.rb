@@ -54,12 +54,12 @@ Then /^my old Bitbucket events should be deleted$/ do
   repo.should be_nil
 end
 
-Then /^my old repositories should be deleted$/ do
+Then /^my old Bitbucket repositories should be deleted$/ do
   old_ids = @old_repositories.map(&:id)
   BitbucketRepository.any_in(_id: old_ids).count.should == 0
 end
 
-Then /^I should have my new repositories$/ do
+Then /^I should have my new Bitbucket repositories$/ do
   profile = Profile.find(@profile.id)
   profile.bitbucket_profile.repositories.count.should > 0
 end

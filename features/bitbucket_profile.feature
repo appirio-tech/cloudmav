@@ -36,8 +36,8 @@ Feature: BitbucketProfile
     When I edit my Bitbucket id
     Then I should have a Bitbucket profile
     And my old Bitbucket events should be deleted
-    And my old repositories should be deleted
-    And I should have my new repositories
+    And my old Bitbucket repositories should be deleted
+    And I should have my new Bitbucket repositories
 
   Scenario: Delete Bitbucket
 
@@ -48,6 +48,6 @@ Feature: BitbucketProfile
     Then I should not have a Bitbucket profile
     And I should not have the "Bucketeer" badge
     And my old Bitbucket events should be deleted
-    And my old repositories should be deleted
+    And my old Bitbucket repositories should be deleted
     And I should have 0 coder points
 

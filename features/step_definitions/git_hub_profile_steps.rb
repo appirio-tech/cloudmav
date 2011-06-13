@@ -47,3 +47,36 @@ Then /^I should see their GitHub profile$/ do
   And %Q{I should see "Go to my GitHub Profile"}
 end
 
+Given /^I have a GitHub profile$/ do
+  VCR.use_cassette("my github", :record => :new_episodes) do
+    g = Factory.create(:git_hub_profile, :username => "rookieone", :profile => @profile, :last_synced_date => DateTime.now)
+    @profile.save
+    g.sync!
+  end
+end
+
+When /^I edit my GitHub id$/ do
+  VCR.use_cassette("edit github", :record => :new_episodes) do
+    profile = Profile.find(@profile.id)
+    @old_repositories = profile.git_hub_profile.repositories.to_a
+    visit profile_code_path(@profile)
+    fill_in "git_hub_profile_username", :with => "panesofglass"
+    click_button "git_hub_profile_submit"
+  end
+end
+
+Then /^my old GitHub events should be deleted$/ do
+  repo = GitHubRepositoryAddedEvent.all.map(&:git_hub_repository).select{|r| r.name == "SlideShare"}.first
+  repo.should be_nil
+end
+
+Then /^my old GitHub repositories should be deleted$/ do
+  old_ids = @old_repositories.map(&:id)
+  GitHubRepository.any_in(_id: old_ids).count.should == 0
+end
+
+Then /^I should have my new GitHub repositories$/ do
+  profile = Profile.find(@profile.id)
+  profile.git_hub_profile.repositories.count.should > 0
+end
+
