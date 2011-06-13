@@ -3,6 +3,8 @@
     .info_logo
       = link_to image_tag("git_hub_info_logo.png"), "http://www.github.com"
       -if can?(:set_git_hub_profile, @profile) && @git_hub_profile
+        .delete
+          = link_to "delete", [@profile, @git_hub_profile], :id=> :delete_git_hub, :confirm => 'Are you sure?', :method => :delete
         .edit
           %a{:class => "module_link", :rel => "#sync_git_hub"} edit
     .info

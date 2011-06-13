@@ -41,14 +41,14 @@ Feature: GitHubProfile
     And my old GitHub repositories should be deleted
     And I should have my new GitHub repositories
 
-    # Scenario: Delete Bitbucket
+ Scenario: Delete GitHub
 
-    #   Given I am logged in
-    #   And there are guidances
-    #   And I have a Bitbucket profile
-    #   When I delete my Bitbucket profile
-    #   Then I should not have a Bitbucket profile
-    #   And I should not have the "Bucketeer" badge
-    #   And my old Bitbucket events should be deleted
-    #   And my old repositories should be deleted
-    #   And I should have 0 coder points
+   Given I am logged in
+   And there are guidances
+   And I have a GitHub profile
+   When I delete my GitHub profile
+   Then I should not have a GitHub profile
+   And I should not have the "Git R Done" badge
+   And my old GitHub events should be deleted
+   And my old GitHub repositories should be deleted
+   And I should have 0 coder points

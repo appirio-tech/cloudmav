@@ -30,4 +30,11 @@ class GitHubProfilesController < LoggedInController
     end
   end
 
+  def destroy
+    authorize! :sync_profile, @profile
+    @git_hub_profile = GitHubProfile.find(params[:id])
+    @git_hub_profile.unsync!
+    redirect_to profile_code_path(@profile)
+  end
+
 end

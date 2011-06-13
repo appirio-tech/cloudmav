@@ -80,3 +80,14 @@ Then /^I should have my new GitHub repositories$/ do
   profile.git_hub_profile.repositories.count.should > 0
 end
 
+When /^I delete my GitHub profile$/ do
+  visit profile_code_path(@profile)
+  profile = Profile.find(@profile.id)
+  @old_repositories = profile.git_hub_profile.repositories.to_a
+  click_link "delete_git_hub"
+end
+
+Then /^I should not have a GitHub profile$/ do
+  Profile.find(@profile.id).git_hub_profile.should be_nil
+end
+
