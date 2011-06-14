@@ -15,11 +15,6 @@ $error_background:#F0A8A8;
 $error_border:#990000;
 $dark_blue: #001626;
 $not_quite_as_dark_blue: #003459;
-$droid: 'Droid Sans', arial, serif;
-$pt: 'PT Sans', arial, serif;
-$droid_serif: 'Droid Serif', arial, serif;
-$title_font: $pt;
-$main_font: 'Arial' ;
 $hover_blue: #3F9FF8;
 
 $gray_background: #EAEAEA;
@@ -58,14 +53,8 @@ $gradient_bottom: #4792E8;
   box-shadow: 5px 5px 2px $shadow;
 }
 
-@mixin title {
-  font-family: $title_font;
-
-  font-weight:normal; 
-}
-
 body {
-  font-family: $main_font;
+  font-family: Helvetica, Arial;
   font-size: 12pt;
   background-image: url("../images/background.png");
   backgrond-repeat: repeat-x repeat-y;
@@ -79,14 +68,12 @@ h1 {
 }
 
 h2 {
-  @include title;
-  font-size: 36pt;
+  font-size: 18pt;
   color:$light_black;
   margin-bottom: 15px;
 }
 
 h3 {
-  @include title;
   font-size: 14pt;
   color:$light_black;
   margin-top: 10px;
@@ -94,7 +81,6 @@ h3 {
 }
 
 h4 {
-  @include title;
   font-size: 16pt;
   color:$light_black;
   margin-bottom: 5px; 

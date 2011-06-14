@@ -34,11 +34,7 @@ $hover_blue: #3F9FF8;
 }
 
 h2 {
-  border-bottom: 1px solid $light_gray;
-  color: $near_black;
-  font-size: 14pt;
-  padding-bottom: 5px;
-  margin-bottom: 3px;
+  margin-left: 5px;
 }
 
 h3 {
@@ -170,8 +166,8 @@ h3 {
   width: 400px;
 }
 
-#events {
-  width: 400px;
+.list {
+  width: 470px;
   margin-top: 5px;
   li {
     clear: both;
@@ -187,7 +183,7 @@ h3 {
   }
   .item_info {
     border-bottom: 2px solid #EBEBEB;
-    margin-left: 53px;
+    margin-left: 55px;
     padding-bottom: 7px;
     margin-top: 0px;
     .item_title {
@@ -207,6 +203,9 @@ h3 {
       color: #979797;
       font-size: 10pt;
     }
+    .range {
+      font-size: 9pt;
+    }
   }
 }
 
@@ -218,14 +217,12 @@ h3 {
 }
 
 .info_box {
-  border: 1px solid $light_gray;
-  background: $lightest_gray;
-  @include corners;
-  margin-top:20px;
-  padding: 1px;
   width: 250px;
+  float: right;
+  margin-bottom: 15px;
   .info_logo {
     background: $white;
+    border-bottom: 1px solid $gray_foreground;
     .edit {
       float:right;
       padding-top: 29px;
@@ -251,6 +248,11 @@ h3 {
       text-transform: lowercase;
     }
   }
+}
+
+.tags {
+  width: 250px;
+  float: right;
 }
 
 #count_box {
