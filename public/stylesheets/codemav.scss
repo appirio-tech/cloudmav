@@ -1,10 +1,4 @@
-// base blue 2D406B
-// dark blue 212736
-// orange E03F00
-
 $lightest_blue: #73B2D9;
-// $light_blue: #35AAF2;
-// $blue: #0477BF;
 $blue: #003459;
 $light_blue: #0477BF;
 $off_white: #F2F2F2;
@@ -30,9 +24,14 @@ $hover_blue: #3F9FF8;
 
 $gray_background: #EAEAEA;
 $gray_foreground: #818181;
+$gray_text: #323232;
+$gray_gradient1: #E6E6E6;
+$gray_gradient2: #F4F4F4;
 
 $dark_background: #373737;
 $dark_foreground: #ffffff;
+$dark_gradient1: #363636;
+$dark_gradient2: #4F4F4F; 
 $emphasis_dark_background: #1A1A1A;
 
 $shadow: #868686; 
@@ -67,14 +66,14 @@ $gradient_bottom: #4792E8;
 
 body {
   font-family: $main_font;
-  font-size: 10pt;
+  font-size: 12pt;
   background-image: url("../images/background.png");
   backgrond-repeat: repeat-x repeat-y;
 }
 
 h1 {
-  @include title;
-  font-size: 36pt;
+  font-size: 24pt;
+  font-weight:bold;
   color:$light_blue;
   margin-bottom: 15px;  
 }
@@ -85,6 +84,7 @@ h2 {
   color:$light_black;
   margin-bottom: 15px;
 }
+
 h3 {
   @include title;
   font-size: 14pt;
@@ -101,7 +101,6 @@ h4 {
 }
 
 a {
-  font-family: $main_font;
   text-decoration: none;
   color: $blue;
   &:visited {
@@ -112,6 +111,7 @@ a {
     text-decoration: underline;
   }
 }
+
 p {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -123,15 +123,13 @@ hr {
 
 .button {
   @include corners;
-  @include gradient($light_blue, $blue);
-  border: 1px solid $light_gray;
-  color:$white;
+  //@include gradient($light_blue, $blue);
+  background: $gray_background ;
+  border: 1px solid $gray_foreground;
+  color: $gray_foreground;
   padding: 7px;
   font-size: .9em;
   margin: 10px;
-  &:visited {
-    color: $white;
-  }
   &:hover {
     background: $light_blue;
     border: 1px solid $blue;
@@ -152,7 +150,7 @@ hr {
   height: 150px;
 }
 
-$form_font_size:12pt;
+$form_font_size: 10pt;
 $form_top_margin:10px;
 form {
   p {
@@ -181,15 +179,16 @@ form {
     }
   }
   input[type=submit] {
-    @include corners;
-    @include gradient($blue, $light_blue);
-    //border: 1px solid $light_gray;
-    //background: $blue;
-    color:$white;
+    @include corners(3px);
+    @include gradient($gray_gradient2, $gray_gradient1);
+    border: 1px solid $gray_foreground;
+    color: $gray_text;
     padding: 7px;
-    font-size: $form_font_size;
+    font-size: $form_font_size + 1pt;
+    cursor: pointer;
     &:hover {
-      background: $light_blue;
+      @include gradient($dark_gradient1, $dark_gradient2);
+      color: $off_white;
       border: 1px solid $blue;
     }
   }

@@ -23,7 +23,7 @@ Codemav::Application.routes.draw do
   resources :technologies
 
   resources :jobs
-  # match '/linkedin/callback' => "linkedin_profiles#callback", :as => :linkedin_callback
+  resource :autodiscover
   
   resources :projects
   
