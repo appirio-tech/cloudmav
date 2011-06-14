@@ -3,12 +3,12 @@
   = render :partial => "profile_menu"
   
   #profile_content
-    .grid_9
+    .grid_8
       %ul#followings
         = render :partial => "followings/following", :collection => @friends, :as => :profile
 
       &nbsp;
-    .grid_6
+    .grid_5
       = render :partial => "shared/profile/twitter"
       &nbsp;
 
