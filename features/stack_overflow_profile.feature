@@ -41,3 +41,19 @@ Feature: StackOverflowProfile
     And my old StackOverflow answers should be deleted
     And I should have my new StackOverflow questions
     And I should have my new StackOverflow answers
+
+  Scenario: Delete StackOverflow
+
+    Given I have a StackOverflow profile
+    When I delete my StackOverflow profile
+    Then I should not have a StackOverflow profile
+    And my old StackOverflow events should be deleted
+    And my old StackOverflow questions should be deleted
+    And my old StackOverflow answers should be deleted
+
+  Scenario: Error with StackOverflow sync
+
+    Given I have a StackOverflow profile
+    When there was an error while syncing my StackOverflow profile
+    Then I should see an error message on my StackOverflow profile page
+

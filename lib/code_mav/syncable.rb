@@ -10,6 +10,17 @@ module CodeMav
     
     module InstanceMethods
 
+      def error_while_syncing?
+        event_name = "#{self.class.to_s}SyncEvent"
+        return false unless Object.const_defined?(event_name)
+
+        eventClass = Object.const_get(event_name)
+        event = eventClass.for_profile(self.profile).last
+        return false if event.nil?
+
+        !event.error_message.nil?
+      end
+
       def synced?
         !self.last_synced_date.nil?
       end

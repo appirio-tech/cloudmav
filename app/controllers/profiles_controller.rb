@@ -22,6 +22,8 @@ class ProfilesController < ApplicationController
     @git_hub_profile = @profile.git_hub_profile
     @bitbucket_profile = @profile.bitbucket_profile
     @stack_overflow_profile = @profile.stack_overflow_profile
+    puts "WHAT???? #{@stack_overflow_profile.error_while_syncing?}"
+    puts "HOW???? #{@profile.stack_overflow_profile.error_while_syncing?}"
   end
   
   def experience

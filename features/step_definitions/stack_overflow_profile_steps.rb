@@ -105,3 +105,27 @@ Then /^my old StackOverflow events should be deleted$/ do
   StackOverflowAnswerAddedEvent.any_in(_id: old_ids).count.should == 0
 end
 
+When /^I delete my StackOverflow profile$/ do
+  visit profile_code_path(@profile)
+  profile = Profile.find(@profile.id)
+  @old_questions = profile.stack_overflow_profile.questions.to_a
+  @old_answers = profile.stack_overflow_profile.answers.to_a
+  @old_answer_events = StackOverflowAnswerAddedEvent.all.to_a
+  @old_question_events = StackOverflowQuestionAddedEvent.all.to_a
+  click_link "delete_stack_overflow"
+end
+
+Then /^I should not have a StackOverflow profile$/ do
+  Profile.find(@profile.id).stack_overflow_profile.should be_nil
+end
+
+When /^there was an error while syncing my StackOverflow profile$/ do
+  StackOverflowProfileSyncEvent.last.error_message = "There is an error!"
+end
+
+Then /^I should see an error message on my StackOverflow profile page$/ do
+  visit profile_code_path(@profile)
+  And %Q{I should see "There was an error while syncing"}
+end
+
+

@@ -31,4 +31,11 @@ class StackOverflowProfilesController < ApplicationController
     end
   end
   
+  def destroy
+    authorize! :sync_profile, @profile
+    @stack_overflow_profile = StackOverflowProfile.find(params[:id])
+    @stack_overflow_profile.unsync!
+    redirect_to profile_code_path(@profile)
+  end
+
 end

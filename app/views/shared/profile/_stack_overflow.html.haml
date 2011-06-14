@@ -3,12 +3,16 @@
     .info_logo
       = link_to image_tag("stack_over_flow_info_logo.png"), "http://www.stackoverflow.com"
       -if can?(:set_stack_overflow_profile, @profile) && @stack_overflow_profile
+        .delete
+          = link_to "delete", [@profile, @stack_overflow_profile], :id=> :delete_stack_overflow, :confirm => 'Are you sure?', :method => :delete
         .edit
           %a{:class => "module_link", :rel => "#sync_stack_overflow"} edit
     .info
       - if @stack_overflow_profile
         - if !@stack_overflow_profile.synced?
           %p We are still processing. Hit refresh.
+        - elsif @stack_overflow_profile.error_while_syncing?
+          %p.sync_error There was an error while syncing.
         - else
           = link_to "Go to my StackOverflow Profile", @stack_overflow_profile.url, :target => "_blank"
           %table
