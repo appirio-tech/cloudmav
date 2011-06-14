@@ -24,7 +24,7 @@ class StackOverflowProfilesController < ApplicationController
     authorize! :set_stack_overflow_profile, @profile
     
     if @profile.stack_overflow_profile.update_attributes(params[:stack_overflow_profile])
-      @profile.stack_overflow_profile.sync!
+      @profile.stack_overflow_profile.resync!
       redirect_to profile_code_path(@profile)
     else
       render :edit

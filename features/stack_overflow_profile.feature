@@ -18,12 +18,6 @@ Feature: StackOverflowProfile
     And my StackOverflow profile should be tagged
     And my profile should have my StackOverflow profile tags
 
-  Scenario: Edit profile
-
-    Given I have a StackOverflow profile
-    When I edit my StackOverflow profile
-    Then my StackOverflow profile should be updated
-
   Scenario: Don't see StackOverflow on users without StackOverflow
 
     Given there is another user
@@ -36,3 +30,14 @@ Feature: StackOverflowProfile
     And the other user has a StackOverflow profile
     When I view their code profile
     Then I should see their StackOverflow profile
+
+  Scenario: Edit StackOverflow
+
+    Given I have a StackOverflow profile
+    When I edit my StackOverflow id
+    Then I should have a StackOverflow profile
+    And my old StackOverflow events should be deleted
+    And my old StackOverflow questions should be deleted
+    And my old StackOverflow answers should be deleted
+    And I should have my new StackOverflow questions
+    And I should have my new StackOverflow answers
