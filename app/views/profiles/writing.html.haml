@@ -28,7 +28,7 @@
       - @profile.blogs.each do |b|
         .info_box
           .info_logo
-            .blog_title= b.title.html_safe
+            .blog_title= b.title.html_safe unless b.title.nil?
           .info
             - if can? :edit, b
               .item_link
