@@ -4,7 +4,7 @@ class StackOverflowProfileSyncEvent < SyncEvent
 
   def earn_points
     rep_points = stack_overflow_profile.reputation / 100
-    stack_overflow_profile.profile.adjust_score("StackOverflow reputation", rep_points, :coder_points)
+    stack_overflow_profile.profile.adjust_score("StackOverflow reputation", rep_points, :knowledge_points)
   end
 
   def sync

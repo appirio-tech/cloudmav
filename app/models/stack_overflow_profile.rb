@@ -15,7 +15,7 @@ class StackOverflowProfile
   references_many :answers, :class_name => "StackOverflowAnswer", :inverse_of => :stack_overflow_profile
   
   def related_items
-    [profile.coder_profile]
+    [profile.knowledge_profile]
   end
   
   def as_json(opts={})

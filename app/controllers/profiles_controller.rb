@@ -21,9 +21,12 @@ class ProfilesController < ApplicationController
     @code_events = ProfileEvent.public.for_profile(@profile).categorized_as("Code").order_by(:date.desc).paginate(:page => 1, :per_page => 10)
     @git_hub_profile = @profile.git_hub_profile
     @bitbucket_profile = @profile.bitbucket_profile
+  end
+
+  def knowledge
+    @tab = "knowledge"
+    @knowledge_events = ProfileEvent.public.for_profile(@profile).categorized_as("Knowledge").order_by(:date.desc).paginate(:page => 1, :per_page => 10)
     @stack_overflow_profile = @profile.stack_overflow_profile
-    puts "WHAT???? #{@stack_overflow_profile.error_while_syncing?}"
-    puts "HOW???? #{@profile.stack_overflow_profile.error_while_syncing?}"
   end
   
   def experience

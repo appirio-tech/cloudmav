@@ -4,7 +4,7 @@ class StackOverflowQuestionAddedEvent < ProfileEvent
 
   def set_info
     self.is_public = true
-    self.category = "Code"
+    self.category = "Knowledge"
     self.subcategory = "StackOverflow"
     self.date = stack_overflow_question.date 
   end

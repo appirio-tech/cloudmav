@@ -26,4 +26,11 @@ namespace :codemav do
       end
     end
   end
+
+  desc "Recalculate points"
+  task :recalc_points => :environment do
+    Profile.all.to_a.each do |p|
+      p.recalculate_score!
+    end
+  end
 end

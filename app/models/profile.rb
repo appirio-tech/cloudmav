@@ -11,6 +11,7 @@ class Profile
   include CodeMav::WriterModule
   include CodeMav::SpeakerModule
   include CodeMav::CoderModule
+  include CodeMav::KnowledgeModule
   include CodeMav::ExperienceModule
   include CodeMav::Taggable
   include CodeMav::Locatable

@@ -5,7 +5,6 @@ module CodeMav
 
         references_one :coder_profile, :inverse_of => :profile
 
-        references_one :stack_overflow_profile
         references_one :git_hub_profile
         references_one :bitbucket_profile
 
