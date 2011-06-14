@@ -4,6 +4,7 @@ $near_black: #424242;
 $light_gray: #ABABAB;
 $lightest_gray: #D6D6D6;
 $blue: #3F9FF8;
+$dark_blue: #003459;
 
 $gray_background: #EAEAEA;
 $gray_foreground: #818181;
@@ -11,9 +12,25 @@ $gray_foreground: #818181;
 $dark_background: #373737;
 $dark_foreground: #ffffff;
 
+$gray_gradient1: #E6E6E6;
+$gray_gradient2: #F4F4F4;
+
+$dark_gradient1: #363636;
+$dark_gradient2: #4F4F4F; 
+
+$hover_blue: #3F9FF8;
+
 @mixin corners($radius: 5px) {
   border-radius: $radius;
   -moz-border-radius: $radius;  
+}
+
+@mixin gradient($from, $to) {
+  /* gecko based browsers */
+  background: -moz-linear-gradient(top, $from, $to);
+
+  /* webkit based browsers */
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
 }
 
 h2 {
@@ -106,53 +123,93 @@ h3 {
 }
 
 #profile_content {
+  margin-left: 110px;
+  margin-top: 20px;
   background: $white;
   border: 1px solid $lightest_gray;
-  border-top: 1px solid $white;
+  border-top: 1px solid $dark_background;
   padding-bottom: 50px;
-  padding-top: 20px;
+  padding-top: 7px;
+  padding-left: 15px;
 }
 
 #profile_menu {
   margin-top: 20px;
-  font-size: 9pt;
+  margin-right: -10px;
+  font-size: 10pt;
   font-weight: bold;
   ul {
-    margin-left: -9px;
+    @include gradient($gray_gradient2, $gray_gradient1);
   }
   li {
-    float: left;
-    margin: 0px;
-    margin-right: 4px;
-    text-transform: uppercase;
-    padding-right: 20px;
-    padding-left: 15px;
-    padding-top: 8px;
-    padding-bottom: 9px;
-    background: $blue;
-    border-top: 3px solid $blue;
-    border-left: 1px solid $blue;
-    border-right: 1px solid $blue;
-    img {
-      float: left;
-    }
+    border-top: 1px solid $dark_background;
+    border-right: 1px solid $lightest_gray;
+    border-left: 1px solid $lightest_gray;
+    padding: 10px;
+    padding-left: 17px;
     a {
-      color: $white;
-      margin-left: 7px;
-      position: relative;
-      top: 6px;
+      color: $dark_background;
+    }
+    &:hover {
+      border-left: 7px solid $dark_background;
+      padding-left: 11px;
     }
   }
   .selected {
-    background: $white;
-    border-left: 1px solid $lightest_gray;
-    border-right: 1px solid $lightest_gray;
-
+    @include gradient($dark_gradient1, $dark_gradient2);
+    border-right: 1px solid $dark_background;
+    border-left: 7px solid $blue;
+    padding-left: 10px;
     a {
-      color: $black;
+      color: $white;
     }
   }
 }
+
+#event_feed {
+  width: 400px;
+}
+
+#events {
+  width: 400px;
+  margin-top: 5px;
+  li {
+    clear: both;
+    padding: 5px;
+  }
+  .item_pic {
+    border: 2px solid #EBEBEB;
+    float:left;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .item_info {
+    border-bottom: 2px solid #EBEBEB;
+    margin-left: 53px;
+    padding-bottom: 7px;
+    margin-top: 0px;
+    .item_title {
+      margin-top: 0px;
+      font-size: 11pt;
+      font-weight: bold;
+      a {
+        color: $black;
+        text-decoration: none;
+        &:hover {
+          color: $hover_blue;
+        }
+      }
+    }
+    .item_description {
+      margin-top: 5px;
+      color: #979797;
+      font-size: 10pt;
+    }
+  }
+}
+
 
 #badges {
   li {

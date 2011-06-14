@@ -2,7 +2,8 @@
   = render :partial => "header"
   = render :partial => "profile_menu"
   #profile_content
-    .grid_9
+    .grid_7
+    
       #event_feed
         .filter
           %ul
@@ -28,11 +29,9 @@
               = hidden_field_tag :filter, "All"
               = hidden_field_tag :page, 2
               = submit_tag "Click to load more", :id => "more_events"
-      %br
-    .grid_6
+    .grid_5
       = render :partial => "badges"
       = render :partial => "shared/tags", :locals => {:taggable => @profile}
-
     .clear
   .clear
 .clear
