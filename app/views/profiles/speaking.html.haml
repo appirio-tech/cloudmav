@@ -3,17 +3,8 @@
   = render :partial => "profile_menu"
   
   #profile_content
-    .grid_16
-      %table#count_box
-        %tr
-          %td.count= @profile.talks.count
-          %td.count_of= @profile.talks.count > 1 ? "talks" : "talks"
-      %br
-      %br
-    .clear
-
-    .grid_9
-      %h2 Talks
+    .grid_8
+      %h2 Talks (#{@profile.talks.count})
       - if can? :add_talk, @profile
         .link= link_to "add a talk", new_profile_talk_path(@profile)
       %ul.list
@@ -30,7 +21,7 @@
                 = truncate(talk.description, :length => 60)
       &nbsp;
 
-    .grid_6
+    .grid_5
       = render :partial => "shared/profile/speaker_rate"
       = render :partial => "shared/profile/slide_share"
       = render :partial => "shared/tags", :locals => { :taggable => @profile.speaker_profile }

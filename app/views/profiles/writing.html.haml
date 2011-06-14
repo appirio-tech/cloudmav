@@ -2,7 +2,7 @@
   = render :partial => "header"
   = render :partial => "profile_menu"
   #profile_content
-    .grid_16
+    .grid_8
       %table#count_box
         %tr
           %td.count= @profile.blogs.count
@@ -10,8 +10,6 @@
           %td.space
           %td.count= @profile.posts.count
           %td.count_of= @profile.posts.count > 1 ? "posts" : "post"
-    .clear
-    .grid_9
       %h2 Blog posts
       %ul.list
         - @blog_posts.each do |p|
@@ -20,7 +18,7 @@
             %p= show_date p.written_on
       &nbsp;
 
-    .grid_6
+    .grid_5
       - if can? :add_blog, @profile
         %a{:class => "module_link", :rel => "#add_blog"} Add Blog
         #add_blog.overlay
