@@ -14,3 +14,5 @@ Then /^I should have (\d+) social points$/ do |number|
   profile.score(:social_points).should == number.to_i
 end
 
+
+

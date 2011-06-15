@@ -6,6 +6,10 @@ When /^I sync my StackOverflow account$/ do
   end
 end
 
+When /^I view their knowledge profile$/ do
+  visit profile_knowledge_path(@other_user.profile)
+end
+
 Then /^I should have a StackOverflow profile$/ do
   profile = User.find(@user.id).profile
   profile.stack_overflow_profile.should_not be_nil
@@ -59,10 +63,10 @@ Then /^I should not see their StackOverflow profile$/ do
   And %Q{I should not see "Go to my StackOverflow Profile"}
 end
 
-Then /^I should have coder points for StackOverflow$/ do
+Then /^I should have knowledge points for StackOverflow$/ do
   profile = Profile.find(@profile.id)
   expected_points = 10 + (profile.stack_overflow_profile.reputation / 100)
-  profile.score(:coder_points).should == expected_points
+  profile.score(:knowledge_points).should == expected_points
 end
 
 When /^I edit my StackOverflow id$/ do
@@ -72,7 +76,7 @@ When /^I edit my StackOverflow id$/ do
     @old_answers = profile.stack_overflow_profile.answers.to_a
     @old_answer_events = StackOverflowAnswerAddedEvent.all.to_a
     @old_question_events = StackOverflowQuestionAddedEvent.all.to_a
-    visit profile_code_path(@profile)
+    visit profile_knowledge_path(@profile)
     fill_in "stack_overflow_profile_stack_overflow_id", :with => "5056"
     click_button "stack_overflow_profile_submit"
   end
@@ -106,7 +110,7 @@ Then /^my old StackOverflow events should be deleted$/ do
 end
 
 When /^I delete my StackOverflow profile$/ do
-  visit profile_code_path(@profile)
+  visit profile_knowledge_path(@profile)
   profile = Profile.find(@profile.id)
   @old_questions = profile.stack_overflow_profile.questions.to_a
   @old_answers = profile.stack_overflow_profile.answers.to_a
@@ -120,11 +124,13 @@ Then /^I should not have a StackOverflow profile$/ do
 end
 
 When /^there was an error while syncing my StackOverflow profile$/ do
-  StackOverflowProfileSyncEvent.last.error_message = "There is an error!"
+  e = StackOverflowProfileSyncEvent.last
+  e.error_message = "There is an error!"
+  e.save
 end
 
 Then /^I should see an error message on my StackOverflow profile page$/ do
-  visit profile_code_path(@profile)
+  visit profile_knowledge_path(@profile)
   And %Q{I should see "There was an error while syncing"}
 end
 
