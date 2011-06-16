@@ -37,5 +37,12 @@ class BlogsController < LoggedInController
       render :edit
     end
   end
+
+  def destroy
+    authorize! :sync_profile, @profile
+    @blog = Blog.find(params[:id])
+    @blog.unsync!
+    redirect_to profile_writing_path(@profile)
+  end
   
 end

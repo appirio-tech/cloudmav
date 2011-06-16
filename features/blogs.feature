@@ -32,4 +32,16 @@ Feature: Blogs
     And I should have posts
     And I should earned writer points for my blog
     And I should have my new Blog posts
+
+  Scenario: Delete Blog
+
+    Given I have a blog
+    When I delete my blog
+    Then my old posts should be deleted
+    And my old Blog events should be deleted
+    And I should not have a blog
+    And I should not have the "iBlog" badge
+    And my old Blog events should be deleted
+    And my old posts should be deleted
+    And I should have 0 writing points
 		

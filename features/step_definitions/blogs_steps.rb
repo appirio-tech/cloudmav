@@ -90,3 +90,16 @@ Then /^I should have my new Blog posts$/ do
   profile.posts.count.should > 0
 end
 
+When /^I delete my blog$/ do
+  visit profile_writing_path(@profile)
+  profile = Profile.find(@profile.id)
+  @old_posts = profile.posts.to_a
+  @old_post_events = PostAddedEvent.all.to_a
+  click_link "delete_blog_#{@blog.id}"
+end
+
+Then /^I should not have a blog$/ do
+  Profile.find(@profile.id).blogs.count.should == 0
+end
+
+

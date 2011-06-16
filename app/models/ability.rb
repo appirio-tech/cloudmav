@@ -40,7 +40,7 @@ class Ability
     can [:edit, :add_presentation], Talk do |talk|
       user.profile == talk.profile
     end
-    can [:edit, :add_post], Blog do |blog|
+    can [:edit, :delete, :add_post], Blog do |blog|
       user.profile == blog.profile
     end
     can [:create], BacklogItem

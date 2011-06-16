@@ -31,6 +31,9 @@
             - if can? :edit, b
               .item_link
                 %a{:class => "module_link", :rel => "#blog_#{b.id}"} edit
+            - if can? :delete, b
+              .item_link
+                = link_to "delete", [@profile, b], :id => "delete_blog_#{b.id}", :confirm => 'Are you sure?', :method => :delete
         .clear
         %div{:id => "blog_#{b.id}", :class => "overlay"}
           = render :partial => "blogs/form", :locals => { :blog => b, :action_text => "Save", :disable_text => "Saving..." }
