@@ -9,6 +9,9 @@
         .points= profile.total_score
         .description points
       %li
+        .points= profile.score(:knowledge_points)
+        .description knowledge
+      %li
         .points= profile.score(:coder_points)
         .description code
       %li
