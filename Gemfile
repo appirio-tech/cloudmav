@@ -39,6 +39,7 @@ gem "htmlentities"
 gem "chronic"
 gem "icalendar"
 gem "bitbucket_api", "0.0.1"
+gem "heroku_san"
 
 group :development, :test do
   gem 'launchy', '0.4.0'

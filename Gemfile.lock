@@ -110,6 +110,13 @@ GEM
     gravtastic (3.1.0)
     haml (3.1.1)
     hashie (1.0.0)
+    heroku (2.2.9)
+      launchy (>= 0.3.2)
+      rest-client (~> 1.6.1)
+      term-ansicolor (~> 1.0.5)
+    heroku_san (1.2.0)
+      heroku
+      rails (>= 2)
     htmlentities (4.3.0)
     httparty (0.7.7)
       crack (= 0.1.8)
@@ -171,6 +178,8 @@ GEM
     rake (0.8.7)
     rash (0.3.0)
       hashie (~> 1.0.0)
+    rest-client (1.6.3)
+      mime-types (>= 1.16)
     rmagick (2.13.1)
     rsolr (0.12.1)
       builder (>= 2.1.2)
@@ -257,6 +266,7 @@ DEPENDENCIES
   ghost
   gravtastic
   haml (= 3.1.1)
+  heroku_san
   htmlentities
   httparty
   icalendar

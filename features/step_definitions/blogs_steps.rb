@@ -17,17 +17,19 @@ When /^I add a blog "([^"]*)"$/ do |rss|
   end
 end
 
-
 Then /^the blog should be added to my profile$/ do
   profile = Profile.find(@profile.id)
   profile.blogs.first.should_not be_nil
 end
 
 Given /^I have a blog$/ do
-  @blog = Factory.build(:blog, :rss => "http://www.theabsentmindedcoder.com/feeds/posts/default?alt=rss")
-  @profile.blogs << @blog
-  @blog.save!
-  @profile.save!
+  VCR.use_cassette("my blog", :record => :new_episodes) do
+    @blog = Factory.build(:blog, :rss => "http://www.theabsentmindedcoder.com/feeds/posts/default?alt=rss")
+    @profile.blogs << @blog
+    @blog.save!
+    @profile.save!
+    @blog.sync!
+  end
 end
 
 When /^I add a post to my blog$/ do
@@ -53,4 +55,38 @@ Then /^I should have posts$/ do
   profile.posts.count.should > 0
 end
 
+Then /^I should earned writer points for my blog$/ do
+  profile = Profile.find(@profile.id)
+  points = 10
+  profile.posts.each {|p| points += 3 }
+  profile.score(:writer_points).should == points 
+end
+
+When /^I edit my blog$/ do
+  VCR.use_cassette("edit blog", :record => :new_episodes) do
+    profile = Profile.find(@profile.id)
+    @old_posts = profile.posts.to_a
+    @old_post_events = PostAddedEvent.all.to_a
+    visit profile_writing_path(@profile)
+    with_scope("#blog_#{@blog.id}") do
+      fill_in "blog_rss", :with => "http://feeds.feedburner.com/pseale"
+      click_button "blog_submit"
+    end
+  end
+end
+
+Then /^my old posts should be deleted$/ do
+  old_ids = @old_posts.map(&:id)
+  Post.any_in(_id: old_ids).count.should == 0
+end
+
+Then /^my old Blog events should be deleted$/ do
+  old_ids = @old_post_events.map(&:id)
+  PostAddedEvent.any_in(_id: old_ids).count.should == 0
+end
+
+Then /^I should have my new Blog posts$/ do
+  profile = Profile.find(@profile.id)
+  profile.posts.count.should > 0
+end
 
