@@ -5,6 +5,7 @@ $light_gray: #ABABAB;
 $lightest_gray: #D6D6D6;
 $blue: #3F9FF8;
 $dark_blue: #003459;
+$off_white: #F2F2F2;
 
 $gray_background: #EAEAEA;
 $gray_foreground: #818181;
@@ -14,6 +15,7 @@ $dark_foreground: #ffffff;
 
 $gray_gradient1: #E6E6E6;
 $gray_gradient2: #F4F4F4;
+$gray_text: #323232;
 
 $dark_gradient1: #363636;
 $dark_gradient2: #4F4F4F; 
@@ -253,6 +255,27 @@ h3 {
       text-transform: lowercase;
     }
   }
+  h2 {
+    border-bottom: 1px solid $gray_foreground;
+    padding-bottom: 5px;
+  }
+}
+
+.add_blog {
+  float: right;
+  @include corners(3px);
+  @include gradient($gray_gradient2, $gray_gradient1);
+  border: 1px solid $gray_foreground;
+  color: $gray_text;
+  padding: 3px;
+  margin-top: 3px;
+  font-size: 10pt;
+  cursor: pointer;
+  &:hover {
+    @include gradient($dark_gradient1, $dark_gradient2);
+    color: $off_white;
+    border: 1px solid $blue;
+  }
 }
 
 .tags {
@@ -332,9 +355,20 @@ h3 {
 }
 
 
-.blog_title {
+.blog_title a {
   padding: 10px;
-  
+  text-transform: capitalize;
+  font-size: 12pt;
+}
+.info_box ul li .links {
+  margin-top: 5px;
+  float:right;
+  a {
+    font-size: 10pt;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .sync_error {

@@ -19,5 +19,9 @@ class BlogAddedEvent < ProfileEvent
   def description
     "added blog '#{blog.title}' to CodeMav"
   end
+  
+  def icon_url
+    "event_icons/rss.png"
+  end
 
 end

@@ -170,6 +170,31 @@ h3 {
       font-size: 1em;
       padding-right: 10px;
       text-transform: lowercase; }
+  .info_box h2 {
+    border-bottom: 1px solid #818181;
+    padding-bottom: 5px; }
+
+.add_blog {
+  float: right;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  /* gecko based browsers */
+  background: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
+  /* webkit based browsers */
+  background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e6e6e6));
+  border: 1px solid #818181;
+  color: #323232;
+  padding: 3px;
+  margin-top: 3px;
+  font-size: 10pt;
+  cursor: pointer; }
+  .add_blog:hover {
+    /* gecko based browsers */
+    background: -moz-linear-gradient(top, #363636, #4f4f4f);
+    /* webkit based browsers */
+    background: -webkit-gradient(linear, left top, left bottom, from(#363636), to(#4f4f4f));
+    color: #f2f2f2;
+    border: 1px solid #3f9ff8; }
 
 .tags {
   width: 250px;
@@ -227,8 +252,18 @@ h3 {
         width: 20px;
         float: left; }
 
-.blog_title {
-  padding: 10px; }
+.blog_title a {
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: 12pt; }
+
+.info_box ul li .links {
+  margin-top: 5px;
+  float: right; }
+  .info_box ul li .links a {
+    font-size: 10pt; }
+    .info_box ul li .links a:hover {
+      text-decoration: underline; }
 
 .sync_error {
   color: #990000; }

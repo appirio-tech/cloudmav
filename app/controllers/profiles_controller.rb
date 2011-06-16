@@ -36,6 +36,7 @@ class ProfilesController < ApplicationController
 
   def writing
     @tab = "writing"
+    @writing_events = ProfileEvent.public.for_profile(@profile).categorized_as("Writing").order_by(:date.desc).paginate(:page => 1, :per_page => 10)
     @blog_posts = @profile.posts.paginate(:page => params[:page], :per_page => 5, :order => 'written_on DESC')
   end
   

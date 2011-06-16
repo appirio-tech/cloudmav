@@ -17,4 +17,8 @@ class PostAddedEvent < ProfileEvent
     "added post '#{post.title}' to CodeMav"
   end
 
+  def icon_url
+    "event_icons/rss.png"
+  end
+
 end

@@ -1,42 +1,51 @@
+%h1.hidden #{@profile.name}'s Writing
+
 #profile
   = render :partial => "header"
   = render :partial => "profile_menu"
   #profile_content
     .grid_8
-      %table#count_box
-        %tr
-          %td.count= @profile.blogs.count
-          %td.count_of= @profile.blogs.count > 1 ? "blogs" : "blog"
-          %td.space
-          %td.count= @profile.posts.count
-          %td.count_of= @profile.posts.count > 1 ? "posts" : "post"
-      %h2 Blog posts
-      %ul.list
-        - @blog_posts.each do |p|
-          %li
-            .item_title= link_to p.title, p.url
-            %p= show_date p.written_on
+      #event_feed
+        .filter
+          %ul
+            %li Filter :
+            %li.active
+              = link_to "All", profile_events_path(@profile, :filter => "Writing"), :remote => true, :rel => "nofollow"
+            %li
+              = link_to "Blog", profile_events_path(@profile, :filter => "Writing", :subfilter => "Blog"), :remote => true, :rel => "nofollow"
+
+      %ul.list#events
+        = render :partial => "events/event", :collection => @writing_events, :as => :event
+        %li.event_load &nbsp; 
+        %li.more_events
+          = form_tag profile_events_path(@profile), :remote => true, :method => :get do |f|
+            = hidden_field_tag :filter, "Writing"
+            = hidden_field_tag :subfilter, "All"
+            = hidden_field_tag :page, 2
+            = submit_tag "Click to load more", :id => "more_events"
       &nbsp;
 
+
+
     .grid_5
-      - if can? :add_blog, @profile
-        %a{:class => "module_link", :rel => "#add_blog"} Add Blog
-        #add_blog.overlay
-          = render :partial => "blogs/form", :locals => { :blog => Blog.new, :action_text => "Add", :disable_text => "Adding..." }
-      - @profile.blogs.each do |b|
-        .info_box
-          .info_logo
-            .blog_title= b.title.html_safe unless b.title.nil?
-          .info
-            - if can? :edit, b
-              .item_link
-                %a{:class => "module_link", :rel => "#blog_#{b.id}"} edit
-            - if can? :delete, b
-              .item_link
-                = link_to "delete", [@profile, b], :id => "delete_blog_#{b.id}", :confirm => 'Are you sure?', :method => :delete
-        .clear
-        %div{:id => "blog_#{b.id}", :class => "overlay"}
-          = render :partial => "blogs/form", :locals => { :blog => b, :action_text => "Save", :disable_text => "Saving..." }
+      .info_box
+        %h2 
+          Blogs
+          -if can?(:add_blog, @profile) 
+            %a{:class => "add_blog module_link", :rel => "#add_blog"} add
+            #add_blog.overlay
+              = render :partial => "blogs/form", :locals => { :blog => Blog.new, :action_text => "Add", :disable_text => "Adding..." }
+        %ul
+          - @profile.blogs.each do |b|
+            %li
+              .blog_title= link_to b.title, b.url
+              .links
+                - if can? :edit, b
+                  %a{:class => "blog_link module_link", :rel => "#blog_#{b.id}"} edit
+                - if can? :delete, b
+                  = link_to "delete", [@profile, b], :id => "delete_blog_#{b.id}", :confirm => 'Are you sure?', :method => :delete
+            %div{:id => "blog_#{b.id}", :class => "overlay"}
+              = render :partial => "blogs/form", :locals => { :blog => b, :action_text => "Save", :disable_text => "Saving..." }
 
     .clear
   .clear
