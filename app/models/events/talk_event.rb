@@ -5,6 +5,7 @@ class TalkEvent < ProfileEvent
   def set_info
     self.is_public = true
     self.category = "Speaking"
+    self.date = talk.talk_creation_date
   end
 
   def other_work

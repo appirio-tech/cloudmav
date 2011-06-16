@@ -44,3 +44,7 @@ Then /^there should not be a tag "([^"]*)"$/ do |tag|
   Tag.where(:name => tag).first.should be_nil
 end
 
+Then /^there should be no taggings$/ do
+  Tagging.count.should == 0
+end
+

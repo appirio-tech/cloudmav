@@ -42,6 +42,7 @@ Feature: Tagging
     When I tag the talk with ""
     Then the talk should not be tagged with "LINQ"
     And the talk should not be tagged with "C#"
+    And there should be no taggings
 		
   Scenario: Synonym
 	
