@@ -1,9 +1,8 @@
 class StackOverflowAnswer
   include Mongoid::Document
   include Mongoid::Timestamps
-  include CodeMav::Eventable
 
-  referenced_in :stack_overflow_profile, :inverse_of => :answers
+  embedded_in :stack_overflow_profile, :inverse_of => :answers
 
   field :title, :type => String
   field :question_id, :type => String

@@ -5,7 +5,7 @@ describe "StackOverflowProfileSyncEvent" do
   describe "sync" do
     before(:each) do
       @profile = Factory.create(:user).profile
-      @so_profile = StackOverflowProfile.new(:stack_overflow_id => 363881)
+      @so_profile = StackOverflowProfile.new(:stack_overflow_id => 29407)
       @profile.stack_overflow_profile = @so_profile
       @so_profile.save
       @so_profile.expects(:retag!)
@@ -16,19 +16,17 @@ describe "StackOverflowProfileSyncEvent" do
       end
     end
 
-    it { @so_profile.url.should == "http://www.stackoverflow.com/users/363881" }
+    it { @so_profile.url.should == "http://www.stackoverflow.com/users/29407" }
     it { @so_profile.reputation.should_not be_nil }
     it { @so_profile.stack_overflow_tags.should_not be_nil }
-    it { @so_profile.questions.count.should > 0 }
-    it { @so_profile.answers.count.should > 0 }
-    it { StackOverflowQuestionAddedEvent.count.should == @so_profile.questions.count }
-    it { StackOverflowAnswerAddedEvent.count.should == @so_profile.answers.count }
+    it { @so_profile.questions.count.should == 3 }
+    it { @so_profile.answers.count.should == 3 }
   end
 
   describe "sync" do
     before(:each) do
       @profile = Factory.create(:user).profile
-      @so_profile = StackOverflowProfile.new(:stack_overflow_id => 363881)
+      @so_profile = StackOverflowProfile.new(:stack_overflow_id => 29407)
       @profile.stack_overflow_profile = @so_profile
       @so_profile.save
       @so_profile.stubs(:retag!)
@@ -42,13 +40,11 @@ describe "StackOverflowProfileSyncEvent" do
       end
     end
 
-    it { @so_profile.url.should == "http://www.stackoverflow.com/users/363881" }
+    it { @so_profile.url.should == "http://www.stackoverflow.com/users/29407" }
     it { @so_profile.reputation.should_not be_nil }
     it { @so_profile.stack_overflow_tags.should_not be_nil }
     it { @so_profile.questions.count.should == @question_count }
     it { @so_profile.answers.count.should == @answer_count }
-    it { StackOverflowQuestionAddedEvent.count.should == @question_count }
-    it { StackOverflowAnswerAddedEvent.count.should == @answer_count }
   end
 
 end

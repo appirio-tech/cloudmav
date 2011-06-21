@@ -17,6 +17,7 @@ Feature: StackOverflowProfile
     And I should learned "Syncing with your Stackoverflow Account"
     And my StackOverflow profile should be tagged
     And my profile should have my StackOverflow profile tags
+    And I should have my top questions and top answers
 
   Scenario: Don't see StackOverflow on users without StackOverflow
 

@@ -40,7 +40,9 @@ class StackOverflowProfileSyncEvent < SyncEvent
   def sync_questions
     questions = StackOverflow.get_user_questions(stack_overflow_profile.stack_overflow_id)
 
-    questions.each do |so_question|
+    top_questions = questions.sort{|a,b| a["score"] <=> b["score"] }.first(3)
+
+    top_questions.each do |so_question|
       question = stack_overflow_profile.questions.where(:question_id => so_question["question_id"]).first
       unless question
         question = stack_overflow_profile.questions.build
@@ -51,12 +53,18 @@ class StackOverflowProfileSyncEvent < SyncEvent
       question.date = Time.at(so_question["creation_date"])
       question.save
     end
+
+    top_question_ids = top_questions.map{|q| q["question_id"]}
+    questions_to_delete = stack_overflow_profile.questions.not_in(question_id: top_question_ids)
+    questions_to_delete.each{|q| q.destroy }
   end
 
   def sync_answers
     answers = StackOverflow.get_user_answers(stack_overflow_profile.stack_overflow_id)
-  
-    answers.each do |so_answer|
+
+    top_answers = answers.sort{|a,b| a["score"] <=> b["score"] }.first(3)
+
+    top_answers.each do |so_answer|
       answer = stack_overflow_profile.answers.where(:answer_id => so_answer["answer_id"]).first
       unless answer
         answer = stack_overflow_profile.answers.build
@@ -69,6 +77,10 @@ class StackOverflowProfileSyncEvent < SyncEvent
       answer.date = Time.at(so_answer["creation_date"])
       answer.save
     end
+
+    top_answer_ids = top_answers.map{|a| a["answer_id"]}
+    answers_to_delete = stack_overflow_profile.answers.not_in(answer_id: top_answer_ids)
+    answers_to_delete.each{|a| a.destroy }
   end
 
 end

@@ -135,3 +135,9 @@ Then /^I should see an error message on my StackOverflow profile page$/ do
 end
 
 
+Then /^I should have my top questions and top answers$/ do
+  profile = Profile.find(@profile.id)
+  profile.stack_overflow_profile.top_questions.should_not be_nil
+  profile.stack_overflow_profile.top_answers.should_not be_nil
+end
+

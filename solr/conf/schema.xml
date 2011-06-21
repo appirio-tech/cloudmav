@@ -60,15 +60,6 @@
     <fieldType name="rand" class="solr.RandomSortField" omitNorms="true"/>
     <!-- *** This fieldType is used by Sunspot! *** -->
 
-    <fieldType name="basic_text" class="solr.TextField" omitNorms="false">
-      <analyzer>
-        <tokenizer class="solr.StandardTokenizerFactory"/>
-        <filter class="solr.StandardFilterFactory"/>
-        <filter class="solr.LowerCaseFilterFactory"/>
-      </analyzer>
-    </fieldType>
-    
-    
     <fieldType name="text" class="solr.TextField" omitNorms="false">
       <analyzer type="index">
         <tokenizer class="solr.WhitespaceTokenizerFactory"/>
@@ -153,7 +144,6 @@
        when adding a document.
    -->
 
-    <dynamicField name="*_basic_text" stored="false" type="basic_text" multiValued="true" indexed="true"/>
 
     <!-- *** This field is used by Sunspot! *** -->
     <field name="id" stored="true" type="string" multiValued="false" indexed="true"/>
