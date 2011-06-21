@@ -19,7 +19,7 @@ class Profile
   include CodeMav::Followable
   include CodeMav::HasBacklogItems
 
-  is_gravtastic!
+  gravtastic
 
   field :showcase, :type => Boolean, :default => false
   field :api_id, :type => Integer
@@ -32,6 +32,10 @@ class Profile
   field :can_manage_tags, :type => Boolean, :default => false
   field :is_moderator, :type => Boolean, :default => false
   
+  def gravatar_id
+    Digest::MD5.hexdigest(self.email)
+  end
+
   def can_manage_tags?
     can_manage_tags
   end
