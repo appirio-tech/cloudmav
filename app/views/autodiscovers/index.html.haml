@@ -1,26 +1,18 @@
 .grid_16
   %h1.hidden Autodiscover
 
-  = form_tag profile_autodiscovers_path(@profile) do
-    .autodiscover_submit= submit_tag "I'm done autodiscovering..."
+  #autodiscovering
+    %p Please be patient as we discover accounts for you.
+    = image_tag "wait_bar_green.gif"
+  #autodiscovered.hidden
+    = form_tag profile_autodiscovers_path(@profile) do
+      .autodiscover_submit= submit_tag "Done"
 
-  #autodiscover
   = render :partial => "autodiscover"
 
-  .autodiscover#github
-    = image_tag("git_hub_info_logo.png")
-    %hr
-    .loading
-    .info.hidden
-      %table
-        %tr
-          %td.discovered_label username
-          %td.discovered_info#github_username
-      %a{:class => "module_link", :rel => "#sync_git_hub"} That's not me
-      #sync_git_hub.overlay
-        - @git_hub_profile = GitHubProfile.new
-        = render :partial => "git_hub_profiles/form" 
-
+  %table#discovered
 
 .clear
 
+:javascript
+  $("#guidance").hide();

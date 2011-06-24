@@ -2,8 +2,7 @@ class AutodiscoversController < LoggedInController
 
   def index
     @profile = Profile.where(:username => params[:profile_id]).first
-    Autodiscovery.discover!(@profile)
-    
+    @count = Autodiscovery.discover!(@profile)
     respond_to do |format|
       format.html # index.html.erb
       format.js 

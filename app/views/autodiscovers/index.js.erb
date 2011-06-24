@@ -1,11 +1,15 @@
 
 <% unless @profile.git_hub_profile.nil? %>
-  if (!$("#github").hasClass("found")) {
-    $("#github_username").html("<%= @profile.git_hub_profile.username %>");
-    $("#github").addClass("found");
-    $("#github .loading").hide();
-    $("#github .info").show();
+  if ($("#git_hub").length === 0) {
+    $("#discovered").append("<%= escape_javascript (render :partial => "git_hub") %>");
   }
+<% end %>
+
+<% if @count == 0 %>
+
+  $("#autodiscovering").hide();
+  $("#autodiscovered").show();
+
 <% end %>
 
 function discoverProfile() {

@@ -27,6 +27,7 @@ class Autodiscovery
         create_event(event_class, profile)
       end
     end
+    types.count
   end
    
   def self.process_profile(profile)

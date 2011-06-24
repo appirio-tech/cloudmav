@@ -642,26 +642,33 @@ a.menu_nav {
 .hidden {
   display: none; }
 
-.autodiscover {
-  background: white;
-  width: 300px;
-  height: 120px;
-  border: 1px solid #CCC;
-  padding: 5px; }
-  .autodiscover .loading {
-    padding-top: 7px;
-    text-align: center; }
-  .autodiscover hr {
-    border-bottom: 1px solid #202121;
-    margin-bottom: 10px; }
-  .autodiscover table {
-    margin-left: 10px; }
-  .autodiscover .discovered_label {
-    color: #666; }
-  .autodiscover .discovered_info {
-    padding-left: 10px;
-    font-weight: bold; }
-  .autodiscover .module_link {
-    float: right;
-    padding-top: 10px;
-    margin-right: 10px; }
+#autodiscovering {
+  text-align: center; }
+  #autodiscovering p {
+    padding: 20px;
+    color: #222; }
+
+#autodiscovered {
+  text-align: center; }
+
+#discovered {
+  margin-left: 305px;
+  margin-top: 15px; }
+  #discovered td {
+    padding: 20px; }
+  #discovered .auto_image {
+    margin-top: 5px; }
+  #discovered .discovered_label {
+    color: #666;
+    position: relative;
+    top: -6px; }
+  #discovered .discovered_info {
+    font-weight: bold;
+    position: relative;
+    top: -6px; }
+    #discovered .discovered_info form input {
+      position: relative;
+      top: -7px; }
+  #discovered form input {
+    position: relative;
+    top: -7px; }

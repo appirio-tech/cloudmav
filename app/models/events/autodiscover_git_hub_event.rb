@@ -24,6 +24,7 @@ class AutodiscoverGitHubEvent < AutodiscoverEvent
         profile.git_hub_profile = GitHubProfile.new(:username => match["username"])
         profile.git_hub_profile.save
         profile.save
+        profile.git_hub_profile.sync!
       end
     rescue
     end

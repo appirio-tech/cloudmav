@@ -872,33 +872,43 @@ a.menu_nav {
   display: none;
 }
 
-.autodiscover {
-  background: $white;
-  width: 300px;
-  height: 120px;
-  border: 1px solid #CCC;
-  padding: 5px;
-  .loading {
-    padding-top: 7px;
-    text-align: center;
+#autodiscovering {
+  text-align: center;
+  p {
+    padding: 20px;
+    color: #222;
   }
-  hr {
-    border-bottom: 1px solid $light_black; 
-    margin-bottom: 10px;
+}
+
+#autodiscovered {
+  text-align: center;
+}
+
+#discovered {
+  margin-left: 305px;
+  margin-top: 15px;
+  td {
+    padding: 20px;
   }
-  table {
-    margin-left: 10px;
+  .auto_image {
+    margin-top: 5px;
   }
   .discovered_label {
     color: #666;
+    position: relative;
+    top: -6px;
   }
   .discovered_info {
-    padding-left: 10px;
     font-weight: bold;
+    position: relative;
+    top: -6px;
+    form input {
+      position: relative;
+      top: -7px;
+    }
   }
-  .module_link {
-    float: right;
-    padding-top: 10px;
-    margin-right: 10px;
-  }    
+  form input {
+    position: relative;
+    top: -7px;
+  }
 }
