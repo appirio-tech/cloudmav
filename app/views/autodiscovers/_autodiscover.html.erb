@@ -1,0 +1,13 @@
+<%= javascript_tag do -%>
+
+  function discoverProfile() {
+    $.get("<%= profile_autodiscovers_path(@profile) %>", function(data){
+    }, "script");
+  }
+
+  $(document).ready(function() {
+    $(".loading").html("<%= escape_javascript (image_tag "auto_load.gif") %>");
+    setTimeout("discoverProfile()", 1000);
+  });
+
+<% end -%>

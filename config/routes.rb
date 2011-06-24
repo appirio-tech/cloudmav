@@ -23,7 +23,6 @@ Codemav::Application.routes.draw do
   resources :technologies
 
   resources :jobs
-  resource :autodiscover
   
   resources :projects
   
@@ -56,6 +55,7 @@ Codemav::Application.routes.draw do
   end
   
   resources :profiles do
+    resources :autodiscovers
     resources :twitter_profiles
     resources :stack_overflow_profiles
     resources :git_hub_profiles

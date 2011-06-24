@@ -1,4 +1,33 @@
 class Autodiscovery
+
+  def self.get_types_to_discover(profile)
+    types = []
+    types << "GitHub" if profile.git_hub_profile.nil?
+
+    types
+  end
+
+  def self.get_event_class_for_type(type)
+    event_name = "Autodiscover#{type}Event"
+    Object.const_get(event_name)
+  end
+
+  def self.create_event(event_class, profile)
+    event = event_class.new
+    event.profile = profile
+    event.save
+  end
+
+  def self.discover!(profile)
+    types = get_types_to_discover(profile)
+    types.each do |type|
+      event_class = get_event_class_for_type(type)
+      event = event_class.where(:profile_id => profile.id, :discover_type => type).first
+      if event.nil?
+        create_event(event_class, profile)
+      end
+    end
+  end
    
   def self.process_profile(profile)
     profile = Profile.find(profile.id)
@@ -41,7 +70,6 @@ class Autodiscovery
       end
 
       if match
-        profile.username = match["username"]
         profile.location = match["location"] if profile.location.nil?
         profile.git_hub_profile = GitHubProfile.new(:username => match["username"])
         profile.git_hub_profile.save

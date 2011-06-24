@@ -1,0 +1,16 @@
+
+<% unless @profile.git_hub_profile.nil? %>
+  if (!$("#github").hasClass("found")) {
+    $("#github_username").html("<%= @profile.git_hub_profile.username %>");
+    $("#github").addClass("found");
+    $("#github .loading").hide();
+    $("#github .info").show();
+  }
+<% end %>
+
+function discoverProfile() {
+  $.get("<%= profile_autodiscovers_path(@profile) %>", function(){}, "script");
+}
+
+setTimeout("discoverProfile()", 1000);
+
