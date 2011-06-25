@@ -34,7 +34,13 @@ class GitHubProfilesController < LoggedInController
     authorize! :sync_profile, @profile
     @git_hub_profile = GitHubProfile.find(params[:id])
     @git_hub_profile.unsync!
-    redirect_to profile_code_path(@profile)
+
+    respond_to do |format|
+      format.html {
+        redirect_to profile_code_path(@profile)
+      }
+      format.js 
+    end
   end
 
 end

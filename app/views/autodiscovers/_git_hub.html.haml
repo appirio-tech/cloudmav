@@ -1,21 +1,6 @@
 %tr#git_hub
   %td.auto_image= image_tag("auto/git_hub.png")
   %td.discovered_label username
-  %td
-    .discovered_info= @profile.git_hub_profile.username
-    #git_hub_form.hidden
-      = form_for [@profile, @profile.git_hub_profile], :remote => true do |f|
-        .field= f.text_field :username
-
-:javascript
-  $("#git_hub .discovered_info").click(function() {
-    $("#git_hub .discovered_info").hide();
-    $("#git_hub_form").show();
-    $("#git_hub_form").submit(function() {
-      var username = $("#git_hub_profile_username").val();
-      $("#git_hub .discovered_info").html(username);
-      $("#git_hub .discovered_info").show();
-      $("#git_hub_form").hide();
-    });
-  });
+  %td.discovered_info= @profile.git_hub_profile.username
+  %td.not_me= link_to "That's not me", [@profile, @profile.git_hub_profile], :method => :delete, :remote => true
 

@@ -24,7 +24,8 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(user)
-    profile_path(user.profile)
+    profile_autodiscovers_path(user.profile)
+    #profile_path(user.profile)
   end
   
   private 
