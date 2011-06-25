@@ -24,6 +24,8 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(user)
+<<<<<<< HEAD
+=======
     puts "*************************************************"
     puts "*************************************************"
     puts "*************************************************"
@@ -32,6 +34,7 @@ class ApplicationController < ActionController::Base
     puts "*************************************************"
     puts "*************************************************"
     puts "*************************************************"
+>>>>>>> 02c1c350df7c82b5e44cc4799c79d72e5cb6ab7f
     if (current_user.profile.autodiscovered)
       profile_path(current_user.profile)
     else
