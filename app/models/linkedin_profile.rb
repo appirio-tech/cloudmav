@@ -1,5 +1,6 @@
 class LinkedinProfile
   include Mongoid::Document  
+  include CodeMav::Syncable
   
   field :url, :type => String
   field :last_synced, :type => DateTime 

@@ -2,7 +2,7 @@ require 'linkedin'
 
 class LinkedinProfilesController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :set_profile, :only => [:new, :create, :confirm]
+  before_filter :set_profile, :only => [:new, :create, :confirm, :destroy]
 
   rescue_from OAuth::Problem, :with => :oauth_error
 
@@ -36,6 +36,13 @@ class LinkedinProfilesController < ApplicationController
     create_client
     authorize_linked_in
     @profile.linkedin_profile.sync_jobs!(@client)
+    redirect_to profile_experience_path(@profile)
+  end
+
+  def destroy
+    authorize! :sync_profile, @profile
+    @linkedin_profile = LinkedinProfile.find(params[:id])
+    @linkedin_profile.unsync!
     redirect_to profile_experience_path(@profile)
   end
 
