@@ -28,6 +28,7 @@ class Profile
   field :username, :type => String
   field :gravatar_id, :type => String
   index :username, :unique => true
+  field :autodiscovered, :type => Boolean, :default => false
   
   field :can_manage_tags, :type => Boolean, :default => false
   field :is_moderator, :type => Boolean, :default => false
