@@ -20,4 +20,5 @@ Given /^I am logged in$/ do
   fill_in "user_password", :with => 'secret'
   click_button "Sign in"
   @profile = User.find(@user.id).profile
+  @profile.autodiscover_histories.create(:name => "GitHub")
 end

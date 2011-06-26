@@ -13,7 +13,6 @@ module CodeMav
       def autodiscovered?
         things_to_discover = ["GitHub"]
         result = self.autodiscover_histories.any_in(name: things_to_discover)
-        puts "reuslt is #{result.to_a}"
         result.count == things_to_discover.count
       end
 

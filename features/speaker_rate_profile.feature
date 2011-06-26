@@ -3,11 +3,13 @@ Feature: Speaker Rate Profile
 	As a user
 	I want to sync with my SpeakerRate account
 	So that others can see my rating and my talks
+
+  Background:
+    Given I am logged in
+		And there are guidances
 	
 	Scenario: Sync with account
 	
-		Given I am logged in
-		And there are guidances
 		When I sync my SpeakerRate account
 		Then I should have a SpeakerRate profile
     And my SpeakerRate profile should be synced
@@ -18,9 +20,7 @@ Feature: Speaker Rate Profile
 		
 	Scenario: Sync again
 	
-		Given I am logged in
-		And there are guidances
-		And I synced my SpeakerRate account
+		Given I synced my SpeakerRate account
 		When I sync my SpeakerRate account
 		Then I should not have duplicate talks from SpeakerRate
 
@@ -36,3 +36,12 @@ Feature: Speaker Rate Profile
     And the other user has a SpeakerRate profile
     When I view their speaker profile
     Then I should see their SpeakerRate profile
+
+  Scenario: Edit SpeakerRate
+
+    Given I have a SpeakerRate profile
+    When I edit my SpeakerRate id
+    Then I should have a SpeakerRate profile
+    And my old SpeakerRate events should be deleted
+    And my old talks should be deleted
+    And I should have my new talks

@@ -24,6 +24,8 @@ class Talk
     
   validates_presence_of :title
 
+  scope :for_profile, lambda { |profile| where(:profile_id => profile.id) }
+
   def self.search(query, options = {})
     search = Sunspot.new_search(Talk)
     search.build do

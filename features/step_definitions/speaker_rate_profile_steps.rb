@@ -53,3 +53,36 @@ Then /^my SpeakerRate profile should be synced$/ do
   profile.speaker_rate_profile.should be_synced
 end
 
+Given /^I have a SpeakerRate profile$/ do
+  VCR.use_cassette("my speaker_rate", :record => :new_episodes) do
+    sr = Factory.create(:speaker_rate_profile, :speaker_rate_id => "10082", :profile => @profile, :last_synced_date => DateTime.now)
+    @profile.save
+    sr.sync!
+  end
+end
+
+When /^I edit my SpeakerRate id$/ do
+  VCR.use_cassette("edit speakerrate", :record => :new_episodes) do
+    profile = Profile.find(@profile.id)
+    @talk_events = TalkAddedEvent.all.to_a
+    @old_talks = profile.talks.to_a
+    visit profile_speaking_path(@profile)
+    fill_in "speaker_rate_profile_speaker_rate_id", :with => "3274"
+    click_button "speaker_rate_profile_submit"
+  end
+end
+
+Then /^my old SpeakerRate events should be deleted$/ do
+  old_ids = @talk_events.map(&:id)
+  TalkAddedEvent.any_in(_id: old_ids).count.should == 0
+end
+
+Then /^my old talks should be deleted$/ do
+  old_ids = @old_talks.map(&:id)
+  Talk.any_in(_id: old_ids).count.should == 0
+end
+
+Then /^I should have my new talks$/ do
+  Profile.find(@profile.id).talks.count.should > 0
+end
+
