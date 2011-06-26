@@ -1,5 +1,4 @@
-class SlideShareProfilesController < ApplicationController
-  before_filter :set_profile, :only => [:new, :create]
+class SlideShareProfilesController < LoggedInController
   
   def new
     authorize! :set_slide_share_profile, @profile
@@ -15,4 +14,20 @@ class SlideShareProfilesController < ApplicationController
     redirect_to profile_speaking_path(@profile)
   end
   
+  def edit
+    authorize! :sync_profile, @profile
+    @speaker_rate_profile = @profile.speaker_rate_profile
+  end
+
+  def update
+    authorize! :sync_profile, @profile
+    
+    if @profile.slide_share_profile.update_attributes(params[:slide_share_profile])
+      @profile.slide_share_profile.resync!
+      redirect_to profile_speaking_path(@profile)
+    else
+      render :edit
+    end
+  end
+
 end

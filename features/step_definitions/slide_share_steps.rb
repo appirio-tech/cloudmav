@@ -76,3 +76,27 @@ Then /^I should have a slide count on my SlideShare profile$/ do
   profile.slide_share_profile.slides_count.should_not == 0
 end
 
+Given /^I have a SlideShare profile$/ do
+  VCR.use_cassette("my slide_share", :record => :new_episodes) do
+    ss = Factory.create(:slide_share_profile, :slide_share_username => "rookieone", :profile => @profile, :last_synced_date => DateTime.now)
+    @profile.save
+    ss.sync!
+  end
+end
+
+When /^I edit my SlideShare username$/ do
+  VCR.use_cassette("edit slideshare", :record => :new_episodes) do
+    profile = Profile.find(@profile.id)
+    @talk_events = TalkAddedEvent.all.to_a
+    @old_talks = profile.talks.to_a
+    visit profile_speaking_path(@profile)
+    fill_in "slide_share_profile_slide_share_username", :with => "themoleskin"
+    click_button "slide_share_profile_submit"
+  end
+end
+
+Then /^my old SlideShare events should be deleted$/ do
+  old_ids = @talk_events.map(&:id)
+  TalkAddedEvent.any_in(_id: old_ids).count.should == 0
+end
+

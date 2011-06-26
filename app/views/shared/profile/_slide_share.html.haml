@@ -1,8 +1,10 @@
-- if @slide_share_profile || can?(:set_slide_share_profile, @profile)
+- if @slide_share_profile || can?(:sync_profile, @profile)
   .info_box#slide_share_info
     .info_logo
       = link_to image_tag("slide_share_info_logo.png"), "http://www.slideshare.net"
-      -if can?(:set_slide_share_profile, @profile) && @slide_share_profile
+      -if can?(:sync_profile, @profile) && @slide_share_profile
+        .delete
+          = link_to "delete", [@profile, @slide_share_profile], :id=> :delete_slide_share, :confirm => 'Are you sure?', :method => :delete
         .edit
           %a{:class => "module_link", :rel => "#sync_slide_share"} edit
     .info
@@ -16,7 +18,7 @@
               %td Slides count
               %td= @slide_share_profile.slides_count 
       - else
-        - if can? :set_slide_share_profile, @profile
+        - if can? :sync_profile, @profile
           - @slide_share_profile = SlideShareProfile.new
           %p 
             Do you have a Slide Share account? 
