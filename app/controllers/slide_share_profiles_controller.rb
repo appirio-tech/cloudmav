@@ -30,4 +30,11 @@ class SlideShareProfilesController < LoggedInController
     end
   end
 
+  def destroy
+    authorize! :sync_profile, @profile
+    @slide_share_profile = SlideShareProfile.find(params[:id])
+    @slide_share_profile.unsync!
+    redirect_to profile_code_path(@profile)
+  end
+
 end

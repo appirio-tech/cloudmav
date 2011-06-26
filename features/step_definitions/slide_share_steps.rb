@@ -100,3 +100,15 @@ Then /^my old SlideShare events should be deleted$/ do
   TalkAddedEvent.any_in(_id: old_ids).count.should == 0
 end
 
+When /^I delete my SlideShare profile$/ do
+  visit profile_speaking_path(@profile)
+  profile = Profile.find(@profile.id)
+  @talk_events = TalkAddedEvent.all.to_a
+  @old_talks = profile.talks.to_a
+  click_link "delete_slide_share"
+end
+
+Then /^I should not have a SlideShare profile$/ do
+  Profile.find(@profile.id).slide_share_profile.should be_nil
+end
+

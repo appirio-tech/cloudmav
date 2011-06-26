@@ -1,27 +1,26 @@
+%h1.hidden #{@profile.name}'s Knowledge
 
 #profile
   = render :partial => "header"
   = render :partial => "profile_menu"
   #profile_content
     .grid_8
-      #event_feed
-        .filter
-          %ul
-            %li Filter :
-            %li.active
-              = link_to "All", profile_events_path(@profile, :filter => "Code"), :remote => true, :rel => "nofollow"
-            %li
-              = link_to "StackOverflow", profile_events_path(@profile, :filter => "Code", :subfilter => "StackOverflow"), :remote => true, :rel => "nofollow"
+      - if @stack_overflow_profile
+        - unless @stack_overflow_profile.questions.empty?
+          #stack_overflow_questions
+            %h2 Top 3 Stack Overflow Questions
+            %ul
+              - @stack_overflow_profile.questions.each do |q|
+                %li
+                  = link_to q.title, q.url, :target => "_blank"
+        - unless @stack_overflow_profile.answers.empty?
+          #stack_overflow_answers
+            %h2 Top 3 Stack Overflow Answers
+            %ul
+              - @stack_overflow_profile.answers.each do |a|
+                %li
+                  = link_to a.title, a.url, :target => "_blank"
 
-      %ul.list#events
-        = render :partial => "events/event", :collection => @knowledge_events, :as => :event
-        %li.event_load &nbsp; 
-        %li.more_events
-          = form_tag profile_events_path(@profile), :remote => true, :method => :get do |f|
-            = hidden_field_tag :filter, "Knowledge"
-            = hidden_field_tag :subfilter, "All"
-            = hidden_field_tag :page, 2
-            = submit_tag "Click to load more", :id => "more_events"
       &nbsp;
 
     .grid_5

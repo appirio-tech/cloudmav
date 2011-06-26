@@ -51,6 +51,7 @@ class StackOverflowProfileSyncEvent < SyncEvent
       question.question_id = so_question["question_id"]
       question.url = "http://www.stackoverflow.com/questions/#{so_question["question_id"]}"
       question.date = Time.at(so_question["creation_date"])
+      question.score = so_question["score"]
       question.save
     end
 
@@ -75,6 +76,7 @@ class StackOverflowProfileSyncEvent < SyncEvent
       answer.accepted = so_answer["accepted"]
       answer.url = "http://www.stackoverflow.com/questions/#{so_answer["question_id"]}"
       answer.date = Time.at(so_answer["creation_date"])
+      answer.score = so_answer["score"]
       answer.save
     end
 

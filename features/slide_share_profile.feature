@@ -60,3 +60,13 @@ Feature: Slide Share Profile
     And my old SlideShare events should be deleted
     And my old talks should be deleted
     And I should have my new talks
+
+  Scenario: Delete SlideShare
+
+    Given I have a SlideShare profile
+    When I delete my SlideShare profile
+    Then I should not have a SlideShare profile
+    And my old SlideShare events should be deleted
+    And my old talks should be deleted
+    And I should not have the "Sliding along" badge
+    And I should have 0 speaker points

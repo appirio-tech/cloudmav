@@ -8,6 +8,7 @@ class StackOverflowQuestion
   field :question_id, :type => String
   field :url, :type => String
   field :date, :type => DateTime
+  field :score, :type => String
 
   def profile
     stack_overflow_profile.profile

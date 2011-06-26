@@ -10,6 +10,7 @@ class StackOverflowAnswer
   field :url, :type => String
   field :date, :type => DateTime
   field :accepted, :type => Boolean
+  field :score, :type => String
 
   def accepted?
     accepted
