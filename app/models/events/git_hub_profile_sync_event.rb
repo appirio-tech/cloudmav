@@ -23,18 +23,25 @@ class GitHubProfileSyncEvent < SyncEvent
     result = JSON.parse(response.body)
 
     result["repositories"].each do |r|
-      repository = git_hub_profile.repositories.select{|gr| gr.name == r["name"]}.first 
-      repository = GitHubRepository.new(:git_hub_profile => git_hub_profile) unless repository
-      repository.name = r["name"]
-      repository.url = r["url"]
-      repository.description = r["description"]
-      repository.creation_date = r["created_at"]
-      repository.watchers = r["watcher"]
-      repository.language = r["language"]
-      repository.save
+      unless r["fork"]
+        find_or_create_repository(r)
+      end
     end
 
     git_hub_profile.retag!
+  end
+
+  def find_or_create_repository(r)
+    repository = git_hub_profile.repositories.select{|gr| gr.name == r["name"]}.first 
+    repository = GitHubRepository.new(:git_hub_profile => git_hub_profile) unless repository
+    repository.name = r["name"]
+    repository.url = r["url"]
+    repository.description = r["description"]
+    repository.creation_date = r["created_at"]
+    repository.watchers = r["watchers"]
+    repository.forks = r["forks"]
+    repository.language = r["language"]
+    repository.save
   end
 
 end

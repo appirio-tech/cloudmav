@@ -17,4 +17,11 @@ class GitHubRepositoryAddedEvent < ProfileEvent
     "event_icons/github.png"
   end
 
+  def score_points
+    points = 1
+    points = points + git_hub_repository.watchers * 0.1
+    points = points + git_hub_repository.forks * 0.15
+    profile.earn("for repository value", points, :coder_points) 
+  end
+
 end

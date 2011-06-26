@@ -8,6 +8,7 @@ class GitHubRepository
   field :description, :type => String
   field :creation_date, :type => String
   field :watchers, :type => Integer 
+  field :forks, :type => Integer 
   field :language, :type => String
 
   referenced_in :git_hub_profile, :inverse_of => :repositories
