@@ -1,4 +1,5 @@
 %li.backlog_item
+  .right= render :partial => "tweet_backlog", :locals => { :backlog_item => backlog_item }
   %p.title= backlog_item.title
   %p.description= truncate backlog_item.description, :length => 300
   %table
