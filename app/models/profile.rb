@@ -4,6 +4,7 @@ require 'virgil'
 
 class Profile
   include Mongoid::Document
+  include Mongoid::Timestamps
   include Badgeable::Subject
   include Gravtastic
   include ScoreIt::Subject 
@@ -18,6 +19,7 @@ class Profile
   include CodeMav::Indexable
   include CodeMav::Followable
   include CodeMav::HasBacklogItems
+  include CodeMav::Autodiscoverable
 
   gravtastic
 
@@ -28,7 +30,7 @@ class Profile
   field :username, :type => String
   field :gravatar_id, :type => String
   index :username, :unique => true
-  field :autodiscovered, :type => Boolean, :default => false
+  
   
   field :can_manage_tags, :type => Boolean, :default => false
   field :is_moderator, :type => Boolean, :default => false

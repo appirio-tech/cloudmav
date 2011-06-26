@@ -19,8 +19,6 @@ class Autodiscovery
   end
 
   def self.discover!(profile)
-    profile.autodiscovered = true
-    profile.save
     types = get_types_to_discover(profile)
     types.each do |type|
       event_class = get_event_class_for_type(type)

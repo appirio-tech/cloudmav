@@ -26,7 +26,10 @@ class AutodiscoverGitHubEvent < AutodiscoverEvent
         profile.save
         profile.git_hub_profile.sync!
       end
-    rescue
+    rescue => detail
+      profile.autodiscovery_histories.create(:name => "GitHub")
+      self.error_message = detail.message
+      self.save
     end
   end
 

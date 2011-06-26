@@ -4,7 +4,11 @@ class AutodiscoversController < LoggedInController
     @profile = Profile.where(:username => params[:profile_id]).first
     @count = Autodiscovery.discover!(@profile)
     respond_to do |format|
-      format.html # index.html.erb
+      format.html {
+        if (@count == 0)
+          redirect_to profile_path(@profile)
+        end
+      }
       format.js 
     end
   end
