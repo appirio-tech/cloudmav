@@ -56,7 +56,7 @@ class StackOverflowProfileSyncEvent < SyncEvent
     end
 
     top_question_ids = top_questions.map{|q| q["question_id"]}
-    questions_to_delete = stack_overflow_profile.questions.not_in(question_id: top_question_ids)
+    questions_to_delete = stack_overflow_profile.questions.not_in(:question_id => top_question_ids)
     questions_to_delete.each{|q| q.destroy }
   end
 
@@ -81,7 +81,7 @@ class StackOverflowProfileSyncEvent < SyncEvent
     end
 
     top_answer_ids = top_answers.map{|a| a["answer_id"]}
-    answers_to_delete = stack_overflow_profile.answers.not_in(answer_id: top_answer_ids)
+    answers_to_delete = stack_overflow_profile.answers.not_in(:answer_id => top_answer_ids)
     answers_to_delete.each{|a| a.destroy }
   end
 
