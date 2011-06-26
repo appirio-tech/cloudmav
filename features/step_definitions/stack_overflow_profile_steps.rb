@@ -137,7 +137,7 @@ end
 
 Then /^I should have my top questions and top answers$/ do
   profile = Profile.find(@profile.id)
-  profile.stack_overflow_profile.top_questions.should_not be_nil
-  profile.stack_overflow_profile.top_answers.should_not be_nil
+  profile.stack_overflow_profile.questions.should_not be_nil
+  profile.stack_overflow_profile.answers.should_not be_nil
 end
 

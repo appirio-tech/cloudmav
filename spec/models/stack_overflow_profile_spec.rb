@@ -14,9 +14,9 @@ describe StackOverflowProfile do
     
     it { @so_profile.reputation.should > 0 }
     it { @so_profile.taggings.count.should > 0 }
-    it "should earn coder points" do
+    it "should earn knowledge points" do
       expected_points = 10 + @so_profile.reputation / 100 
-      @profile.score(:coder_points).should == expected_points
+      @profile.score(:knowledge_points).should == expected_points
     end
   end
   

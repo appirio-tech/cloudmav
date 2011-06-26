@@ -26,10 +26,10 @@ Then /^my profile email should be my user email$/ do
   user.profile.email.should == @user.email
 end
 
-Then /^I should be redirected to my profile page$/ do
+Then /^I should be redirected to the autodiscover page$/ do
   user = User.where(:email => @user.email).first
   current_path = URI.parse(current_url).path
-  current_path.should == profile_path(user.profile)
+  current_path.should == profile_autodiscovers_path(user.profile)
 end
 
 

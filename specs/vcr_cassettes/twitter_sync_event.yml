@@ -1,0 +1,47 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.twitter.com:443/1/users/show.json?screen_name=rookieone
+    body: 
+    headers: 
+      accept: 
+      - application/json
+      user-agent: 
+      - Twitter Ruby Gem 1.4.1
+      authorization: 
+      - OAuth oauth_consumer_key="EwT5j6Z8F58Zc0dXSuTWtA", oauth_nonce="ada2527fe1dac0f4c3b45cb7e1f83ed9", oauth_signature="l2YHiOHAXItFwdBkJxDeTfxs8wY%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1309066925", oauth_token="14870761-2E0n5J5uFYY87AsNW4MaMG9CMN0ja08aSzB9qBiSE", oauth_version="1.0"
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 500
+      message: Internal Server Error
+    headers: 
+      date: 
+      - Sun, 26 Jun 2011 05:42:06 GMT
+      server: 
+      - hi
+      status: 
+      - 500 Internal Server Error
+      content-type: 
+      - text/html; charset=UTF-8
+      set-cookie: 
+      - k=76.164.86.161.1309066926229480; path=/; expires=Sun, 03-Jul-11 05:42:06 GMT; domain=.twitter.com
+      - _twitter_sess=BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7AA%253D%253D--1164b91ac812d853b877e93ddb612b7471bebc74; domain=.twitter.com; path=/; HttpOnly
+      cache-control: 
+      - max-age=300
+      expires: 
+      - Sun, 26 Jun 2011 05:47:06 GMT
+      vary: 
+      - Accept-Encoding
+      content-encoding: 
+      - gzip
+      transfer-encoding: 
+      - chunked
+    body: !binary |
+      H4sIAAAAAAAAAwouSSwpLbZSMDUwUPDMK0ktykvMUQhOLSpLLVJwLSrKL+Ll
+      cs4HiueV6IZUFqRaKZSkVpToZ5Tk5vBy8XLZgBh2Nkn5KZV2NhmGdjhNsdEH
+      ytroQxSCtdsBAAAA//8DAAfcMu96AAAA
+
+    http_version: "1.1"

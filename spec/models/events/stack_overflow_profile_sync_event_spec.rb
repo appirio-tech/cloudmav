@@ -9,7 +9,7 @@ describe "StackOverflowProfileSyncEvent" do
       @profile.stack_overflow_profile = @so_profile
       @so_profile.save
       @so_profile.expects(:retag!)
-      event = StackOverflowProfileSyncEvent.new(:stack_overflow_profile => @so_profile)
+      event = StackOverflowProfileSyncEvent.new(:stack_overflow_profile => @so_profile, :profile => @profile)
 
       VCR.use_cassette("stack_overflow_sync_event", :record => :all) do
         event.sync

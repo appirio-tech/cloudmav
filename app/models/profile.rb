@@ -14,6 +14,7 @@ class Profile
   include CodeMav::CoderModule
   include CodeMav::KnowledgeModule
   include CodeMav::ExperienceModule
+  include CodeMav::SocialModule
   include CodeMav::Taggable
   include CodeMav::Locatable
   include CodeMav::Indexable
@@ -50,7 +51,6 @@ class Profile
   referenced_in :user
   references_many :activities
 
-  references_one :twitter_profile
   references_one :speaker_rate_profile
   references_one :slide_share_profile
   references_one :linkedin_profile
@@ -85,6 +85,7 @@ class Profile
     bitbucket_profile.sync! unless bitbucket_profile.nil?
     speaker_rate_profile.sync! unless speaker_rate_profile.nil?
     slide_share_profile.sync! unless slide_share_profile.nil?
+    twitter_profile.sync! unless twitter_profile.nil?
   end
   
   class << self

@@ -4,8 +4,7 @@ describe Profile do
   
   describe "display name" do
     before(:each) do
-      @user = User.new(:email => "test@email.com", :username => "username")
-      @profile = Profile.new(:user => @user)
+      @profile = Profile.new(:username => "username")
     end
     context "no name" do
       it { @profile.display_name.should == "username" }
