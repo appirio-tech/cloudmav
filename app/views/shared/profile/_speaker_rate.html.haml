@@ -1,8 +1,10 @@
-- if @speaker_rate_profile || can?(:set_speaker_rate_profile, @profile)
+- if @speaker_rate_profile || can?(:sync_profile, @profile)
   .info_box#speaker_rate_info
     .info_logo
       = link_to image_tag("speaker_rate_info_logo.png"), "http://www.speakerrate.com"
-      -if can?(:set_speaker_rate_profile, @profile) && @speaker_rate_profile
+      -if can?(:sync_profile, @profile) && @speaker_rate_profile
+        .delete
+          = link_to "delete", [@profile, @speaker_rate_profile], :id=> :delete_speaker_rate, :confirm => 'Are you sure?', :method => :delete
         .edit
           %a{:class => "module_link", :rel => "#sync_speaker_rate"} edit
     .info
@@ -16,7 +18,7 @@
               %td Rating
               %td= @speaker_rate_profile.rating
       -else
-        - if can? :set_speaker_rate_profile, @profile
+        - if can? :sync_profile, @profile
           - @speaker_rate_profile = SpeakerRateProfile.new
           %p 
             Do you have a Speaker Rate account? 

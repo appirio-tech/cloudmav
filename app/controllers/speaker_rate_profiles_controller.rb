@@ -30,4 +30,11 @@ class SpeakerRateProfilesController < LoggedInController
     end
   end
 
+  def destroy
+    authorize! :sync_profile, @profile
+    @speaker_rate_profile = SpeakerRateProfile.find(params[:id])
+    @speaker_rate_profile.unsync!
+    redirect_to profile_code_path(@profile)
+  end
+
 end

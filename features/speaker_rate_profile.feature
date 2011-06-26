@@ -45,3 +45,13 @@ Feature: Speaker Rate Profile
     And my old SpeakerRate events should be deleted
     And my old talks should be deleted
     And I should have my new talks
+
+  Scenario: Delete SpeakerRate
+
+    Given I have a SpeakerRate profile
+    When I delete my SpeakerRate profile
+    Then I should not have a SpeakerRate profile
+    And my old SpeakerRate events should be deleted
+    And my old talks should be deleted
+    And I should not have the "I need validation" badge
+    And I should have 0 speaker points

@@ -86,3 +86,15 @@ Then /^I should have my new talks$/ do
   Profile.find(@profile.id).talks.count.should > 0
 end
 
+When /^I delete my SpeakerRate profile$/ do
+  visit profile_speaking_path(@profile)
+  profile = Profile.find(@profile.id)
+  @talk_events = TalkAddedEvent.all.to_a
+  @old_talks = profile.talks.to_a
+  click_link "delete_speaker_rate"
+end
+
+Then /^I should not have a SpeakerRate profile$/ do
+  Profile.find(@profile.id).speaker_rate_profile.should be_nil
+end
+
