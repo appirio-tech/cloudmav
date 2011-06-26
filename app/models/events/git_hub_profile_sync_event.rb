@@ -13,7 +13,9 @@ class GitHubProfileSyncEvent < SyncEvent
     git_hub_profile.git_hub_id = result["user"]["id"]
     git_hub_profile.gist_count = result["user"]["public_gist_count"]
     git_hub_profile.repository_count = result["user"]["public_repo_count"]
-    git_hub_profile.followers_count = result["user"]["following_count"]
+    git_hub_profile.followers_count = result["user"]["followers_count"]
+    git_hub_profile.following_count = result["user"]["following_count"]
+
     git_hub_profile.save
 
     url = URI.parse("http://github.com/api/v2/json/repos/show/#{git_hub_profile.username}")

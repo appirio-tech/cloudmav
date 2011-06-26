@@ -9,6 +9,7 @@ class GitHubProfile
   field :gist_count
   field :repository_count
   field :followers_count
+  field :following_count
   field :url
   
   referenced_in :profile, :inverse_of => :git_hub_profile
