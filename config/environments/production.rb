@@ -31,7 +31,7 @@ Codemav::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.middleware.use Rack::SslEnforcer, :only => "/login", :redirect_to => 'https://www.codemav.com'
-  config.middleware.use Rack::SslEnforcer, :only => "/users/sign_up", :redirect_to => 'https://www.codemav.com'
+  #config.middleware.use Rack::SslEnforcer, :only => "/login", :redirect_to => 'https://www.codemav.com'
+  #config.middleware.use Rack::SslEnforcer, :only => "/users/sign_up", :redirect_to => 'https://www.codemav.com'
   
 end

@@ -25,8 +25,8 @@ module Codemav
 
     config.filter_parameters += [:password, :password_confirmation]
 
-    config.to_prepare do
-      Devise::SessionsController.ssl_required :new, :create
-    end
+    #config.to_prepare do
+    #  Devise::SessionsController.ssl_required :new, :create
+    #end
   end
 end
