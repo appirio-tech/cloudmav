@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
 
   def stored_location_for(user)
     scope = Devise::Mapping.find_scope!(user)
-    "http://" + request.host_with_port + session.delete("#{scope}_return_to")
+    "http://www.codemav.com" + session.delete("#{scope}_return_to")
   end
 
   def after_sign_out_path_for(user)
