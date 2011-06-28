@@ -1,5 +1,5 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-  #force_ssl :only => [:new, :create]
+  force_ssl :only => [:new, :create]
 
   protected
 
