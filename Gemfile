@@ -40,6 +40,8 @@ gem "chronic"
 gem "icalendar"
 gem "bitbucket_api", "0.0.1"
 gem "heroku_san"
+gem "ssl_requirement"
+gem "rack-ssl-enforcer"
 
 group :development, :test do
   gem 'launchy', '0.4.0'

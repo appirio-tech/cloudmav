@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include SslRequirement
   protect_from_forgery
   before_filter :get_guidance
   before_filter :unseen_badges
@@ -25,10 +26,19 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(user)
     if current_user.profile.autodiscovered?
-      profile_path(current_user.profile)
+      profile_url(current_user.profile, :protocol => 'http')
     else
-      profile_autodiscovers_path(current_user.profile)
+      profile_autodiscovers_url(current_user.profile, :protocol => 'http')
     end
+  end
+
+  def stored_location_for(user)
+    scope = Devise::Mapping.find_scope!(user)
+    "http://" + request.host_with_port + session.delete("#{scope}_return_to")
+  end
+
+  def after_sign_out_path_for(user)
+    root_url(:protocol => 'http')
   end
   
   private 
