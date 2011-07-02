@@ -13,7 +13,7 @@ class EventsController < ApplicationController
     @profile_events = query.order_by(:date.desc).paginate(:page => @page, :per_page => 10)
 
     respond_to do |wants|
-      wants.html {}
+      wants.html { redirect_to profile_path(@profile) }
       wants.js {}
       wants.json { render :json => @profile_events }
     end
