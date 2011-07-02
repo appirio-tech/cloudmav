@@ -1,0 +1,7 @@
+%tr#bitbucket
+  %td.auto_image= image_tag("auto/bitbucket.png")
+  %td.discovered_label username
+  %td.discovered_info= @profile.bitbucket_profile.username
+  %td.not_me= link_to "That's not me", [@profile, @profile.bitbucket_profile], :method => :delete, :remote => true
+
+

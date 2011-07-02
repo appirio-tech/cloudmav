@@ -1,8 +1,10 @@
 class AutodiscoversController < LoggedInController
 
   def index
+    puts "params #{params.inspect}"
     @profile = Profile.where(:username => params[:profile_id]).first
-    @count = Autodiscovery.discover!(@profile)
+    @autodiscover_id = params[:autodiscover_id] || Autodiscovery.get_id
+    @count = Autodiscovery.discover!(@autodiscover_id, @profile)
     respond_to do |format|
       format.html {
         if (@count == 0)

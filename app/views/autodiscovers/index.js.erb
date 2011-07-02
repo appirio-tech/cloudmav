@@ -1,8 +1,19 @@
 
+console.log("refresh " + <%= @count %>);
+var something_discovered = false;
+
 <% unless @profile.git_hub_profile.nil? %>
   if ($("#git_hub").length === 0) {
     $("#discovered").append("<%= escape_javascript (render :partial => "git_hub") %>");
   }
+  something_discovered = true;
+<% end %>
+
+<% unless @profile.bitbucket_profile.nil? %>
+  if ($("#bitbucket").length === 0) {
+    $("#discovered").append("<%= escape_javascript (render :partial => "bitbucket") %>");
+  }
+  something_discovered = true;
 <% end %>
 
 <% if @count == 0 %>
@@ -10,11 +21,19 @@
   $("#autodiscovering").hide();
   $("#autodiscovered").show();
 
+  if (!something_discovered) {
+    $("#discovered").after("<span id='nothing_discovered'>Sorry we couldn't discover any accounts for you. You can always enter them in by hand.</span>");
+  }
+
+<% else %>
+
+  function discoverProfile() {
+    console.log("url : <%= profile_autodiscovers_path(@profile, :autodiscover_id => @autodiscover_id) %>");
+    $.get("<%= profile_autodiscovers_path(@profile, :autodiscover_id => @autodiscover_id) %>", function(){}, "script");
+  }
+
+  setTimeout("discoverProfile()", 1000);
+
 <% end %>
 
-function discoverProfile() {
-  $.get("<%= profile_autodiscovers_path(@profile) %>", function(){}, "script");
-}
-
-setTimeout("discoverProfile()", 1000);
 

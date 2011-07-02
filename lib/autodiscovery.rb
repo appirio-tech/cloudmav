@@ -1,8 +1,13 @@
 class Autodiscovery
 
+  def self.get_id
+    rand(36**12).to_s(36)
+  end
+
   def self.get_types_to_discover(profile)
     types = []
     types << "GitHub" if profile.git_hub_profile.nil?
+    types << "Bitbucket" if profile.bitbucket_profile.nil?
 
     types
   end
@@ -12,21 +17,26 @@ class Autodiscovery
     Object.const_get(event_name)
   end
 
-  def self.create_event(event_class, profile)
+  def self.create_event(event_class, profile, id)
     event = event_class.new
+    event.autodiscover_id = id
     event.profile = profile
     event.save
   end
 
-  def self.discover!(profile)
+  def self.discover!(id, profile)
     types = get_types_to_discover(profile)
+    types_finished = []
     types.each do |type|
       event_class = get_event_class_for_type(type)
-      event = event_class.where(:profile_id => profile.id, :discover_type => type).first
+      event = event_class.where(:profile_id => profile.id, :autodiscover_id => id, :discover_type => type).first
       if event.nil?
-        create_event(event_class, profile)
+        create_event(event_class, profile, id)
+      elsif event.completed
+        types_finished << type
       end
     end
+    types_finished.each{|t| types.delete(t)}
     types.count
   end
    
