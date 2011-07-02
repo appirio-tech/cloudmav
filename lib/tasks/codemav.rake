@@ -33,4 +33,9 @@ namespace :codemav do
       p.recalculate_score!
     end
   end
+
+  desc "Test"
+  task :test => :environment do
+    puts "Test to see if rake is working"
+  end
 end
