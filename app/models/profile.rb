@@ -55,7 +55,7 @@ class Profile
   references_one :slide_share_profile
   references_one :linkedin_profile
 
-  scope :by_username, lambda { |uname| { :where => { :username => uname } } }
+  scope :by_username, lambda { |uname| where(:username => uname) }
   scope :named, lambda { |name| { :where => { :name => name } } }
   scope :showcase, lambda { where(:showcase => true) }
   
