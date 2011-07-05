@@ -32,5 +32,26 @@ Then /^I should be redirected to the autodiscover page$/ do
   current_path.should == profile_autodiscovers_path(user.profile)
 end
 
+When /^I register from the home page$/ do
+  visit root_path
+  @user = Factory.build(:user)
+  fill_in "user_username", :with => @user.username
+  fill_in "user_email", :with => @user.email
+  fill_in "user_password", :with => @user.password
+  click_button "Register"
+end
 
+When /^I register with bad info on the home page$/ do
+  visit root_path
+  @user = Factory.build(:user)
+  fill_in "user_username", :with => ""
+  fill_in "user_email", :with => @user.email
+  fill_in "user_password", :with => ""
+  click_button "Register"
+end
+
+Then /^I should not be registered$/ do
+  user = User.where(:email => @user.email).first
+  user.should be_nil
+end
 

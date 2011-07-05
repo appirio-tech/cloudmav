@@ -97,7 +97,7 @@ end
 
 Then /^my old SlideShare events should be deleted$/ do
   old_ids = @talk_events.map(&:id)
-  TalkAddedEvent.any_in(_id: old_ids).count.should == 0
+  TalkAddedEvent.any_in(:_id => old_ids).count.should == 0
 end
 
 When /^I delete my SlideShare profile$/ do

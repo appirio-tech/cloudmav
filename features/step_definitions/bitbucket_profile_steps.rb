@@ -56,7 +56,7 @@ end
 
 Then /^my old Bitbucket repositories should be deleted$/ do
   old_ids = @old_repositories.map(&:id)
-  BitbucketRepository.any_in(_id: old_ids).count.should == 0
+  BitbucketRepository.any_in(:_id => old_ids).count.should == 0
 end
 
 Then /^I should have my new Bitbucket repositories$/ do

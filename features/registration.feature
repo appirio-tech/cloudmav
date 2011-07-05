@@ -14,3 +14,14 @@ Feature: Registration
 		And my profile email should be my user email
     And I should be redirected to the autodiscover page
 
+  Scenario: Register from homepage
+
+    Given I am a visitor
+    When I register from the home page
+    Then I should be registered
+
+  Scenario: Bad registration from homepage
+
+    Given I am a visitor
+    When I register with bad info on the home page
+    Then I should not be registered

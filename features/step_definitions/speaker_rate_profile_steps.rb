@@ -74,12 +74,12 @@ end
 
 Then /^my old SpeakerRate events should be deleted$/ do
   old_ids = @talk_events.map(&:id)
-  TalkAddedEvent.any_in(_id: old_ids).count.should == 0
+  TalkAddedEvent.any_in(:_id => old_ids).count.should == 0
 end
 
 Then /^my old talks should be deleted$/ do
   old_ids = @old_talks.map(&:id)
-  Talk.any_in(_id: old_ids).count.should == 0
+  Talk.any_in(:_id => old_ids).count.should == 0
 end
 
 Then /^I should have my new talks$/ do

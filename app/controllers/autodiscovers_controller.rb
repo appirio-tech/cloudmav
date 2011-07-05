@@ -1,7 +1,6 @@
 class AutodiscoversController < LoggedInController
 
   def index
-    puts "params #{params.inspect}"
     @profile = Profile.where(:username => params[:profile_id]).first
     @autodiscover_id = params[:autodiscover_id] || Autodiscovery.get_id
     @count = Autodiscovery.discover!(@autodiscover_id, @profile)

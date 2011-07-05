@@ -72,7 +72,7 @@ end
 
 Then /^my old GitHub repositories should be deleted$/ do
   old_ids = @old_repositories.map(&:id)
-  GitHubRepository.any_in(_id: old_ids).count.should == 0
+  GitHubRepository.any_in(:_id => old_ids).count.should == 0
 end
 
 Then /^I should have my new GitHub repositories$/ do

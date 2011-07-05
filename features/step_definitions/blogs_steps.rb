@@ -77,12 +77,12 @@ end
 
 Then /^my old posts should be deleted$/ do
   old_ids = @old_posts.map(&:id)
-  Post.any_in(_id: old_ids).count.should == 0
+  Post.any_in(:_id => old_ids).count.should == 0
 end
 
 Then /^my old Blog events should be deleted$/ do
   old_ids = @old_post_events.map(&:id)
-  PostAddedEvent.any_in(_id: old_ids).count.should == 0
+  PostAddedEvent.any_in(:_id => old_ids).count.should == 0
 end
 
 Then /^I should have my new Blog posts$/ do

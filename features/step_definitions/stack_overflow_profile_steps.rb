@@ -84,12 +84,12 @@ end
 
 Then /^my old StackOverflow questions should be deleted$/ do
   old_ids = @old_questions.map(&:id)
-  StackOverflowQuestion.any_in(_id: old_ids).count.should == 0
+  StackOverflowQuestion.any_in(:_id => old_ids).count.should == 0
 end
 
 Then /^my old StackOverflow answers should be deleted$/ do
   old_ids = @old_questions.map(&:id)
-  StackOverflowAnswer.any_in(_id: old_ids).count.should == 0
+  StackOverflowAnswer.any_in(:_id => old_ids).count.should == 0
 end
 
 Then /^I should have my new StackOverflow questions$/ do
@@ -104,9 +104,9 @@ end
 
 Then /^my old StackOverflow events should be deleted$/ do
   old_ids = @old_question_events.map(&:id)
-  StackOverflowQuestionAddedEvent.any_in(_id: old_ids).count.should == 0
+  StackOverflowQuestionAddedEvent.any_in(:_id => old_ids).count.should == 0
   old_ids = @old_answer_events.map(&:id)
-  StackOverflowAnswerAddedEvent.any_in(_id: old_ids).count.should == 0
+  StackOverflowAnswerAddedEvent.any_in(:_id => old_ids).count.should == 0
 end
 
 When /^I delete my StackOverflow profile$/ do
