@@ -11,6 +11,6 @@ Then /^the response should be "([^"]*)"$/ do |code|
 end
 
 Then /^the response should have "([^"]*)"'s profile data$/ do |username|
-  result = JSON.parse(response.body).first
-  result["username"].should == username
+  result = JSON.parse(response.body)
+  result["profile"]["username"].should == username
 end

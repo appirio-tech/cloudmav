@@ -44,6 +44,7 @@ gem "ssl_requirement"
 gem "rack-ssl-enforcer"
 gem "formtastic"
 gem "css3buttons"
+gem "rabl"
 
 group :development, :test do
   gem 'launchy', '0.4.0'

@@ -32,7 +32,6 @@ class Profile
   field :gravatar_id, :type => String
   index :username, :unique => true
   
-  
   field :can_manage_tags, :type => Boolean, :default => false
   field :is_moderator, :type => Boolean, :default => false
   
@@ -67,18 +66,6 @@ class Profile
     username
   end
 
-  def as_json(opts={})
-    result = { 
-      :id => api_id,
-      :username => username,
-      :name => name
-    }
-    result[:stack_overflow] = stack_overflow_profile.as_json unless stack_overflow_profile.nil?
-    result[:git_hub] = git_hub_profile.as_json unless git_hub_profile.nil?
-    result[:speaker_rate] = speaker_rate_profile.as_json unless speaker_rate_profile.nil?
-    return result
-  end
-  
   def sync!
     stack_overflow_profile.sync! unless stack_overflow_profile.nil?
     git_hub_profile.sync! unless git_hub_profile.nil?

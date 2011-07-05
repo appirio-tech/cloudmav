@@ -40,7 +40,7 @@ Codemav::Application.routes.draw do
     resources :meetings
   end
   
-  namespace :api do
+  namespace "api/v1", :as => :api do
     resources :profiles
   end
   
