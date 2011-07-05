@@ -1,5 +1,19 @@
 namespace :fix do    
 
+  desc "Fix github"
+  task :github => :environment do
+    events_to_delete = []
+
+    GitHubRepositoryAddedEvent.all.each do |e|
+      repo = GitHubRepository.where(:_id => e.git_hub_repository_id).first
+      if repo.nil?
+        events_to_delete << e
+      end
+    end
+
+    events_to_delete.each{|e| e.destroy}
+  end
+
   desc "Fix talks after getting rid of presentations"
   task :talks => :environment do
     profiles = Profile.all.to_a
