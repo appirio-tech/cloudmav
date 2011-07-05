@@ -1,8 +1,8 @@
 class TalksController < ApplicationController
-  before_filter :set_profile, :only => [:new, :show, :create, :edit, :update]
+  before_filter :set_profile
   
   def index
-    @talks = Talk.paginate(:page => params[:page], :per_page => 10, :order => 'created_on DESC')
+    @talks = Talk.for_profile(@profile).order_by([[:created_at, :desc]])
   end
   
   def show
