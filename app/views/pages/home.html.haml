@@ -11,10 +11,11 @@
   .home_image
     = image_tag "home_services.png"
 
-  %a{:href => "http://twitter.com/codemav", :class => "twitter-follow-button", "data-show-count" => "false"} Follow @codemav
-  = javascript_include_tag "http://platform.twitter.com/widgets.js"
+
   
 .grid_6
+
+
   %h3.join_codemav Join CodeMav
   .register
     = semantic_form_for User.new, :url => registration_path("user") do |f|
@@ -24,6 +25,9 @@
         = f.input :password, :required => false
       = f.buttons do
         = big_primary_button_submit_tag "Register"
+
+
+
 .clear
 
 %hr
@@ -50,51 +54,9 @@
 
 .clear
 
-.grid_16
-  .follow_us_on_twitter
-    Follow us on twitter #{link_to "@codemav", "http://www.twitter.com/codemav", :target => "_blank"}
-
-.clear
-
-.grid_10
-  .side_description
-
-    %h1 Many to One
-
-    %p 
-      Tired of having to sharing all your separate profiles with your friends?
-
-    %p
-      You have StackOverflow, LinkedIn, GitHub, Twitter, the list goes on and on.
-
-    %p
-      Now you can just share one profile. Your CodeMav profile. 
-
-    %p
-      CodeMav is where developers can setup their definitive online profile. 
-      
-    %p
-      In one location you can find your friends and coworkers blogs, twitter account, StackOverflow reputation, and their speaking materials.
-
-    %p
-      With the event log you can also keep track of what they are doing. What StackOverflow questions they've asked or answered. What open source projects are they contributing to on GitHub. What conference they are speaking at next. 
-
-    %p
-      
-
-.grid_6
-  .home_side_module
-    %h2.module_title Beta!
-
-    %p CodeMav is currently beta but we wanted people to start using the system because even the basic features are exciting. So create a profile, connect to your other online profiles through our sync services. Give us feedback on what you would like to see next!
-  .clear
-
-  .home_side_module
-    //%h2 API
-
-    //%p CodeMav is dedicated to exposing a API for other systems so be sure to check out our #{link_to "API documentation", api_documentation_path}.
-  .clear
-
-.clear
-
+//.grid_16
+// .follow_us_on_twitter
+//    Follow us on twitter #{link_to "@codemav", "http://www.twitter.com/codemav", :target => "_blank"}
+//
+//.clear
 
