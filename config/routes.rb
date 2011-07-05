@@ -41,7 +41,11 @@ Codemav::Application.routes.draw do
   end
   
   namespace "api/v1", :as => :api do
-    resources :profiles
+    resources :profiles do
+      member do
+        get :tags
+      end
+    end
   end
   
   devise_for :users do

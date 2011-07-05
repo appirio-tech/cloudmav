@@ -5,5 +5,10 @@ class Api::V1::ProfilesController < ApplicationController
     @profile = Profile.where(:username => params[:id]).first
     respond_with(@profile)
   end
+
+  def tags
+    @profile = Profile.where(:username => params[:id]).first
+    respond_with(@profile)
+  end
   
 end
