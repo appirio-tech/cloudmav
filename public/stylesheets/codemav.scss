@@ -164,20 +164,20 @@ form {
       border: 1px solid $light_blue;
     }
   }
-  input[type=submit] {
-    @include corners(3px);
-    @include gradient($gray_gradient2, $gray_gradient1);
-    border: 1px solid $gray_foreground;
-    color: $gray_text;
-    padding: 7px;
-    font-size: $form_font_size + 1pt;
-    cursor: pointer;
-    &:hover {
-      @include gradient($dark_gradient1, $dark_gradient2);
-      color: $off_white;
-      border: 1px solid $blue;
-    }
-  }
+  //input[type=submit] {
+  //  @include corners(3px);
+  //  @include gradient($gray_gradient2, $gray_gradient1);
+  //  border: 1px solid $gray_foreground;
+  //  color: $gray_text;
+  //  padding: 7px;
+  //  font-size: $form_font_size + 1pt;
+  //  cursor: pointer;
+  //  &:hover {
+  //    @include gradient($dark_gradient1, $dark_gradient2);
+  //    color: $off_white;
+  //    border: 1px solid $blue;
+  //  }
+  //}
   select {
     font-size:$form_font_size;
     margin-top:$form_top_margin;

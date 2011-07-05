@@ -10,38 +10,43 @@
 
   .home_image
     = image_tag "home_services.png"
+
+  %a{:href => "http://twitter.com/codemav", :class => "twitter-follow-button", "data-show-count" => "false"} Follow @codemav
+  = javascript_include_tag "http://platform.twitter.com/widgets.js"
+  
 .grid_6
+  %h3.join_codemav Join CodeMav
   .register
-    %h3 Register
     = semantic_form_for User.new, :url => registration_path("user") do |f|
       = f.inputs do
         = f.input :username
         = f.input :email, :required => false
         = f.input :password, :required => false
       = f.buttons do
-        = f.commit_button "Register", :button_html => { :disable_with => 'Registering...' }
+        = big_primary_button_submit_tag "Register"
+.clear
 
-    //= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-    //- if resource.errors.any?
-    //  #error_explanation
-    //    %h2 There were some problems with your registration...
-    //    %ul
-    //      - resource.errors.full_messages.each do |msg|
-    //        %li= msg
+%hr
 
-    //.label= f.label :username
-    //.control= f.text_field :username
-    //          
-    //.label= f.label :email
-    //.control= f.text_field :email
-  
-    //.label= f.label :password
-    //.control= f.password_field :password
-  
-    //.label= f.label :password_confirmation
-    //.control= f.password_field :password_confirmation
-  
-    //.submit= f.submit "Register", :disable_with => "Registering..."
+.grid_4.home_module
+  %h4 Consolidate profiles.
+  %p
+    Consolidate all your separate profiles into one. Now people have one place to find out who you are on GitHub or StackOverflow.
+
+.grid_4.home_module
+  %h4 Build an identity.
+  %p
+    Your distribution of points in categories builds a picture of who you are and how you give back to the community. 
+
+.grid_4.home_module
+  %h4 Earn points.
+  %p
+    Earn points for your activity whether its writing blog posts, giving talks, or contributing to open source projects. The more popular an activity, the more points you earn.
+
+.grid_4.home_module
+  %h4 Stay connected.
+  %p
+    Stay up to date with your friend's activity. Find out about events happening near you. Discover open source projects that need contributions.
 
 .clear
 
