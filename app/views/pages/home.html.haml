@@ -1,9 +1,51 @@
+- content_for :title do
+  Welcome to CodeMav
 - content_for :css do
   = stylesheet_link_tag "home"
 
-.grid_16
+%h1.hidden Welcome to CodeMav
+
+.grid_10
+  %h2.home_tagline Consolidate your profiles to create your definitive developer identity
+
   .home_image
     = image_tag "home_services.png"
+.grid_6
+  .register
+    %h3 Register
+    = semantic_form_for User.new, :url => registration_path("user") do |f|
+      = f.inputs do
+        = f.input :username
+        = f.input :email, :required => false
+        = f.input :password, :required => false
+      = f.buttons do
+        = f.commit_button "Register", :button_html => { :disable_with => 'Registering...' }
+
+    //= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+    //- if resource.errors.any?
+    //  #error_explanation
+    //    %h2 There were some problems with your registration...
+    //    %ul
+    //      - resource.errors.full_messages.each do |msg|
+    //        %li= msg
+
+    //.label= f.label :username
+    //.control= f.text_field :username
+    //          
+    //.label= f.label :email
+    //.control= f.text_field :email
+  
+    //.label= f.label :password
+    //.control= f.password_field :password
+  
+    //.label= f.label :password_confirmation
+    //.control= f.password_field :password_confirmation
+  
+    //.submit= f.submit "Register", :disable_with => "Registering..."
+
+.clear
+
+.grid_16
   .follow_us_on_twitter
     Follow us on twitter #{link_to "@codemav", "http://www.twitter.com/codemav", :target => "_blank"}
 

@@ -5,6 +5,41 @@ $dark_background: #373737;
 $dark_foreground: #ffffff;
 
 $light_blue: #0477BF;
+$black: #0D0D0D;
+
+form.formtastic {
+  fieldset > ol > li {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  fieldset > ol > li label {
+    color:$black;
+    text-align: right;
+    width: 100px;
+    padding-right: 10px;
+    margin-top: 4px;
+  }
+  fieldset > ol > li.string input, fieldset > ol > li.password input {
+    border: 1px solid #000;
+    padding: 4px;
+    width: 50%;
+    &:focus {
+      border: 1px solid $light_blue;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .side_description {
   font-family: "Arial";

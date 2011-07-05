@@ -1,10 +1,13 @@
 %html
 %head
-  %title Codemav
+  %title 
+    = yield :title
   = stylesheet_link_tag "reset"
   = stylesheet_link_tag "960"
+  = stylesheet_link_tag "formtastic"
   = stylesheet_link_tag "codemav"
   = stylesheet_link_tag "tabs"
+  = css3buttons_stylesheets
   = yield :css
 
   = javascript_include_tag "jquery-1.4.2.min"

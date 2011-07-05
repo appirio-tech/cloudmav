@@ -42,6 +42,8 @@ gem "bitbucket_api", "0.0.1"
 gem "heroku_san"
 gem "ssl_requirement"
 gem "rack-ssl-enforcer"
+gem "formtastic"
+gem "css3buttons"
 
 group :development, :test do
   gem 'launchy', '0.4.0'
