@@ -99,6 +99,32 @@ form textarea {
   form textarea:focus {
     border: 1px solid #0477bf; }
 
+form.formtastic fieldset > ol > li {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 5px; }
+form.formtastic fieldset > ol > li label {
+  color: #0d0d0d;
+  text-align: right;
+  width: 100px;
+  padding-right: 10px;
+  margin-top: 5px; }
+form.formtastic fieldset > ol > li.string input, form.formtastic fieldset > ol > li.password input {
+  border: 1px solid #000;
+  padding: 4px;
+  width: 60%; }
+  form.formtastic fieldset > ol > li.string input:focus, form.formtastic fieldset > ol > li.password input:focus {
+    border: 1px solid #0477bf; }
+form.formtastic fieldset.buttons {
+  padding-left: 100px; }
+
+form.formtastic input.button, form.formtastic.button.button {
+  padding: 0.2em 1em 0.2em 1.1em;
+  font-family: sans-serif;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 7px; }
+
 .flash {
   padding: 5px;
   text-align: center;

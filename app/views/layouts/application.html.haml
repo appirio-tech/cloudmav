@@ -1,7 +1,7 @@
 %html
 %head
   %title 
-    = yield :title
+    = yield(:title) || "CodeMav"
   = stylesheet_link_tag "reset"
   = stylesheet_link_tag "960"
   = stylesheet_link_tag "formtastic"

@@ -7,6 +7,7 @@ module CodeMav
 
         references_one :git_hub_profile
         references_one :bitbucket_profile
+        references_one :coder_wall_profile
 
         before_create :create_coder_profile
       end

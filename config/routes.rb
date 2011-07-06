@@ -66,6 +66,7 @@ Codemav::Application.routes.draw do
     resources :bitbucket_profiles
     resources :speaker_rate_profiles
     resources :slide_share_profiles
+    resources :coder_wall_profiles
     resources :events
     resources :followings
     resources :widgets

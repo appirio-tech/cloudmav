@@ -195,6 +195,43 @@ form {
   }
 }
 
+
+form.formtastic {
+  fieldset > ol > li {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;;
+  }
+  fieldset > ol > li label {
+    color:$black;
+    text-align: right;
+    width: 100px;
+    padding-right: 10px;
+    margin-top: 5px;
+  }
+  fieldset > ol > li.string input, fieldset > ol > li.password input {
+    border: 1px solid #000;
+    padding: 4px;
+    width: 60%;
+    &:focus {
+      border: 1px solid $light_blue;
+    }
+  }
+  fieldset.buttons {
+    padding-left: 100px;
+  }
+}
+
+form.formtastic input.button, form.formtastic.button.button {
+  padding: 0.2em 1em 0.2em 1.1em;
+  font-family: sans-serif;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 7px;
+}
+
+
+
 .flash {
   padding: 5px;
   text-align:center;
