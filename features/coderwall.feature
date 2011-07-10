@@ -35,3 +35,9 @@ Feature: CoderWallProfile
     Then I should have a CoderWall profile
     And my old CoderWall badges should be deleted
     And I should have my new CoderWall badges
+
+  Scenario: Delete CoderWall
+
+    Given I have a CoderWall profile
+    When I delete my CoderWall profile
+    Then I should not have a CoderWall profile

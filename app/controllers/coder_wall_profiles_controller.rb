@@ -32,8 +32,8 @@ class CoderWallProfilesController < LoggedInController
   
   def destroy
     authorize! :sync_profile, @profile
-    @stack_overflow_profile = StackOverflowProfile.find(params[:id])
-    @stack_overflow_profile.unsync!
+    @coder_wall_profile = CoderWallProfile.find(params[:id])
+    @coder_wall_profile.unsync!
     redirect_to profile_code_path(@profile)
   end
 

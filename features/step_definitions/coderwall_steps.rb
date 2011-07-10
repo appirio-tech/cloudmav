@@ -73,4 +73,13 @@ Then /^I should have my new CoderWall badges$/ do
   profile.coder_wall_profile.badges.count.should > 0
 end
 
+When /^I delete my CoderWall profile$/ do
+  visit profile_code_path(@profile)
+  profile = Profile.find(@profile.id)
+  click_link "delete_coder_wall"
+end
+
+Then /^I should not have a CoderWall profile$/ do
+  Profile.find(@profile.id).coder_wall_profile.should be_nil
+end
 
