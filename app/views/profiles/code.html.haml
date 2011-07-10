@@ -19,7 +19,7 @@
         = render :partial => "events/event", :collection => @code_events, :as => :event
         %li.event_load &nbsp; 
         %li.more_events
-          = form_tag profile_events_path(@profile), :remote => true, :method => :get do |f|
+          = form_tag profile_events_path(@profile), :remote => true, :method => :get do
             = hidden_field_tag :filter, "Code"
             = hidden_field_tag :subfilter, "All"
             = hidden_field_tag :page, 2
@@ -27,9 +27,9 @@
       &nbsp;
 
     .grid_5
-      = render :partial => "shared/profile/stack_overflow"
       = render :partial => "shared/profile/git_hub"
       = render :partial => "shared/profile/bitbucket"
+      = render :partial => "shared/profile/coder_wall"
       = render :partial => "shared/tags", :locals => {:taggable => @profile.coder_profile}
 
     .clear

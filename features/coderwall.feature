@@ -12,9 +12,26 @@ Feature: CoderWallProfile
   
     When I sync my CoderWall account
     Then I should have a CoderWall profile
-    #And I should be awarded the "Stack Junkie" badge
-    #And I should have knowledge points for StackOverflow
-    #And I should learned "Syncing with your Stackoverflow Account"
-    #And my StackOverflow profile should be tagged
-    #And my profile should have my StackOverflow profile tags
-    #And I should have my top questions and top answers
+    And I should have coder points for CoderWall
+    And I should have badges on my CoderWall profile
+
+  Scenario: Don't see CoderWall on users without CoderWall
+
+    Given there is another user
+    When I view their code profile
+    Then I should not see their CoderWall profile
+
+  Scenario: See CoderWall on users with CoderWall
+
+    Given there is another user
+    And the other user has a CoderWall profile
+    When I view their code profile
+    Then I should see their CoderWall profile
+
+  Scenario: Edit CoderWall
+
+    Given I have a CoderWall profile
+    When I edit my CoderWall username
+    Then I should have a CoderWall profile
+    And my old CoderWall badges should be deleted
+    And I should have my new CoderWall badges

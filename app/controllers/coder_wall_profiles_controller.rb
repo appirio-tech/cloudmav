@@ -22,8 +22,8 @@ class CoderWallProfilesController < LoggedInController
   def update
     authorize! :sync_profile, @profile
     
-    if @profile.stack_overflow_profile.update_attributes(params[:stack_overflow_profile])
-      @profile.stack_overflow_profile.resync!
+    if @profile.coder_wall_profile.update_attributes(params[:coder_wall_profile])
+      @profile.coder_wall_profile.resync!
       redirect_to profile_code_path(@profile)
     else
       render :edit
