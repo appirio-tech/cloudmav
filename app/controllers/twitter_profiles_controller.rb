@@ -8,6 +8,7 @@ class TwitterProfilesController < LoggedInController
   def create
     authorize! :sync_profile, @profile
     @twitter_profile = TwitterProfile.new(params[:twitter_profile])
+    puts "twitter #{@twitter_profile.inspect}"
     @twitter_profile.profile = @profile
     @twitter_profile.sync!
         
@@ -23,7 +24,7 @@ class TwitterProfilesController < LoggedInController
     authorize! :sync_profile, @profile
     
     if @profile.twitter_profile.update_attributes(params[:twitter_profile])
-      @profile.twitter_profile.sync!
+      @profile.twitter_profile.resync!
       redirect_to profile_social_path(@profile)
     else
       render :edit

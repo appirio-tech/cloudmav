@@ -18,3 +18,5 @@ Feature: API User Profile
 		Then the response should be "200"
     And the response should have the "ruby" tag with a score of "10"
     And the response should have the "python" tag with a score of "1"
+
+
