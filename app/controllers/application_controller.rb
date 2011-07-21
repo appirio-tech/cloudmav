@@ -9,6 +9,8 @@ class ApplicationController < ActionController::Base
   
   rescue_from CanCan::AccessDenied, :with => :access_denied
   rescue_from RSolr::RequestError, :with => :solr_error
+  rescue_from Mongoid::Errors::DocumentNotFound, :with => :document_not_found
+  rescue_from BSON::InvalidObjectId, :with => :document_not_found
   
   def current_profile
     return nil if current_user.nil?
@@ -66,5 +68,9 @@ class ApplicationController < ActionController::Base
       unseen_badgings = current_profile.badgings.unseen.to_a
       @unseen_badges = unseen_badgings.map(&:badge)
       unseen_badgings.each {|b| b.mark_as_seen }
+    end
+
+    def document_not_found
+      render :file => "#{Rails.root}/public/404.html", :status => 404, :layout => false
     end
 end
