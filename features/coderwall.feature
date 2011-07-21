@@ -41,3 +41,4 @@ Feature: CoderWallProfile
     Given I have a CoderWall profile
     When I delete my CoderWall profile
     Then I should not have a CoderWall profile
+    And I should not have a CoderWall profile added event

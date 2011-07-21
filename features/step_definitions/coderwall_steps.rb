@@ -83,3 +83,7 @@ Then /^I should not have a CoderWall profile$/ do
   Profile.find(@profile.id).coder_wall_profile.should be_nil
 end
 
+Then /^I should not have a CoderWall profile added event$/ do
+  CoderWallProfileAddedEvent.for_profile(@profile).count.should == 0
+end
+

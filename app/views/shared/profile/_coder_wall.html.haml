@@ -15,10 +15,10 @@
           %p.sync_error There was an error while syncing.
         - else
           = link_to "Go to my Coderwall Profile", @coder_wall_profile.url, :target => "_blank"
-          %table
-            %tr
-              %td Badges
-              %td= @coder_wall_profile.badges_count
+          %ul.coder_wall_badges
+            - @coder_wall_profile.badges.each do |badge|
+              %li
+                = image_tag badge.badge, :alt => badge.name
         
       - else
         - if can? :sync_profile, @profile
