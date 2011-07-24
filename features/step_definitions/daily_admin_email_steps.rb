@@ -23,12 +23,16 @@ end
 
 Given /^there were (\d+) events that ran$/ do |number|
   number.to_i.times do 
-    Event.create
+    ProfileEvent.create
   end
 end
 
 Then /^the email should show (\d+) events ran$/ do |number|
   @email.body.should include "Total events that ran today = #{number}"
+end
+
+Then /^the email should show the type of events ran$/ do
+  @email.body.should include "ProfileEvent"
 end
 
 

@@ -13,3 +13,4 @@ Feature: Daily Admin Email
     Then the email should show 101 total users
     And the email should have "jsmith" as a new user
     And the email should show 100 events ran
+    And the email should show the type of events ran
