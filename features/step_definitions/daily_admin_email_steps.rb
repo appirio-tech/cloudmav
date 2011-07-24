@@ -21,4 +21,15 @@ Then /^the email should have "([^"]*)" as a new user$/ do |username|
   @email.body.should include username
 end
 
+Given /^there were (\d+) events that ran$/ do |number|
+  number.to_i.times do 
+    Event.create
+  end
+end
+
+Then /^the email should show (\d+) events ran$/ do |number|
+  @email.body.should include "Total events that ran today = #{number}"
+end
+
+
 
