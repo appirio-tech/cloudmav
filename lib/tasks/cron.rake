@@ -5,5 +5,9 @@ task :cron => :environment do
    Profile.sync_all!
    Presentation.send_reminders!
  end
+
+ if Time.now.hour == 23
+   AdminMailer.daily_report.deliver
+ end
  
 end
