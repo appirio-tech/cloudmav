@@ -6,6 +6,7 @@ class AdminEmailer < ActionMailer::Base
   
   def daily_report
     @total_users_count = User.count
+    @new_users = User.users_created_today
 
     mail(:to => "rookieone@gmail.com",
           :subject => "Daily Email for #{DateTime.now}")

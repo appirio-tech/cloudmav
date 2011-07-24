@@ -7,5 +7,7 @@ Feature: Daily Admin Email
   Scenario: Daily Admin Email
 
     Given there are 100 users
+    And there is a new user "jsmith"
     When the daily admin email is sent
-    Then the email should show 100 total users
+    Then the email should show 101 total users
+    And the email should have "jsmith" as a new user
