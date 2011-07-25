@@ -7,7 +7,7 @@ task :cron => :environment do
  end
 
  if Time.now.hour == 23
-   AdminMailer.daily_report.deliver
+   AdminEmailer.daily_report.deliver
  end
  
 end

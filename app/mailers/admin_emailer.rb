@@ -10,7 +10,7 @@ class AdminEmailer < ActionMailer::Base
     @daily_events = Event.events_created_today
 
     mail(:to => "rookieone@gmail.com",
-          :subject => "Daily Email for #{DateTime.now}")
+          :subject => "Daily Email for #{DateTime.now.strftime("%m/%d/%y")}")
   end
 
 end
