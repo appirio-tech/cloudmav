@@ -12,22 +12,22 @@
     headers: 
       etag: 
       - "\"461de131fe9ff4174d01da7d06943834\""
-      last-modified: 
-      - Sat, 13 Aug 2011 15:37:10 GMT
       expires: 
+      - Sat, 13 Aug 2011 15:37:10 GMT
+      last-modified: 
       - Sat, 13 Aug 2011 15:37:10 GMT
       content-type: 
       - application/json; charset=utf-8
-      date: 
-      - Sat, 13 Aug 2011 15:37:10 GMT
       server: 
       - nginx/1.0.4
+      date: 
+      - Sat, 13 Aug 2011 15:37:10 GMT
       content-length: 
       - "629"
-      cache-control: 
-      - max-age=0
       vary: 
       - Authorization, Cookie
+      cache-control: 
+      - max-age=0
     body: |-
       {
           "repositories": [
@@ -50,4 +50,35 @@
               "resource_uri": "/1.0/users/rookieone"
           }
       }
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.bitbucket.org:443/1.0/users/scottburton11
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 404
+      message: NOT FOUND
+    headers: 
+      etag: 
+      - "\"9d1ead73e678fa2f51a70a933b0bf017\""
+      last-modified: 
+      - Sat, 13 Aug 2011 15:40:32 GMT
+      expires: 
+      - Sat, 13 Aug 2011 15:40:32 GMT
+      content-type: 
+      - text/plain
+      date: 
+      - Sat, 13 Aug 2011 15:40:32 GMT
+      server: 
+      - nginx/1.0.4
+      content-length: 
+      - "9"
+      cache-control: 
+      - max-age=0
+      vary: 
+      - Authorization, Cookie
+    body: Not Found
     http_version: "1.1"
