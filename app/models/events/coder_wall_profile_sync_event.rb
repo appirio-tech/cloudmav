@@ -11,8 +11,11 @@ class CoderWallProfileSyncEvent < SyncEvent
 
     url = URI.parse("http://www.coderwall.com/#{coder_wall_profile.username}.json")
     response = Net::HTTP.get_response url
+
+    return if response.body.blank?
     result = JSON.parse(response.body)
 
+    coder_wall_profile.url = "http://www.coderwall.com/#{coder_wall_profile.username}"
     coder_wall_profile.badges_count = result["badges"].count
 
     result["badges"].each do |b|

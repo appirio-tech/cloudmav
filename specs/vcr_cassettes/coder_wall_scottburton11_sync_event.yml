@@ -1,0 +1,38 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.coderwall.com:80/scottburton11.json
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 404
+      message: Not Found
+    headers: 
+      x-ua-compatible: 
+      - IE=Edge,chrome=1
+      x-varnish: 
+      - "1900325411"
+      via: 
+      - 1.1 varnish, 1.0 lsrc5gw.lonestarrubyconf.com:3128 (squid/2.6.STABLE21)
+      content-type: 
+      - application/json; charset=utf-8
+      x-cache-lookup: 
+      - MISS from lsrc5gw.lonestarrubyconf.com:3128
+      x-cache: 
+      - MISS from lsrc5gw.lonestarrubyconf.com
+      x-runtime: 
+      - "0.214639"
+      date: 
+      - Sat, 13 Aug 2011 16:04:25 GMT
+      server: 
+      - nginx/0.7.67
+      content-length: 
+      - "1"
+      age: 
+      - "0"
+      cache-control: 
+      - no-cache
+    body: " "
+    http_version: "1.0"

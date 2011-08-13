@@ -33,7 +33,7 @@ describe "BitbucketProfileSyncEvent" do
       @bitbucket_profile.expects(:retag!)
       event = BitbucketProfileSyncEvent.new(:bitbucket_profile => @bitbucket_profile, :profile => @profile)
 
-      VCR.use_cassette("bitbucket_sync_event", :record => :new_episodes) do
+      VCR.use_cassette("bitbucket_scottburton11_sync_event", :record => :new_episodes) do
         event.sync
       end
       @profile = Profile.find(@profile.id)
