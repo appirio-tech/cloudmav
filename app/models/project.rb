@@ -7,8 +7,8 @@ class Project
   field :technologies, :type => Array
   
   referenced_in :profile, :inverse_of => :project
-  references_many :technologies, :stored_as => :array
-  
+  #references_many :technologies, :stored_as => :array
+
   validate :start_before_end, :if => :start_and_end_date_not_nil
   
   def set_technologies!(technologies_string)
