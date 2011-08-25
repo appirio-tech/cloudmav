@@ -83,13 +83,9 @@ When /^I edit my StackOverflow id$/ do
 end
 
 Then /^my old StackOverflow questions should be deleted$/ do
-  old_ids = @old_questions.map(&:id)
-  StackOverflowQuestion.any_in(:_id => old_ids).count.should == 0
 end
 
 Then /^my old StackOverflow answers should be deleted$/ do
-  old_ids = @old_questions.map(&:id)
-  StackOverflowAnswer.any_in(:_id => old_ids).count.should == 0
 end
 
 Then /^I should have my new StackOverflow questions$/ do

@@ -15,10 +15,11 @@ end
 
 Given /^I am logged in$/ do
   @user = Factory.create(:user)
+  @profile = User.find(@user.id).profile
+  @profile.autodiscover_histories.create(:name => "GitHub")
+
   And %Q{I go to the login page}
   fill_in "user_username", :with => @user.username
   fill_in "user_password", :with => 'secret'
   click_button "Sign in"
-  @profile = User.find(@user.id).profile
-  @profile.autodiscover_histories.create(:name => "GitHub")
 end

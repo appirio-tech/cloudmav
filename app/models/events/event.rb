@@ -39,7 +39,7 @@ class Event
   end
 
   def perform
-    begin
+    #begin
     self.in_process = true
     self.date = self.created_at if self.date.nil?
     self.save
@@ -50,13 +50,14 @@ class Event
     self.in_process = false
     self.processed_date = DateTime.now
     self.save
-    rescue => detail
-      self.completed = true
-      self.in_process = false
-      self.processed_date = DateTime.now
-      self.error_message = detail.message
-      self.save
-    end
+    #rescue => detail
+    #  puts "ERROR #{detail.message}"
+    #  self.completed = true
+    #  self.in_process = false
+    #  self.processed_date = DateTime.now
+    #  self.error_message = detail.message
+    #  self.save
+    #end
   end
 
   def add_to_jobs

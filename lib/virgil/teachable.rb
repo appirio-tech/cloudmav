@@ -6,7 +6,7 @@ module Virgil
       end
 
       ::Knowledge.class_eval %Q{
-        embedded_in :#{receiver.to_s.underscore}, :inverse_of => :knowledge
+        embedded_in :#{receiver.to_s.underscore}
       }
       
       receiver.send(:include, InstanceMethods)

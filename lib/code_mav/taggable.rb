@@ -6,6 +6,10 @@ module CodeMav
 
         references_many :taggings
       end
+
+      ::Tagging.class_eval %Q{
+        referenced_in :#{receiver.to_s.underscore}, :inverse_of => :taggings
+      }
       
       receiver.send(:include, InstanceMethods)
     end

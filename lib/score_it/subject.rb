@@ -12,7 +12,7 @@ module ScoreIt
       end
 
       ::Scoring.class_eval %Q{
-        embedded_in :#{receiver.to_s.underscore}, :inverse_of => :scorings
+        embedded_in :#{receiver.to_s.underscore}
         def earner
           #{receiver.to_s.underscore}
         end
@@ -53,10 +53,11 @@ module ScoreIt
       def adjust_score(name, points, point_type)
         scoring = self.scorings.select{|s| s.point_type == point_type && s.name == name}.first
         if scoring.nil?
-          scoring = Scoring.new(:name => name, :point_type => point_type)
-          self.scorings << scoring
+          scoring = self.scorings.create(:name => name, :point_type => point_type, :score => points)
+        else
+          scoring.score = points
+          scoring.save
         end
-        scoring.score = points
         self.save
         calculate_total_score
       end

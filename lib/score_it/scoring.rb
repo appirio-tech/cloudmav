@@ -4,5 +4,5 @@ class Scoring
   
   field :name, :type => String
   field :count, :type => Integer
-  field :score, :type => Integer
+  field :score, :type => Integer, :default => 0
 end

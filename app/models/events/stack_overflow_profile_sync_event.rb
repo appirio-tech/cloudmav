@@ -59,6 +59,13 @@ class StackOverflowProfileSyncEvent < SyncEvent
     questions_to_delete = stack_overflow_profile.questions.not_in(:question_id => top_question_ids)
     questions_to_delete.each{|q| q.destroy }
   end
+  
+  def convert_to_date(value)
+    if (value.class == String)
+      value = value.sub(" ","").to_i
+    end
+    Time.at(value)
+  end
 
   def sync_answers
     answers = StackOverflow.get_user_answers(stack_overflow_profile.stack_overflow_id)
@@ -75,7 +82,8 @@ class StackOverflowProfileSyncEvent < SyncEvent
       answer.answer_id = so_answer["answer_id"]
       answer.accepted = so_answer["accepted"]
       answer.url = "http://www.stackoverflow.com/questions/#{so_answer["question_id"]}"
-      answer.date = Time.at(so_answer["creation_date"])
+
+      answer.date = convert_to_date(so_answer["creation_date"])
       answer.score = so_answer["score"]
       answer.save
     end
