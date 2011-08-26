@@ -6,7 +6,7 @@ class SpeakerProfile
   
   field :speaker_bio, :type => String
 
-  referenced_in :profile, :inverse_of => :speaker_profile
+  belongs_to :profile
 
   def related_items
     [profile]

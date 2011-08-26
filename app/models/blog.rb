@@ -10,7 +10,7 @@ class Blog
   field :logo_url, :type => String
   
   references_many :posts
-  referenced_in :profile, :inverse_of => :blog
+  belongs_to :profile
 
   validates_presence_of :rss
   

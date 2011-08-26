@@ -2,7 +2,7 @@ module CodeMav
   module WriterModule
     def self.included(receiver)
       receiver.class_eval do        
-        references_many :blogs
+        has_many :blogs
         references_many :posts        
       end
       

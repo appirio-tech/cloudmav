@@ -1,0 +1,32 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.bitbucket.org:443/1.0/users/scottburton11
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 404
+      message: NOT FOUND
+    headers: 
+      server: 
+      - nginx/1.0.4
+      date: 
+      - Fri, 26 Aug 2011 06:11:37 GMT
+      content-type: 
+      - text/plain
+      content-length: 
+      - "9"
+      expires: 
+      - Fri, 26 Aug 2011 06:11:37 GMT
+      vary: 
+      - Authorization, Cookie
+      last-modified: 
+      - Fri, 26 Aug 2011 06:11:37 GMT
+      etag: 
+      - "\"9d1ead73e678fa2f51a70a933b0bf017\""
+      cache-control: 
+      - max-age=0
+    body: Not Found
+    http_version: "1.1"

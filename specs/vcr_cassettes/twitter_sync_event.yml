@@ -8,63 +8,92 @@
       accept: 
       - application/json
       user-agent: 
-      - Twitter Ruby Gem 1.4.1
+      - Twitter Ruby Gem 1.6.1
       authorization: 
-      - OAuth oauth_consumer_key="EwT5j6Z8F58Zc0dXSuTWtA", oauth_nonce="caebdc0713a9e652d402609db145426d", oauth_signature="NcszyWd1an5cZirQRtvt461qptk%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1310329390", oauth_token="14870761-2E0n5J5uFYY87AsNW4MaMG9CMN0ja08aSzB9qBiSE", oauth_version="1.0"
+      - OAuth oauth_consumer_key="EwT5j6Z8F58Zc0dXSuTWtA", oauth_nonce="a8444443b0d3b91cd41642c315fb9da2", oauth_signature="ZIW4ndojiIyJnMI4VZdbt4FjakI%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1314339360", oauth_token="14870761-2E0n5J5uFYY87AsNW4MaMG9CMN0ja08aSzB9qBiSE", oauth_version="1.0"
+      accept-encoding: 
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response: !ruby/struct:VCR::Response 
     status: !ruby/struct:VCR::ResponseStatus 
       code: 200
       message: OK
     headers: 
-      x-frame-options: 
-      - SAMEORIGIN
-      x-ratelimit-reset: 
-      - "1310332772"
-      etag: 
-      - "\"0a3dbd3c8ae7480b46678429003ba1d0\""
-      expires: 
-      - Tue, 31 Mar 1981 05:00:00 GMT
-      last-modified: 
-      - Sun, 10 Jul 2011 20:23:11 GMT
-      x-transaction: 
-      - 1310329390-91820-398
-      x-ratelimit-limit: 
-      - "350"
-      content-type: 
-      - application/json; charset=utf-8
-      x-transaction-mask: 
-      - a6183ffa5f8ca943ff1b53b5644ef114f5555dde
-      x-runtime: 
-      - "0.03207"
+      date: 
+      - Fri, 26 Aug 2011 06:13:56 GMT
       server: 
       - hi
-      date: 
-      - Sun, 10 Jul 2011 20:23:11 GMT
-      x-ratelimit-class: 
-      - api_identified
-      content-length: 
-      - "2038"
-      x-ratelimit-remaining: 
-      - "346"
-      x-revision: 
-      - DEV
-      x-access-level: 
-      - read
-      set-cookie: 
-      - k=76.164.86.161.1310329390992093; path=/; expires=Sun, 17-Jul-11 20:23:10 GMT; domain=.twitter.com
-      - guest_id=v1%3A131032939099774603; domain=.twitter.com; path=/; expires=Wed, 10 Jul 2013 08:23:10 GMT
-      - lang=en; path=/
-      - twid=u%3D14870761%7CNHKnEqlRye48Pz%2Fv6YasVMV31CY%3D; domain=.twitter.com; path=/
-      - _twitter_sess=BAh7CDoHaWQiJTA3ZDNkODMyYzY4YzM5OTMyY2YxMTAxOWU3NDJhODJiOg9j%250AcmVhdGVkX2F0bCsInce3FTEBIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%250AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--713ed70441f7917f1ded117609884ac2fab08e2d; domain=.twitter.com; path=/; HttpOnly
-      x-mid: 
-      - b5f2c57468522872cf954af4bcc9c93611ab020a
-      vary: 
-      - Accept-Encoding
-      cache-control: 
-      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
       status: 
       - 200 OK
+      x-ratelimit-limit: 
+      - "350"
+      x-transaction: 
+      - 1314339236-85551-30369
+      etag: 
+      - "\"31370b2f9b8e2f25701399488de291b5\"-gzip"
+      x-frame-options: 
+      - SAMEORIGIN
+      last-modified: 
+      - Fri, 26 Aug 2011 06:13:56 GMT
+      x-ratelimit-remaining: 
+      - "348"
+      x-runtime: 
+      - "0.02115"
+      x-transaction-mask: 
+      - a6183ffa5f8ca943ff1b53b5644ef11497f186a5
+      content-type: 
+      - application/json; charset=utf-8
       pragma: 
       - no-cache
-    body: "{\"show_all_inline_media\":false,\"geo_enabled\":false,\"protected\":false,\"profile_image_url_https\":\"https:\\/\\/si0.twimg.com\\/profile_images\\/880938176\\/headshot_normal.png\",\"default_profile_image\":false,\"profile_text_color\":\"333333\",\"name\":\"Jonathan Birkholz\",\"contributors_enabled\":false,\"profile_sidebar_fill_color\":\"DDEEF6\",\"id_str\":\"14870761\",\"is_translator\":false,\"statuses_count\":1990,\"profile_background_tile\":false,\"utc_offset\":-21600,\"profile_image_url\":\"http:\\/\\/a3.twimg.com\\/profile_images\\/880938176\\/headshot_normal.png\",\"follow_request_sent\":false,\"following\":false,\"friends_count\":111,\"description\":\"I strive to learn, educate, and mentor my fellow developers. I blog about frameworks, languages, patterns, principles, and Software Craftsmanship.\",\"location\":\"Houston, TX\",\"verified\":false,\"profile_link_color\":\"0084B4\",\"followers_count\":230,\"screen_name\":\"RookieOne\",\"status\":{\"place\":null,\"in_reply_to_user_id\":null,\"retweet_count\":0,\"id_str\":\"89453838985211905\",\"geo\":null,\"favorited\":false,\"text\":\"RT @scottburton: Demeter: It\\u2019s not just a good idea. It\\u2019s the law.: http:\\/\\/bit.ly\\/qBsLyU via @AddThis\",\"in_reply_to_status_id_str\":null,\"in_reply_to_screen_name\":null,\"in_reply_to_user_id_str\":null,\"coordinates\":null,\"truncated\":false,\"contributors\":null,\"retweeted\":false,\"id\":89453838985211905,\"source\":\"\\u003Ca href=\\\"http:\\/\\/www.tweetdeck.com\\\" rel=\\\"nofollow\\\"\\u003ETweetDeck\\u003C\\/a\\u003E\",\"created_at\":\"Fri Jul 08 22:00:31 +0000 2011\",\"in_reply_to_status_id\":null},\"profile_sidebar_border_color\":\"C0DEED\",\"url\":\"http:\\/\\/www.theabsentmindedcoder.com\",\"default_profile\":true,\"time_zone\":\"Central Time (US & Canada)\",\"id\":14870761,\"listed_count\":31,\"notifications\":false,\"profile_use_background_image\":true,\"favourites_count\":0,\"created_at\":\"Thu May 22 17:14:36 +0000 2008\",\"profile_background_color\":\"C0DEED\",\"lang\":\"en\",\"profile_background_image_url_https\":\"https:\\/\\/si0.twimg.com\\/images\\/themes\\/theme1\\/bg.png\",\"profile_background_image_url\":\"http:\\/\\/a0.twimg.com\\/images\\/themes\\/theme1\\/bg.png\"}"
+      x-access-level: 
+      - read
+      x-ratelimit-class: 
+      - api_identified
+      x-content-type-options: 
+      - nosniff
+      x-revision: 
+      - DEV
+      expires: 
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      cache-control: 
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      x-ratelimit-reset: 
+      - "1314342835"
+      x-mid: 
+      - d464467300c606ecb0ee6690fe371131394c7ce4
+      set-cookie: 
+      - k=76.164.86.161.1314339236647430; path=/; expires=Fri, 02-Sep-11 06:13:56 GMT; domain=.twitter.com
+      - guest_id=v1%3A131433923665193284; domain=.twitter.com; path=/; expires=Sun, 25 Aug 2013 18:13:56 GMT
+      - lang=en; path=/
+      - twid=u%3D14870761%7CNHKnEqlRye48Pz%2Fv6YasVMV31CY%3D; domain=.twitter.com; path=/
+      - _twitter_sess=BAh7CToPY3JlYXRlZF9hdGwrCDIruQQyAToHdWEiG1R3aXR0ZXIgUnVieSBH%250AZW0gMS42LjE6B2lkIiUxNjM3Zjc1ZmFhMzI2YWI0ZDI5OWRjNzg1ZmYzZDhm%250ANiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFz%250AaHsABjoKQHVzZWR7AA%253D%253D--7555197006b352c348147034751959aeff146252; domain=.twitter.com; path=/; HttpOnly
+      vary: 
+      - Accept-Encoding
+      content-encoding: 
+      - gzip
+      content-length: 
+      - "980"
+    body: !binary |
+      H4sIAAAAAAAAA6VW247bNhD9FYIPRYs6ti5eWzYQpI13i6ZoEaDZAn0wQIyl
+      kU2YIlVe1nGC/HuHlq3I60WBoHqxLpzDmTlzDv2ZV1hDUF601tRSIV96G3DE
+      lXQeK1GaoD1f5umIP6GVtcSKL2tQjpacI4SSek8LlbF8yZOkmL6d8tNXj6Uf
+      rFemBC+NplW/muC80SP2+Dct1cYTcvfR3cA7WeEGrNgYW6HtN1ol9w8P9xRd
+      G6XMAa27JJvld4QJDdXCfzMa/A40eyvtfmfUJwpwO3MQoJSQmlJH0WAlod92
+      i0agho0aZO5lg+KT0RFxhdpbUOyR3rHv//rAvmMr0FDBDzEXeDLBSo99MsmI
+      B6sobud9u1xP1pPD4TD2O4SNI6RG6gqr0lBl49I0fTlSb28aERyKDZT7rSXo
+      SsgGtj1dwZfC1LVD2vJVls4S2re2EnXVZ5KmsxGx7Uor2zMN75jzVj4h84Yp
+      BEuEYBWICBwx0BVrKENjWXNkNcasWIVPqExLzR6zd2yjzJbBxgTPakv9Phi7
+      dyOmQG8D5Ua3LXiPVsc7K3UpWxXfRugPpvYHsMhWFmrvGtBuJ9sxHz0fyEud
+      52aUhtovN4Hycjc8XUIGXboZF+fBUye/TkuSLV6MPO0riDwRqXNnCt2JQyeT
+      sT/IZhtJW09OS916QrQ2/W+6nmy245aI/G/44WzAt8F2tfDlZy61sNiqo/BG
+      dG+FrOgulp4msyQr0uldXuRpkeX5nEKvAkqLqMVZMisFoZLmd3AOFDxbSp2z
+      A+TpNJ3lszt+zQtf6qDUiFv0B8ShBbwARYN5RukDBtp5sS4KuSmJMrAI0bKA
+      IvljQPZz2LIsZ+ndcnpHm7AfE7pYlqRpLOqqO4ssn0/zOeGQcvjJBC5FkL50
+      VEQ1GEFyIkm+gn2ljlRfxuatQ5LkK2A7i/Xr9VdipQ8a3RhaUkBHbiBC6ZFY
+      PcgoElpTTZPFvFgsFsWbxr9OszVnFhXBaNO5wrrDf3jsQlhN4vwDym5Tguu+
+      nqo79+iqMJpDBTHNLuloVtGrBj6HH2PzfroeAeb2xxbfkOCJF1UxIo4kbGga
+      LSPDYaZmeETHjGZ+Jx1J3ZAqG/6F8nCCzFI7BT6q8NLAK6Z2gWo4sixj6Zxo
+      WuaznqmkGGjnG/R4FUJ9LopkkRfpfLaekPFWdAB4oY1tQD3T58uizP8X9kAt
+      xTyZz9Le5Gm0/wnovIgnwY2JRTJ6+8pPF789FelB9avuyeN+mUVjuFL0n8bs
+      Jb6n44sOYYgnC0f9siv501+Ai1pP4uyS/vIvVpLOOyoIAAA=
+
     http_version: "1.1"
