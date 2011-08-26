@@ -1,6 +1,7 @@
 Given /^I have an account$/ do
   @user = Factory.create(:user)
   @profile = @user.profile
+  @profile.autodiscover_histories.create(:name => "GitHub")
 end
 
 When /^I login$/ do

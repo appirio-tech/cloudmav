@@ -3,9 +3,10 @@ Given /^I just signed up$/ do
   fill_in "user_username", :with => "rookieone"
   fill_in "user_email", :with => "rookieone@gmail.com"
   fill_in "user_password", :with => "test123"
-  fill_in "user_password_confirmation", :with => "test123"
 
-  click_button "Register"
+  VCR.use_cassette("autodiscover_feature", :record => :new_episodes) do
+    click_button "Register"
+  end
 end
 
 When /^I am autodiscovered$/ do

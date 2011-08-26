@@ -6,9 +6,10 @@ When /^I register with my information$/ do
   fill_in "user_username", :with => @user.username
   fill_in "user_email", :with => @user.email
   fill_in "user_password", :with => @user.password
-  fill_in "user_password_confirmation", :with => @user.password_confirmation
 
-  click_button "Register"
+  VCR.use_cassette("register_my_info", :record => :new_episodes) do
+    click_button "Register"
+  end
 end
 
 Then /^I should be registered$/ do
@@ -38,7 +39,9 @@ When /^I register from the home page$/ do
   fill_in "user_username", :with => @user.username
   fill_in "user_email", :with => @user.email
   fill_in "user_password", :with => @user.password
-  click_button "Register"
+  VCR.use_cassette("register_homepage", :record => :new_episodes) do
+    click_button "Register"
+  end
 end
 
 When /^I register with bad info on the home page$/ do
@@ -47,7 +50,9 @@ When /^I register with bad info on the home page$/ do
   fill_in "user_username", :with => ""
   fill_in "user_email", :with => @user.email
   fill_in "user_password", :with => ""
-  click_button "Register"
+  VCR.use_cassette("register", :record => :new_episodes) do
+    click_button "Register"
+  end
 end
 
 Then /^I should not be registered$/ do

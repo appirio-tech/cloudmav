@@ -50,6 +50,7 @@ class Event
     self.in_process = false
     self.processed_date = DateTime.now
     self.save
+
     #rescue => detail
     #  puts "ERROR #{detail.message}"
     #  self.completed = true

@@ -6,7 +6,7 @@ end
 
 When /^the daily admin email is sent$/ do
   AdminEmailer.daily_report.deliver
-  @email = ActionMailer::Base.deliveries.first
+  @email = ActionMailer::Base.deliveries.last
 end
 
 Then /^the email should show (\d+) total users$/ do |user_count|
@@ -23,7 +23,7 @@ end
 
 Given /^there were (\d+) events that ran$/ do |number|
   number.to_i.times do 
-    ProfileEvent.create
+    Event.create
   end
 end
 
@@ -32,7 +32,7 @@ Then /^the email should show (\d+) events ran$/ do |number|
 end
 
 Then /^the email should show the type of events ran$/ do
-  @email.body.should include "ProfileEvent"
+  @email.body.should include "Event"
 end
 
 

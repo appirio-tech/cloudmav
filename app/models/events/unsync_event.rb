@@ -4,15 +4,15 @@ class UnsyncEvent < Event
   scope :for_profile, lambda { |profile| where(:profile_id => profile.id) }
 
   def set_profile
-    self.profile = subject.profile
+    self.profile = Profile.find(subject.profile.id)
   end
 
   def do_work
     set_profile
     other_work if self.respond_to? :other_work
-    subject.destroy
     remove_badges if respond_to?(:remove_badges)
     remove_tags if respond_to?(:remove_tags)
+    subject.destroy
     profile.recalculate_score!
   end
 

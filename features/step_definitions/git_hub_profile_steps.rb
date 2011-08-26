@@ -91,3 +91,8 @@ Then /^I should not have a GitHub profile$/ do
   Profile.find(@profile.id).git_hub_profile.should be_nil
 end
 
+Then /^I should have coder points for my GitHub account$/ do
+  profile = Profile.find(@profile.id)
+  profile.score(:coder_points).should > 0
+end
+

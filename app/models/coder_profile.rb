@@ -3,7 +3,7 @@ class CoderProfile
   include Mongoid::Timestamps
   include CodeMav::Taggable
   
-  referenced_in :profile, :inverse_of => :coder_profile
+  belongs_to :profile
 
   def related_items
     [profile]

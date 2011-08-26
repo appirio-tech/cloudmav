@@ -9,7 +9,7 @@ class Meeting
   validates_presence_of :title
   validates_presence_of :summary
   
-  embedded_in :user_group, :inverse_of => :meeting
+  embedded_in :user_group
   
   field :lat, :type => Float
   field :lng, :type => Float
