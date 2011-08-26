@@ -21,6 +21,7 @@ class GitHubRepositoryAddedEvent < ProfileEvent
     points = 1
     points = points + git_hub_repository.watchers * 0.1
     points = points + git_hub_repository.forks * 0.15
+    points = points.round
     profile.earn("for repository value", points, :coder_points) 
   end
 

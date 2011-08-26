@@ -4,15 +4,15 @@ class GitHubProfile
   include CodeMav::Taggable
   include CodeMav::Syncable
   
-  field :git_hub_id
+  field :git_hub_id, :type => String
   field :username
-  field :gist_count
-  field :repository_count
-  field :followers_count
-  field :following_count
+  field :gist_count, :type => Integer
+  field :repository_count, :type => Integer
+  field :followers_count, :type => Integer
+  field :following_count, :type => Integer
   field :url
   
-  referenced_in :profile, :inverse_of => :git_hub_profile
+  belongs_to :profile
   references_many :repositories, :inverse_of => :git_hub_profile, :class_name => "GitHubRepository"
 
   def related_items
