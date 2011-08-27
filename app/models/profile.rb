@@ -50,8 +50,7 @@ class Profile
   referenced_in :user
   references_many :activities
 
-  references_one :speaker_rate_profile
-  references_one :slide_share_profile
+
   references_one :linkedin_profile
 
   scope :by_username, lambda { |uname| where(:username => uname) }

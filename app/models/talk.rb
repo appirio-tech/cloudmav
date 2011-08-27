@@ -20,7 +20,7 @@ class Talk
   field :slideshow_html, :type => String 
   field :speaker_rating, :type => Float
 
-  referenced_in :profile, :inverse_of => :talks
+  belongs_to :profile
     
   validates_presence_of :title
 

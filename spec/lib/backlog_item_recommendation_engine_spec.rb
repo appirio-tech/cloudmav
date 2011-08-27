@@ -17,7 +17,8 @@ describe BacklogItemRecommendationEngine do
         @ruby_conf = BacklogItem.create(:title => "Ruby Conf", :tags_text => "ruby")
         @ruby_conf.retag!
 
-        BacklogItemRecommendationEngine.build_recommendations_for_profile!(@profile)
+        BacklogItemRecommendationEngine.build_recommendations_for_profile!(@profile.id)
+        @profile.reload
         @recommendations = @profile.backlog_item_recommendations.order_by([:score, :desc]).map(&:backlog_item)
       end
 
@@ -32,7 +33,8 @@ describe BacklogItemRecommendationEngine do
         @java_conf = BacklogItem.create(:title => "Java Conf", :start_date => 7.days.from_now)
         @ruby_conf = BacklogItem.create(:title => "Ruby Conf", :start_date => 6.months.from_now)
 
-        BacklogItemRecommendationEngine.build_recommendations_for_profile!(@profile)
+        BacklogItemRecommendationEngine.build_recommendations_for_profile!(@profile.id)
+        @profile.reload
         @recommendations = @profile.backlog_item_recommendations.order_by([:score, :desc]).map(&:backlog_item)
       end
 
@@ -51,7 +53,8 @@ describe BacklogItemRecommendationEngine do
         @java_conf = BacklogItem.create(:title => "Java Conf", :location => "Somewhere", :coordinates => [-25, 95])
         @ruby_conf = BacklogItem.create(:title => "Ruby Conf", :location => "Somewhere", :coordinates => [30, 10])
 
-        BacklogItemRecommendationEngine.build_recommendations_for_profile!(@profile)
+        BacklogItemRecommendationEngine.build_recommendations_for_profile!(@profile.id)
+        @profile.reload
         @recommendations = @profile.backlog_item_recommendations.order_by([:score, :desc]).map(&:backlog_item)
       end
 

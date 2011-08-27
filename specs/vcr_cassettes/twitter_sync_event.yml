@@ -10,7 +10,7 @@
       user-agent: 
       - Twitter Ruby Gem 1.6.1
       authorization: 
-      - OAuth oauth_consumer_key="EwT5j6Z8F58Zc0dXSuTWtA", oauth_nonce="0c4b9f113cf78eb6c6374198ff5ba16f", oauth_signature="4gWdXBMsSNSWuwRCYdMFcOmB1N0%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1314373929", oauth_token="14870761-2E0n5J5uFYY87AsNW4MaMG9CMN0ja08aSzB9qBiSE", oauth_version="1.0"
+      - OAuth oauth_consumer_key="EwT5j6Z8F58Zc0dXSuTWtA", oauth_nonce="9dcefb4322ecb1055067110f6ad9ddcd", oauth_signature="Ohf9gP5fcKaK87bKQ7WI8z4bC5Y%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1314427731", oauth_token="14870761-2E0n5J5uFYY87AsNW4MaMG9CMN0ja08aSzB9qBiSE", oauth_version="1.0"
       accept-encoding: 
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response: !ruby/struct:VCR::Response 
@@ -19,7 +19,7 @@
       message: OK
     headers: 
       date: 
-      - Fri, 26 Aug 2011 15:50:07 GMT
+      - Sat, 27 Aug 2011 06:46:48 GMT
       server: 
       - hi
       status: 
@@ -27,19 +27,19 @@
       x-ratelimit-limit: 
       - "350"
       x-transaction: 
-      - 1314373806-70797-38397
+      - 1314427607-45290-47058
       etag: 
-      - "\"05338d85ddc207b66380de8c1e3598d2\"-gzip"
+      - "\"0128dae11535deb6bc5b62e7bf339cb7\"-gzip"
       x-frame-options: 
       - SAMEORIGIN
       last-modified: 
-      - Fri, 26 Aug 2011 15:50:06 GMT
+      - Sat, 27 Aug 2011 06:46:47 GMT
       x-ratelimit-remaining: 
-      - "334"
+      - "348"
       x-runtime: 
-      - "0.03359"
+      - "0.02492"
       x-transaction-mask: 
-      - a6183ffa5f8ca943ff1b53b5644ef11497f186a5
+      - a6183ffa5f8ca943ff1b53b5644ef11469a9536c
       content-type: 
       - application/json; charset=utf-8
       pragma: 
@@ -57,43 +57,43 @@
       cache-control: 
       - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
       x-ratelimit-reset: 
-      - "1314376854"
+      - "1314431207"
       x-mid: 
-      - 4816f129e1363b08a6219436cb47b3532d0f6b31
+      - 55c8e7e1e293fc71986fa67218ba6b6e33fcac06
       set-cookie: 
-      - k=76.164.86.161.1314373806958406; path=/; expires=Fri, 02-Sep-11 15:50:06 GMT; domain=.twitter.com
-      - guest_id=v1%3A131437380696419757; domain=.twitter.com; path=/; expires=Mon, 26 Aug 2013 03:50:06 GMT
+      - k=76.164.86.161.1314427607974004; path=/; expires=Sat, 03-Sep-11 06:46:47 GMT; domain=.twitter.com
+      - guest_id=v1%3A131442760797869623; domain=.twitter.com; path=/; expires=Mon, 26 Aug 2013 18:46:47 GMT
       - lang=en; path=/
       - twid=u%3D14870761%7CNHKnEqlRye48Pz%2Fv6YasVMV31CY%3D; domain=.twitter.com; path=/
-      - _twitter_sess=BAh7CToPY3JlYXRlZF9hdGwrCISryAYyAToHdWEiG1R3aXR0ZXIgUnVieSBH%250AZW0gMS42LjE6B2lkIiU2MDM5MTdjOWQyYjZkNWFlMzNhZmIxNTVkNWNhMDFj%250ANSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFz%250AaHsABjoKQHVzZWR7AA%253D%253D--6f496e2837b7b4a5c8a230cada598681e1fe82ad; domain=.twitter.com; path=/; HttpOnly
+      - _twitter_sess=BAh7CToPY3JlYXRlZF9hdGwrCLSb%252FQkyAToHdWEiG1R3aXR0ZXIgUnVieSBH%250AZW0gMS42LjE6B2lkIiUxMjMyYzU2ZTFjZjMwZDUxM2FkMWVhOTExOWE2NThl%250AYiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFz%250AaHsABjoKQHVzZWR7AA%253D%253D--13e659b45a6de7870c2111a87e2ce5286a012d2e; domain=.twitter.com; path=/; HttpOnly
       vary: 
       - Accept-Encoding
       content-encoding: 
       - gzip
       content-length: 
-      - "979"
+      - "981"
     body: !binary |
-      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
+      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
 
     http_version: "1.1"

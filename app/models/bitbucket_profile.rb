@@ -5,11 +5,11 @@ class BitbucketProfile
   include CodeMav::Syncable
   
   field :username
-  field :repository_count
-  field :followers_count
+  field :repository_count, :type => Integer
+  field :followers_count, :type => Integer
   field :url
   
-  referenced_in :profile, :inverse_of => :bitbucket_profile
+  belongs_to :profile
   references_many :repositories, :inverse_of => :bitbucket_profile, :class_name => "BitbucketRepository"
 
   def related_items

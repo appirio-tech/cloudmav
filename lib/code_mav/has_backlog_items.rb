@@ -4,7 +4,7 @@ module CodeMav
     def self.included(receiver)
       receiver.class_eval do
 
-        references_many :backlog_items
+        has_many :backlog_items
         embeds_many :backlog_item_recommendations
 
         index "backlog_item_recommendations.backlog_item_id"

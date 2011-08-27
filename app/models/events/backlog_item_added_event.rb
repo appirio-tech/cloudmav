@@ -7,7 +7,9 @@ class BacklogItemAddedEvent < ProfileEvent
   end
 
   def award_badges
-    profile.award_badge("Poster boy", :description => "For posting an item on the backlog")
+    unless profile.nil?
+      profile.award_badge("Poster boy", :description => "For posting an item on the backlog")
+    end
   end
 
   def description

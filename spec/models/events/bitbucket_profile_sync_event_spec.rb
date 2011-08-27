@@ -19,8 +19,8 @@ describe "BitbucketProfileSyncEvent" do
 
     it { @bitbucket_profile.url.should == "http://www.bitbucket.org/rookieone" }
     it { @bitbucket_profile.username.should_not be_empty }
-    it { @bitbucket_profile.repository_count.should == "1" }
-    it { @bitbucket_profile.followers_count.should == "1" }
+    it { @bitbucket_profile.repository_count.should == 1 }
+    it { @bitbucket_profile.followers_count.should == 1 }
     it { @profile.score(:coder_points).should == 10 }
   end
 
@@ -41,8 +41,8 @@ describe "BitbucketProfileSyncEvent" do
 
     it { @bitbucket_profile.url.should == "http://www.bitbucket.org/scottburton11" }
     it { @bitbucket_profile.username.should_not be_empty }
-    it { @bitbucket_profile.repository_count.should == "0" }
-    it { @bitbucket_profile.followers_count.should == "0" }
+    it { @bitbucket_profile.repository_count.should == 0 }
+    it { @bitbucket_profile.followers_count.should == 0 }
     it { @profile.score(:coder_points).should == 10 }
   end
 

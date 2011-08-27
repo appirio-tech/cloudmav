@@ -2,7 +2,6 @@ class BacklogItem
   include Mongoid::Document
   include Mongoid::Timestamps
   include CodeMav::Taggable
-  include CodeMav::Eventable
   include CodeMav::Locatable
 
   field :title, :type => String
@@ -15,7 +14,7 @@ class BacklogItem
 
   validates_presence_of :title
 
-  referenced_in :author, :class_name => "Profile", :inverse_of => :backlog_items
+  belongs_to :author, :class_name => "Profile"
 
   def url?
     !url.blank?

@@ -9,7 +9,7 @@ class AutodiscoverSlideShareEvent < AutodiscoverEvent
     response = SlideShare.get_slideshows_by_user(profile.username)
 
     if response.success?
-      profile.slide_share_profile = SlideShareProfile.new(:username => profile.username)
+      profile.slide_share_profile = SlideShareProfile.new(:slide_share_username => profile.username)
       profile.slide_share_profile.save
       profile.save
       profile.slide_share_profile.sync!

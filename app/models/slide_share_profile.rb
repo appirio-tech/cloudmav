@@ -8,7 +8,7 @@ class SlideShareProfile
   field :url
   field :slides_count, :type => Integer, :default => 0
   
-  referenced_in :profile, :inverse_of => :slide_share_profile
+  belongs_to :profile
  
   def as_json(opts={})
     { 
