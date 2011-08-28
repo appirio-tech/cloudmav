@@ -9,11 +9,5 @@ class SlideShareProfile
   field :slides_count, :type => Integer, :default => 0
   
   belongs_to :profile
- 
-  def as_json(opts={})
-    { 
-      :slide_share_username => slide_share_username
-    }
-  end
   
 end

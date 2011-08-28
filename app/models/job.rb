@@ -11,8 +11,8 @@ class Job
   field :imported_id, :type => String
   field :company_name, :type => String
   
-  referenced_in :company, :inverse_of => :employments
-  referenced_in :profile, :inverse_of => :jobs
+  belongs_to :company, :inverse_of => :employments
+  belongs_to :profile
 
   before_save :set_company_name
 

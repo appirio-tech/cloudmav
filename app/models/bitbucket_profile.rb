@@ -10,7 +10,7 @@ class BitbucketProfile
   field :url
   
   belongs_to :profile
-  references_many :repositories, :inverse_of => :bitbucket_profile, :class_name => "BitbucketRepository"
+  has_many :repositories, :class_name => "BitbucketRepository"
 
   def related_items
     [profile.coder_profile]

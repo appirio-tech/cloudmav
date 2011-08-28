@@ -5,7 +5,7 @@ class LinkedinProfile
   field :url, :type => String
   field :last_synced, :type => DateTime 
 
-  referenced_in :profile, :inverse_of => :linkedin_profile
+  belongs_to :profile
 
   def get_jobs(client)
     positions = client.profile(:fields => %w(positions)).positions

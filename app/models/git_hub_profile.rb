@@ -13,7 +13,7 @@ class GitHubProfile
   field :url
   
   belongs_to :profile
-  references_many :repositories, :inverse_of => :git_hub_profile, :class_name => "GitHubRepository"
+  has_many :repositories, :inverse_of => :git_hub_profile, :class_name => "GitHubRepository"
 
   def related_items
     [profile.coder_profile]

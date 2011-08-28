@@ -3,9 +3,8 @@ module CodeMav
     def self.included(receiver)
       receiver.class_eval do
 
-        references_one :knowledge_profile, :inverse_of => :profile
-
-        references_one :stack_overflow_profile
+        has_one :knowledge_profile
+        has_one :stack_overflow_profile
 
         before_create :create_knowledge_profile
       end

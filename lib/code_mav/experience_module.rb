@@ -2,8 +2,10 @@ module CodeMav
   module ExperienceModule
     def self.included(receiver)
       receiver.class_eval do
-        references_many :jobs, :inverse_of => :profile
-        references_one :experience_profile, :inverse_of => :profile
+        has_many :jobs
+        has_one :experience_profile
+
+        has_one :linkedin_profile
 
         before_create :create_experience_profile
       end

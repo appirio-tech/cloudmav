@@ -4,5 +4,5 @@ class TechnologyType
 
   field :name, :type => String
 
-  references_one :technology, :inverse_of => :technology_type
+  has_one :technology, :inverse_of => :technology_type
 end

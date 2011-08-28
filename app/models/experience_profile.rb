@@ -3,6 +3,6 @@ class ExperienceProfile
   include Mongoid::Timestamps
   include CodeMav::Taggable
 
-  referenced_in :profile, :inverse_of => :experience_profile
+  belongs_to :profile
 
 end

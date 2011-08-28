@@ -3,9 +3,8 @@ module CodeMav
     def self.included(receiver)
       receiver.class_eval do
 
-        references_one :social_profile, :inverse_of => :profile
-
-        references_one :twitter_profile, :inverse_of => :profile
+        has_one :social_profile
+        has_one :twitter_profile
 
         before_create :create_social_profile
       end

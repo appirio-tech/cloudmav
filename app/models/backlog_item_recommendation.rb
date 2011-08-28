@@ -4,7 +4,7 @@ class BacklogItemRecommendation
 
   field :score, :type => Float, :default => 0.0
   
-  referenced_in :backlog_item
+  belongs_to :backlog_item
   embedded_in :profile, :inverse_of => :backlog_item_recommendations
 
 end

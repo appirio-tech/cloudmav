@@ -9,7 +9,7 @@ class Blog
   field :rss, :type => String
   field :logo_url, :type => String
   
-  references_many :posts
+  has_many :posts
   belongs_to :profile
 
   validates_presence_of :rss

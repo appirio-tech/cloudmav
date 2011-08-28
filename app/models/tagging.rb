@@ -5,7 +5,7 @@ class Tagging
   field :count, :type => Integer, :default => 0
   field :score, :type => Float, :default => 0.0
   
-  referenced_in :tag
+  belongs_to :tag
 
   def to_s
     tag.to_s

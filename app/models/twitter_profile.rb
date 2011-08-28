@@ -8,7 +8,7 @@ class TwitterProfile
   field :url, :type => String
   field :followers_count, :type => Integer
 
-  referenced_in :profile, :inverse_of => :twitter_profile
+  belongs_to :profile
 
   validates_presence_of :username
 

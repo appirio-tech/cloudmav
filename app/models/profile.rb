@@ -47,11 +47,7 @@ class Profile
     is_moderator
   end
   
-  referenced_in :user
-  references_many :activities
-
-
-  references_one :linkedin_profile
+  belongs_to :user
 
   scope :by_username, lambda { |uname| where(:username => uname) }
   scope :named, lambda { |name| { :where => { :name => name } } }

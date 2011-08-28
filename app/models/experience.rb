@@ -9,6 +9,6 @@ class Experience
   scope :with, lambda { |name| where(:name => name) }
   
   embedded_in :profile, :inverse_of => :project
-  referenced_in :technology
+  belongs_to :technology
   
 end

@@ -10,7 +10,7 @@ class StackOverflowProfile
   field :badge_html
   field :stack_overflow_tags
   
-  referenced_in :profile, :inverse_of => :stack_overflow_profile
+  belongs_to :profile
   embeds_many :questions, :class_name => "StackOverflowQuestion"
   embeds_many :answers, :class_name => "StackOverflowAnswer"
   

@@ -8,7 +8,7 @@ class User
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  references_one :profile
+  has_one :profile
   
   field :username, :type => String
 

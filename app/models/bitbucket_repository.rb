@@ -8,7 +8,7 @@ class BitbucketRepository
   field :description, :type => String
   field :followers_count, :type => Integer 
 
-  referenced_in :bitbucket_profile, :inverse_of => :repositories
+  belongs_to :bitbucket_profile, :inverse_of => :repositories
 
   def profile
     self.bitbucket_profile.profile

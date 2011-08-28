@@ -10,7 +10,7 @@ class Company
   field :description, :type => String
   mount_uploader :logo, CompanyLogoUploader
   
-  references_many :employments, :class_name => "Job", :inverse_of => :company
+  has_many :employments, :class_name => "Job", :inverse_of => :company
 
   scope :named, lambda {|name| where(:name => name) }
   

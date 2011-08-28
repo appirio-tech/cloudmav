@@ -9,6 +9,6 @@ class Post
   field :url, :type => String
   field :imported_id, :type => String
   
-  referenced_in :blog, :inverse_of => :posts
-  referenced_in :profile, :inverse_of => :posts
+  belongs_to :blog
+  belongs_to :profile
 end
