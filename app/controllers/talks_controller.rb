@@ -31,11 +31,11 @@ class TalksController < ApplicationController
   end
   
   def edit
-    @talk = Talk.find(params[:id])
+    @talk = Talk.by_permalink(params[:id]).first
   end
   
   def update
-    @talk = Talk.find(params[:id])
+    @talk = Talk.by_permalink(params[:id]).first
     if @talk.update_attributes(params[:talk])
       flash[:notice] = "'#{@talk.title}' saved"
       redirect_to [@profile, @talk]

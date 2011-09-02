@@ -109,11 +109,11 @@ form.formtastic fieldset > ol > li label {
   width: 100px;
   padding-right: 10px;
   margin-top: 5px; }
-form.formtastic fieldset > ol > li.string input, form.formtastic fieldset > ol > li.password input {
+form.formtastic fieldset > ol > li.string input, form.formtastic fieldset > ol > li.password input, form.formtastic fieldset > ol > li textarea {
   border: 1px solid #000;
   padding: 4px;
   width: 60%; }
-  form.formtastic fieldset > ol > li.string input:focus, form.formtastic fieldset > ol > li.password input:focus {
+  form.formtastic fieldset > ol > li.string input:focus, form.formtastic fieldset > ol > li.password input:focus, form.formtastic fieldset > ol > li textarea:focus {
     border: 1px solid #0477bf; }
 form.formtastic fieldset.buttons {
   padding-left: 100px; }
@@ -679,3 +679,6 @@ a.menu_nav {
   #discovered form input {
     position: relative;
     top: -7px; }
+
+.form_title {
+  margin-left: 110px; }

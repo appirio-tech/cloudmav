@@ -28,6 +28,8 @@ class Talk
   scope :for_profile, lambda { |profile| where(:profile_id => profile.id) }
   scope :by_permalink, lambda { |permalink| where(:permalink => permalink) }
 
+  before_create :create_permalink_from_title
+
   def self.search(query, options = {})
     search = Sunspot.new_search(Talk)
     search.build do
@@ -71,4 +73,10 @@ class Talk
     self.permalink
   end
   
+  def create_permalink_from_title
+    if permalink.nil?
+      self.permalink = FriendlyUrl.normalize(self.title)
+    end
+  end
+
 end

@@ -3,7 +3,6 @@ When /^I add a talk$/ do
   @talk = Factory.build(:talk)
   fill_in "talk_title", :with => @talk.title
   fill_in "talk_description", :with => @talk.description
-  fill_in "talk_slides_url", :with => @talk.slides_url
   click_button "Add"
 end
 

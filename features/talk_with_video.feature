@@ -7,5 +7,6 @@ Feature: Talk with Video
   Scenario: Add video to talk
 
     Given I am logged in
+    And I have a talk
     When I add a video to a talk
     Then the video should be added to the talk

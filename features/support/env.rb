@@ -68,4 +68,5 @@ Before do
   # Explicitly drop all non-system Mongoid collections, since database_cleaner
   # doesn't appear to handle them correctly
   Mongoid.master.collections.select{|c| !c.name.starts_with?("system")}.each(&:drop)
+  ActionMailer::Base.deliveries.clear
 end

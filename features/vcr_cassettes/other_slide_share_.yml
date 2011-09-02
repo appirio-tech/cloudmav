@@ -20359,3 +20359,1227 @@
       </User>
 
     http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1314995196&hash=195170c8a8c6b42995937ac516213242c3b79580&format=json&username_for=rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "48"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "7655"
+      date: 
+      - Fri, 02 Sep 2011 20:24:29 GMT
+      x-varnish: 
+      - "379592396"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>RookieOne</Name>
+        <Count>3</Count>
+      <Slideshow>
+        <ID>5566167</ID>
+        <Title>Techfest design patterns</Title>
+        <Description>Design Patterns presentation from Houston Techfest 2010</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/techfest-design-patterns</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5566167&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/techfest-design-patterns&quot; title=&quot;Techfest design patterns&quot;&gt;Techfest design patterns&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5566167&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5566167&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Tue Oct 26 09:29:37 -0500 2010</Created>
+        <Updated>Tue Oct 26 09:30:54 -0500 2010</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/techfestdesignpatterns-101026092940-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=c9qafaStjq0TMn8yQAVR2DlAf2Y%3D&amp;Expires=1314995369&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086408</ID>
+        <Title>Evolve Your Code</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. This presentation goes over Extension Methods, Lambdas, Expression Trees, and Fluent Interfaces. I also show examples from popular frameworks using these techniques.</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/evolve-your-code</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086408&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/evolve-your-code&quot; title=&quot;Evolve Your Code&quot;&gt;Evolve Your Code&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086408&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086408&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:34:06 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:35:15 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/evolveyourcode-090928233408-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=hda4tTGMfdQ9KRpvfA5N1QIeOak%3D&amp;Expires=1314995369&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086401</ID>
+        <Title>Wpf Validation</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. Covers WPF Input Validation using Validation Rules, Exceptions, IDataErrorInfo, Enterprise Library, and Custom Markup Extensions</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/wpf-validation</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086401&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/wpf-validation&quot; title=&quot;Wpf Validation&quot;&gt;Wpf Validation&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086401&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086401&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:32:33 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:33:26 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/wpfvalidation-090928233235-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=NbtlhCIOLN56fuG8ei%2FMOwZlYac%3D&amp;Expires=1314995369&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1314995199&hash=b3e2e6f68b554492d4cbc206b38e0ea95e919a18&format=json&username_for=rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "281"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "7661"
+      date: 
+      - Fri, 02 Sep 2011 20:24:33 GMT
+      x-varnish: 
+      - "990377881"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w1; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>RookieOne</Name>
+        <Count>3</Count>
+      <Slideshow>
+        <ID>5566167</ID>
+        <Title>Techfest design patterns</Title>
+        <Description>Design Patterns presentation from Houston Techfest 2010</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/techfest-design-patterns</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5566167&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/techfest-design-patterns&quot; title=&quot;Techfest design patterns&quot;&gt;Techfest design patterns&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5566167&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5566167&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Tue Oct 26 09:29:37 -0500 2010</Created>
+        <Updated>Tue Oct 26 09:30:54 -0500 2010</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/techfestdesignpatterns-101026092940-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=xCWd7nhb7d2KYNgbmARx3uXeVRg%3D&amp;Expires=1314995373&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086408</ID>
+        <Title>Evolve Your Code</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. This presentation goes over Extension Methods, Lambdas, Expression Trees, and Fluent Interfaces. I also show examples from popular frameworks using these techniques.</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/evolve-your-code</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086408&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/evolve-your-code&quot; title=&quot;Evolve Your Code&quot;&gt;Evolve Your Code&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086408&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086408&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:34:06 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:35:15 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/evolveyourcode-090928233408-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=OIRn7KYBYfqs67j%2BYg2h57mKV6Y%3D&amp;Expires=1314995373&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086401</ID>
+        <Title>Wpf Validation</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. Covers WPF Input Validation using Validation Rules, Exceptions, IDataErrorInfo, Enterprise Library, and Custom Markup Extensions</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/wpf-validation</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086401&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/wpf-validation&quot; title=&quot;Wpf Validation&quot;&gt;Wpf Validation&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086401&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086401&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:32:33 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:33:26 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/wpfvalidation-090928233235-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=4F%2BW7hfEtWB%2B3j4u9ehTXB%2B2cpY%3D&amp;Expires=1314995373&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1314999120&hash=911ac60ddd51374651d36548bddfcdf25a55aa9d&format=json&username_for=rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "70"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "7655"
+      date: 
+      - Fri, 02 Sep 2011 21:29:53 GMT
+      x-varnish: 
+      - "380575783"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>RookieOne</Name>
+        <Count>3</Count>
+      <Slideshow>
+        <ID>5566167</ID>
+        <Title>Techfest design patterns</Title>
+        <Description>Design Patterns presentation from Houston Techfest 2010</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/techfest-design-patterns</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5566167&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/techfest-design-patterns&quot; title=&quot;Techfest design patterns&quot;&gt;Techfest design patterns&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5566167&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5566167&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Tue Oct 26 09:29:37 -0500 2010</Created>
+        <Updated>Tue Oct 26 09:30:54 -0500 2010</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/techfestdesignpatterns-101026092940-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=NvrmReyYk7Qybz0lHtJJvf1eYc0%3D&amp;Expires=1314999293&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086408</ID>
+        <Title>Evolve Your Code</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. This presentation goes over Extension Methods, Lambdas, Expression Trees, and Fluent Interfaces. I also show examples from popular frameworks using these techniques.</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/evolve-your-code</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086408&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/evolve-your-code&quot; title=&quot;Evolve Your Code&quot;&gt;Evolve Your Code&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086408&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086408&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:34:06 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:35:15 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/evolveyourcode-090928233408-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=we2fQnfgmEghS0GJ6d%2BuGgjaLeo%3D&amp;Expires=1314999293&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086401</ID>
+        <Title>Wpf Validation</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. Covers WPF Input Validation using Validation Rules, Exceptions, IDataErrorInfo, Enterprise Library, and Custom Markup Extensions</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/wpf-validation</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086401&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/wpf-validation&quot; title=&quot;Wpf Validation&quot;&gt;Wpf Validation&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086401&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086401&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:32:33 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:33:26 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/wpfvalidation-090928233235-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=RDpIPCqFBJsxlVxvqk2gDqmVIeI%3D&amp;Expires=1314999293&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1314999123&hash=fe31f2fb28b56dd8dbd1364c3cd7e42888c47dc5&format=json&username_for=rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "35"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "7655"
+      date: 
+      - Fri, 02 Sep 2011 21:29:57 GMT
+      x-varnish: 
+      - "991351937"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w1; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>RookieOne</Name>
+        <Count>3</Count>
+      <Slideshow>
+        <ID>5566167</ID>
+        <Title>Techfest design patterns</Title>
+        <Description>Design Patterns presentation from Houston Techfest 2010</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/techfest-design-patterns</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5566167&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/techfest-design-patterns&quot; title=&quot;Techfest design patterns&quot;&gt;Techfest design patterns&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5566167&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5566167&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Tue Oct 26 09:29:37 -0500 2010</Created>
+        <Updated>Tue Oct 26 09:30:54 -0500 2010</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/techfestdesignpatterns-101026092940-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=EMj526Xn%2B4kKWDr99vz3azBd8jY%3D&amp;Expires=1314999297&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086408</ID>
+        <Title>Evolve Your Code</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. This presentation goes over Extension Methods, Lambdas, Expression Trees, and Fluent Interfaces. I also show examples from popular frameworks using these techniques.</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/evolve-your-code</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086408&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/evolve-your-code&quot; title=&quot;Evolve Your Code&quot;&gt;Evolve Your Code&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086408&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086408&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:34:06 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:35:15 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/evolveyourcode-090928233408-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=68Kb38xjCQ67Kj109sYWPZBD0Fw%3D&amp;Expires=1314999297&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086401</ID>
+        <Title>Wpf Validation</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. Covers WPF Input Validation using Validation Rules, Exceptions, IDataErrorInfo, Enterprise Library, and Custom Markup Extensions</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/wpf-validation</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086401&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/wpf-validation&quot; title=&quot;Wpf Validation&quot;&gt;Wpf Validation&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086401&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086401&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:32:33 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:33:26 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/wpfvalidation-090928233235-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=3QDhE7Bz2KFtg4ChIsdpDXQdroQ%3D&amp;Expires=1314999297&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1314999580&hash=ac0833611da04381b8f2f18e5570767439ff2ffa&format=json&username_for=rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "52"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "7655"
+      date: 
+      - Fri, 02 Sep 2011 21:37:33 GMT
+      x-varnish: 
+      - "380691960"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>RookieOne</Name>
+        <Count>3</Count>
+      <Slideshow>
+        <ID>5566167</ID>
+        <Title>Techfest design patterns</Title>
+        <Description>Design Patterns presentation from Houston Techfest 2010</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/techfest-design-patterns</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5566167&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/techfest-design-patterns&quot; title=&quot;Techfest design patterns&quot;&gt;Techfest design patterns&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5566167&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5566167&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Tue Oct 26 09:29:37 -0500 2010</Created>
+        <Updated>Tue Oct 26 09:30:54 -0500 2010</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/techfestdesignpatterns-101026092940-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=QQ7jKaQHzwXh69NbbZOrU8YHjxs%3D&amp;Expires=1314999753&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086408</ID>
+        <Title>Evolve Your Code</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. This presentation goes over Extension Methods, Lambdas, Expression Trees, and Fluent Interfaces. I also show examples from popular frameworks using these techniques.</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/evolve-your-code</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086408&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/evolve-your-code&quot; title=&quot;Evolve Your Code&quot;&gt;Evolve Your Code&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086408&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086408&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:34:06 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:35:15 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/evolveyourcode-090928233408-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=te8SpI6lx8eIY0Wphw8%2B8VitiOQ%3D&amp;Expires=1314999753&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086401</ID>
+        <Title>Wpf Validation</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. Covers WPF Input Validation using Validation Rules, Exceptions, IDataErrorInfo, Enterprise Library, and Custom Markup Extensions</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/wpf-validation</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086401&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/wpf-validation&quot; title=&quot;Wpf Validation&quot;&gt;Wpf Validation&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086401&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086401&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:32:33 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:33:26 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/wpfvalidation-090928233235-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=WobrsVHTsaWOWeWEp1w8qE0cn0Q%3D&amp;Expires=1314999753&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1314999583&hash=5f480d0c4771fc73ed076f0886a59c3e5fc61a84&format=json&username_for=rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "38"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "7663"
+      date: 
+      - Fri, 02 Sep 2011 21:37:36 GMT
+      x-varnish: 
+      - "380692729"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>RookieOne</Name>
+        <Count>3</Count>
+      <Slideshow>
+        <ID>5566167</ID>
+        <Title>Techfest design patterns</Title>
+        <Description>Design Patterns presentation from Houston Techfest 2010</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/techfest-design-patterns</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5566167&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/techfest-design-patterns&quot; title=&quot;Techfest design patterns&quot;&gt;Techfest design patterns&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5566167&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5566167&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Tue Oct 26 09:29:37 -0500 2010</Created>
+        <Updated>Tue Oct 26 09:30:54 -0500 2010</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/techfestdesignpatterns-101026092940-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=3E5BRajDhWkBEYCsp%2FOzXKjJdJI%3D&amp;Expires=1314999756&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086408</ID>
+        <Title>Evolve Your Code</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. This presentation goes over Extension Methods, Lambdas, Expression Trees, and Fluent Interfaces. I also show examples from popular frameworks using these techniques.</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/evolve-your-code</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086408&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/evolve-your-code&quot; title=&quot;Evolve Your Code&quot;&gt;Evolve Your Code&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086408&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086408&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:34:06 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:35:15 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/evolveyourcode-090928233408-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=%2BBf%2BoKheRYrhYvoDR6D2GukK52U%3D&amp;Expires=1314999756&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086401</ID>
+        <Title>Wpf Validation</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. Covers WPF Input Validation using Validation Rules, Exceptions, IDataErrorInfo, Enterprise Library, and Custom Markup Extensions</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/wpf-validation</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086401&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/wpf-validation&quot; title=&quot;Wpf Validation&quot;&gt;Wpf Validation&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086401&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086401&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:32:33 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:33:26 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/wpfvalidation-090928233235-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=%2Bkv7fFz69uqJxJSkfJqsgg%2FpsRo%3D&amp;Expires=1314999756&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1314999850&hash=ebade2d7c606e44f93527603d8503509be799ffd&format=json&username_for=rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "305"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "7655"
+      date: 
+      - Fri, 02 Sep 2011 21:42:04 GMT
+      x-varnish: 
+      - "991530133"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w1; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>RookieOne</Name>
+        <Count>3</Count>
+      <Slideshow>
+        <ID>5566167</ID>
+        <Title>Techfest design patterns</Title>
+        <Description>Design Patterns presentation from Houston Techfest 2010</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/techfest-design-patterns</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5566167&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/techfest-design-patterns&quot; title=&quot;Techfest design patterns&quot;&gt;Techfest design patterns&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5566167&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5566167&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Tue Oct 26 09:29:37 -0500 2010</Created>
+        <Updated>Tue Oct 26 09:30:54 -0500 2010</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/techfestdesignpatterns-101026092940-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=AVW1QmAZJHCgISDvryvHkeN1Vgk%3D&amp;Expires=1315000024&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086408</ID>
+        <Title>Evolve Your Code</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. This presentation goes over Extension Methods, Lambdas, Expression Trees, and Fluent Interfaces. I also show examples from popular frameworks using these techniques.</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/evolve-your-code</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086408&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/evolve-your-code&quot; title=&quot;Evolve Your Code&quot;&gt;Evolve Your Code&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086408&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086408&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:34:06 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:35:15 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/evolveyourcode-090928233408-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=3Dais6mp36jeGqfdzaEfMUwdNFo%3D&amp;Expires=1315000024&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086401</ID>
+        <Title>Wpf Validation</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. Covers WPF Input Validation using Validation Rules, Exceptions, IDataErrorInfo, Enterprise Library, and Custom Markup Extensions</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/wpf-validation</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086401&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/wpf-validation&quot; title=&quot;Wpf Validation&quot;&gt;Wpf Validation&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086401&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086401&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:32:33 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:33:26 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/wpfvalidation-090928233235-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=eeqmk3SBBEkSYkIKSZadXAJ1%2BKc%3D&amp;Expires=1315000024&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1314999854&hash=d02de70d317e91039c8fb2d01e893568ba6f8b65&format=json&username_for=rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "52"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "7659"
+      date: 
+      - Fri, 02 Sep 2011 21:42:08 GMT
+      x-varnish: 
+      - "991531092"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w1; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>RookieOne</Name>
+        <Count>3</Count>
+      <Slideshow>
+        <ID>5566167</ID>
+        <Title>Techfest design patterns</Title>
+        <Description>Design Patterns presentation from Houston Techfest 2010</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/techfest-design-patterns</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5566167&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/techfest-design-patterns&quot; title=&quot;Techfest design patterns&quot;&gt;Techfest design patterns&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5566167&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5566167&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Tue Oct 26 09:29:37 -0500 2010</Created>
+        <Updated>Tue Oct 26 09:30:54 -0500 2010</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/techfestdesignpatterns-101026092940-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=PXwDSNbxZBROx1qYmjb%2Bk3LAk4E%3D&amp;Expires=1315000028&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086408</ID>
+        <Title>Evolve Your Code</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. This presentation goes over Extension Methods, Lambdas, Expression Trees, and Fluent Interfaces. I also show examples from popular frameworks using these techniques.</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/evolve-your-code</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086408&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/evolve-your-code&quot; title=&quot;Evolve Your Code&quot;&gt;Evolve Your Code&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086408&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086408&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:34:06 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:35:15 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/evolveyourcode-090928233408-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=MtNm2iJpcR%2BlzxQylphTKFVYfHI%3D&amp;Expires=1315000028&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086401</ID>
+        <Title>Wpf Validation</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. Covers WPF Input Validation using Validation Rules, Exceptions, IDataErrorInfo, Enterprise Library, and Custom Markup Extensions</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/wpf-validation</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086401&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/wpf-validation&quot; title=&quot;Wpf Validation&quot;&gt;Wpf Validation&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086401&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086401&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:32:33 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:33:26 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/wpfvalidation-090928233235-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=85nAHC3t5p85nt6k%2BFGF4Gh4OWI%3D&amp;Expires=1315000028&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315000283&hash=ed3966cc76d092adf1376942c4a833979975c251&format=json&username_for=rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "46"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "7659"
+      date: 
+      - Fri, 02 Sep 2011 21:49:17 GMT
+      x-varnish: 
+      - "380864117"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>RookieOne</Name>
+        <Count>3</Count>
+      <Slideshow>
+        <ID>5566167</ID>
+        <Title>Techfest design patterns</Title>
+        <Description>Design Patterns presentation from Houston Techfest 2010</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/techfest-design-patterns</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5566167&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/techfest-design-patterns&quot; title=&quot;Techfest design patterns&quot;&gt;Techfest design patterns&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5566167&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5566167&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Tue Oct 26 09:29:37 -0500 2010</Created>
+        <Updated>Tue Oct 26 09:30:54 -0500 2010</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/techfestdesignpatterns-101026092940-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=hgYa%2BIlBOYtDyOfpotPKR6V4SpU%3D&amp;Expires=1315000457&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086408</ID>
+        <Title>Evolve Your Code</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. This presentation goes over Extension Methods, Lambdas, Expression Trees, and Fluent Interfaces. I also show examples from popular frameworks using these techniques.</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/evolve-your-code</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086408&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/evolve-your-code&quot; title=&quot;Evolve Your Code&quot;&gt;Evolve Your Code&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086408&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086408&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:34:06 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:35:15 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/evolveyourcode-090928233408-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=HrfSaugOD5K4N6SzgNF4hwN%2F4vQ%3D&amp;Expires=1315000457&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086401</ID>
+        <Title>Wpf Validation</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. Covers WPF Input Validation using Validation Rules, Exceptions, IDataErrorInfo, Enterprise Library, and Custom Markup Extensions</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/wpf-validation</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086401&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/wpf-validation&quot; title=&quot;Wpf Validation&quot;&gt;Wpf Validation&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086401&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086401&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:32:33 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:33:26 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/wpfvalidation-090928233235-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=ttVsfLYcTyhFu8WNfSnqhe%2F1aP4%3D&amp;Expires=1315000457&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315000287&hash=08dc9f5bc835f7d9df8b364d42c76ffc99dee24d&format=json&username_for=rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "270"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "7655"
+      date: 
+      - Fri, 02 Sep 2011 21:49:20 GMT
+      x-varnish: 
+      - "380864976"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>RookieOne</Name>
+        <Count>3</Count>
+      <Slideshow>
+        <ID>5566167</ID>
+        <Title>Techfest design patterns</Title>
+        <Description>Design Patterns presentation from Houston Techfest 2010</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/techfest-design-patterns</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5566167&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/techfest-design-patterns&quot; title=&quot;Techfest design patterns&quot;&gt;Techfest design patterns&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5566167&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5566167&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Tue Oct 26 09:29:37 -0500 2010</Created>
+        <Updated>Tue Oct 26 09:30:54 -0500 2010</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/techfestdesignpatterns-101026092940-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=Lg71ypMdMi%2FDiCdd0ftMXVN55Xs%3D&amp;Expires=1315000460&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086408</ID>
+        <Title>Evolve Your Code</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. This presentation goes over Extension Methods, Lambdas, Expression Trees, and Fluent Interfaces. I also show examples from popular frameworks using these techniques.</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/evolve-your-code</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086408&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/evolve-your-code&quot; title=&quot;Evolve Your Code&quot;&gt;Evolve Your Code&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086408&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086408&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:34:06 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:35:15 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/evolveyourcode-090928233408-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=N1ETPboT1SyBGwbene98xd8pabc%3D&amp;Expires=1315000460&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086401</ID>
+        <Title>Wpf Validation</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. Covers WPF Input Validation using Validation Rules, Exceptions, IDataErrorInfo, Enterprise Library, and Custom Markup Extensions</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/wpf-validation</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086401&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/wpf-validation&quot; title=&quot;Wpf Validation&quot;&gt;Wpf Validation&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086401&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086401&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:32:33 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:33:26 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/wpfvalidation-090928233235-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=4mCEbNfRQYwNMUO9VBgWtveIIpI%3D&amp;Expires=1315000460&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315000719&hash=b067f6d288a17042a872ff77305aae0995448801&format=json&username_for=rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "327"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "7657"
+      date: 
+      - Fri, 02 Sep 2011 21:56:32 GMT
+      x-varnish: 
+      - "380970550"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>RookieOne</Name>
+        <Count>3</Count>
+      <Slideshow>
+        <ID>5566167</ID>
+        <Title>Techfest design patterns</Title>
+        <Description>Design Patterns presentation from Houston Techfest 2010</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/techfest-design-patterns</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5566167&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/techfest-design-patterns&quot; title=&quot;Techfest design patterns&quot;&gt;Techfest design patterns&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5566167&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5566167&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Tue Oct 26 09:29:37 -0500 2010</Created>
+        <Updated>Tue Oct 26 09:30:54 -0500 2010</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/techfestdesignpatterns-101026092940-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=W4zrqbrZS1sHMYph6tKyU06Kr80%3D&amp;Expires=1315000892&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086408</ID>
+        <Title>Evolve Your Code</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. This presentation goes over Extension Methods, Lambdas, Expression Trees, and Fluent Interfaces. I also show examples from popular frameworks using these techniques.</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/evolve-your-code</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086408&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/evolve-your-code&quot; title=&quot;Evolve Your Code&quot;&gt;Evolve Your Code&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086408&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086408&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:34:06 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:35:15 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/evolveyourcode-090928233408-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=pd2Wyjwvr45R1kasP3mN6HiX0zQ%3D&amp;Expires=1315000892&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086401</ID>
+        <Title>Wpf Validation</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. Covers WPF Input Validation using Validation Rules, Exceptions, IDataErrorInfo, Enterprise Library, and Custom Markup Extensions</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/wpf-validation</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086401&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/wpf-validation&quot; title=&quot;Wpf Validation&quot;&gt;Wpf Validation&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086401&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086401&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:32:33 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:33:26 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/wpfvalidation-090928233235-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=Ib2%2FFkrvup9ojK6Frm0%2FET8wCSw%3D&amp;Expires=1315000892&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315000722&hash=ae21b37c1e3810eae505d6f16f0f7d40f22cf101&format=json&username_for=rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "156"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "7653"
+      date: 
+      - Fri, 02 Sep 2011 21:56:36 GMT
+      x-varnish: 
+      - "991743361"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w1; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>RookieOne</Name>
+        <Count>3</Count>
+      <Slideshow>
+        <ID>5566167</ID>
+        <Title>Techfest design patterns</Title>
+        <Description>Design Patterns presentation from Houston Techfest 2010</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/techfest-design-patterns</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/techfestdesignpatterns-101026092940-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5566167&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/techfest-design-patterns&quot; title=&quot;Techfest design patterns&quot;&gt;Techfest design patterns&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5566167&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5566167&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=techfestdesignpatterns-101026092940-phpapp02&amp;stripped_title=techfest-design-patterns&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Tue Oct 26 09:29:37 -0500 2010</Created>
+        <Updated>Tue Oct 26 09:30:54 -0500 2010</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/techfestdesignpatterns-101026092940-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=bE1XxmGPqv6QQTiyREy0jgUAkpI%3D&amp;Expires=1315000896&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086408</ID>
+        <Title>Evolve Your Code</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. This presentation goes over Extension Methods, Lambdas, Expression Trees, and Fluent Interfaces. I also show examples from popular frameworks using these techniques.</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/evolve-your-code</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/evolveyourcode-090928233408-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086408&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/evolve-your-code&quot; title=&quot;Evolve Your Code&quot;&gt;Evolve Your Code&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086408&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086408&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=evolveyourcode-090928233408-phpapp01&amp;stripped_title=evolve-your-code&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:34:06 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:35:15 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/evolveyourcode-090928233408-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=LYaVaaMyl5Aj8RFB77n93zcST3U%3D&amp;Expires=1315000896&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>2086401</ID>
+        <Title>Wpf Validation</Title>
+        <Description>Presentation I gave at the Houston TechFest Sept 2009. Covers WPF Input Validation using Validation Rules, Exceptions, IDataErrorInfo, Enterprise Library, and Custom Markup Extensions</Description>
+        <Status>2</Status>
+        <Username>RookieOne</Username>
+        <URL>http://www.slideshare.net/RookieOne/wpf-validation</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/wpfvalidation-090928233235-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_2086401&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/RookieOne/wpf-validation&quot; title=&quot;Wpf Validation&quot;&gt;Wpf Validation&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse2086401&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse2086401&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=wpfvalidation-090928233235-phpapp02&amp;stripped_title=wpf-validation&amp;userName=RookieOne&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/RookieOne&quot;&gt;RookieOne&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Sep 28 23:32:33 -0500 2009</Created>
+        <Updated>Mon Sep 28 23:33:26 -0500 2009</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/wpfvalidation-090928233235-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=b2dqRCpk5EbH99Jn4jLvhDHQVMI%3D&amp;Expires=1315000896&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
