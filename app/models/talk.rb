@@ -6,6 +6,7 @@ class Talk
   include CodeMav::Eventable
   
   field :title, :type => String
+  field :permalink, :type => String
   field :description, :type => String
   field :slides_url, :type => String
   field :slides_thumbnail, :type => String
@@ -25,6 +26,7 @@ class Talk
   validates_presence_of :title
 
   scope :for_profile, lambda { |profile| where(:profile_id => profile.id) }
+  scope :by_permalink, lambda { |permalink| where(:permalink => permalink) }
 
   def self.search(query, options = {})
     search = Sunspot.new_search(Talk)
@@ -63,6 +65,10 @@ class Talk
   def time_string
     return if presentation_date.nil?
     self.presentation_date.strftime('%I:%M%p')
+  end
+
+  def to_param
+    self.permalink
   end
   
 end

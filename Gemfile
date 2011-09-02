@@ -46,6 +46,7 @@ gem "formtastic", "1.2.4"
 gem "css3buttons", "1.0.1"
 gem "rabl", "0.3.0"
 gem "escape_utils", "0.2.3"
+gem "has_permalink"
 
 group :development, :test do
   gem 'launchy', '2.0.5'

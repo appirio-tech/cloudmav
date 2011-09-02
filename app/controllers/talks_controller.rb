@@ -6,7 +6,7 @@ class TalksController < ApplicationController
   end
   
   def show
-    @talk = Talk.find(params[:id])
+    @talk = Talk.by_permalink(params[:id]).first
   end
   
   def new

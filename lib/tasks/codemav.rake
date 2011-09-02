@@ -34,6 +34,18 @@ namespace :codemav do
     end
   end
 
+  desc "Generate Talk Urls"
+  task :generate_talk_urls => :environment do
+    FriendlyUrl.module_eval do
+      module_function(:normalize)
+      public(:normalize)
+    end
+    Talk.all.to_a.each do |t|
+      t.permalink = FriendlyUrl.normalize(t.title)
+      t.save
+    end
+  end
+
   desc "Test"
   task :test => :environment do
     puts "Test to see if rake is working"
