@@ -7,15 +7,16 @@
 .grid_11
   %h1= @talk.title
   %p#talk_description= @talk.description
-  #slide_share= image_tag "talk/slide_share.png"
-  #slideshow= @talk.slideshow_html.html_safe
+  - unless @talk.slideshow_html.nil?
+    #slide_share= image_tag "talk/slide_share.png"
+    #slideshow= @talk.slideshow_html.html_safe
 
 .grid_5
   %table
     %tr
       %td= image_tag @profile.gravatar_url(:size => 50), :id => :profile_pic
       %td.profile_info
-        .name= link_to @profile.name, @profile
+        .name= link_to @profile.display_name, @profile
         .username= link_to @profile.username, @profile
     %tr
       %td.score
@@ -26,8 +27,13 @@
         %p= pointify 5000
       %td.score_title talk points
   #speaker_rate
-    = image_tag "talk/speaker_rate.png"
-    = @talk.speaker_rating
+    %h3= image_tag "talk/speaker_rate.png"
+    - if @profile.speaker_rate_profile.nil?
+      %p #{@profile.display_name} has not signed up for a SpeakerRate account yet
+    - elsif @talk.speaker_rating.nil?
+      %p #{@profile.display_name} has not added the talk to their SpeakerRate account yet
+    - else
+      = @talk.speaker_rating
   = render :partial => "shared/tags", :locals => { :taggable => @talk }
 .clear
 
