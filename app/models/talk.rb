@@ -19,7 +19,10 @@ class Talk
   field :url, :type => String
   field :video_url, :type => String
   field :slideshow_html, :type => String 
+
+  field :speaker_rate_id, :type => String
   field :speaker_rating, :type => Float
+  field :speaker_rate_link, :type => String
 
   belongs_to :profile
     
@@ -49,6 +52,10 @@ class Talk
     future_talks.each do |t|
       Notifier.delay.talk_reminder_for(t)
     end
+  end
+
+  def on_speaker_rate?
+    !speaker_rate_id.nil?
   end
   
   def slides?

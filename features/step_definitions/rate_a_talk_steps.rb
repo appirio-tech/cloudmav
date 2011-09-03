@@ -19,7 +19,15 @@ Given /^the user has a speaker rate profile$/ do
 end
 
 Then /^I should see the user has not added the talk to speaker rate yet$/ do
-  And "show me the page"
   page.should have_content("#{@user.profile.display_name} has not added the talk to their SpeakerRate account yet")
+end
+
+Given /^the talk is on speaker rate$/ do
+  @talk.speaker_rate_id = "100"
+  @talk.save
+end
+
+Then /^I should be able to rate the talk$/ do
+  page.should have_content("Rate It")
 end
 

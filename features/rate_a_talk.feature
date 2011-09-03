@@ -18,3 +18,12 @@ Feature: Rate a talk
     And the user has a speaker rate profile
     When I am looking at the talk
     Then I should see the user has not added the talk to speaker rate yet
+
+  Scenario: Talk rateable
+
+    Given there is a user
+    And the user has a talk
+    And the user has a speaker rate profile
+    And the talk is on speaker rate
+    When I am looking at the talk
+    Then I should be able to rate the talk

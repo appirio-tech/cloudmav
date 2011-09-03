@@ -30,10 +30,11 @@
     %h3= image_tag "talk/speaker_rate.png"
     - if @profile.speaker_rate_profile.nil?
       %p #{@profile.display_name} has not signed up for a SpeakerRate account yet
-    - elsif @talk.speaker_rating.nil?
+    - elsif !@talk.on_speaker_rate?
       %p #{@profile.display_name} has not added the talk to their SpeakerRate account yet
     - else
       = @talk.speaker_rating
+      = link_to "Rate It", @talk.speaker_rate_link
   = render :partial => "shared/tags", :locals => { :taggable => @talk }
 .clear
 
