@@ -6,6 +6,13 @@ When /^I sync my SpeakerRate account$/ do
   end
 end
 
+Then /^my talks should have their SpeakerRate info$/ do
+  profile = User.find(@user.id).profile
+  talk = profile.talks.where(:title => "Virtual Brown Bag").first
+  talk.speaker_rate_id.should_not be_nil
+  talk.speaker_rate_url.should_not be_nil
+end
+
 Then /^I should have a SpeakerRate profile$/ do
   profile = User.find(@user.id).profile
   profile.speaker_rate_profile.should_not be_nil
@@ -64,7 +71,7 @@ end
 When /^I edit my SpeakerRate id$/ do
   VCR.use_cassette("edit speakerrate", :record => :new_episodes) do
     profile = Profile.find(@profile.id)
-    @talk_events = TalkAddedEvent.all.to_a
+    @speaker_rate_events = SpeakerRateProfileAddedEvent.all.to_a
     @old_talks = profile.talks.to_a
     visit profile_speaking_path(@profile)
     fill_in "speaker_rate_profile_speaker_rate_id", :with => "3274"
@@ -73,8 +80,8 @@ When /^I edit my SpeakerRate id$/ do
 end
 
 Then /^my old SpeakerRate events should be deleted$/ do
-  old_ids = @talk_events.map(&:id)
-  TalkAddedEvent.any_in(:_id => old_ids).count.should == 0
+  old_ids = @speaker_rate_events.map(&:id)
+  SpeakerRateProfileAddedEvent.any_in(:_id => old_ids).count.should == 0
 end
 
 Then /^my old talks should be deleted$/ do
@@ -89,7 +96,7 @@ end
 When /^I delete my SpeakerRate profile$/ do
   visit profile_speaking_path(@profile)
   profile = Profile.find(@profile.id)
-  @talk_events = TalkAddedEvent.all.to_a
+  @speaker_rate_events = SpeakerRateProfileAddedEvent.all.to_a
   @old_talks = profile.talks.to_a
   click_link "delete_speaker_rate"
 end

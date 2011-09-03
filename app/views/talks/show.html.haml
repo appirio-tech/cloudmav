@@ -34,7 +34,7 @@
       %p #{@profile.display_name} has not added the talk to their SpeakerRate account yet
     - else
       = @talk.speaker_rating
-      = link_to "Rate It", @talk.speaker_rate_link
+      = link_to "Rate It", @talk.speaker_rate_url
   = render :partial => "shared/tags", :locals => { :taggable => @talk }
 .clear
 

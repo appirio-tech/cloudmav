@@ -22,7 +22,8 @@ class Talk
 
   field :speaker_rate_id, :type => String
   field :speaker_rating, :type => Float
-  field :speaker_rate_link, :type => String
+  field :speaker_rate_url, :type => String
+  field :speaker_rate_slides_url, :type => String
 
   belongs_to :profile
     
@@ -84,6 +85,14 @@ class Talk
     if permalink.nil?
       self.permalink = FriendlyUrl.normalize(self.title)
     end
+  end
+
+  def clear_speaker_rate_info!
+    self.speaker_rate_id = nil
+    self.speaker_rating = nil
+    self.speaker_rate_url = nil
+    self.speaker_rate_slides_url = nil
+    self.save
   end
 
 end

@@ -14,6 +14,7 @@ Feature: Speaker Rate Profile
 		Then I should have a SpeakerRate profile
     And my SpeakerRate profile should be synced
 		And I should have my talks from SpeakerRate
+    And my talks should have their SpeakerRate info
 		And I should be awarded the "I need validation" badge
 		And I should have 30 speaker points
 		And I should learned "Syncing with your SpeakerRate Account"
@@ -43,7 +44,6 @@ Feature: Speaker Rate Profile
     When I edit my SpeakerRate id
     Then I should have a SpeakerRate profile
     And my old SpeakerRate events should be deleted
-    And my old talks should be deleted
     And I should have my new talks
 
   Scenario: Delete SpeakerRate
@@ -52,6 +52,4 @@ Feature: Speaker Rate Profile
     When I delete my SpeakerRate profile
     Then I should not have a SpeakerRate profile
     And my old SpeakerRate events should be deleted
-    And my old talks should be deleted
     And I should not have the "I need validation" badge
-    And I should have 0 speaker points

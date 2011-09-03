@@ -13,17 +13,17 @@ class SpeakerRateProfileSyncEvent < SyncEvent
   end
 
   def already_has_talk?(sr_talk)
-    profile.talks.where(:imported_id => sr_talk["id"], :imported_from => "SpeakerRate").first
+    profile.talks.where(:speaker_rate_id => sr_talk["id"]).first
   end
   
   def create_talk(sr_talk)
     profile.talks.create(
       :title => sr_talk["title"],
       :description => sr_talk["info"]["text"],
-      :slides_url => sr_talk["slides_url"],
-      :imported_id => sr_talk["id"],
-      :imported_from => "SpeakerRate",
+      :speaker_rate_slides_url => sr_talk["slides_url"],
+      :speaker_rate_id => sr_talk["id"],
       :speaker_rating => sr_talk["rating"],
+      :speaker_rate_url => "speakerrate.com/talks/#{sr_talk["id"]}",
       :presentation_date => DateTime.parse(sr_talk["when"]),
       :talk_creation_date => DateTime.parse(sr_talk["when"]))
   end

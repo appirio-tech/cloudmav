@@ -2,10 +2,9 @@ class SpeakerRateProfileUnsyncEvent < UnsyncEvent
   referenced_in :speaker_rate_profile, :inverse_of => :events
 
   def other_work
-    talks = Talk.for_profile(profile).where(:imported_from => "SpeakerRate")
+    talks = Talk.for_profile(profile)
     talks.each do |talk|
-      TalkEvent.for_profile(profile).for_talk(talk).destroy_all
-      talk.destroy
+      talk.clear_speaker_rate_info!
     end
 
     SpeakerRateProfileAddedEvent.for_profile(profile).destroy_all
