@@ -1,0 +1,22 @@
+$dark_background: #373737;
+$dark_foreground: #ffffff;
+$lightest_gray: #D6D6D6;
+
+@mixin corners($radius: 5px) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;  
+}
+
+@mixin gradient($from, $to) {
+  /* gecko based browsers */
+  background: -moz-linear-gradient(top, $from, $to);
+
+  /* webkit based browsers */
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+}
+
+@mixin drop_shadow() {
+  -moz-box-shadow: 5px 5px 2px $shadow; /* Firefox 3.6 and earlier */
+  -webkit-box-shadow: 5px 5px 2px $shadow; /* Safari and Chrome */
+  box-shadow: 5px 5px 2px $shadow;
+}

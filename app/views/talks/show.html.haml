@@ -4,32 +4,30 @@
 = content_for :css do
   = stylesheet_link_tag "talk"
 
-#talk
-  .grid_4
-    .talk_pic
-      - unless @talk.slides_thumbnail.nil?
-        = image_tag @talk.slides_thumbnail
-      - else
-        = image_tag "default_talk.png"
-    .clear
-    .talk_options
-      %ul
-        = render :partial => "slides"
-        = render :partial => "video"
+.grid_11
+  %h1= @talk.title
+  %p#talk_description= @talk.description
+  #slide_share= image_tag "talk/slide_share.png"
+  #slideshow= @talk.slideshow_html.html_safe
 
-    .clear
-    .talk_author
-      %h3 talk given by
-      .talk_profile_pic= image_tag @talk.profile.gravatar_url(:size => 60)
-      .talk_profile_name= link_to @talk.profile.name, @talk.profile
-      .talk_profile_username= @talk.profile.username
-    &nbsp;
-    
-  .grid_12
-    %h2= @talk.title
-    - if can? :edit, @talk
-      = link_to "edit", edit_profile_talk_path(@profile, @talk)
-    %p.talk_description= @talk.description
-    = render :partial => "shared/tags", :locals => { :taggable => @talk }
-    
-  .clear
+.grid_5
+  %table
+    %tr
+      %td= image_tag @profile.gravatar_url(:size => 50), :id => :profile_pic
+      %td.profile_info
+        .name= link_to @profile.name, @profile
+        .username= link_to @profile.username, @profile
+    %tr
+      %td.score
+        %p= pointify @profile.score(:speaker_points)
+      %td.score_title speaker points
+    %tr
+      %td.score
+        %p= pointify 5000
+      %td.score_title talk points
+  #speaker_rate
+    = image_tag "talk/speaker_rate.png"
+    = @talk.speaker_rating
+  = render :partial => "shared/tags", :locals => { :taggable => @talk }
+.clear
+

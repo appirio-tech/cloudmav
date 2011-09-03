@@ -1,43 +1,58 @@
-$dark_background: #373737;
-$dark_foreground: #ffffff;
+@import "common.scss";
 
-#talk {
-  .talk_pic {
-    img  {
-      width: 160px;
-    }
-  }
-  .talk-description {
-    font-size: 10pt;
-  }
-  .talk_options {
-    margin-top: 10px;
-    img {
-      width: 25px;
-    }
-    ul {
-      li {
-        float: left;
-        margin-right: 15px;
-      }
-    }
-  }
-  .talk_author {
+#profile_pic {
+  border: 1px solid $lightest_gray;
+  padding: 3px;
+}
+
+.profile_info {
+  padding-left: 10px;
+  vertical-align: top;
+  .name {
+    font-size: 14pt;
     margin-top: 10px;
   }
+  .username {
+    font-size: 12pt;
+    font-weight: bold;
+  }
 }
 
-.overlay {
-  display:none;
-  padding:20px;
-  background-color: #ffffff;
-  border: 7px solid $dark_background;
+.score_title {
+  padding-left: 10px;
 }
 
-.overlay .close {
-  background-image:url(../images/overlay/close.png);
-  position:absolute; right:0px; top:0px;
-  cursor:pointer;
-  height:35px;
-  width:35px;
+.score {
+  cell-padding: 5px;
+  p {
+    background: $dark_background;
+    color: $dark_foreground;
+    @include corners;
+    padding: 5px;
+    height: 30px;
+    width: 45px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14pt;
+    font-weight: bold;
+  }
 }
+
+#slide_share {
+  border-bottom: 1px solid $lightest_gray;
+}
+
+#slideshow {
+  margin-left: 60px;
+}
+
+#speaker_rate {
+  margin-top: 15px;
+  border-bottom: 1px solid $lightest_gray;
+}
+
+#talk_description {
+  margin-bottom: 20px;
+}
+
+
