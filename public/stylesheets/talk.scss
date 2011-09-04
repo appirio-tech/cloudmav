@@ -48,9 +48,37 @@
 
 #speaker_rate {
   margin-top: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   h3 {
     border-bottom: 1px solid $lightest_gray;
+  }
+  .speaker_rate_info {
+    margin-left: 5px;
+    margin-top: -15px;
+    .rating {
+      color: lighten($black, 20%);
+      font-size: 26pt;
+      font-weight: bold;
+      float: left;
+      margin-right: 15px;
+      margin-top: 7px;
+    }
+    .not_rated_yet {
+      font-size: 14pt;
+      margin-top: 16px;
+    }
+    .rate_it_button {
+      margin-top: 20px;
+      a {
+        @extend .positive_button_link;
+        font-weight: bold;
+        font-size: 14pt;
+        position: relative;
+        top: 15px;
+        &:hover {
+        }
+      }
+    }
   }
 }
 

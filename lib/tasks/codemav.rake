@@ -43,6 +43,15 @@ namespace :codemav do
     end
   end
 
+  desc "Transfer Speaker Rate Info"
+  task :transfer_speaker_rate_info => :environment do
+    talks = Talk.where(:imported_from => "SpeakerRate")
+    talks.all.to_a.each do |t|
+      t.speaker_rate_id = t.imported_id
+      t.save
+    end
+  end
+
   desc "Test"
   task :test => :environment do
     puts "Test to see if rake is working"

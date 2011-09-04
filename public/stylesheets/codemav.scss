@@ -1,3 +1,5 @@
+@import "common.scss";
+
 $lightest_blue: #73B2D9;
 $blue: #003459;
 $light_blue: #0477BF;
@@ -6,7 +8,6 @@ $dark_gray: #8d8d8d;
 $gray: #595959;
 $light_gray: #868686;
 $light_black: #202121;
-$black: #0D0D0D;
 $contrast: #E03F00;
 $white: #FFFFFF;
 $offwhite: #EEEEEE;
@@ -29,29 +30,9 @@ $dark_gradient1: #363636;
 $dark_gradient2: #4F4F4F; 
 $emphasis_dark_background: #1A1A1A;
 
-$shadow: #868686; 
-
 $gradient_top: #2568C0;
 $gradient_bottom: #4792E8;
 
-@mixin corners($radius: 5px) {
-  border-radius: $radius;
-  -moz-border-radius: $radius;  
-}
-
-@mixin gradient($from, $to) {
-  /* gecko based browsers */
-  background: -moz-linear-gradient(top, $from, $to);
-
-  /* webkit based browsers */
-  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
-}
-
-@mixin drop_shadow() {
-  -moz-box-shadow: 5px 5px 2px $shadow; /* Firefox 3.6 and earlier */
-  -webkit-box-shadow: 5px 5px 2px $shadow; /* Safari and Chrome */
-  box-shadow: 5px 5px 2px $shadow;
-}
 
 body {
   font-family: Helvetica, Arial;

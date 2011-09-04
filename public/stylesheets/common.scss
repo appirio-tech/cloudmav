@@ -2,6 +2,10 @@ $dark_background: #373737;
 $dark_foreground: #ffffff;
 $lightest_gray: #D6D6D6;
 
+$black: #0D0D0D;
+
+$positive_color: #68913B;
+
 @mixin corners($radius: 5px) {
   border-radius: $radius;
   -moz-border-radius: $radius;  
@@ -15,8 +19,16 @@ $lightest_gray: #D6D6D6;
   background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
 }
 
-@mixin drop_shadow() {
+@mixin drop_shadow($shadow: #868686) {
   -moz-box-shadow: 5px 5px 2px $shadow; /* Firefox 3.6 and earlier */
   -webkit-box-shadow: 5px 5px 2px $shadow; /* Safari and Chrome */
   box-shadow: 5px 5px 2px $shadow;
+}
+
+.positive_button_link {
+  @include corners;
+  @include gradient(lighten($positive_color, 10%), $positive_color);
+  color: lighten($positive_color, 50%);
+  padding: 10px;
+
 }

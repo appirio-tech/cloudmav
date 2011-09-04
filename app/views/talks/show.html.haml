@@ -28,13 +28,18 @@
       %td.score_title talk points
   #speaker_rate
     %h3= image_tag "talk/speaker_rate.png"
-    - if @profile.speaker_rate_profile.nil?
-      %p #{@profile.display_name} has not signed up for a SpeakerRate account yet
-    - elsif !@talk.on_speaker_rate?
-      %p #{@profile.display_name} has not added the talk to their SpeakerRate account yet
-    - else
-      = @talk.speaker_rating
-      = link_to "Rate It", @talk.speaker_rate_url
+    .speaker_rate_info
+      - if @profile.speaker_rate_profile.nil?
+        %p #{@profile.display_name} has not signed up for a SpeakerRate account yet
+      - elsif !@talk.on_speaker_rate?
+        %p #{@profile.display_name} has not added the talk to their SpeakerRate account yet
+      - else
+        - if @talk.speaker_rating.nil?
+          %p.rating.not_rated_yet Not Rated Yet
+        - else
+          %p.rating= @talk.speaker_rating
+        .rate_it_button
+          = link_to "Rate It", "http://#{@talk.speaker_rate_url}"
   = render :partial => "shared/tags", :locals => { :taggable => @talk }
 .clear
 

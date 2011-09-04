@@ -7,24 +7,22 @@ class SpeakerRateProfileSyncEvent < SyncEvent
     speaker_rate_profile.rating = speaker["rating"]
     speaker_rate_profile.url = "http://speakerrate.com/speakers/#{speaker_rate_profile.speaker_rate_id}"
 
-    speaker["talks"].each {|t| create_talk(t) unless already_has_talk?(t) }
-    
+    speaker["talks"].each do |t|
+      talk = Talk.where(:speaker_rate_id => t["id"]).first
+      if talk.nil?
+        talk = Talk.new
+        talk.speaker_rate_id = t["id"]
+        talk.title = t["title"]
+        talk.description = t["info"]["text"]
+        talk.presentation_date = DateTime.parse(t["when"])
+        talk.creation_date = DateTime.parse(t["when"])
+      end
+      talk.speaker_rate_slides_url = t["slides_url"]
+      talk.speaker_rating = t["rating"]
+      talk.speaker_rate_url = "speakerrate.com/talks/#{t["id"]}"
+      talk.save
+    end
     speaker_rate_profile.save
   end
 
-  def already_has_talk?(sr_talk)
-    profile.talks.where(:speaker_rate_id => sr_talk["id"]).first
-  end
-  
-  def create_talk(sr_talk)
-    profile.talks.create(
-      :title => sr_talk["title"],
-      :description => sr_talk["info"]["text"],
-      :speaker_rate_slides_url => sr_talk["slides_url"],
-      :speaker_rate_id => sr_talk["id"],
-      :speaker_rating => sr_talk["rating"],
-      :speaker_rate_url => "speakerrate.com/talks/#{sr_talk["id"]}",
-      :presentation_date => DateTime.parse(sr_talk["when"]),
-      :talk_creation_date => DateTime.parse(sr_talk["when"]))
-  end
 end
