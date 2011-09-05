@@ -70,7 +70,13 @@ Codemav::Application.routes.draw do
     resources :events
     resources :followings
     resources :widgets
-    resources :talks
+    resources :talks do
+      resource :link_to_speaker_rate do
+        member do
+          get :refresh
+        end
+      end
+    end
     resources :blogs do
       resources :posts
     end

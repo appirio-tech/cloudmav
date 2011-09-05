@@ -20,6 +20,7 @@ class Talk
   field :video_url, :type => String
   field :slideshow_html, :type => String 
 
+  field :has_speaker_rate, :type => Boolean
   field :speaker_rate_id, :type => String
   field :speaker_rating, :type => Float
   field :speaker_rate_url, :type => String
@@ -31,6 +32,7 @@ class Talk
 
   scope :for_profile, lambda { |profile| where(:profile_id => profile.id) }
   scope :by_permalink, lambda { |permalink| where(:permalink => permalink) }
+  scope :from_speaker_rate, lambda { where(:has_speaker_rate => true) }
 
   before_create :create_permalink_from_title
 
@@ -93,6 +95,13 @@ class Talk
     self.speaker_rate_url = nil
     self.speaker_rate_slides_url = nil
     self.save
+  end
+
+  def copy_speaker_rate_info_from(talk)
+    self.speaker_rate_id = talk.speaker_rate_id
+    self.speaker_rating = talk.speaker_rating
+    self.speaker_rate_url = talk.speaker_rate_url
+    self.speaker_rate_slides_url = talk.speaker_rate_slides_url
   end
 
 end

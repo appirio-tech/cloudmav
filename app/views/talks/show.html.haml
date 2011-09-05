@@ -18,6 +18,7 @@
       %td.profile_info
         .name= link_to @profile.display_name, @profile
         .username= link_to @profile.username, @profile
+        = link_to "See other talks by this user", profile_speaking_path(@profile)
     %tr
       %td.score
         %p= pointify @profile.score(:speaker_points)
@@ -30,9 +31,17 @@
     %h3= image_tag "talk/speaker_rate.png"
     .speaker_rate_info
       - if @profile.speaker_rate_profile.nil?
-        %p #{@profile.display_name} has not signed up for a SpeakerRate account yet
+        - if @profile == current_profile
+          %p.not_added You have not signed up for a SpeakerRate account yet
+          .rate_it_button
+            = link_to "Sign up for SpeakerRate", "http://www.speakerrate.com"
+        - else
+          %p.not_added #{@profile.display_name} has not signed up for a SpeakerRate account yet
       - elsif !@talk.on_speaker_rate?
-        %p #{@profile.display_name} has not added the talk to their SpeakerRate account yet
+        - if @profile == current_profile
+          .link_to_speaker_rate= big_button_link_to "Link SpeakerRate to this talk", new_profile_talk_link_to_speaker_rate_path(@profile, @talk)
+        - else
+          %p.not_added #{@profile.display_name} has not added the talk to their SpeakerRate account yet
       - else
         - if @talk.speaker_rating.nil?
           %p.rating.not_rated_yet Not Rated Yet

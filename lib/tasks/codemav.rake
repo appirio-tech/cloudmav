@@ -47,6 +47,7 @@ namespace :codemav do
   task :transfer_speaker_rate_info => :environment do
     talks = Talk.where(:imported_from => "SpeakerRate")
     talks.all.to_a.each do |t|
+      t.has_speaker_rate = true
       t.speaker_rate_id = t.imported_id
       t.save
     end
