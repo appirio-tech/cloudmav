@@ -1,10 +1,9 @@
 class SlideShareProfileResyncEvent < SlideShareProfileSyncEvent
 
   def before_sync
-    talks = Talk.for_profile(profile).where(:imported_from => "SlideShare")
+    talks = Talk.for_profile(profile).from_slide_share
     talks.each do |talk|
-      TalkEvent.for_profile(profile).for_talk(talk).destroy_all
-      talk.destroy
+      talk.clear_slide_share_info!
     end
 
     SlideShareProfileAddedEvent.for_profile(profile).destroy_all

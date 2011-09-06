@@ -7,10 +7,8 @@
 .grid_11
   %h1= @talk.title
   %p#talk_description= @talk.description
-  - unless @talk.slideshow_html.nil?
-    #slide_share= image_tag "talk/slide_share.png"
-    #slideshow= @talk.slideshow_html.html_safe
-
+  = render :partial => "slide_share"
+  
 .grid_5
   %table
     %tr
@@ -23,32 +21,7 @@
       %td.score
         %p= pointify @profile.score(:speaker_points)
       %td.score_title speaker points
-    %tr
-      %td.score
-        %p= pointify 5000
-      %td.score_title talk points
-  #speaker_rate
-    %h3= image_tag "talk/speaker_rate.png"
-    .speaker_rate_info
-      - if @profile.speaker_rate_profile.nil?
-        - if @profile == current_profile
-          %p.not_added You have not signed up for a SpeakerRate account yet
-          .rate_it_button
-            = link_to "Sign up for SpeakerRate", "http://www.speakerrate.com"
-        - else
-          %p.not_added #{@profile.display_name} has not signed up for a SpeakerRate account yet
-      - elsif !@talk.on_speaker_rate?
-        - if @profile == current_profile
-          .link_to_speaker_rate= big_button_link_to "Link SpeakerRate to this talk", new_profile_talk_link_to_speaker_rate_path(@profile, @talk)
-        - else
-          %p.not_added #{@profile.display_name} has not added the talk to their SpeakerRate account yet
-      - else
-        - if @talk.speaker_rating.nil?
-          %p.rating.not_rated_yet Not Rated Yet
-        - else
-          %p.rating= @talk.speaker_rating
-        .rate_it_button
-          = link_to "Rate It", "http://#{@talk.speaker_rate_url}"
+  = render :partial => "speaker_rate"
   = render :partial => "shared/tags", :locals => { :taggable => @talk }
 .clear
 

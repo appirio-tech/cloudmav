@@ -60,15 +60,11 @@ When /^I look at their talk from SlideShare$/ do
 end
 
 Then /^I should be able to download the slides$/ do
-  page.should have_css("#download_link")
-end
-
-Then /^I should see a preview of the slides$/ do
-  page.should have_css(".talk_pic img")
+  page.should have_content("Download the slides")
 end
 
 Then /^I should see a slideshow$/ do
-  page.should have_css(".slideshow")
+  page.should have_css("#slideshow")
 end
 
 Then /^I should have a slide count on my SlideShare profile$/ do
@@ -87,7 +83,7 @@ end
 When /^I edit my SlideShare username$/ do
   VCR.use_cassette("edit slideshare", :record => :new_episodes) do
     profile = Profile.find(@profile.id)
-    @talk_events = TalkAddedEvent.all.to_a
+    @old_slide_share_events = SlideShareProfileAddedEvent.all.to_a
     @old_talks = profile.talks.to_a
     visit profile_speaking_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => "themoleskin"
@@ -96,19 +92,33 @@ When /^I edit my SlideShare username$/ do
 end
 
 Then /^my old SlideShare events should be deleted$/ do
-  old_ids = @talk_events.map(&:id)
-  TalkAddedEvent.any_in(:_id => old_ids).count.should == 0
+  old_ids = @old_slide_share_events.map(&:id)
+  SlideShareProfileAddedEvent.any_in(:_id => old_ids).count.should == 0
 end
 
 When /^I delete my SlideShare profile$/ do
   visit profile_speaking_path(@profile)
   profile = Profile.find(@profile.id)
-  @talk_events = TalkAddedEvent.all.to_a
+  @old_slide_share_events = SlideShareProfileAddedEvent.all.to_a
   @old_talks = profile.talks.to_a
   click_link "delete_slide_share"
 end
 
 Then /^I should not have a SlideShare profile$/ do
   Profile.find(@profile.id).slide_share_profile.should be_nil
+end
+
+Then /^my talks should have their SlideShare info$/ do
+  profile = Profile.find(@profile.id)
+  talk = profile.talks.where(:title => "Techfest design patterns").first
+  talk.has_slide_share.should == true
+  talk.slideshow_html.should_not be_blank
+end
+
+Then /^my old talks should be not have their SlideShare info$/ do
+  profile = Profile.find(@profile.id)
+  talk = profile.talks.where(:title => "Techfest design patterns").first
+  talk.has_slide_share.should == false
+  talk.slideshow_html.should be_nil
 end
 

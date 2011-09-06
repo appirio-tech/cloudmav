@@ -1,7 +1,6 @@
 = content_for :title do
   #{@profile.username} - Speaker Profile
 
-
 #profile
   = render :partial => "header"
   = render :partial => "profile_menu"
@@ -14,11 +13,7 @@
       %ul.list
         - @profile.talks.each do |talk|    
           %li
-            .item_pic
-              - unless talk.slides_thumbnail.nil?
-                = image_tag talk.slides_thumbnail
-              -else
-                = image_tag "default_talk.png"
+            .item_pic= talk.preview_pic
             .item_info
               .item_title= link_to talk.title, [@profile, talk]
               .item_description

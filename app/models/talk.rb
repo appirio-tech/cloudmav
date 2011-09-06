@@ -9,7 +9,6 @@ class Talk
   field :permalink, :type => String
   field :description, :type => String
   field :slides_url, :type => String
-  field :slides_thumbnail, :type => String
   field :imported_id, :type => String
   field :imported_from, :type => String
   field :willing_to_give_talk_again, :type => Boolean, :default => true
@@ -18,9 +17,14 @@ class Talk
   field :audience, :type => String
   field :url, :type => String
   field :video_url, :type => String
-  field :slideshow_html, :type => String 
 
-  field :has_speaker_rate, :type => Boolean
+  field :has_slide_share, :type => Boolean, :default => false
+  field :slide_share_id, :type => String
+  field :slideshow_html, :type => String 
+  field :slide_share_thumbnail, :type => String
+  field :slide_share_download_url, :type => String
+
+  field :has_speaker_rate, :type => Boolean, :default => false
   field :speaker_rate_id, :type => String
   field :speaker_rating, :type => Float
   field :speaker_rate_url, :type => String
@@ -33,6 +37,7 @@ class Talk
   scope :for_profile, lambda { |profile| where(:profile_id => profile.id) }
   scope :by_permalink, lambda { |permalink| where(:permalink => permalink) }
   scope :from_speaker_rate, lambda { where(:has_speaker_rate => true) }
+  scope :from_slide_share, lambda { where(:has_slide_share => true) }
 
   before_create :create_permalink_from_title
 
@@ -58,7 +63,16 @@ class Talk
   end
 
   def on_speaker_rate?
-    !speaker_rate_id.nil?
+    self.has_speaker_rate
+  end
+
+  def on_slide_share?
+    self.has_slide_share
+  end
+
+  def preview_pic
+    return self.slide_share_thumbnail if self.has_slide_share
+    "default_talk.png"
   end
   
   def slides?
@@ -90,6 +104,7 @@ class Talk
   end
 
   def clear_speaker_rate_info!
+    self.has_speaker_rate = false
     self.speaker_rate_id = nil
     self.speaker_rating = nil
     self.speaker_rate_url = nil
@@ -102,6 +117,15 @@ class Talk
     self.speaker_rating = talk.speaker_rating
     self.speaker_rate_url = talk.speaker_rate_url
     self.speaker_rate_slides_url = talk.speaker_rate_slides_url
+  end
+
+  def clear_slide_share_info!
+    self.has_slide_share = false
+    self.slide_share_id = nil
+    self.slideshow_html = nil
+    self.slide_share_thumbnail = nil
+    self.slide_share_download_url = nil
+    self.save
   end
 
 end

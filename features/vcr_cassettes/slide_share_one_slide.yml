@@ -6272,3 +6272,1878 @@
       </User>
 
     http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315274649&hash=16744de661d7598fbf41bf41252cf723f243dcd0&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "100"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10228"
+      date: 
+      - Tue, 06 Sep 2011 02:02:02 GMT
+      x-varnish: 
+      - "443635665"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=h%2FlCQpx4APoScS2XeeYsbg820Vo%3D&amp;Expires=1315274822&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=FNIhD6nBLWFogHjz6c%2BFmfkWs4U%3D&amp;Expires=1315274822&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=m2mG5%2FYcRmlpzFi0UV1fWXyLmPs%3D&amp;Expires=1315274822&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=dt9iQFwvBqcG2Tu2dU7Jwh%2BINl4%3D&amp;Expires=1315274822&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315275030&hash=f7e8424007e9e84aa50faaac0687ed6127fe9d7e&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "63"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10228"
+      date: 
+      - Tue, 06 Sep 2011 02:08:22 GMT
+      x-varnish: 
+      - "443761032"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=mNDORU%2FMgKd5q26y%2BNdjAksgegA%3D&amp;Expires=1315275202&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=VHrWFUyXDlZqo2bCa%2F34wy2dmw4%3D&amp;Expires=1315275202&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=kGVhO3C%2Fm4MJ8Weg8CaqqnFoURo%3D&amp;Expires=1315275202&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=zeShIMeM3QE8k0ZBSdZmcFVyH9w%3D&amp;Expires=1315275202&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315275477&hash=28f68747afca9fca4f2d4995a83f1d9b9633a6da&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "56"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10224"
+      date: 
+      - Tue, 06 Sep 2011 02:15:49 GMT
+      x-varnish: 
+      - "1054498688"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w1; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=KlgSucIk28XutQ5uufkpqKaQpms%3D&amp;Expires=1315275649&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=NhK0n30LUnG6CYkm2K1IDizHBMo%3D&amp;Expires=1315275649&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=YtzEoAV0Nz%2BoSV7wjm1d0s%2F1R4Q%3D&amp;Expires=1315275649&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=Kv96WT0N6GlqIqn4TFVPcdOTffE%3D&amp;Expires=1315275649&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315275559&hash=ab6e27d3588abaff222821a2e8a3e3e7250d67c8&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "79"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10232"
+      date: 
+      - Tue, 06 Sep 2011 02:17:12 GMT
+      x-varnish: 
+      - "443936137"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=98tysggZDEM5UUWzfQc%2FjvTW1bk%3D&amp;Expires=1315275732&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=%2F5F3SnyGBbrwdqgDhm75gyamr2A%3D&amp;Expires=1315275732&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=jhf5K%2B8Dp%2B9dgaeh6YY6m6iWru8%3D&amp;Expires=1315275732&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=s0vouJ7AtB44f2LUsRv%2BBRc6%2B38%3D&amp;Expires=1315275732&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315275781&hash=4f6272e4cfd8d4540625192b9fa45e7c98c70896&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "63"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10222"
+      date: 
+      - Tue, 06 Sep 2011 02:20:53 GMT
+      x-varnish: 
+      - "444009489"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=iNM9EkT9VU6bzmcUNChcOa5pLc8%3D&amp;Expires=1315275953&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=OhqcSRHHKXcYPf1%2BSkEBlcaoCDc%3D&amp;Expires=1315275953&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=tsc4EMyKIqDzieAtpfCbQd05NEI%3D&amp;Expires=1315275953&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=jr1JzARmhawB4VswikrQKsb44GE%3D&amp;Expires=1315275953&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315275867&hash=08627813461873fabdbd7422dc3de92847dda274&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "93"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10226"
+      date: 
+      - Tue, 06 Sep 2011 02:22:19 GMT
+      x-varnish: 
+      - "444038063"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=ugH4zNl4DwJbUQBVk0plGso8b00%3D&amp;Expires=1315276039&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=11plOLTOEOS7b%2FhNZlEIr8vQHXY%3D&amp;Expires=1315276039&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=3IKzAhGi3H0pTqC4U8DGskILYAI%3D&amp;Expires=1315276039&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=%2B6%2F7l24olWPg96SLLDh81Vm0snc%3D&amp;Expires=1315276039&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315275949&hash=7edc7313ab28a2b111d420604f29eb693572cae2&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "49"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10230"
+      date: 
+      - Tue, 06 Sep 2011 02:23:42 GMT
+      x-varnish: 
+      - "1054654431"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w1; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=pNtpoJCzKzM8yDHti1qeyC%2BrXlU%3D&amp;Expires=1315276122&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=59JwNwQLiZrKHwtaswBzkSiM%2BVw%3D&amp;Expires=1315276122&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=okZ4o%2FeIDl%2FQcxGtPg4%2BQNSk1kg%3D&amp;Expires=1315276122&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=5A1wRLna0flVtYzCfC38ZSogaPQ%3D&amp;Expires=1315276122&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315276036&hash=6c9118abec2bacc3bd7cd20f33d67e8aea3d8e34&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "66"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10228"
+      date: 
+      - Tue, 06 Sep 2011 02:25:08 GMT
+      x-varnish: 
+      - "444096608"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=WsWYcDAs7K2xG7ql1mN0nw71UR4%3D&amp;Expires=1315276208&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=WMWjy4xz86fR7CvRbeSAL7P%2B%2FrA%3D&amp;Expires=1315276208&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=orLeyRoK%2BKWIxkuR2ox1gpAUjlo%3D&amp;Expires=1315276208&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=UlXUVk%2BKQR2Ufeg50NPqnRYJCAY%3D&amp;Expires=1315276208&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315276215&hash=698415948c5aba249cac3da056acc54527c1a9d3&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "52"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10224"
+      date: 
+      - Tue, 06 Sep 2011 02:28:08 GMT
+      x-varnish: 
+      - "1054743887"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w1; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=yEkbe8Wk%2FC4Na5KpnDOwD0pzATg%3D&amp;Expires=1315276387&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=prCeK3wAwl%2FHdp342ff0gN2Gr0Y%3D&amp;Expires=1315276387&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=J3iBybVHN5f9AqBQMOIgurA9h40%3D&amp;Expires=1315276387&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=tNdgvAHfqUgG6YCi32D97LSz9to%3D&amp;Expires=1315276387&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315276370&hash=501f5f4f4f1ca78ed83bb45ba16fbe3f7a495c1f&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "340"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10230"
+      date: 
+      - Tue, 06 Sep 2011 02:30:43 GMT
+      x-varnish: 
+      - "444208925"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=6YsSFWqzAjQCdwGTJnzE%2FqQNJ5c%3D&amp;Expires=1315276542&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=lJ7N5UOP0rTUh9M5gBBOyk3ZNnU%3D&amp;Expires=1315276542&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=WZEmOER17YH6Z3%2FO2NUef%2BnshyM%3D&amp;Expires=1315276542&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=utrtQarO%2Bopfti87%2FG8L3szvWwU%3D&amp;Expires=1315276542&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315276611&hash=8b4db69187796131acc0b6184a6b79fac25ee67e&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "529"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10226"
+      date: 
+      - Tue, 06 Sep 2011 02:34:44 GMT
+      x-varnish: 
+      - "1054876333"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w1; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=ua%2BLWXLkMMqiP1cTidFK%2BLFQIE8%3D&amp;Expires=1315276784&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=UICNW6zJwG76v0rwnaSauvLi22Q%3D&amp;Expires=1315276784&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=oEqtgIvl34BLRQ4%2FJiAYbv3oTS4%3D&amp;Expires=1315276784&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=ZyOnj5OtvUN7GYgvIcYGwyd7dVw%3D&amp;Expires=1315276784&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315276722&hash=3f1fd4bc03ef2e2b8956ceb9b47a121f1a13cd9d&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "62"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10224"
+      date: 
+      - Tue, 06 Sep 2011 02:36:34 GMT
+      x-varnish: 
+      - "444326755"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=enWgJxX2eKqh7ilwyJ8sD084XrE%3D&amp;Expires=1315276894&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=%2B0M%2BXmE8iePIL41xlrLstRBZibo%3D&amp;Expires=1315276894&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=SXzqgruvZEKeHYm8nKLvFFGtbbY%3D&amp;Expires=1315276894&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=PenWjoISxMdFtkdghZPN8bTtvpM%3D&amp;Expires=1315276894&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315276964&hash=1955cc8d41829c5df92bd25f0d2154b7ae4f3771&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "48"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10230"
+      date: 
+      - Tue, 06 Sep 2011 02:40:36 GMT
+      x-varnish: 
+      - "444403846"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w2; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=WC%2B8NWcHTI1SO36Xxxh5N6Avm3s%3D&amp;Expires=1315277136&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=vtbeuqD%2FHqN%2BrqjLh1OmJ36Z8JI%3D&amp;Expires=1315277136&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=P6i6FTUDtEapAdcG5eNDb8Me0UA%3D&amp;Expires=1315277136&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=5a%2FP8GzbVi1kyy%2B3VnC5SlyfxNM%3D&amp;Expires=1315277136&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315277054&hash=3a0d79009dd0f7eb267844de1e3ed1abd17ba424&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "284"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10228"
+      date: 
+      - Tue, 06 Sep 2011 02:42:07 GMT
+      x-varnish: 
+      - "1055019971"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w1; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=CV8o3GC%2B4VDW4SB7ut4UXvrjAO4%3D&amp;Expires=1315277227&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=Ha5zpkix8Ht824DLTXxsRMW4lKc%3D&amp;Expires=1315277227&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=QhecUPS5BNtEbFpwEGcwOUn%2Fj%2FM%3D&amp;Expires=1315277227&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=7A4gzpF9%2Bg9Si7w8AVwZqRByP9I%3D&amp;Expires=1315277227&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1315278879&hash=c1bb4a4e59808116b28e601a44ffd2bf76f8e29a&format=json&username_for=togakangaroo
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/0.6.39
+      content-type: 
+      - application/xml; charset=iso-8859-1
+      status: 
+      - 200 OK
+      x-xss-protection: 
+      - "0"
+      x-bench-route: 
+      - api2/get_slideshows_by_user
+      x-runtime: 
+      - "86"
+      cache-control: 
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length: 
+      - "10224"
+      date: 
+      - Tue, 06 Sep 2011 03:12:32 GMT
+      x-varnish: 
+      - "1055590533"
+      age: 
+      - "0"
+      via: 
+      - 1.1 varnish
+      set-cookie: 
+      - SERVERID=w1; path=/
+    body: |
+      <?xml version="1.0" encoding="UTF-8"?>
+      <User>
+        <Name>Togakangaroo</Name>
+        <Count>4</Count>
+      <Slideshow>
+        <ID>8882626</ID>
+        <Title>All of javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascript-110817091629-phpapp01-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8882626&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript-8882626&quot; title=&quot;All of javascript&quot;&gt;All of javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8882626&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8882626&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascript-110817091629-phpapp01&amp;stripped_title=all-of-javascript-8882626&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Aug 17 09:16:26 -0500 2011</Created>
+        <Updated>Wed Aug 17 09:20:02 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascript-110817091629-phpapp01.pptx?response-content-disposition=attachment&amp;Signature=WY6PyE0s%2F8c2njWGpi1MPmZHlwo%3D&amp;Expires=1315279052&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>8299706</ID>
+        <Title>All of Javascript</Title>
+        <Description></Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/all-of-javascript</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/allofjavascriptdep-110613233829-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_8299706&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/all-of-javascript&quot; title=&quot;All of Javascript&quot;&gt;All of Javascript&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse8299706&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse8299706&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=allofjavascriptdep-110613233829-phpapp02&amp;stripped_title=all-of-javascript&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Mon Jun 13 23:38:25 -0500 2011</Created>
+        <Updated>Wed Aug 17 17:58:38 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/allofjavascriptdep-110613233829-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=L7UdEVurceDihsLZ9nKC2iFdQnI%3D&amp;Expires=1315279052&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>5402653</ID>
+        <Title>Synchronized Development for Distributed Teams</Title>
+        <Description>Presentation by Claudio Lassala and George Mauer.
+      
+      Originally </Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/synchronizeddevfordistributedteam-101009162213-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_5402653&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/synchronized-development-for-distributed-teams&quot; title=&quot;Synchronized Development for Distributed Teams&quot;&gt;Synchronized Development for Distributed Teams&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse5402653&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse5402653&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=synchronizeddevfordistributedteam-101009162213-phpapp02&amp;stripped_title=synchronized-development-for-distributed-teams&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Sat Oct 09 16:21:50 -0500 2010</Created>
+        <Updated>Wed May 11 12:12:13 -0500 2011</Updated>
+        <Language>en</Language>
+        <Format>pptx</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/synchronizeddevfordistributedteam-101009162213-phpapp02.pptx?response-content-disposition=attachment&amp;Signature=1KgX2cyxwjOruiocye7V10g587I%3D&amp;Expires=1315279052&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      <Slideshow>
+        <ID>1973127</ID>
+        <Title>Can&amp;rsquo;t Dance The Lambda</Title>
+        <Description>Why I use C# lambdas all the time and for everything and so should you.
+      
+      A presentation on how to use functional programming techniques effectively in C#</Description>
+        <Status>2</Status>
+        <Username>Togakangaroo</Username>
+        <URL>http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda</URL>
+        <ThumbnailURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail</ThumbnailURL>
+        <ThumbnailSmallURL>http://cdn.slidesharecdn.com/cantdancethelambda-090909105638-phpapp02-thumbnail-2</ThumbnailSmallURL>
+        <Embed>&lt;div style=&quot;width:425px&quot; id=&quot;__ss_1973127&quot;&gt;&lt;strong style=&quot;display:block;margin:12px 0 4px&quot;&gt;&lt;a href=&quot;http://www.slideshare.net/Togakangaroo/cant-dance-the-lambda&quot; title=&quot;Can&amp;#39;t Dance The Lambda&quot;&gt;Can&amp;#39;t Dance The Lambda&lt;/a&gt;&lt;/strong&gt;&lt;object id=&quot;__sse1973127&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; /&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;/&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;/&gt;&lt;embed name=&quot;__sse1973127&quot; src=&quot;http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=cantdancethelambda-090909105638-phpapp02&amp;stripped_title=cant-dance-the-lambda&amp;userName=Togakangaroo&quot; type=&quot;application/x-shockwave-flash&quot; allowscriptaccess=&quot;always&quot; allowfullscreen=&quot;true&quot; width=&quot;425&quot; height=&quot;355&quot;&gt;&lt;/embed&gt;&lt;/object&gt;&lt;div style=&quot;padding:5px 0 12px&quot;&gt;View more &lt;a href=&quot;http://www.slideshare.net/&quot;&gt;presentations&lt;/a&gt; from &lt;a href=&quot;http://www.slideshare.net/Togakangaroo&quot;&gt;Togakangaroo&lt;/a&gt;.&lt;/div&gt;&lt;/div&gt;</Embed>
+        <Created>Wed Sep 09 10:56:31 -0500 2009</Created>
+        <Updated>Wed Sep 09 10:57:18 -0500 2009</Updated>
+        <Language>**</Language>
+        <Format>odp</Format>
+        <Download>1</Download>
+        <DownloadUrl>http://s3.amazonaws.com/ppt-download/cantdancethelambda-090909105638-phpapp02.odp?response-content-disposition=attachment&amp;Signature=hBvM4w%2FkSJ629hBiJitoA0aWqKw%3D&amp;Expires=1315279052&amp;AWSAccessKeyId=AKIAJLJT267DEGKZDHEQ</DownloadUrl>
+        <SlideshowType>0</SlideshowType>
+        <InContest>0</InContest>
+      </Slideshow>
+      </User>
+
+    http_version: "1.1"
