@@ -113,6 +113,7 @@ class Talk
   end
 
   def copy_speaker_rate_info_from(talk)
+    self.has_speaker_rate = true
     self.speaker_rate_id = talk.speaker_rate_id
     self.speaker_rating = talk.speaker_rating
     self.speaker_rate_url = talk.speaker_rate_url
@@ -126,6 +127,14 @@ class Talk
     self.slide_share_thumbnail = nil
     self.slide_share_download_url = nil
     self.save
+  end
+
+  def copy_slide_share_info_from(talk)
+    self.has_slide_share = true
+    self.slide_share_id = talk.slide_share_id
+    self.slideshow_html = talk.slideshow_html
+    self.slide_share_thumbnail = talk.slide_share_thumbnail
+    self.slide_share_download_url = talk.slide_share_download_url
   end
 
 end

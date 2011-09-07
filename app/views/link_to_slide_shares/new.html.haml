@@ -1,0 +1,25 @@
+= content_for :title do
+  Add Slides to a Talk from Slide Share Talk
+
+.grid_16
+  %h1 Add Slides to a Talk from Slide Share Talk
+  %ol
+    %li
+      .step_title Add Slides to Slide Share
+      .step_description 
+        If you have not added the slides to Slide Share then first go to slideshare.net and add it.
+        = big_button_link_to "Add slides to Slide Share", "http://www.slideshare.net/upload", :target => "_blank"
+    %li
+      .step_title Refresh Slide Share talks
+      .step_description
+        = big_button_link_to "Refresh", refresh_profile_talk_link_to_slide_share_path(@profile, @talk)
+    %li
+      .step_title Select Talk
+      .step_description
+        = form_tag(:controller => "link_to_slide_shares", :action => "create", :method => "put") do
+          = hidden_field_tag :profile_id, @profile.username
+          = select("slide_share_talk", "talk_id", @slide_share_talks.map{|t| [t.title, t.id] })
+          = big_primary_button_submit_tag "Link"
+
+.clear
+

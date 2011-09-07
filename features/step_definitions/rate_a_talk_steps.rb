@@ -23,6 +23,7 @@ Then /^I should see the user has not added the talk to speaker rate yet$/ do
 end
 
 Given /^the talk is on speaker rate$/ do
+  @talk.has_speaker_rate = true
   @talk.speaker_rate_id = "100"
   @talk.save
 end

@@ -20,3 +20,11 @@ Feature: See Slides for a Talk
     Then I should see the user has not added the slides to Slide Share yet
 
 
+  Scenario: Talk has slides
+
+    Given there is a user
+    And the user has a talk
+    And the user has a Slide Share profile
+    And the talk is on Slide Share
+    When I am looking at the talk
+    Then I should be able to view the slides

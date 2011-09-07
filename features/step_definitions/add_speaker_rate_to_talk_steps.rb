@@ -43,7 +43,6 @@ When /^I refresh from the link my talk to SpeakerRate$/ do
 end
 
 Then /^I should be able to select the SpeakerRate talk$/ do
-  And "show me the page"
   page.has_content?("Virtual Brown Bag").should == true
 end
 

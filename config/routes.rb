@@ -76,6 +76,11 @@ Codemav::Application.routes.draw do
           get :refresh
         end
       end
+      resource :link_to_slide_share do
+        member do
+          get :refresh
+        end
+      end
     end
     resources :blogs do
       resources :posts

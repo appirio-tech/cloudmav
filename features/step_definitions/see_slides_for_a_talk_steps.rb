@@ -7,7 +7,16 @@ Given /^the user has a Slide Share profile$/ do
 end
 
 Then /^I should see the user has not added the slides to Slide Share yet$/ do
-  And "show me the page"
   page.should have_content("#{@user.profile.display_name} has not added the slides to their SlideShare account yet")
+end
+
+Given /^the talk is on Slide Share$/ do
+  @talk.has_slide_share = true
+  @talk.slideshow_html = "FAKE SLIDES"
+  @talk.save
+end
+
+Then /^I should be able to view the slides$/ do
+  page.should have_css("#slideshow")
 end
 

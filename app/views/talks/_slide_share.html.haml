@@ -3,8 +3,9 @@
   - if @profile.slide_share_profile.nil?
     %p.not_added #{@profile.display_name} has not signed up for a SlideShare account yet
   - elsif !@talk.has_slide_share?
-    %p.not_added #{@profile.display_name} has not added the talk to their SlideShare account yet
+    %p.not_added #{@profile.display_name} has not added the slides to their SlideShare account yet
   - unless @talk.slideshow_html.nil?
     #slideshow= @talk.slideshow_html.html_safe
-    = big_button_link_to "Download the slides", @talk.slide_share_download_url
+    - unless @talk.slide_share_download_url.nil?
+      = big_button_link_to "Download the slides", @talk.slide_share_download_url
 
