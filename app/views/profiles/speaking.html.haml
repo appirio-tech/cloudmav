@@ -13,7 +13,7 @@
       %ul.list
         - @profile.talks.each do |talk|    
           %li
-            .item_pic= talk.preview_pic
+            .item_pic= image_tag talk.preview_pic
             .item_info
               .item_title= link_to talk.title, [@profile, talk]
               .item_description

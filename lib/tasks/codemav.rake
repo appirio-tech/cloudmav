@@ -53,6 +53,16 @@ namespace :codemav do
     end
   end
 
+  desc "Transfer Slide Share Info"
+  task :transfer_slide_share_info => :environment do
+    talks = Talk.where(:imported_from => "SlideShare")
+    talks.all.to_a.each do |t|
+      t.has_slide_share = true
+      t.slide_share_id = t.imported_id
+      t.save
+    end
+  end
+
   desc "Test"
   task :test => :environment do
     puts "Test to see if rake is working"
