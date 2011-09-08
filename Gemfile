@@ -47,6 +47,7 @@ gem "css3buttons", "1.0.1"
 gem "rabl", "0.3.0"
 gem "escape_utils", "0.2.3"
 gem "has_permalink"
+gem "thin", "1.2.6"
 
 group :development, :test do
   gem 'launchy', '2.0.5'

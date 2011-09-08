@@ -15,10 +15,6 @@ class TalkEvent < ProfileEvent
   end
 
   def icon_url
-    if talk.slides_thumbnail.nil?
-      return super
-    else
-      talk.slides_thumbnail
-    end
+    talk.preview_pic
   end
 end
