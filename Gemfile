@@ -7,9 +7,9 @@ gem 'haml', '3.1.2'
 gem 'sass', '3.1.1'
 gem 'json', '1.4.6'
 gem 'devise', '1.1.5'
-gem "mongoid", "2.0.0"
+gem "mongoid", ">=2.0.0"
 gem "bson_ext", "1.3.1"
-gem "mongo", "1.3.1"
+gem "mongo", ">=1.3.1"
 gem "geokit", "1.6.0"
 gem "badgeable", "0.4.0"
 gem "gravtastic", "3.2.6"
