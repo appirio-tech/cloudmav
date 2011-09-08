@@ -69,6 +69,7 @@ class Profile
     slide_share_profile.sync! unless slide_share_profile.nil?
     twitter_profile.sync! unless twitter_profile.nil?
   end
+
   
   class << self
     def sync_all!
