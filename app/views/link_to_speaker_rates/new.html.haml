@@ -3,22 +3,17 @@
 
 .grid_16
   %h1 Link a Talk to Speaker Rate Talk
-  %ol
-    %li
-      .step_title Add Talk to Speaker Rate
-      .step_description 
-        If you have not added the talk to Speaker Rate then first go to SpeakerRate.com and add it.
-        = big_button_link_to "Add talk to SpeakerRate", "http://speakerrate.com/talks/new", :target => "_blank"
-    %li
-      .step_title Refresh Speaker Rate talks
-      .step_description
-        = big_button_link_to "Refresh", refresh_profile_talk_link_to_speaker_rate_path(@profile, @talk)
-    %li
-      .step_title Select Talk
-      .step_description
-        = form_tag(:controller => "link_to_speaker_rates", :action => "create", :method => "put") do
-          = hidden_field_tag :profile_id, @profile.username
-          = select("speaker_rate_talk", "talk_id", @speaker_rate_talks.map{|t| [t.title, t.id] })
-          = big_primary_button_submit_tag "Link"
+  = form_tag(:controller => "link_to_speaker_rates", :action => "create", :method => "put") do
+    = hidden_field_tag :profile_id, @profile.username
+    = select("speaker_rate_talk", "talk_id", @speaker_rate_talks.map{|t| [t.title, t.id] })
+    = big_primary_button_submit_tag "Link"
+
+    %p 
+      If you have not added the talk to Speaker Rate then first go to SpeakerRate.com and add it.
+      = big_button_link_to "Add talk to SpeakerRate", "http://speakerrate.com/talks/new", :target => "_blank"
+    %p 
+      Then refresh CodeMav with your added Speaker Rate talk
+      = big_button_link_to "Refresh", refresh_profile_talk_link_to_speaker_rate_path(@profile, @talk)
 
 .clear
+

@@ -16,7 +16,7 @@
       %td.profile_info
         .name= link_to @profile.display_name, @profile
         .username= link_to @profile.username, @profile
-        = link_to "See other talks by this user", profile_speaking_path(@profile)
+        .other_talks= link_to "See other talks by this user", profile_speaking_path(@profile)
     %tr
       %td.score
         %p= pointify @profile.score(:speaker_points)
