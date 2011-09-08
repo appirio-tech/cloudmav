@@ -28,8 +28,8 @@ gem "sunspot_rails", "1.2.1"
 gem "cancan", "1.6.5"
 gem "stack_overflow", "0.0.7"
 gem "linkedin", "0.3.1"
-gem "delayed_job", "2.1.4"
-gem "delayed_job_mongoid", "1.0.0"
+gem "delayed_job"
+gem "delayed_job_mongoid"
 gem "target_api", "0.0.1"
 gem "less", "2.0.5"
 gem "twitter", "1.6.1"
@@ -47,7 +47,6 @@ gem "css3buttons", "1.0.1"
 gem "rabl", "0.3.0"
 gem "escape_utils", "0.2.3"
 gem "has_permalink"
-gem "thin", "1.2.6"
 
 group :development, :test do
   gem 'launchy', '2.0.5'
