@@ -3,7 +3,7 @@ When /^I try to link my talk to Slide Share$/ do
 end
 
 Then /^I should be able to add my talk to Slide Share$/ do
-  And %Q{I should see "Add slides to Slide Share"}
+  And %Q{I should see "Add slides to SlideShare"}
 end
 
 Given /^I have a talk from Slide Share$/ do

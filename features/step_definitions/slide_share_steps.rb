@@ -122,3 +122,8 @@ Then /^my old talks should be not have their SlideShare info$/ do
   talk.slideshow_html.should be_nil
 end
 
+Then /^I should have speaker points$/ do
+  profile = Profile.find(@profile.id)
+  profile.score(:speaker_points).should > 0
+end
+
