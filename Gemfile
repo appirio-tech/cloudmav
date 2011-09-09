@@ -14,7 +14,7 @@ gem "geokit", "1.6.0"
 gem "badgeable", "0.4.0"
 gem "gravtastic", "3.2.6"
 #gem 'fog', "0.11.0"
-#gem 'rmagick', "2.13.1"
+gem 'rmagick', "2.13.1"
 gem "carrierwave", "0.5.7"
 #gem 'carrierwave-mongoid', "0.1.0", :require => 'carrierwave/mongoid'
 #gem "ruby-duration" , "2.0.2"
