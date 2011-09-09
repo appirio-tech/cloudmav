@@ -7,9 +7,9 @@ gem 'haml', '3.1.2'
 gem 'sass', '3.1.1'
 gem 'json', '1.4.6'
 gem 'devise', '1.1.5'
-gem "mongoid", ">=2.0.0"
 gem "bson_ext", "1.3.1"
-gem "mongo", ">=1.3.1"
+gem "mongo"
+gem "mongoid"
 gem "geokit", "1.6.0"
 gem "badgeable", "0.4.0"
 gem "gravtastic", "3.2.6"
@@ -28,8 +28,8 @@ gem "sunspot_rails", "1.2.1"
 gem "cancan", "1.6.5"
 gem "stack_overflow", "0.0.7"
 gem "linkedin", "0.3.1"
-gem "delayed_job", "2.1.3"
-gem "delayed_job_mongoid", "1.0.4"
+gem "delayed_job"
+gem "delayed_job_mongoid"
 gem "target_api", "0.0.1"
 gem "less", "2.0.5"
 gem "twitter", "1.6.1"
