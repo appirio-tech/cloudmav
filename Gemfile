@@ -1,15 +1,29 @@
 source 'http://rubygems.org'
 
+# Rails
+gem 'rails', '3.0.10'
+
+# Rails 3.1 - Asset Pipeline
+gem 'json', '1.4.6'
+gem 'sass', '3.1.1'
+#gem 'coffee-script'
+#gem 'uglifier'
+# Rails 3.1 - JavaScript
+#gem 'jquery-rails'
+
+
 gem 'rake', '0.8.7'
-gem 'rails', '3.0.7'
+
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'haml', '3.1.2'
-gem 'sass', '3.1.1'
-gem 'json', '1.4.6'
+
+# Database
+gem "mongo"
+gem "mongoid"
+gem "will_paginate"
+
 gem 'devise', '1.1.5'
 gem "bson_ext", "1.3.1"
-gem "mongo", "1.3.1"
-gem "mongoid", "2.2.0"
 gem "geokit", "1.6.0"
 gem "badgeable", "0.4.0"
 gem "gravtastic", "3.2.6"
@@ -18,7 +32,7 @@ gem 'rmagick', "2.13.1"
 gem "carrierwave", "0.5.7"
 gem 'carrierwave-mongoid', "0.1.0", :require => 'carrierwave/mongoid'
 gem "ruby-duration" , "2.0.2"
-gem "will_paginate", "3.0.0"
+
 gem "httparty", "0.7.8"
 gem "nokogiri", "1.5.0"
 gem "speaker_rate", "0.0.5"
@@ -46,6 +60,10 @@ gem "css3buttons", "1.0.1"
 gem "rabl", "0.3.0"
 gem "escape_utils", "0.2.3"
 gem "has_permalink"
+
+group :production do
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+end
 
 group :development, :test do
   gem 'launchy', '2.0.5'

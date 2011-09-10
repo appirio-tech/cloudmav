@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
   before_filter :set_profile, :except => [:index, :search]
 
   def index
-    @profiles = Profile.order_by_score.paginate :page => params[:page], :per_page => 10
+    @profiles = Profile.order_by_score.paginate(:page => params[:page], :per_page => 10)
   end
 
   def search
@@ -13,7 +13,9 @@ class ProfilesController < ApplicationController
   
   def show
     @tab = "summary"
-    @profile_events = ProfileEvent.public.for_profile(@profile).order_by(:date.desc).paginate(:page => 1, :per_page => 10)
+    x = Profile.page(1)
+    x = ProfileEvent.all.paginate(:page => 1, :per_page => 10)
+    @profile_events = ProfileEvent.public.for_profile(@profile).paginate(:page => 1, :per_page => 10).order_by(:date.desc)
   end
   
   def code

@@ -7,7 +7,7 @@ class Guidance
   field :partial, :type => String
   field :priority, :type => Integer, :default => 1000
   
-  references_many :knowledges, :inverse_of => :knowledge
+  references_many :knowledges
   
   scope :unlearned_by, lambda { |user| not_in(:title => user.knowledges.map{ |k| k.guidance.title }) } 
 

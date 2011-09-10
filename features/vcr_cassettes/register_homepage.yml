@@ -387,3 +387,102 @@
       - max-age=0
     body: Not Found
     http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://github.com:80/api/v2/json/user/search/username144
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      server: 
+      - nginx/1.0.4
+      date: 
+      - Sat, 10 Sep 2011 15:28:35 GMT
+      content-type: 
+      - application/json; charset=utf-8
+      connection: 
+      - keep-alive
+      status: 
+      - 200 OK
+      x-ratelimit-limit: 
+      - "60"
+      etag: 
+      - "\"2f57500e88a8d72c65d2d953404fd06c\""
+      x-frame-options: 
+      - deny
+      x-ratelimit-remaining: 
+      - "58"
+      x-runtime: 
+      - 11ms
+      content-length: 
+      - "12"
+      cache-control: 
+      - private, max-age=0, must-revalidate
+    body: "{\"users\":[]}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.bitbucket.org:443/1.0/users/username144
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 404
+      message: NOT FOUND
+    headers: 
+      server: 
+      - nginx/1.0.4
+      date: 
+      - Sat, 10 Sep 2011 15:28:35 GMT
+      content-type: 
+      - text/plain
+      content-length: 
+      - "9"
+      expires: 
+      - Sat, 10 Sep 2011 15:28:35 GMT
+      vary: 
+      - Authorization, Cookie
+      last-modified: 
+      - Sat, 10 Sep 2011 15:28:35 GMT
+      etag: 
+      - "\"9d1ead73e678fa2f51a70a933b0bf017\""
+      cache-control: 
+      - max-age=0
+    body: Not Found
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://api.bitbucket.org:443/1.0/users/username144
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 404
+      message: NOT FOUND
+    headers: 
+      server: 
+      - nginx/1.0.4
+      date: 
+      - Sat, 10 Sep 2011 15:28:36 GMT
+      content-type: 
+      - text/plain
+      content-length: 
+      - "9"
+      expires: 
+      - Sat, 10 Sep 2011 15:28:36 GMT
+      vary: 
+      - Authorization, Cookie
+      last-modified: 
+      - Sat, 10 Sep 2011 15:28:36 GMT
+      etag: 
+      - "\"9d1ead73e678fa2f51a70a933b0bf017\""
+      cache-control: 
+      - max-age=0
+    body: Not Found
+    http_version: "1.1"

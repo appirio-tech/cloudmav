@@ -2,11 +2,11 @@ module Virgil
   module Teachable
     def self.included(receiver)
       receiver.class_eval do
-        embeds_many :knowledges
+        references_many :knowledges
       end
 
       ::Knowledge.class_eval %Q{
-        embedded_in :#{receiver.to_s.underscore}
+        referenced_in :#{receiver.to_s.underscore}
       }
       
       receiver.send(:include, InstanceMethods)

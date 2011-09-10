@@ -14,7 +14,7 @@ class Event
   field :error_message, :type => String
 
   scope :pending, lambda { where(:in_process => false, :completed => false) }
-  scope :public, lambda { where(:is_public => true) }
+  scope :public, where(:is_public => true)
   scope :categorized_as, lambda { |cat| where(:category => cat) }
   scope :subcategorized_as, lambda { |cat| where(:subcategory => cat) }
   scope :events_created_today, lambda { where(:created_at.lte => Time.now.end_of_day.utc, :created_at.gte => Time.now.beginning_of_day.utc) } 
