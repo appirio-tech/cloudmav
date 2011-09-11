@@ -1,0 +1,12 @@
+<%= javascript_tag do -%>
+
+  function discoverProfile() {
+    $.get("<%= profile_autodiscovers_path(@profile, :autodiscover_id => @autodiscover_id) %>", function(data){
+    }, "script");
+  }
+
+  $(document).ready(function() {
+    setTimeout("discoverProfile()", 1000);
+  });
+
+<% end -%>

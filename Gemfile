@@ -30,9 +30,17 @@ group :assets do
 end
 
 group :test do
+  # rspec gems
+  gem "rspec-rails"
+  gem "factory_girl_rails"
+  
+  # cucumber gems
   gem "cucumber", "1.0.3"
   gem "cucumber-rails", "1.0.2"
-  gem "database_cleaner"
-  gem "factory_girl_rails"
-  gem "rspec-rails"
+  gem "database_cleaner" # cleans database for every scenario run. works with mongoid now
+  gem "launchy" # allows 'show me the page' to launch a browser
+    
+  # mock web calls
+  gem "vcr"
+  gem "fakeweb"
 end
