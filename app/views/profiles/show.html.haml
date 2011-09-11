@@ -1,0 +1,15 @@
+= content_for :title do
+  #{@profile.username}'s Profile
+
+#profile
+  = render :partial => "header"
+  = render :partial => "profile_menu"
+  #profile_content
+    .grid_8
+    
+    .grid_5
+      = render :partial => "badges"
+      = render :partial => "shared/tags", :locals => {:taggable => @profile}
+    .clear
+  .clear
+.clear

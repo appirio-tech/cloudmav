@@ -1,0 +1,31 @@
+= content_for :head do
+  = stylesheet_link_tag "profile.css"
+
+#profile_header
+  .right
+    - if can? :tweet, @profile
+      = render :partial => "tweet_profile"
+    = render :partial => "evernote"
+  .grid_2
+    = image_tag @profile.gravatar_url(:size => 90), :id => :profile_pic
+  .grid_12
+    .profile_name= @profile.display_name
+    .user_name= "(#{@profile.username})"
+    .profile_actions
+      - if @profile == current_profile
+        = link_to "edit profile", edit_profile_path(@profile)
+      - if can? :view_widgets, @profile
+        |
+        = link_to "get widgets", profile_widgets_path(@profile)
+    .clear
+    %table
+      %tr
+        %td.location_image= image_tag "location_pin.png"
+        %td.location_text= @profile.location_text
+    .clear
+    = render :partial => "points"
+  .grid_2
+    %div{:id => "follow_#{@profile.id}"}
+      = render :partial => "shared/following", :locals => { :profile => @profile }
+  .clear
+.clear

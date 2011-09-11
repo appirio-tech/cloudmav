@@ -12,6 +12,7 @@ gem 'sqlite3' # cucumber yelled without this installed
 
 # Authentication and Authorization
 gem "devise"
+gem "cancan"
 
 # Server
 gem "powify"
@@ -20,6 +21,12 @@ gem "powify"
 gem "haml"
 gem "formtastic", "1.2.4"
 gem "css3buttons", "1.0.1"
+
+# 3rd Party Services
+gem "gravtastic"
+
+# Geolocation
+gem "geokit"
 
 # Gems used only for assets and not required
 # in production environments by default.

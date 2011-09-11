@@ -9,5 +9,7 @@ Codemav::Application.routes.draw do
     resources :autodiscovers
   end
   
+  match "/:username" => "profiles#show", :as => :profile
+  
   root :to => "pages#home"
 end

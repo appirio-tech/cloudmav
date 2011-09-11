@@ -1,7 +1,11 @@
 class Profile
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Gravtastic
   include CodeMav::Autodiscoverable
+  include CodeMav::Locatable
+  
+  gravtastic
   
   field :name, :type => String
   field :email, :type => String
@@ -20,6 +24,10 @@ class Profile
   
   def to_param
     username
+  end
+  
+  def total_score
+    0
   end
   
 end
