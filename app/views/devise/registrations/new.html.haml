@@ -1,0 +1,36 @@
+.grid_16
+  %h1 Registration
+
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+    - if resource.errors.any?
+      #error_explanation
+        %h2 There were some problems with your registration...
+        %ul
+          - resource.errors.full_messages.each do |msg|
+            %li= msg
+
+    .label= f.label :username
+    .control= f.text_field :username
+              
+    .label= f.label :email
+    .control= f.text_field :email
+  
+    .label= f.label :password
+    .control= f.password_field :password
+  
+    .submit= f.submit "Register", :disable_with => "Registering..."
+
+  %br
+  = render :partial => "devise/shared/links"
+.clear
+
+:javascript
+  var changing_value = true;
+
+  $("#user_username").keyup(function(){
+    if (changing_value) {
+      changing_value = false;
+      this.value = this.value.toLowerCase();
+      changing_value = true;
+    }
+  });

@@ -13,6 +13,9 @@ gem 'sqlite3' # cucumber yelled without this installed
 # Authentication and Authorization
 gem "devise"
 
+# View
+gem "haml"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
