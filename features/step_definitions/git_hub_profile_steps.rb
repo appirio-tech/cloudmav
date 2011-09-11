@@ -61,7 +61,9 @@ When /^I edit my GitHub id$/ do
     @old_repositories = profile.git_hub_profile.repositories.to_a
     visit profile_code_path(@profile)
     fill_in "git_hub_profile_username", :with => "panesofglass"
-    click_button "git_hub_profile_submit"
+    within("#sync_git_hub") do
+      click_button "Save"
+    end
   end
 end
 

@@ -8,7 +8,6 @@ module CodeMav
         embeds_many :backlog_item_recommendations
 
         index "backlog_item_recommendations.backlog_item_id"
-
       end
       
       receiver.send(:include, InstanceMethods)

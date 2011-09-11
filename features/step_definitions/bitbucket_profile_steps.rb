@@ -45,7 +45,9 @@ When /^I edit my Bitbucket id$/ do
     @old_repositories = profile.bitbucket_profile.repositories.to_a
     visit profile_code_path(@profile)
     fill_in "bitbucket_profile_username", :with => "claudiolassala"
-    click_button "bitbucket_profile_submit"
+    within("#sync_bitbucket") do
+      click_button "Save"
+    end
   end
 end
 

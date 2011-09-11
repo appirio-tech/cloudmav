@@ -36,20 +36,23 @@ class TagEvent < Event
     options[:count] ||= 1
     options[:score] ||= 1
     
-    tagging = get_tagging(tag)
+    t = Tag.find_or_create_named(tag)
+    tagging = taggable.taggings.select{|tagging| tagging.tag == t}.first
     if tagging.nil?
-      tagging = Tagging.new
+      tagging = taggable.taggings.build
       tagging.tag = Tag.find_or_create_named(tag) 
     end
     tagging.count += options[:count]
     tagging.score += options[:score]
     tagging.save
-    taggable.taggings << tagging
+    taggable.reload
   end
 
   def get_tagging(tag)
     t = Tag.named(tag).first
     return nil if t.nil?
+    tx = taggable.taggings.select{|tagging| tagging.tag.name == tag}.first
+    tx = taggable.get_tagging(tag)
     taggable.taggings.select{|tagging| tagging.tag == t}.first
   end
 

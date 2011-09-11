@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
   before_filter :set_profile, :except => [:index, :search]
 
   def index
-    @profiles = Profile.order_by_score.paginate(:page => params[:page], :per_page => 10)
+    @profiles = Profile.order_by_score.page(params[:page]).per(10)
   end
 
   def search
@@ -13,14 +13,12 @@ class ProfilesController < ApplicationController
   
   def show
     @tab = "summary"
-    x = Profile.page(1)
-    x = ProfileEvent.all.paginate(:page => 1, :per_page => 10)
-    @profile_events = ProfileEvent.public.for_profile(@profile).paginate(:page => 1, :per_page => 10).order_by(:date.desc)
+    @profile_events = ProfileEvent.public.for_profile(@profile).page(1).per(10).order_by(:date.desc)
   end
   
   def code
     @tab = "code"
-    @code_events = ProfileEvent.public.for_profile(@profile).categorized_as("Code").order_by(:date.desc).paginate(:page => 1, :per_page => 10)
+    @code_events = ProfileEvent.public.for_profile(@profile).categorized_as("Code").order_by(:date.desc).page(1).per(10)
     @git_hub_profile = @profile.git_hub_profile
     @bitbucket_profile = @profile.bitbucket_profile
     @coder_wall_profile = @profile.coder_wall_profile
@@ -28,7 +26,7 @@ class ProfilesController < ApplicationController
 
   def knowledge
     @tab = "knowledge"
-    @knowledge_events = ProfileEvent.public.for_profile(@profile).categorized_as("Knowledge").order_by(:date.desc).paginate(:page => 1, :per_page => 10)
+    @knowledge_events = ProfileEvent.public.for_profile(@profile).categorized_as("Knowledge").order_by(:date.desc).page(1).per(10)
     @stack_overflow_profile = @profile.stack_overflow_profile
   end
   
@@ -39,8 +37,8 @@ class ProfilesController < ApplicationController
 
   def writing
     @tab = "writing"
-    @writing_events = ProfileEvent.public.for_profile(@profile).categorized_as("Writing").order_by(:date.desc).paginate(:page => 1, :per_page => 10)
-    @blog_posts = @profile.posts.paginate(:page => params[:page], :per_page => 5, :order => 'written_on DESC')
+    @writing_events = ProfileEvent.public.for_profile(@profile).categorized_as("Writing").order_by(:date.desc).page(1).per(10)
+    @blog_posts = @profile.posts.page(params[:page]).per(5).order_by(:written_on.desc)
   end
   
   def speaking

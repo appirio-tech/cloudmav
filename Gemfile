@@ -1,11 +1,16 @@
 source 'http://rubygems.org'
 
 # Rails
-gem 'rails', '3.0.10'
+gem 'rails', '3.1.0'
 
 # Rails 3.1 - Asset Pipeline
+group :assets do
+  gem 'sass-rails', "  ~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
+  gem 'uglifier'
+end
+
 gem 'json', '1.4.6'
-gem 'sass', '3.1.1'
 #gem 'coffee-script'
 #gem 'uglifier'
 # Rails 3.1 - JavaScript
@@ -20,9 +25,13 @@ gem 'haml', '3.1.2'
 # Database
 gem "mongo"
 gem "mongoid"
-gem "will_paginate"
+#gem "will_paginate"
+gem "kaminari"
 
-gem 'devise', '1.1.5'
+# Authentication and Authorization
+gem 'devise'
+gem "cancan"
+
 gem "bson_ext", "1.3.1"
 gem "geokit", "1.6.0"
 gem "badgeable", "0.4.0"
@@ -39,7 +48,7 @@ gem "speaker_rate", "0.0.5"
 gem "slide_share", "0.0.3"
 gem "sunspot", "1.2.1"
 gem "sunspot_rails", "1.2.1"
-gem "cancan", "1.6.5"
+
 gem "stack_overflow", "0.0.7"
 gem "linkedin", "0.3.1"
 gem "delayed_job", "2.1.4"
@@ -68,9 +77,8 @@ end
 group :development, :test do
   gem 'launchy', '2.0.5'
   gem 'ghost', "0.2.8" #used to set local routes easily
-  gem 'cucumber-rails', "0.3.2"
-  gem "cucumber", '1.0.0'
-  #gem "gherkin", "2.3.9"
+  gem 'cucumber-rails'
+  gem "database_cleaner"
   gem "rspec-rails", "2.6.1"
   gem 'factory_girl_rails', "1.1.0"
   gem 'capybara', "1.0.1"

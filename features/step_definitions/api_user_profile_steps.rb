@@ -7,11 +7,11 @@ When /^I send a GET request to "([^"]*)"$/ do |url|
 end
 
 Then /^the response should be "([^"]*)"$/ do |code|
-  response.status.should == code.to_i
+  last_response.status.should == code.to_i
 end
 
 Then /^the response should have "([^"]*)"'s profile data$/ do |username|
-  result = JSON.parse(response.body)
+  result = JSON.parse(last_response.body)
   result["profile"]["username"].should == username
 end
 
@@ -25,7 +25,7 @@ Given /^"([^"]*)" has a tag "([^"]*)" with a score of "([^"]*)"$/ do |username, 
 end
 
 Then /^the response should have the "([^"]*)" tag with a score of "([^"]*)"$/ do |tag, score|
-  result = JSON.parse(response.body)
+  result = JSON.parse(last_response.body)
   t = result["profile"]["tags"].select{|t| t["name"] == tag }.first
   t.should_not be_nil
   t["score"].should == score.to_i

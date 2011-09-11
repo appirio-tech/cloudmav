@@ -17,7 +17,6 @@ class SpeakerRateProfileSyncEvent < SyncEvent
         talk.presentation_date = DateTime.parse(t["when"])
         talk.talk_creation_date = DateTime.parse(t["when"])
         talk.profile = profile
-        profile.talks << talk
       end
       talk.has_speaker_rate = true
       talk.speaker_rate_slides_url = t["slides_url"]

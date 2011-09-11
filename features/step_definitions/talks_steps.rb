@@ -12,11 +12,11 @@ Then /^the talk should be added$/ do
 end
 
 Given /^I have a talk$/ do
-  @talk = Factory.build(:talk)
-  profile = User.find(@user.id).profile
-  profile.talks << @talk
-  @talk.save
-  profile.save
+  @talk = Factory.create(:talk, :profile => @profile)
+  # profile = User.find(@user.id).profile
+  #   profile.talks << @talk
+  #   @talk.save
+  #   profile.save
 end
 
 When /^I edit the talk$/ do

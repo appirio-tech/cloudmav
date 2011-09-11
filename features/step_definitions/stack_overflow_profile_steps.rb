@@ -78,7 +78,9 @@ When /^I edit my StackOverflow id$/ do
     @old_question_events = StackOverflowQuestionAddedEvent.all.to_a
     visit profile_knowledge_path(@profile)
     fill_in "stack_overflow_profile_stack_overflow_id", :with => "5056"
-    click_button "stack_overflow_profile_submit"
+    within("#sync_stack_overflow") do
+      click_button "Save"
+    end
   end
 end
 

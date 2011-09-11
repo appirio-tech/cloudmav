@@ -19,10 +19,9 @@ class TalksController < ApplicationController
     authorize! :add_talk, @profile
     
     @talk = Talk.new(params[:talk])
-    @profile.talks << @talk
+    @talk.profile = @profile
         
     if @talk.save
-      @profile.save
       flash[:notice] = "#{@talk.title} added as one of your talks"
       redirect_to [@profile, @talk]
     else

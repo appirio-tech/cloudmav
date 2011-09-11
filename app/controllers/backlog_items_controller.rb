@@ -3,12 +3,16 @@ class BacklogItemsController < ApplicationController
 
   def index
     @backlog_items = []
-    if current_profile
-      @backlog_items = current_profile.backlog_item_recommendations.order_by([:score, :desc]).paginate(:page => 1, :per_page => 10).map(&:backlog_item) 
-    else
-      @backlog_items = BacklogItem.order_by(:created_at.desc).paginate(:page => 1, :per_page => 10)
-    end
-    @events = ProfileEvent.public.order_by(:date.desc).paginate(:page => 1, :per_page => 10)
+    # if current_profile
+    #   x = current_profile.backlog_item_recommendations
+    #   puts "x = #{x.inspect}"
+    #   y = current_profile.backlog_item_recommendations.map(&:backlog_item) 
+    #   puts "y = #{y.inspect}"
+    #   @backlog_items = current_profile.backlog_item_recommendations.order_by([:score, :desc]).page(1).per(10).to_a.map(&:backlog_item) 
+    # else
+      @backlog_items = BacklogItem.order_by(:created_at.desc).page(1).per(10)
+    #end
+    @events = ProfileEvent.public.order_by(:date.desc).page(1).per(10)
   end
 
   def new

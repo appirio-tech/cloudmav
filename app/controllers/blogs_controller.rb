@@ -15,7 +15,6 @@ class BlogsController < LoggedInController
 
     if @blog.save
       @blog.sync!
-      @profile.save
       redirect_to profile_writing_path(@profile)
     else
       render :new

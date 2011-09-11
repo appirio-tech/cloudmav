@@ -75,7 +75,9 @@ When /^I edit my SpeakerRate id$/ do
     @old_talks = profile.talks.to_a
     visit profile_speaking_path(@profile)
     fill_in "speaker_rate_profile_speaker_rate_id", :with => "3274"
-    click_button "speaker_rate_profile_submit"
+    within "#sync_speaker_rate" do
+      click_button "Save"
+    end
   end
 end
 

@@ -11,6 +11,7 @@ class User
   has_one :profile
   
   field :username, :type => String
+  field :email, :type => String
 
   scope :users_created_today, lambda { where(:created_at.lte => Time.now.end_of_day.utc, :created_at.gte => Time.now.beginning_of_day.utc) }
 

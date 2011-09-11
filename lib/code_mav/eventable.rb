@@ -3,7 +3,7 @@ module CodeMav
 
     def self.included(receiver)
       receiver.class_eval %Q{
-        references_many :events, :inverse_of => :#{receiver.to_s.underscore}
+        references_many :events
         after_create :create_added_event
         after_update :create_updated_event
         after_destroy :create_deleted_event

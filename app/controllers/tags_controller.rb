@@ -2,7 +2,7 @@ class TagsController < ApplicationController
   before_filter :can_manage_tags?
   
   def index
-    @tags = Tag.paginate(:page => params[:page], :per_page => 20)
+    @tags = Tag.page(params[:page]).per(20)
   end
   
   def new

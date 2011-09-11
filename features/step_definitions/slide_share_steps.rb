@@ -87,7 +87,9 @@ When /^I edit my SlideShare username$/ do
     @old_talks = profile.talks.to_a
     visit profile_speaking_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => "themoleskin"
-    click_button "slide_share_profile_submit"
+    within("#sync_slide_share") do
+      click_button "Save"
+    end
   end
 end
 

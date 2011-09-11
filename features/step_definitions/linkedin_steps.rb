@@ -1,7 +1,6 @@
 Given /^I have a LinkedIn profile$/ do
   profile = Profile.find(@profile.id)
-  profile.linkedin_profile = LinkedinProfile.create(:profile => profile)
-  profile.save
+  LinkedinProfile.create(:profile => profile)
 end
 
 Given /^I have jobs$/ do

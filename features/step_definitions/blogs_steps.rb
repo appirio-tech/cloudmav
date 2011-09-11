@@ -24,8 +24,7 @@ end
 
 Given /^I have a blog$/ do
   VCR.use_cassette("my blog", :record => :new_episodes) do
-    @blog = Factory.build(:blog, :rss => "http://www.theabsentmindedcoder.com/feeds/posts/default?alt=rss")
-    @profile.blogs << @blog
+    @blog = Factory.build(:blog, :profile => @profile, :rss => "http://www.theabsentmindedcoder.com/feeds/posts/default?alt=rss")
     @blog.save!
     @profile.save!
     @blog.sync!
@@ -70,7 +69,7 @@ When /^I edit my blog$/ do
     visit profile_writing_path(@profile)
     with_scope("#blog_#{@blog.id}") do
       fill_in "blog_rss", :with => "http://feeds.feedburner.com/pseale"
-      click_button "blog_submit"
+      click_button "Save"
     end
   end
 end

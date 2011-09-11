@@ -47,6 +47,7 @@ module ScoreIt
         scoring = Scoring.new(:name => name, :point_type => point_type, :score => points)
         self.scorings << scoring
         scoring.save
+        self.save
         calculate_total_score
       end
 
