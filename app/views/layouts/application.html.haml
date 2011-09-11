@@ -1,0 +1,31 @@
+%html
+%head
+  %title 
+    = yield(:title) || "CodeMav"
+  = stylesheet_link_tag    "application"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+
+%body
+  #header
+    .container_16
+      .grid_16
+        .title_icon= link_to image_tag("main_code_mav_logo.png"), root_path 
+        = render :partial => "shared/login_info"
+        = render :partial => "shared/menu"
+      .clear
+    .clear
+  .clear
+
+  #content
+    .container_16
+      = render :partial => 'shared/recent_badges'
+      = yield
+    .clear
+  .clear
+
+  #footer
+    .container_16
+      = render :partial => "shared/footer"
+    .clear
+  .clear

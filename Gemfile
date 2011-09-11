@@ -13,6 +13,9 @@ gem 'sqlite3' # cucumber yelled without this installed
 # Authentication and Authorization
 gem "devise"
 
+# Server
+gem "powify"
+
 # View / UI
 gem "haml"
 gem "formtastic", "1.2.4"

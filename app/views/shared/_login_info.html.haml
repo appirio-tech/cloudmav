@@ -1,0 +1,14 @@
+.right
+	- unless user_signed_in? 
+		#signin_panel
+			= link_to "Sign in", login_path, :class => "menu_nav"
+			= link_to "Register", new_user_registration_path, :class => "menu_nav"
+			
+	-else
+		#login_panel
+			.avatar
+				= image_tag current_profile.gravatar_url(:size => 27), :class => :photo
+			.logout
+				= link_to "Logout", logout_path
+			.username
+				= link_to current_user.username, profile_path(current_profile)
