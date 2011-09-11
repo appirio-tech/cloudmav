@@ -4,6 +4,10 @@ gem 'rails', '3.1.0'
 gem 'json', '1.4.6'
 gem 'jquery-rails'
 
+# Database
+gem "mongo"
+gem "mongoid"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
