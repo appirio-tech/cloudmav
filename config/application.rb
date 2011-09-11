@@ -19,6 +19,7 @@ module Codemav
     # config.autoload_paths += %W(#{config.root}/extras)
     if config.respond_to?(:autoload_paths)      
       config.autoload_paths += %W( #{config.root}/lib ) 
+      config.autoload_paths += %W( #{config.root}/app/jobs ) 
     end
     
     # Only load the plugins named here, in the order given (default is alphabetical).

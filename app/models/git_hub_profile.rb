@@ -10,7 +10,7 @@ class GitHubProfile
   field :url
   
   belongs_to :profile
-  #has_many :repositories, :inverse_of => :git_hub_profile, :class_name => "GitHubRepository"
+  has_many :repositories, :inverse_of => :git_hub_profile, :class_name => "GitHubRepository"
 
   def related_items
     [profile.coder_profile]
@@ -18,6 +18,6 @@ class GitHubProfile
   
   def sync!
     save
-    #Resque.enqueue(GitHubSyncJob, self.id)
+    Resque.enqueue(SyncGitHubJob, self.id)
   end
 end

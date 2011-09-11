@@ -12,7 +12,8 @@ Then /^I should have a GitHub profile$/ do
 end
 
 Then /^I should have a collection of my repos$/ do
-  pending # express the regexp above with the code you wish you had
+  profile = User.find(@user.id).profile
+  profile.git_hub_profile.repositories.count.should > 0
 end
 
 Then /^I should be awarded the "([^"]*)" badge$/ do |arg1|

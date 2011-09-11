@@ -9,7 +9,7 @@ Feature: GitHub
     Given I am logged in
     When I sync my GitHub account
     Then I should have a GitHub profile
-    # And I should have a collection of my repos
+    And I should have a collection of my repos
     # And I should be awarded the "Git R Done" badge
     # And I should have coder points for my GitHub account
     # And I should learned "Syncing with your GitHub Account"
