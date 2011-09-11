@@ -1,8 +1,0 @@
-%p
-  Share your slides from SlideShare.
-  %a{:class => "module_link", :rel => "#learn_sync_slide_share"} Sync your SlideShare account 
-
-#learn_sync_slide_share.overlay
-  - @profile = current_profile
-  - @slide_share_profile = SlideShareProfile.new
-  = render :partial => "slide_share_profiles/form"

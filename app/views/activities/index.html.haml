@@ -1,7 +1,0 @@
-%h1 What's up?
-
-%ul.activities
-	- @activities.each do |a|
-		%li.activity
-			.activity_info= render :partial => a.name, :locals => { :activity => a }
-			.activity_date= time_ago_in_words(a.created_at) + " ago"

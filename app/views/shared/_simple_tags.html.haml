@@ -1,7 +1,0 @@
-.tags
-  - unless taggable.nil? || taggable.taggings.empty?
-    - taggable.top_tags.each do |tagging|
-      .tag
-        .tag_score= number_with_precision tagging.score, :precision => 0
-        = tagging
-

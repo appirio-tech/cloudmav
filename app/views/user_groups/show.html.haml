@@ -1,9 +1,0 @@
-%h2= @user_group.name
-
-= link_to "Schedule a meeting", new_user_group_meeting_path(@user_group)
-
-%h3 Meetings
-%ul
-	- @meetings.each do |m|
-		%li= m.title
-	

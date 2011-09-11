@@ -1,8 +1,0 @@
-%li
-  - if @talk.video?
-    %a{:rel => "#video"}
-      = image_tag "talk/movie.png"
-    #video.overlay
-      = video_html @talk.video_url
-  - else
-    = image_tag "talk/movie_off.png"
