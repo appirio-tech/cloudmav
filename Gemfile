@@ -25,4 +25,6 @@ group :test do
   gem "cucumber", "1.0.3"
   gem "cucumber-rails", "1.0.2"
   gem "database_cleaner"
+  gem "factory_girl_rails"
+  gem "rspec-rails"
 end
