@@ -13,8 +13,9 @@ gem 'sqlite3' # cucumber yelled without this installed
 # Authentication and Authorization
 gem "devise"
 
-# View
+# View / UI
 gem "haml"
+gem "formtastic", "1.2.4"
 
 # Gems used only for assets and not required
 # in production environments by default.
