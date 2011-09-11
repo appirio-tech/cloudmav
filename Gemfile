@@ -10,6 +10,9 @@ gem "mongoid"
 gem "bson_ext"
 gem 'sqlite3' # cucumber yelled without this installed
 
+# Authentication and Authorization
+gem "devise"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
