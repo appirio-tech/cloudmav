@@ -8,5 +8,8 @@ class Ability
     can :tweet, Profile do |profile|
       user.profile == profile
     end
+    can :sync_profile, Profile do |profile|
+      user.profile == profile
+    end
   end
 end

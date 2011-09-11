@@ -1,0 +1,20 @@
+= content_for :title do
+  #{@profile.name}'s Code
+
+%h1.hidden #{@profile.name}'s Code
+
+#profile
+  = render :partial => "header"
+  = render :partial => "profile_menu"
+  #profile_content
+    .grid_8
+
+    .grid_5
+      /= render :partial => "shared/profile/git_hub"
+      /= render :partial => "shared/profile/bitbucket"
+      /= render :partial => "shared/profile/coder_wall"
+      /= render :partial => "shared/tags", :locals => {:taggable => @profile.coder_profile}
+
+    .clear
+  .clear
+.clear

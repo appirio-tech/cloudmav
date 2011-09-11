@@ -1,0 +1,6 @@
+%p Your GitHub username is simply the username you login with.
+= semantic_form_for [@profile, @git_hub_profile] do |f|
+  = f.inputs do
+    = f.input :username
+  = f.buttons do
+    = big_primary_button_submit_tag "Save"

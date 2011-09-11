@@ -4,6 +4,7 @@ class Profile
   include Gravtastic
   include CodeMav::Autodiscoverable
   include CodeMav::Locatable
+  include CodeMav::CoderModule
   
   gravtastic
   
