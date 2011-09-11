@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem "mongo"
 gem "mongoid"
 gem "bson_ext"
+gem 'sqlite3' # cucumber yelled without this installed
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -20,4 +21,5 @@ end
 group :test do
   gem "cucumber", "1.0.3"
   gem "cucumber-rails", "1.0.2"
+  gem "database_cleaner"
 end
