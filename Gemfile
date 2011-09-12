@@ -29,6 +29,10 @@ gem "css3buttons", "1.0.1"
 # 3rd Party Services
 gem "gravtastic"
 
+# Api Gems
+gem "httparty", "0.7.8"
+gem "bitbucket_api", "0.0.1"
+
 # Geolocation
 gem "geokit"
 

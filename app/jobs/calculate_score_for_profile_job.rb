@@ -6,6 +6,7 @@ class CalculateScoreForProfileJob
     profile.scorings.destroy_all
     
     calculate_score_for_git_hub(profile)
+    calculate_score_for_bitbucket(profile)
     
     profile.save
   end
@@ -22,4 +23,10 @@ class CalculateScoreForProfileJob
       profile.earn(points, :coder_points, "for repository value", r)
     end
   end
+  
+  def self.calculate_score_for_bitbucket(profile)
+    return unless profile.bitbucket_profile
+    profile.earn(10, :coder_points, "for adding Bitbucket", profile.bitbucket_profile)    
+  end
+  
 end
