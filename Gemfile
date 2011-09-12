@@ -10,6 +10,9 @@ gem "mongo"
 gem "mongoid"
 gem "bson_ext"
 gem 'sqlite3' # cucumber yelled without this installed
+group :production do
+  gem 'pg'
+end
 
 # Authentication and Authorization
 gem "devise"
