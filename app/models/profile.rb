@@ -46,4 +46,12 @@ class Profile
     import_tags_from(self.coder_profile)
   end
   
+  def remove_badge(badge_name)
+    badge = Badge.where(:name => badge_name).first
+    unless badge.nil?
+      badging = self.badgings.where(:badge_id => badge.id).first
+      badging.destroy unless badging.nil?
+    end
+  end
+  
 end

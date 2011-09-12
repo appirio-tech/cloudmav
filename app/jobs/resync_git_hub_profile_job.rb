@@ -1,5 +1,5 @@
 class ResyncGitHubProfileJob
-  @queue = :resync
+  @queue = :sync
   
   def self.perform(id)
     git_hub_profile = GitHubProfile.find(id)

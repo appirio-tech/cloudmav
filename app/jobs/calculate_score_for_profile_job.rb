@@ -3,6 +3,7 @@ class CalculateScoreForProfileJob
   
   def self.perform(profile_id)
     profile = Profile.find(profile_id)
+    profile.scorings.destroy_all
     
     calculate_score_for_git_hub(profile)
     

@@ -35,6 +35,17 @@ module CodeMav
         end
         return false        
       end
+      
+      def unsync!
+        save
+        job_name = "Unsync#{self.class.to_s}Job"
+        if job_name.is_a_constant?
+          job = job_name.constantize
+          Resque.enqueue(job, self.id)
+          return true        
+        end
+        return false        
+      end
 
     end
   end
