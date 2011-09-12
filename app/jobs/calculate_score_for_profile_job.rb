@@ -1,5 +1,5 @@
 class CalculateScoreForProfileJob
-  @queue = :calculate_score_for_profile
+  @queue = :scoring
   
   def self.perform(profile_id)
     profile = Profile.find(profile_id)

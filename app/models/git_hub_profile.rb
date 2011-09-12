@@ -1,5 +1,7 @@
 class GitHubProfile
   include Mongoid::Document
+  include Mongoid::Timestamps
+  include CodeMav::Taggable
   
   field :git_hub_id, :type => String
   field :username

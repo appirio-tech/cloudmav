@@ -26,7 +26,8 @@ Then /^I should learned "([^"]*)"$/ do |arg1|
 end
 
 Then /^my GitHub profile should be tagged$/ do
-  pending # express the regexp above with the code you wish you had
+  @profile.reload
+  @profile.git_hub_profile.tags.count.should > 0
 end
 
 Then /^my profile should have my GitHub profile tags$/ do
