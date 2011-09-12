@@ -1,11 +1,13 @@
-class TagProfileJob < TagJob
-  
-  def set_taggable(id)
-    @taggable = Profile.find(id)
-  end
-  
-  def tag     
-    import_tags_from(@taggable.coder_profile)
-  end
-
-end
+# class TagProfileJob 
+#   extend TagJob
+#   @queue = :tag
+#   
+#   def self.get_taggable(id)
+#     Profile.find(id)
+#   end
+#   
+#   def self.tag(profile)   
+#     import_tags_from(profile, profile.coder_profile)
+#   end
+# 
+# end

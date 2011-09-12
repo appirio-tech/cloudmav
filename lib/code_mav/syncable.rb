@@ -16,10 +16,10 @@ module CodeMav
 
       def sync!
         save
-        job_name = "Sync#{self.class.to_s}Job".to_sym
-        puts "job name #{job_name}"
-        if Object.const_defined?(job_name)
-          Resque.enqueue(Object.const_get(job_name), self.id)
+        job_name = "Sync#{self.class.to_s}Job"
+        if job_name.is_a_constant?
+          job = job_name.constantize
+          Resque.enqueue(job, self.id)
           return true        
         end
         return false

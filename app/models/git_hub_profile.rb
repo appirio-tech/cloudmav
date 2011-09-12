@@ -19,4 +19,12 @@ class GitHubProfile
     [profile.coder_profile]
   end
   
+  def generate_tags
+    self.repositories.each do |r|
+      unless r.language.blank?
+        self.tag r.language.downcase
+      end
+    end
+  end
+  
 end

@@ -18,15 +18,9 @@ module CodeMav
       end
       
       def retag!
-        return if self.pending_tagging
-
-        self.pending_tagging = true
-        self.save
-        
-        job_name = "Tag#{self.class.to_s}Job"
-        if Object.const_defined?(job_name)
-          Object.const_get(job_name).create(:id => self.id)
-        end
+        return false if self.pending_tagging
+        Resque.enqueue(TagJob, self.id, self.class.to_s)
+        return true
       end
       
       def tag(tag, options={})
@@ -47,6 +41,22 @@ module CodeMav
       
       def tags
         self.taggings.map{|t| t.tag.name }
+      end
+      
+      def set_tags_from_tags_text
+        return if self.tags_text.nil?
+
+        self.tags_text.split(',').map{|s| s.strip}.each do |t|
+          self.tag t
+        end
+      end
+      
+      def import_tags_from(other_taggable)
+        return if other_taggable.nil?
+
+        other_taggable.taggings.each do |tagging|
+          self.tag tagging.tag.name, :count => tagging.count, :score => tagging.score
+        end
       end
       
     end

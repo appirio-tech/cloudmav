@@ -42,4 +42,8 @@ class Profile
     []
   end
   
+  def generate_tags
+    import_tags_from(self.coder_profile)
+  end
+  
 end
