@@ -7,6 +7,7 @@ class Profile
   include CodeMav::Locatable
   include CodeMav::Scorable  
   include CodeMav::CoderModule
+  include CodeMav::Taggable
   
   gravtastic
   
@@ -35,6 +36,10 @@ class Profile
   
   def calculate_score!
     Resque.enqueue(CalculateScoreForProfileJob, self.id)
+  end
+  
+  def related_items
+    []
   end
   
 end

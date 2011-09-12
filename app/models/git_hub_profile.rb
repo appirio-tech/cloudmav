@@ -2,6 +2,7 @@ class GitHubProfile
   include Mongoid::Document
   include Mongoid::Timestamps
   include CodeMav::Taggable
+  include CodeMav::Syncable
   
   field :git_hub_id, :type => String
   field :username
@@ -18,8 +19,4 @@ class GitHubProfile
     [profile.coder_profile]
   end
   
-  def sync!
-    save
-    Resque.enqueue(SyncGitHubJob, self.id)
-  end
 end

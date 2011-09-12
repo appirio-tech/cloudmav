@@ -1,15 +1,15 @@
-class TagGitHubProfileJob
-  @queue = :tag
+class TagGitHubProfileJob < TagJob
   
-  def self.perform(git_hub_profile_id)    
-    git_hub_profile = GitHubProfile.find(git_hub_profile_id)
-    git_hub_profile.clear_tags!
-
-    git_hub_profile.repositories.each do |r|
+  def set_taggable(git_hub_profile_id)
+    @taggable = GitHubProfile.find(git_hub_profile_id)
+  end
+  
+  def tag
+    @taggable.repositories.each do |r|
       unless r.language.blank?
-        git_hub_profile.tag r.language.downcase, :score => 10
+        @taggable.tag r.language.downcase, :score => 10
       end
-    end    
+    end  
   end
 
 end

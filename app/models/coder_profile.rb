@@ -1,7 +1,7 @@
 class CoderProfile
   include Mongoid::Document
   include Mongoid::Timestamps
-  #include CodeMav::Taggable
+  include CodeMav::Taggable
   
   belongs_to :profile
 

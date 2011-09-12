@@ -30,6 +30,12 @@ Then /^my GitHub profile should be tagged$/ do
   @profile.git_hub_profile.tags.count.should > 0
 end
 
+Then /^my coder profile should have my GitHub profile tags$/ do
+  @profile.reload
+  @profile.coder_profile.tags.count.should > 0
+end
+
 Then /^my profile should have my GitHub profile tags$/ do
-  pending # express the regexp above with the code you wish you had
+  @profile.reload
+  @profile.tags.count.should > 0
 end

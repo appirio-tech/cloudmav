@@ -30,6 +30,7 @@ gem "geokit"
 
 # Async Processing
 gem "resque"
+gem "resque-status"
 
 # Game mechanics
 gem "badgeable"

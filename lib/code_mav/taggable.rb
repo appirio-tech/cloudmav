@@ -24,10 +24,8 @@ module CodeMav
         self.save
         
         job_name = "Tag#{self.class.to_s}Job"
-        job = nil
         if Object.const_defined?(job_name)
-          job = Object.const_get(job_name)
-          Resque.enqueue(job, self.id)
+          Object.const_get(job_name).create(:id => self.id)
         end
       end
       
@@ -50,7 +48,7 @@ module CodeMav
       def tags
         self.taggings.map{|t| t.tag.name }
       end
-
+      
     end
   end
 end
