@@ -24,6 +24,17 @@ module CodeMav
         end
         return false
       end
+      
+      def resync!
+        save
+        job_name = "Resync#{self.class.to_s}Job"
+        if job_name.is_a_constant?
+          job = job_name.constantize
+          Resque.enqueue(job, self.id)
+          return true        
+        end
+        return false        
+      end
 
     end
   end

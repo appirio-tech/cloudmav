@@ -10,7 +10,7 @@
     .grid_8
 
     .grid_5
-      /= render :partial => "shared/profile/git_hub"
+      = render :partial => "git_hub_profiles/profile"
       /= render :partial => "shared/profile/bitbucket"
       /= render :partial => "shared/profile/coder_wall"
       /= render :partial => "shared/tags", :locals => {:taggable => @profile.coder_profile}

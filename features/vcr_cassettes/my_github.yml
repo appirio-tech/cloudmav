@@ -1,0 +1,192 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://github.com:80/api/v2/json/user/show/rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Mon, 12 Sep 2011 22:34:49 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - keep-alive
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '60'
+      etag:
+      - ! '"7cfb22de015453bdb4d7a478b59e1e03"'
+      x-frame-options:
+      - deny
+      x-ratelimit-remaining:
+      - '59'
+      x-runtime:
+      - 23ms
+      content-length:
+      - '389'
+      cache-control:
+      - private, max-age=0, must-revalidate
+    body: ! '{"user":{"gravatar_id":"90b60e4e4f651c2435c236564c8bf268","company":"ChaiOne","name":"Jonathan
+      Birkholz","created_at":"2009/07/08 23:23:44 -0700","location":"Houston, TX","public_repo_count":42,"public_gist_count":5,"blog":"www.theabsentmindedcoder.com","following_count":4,"id":103165,"type":"User","permission":null,"followers_count":9,"login":"RookieOne","email":"rookieone@gmail.com"}}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://github.com:80/api/v2/json/repos/show/rookieone
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Mon, 12 Sep 2011 22:34:49 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - keep-alive
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '60'
+      etag:
+      - ! '"14bd151a202fbd7ff55dc5927c569b08"'
+      x-frame-options:
+      - deny
+      x-ratelimit-remaining:
+      - '58'
+      x-runtime:
+      - 104ms
+      content-length:
+      - '16525'
+      cache-control:
+      - private, max-age=0, must-revalidate
+    body: ! '{"repositories":[{"created_at":"2009/07/08 23:24:30 -0700","homepage":"RPG","has_downloads":true,"language":"C#","watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":2048,"private":false,"open_issues":0,"pushed_at":"2009/07/19
+      23:26:43 -0700","name":"RPG","owner":"RookieOne","description":"Just me experimenting
+      with an RPG","has_issues":true,"url":"https://github.com/RookieOne/RPG"},{"created_at":"2009/07/08
+      23:38:05 -0700","homepage":"WpfSubstanceOverStyle","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":0,"private":false,"open_issues":0,"name":"WPF-Substance-Over-Style","owner":"RookieOne","description":"Demo
+      Application I use for my WPF Substance Over Style presentation","has_issues":true,"url":"https://github.com/RookieOne/WPF-Substance-Over-Style"},{"created_at":"2009/07/16
+      09:11:35 -0700","homepage":"FluentExamples","has_downloads":true,"language":"C#","watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":508,"private":false,"open_issues":0,"pushed_at":"2009/07/16
+      09:15:09 -0700","name":"Fluent-Examples","owner":"RookieOne","description":"Fluent
+      Examples used during Virtual Brown Bag 7/16/09","has_issues":true,"url":"https://github.com/RookieOne/Fluent-Examples"},{"created_at":"2009/07/21
+      12:34:08 -0700","homepage":"MockingExample","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":648,"private":false,"open_issues":0,"pushed_at":"2009/07/21
+      12:35:09 -0700","name":"Mocking-Example","owner":"RookieOne","description":"A
+      mocking example for client interested in mocking","has_issues":true,"url":"https://github.com/RookieOne/Mocking-Example"},{"created_at":"2009/07/21
+      21:01:39 -0700","homepage":"Praetorian","has_downloads":true,"language":"C#","watchers":2,"forks":1,"fork":false,"has_wiki":true,"size":3072,"private":false,"open_issues":0,"pushed_at":"2009/07/21
+      21:06:45 -0700","name":"Praetorian","owner":"RookieOne","description":"Early
+      drafts of a CQS style system. Just trying to throw code together and learn how
+      to implement CQS","has_issues":true,"url":"https://github.com/RookieOne/Praetorian"},{"created_at":"2009/07/23
+      22:35:59 -0700","homepage":"MyFirstFSharp","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":116,"private":false,"open_issues":0,"pushed_at":"2009/07/23
+      22:36:37 -0700","name":"MyFirstFSharp","owner":"RookieOne","description":"My
+      first attempts at F#. Most definitely a work in progress.","has_issues":true,"url":"https://github.com/RookieOne/MyFirstFSharp"},{"created_at":"2009/07/24
+      08:24:01 -0700","homepage":"FluentIoc","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":188,"private":false,"open_issues":0,"pushed_at":"2009/07/24
+      08:48:59 -0700","name":"FluentIoc","owner":"RookieOne","description":"Placing
+      some code I like to carry over to multiple projects surrounding Ioc Containers","has_issues":true,"url":"https://github.com/RookieOne/FluentIoc"},{"created_at":"2009/07/24
+      23:16:35 -0700","homepage":"MyLanguages","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":140,"private":false,"open_issues":0,"pushed_at":"2009/07/24
+      23:18:14 -0700","name":"MyLanguages","owner":"RookieOne","description":"Just
+      random M Grammars","has_issues":true,"url":"https://github.com/RookieOne/MyLanguages"},{"created_at":"2009/07/29
+      06:33:40 -0700","homepage":"XpsGeneration","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":3072,"private":false,"open_issues":0,"pushed_at":"2009/07/29
+      08:31:25 -0700","name":"XPS-Generation","owner":"RookieOne","description":"Small
+      project Claudio is using to demo an XPS problem he has been having","has_issues":true,"url":"https://github.com/RookieOne/XPS-Generation"},{"created_at":"2009/07/31
+      21:20:30 -0700","homepage":"OpenRastaExperiment","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":492,"private":false,"open_issues":0,"pushed_at":"2009/07/31
+      21:22:05 -0700","name":"OpenRastaExperiment","owner":"RookieOne","description":"Just
+      me learning Open Rasta","has_issues":true,"url":"https://github.com/RookieOne/OpenRastaExperiment"},{"created_at":"2009/08/01
+      19:40:07 -0700","homepage":"WpfTogglingReadOnly","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":276,"private":false,"open_issues":0,"pushed_at":"2009/08/01
+      19:53:48 -0700","name":"WpfTogglingReadOnly","owner":"RookieOne","description":"A
+      quick response to how to toggle read only with WPF","has_issues":true,"url":"https://github.com/RookieOne/WpfTogglingReadOnly"},{"created_at":"2009/08/05
+      21:54:46 -0700","homepage":"AttachedAnimation","has_downloads":true,"language":"C#","watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":336,"private":false,"open_issues":0,"pushed_at":"2009/08/05
+      21:55:36 -0700","name":"AttachedAnimation","owner":"RookieOne","description":"","has_issues":true,"url":"https://github.com/RookieOne/AttachedAnimation"},{"created_at":"2009/09/10
+      09:01:14 -0700","homepage":"CashRegister","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":244,"private":false,"open_issues":0,"pushed_at":"2009/09/10
+      09:02:05 -0700","name":"CashRegister","owner":"RookieOne","description":"Simple
+      DDD example","has_issues":true,"url":"https://github.com/RookieOne/CashRegister"},{"created_at":"2009/09/25
+      05:39:14 -0700","homepage":"WpfInputValidation","has_downloads":true,"language":"C#","watchers":3,"forks":1,"fork":false,"has_wiki":true,"size":2120,"private":false,"open_issues":0,"pushed_at":"2009/09/25
+      23:08:51 -0700","name":"WPF-Input-Validation","owner":"RookieOne","description":"Solution
+      and Slides for WPF Input Validation Presentation","has_issues":true,"url":"https://github.com/RookieOne/WPF-Input-Validation"},{"created_at":"2009/09/25
+      05:44:18 -0700","homepage":"EvolveYourCode","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":5288,"private":false,"open_issues":0,"pushed_at":"2010/03/16
+      14:40:04 -0700","name":"Evolve-Your-Code","owner":"RookieOne","description":"Solution
+      and Slides for Evolve Your Code Presentation","has_issues":true,"url":"https://github.com/RookieOne/Evolve-Your-Code"},{"created_at":"2009/10/22
+      11:28:26 -0700","homepage":"StructureMapAopNotify","has_downloads":true,"language":"C#","watchers":4,"forks":1,"fork":false,"has_wiki":true,"size":500,"private":false,"open_issues":0,"pushed_at":"2009/10/29
+      08:41:18 -0700","name":"StructureMapAopNotify","owner":"RookieOne","description":"Uses
+      Structure Map and Dynamic Proxy for Aop Implementation of INotifyPropertyChanged","has_issues":true,"url":"https://github.com/RookieOne/StructureMapAopNotify"},{"created_at":"2009/10/26
+      15:58:39 -0700","homepage":"CodeTime","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":35988,"private":false,"open_issues":0,"pushed_at":"2009/11/20
+      14:01:44 -0800","name":"CodeTime","owner":"RookieOne","description":"Time sheet
+      application","has_issues":true,"url":"https://github.com/RookieOne/CodeTime"},{"created_at":"2009/10/28
+      15:20:52 -0700","homepage":"LabelPanel","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":0,"private":false,"open_issues":0,"pushed_at":"2009/10/28
+      15:22:31 -0700","name":"LabelPanel","owner":"RookieOne","description":"A WPF
+      Label Panel I am experimenting with","has_issues":true,"url":"https://github.com/RookieOne/LabelPanel"},{"created_at":"2009/11/02
+      17:42:48 -0800","homepage":"Adorners","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":0,"private":false,"open_issues":0,"pushed_at":"2009/11/02
+      17:43:58 -0800","name":"Adorners","owner":"RookieOne","description":"Adorner
+      Projects for D2Sig presentation","has_issues":true,"url":"https://github.com/RookieOne/Adorners"},{"created_at":"2009/11/18
+      13:38:02 -0800","homepage":"ChangesAndValidation","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":956,"private":false,"open_issues":0,"pushed_at":"2009/12/03
+      15:37:52 -0800","name":"ChangesAndValidation","owner":"RookieOne","description":"","has_issues":true,"url":"https://github.com/RookieOne/ChangesAndValidation"},{"created_at":"2009/12/07
+      09:48:38 -0800","homepage":"WrapControlInBorder","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":0,"private":false,"open_issues":0,"pushed_at":"2009/12/07
+      09:50:15 -0800","name":"WrapControlInBorder","owner":"RookieOne","description":"Wraps
+      any WPF Control in a border","has_issues":true,"url":"https://github.com/RookieOne/WrapControlInBorder"},{"created_at":"2010/03/15
+      21:15:21 -0700","homepage":"Patterns","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":1492,"private":false,"open_issues":0,"pushed_at":"2010/03/15
+      21:16:59 -0700","name":"Patterns","owner":"RookieOne","description":"Design
+      patterns example I use for brown bags","has_issues":true,"url":"https://github.com/RookieOne/Patterns"},{"created_at":"2010/03/18
+      12:53:02 -0700","homepage":"Chimera","has_downloads":true,"watchers":4,"forks":1,"fork":false,"has_wiki":true,"size":872,"private":false,"open_issues":0,"pushed_at":"2010/03/18
+      13:00:30 -0700","name":"Chimera","owner":"RookieOne","description":"Experimental
+      UI framework","has_issues":true,"url":"https://github.com/RookieOne/Chimera"},{"created_at":"2010/03/24
+      06:27:25 -0700","homepage":"GpaHouston","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":3188,"private":false,"open_issues":0,"pushed_at":"2010/03/25
+      15:22:55 -0700","name":"GPA-Houston","owner":"RookieOne","description":"MVC
+      web app for GPA of Houston","has_issues":true,"url":"https://github.com/RookieOne/GPA-Houston"},{"created_at":"2010/04/01
+      09:01:46 -0700","homepage":"GreekFire","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":1364,"private":false,"open_issues":0,"pushed_at":"2010/04/01
+      09:02:38 -0700","name":"GreekFire","owner":"RookieOne","description":"GreekFire
+      was an experiment with Ryan Riley to expand our understanding of DDD","has_issues":true,"url":"https://github.com/RookieOne/GreekFire"},{"created_at":"2010/04/09
+      15:58:12 -0700","homepage":"SemanticXaml","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":744,"private":false,"open_issues":0,"pushed_at":"2010/04/25
+      13:17:04 -0700","name":"SemanticXaml","owner":"RookieOne","description":"","has_issues":true,"url":"https://github.com/RookieOne/SemanticXaml"},{"created_at":"2010/04/14
+      07:18:56 -0700","homepage":"","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":1208,"private":false,"open_issues":0,"pushed_at":"2010/04/14
+      11:44:35 -0700","name":"CodeTime-CQRS","owner":"RookieOne","description":"","has_issues":true,"url":"https://github.com/RookieOne/CodeTime-CQRS"},{"created_at":"2010/04/29
+      15:16:22 -0700","homepage":"","has_downloads":true,"language":"C#","watchers":2,"forks":1,"fork":false,"has_wiki":true,"size":9692,"private":false,"open_issues":0,"pushed_at":"2010/05/14
+      14:40:45 -0700","name":"JBsWpfExamples","owner":"RookieOne","description":"","has_issues":true,"url":"https://github.com/RookieOne/JBsWpfExamples"},{"created_at":"2010/05/11
+      08:38:09 -0700","homepage":"Learning","has_downloads":true,"watchers":2,"forks":1,"fork":false,"has_wiki":true,"size":4548,"private":false,"open_issues":0,"pushed_at":"2010/06/03
+      10:46:59 -0700","name":"Learning","owner":"RookieOne","description":"Collection
+      of Learning Projects for different technologies, languages, and patterns","has_issues":true,"url":"https://github.com/RookieOne/Learning"},{"created_at":"2010/08/03
+      11:23:08 -0700","homepage":"","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":208,"private":false,"open_issues":0,"pushed_at":"2010/08/03
+      11:30:57 -0700","name":"Colors","owner":"RookieOne","description":"Code for
+      WPF Colors presentation","has_issues":true,"url":"https://github.com/RookieOne/Colors"},{"created_at":"2010/08/19
+      20:13:28 -0700","homepage":"","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":708,"private":false,"open_issues":0,"pushed_at":"2010/09/02
+      23:44:12 -0700","name":"Bump-In-the-Night","owner":"RookieOne","description":"","has_issues":true,"url":"https://github.com/RookieOne/Bump-In-the-Night"},{"created_at":"2010/10/26
+      07:33:11 -0700","homepage":"","has_downloads":true,"language":"C#","watchers":2,"forks":1,"fork":false,"has_wiki":true,"size":18628,"private":false,"open_issues":0,"pushed_at":"2010/10/26
+      07:38:18 -0700","name":"Houston-Techfest-Design-Patterns","owner":"RookieOne","description":"","has_issues":true,"url":"https://github.com/RookieOne/Houston-Techfest-Design-Patterns"},{"created_at":"2010/10/30
+      01:32:41 -0700","homepage":"","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":9696,"private":false,"open_issues":0,"pushed_at":"2010/10/30
+      11:59:42 -0700","name":"RMS_Refactor","owner":"RookieOne","description":"","has_issues":true,"url":"https://github.com/RookieOne/RMS_Refactor"},{"created_at":"2011/01/04
+      11:03:07 -0800","homepage":"","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":536,"private":false,"open_issues":0,"pushed_at":"2011/01/05
+      12:10:50 -0800","name":"SpeakerRate","owner":"RookieOne","description":"Gem
+      using HTTParty on the SpeakerRate API","has_issues":true,"url":"https://github.com/RookieOne/SpeakerRate"},{"created_at":"2011/01/05
+      13:30:09 -0800","homepage":"","has_downloads":true,"language":"Ruby","watchers":3,"forks":2,"fork":false,"has_wiki":true,"size":328,"private":false,"open_issues":0,"pushed_at":"2011/01/12
+      14:22:22 -0800","name":"SlideShare","owner":"RookieOne","description":"Gem using
+      HTTParty on the SlideShare API","has_issues":true,"url":"https://github.com/RookieOne/SlideShare"},{"created_at":"2011/01/11
+      12:11:40 -0800","homepage":"","has_downloads":true,"language":"Ruby","watchers":4,"forks":3,"fork":false,"has_wiki":true,"size":760,"private":false,"open_issues":0,"pushed_at":"2011/06/02
+      21:03:20 -0700","name":"StackOverflow-API","owner":"RookieOne","description":"HTTParty
+      over the StackOverflow API","has_issues":true,"url":"https://github.com/RookieOne/StackOverflow-API"},{"created_at":"2011/01/25
+      16:54:37 -0800","homepage":"","has_downloads":true,"language":"VimL","watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":1208,"private":false,"open_issues":0,"pushed_at":"2011/01/29
+      21:47:10 -0800","name":"jb_vim_setup","owner":"RookieOne","description":"","has_issues":true,"url":"https://github.com/RookieOne/jb_vim_setup"},{"created_at":"2011/02/18
+      08:18:20 -0800","homepage":"","has_downloads":true,"language":"Ruby","watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":252,"private":false,"open_issues":0,"pushed_at":"2011/02/18
+      08:18:38 -0800","name":"Target-API","owner":"RookieOne","description":"Httparty
+      over Target API","has_issues":true,"url":"https://github.com/RookieOne/Target-API"},{"created_at":"2011/03/09
+      20:40:01 -0800","homepage":"","has_downloads":true,"watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":108,"private":false,"open_issues":0,"pushed_at":"2011/03/09
+      20:50:07 -0800","name":"jb-and-ryan","owner":"RookieOne","description":"just
+      jb and ryan working on some ruby","has_issues":true,"url":"https://github.com/RookieOne/jb-and-ryan"},{"created_at":"2011/05/30
+      09:22:53 -0700","homepage":"","has_downloads":true,"language":"Ruby","watchers":2,"forks":1,"fork":false,"has_wiki":true,"size":164,"private":false,"open_issues":0,"pushed_at":"2011/05/30
+      09:23:13 -0700","name":"Bitbucket-Api","owner":"RookieOne","description":"A
+      gem for the Bitbucket Api","has_issues":true,"url":"https://github.com/RookieOne/Bitbucket-Api"},{"created_at":"2011/07/30
+      09:25:21 -0700","homepage":"","has_downloads":true,"language":"Objective-C","watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":112,"private":false,"open_issues":0,"pushed_at":"2011/07/30
+      17:02:40 -0700","name":"ShadowRun-iOS","owner":"RookieOne","description":"iPad
+      and iPhone app for ShadowRun","has_issues":true,"url":"https://github.com/RookieOne/ShadowRun-iOS"},{"created_at":"2011/08/28
+      13:10:08 -0700","homepage":"","has_downloads":true,"language":"JavaScript","watchers":1,"forks":1,"fork":false,"has_wiki":true,"size":920,"private":false,"open_issues":0,"pushed_at":"2011/08/28
+      18:52:28 -0700","name":"rookieone.github.com","owner":"RookieOne","description":"Octopress
+      blog","has_issues":true,"url":"https://github.com/RookieOne/rookieone.github.com"}]}'
+    http_version: '1.1'

@@ -1,0 +1,38 @@
+%p HOWDY
+%p= can? :sync_profile, @profile
+- if @git_hub_profile || can?(:sync_profile, @profile)
+  .info_box#git_hub_info
+    .info_logo
+      = link_to image_tag("git_hub_info_logo.png"), "http://www.github.com"
+      -if can?(:sync_profile, @profile) && @git_hub_profile
+        .delete
+          = link_to "delete", [@profile, @git_hub_profile], :id=> :delete_git_hub, :confirm => 'Are you sure?', :method => :delete
+        .edit
+          %a{:class => "module_link", :rel => "#sync_git_hub"} edit
+    .info
+      - if @git_hub_profile
+        - if !@git_hub_profile.synced?
+          %p We are still processing. Hit refresh.
+        - else
+          = link_to "Go to my GitHub Profile", @git_hub_profile.url, :target => "_blank"
+          %table
+            %tr
+              %td Repositories
+              %td= @git_hub_profile.repository_count
+            %tr
+              %td Gists
+              %td= @git_hub_profile.gist_count
+            %tr
+              %td Followers
+              %td= @git_hub_profile.followers_count
+
+      - else
+        - if can? :sync_profile, @profile
+          - @git_hub_profile = GitHubProfile.new
+          %p{:id => :add_git_hub_section} 
+            Do you have a GitHub account? 
+            %a{:class => "module_link", :rel => "#sync_git_hub"} Yes
+      #sync_git_hub.overlay
+        = render :partial => "git_hub_profiles/form"
+
+  .clear
