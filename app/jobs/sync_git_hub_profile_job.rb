@@ -1,8 +1,8 @@
-class SyncGitHubProfileJob < Resque::JobWithStatus
+class SyncGitHubProfileJob
   @queue = :sync
   
-  def perform
-    git_hub_profile = GitHubProfile.find(options[:id])
+  def self.perform(id)
+    git_hub_profile = GitHubProfile.find(id)
     profile = git_hub_profile.profile
     
     url = URI.parse("http://github.com/api/v2/json/user/show/#{git_hub_profile.username}")
@@ -15,8 +15,6 @@ class SyncGitHubProfileJob < Resque::JobWithStatus
     git_hub_profile.repository_count = result["user"]["public_repo_count"]
     git_hub_profile.followers_count = result["user"]["followers_count"]
     git_hub_profile.following_count = result["user"]["following_count"]
-    #git_hub_profile.last_synced_date = Time.now
-
     git_hub_profile.save
 
     url = URI.parse("http://github.com/api/v2/json/repos/show/#{git_hub_profile.username}")
@@ -35,7 +33,7 @@ class SyncGitHubProfileJob < Resque::JobWithStatus
     git_hub_profile.retag!    
   end
   
-  def find_or_create_repository(git_hub_profile, r)
+  def self.find_or_create_repository(git_hub_profile, r)
     repository = git_hub_profile.repositories.select{|gr| gr.name == r["name"]}.first 
     repository = GitHubRepository.new(:git_hub_profile => git_hub_profile) unless repository
     repository.name = r["name"]

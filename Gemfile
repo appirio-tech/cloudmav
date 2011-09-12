@@ -29,7 +29,7 @@ gem "gravtastic"
 gem "geokit"
 
 # Async Processing
-gem "resque"
+gem "resque", :require => 'resque/server'
 gem "resque-status"
 
 # Game mechanics
