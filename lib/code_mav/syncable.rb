@@ -53,8 +53,9 @@ module CodeMav
       def sync!
         save
         event_name = "#{self.class.to_s}SyncEvent"
-        if Object.const_defined?(event_name)
-          event = Object.const_get(event_name).new
+        event_constant = event_name.classify.constantize
+        if event_constant.respond_to? :perform
+          event = event_constant.new
           event.subject_class_name = self.class.to_s
           event.subject_id = self.id
           event.profile = self.profile

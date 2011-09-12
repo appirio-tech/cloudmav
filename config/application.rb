@@ -12,7 +12,7 @@ module Codemav
     end
     
     if config.respond_to?(:autoload_paths)
-      config.autoload_paths += %W( #{config.root}/app/models/events ) 
+      config.autoload_paths += %W( #{config.root}/app/events ) 
       config.autoload_paths += %W( #{config.root}/lib ) 
     end
     
