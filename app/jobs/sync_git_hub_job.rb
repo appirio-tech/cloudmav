@@ -3,6 +3,7 @@ class SyncGitHubJob
   
   def self.perform(git_hub_profile_id)
     git_hub_profile = GitHubProfile.find(git_hub_profile_id)
+    profile = git_hub_profile.profile
     
     url = URI.parse("http://github.com/api/v2/json/user/show/#{git_hub_profile.username}")
     response = Net::HTTP.get_response url
@@ -27,6 +28,8 @@ class SyncGitHubJob
         find_or_create_repository(git_hub_profile, r)
       end
     end
+    
+    profile.award_badge("Git R Done", :description => "For having a GitHub account")
 
     #git_hub_profile.retag!    
   end

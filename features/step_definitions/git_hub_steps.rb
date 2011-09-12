@@ -16,9 +16,7 @@ Then /^I should have a collection of my repos$/ do
   profile.git_hub_profile.repositories.count.should > 0
 end
 
-Then /^I should be awarded the "([^"]*)" badge$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
-end
+
 
 Then /^I should have coder points for my GitHub account$/ do
   pending # express the regexp above with the code you wish you had

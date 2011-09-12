@@ -2,6 +2,7 @@ class Profile
   include Mongoid::Document
   include Mongoid::Timestamps
   include Gravtastic
+  include Badgeable::Subject
   include CodeMav::Autodiscoverable
   include CodeMav::Locatable
   include CodeMav::CoderModule
