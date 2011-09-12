@@ -31,6 +31,7 @@ class SyncGitHubJob
     
     profile.award_badge("Git R Done", :description => "For having a GitHub account")
 
+    profile.calculate_score!
     #git_hub_profile.retag!    
   end
   

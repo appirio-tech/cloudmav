@@ -16,10 +16,9 @@ Then /^I should have a collection of my repos$/ do
   profile.git_hub_profile.repositories.count.should > 0
 end
 
-
-
 Then /^I should have coder points for my GitHub account$/ do
-  pending # express the regexp above with the code you wish you had
+  @profile.reload
+  @profile.score(:coder_points).should > 0
 end
 
 Then /^I should learned "([^"]*)"$/ do |arg1|
