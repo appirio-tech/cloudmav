@@ -1,0 +1,20 @@
+.grid_16
+  %h1 Contact Us
+
+  - if @contact.errors.any?
+    #error_explanation
+      %h4 There were some errors
+      %ul
+        - @contact.errors.full_messages.each do |msg|
+          %li= msg
+
+  = form_for @contact do |f|
+    .label= f.label :name
+    .control= f.text_field :name
+    .label= f.label :email
+    .control= f.text_field :email
+    .label= f.label :subject
+    .control= f.text_field :subject
+    .label= f.label :description
+    .control= f.text_area :description
+    .submit= f.submit "Submit", :disable_with => "Submitting"

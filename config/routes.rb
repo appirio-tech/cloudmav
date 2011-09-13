@@ -39,6 +39,9 @@ Codemav::Application.routes.draw do
   
   resources :companies
   
+  resources :contacts
+  match 'contact' => 'contacts#new', :as => :contact
+  
   mount Resque::Server, :at => "/resque"  
   
   match "/:username" => "profiles#show", :as => :profile
