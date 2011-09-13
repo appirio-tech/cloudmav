@@ -1,0 +1,7 @@
+%h2 Companies
+
+= link_to "Add a company", new_company_path
+
+- @companies.each do |c|
+	= link_to image_tag(c.logo.url), c
+	= c.name

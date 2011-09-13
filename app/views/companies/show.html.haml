@@ -1,0 +1,7 @@
+.grid_16#company
+	%h2= @company.name
+	- if can? :edit, @company
+		= link_to "edit", edit_company_path(@company)
+	.company_logo
+		= image_tag @company.logo.url
+	= render :partial => "shared/tags", :locals => { :taggable => @company }

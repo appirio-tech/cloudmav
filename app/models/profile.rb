@@ -18,6 +18,7 @@ class Profile
   field :name, :type => String
   field :email, :type => String
   field :username, :type => String
+  field :is_moderator, :type => Boolean, :default => false
   
   index :username, :unique => true
   
@@ -59,4 +60,7 @@ class Profile
     end
   end
   
+  def moderator?
+    is_moderator
+  end
 end

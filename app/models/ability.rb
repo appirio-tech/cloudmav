@@ -19,6 +19,9 @@ class Ability
     end
     can [:edit, :delete, :add_post], Blog do |blog|
       user.profile == blog.profile
-    end    
+    end
+    if user.profile.moderator?
+      can [:edit], Company
+    end
   end
 end

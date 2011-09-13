@@ -57,4 +57,10 @@ Codemav::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  CarrierWave.configure do |config|
+    config.s3_access_key_id = 'AKIAIG7WF7PZP7OV4QBQ'
+    config.s3_secret_access_key = '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'
+    config.s3_bucket = 'codemav'
+  end
 end

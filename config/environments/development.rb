@@ -27,4 +27,10 @@ Codemav::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  CarrierWave.configure do |config|
+    config.s3_access_key_id = 'AKIAIG7WF7PZP7OV4QBQ'
+    config.s3_secret_access_key = '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'
+    config.s3_bucket = 'codemav_test'
+  end
 end
