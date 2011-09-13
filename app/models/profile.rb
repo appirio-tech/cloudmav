@@ -11,6 +11,7 @@ class Profile
   include CodeMav::SpeakerModule
   include CodeMav::Taggable
   include CodeMav::Followable
+  include CodeMav::WriterModule
   
   gravtastic
   

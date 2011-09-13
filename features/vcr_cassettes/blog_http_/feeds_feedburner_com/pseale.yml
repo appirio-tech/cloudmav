@@ -1,0 +1,1862 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://feeds.feedburner.com:80/pseale
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - text/xml; charset=UTF-8
+      etag:
+      - hor/oOM4PWHhE8T6q8BzNdqpFnc
+      last-modified:
+      - Tue, 13 Sep 2011 17:18:28 GMT
+      date:
+      - Tue, 13 Sep 2011 17:31:01 GMT
+      expires:
+      - Tue, 13 Sep 2011 17:31:01 GMT
+      cache-control:
+      - private, max-age=0
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+      transfer-encoding:
+      - chunked
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<?xml-stylesheet type=\"text/xsl\"
+      media=\"screen\" href=\"/~d/styles/atom10full.xsl\"?><?xml-stylesheet type=\"text/css\"
+      media=\"screen\" href=\"http://feeds.feedburner.com/~d/styles/itemcontent.css\"?><feed
+      xmlns=\"http://www.w3.org/2005/Atom\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+      xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xml:lang=\"en-us\">\r\n  <title>Peter
+      Seale's weblog - SharePoint | PowerShell | Awesomeness</title>\r\n  <link rel=\"alternate\"
+      type=\"text/html\" href=\"http://www.pseale.com/blog/\" />\r\n  \r\n  <logo>http://www.pseale.com/favicon.ico</logo>\r\n
+      \ <icon>favicon.ico</icon>\r\n  <updated>2011-08-18T22:32:02.0633494-07:00</updated>\r\n
+      \ <author>\r\n    <name>Peter Seale</name>\r\n  </author>\r\n  <subtitle />\r\n
+      \ <id>http://www.pseale.com/blog/</id>\r\n  <generator uri=\"http://dasblog.info/\"
+      version=\"2.2.8279.16125\">DasBlog</generator>\r\n  <atom10:link xmlns:atom10=\"http://www.w3.org/2005/Atom\"
+      rel=\"self\" type=\"application/atom+xml\" href=\"http://feeds.feedburner.com/pseale\"
+      /><feedburner:info xmlns:feedburner=\"http://rssnamespace.org/feedburner/ext/1.0\"
+      uri=\"pseale\" /><atom10:link xmlns:atom10=\"http://www.w3.org/2005/Atom\" rel=\"hub\"
+      href=\"http://pubsubhubbub.appspot.com/\" /><entry>\r\n    <title>Windows 7
+      Tool Roundup: Small But Explosive, Just Like Dynamite</title>\r\n    <link rel=\"alternate\"
+      type=\"text/html\" href=\"http://www.pseale.com/blog/Windows7ToolRoundupSmallButExplosiveJustLikeDynamite.aspx\"
+      />\r\n    <id>http://www.pseale.com/blog/PermaLink,guid,e3a7644f-4597-4253-9203-dc2d422b156e.aspx</id>\r\n
+      \   <published>2011-08-18T22:32:02.0633494-07:00</published>\r\n    <updated>2011-08-18T22:32:02.0633494-07:00</updated>\r\n
+      \   <category term=\".NET\" label=\".NET\" scheme=\"http://www.pseale.com/blog/CategoryView,category,NET.aspx\"
+      />\r\n    <category term=\"Awesomeness\" label=\"Awesomeness\" scheme=\"http://www.pseale.com/blog/CategoryView,category,Awesomeness.aspx\"
+      />\r\n    <content type=\"xhtml\">\r\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n
+      \       <p>\r\nHaving just lost my previous Windows 7 to what I hope is a freak
+      accident that will\r\nnever recur, and subsequently having reinstalled Windows
+      7 from scratch, the list\r\nof customizations and programs I install on Windows
+      7 is a particularly <em>fresh</em> memory.\r\n</p>\r\n        <p>\r\nThis is
+      a .NET developer-oriented build and some of the things I do may not make sense\r\nto
+      you.\r\n</p>\r\n        <p>\r\nHopefully one of these tidbits may prove useful
+      to you.\r\n</p>\r\n        <h3>Windows Customizations\r\n</h3>\r\n        <ol>\r\n
+      \         <li>\r\n            <a href=\"http://www.pseale.com/blog/KeyboardTortoiseToHare.aspx\">Set
+      your keyboard\r\nrepeat rate to the fastest setting</a>. You’re not your arthritic
+      grandmother, and\r\nyou can handle the extra speed. I wrote six full paragraphs
+      about this subject in\r\n2007, so if you’re curious as to why you’d make this
+      change, well, <a href=\"http://www.pseale.com/blog/KeyboardTortoiseToHare.aspx\">I\r\nexplain
+      keyboard repeat rates in as much detail as anyone else ever has or ever will</a>.\r\nI
+      even introduce a keyboard repeat-rate mascot!</li>\r\n          <li>\r\nMake
+      the same changes to Windows Explorer you’ve made a thousand times before, and\r\nwill
+      make a thousand times again: \r\n<br /><img style=\"background-image: none;
+      border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px;
+      display: inline; border-top: 0px; border-right: 0px; padding-top: 0px\" title=\"image\"
+      border=\"0\" alt=\"image\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Windows-7-Tool-Roundup-2011_14235/image_3.png\"
+      width=\"488\" height=\"512\" /></li>\r\n          <li>\r\nI’m a little crazy,
+      so I have created local accounts for my ASP.NET app pool and SQL\r\nServer service
+      account. I know, it’s a little unhealthy.</li>\r\n        </ol>\r\n        <ol>\r\n
+      \         <li>\r\nGet to Computer Management and from there, create your service
+      accounts accounts.</li>\r\n          <li>\r\nNow that you’ve created these accounts,
+      they unfortunately show up on your Windows\r\nlogin screen. Clutter! To hide
+      these service accounts from the login screen,  <a href=\"http://social.technet.microsoft.com/Forums/en/w7itproui/thread/16378967-8a39-4aef-85e4-d859a71648d3\">follow\r\nthese
+      instructions</a>. No, I am not bothering putting together a PowerShell script\r\nto
+      hide them—tag you’re it.</li>\r\n        </ol>\r\n        <li>\r\nNow for the
+      dumb optional parts I do:</li>\r\n        <ol>\r\n          <li>\r\nChange Windows
+      to the puke green I’ve demonstrated above, or if you don’t like my\r\n(delightful!)
+      shade of puke green, feel free to choose <em>your own shade </em>of\r\npuke
+      green. Your shade of puke green is clearly superior, I admit. To do this, hit\r\nthe
+      Windows key to bring up the Start Menu and type “glass” into the search bar.</li>\r\n
+      \         <li>\r\n            <a href=\"http://www.google.com/search?q=change+windows+7+login+screen\">Change
+      the\r\nWindows login screen.</a> Choose something like <a href=\"http://msnbc.tumblr.com/post/2418854503/a-cat-eyes-a-squirrel-making-its-way-along-a-fence\">this\r\nlittle
+      piece of awesomeness</a> for your login screen. Let the haters hate (and trust\r\nme,
+      they will hate, often).</li>\r\n          <li>\r\nFor a little extra class,
+      change your Windows login picture to be your avatar. Do\r\nit especially <a
+      href=\"http://twitter.com/#!/pseale\">if your avatar is as awe-inspiring\r\nas
+      mine</a>. It won’t be, but you can try your best (and fail).</li>\r\n        </ol>\r\n
+      \       <h3>Windows Features to install\r\n</h3>\r\n        <p>\r\nTo bring
+      up the “Windows Features” dialog, hit the Windows key to bring up the Start\r\nMenu
+      and type “windows features” into the search bar.\r\n</p>\r\n        <ul>\r\n
+      \         <li>\r\nPretty much everything resembling the letters “I”, “I”, “S”.
+      Everything IIS, just\r\ninstall it. Don’t install FTP. Note that even if you
+      don’t want to install the server,\r\nall the management tools and PowerShell
+      cmdlets are installed here too.</li>\r\n          <li>\r\nTelnet client – Telnet
+      is admittedly horribly insecure, and you should use something\r\nmore secure.
+      But, I need this telnet client every blue moon to test raw TCP connections\r\nto
+      SMTP servers or SQL servers. And yes, I know, there’s <a href=\"http://www.google.com/search?q=putty\">PuTTY</a>.</li>\r\n
+      \       </ul>\r\n        <h3>Programs to install\r\n</h3>\r\n        <p>\r\nSome
+      of these will pass without explanation. E.g. it’s Firefox, you use it for browsing,\r\nno
+      further explanation should be needed. \r\n</p>\r\n        <ol>\r\n          <li>\r\n
+      \           <a href=\"http://www.mozilla.com/en-US/firefox/new/\">Mozilla Firefox</a>\r\n
+      \         </li>\r\n          <li>\r\n            <a href=\"http://www.google.com/landing/chrome/beta/\">Google
+      Chrome Beta</a> – along\r\nwith being an excellent browser, <strong>Google Chrome
+      is also now my favorite PDF\r\nReader. </strong>That’s right: no more Adobe
+      Acrobat, no more FoxIt, no more PDF reader\r\nwe all moved to when FoxIt turned
+      into Acrobat. Just associate PDFs with Google Chrome.\r\nNow, the problem with
+      associating PDFs with Chrome is that you can’t find that pesky\r\nChrome install!</li>\r\n
+      \       </ol>\r\n        <ol>\r\n          <li>\r\n            <strong>To find
+      the Chrome .exe file</strong>, the key is to understand that Chrome\r\ninstalls
+      itself in your user profile, not in the traditional “Program Files” location.\r\nWithout
+      further ado, paste this in your Explorer address bar when prompted to browse\r\nfor
+      an EXE to associate with PDF: \r\n<br />\r\n%LOCALAPPDATA%\\Google\\Chrome\\Application</li>\r\n
+      \       </ol>\r\n        <li>\r\n          <a href=\"http://technet.microsoft.com/en-us/sysinternals/bb842062\">Sysinternals
+      Suite</a> –\r\nI follow Mr. Rogers advice and make pretend there’s an installer
+      for this, and manually\r\ncopy this into my C:\\Program Files\\ folder. I don’t
+      know what most of these do, but\r\nProcess Explorer (procexp.exe) is a <strong>totally
+      tubular</strong> Task Manager\r\nreplacement. Use it as such. I keep Process
+      Explorer running at all times in my system\r\ntray and it lets me know when
+      my computer is slow. That sounds trite, but it’s true.\r\nIt helps to know that
+      <strong>I’m not going crazy</strong> and my computer is in fact\r\nslow.</li>\r\n
+      \       <li>\r\n          <a href=\"http://code.google.com/p/msysgit/downloads/list?can=3\">Git
+      for Windows</a> –\r\nWord got out early that git doesn’t work on Windows. As
+      of 2011-08-18, that’s a lying\r\nlie from a liar, who lies, from whom lies spew
+      forth. Lies. <strong>Git works great\r\non Windows now, and has a painless installer.</strong>
+      Download as instructed below: \r\n<br /><a href=\"http://code.google.com/p/msysgit/downloads/list?can=3\"><img
+      style=\"background-image: none; border-bottom: 0px; border-left: 0px; padding-left:
+      0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px;
+      padding-top: 0px\" title=\"image\" border=\"0\" alt=\"image\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Windows-7-Tool-Roundup-2011_14235/image_6.png\"
+      width=\"654\" height=\"330\" /></a></li>\r\n        <li>\r\n          <a href=\"http://www.getpaint.net/\">Paint.NET</a>
+      – honestly, Windows 7’s paint has\r\nimproved considerably, even to the point
+      where maybe you don’t need to install Paint.NET\r\nanymore. But, I’m now a master
+      of Paint.NET and must have it! With it I’ve created\r\nthe screenshot masterpieces
+      you see above, among other masterpieces such as <a href=\"http://www.pseale.com/blog/STSADMEXESpotTheTypo.aspx\">this\r\ntimeless
+      masterpiece</a> which is a master work of mastery and a masterpiece. Masterpiece.</li>\r\n
+      \       <li>\r\n          <a href=\"http://www.pidgin.im/\">Pidgin</a> for IM,
+      assuming you aren’t labeled a corporate\r\nsecurity  VIOLATOR by running CATEGORY:UNAPPROVED
+      SOFTWARE – this is the only\r\nunobtrusive IM client left. If you (like me)
+      can’t help but look at the ads in all\r\n3 places in MSN Messenger, and don’t
+      like Digsby, well, I guess you’ll like Pidgin.\r\nWarning: if there’s a problem
+      with your IM connection or with adding friends, blame\r\nPidgin. I’ve had problems.
+      Even with the need for random reinstalls and short jaunts\r\nto MSN Messenger
+      to add friends, It’s still worth it to me to use Pidgin for everyday\r\nuse.</li>\r\n
+      \       <li>\r\nNothing says “Windows developer” quite like a <a href=\"http://www.ubuntu.com/download/ubuntu/download\">Ubuntu</a>
+      VM\r\nrunning inside <a href=\"http://www.virtualbox.org/wiki/Downloads\">VirtualBox</a>.\r\nI
+      will take this opportunity to point out VirtualBox is free <strong>for non-commercial\r\nuse</strong>.
+      So far, so good. I want to emphasize that a) my Ubuntu VM cold boots\r\nin 5
+      seconds or so, and saves or restores a running VM also in about 5 seconds. It’s\r\nreally,
+      really, really fast, and runs comfortably with 2GB of RAM allocated to it.\r\nDisclaimer:
+      I’m running on an SSD and it’s fast. Envy me.</li>\r\n        <ol>\r\n          <li>\r\nOnce
+      you get the VM installed, you <strong>must</strong> install the VirtualBox utilities,\r\nwhich
+      notably install the flexible, virtual driver that lets you resize your Ubuntu\r\nwindow
+      anytime. Without them, you’ll have a horrible experience and run in a tiny\r\nporthole.</li>\r\n
+      \         <li>\r\nNote that anytime you update your Ubuntu install, you will
+      have to reinstall the VirtualBox\r\nutilities to again get minimally bearable
+      display drivers. I am not sure I care why.</li>\r\n        </ol>\r\n        <li>\r\n
+      \         <a href=\"http://www.skype.com/intl/en-us/get-skype/\">Skype</a> +
+      headset: If you haven’t\r\nbeen paying attention to Skype recently, it’s both
+      getting bloated and awesome. I’ll\r\njust focus on the awesome part today: with
+      Skype, <strong>you can make a landline-quality\r\nvoice call over the internet,
+      plus screen sharing, for free.</strong> In case you\r\ndidn’t get that, I said
+      \r\n<br /><br /><a href=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Windows-7-Tool-Roundup-2011_14235/signbot_2.gif\"><img
+      style=\"display: block; float: none; margin-left: auto; margin-right: auto\"
+      title=\"signbot\" alt=\"signbot\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Windows-7-Tool-Roundup-2011_14235/signbot_thumb.gif\"
+      width=\"240\" height=\"44\" /></a></li>\r\n      </div>\r\n    </content>\r\n
+      \ </entry>\r\n  <entry>\r\n    <title>Upgrading Our ClickOnce App From .NET
+      3.5 to .NET 4.0</title>\r\n    <link rel=\"alternate\" type=\"text/html\" href=\"http://www.pseale.com/blog/UpgradingOurClickOnceAppFromNET35ToNET40.aspx\"
+      />\r\n    <id>http://www.pseale.com/blog/PermaLink,guid,887a9dc6-a9c7-4730-ac7e-5ba67a14cb6b.aspx</id>\r\n
+      \   <published>2011-08-17T19:05:10.2166095-07:00</published>\r\n    <updated>2011-08-17T19:05:10.2166095-07:00</updated>\r\n
+      \   <category term=\".NET\" label=\".NET\" scheme=\"http://www.pseale.com/blog/CategoryView,category,NET.aspx\"
+      />\r\n    <content type=\"xhtml\">\r\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n
+      \       <h3>Fixing the “The customHostSpecified attribute is not supported for
+      Windows Forms\r\napplications.” error\r\n</h3>\r\n        <p>\r\nThis one’s
+      for the search engines. Sorry folks, none of my recent posts are readable\r\nby
+      humans. Too bad.\r\n</p>\r\n        <p>\r\nQuick summary of what I did to fix
+      the problem:\r\n</p>\r\n        <ol>\r\n          <li>\r\nChanged our <a href=\"http://msdn.microsoft.com/en-us/library/microsoft.build.tasks.msbuild.toolsversion.aspx\">MSBuild\r\nfile
+      ToolVersion property</a> to 4.0. This changes the behavior of the <a href=\"http://stackoverflow.com/questions/442476/how-to-get-the-windows-sdk-folder-in-msbuild\">GetFrameworkSdkPath</a>
+      operation,\r\nwhich tells us where to find the Windows SDK folder (which hosts
+      mage.exe, which performs\r\nsecret ClickOnce magic). Previously (before changing
+      the ToolVersion to 4.0) it pointed\r\nto the v6 SDK; now it points to the v7
+      SDK. Quick note to help you  understand\r\n#2 below: we store this path in a
+      variable called <font face=\"Courier New\">SdkPath</font>.</li>\r\n          <li>\r\nChanged
+      the MSBuild variable containing the path to mage.exe to point to (note the <font
+      style=\"background-color: #ffff00\">added</font> text): \r\n<br /><font face=\"Courier
+      New\">$(SdkPath)bin\\<font style=\"background-color: #ffff00\">NETFX\r\n4.0
+      Tools\\</font>mage.exe \r\n<br /></font>We no longer just point to the bin\\
+      folder, as bin\\ still contains the .NET\r\n3.5 version of mage.exe. The .NET
+      4.0 version is apparently housed in the “bin\\NETFX\r\n4.0 Tools” subfolder.</li>\r\n
+      \       </ol>\r\n        <p>\r\n          <a href=\"http://social.msdn.microsoft.com/Forums/zh/winformssetup/thread/c9ea214e-55f2-4cd1-9e28-57dc94b50bd0\">Thanks\r\nto
+      this thread on MSDN forums for the tip.</a> The troubleshooting exhibited in
+      that\r\nthread is something of a comedy of errors, but eventually someone posted
+      the correct\r\nsolution, and for that I thank you.\r\n</p>\r\n      </div>\r\n
+      \   </content>\r\n  </entry>\r\n  <entry>\r\n    <title>Steal Ideas From These
+      psake Scripts</title>\r\n    <link rel=\"alternate\" type=\"text/html\" href=\"http://www.pseale.com/blog/StealIdeasFromThesePsakeScripts.aspx\"
+      />\r\n    <id>http://www.pseale.com/blog/PermaLink,guid,fa7d9b1e-b3f0-41f4-98b4-f06439b44628.aspx</id>\r\n
+      \   <published>2011-08-10T21:59:54.0143656-07:00</published>\r\n    <updated>2011-08-10T21:59:54.0143656-07:00</updated>\r\n
+      \   <category term=\".NET\" label=\".NET\" scheme=\"http://www.pseale.com/blog/CategoryView,category,NET.aspx\"
+      />\r\n    <category term=\"PowerShell\" label=\"PowerShell\" scheme=\"http://www.pseale.com/blog/CategoryView,category,PowerShell.aspx\"
+      />\r\n    <content type=\"xhtml\">\r\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n
+      \       <h3>A warning\r\n</h3>\r\n        <p>\r\nThis post in its entirety isn’t
+      readable by humans. I’m sorry. I started by picking\r\nout a few psake scripts
+      here and there, figuring hey. I’ll pick one or two examples\r\nand talk about
+      what they’re doing.\r\n</p>\r\n        <p>\r\nThe problem with writing a blog
+      post about build scripts is it’s pretty boring. No\r\none idly browsing their
+      feed reader makes it through an entire post without being\r\nknocked unconscious.
+      Ooh, that reminds me: if you’re currently operating heavy machinery\r\nor piloting
+      a jet plane, for your safety please stop reading this blog post. Thanks.\r\n</p>\r\n
+      \       <p>\r\nBut. But, even though it’s well known that this kind of stuff
+      is boring to read about,\r\nI <strong>still</strong> want to collect all the
+      knowledge on this earth related to\r\npsake and how people are using it. And
+      I’ve done that below (at least as of 2011-08-10).\r\n</p>\r\n        <p>\r\nUnfortunately
+      for you, my dear reader, I’ve made no attempt to process my raw data\r\ncollection
+      into something readable, what with sentences, paragraphs, code samples\r\nand
+      topical grouping. That takes way too long. I’m too lazy for that.\r\n</p>\r\n
+      \       <p>\r\nInstead, I’m linkblogging a clump of psake scripts and mentioning
+      what pieces you\r\nmay want to steal for your own build script. \r\n</p>\r\n
+      \       <p>\r\nAs a bonus (and because it’s part of what I’m researching), I’ve
+      included a bunch\r\nof links to deployment-related blog posts and deployment
+      scripts. These things are\r\ngold, and despite their seeming tinyness and insignificance,
+      represent hours of sweat\r\nand toil.\r\n</p>\r\n        <h3>Don’t Read This
+      Blog Post – Search It\r\n</h3>\r\n        <p>\r\nSo I don’t expect anyone to,
+      you know, read this post. But, if you’re like me, you’ll\r\nfind that when it
+      comes time to, say, add a NUnit test runner to your build script,\r\nor say,
+      deploy to a remote IIS server, you’ll fire up your handy browser search (CTRL+F)\r\nand
+      go looking for a script.\r\n</p>\r\n        <h3>Well, maybe go ahead and read
+      when I tell you to <font style=\"background-color: #dfce04\" color=\"#333333\">pay\r\nattention</font></h3>\r\n
+      \       <p>\r\nA few places where I think a build script has done something
+      novel, I’ll put a small\r\nnote telling you to <font style=\"background-color:
+      #dfce04\">pay attention</font>.\r\nIt’s not meant to be insulting, but a way
+      to un-zombify your brain so that you actually\r\nread that bullet point—so that
+      it stands out from the endless sea of text and bullet\r\npoints. I know, I could
+      take the time to blog an entire post about each one of these\r\npoints, and
+      maybe I will. But for now, bet on my laziness and assume I won’t, and\r\npay
+      a little extra attention to how these folk put together their build scripts.\r\n</p>\r\n
+      \       <p>\r\nIt’s like the famous quote from Passenger 57: “You ever play
+      roulette? Always bet\r\non Peter being lazy.” <font color=\"#666666\">–Wesley
+      Snipes, <u>Passenger 57</u>, word-for-word\r\nquote</font></p>\r\n        <p>\r\nNow
+      that you’re mentally prepared for the hail of bullets that is to follow (bullet\r\npoints,
+      that is), have at it.\r\n</p>\r\n        <p align=\"center\">\r\n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\r\n</p>\r\n
+      \       <p>\r\n          <strong>JP Boodhoo</strong> wrote the first* non-trivial
+      publicly-available psake\r\nscript, and thus <strong>you’ll notice all the other
+      scripts have borrowed bits and\r\npieces from his script</strong> (particularly
+      the ruby_style_naming_convention which_is_not_camel_case\r\nlike_PowerShell_should_be):
+      \r\n<br /><font size=\"1\">*that I remember</font></p>\r\n        <ul>\r\n          <li>\r\n
+      \           <a href=\"http://blog.jpboodhoo.com/InterestedInTradingInYourNAntBuildsATeaser.aspx\">build\r\nscript</a>\r\n
+      \         </li>\r\n          <ul>\r\n            <li>\r\nHe is the only person
+      who doesn’t rely on Solutions/Project files to compile his project,\r\ninstead
+      relying on aspnet_compiler.exe. Note, for those of you unaware, if you set\r\nthe
+      OutDir parameter for MSBuild, it will compile web application projects with
+      surprisingly\r\npleasant results.</li>\r\n            <li>\r\nHe has written
+      his own miniature database migration tool using only PowerShell. Not\r\nbad
+      if I do say so myself.</li>\r\n            <li>\r\nHe makes clever use of “dir”
+      to lazily find all files he needs to compile (e.g. “dir\r\n* -include *.cs -recurse\")</li>\r\n
+      \         </ul>\r\n        </ul>\r\n        <p>\r\n          <strong>Ayende’s
+      </strong>scripts:\r\n</p>\r\n        <ul>\r\n          <li>\r\nRhino ESB – <a
+      href=\"https://github.com/hibernating-rhinos/rhino-esb/blob/master/default.ps1\">default.ps1</a>
+      and <a href=\"https://github.com/hibernating-rhinos/rhino-esb/blob/master/psake_ext.ps1\">psake-ext.ps1</a></li>\r\n
+      \         <ul>\r\n            <li>\r\nCompiles by running MSBuild on the .sln
+      file</li>\r\n            <li>\r\nPackages with the NuGet.exe command-line tool</li>\r\n
+      \           <li>\r\nZips files using the 7zip (7za.exe) command-line tool</li>\r\n
+      \           <li>\r\nRuns XUnit tests via xunit.console.clr4.exe</li>\r\n            <li>\r\nGenerates
+      AssemblyInfo.cs (which, if you’re unaware, is where you get your assembly\r\nversion
+      number from)</li>\r\n            <li>\r\nPulls the desired version number from
+      Git source control using the git.exe command-line\r\ntool</li>\r\n          </ul>\r\n
+      \         <li>\r\nRavenDB – <a href=\"https://github.com/ravendb/ravendb/blob/master/psake_ext.ps1\">default.ps1</a>
+      and <a href=\"https://github.com/ravendb/ravendb/blob/master/psake_ext.ps1\">psake-ext.ps1</a></li>\r\n
+      \         <ul>\r\n            <li>\r\nNeat way to check for installed software
+      (prerequisites)—this checks to ensure you\r\nhave .NET 4.0 installed (see the
+      “Verify40” task)</li>\r\n            <li>\r\nRuns a complex test scenario in
+      the “TestSilverlight” task—it fires up a local Raven\r\nserver in RAM, runs
+      Silverlight-related unit tests, then kills the Raven server.</li>\r\n            <li>\r\nPackages
+      files from disparate sources—RavenDB shows how it’s done. Hint: it’s not\r\npretty.</li>\r\n
+      \           <li>\r\nZips files using the zip.exe command-line tool (i.e., not
+      the same tool at 7zip)</li>\r\n            <li>\r\nBuilds what appears to be
+      an intense NuGet package</li>\r\n            <li>\r\nUploads static web content
+      to a live environment using S3Uploader.exe</li>\r\n            <li>\r\nNote
+      the simple <a href=\"http://ravendb.net/faq/building-from-source\">build instructions\r\nfound
+      here</a></li>\r\n          </ul>\r\n          <li>\r\n            <a href=\"http://ayende.com/blog/4232/texo-my-power-shell-continuous-integration-server\">Texo\r\n(his
+      jokingly/admittedly-NIH PowerShell Continuous Integration server)</a>\r\n          </li>\r\n
+      \         <ul>\r\n            <li>\r\n              <a href=\"https://github.com/ayende/Texo/blob/master/Texo/Builder.ps1\">builder.ps1</a>\r\n
+      \           </li>\r\n            <ul>\r\n              <li>\r\nSends email</li>\r\n
+      \             <li>\r\nTries to get latest on a git branch via raw git.exe commands</li>\r\n
+      \           </ul>\r\n          </ul>\r\n        </ul>\r\n        <p>\r\n          <strong>DotLess:</strong>\r\n
+      \       </p>\r\n        <ul>\r\n          <li>\r\n            <a href=\"https://mirrors.kilnhg.com/Repo/Mirrors/From-Git/DotLess/File/default.ps1?rev=tip\">default.ps1</a>\r\n
+      \         </li>\r\n          <ul>\r\n            <li>\r\nCompiles by running
+      MSBuild on the .csproj files</li>\r\n            <li>\r\nRuns ILMerge</li>\r\n
+      \           <li>\r\nBuilds a gem (as in, RubyGems gem)</li>\r\n            <li>\r\nBuilds
+      a NuGet package</li>\r\n          </ul>\r\n        </ul>\r\n        <p>\r\n
+      \         <strong>LINQToEPiServer:</strong>\r\n        </p>\r\n        <ul>\r\n
+      \         <li>\r\n            <a href=\"https://github.com/akselsson/LinqToEPiServer/blob/master/default.ps1\">default.ps1</a>\r\n
+      \         </li>\r\n          <ul>\r\n            <li>\r\nCompiles by running
+      MSBuild on the .sln file</li>\r\n            <li>\r\nStarts the MSDTC service
+      (SQL Server distributed transactions) using net start</li>\r\n            <li>\r\nDoes
+      extreme funkiness with NUnit impersonating MSTest…I have no idea why.</li>\r\n
+      \           <li>\r\nModifies all config files with a simple homebrew templating
+      engine (think string.format’s\r\n{0} {1} etc.).</li>\r\n          </ul>\r\n
+      \       </ul>\r\n        <p>\r\n          <strong>CodeCampServer:</strong>\r\n
+      \       </p>\r\n        <ul>\r\n          <li>\r\n            <a href=\"http://codecampserver.codeplex.com/SourceControl/changeset/view/4755c1386bff#psake.bat\">psake.bat</a>\r\n
+      \         </li>\r\n          <ul>\r\n            <li>\r\nA pretty good psake
+      launcher that does everything you need to run the build script, <strong>plus
+      </strong>highlights\r\nfailed builds.</li>\r\n          </ul>\r\n          <li>\r\n
+      \           <a href=\"http://codecampserver.codeplex.com/SourceControl/changeset/view/4755c1386bff#default.ps1\">default.ps1</a>\r\n
+      \         </li>\r\n          <ul>\r\n            <li>\r\nCompiles by running
+      MSBuild on the .sln file</li>\r\n            <li>\r\nIncludes a large number
+      of <strong>helper functions</strong>. <font style=\"background-color: #dfce04\">Pay\r\nattention</font>
+      to the fact that in psake, you don’t have to use tasks for everything—by\r\nall
+      means write first-class functions that accept arguments! Arguments! They’re
+      awesome!\r\nUse them!</li>\r\n            <li>\r\nRuns Tarantino (database migration
+      tool)</li>\r\n            <li>\r\nRuns FXCop and something called “SourceMonitor”</li>\r\n
+      \           <li>\r\nRuns NUnit both with and without NCover code coverage metrics</li>\r\n
+      \           <li>\r\nZips whole directories</li>\r\n          </ul>\r\n          <li>\r\n
+      \           <a href=\"http://codecampserver.codeplex.com/SourceControl/changeset/view/4755c1386bff#nant.build\">nant.build</a>\r\n
+      \         </li>\r\n          <ul>\r\n            <li>\r\nI know this has nothing
+      to do with psake, but there’s a lot of stuff in there. A lot\r\nof the command-line
+      call-outs can be converted to your needs.</li>\r\n          </ul>\r\n          <li>\r\nDeployment
+      helper functions nicely packaged into PowerShell module files (psm1)</li>\r\n
+      \         <ul>\r\n            <li>\r\n              <a href=\"http://codecampserver.codeplex.com/SourceControl/changeset/view/4755c1386bff#lib%2fpstrami%2fpstrami%2fDatabase.psm1\">Database.psm1</a>
+      -\r\nUses .NET’s SMO objects(?) to interact with SQL Server</li>\r\n            <ul>\r\n
+      \             <li>\r\nCreates SQL Server user (an Integrated user, not a native
+      SQL user) on the SQL instance\r\nand on the SQL database</li>\r\n              <li>\r\nDoes
+      something scary-looking that appears to export an entire database, but not the\r\nway
+      you’re thinking—not the normal way of exporting a database.</li>\r\n            </ul>\r\n
+      \           <li>\r\n              <a href=\"http://codecampserver.codeplex.com/SourceControl/changeset/view/4755c1386bff#lib%2fpstrami%2fpstrami%2fpackage.psm1\">Package.psm1</a>
+      –\r\nUses a COM object called “shell.application” to Zip a directory</li>\r\n
+      \           <ul>\r\n              <li>\r\nUnlike my (and everyone else’s) implementation,
+      this zip function makes use of object\r\npiping to receive the list of files.
+      Nice.</li>\r\n            </ul>\r\n            <li>\r\n              <a href=\"http://codecampserver.codeplex.com/SourceControl/changeset/view/4755c1386bff#lib%2fpstrami%2fpstrami%2fScheduledJobs.psm1\">ScheduledJobs.psm1</a>
+      –\r\nUses a COM object “schedule.service” to manipulate Windows Scheduled Tasks</li>\r\n
+      \           <ul>\r\n              <li>\r\nCreates a new scheduled task.</li>\r\n
+      \           </ul>\r\n            <li>\r\n              <a href=\"http://codecampserver.codeplex.com/SourceControl/changeset/view/4755c1386bff#lib%2fpstrami%2fpstrami%2fwindows.psm1\">Windows.psm1</a>
+      –\r\nUses PowerShell’s WMI support to create local (<strong>not </strong>domain)
+      users\r\nand assigns users to groups.</li>\r\n            <ul>\r\n              <li>\r\nCreates
+      a local user on the machine</li>\r\n              <li>\r\nAdds a user to a local
+      group</li>\r\n            </ul>\r\n            <li>\r\n              <a href=\"http://pstrami.codeplex.com/SourceControl/changeset/view/7bb8c2dd0326#src%2fpstrami%2fmodules%2fIIS.psm1\">IIS.psm1</a>
+      –\r\nuses the “WebAdministration” IIS cmdlets to manipulate IIS</li>\r\n            <ul>\r\n
+      \             <li>\r\nCreates an IIS website object and actually sets the bindings
+      successfully (yessssssssss).</li>\r\n            </ul>\r\n          </ul>\r\n
+      \       </ul>\r\n        <p>\r\n          <strong>Aaron Weiker’s blog series</strong>\r\n
+      \       </p>\r\n        <ul>\r\n          <li>\r\n            <a href=\"http://aaronweiker.com/2010/10/23/handling-multiple-environments-with-psake\">sample\r\npsake
+      script from his blog post</a>\r\n          </li>\r\n          <ul>\r\n            <li>\r\nCompiles
+      by running MSBuild on the .sln file</li>\r\n            <li>\r\nConfigures app.configs
+      with environment-specific modifications using XPath (i.e. a\r\nlot more like
+      the NAnt/MSBuild helpers, and less hacky than doing string search &amp;\r\nreplace)</li>\r\n
+      \           <li>\r\nRuns RoboCopy</li>\r\n            <li>\r\nOne neat thing
+      I haven’t started doing, but desperately need to start doing, is to\r\nstart
+      throwing exceptions if script/function parameters are not passed in. <font style=\"background-color:
+      #dfce04\">Pay\r\nattention</font> and see lines #1-4 of his psake script to
+      see what I mean by this. <strong>I’ve\r\nlost hours of my life</strong> I will
+      never get back troubleshooting PowerShell scripts\r\nover the years only to
+      find that I passed in a paramter called “-name” when I needed\r\nto pass in
+      a parameter called “-fullname”. So, if you don’t do this either, start\r\ndoing
+      it.</li>\r\n          </ul>\r\n        </ul>\r\n        <p>\r\n          <strong>Darrel
+      Mozingo’s blog series</strong>\r\n        </p>\r\n        <ul>\r\n          <li>\r\n
+      \           <a href=\"http://darrell.mozingo.net/2010/04/02/revisiting-my-automated-build-continuous-integration-setup/\">sample\r\npsake
+      script from his blog post</a>\r\n          </li>\r\n          <ul>\r\n            <li>\r\nCompiles
+      by running MSBuild on the .sln file</li>\r\n            <li>\r\nRuns NCover
+      and NCoverExplorer</li>\r\n            <li>\r\nIncludes helper methods that
+      won’t make any sense to you until you actually use PowerShell\r\nand are annoyed
+      by the same things that caused him to write those one-line helper\r\nmethods.
+      <font style=\"background-color: #dfce04\">Pay attention</font> to the little\r\nthings
+      he does in his helper methods that you probably think are fluff. Pop quiz:\r\nwhy
+      did he write a create_directory helper method? <strong>I’ve experienced the
+      pain </strong>and\r\nknow the answer. If you haven’t, take my and his word for
+      it and at least attempt\r\nto figure out why those helper methods exist.</li>\r\n
+      \         </ul>\r\n          <li>\r\nFour-part series on <strong>deployment</strong>
+      with PowerShell (<a href=\"http://darrell.mozingo.net/2010/09/24/production-deployment-with-your-build-script-part-1/\">1</a>,
+      <a href=\"http://darrell.mozingo.net/2010/11/12/production-deployment-with-your-build-script-part-2/\">2</a>,
+      <a href=\"http://darrell.mozingo.net/2010/11/24/production-deployment-with-your-build-script-part-3/\">3</a>,
+      <a href=\"http://darrell.mozingo.net/2010/12/03/production-deployment-with-your-build-script-part-4/\">4</a>)</li>\r\n
+      \         <ul>\r\n            <li>\r\nPart 2:</li>\r\n            <ul>\r\n              <li>\r\nModifies
+      web.config via PowerShell’s built-in [xml] object wrapper (but only making\r\na
+      minor edit)</li>\r\n              <li>\r\nPre-compiles the ASP.NET site</li>\r\n
+      \             <li>\r\nWrites a CPS-style (CPS-style-style? I feel better now.)
+      function that maps a network\r\nshare, yields to the caller, then unmaps when
+      done.</li>\r\n              <li>\r\nTakes a configuration backup of the live
+      ASP.NET site</li>\r\n            </ul>\r\n            <li>\r\nPart 3:</li>\r\n
+      \           <ul>\r\n              <li>\r\n                <strong>Remotely</strong>
+      manages IIS via PowerShell remoting (starting &amp; stopping\r\nIIS)</li>\r\n
+      \           </ul>\r\n            <li>\r\nPart 4:</li>\r\n            <ul>\r\n
+      \             <li>\r\nRewrites the system hosts file</li>\r\n              <li>\r\nTests
+      current DNS settings (cool!)</li>\r\n              <li>\r\nLoads Internet Explorer
+      to ping the website to force it to compile itself</li>\r\n              <li>\r\nVerifies
+      emails are being sent (so hot!)</li>\r\n            </ul>\r\n          </ul>\r\n
+      \       </ul>\r\n        <p>\r\n          <strong>A blog series</strong>\r\n
+      \       </p>\r\n        <ul>\r\n          <li>\r\n            <a href=\"http://www.yangq.org/2011/04/09/automate-asp-net-deployment-with-powershell-install-and-update/\">psake\r\nscript
+      and run.bat</a> (download demo.zip linked from this site if you want to see\r\nthe
+      raw psake script)</li>\r\n          <ul>\r\n            <li>\r\nThe run.bat
+      sample does something novel—<font style=\"background-color: #dfce04\">pay\r\nattention</font>
+      to how it loads PowerShell as a shell (REPL environment), not as\r\na run-and-exit
+      script. Smooth.</li>\r\n            <li>\r\nIIS adminstration via a mix of IIS
+      (“WebAdministration”) cmdlets and WMI. Smooth.\r\nCreates a website and a new
+      AppPool.</li>\r\n          </ul>\r\n        </ul>\r\n        <p>\r\n          <a
+      href=\"http://www.hanselman.com/blog/content/binary/Hanselman%20-%20Managing%20System%20Deployment%20with%20PowerShell.pdf\">\r\n
+      \           <strong>Señor\r\nHanselman apparently wrote a whitepaper about deploying
+      with PowerShell</strong>\r\n          </a>\r\n        </p>\r\n        <ul>\r\n
+      \         <li>\r\nGets latest from a SVN repository via a .NET SVN library</li>\r\n
+      \         <li>\r\nDoes heap big remoting work pre-PowerShell 2.0 (i.e. ,before
+      PowerShell had any built-in\r\nremoting support)</li>\r\n        </ul>\r\n        <p>\r\n
+      \         <strong>Mikael Lundin (litemedia) blogged</strong>\r\n        </p>\r\n
+      \       <ul>\r\n          <li>\r\n            <a href=\"http://litemedia.info/automate-deploy-of-your-orchard-cms-to-azure\">psake\r\nscript
+      that deploys to Azure</a>\r\n          </li>\r\n          <ul>\r\n            <li>\r\nCompiles
+      by running MSBuild on the .sln file</li>\r\n            <li>\r\nDeploys to Azure</li>\r\n
+      \         </ul>\r\n        </ul>\r\n        <p>\r\nI should mention<strong /><a
+      href=\"http://albacorebuild.net/\"><strong>Derick\r\nBailey’s Albacore project
+      for .NET</strong></a> – it’s a collection of Rake (Ruby)\r\ntasks that are the
+      equivalent of a lot of what I’ve listed above. And from what I’ve\r\nseen, it
+      has some things I haven’t covered above. Here’s list of things it does, machine-gun-style:\r\n</p>\r\n
+      \       <ul>\r\n          <li>\r\ncsc.exe, docu, FluentMigrator, MSBuild, MSpec,
+      MSTest, NAnt, NChurn, NCover, NDepend,\r\nNUnit, NuSpec, Plink, SpecFlow, Sqlcmd,
+      zip/unzip, XBuild, XUnit.</li>\r\n        </ul>\r\n      </div>\r\n    </content>\r\n
+      \ </entry>\r\n  <entry>\r\n    <title>TFS As Your Build/CI Server: Only Positive
+      Takeaways 2 of 2</title>\r\n    <link rel=\"alternate\" type=\"text/html\" href=\"http://www.pseale.com/blog/TFSAsYourBuildCIServerOnlyPositiveTakeaways2Of2.aspx\"
+      />\r\n    <id>http://www.pseale.com/blog/PermaLink,guid,4ce360f1-baf5-45c1-bb47-26580a4ac7e7.aspx</id>\r\n
+      \   <published>2011-08-09T10:40:45.3025458-07:00</published>\r\n    <updated>2011-08-09T16:57:22.6691506-07:00</updated>\r\n
+      \   <category term=\".NET\" label=\".NET\" scheme=\"http://www.pseale.com/blog/CategoryView,category,NET.aspx\"
+      />\r\n    <content type=\"xhtml\">\r\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n
+      \       <p>\r\nI’m unmotivated today at work, partly because I’m switching us
+      from MSTest to NUnit.\r\nI’ll be happy again once it’s done, but not until then.\r\n</p>\r\n
+      \       <p>\r\nWith that in mind, I’m ready to give the second half of my “using
+      TFS as a CI server”\r\nadvice, borne out of my experience on a real team project
+      running TFS as our CI server.\r\n</p>\r\n        <p>\r\nThis one’s going to
+      be less positive than my <a href=\"http://www.pseale.com/blog/TFSAsYourBuildCIServerOnlyPositiveTakeaways1Of2.aspx\">Using\r\nTFS
+      as your CI Server part one</a>, and if you’re not in the mood to read, I’ll
+      just\r\nsummarize: \r\n</p>\r\n        <ul>\r\n          <li>\r\nDon’t use MSTest
+      as your unit testing framework, and \r\n</li>\r\n          <li>\r\nIf forced
+      to use TFS 2010 as your CI server, minimize your exposure to the XAML build\r\nscript,
+      instead delegating your entire build script to PowerShell or MSBuild or whatever\r\nelse
+      tickles your fancy. Don’t use TFS 2010 Build XAML, it isn’t worth the effort\r\nto
+      set up a real build entirely written in Workflow Activities. It’s probably possible,\r\nbut
+      not worth the effort.</li>\r\n        </ul>\r\n        <h3>Switch to NUnit:
+      The MSTest test runner is non-deterministic and will do great\r\nharm to your
+      CI experience\r\n</h3>\r\n        <p>\r\nWe’ve had serious problems getting
+      consistent results out of our MSTest test runs\r\nfor our two projects. Turning
+      off various features (such as code coverage) has helped\r\nsome, but not enough.
+      It’s worth your effort to  <a href=\"http://blog.shawnewallace.com/2011/02/running-nunit-tests-in-tfs-2010.html\">switch\r\nto
+      NUnit</a> if you’re serious about doing unit testing. Sorry MSTest, I tried,
+      but\r\nthe test runner fails way too often.\r\n</p>\r\n        <p>\r\nFor nitpickers,
+      you don’t have to switch to NUnit. You could switch to anything.\r\n</p>\r\n
+      \       <h3>Switch to NUnit: MSTest leaks memory and cannot support our test
+      runs\r\n</h3>\r\n        <p>\r\nThis isn’t as important as the failing test
+      run. It is important if it ever happens\r\nto you and you have to rework your
+      test runs such that you don’t run out of memory\r\nany more. I’ve searched and
+      <a href=\"http://stackoverflow.com/questions/256354/ughhhhhhhhhhhhhh\">we’re\r\nnot
+      the only people running into this problem</a>.\r\n</p>\r\n        <h3>I hate
+      Windows Workflow Foundation, and Windows Workflow Foundation hates me\r\n</h3>\r\n
+      \       <p>\r\nAyende ruined me with his JFHCI series of blog posts <a href=\"http://www.pseale.com/blog/LinkbloggingHardcodingVsConfiguration.aspx\">(I\r\nblogged
+      about the topic here)</a>. After being enlightened to the fact that code (or\r\nif
+      you prefer, <em>script</em>) is better in every way* over XML configuration,
+      I’m\r\nruined on ever using Workflow Foundation for anything. Ever. \r\n<br
+      /><font size=\"1\">*exaggeration </font></p>\r\n        <p>\r\nWith that in
+      mind, I’m not a fan of the reworked TFS 2010 XAML build system. However,\r\nthis
+      post is only the positive takeaways, so I shouldn’t get carried away talking\r\nabout
+      the build system, and instead talk about what you should do when told to set\r\nup
+      your build in something called “xaml”.\r\n</p>\r\n        <h3>TFS 2010 Build
+      XAML is a V1 Microsoft Product\r\n</h3>\r\n        <p>\r\nSome of you are not
+      going to like this, but: avoid the XAML.\r\n</p>\r\n        <p>\r\nAvoid the
+      XAML build system. It takes a long time to test build scripts, it is painful\r\nand
+      the designer is buggy, it has almost no built-in Workflow Activities (e.g. there\r\nis
+      no a “copy file” activity), it is harder to follow, harder to modify, painful
+      to\r\nuse with multiple branches sharing the same build XAML. PowerShell’s REPL
+      shortens\r\nthe feedback loop to something like 10 seconds, and MSBuild and
+      NAnt can be configured\r\nsuch that you get feedback within a few seconds as
+      well. TFS Build’s feedback loop\r\nis something like 10+ minutes, depending
+      on how long your entire build takes.\r\n</p>\r\n        <p>\r\nTo be clear,
+      the TFS Build feedback loop is as follows:\r\n</p>\r\n        <ul>\r\n          <li>\r\nSave,
+      wait 10+ seconds for the save operation to complete.</li>\r\n          <li>\r\nNavigate
+      to the Source Control WIndow, check in the XAML file in the BuildProcessTemplates\r\nfolder.</li>\r\n
+      \         <li>\r\nNavigate to the Team Explorer and kick off a build manually.</li>\r\n
+      \         <li>\r\nWait until the build completes.</li>\r\n          <li>\r\nOpen
+      the build summary for the build you completed.</li>\r\n        </ul>\r\n        <h3>Takeaway:
+      minimize your XAML exposure\r\n</h3>\r\n        <p>\r\nMy preferred method of
+      avoiding the XAML build system is to <a href=\"http://www.ewaldhofman.nl/post/2010/11/09/Part-14-Execute-a-PowerShell-script.aspx\">call\r\nout
+      to PowerShell immediately</a> for your entire build script. I’m serious—don’t\r\neven
+      try to build your entire build script in the XAML designer.\r\n</p>\r\n        <p>\r\n
+      \         <a href=\"http://www.ewaldhofman.nl/post/2010/11/09/Part-14-Execute-a-PowerShell-script.aspx\">This\r\nblog
+      post explains how to call PowerShell from TFS</a>. I’m not giving you the full\r\nsolution,
+      because working with TFS build is demotivating and I don’t want to spend\r\nany
+      more time than is necessary here, but I’ll link to a partial solution. \r\n</p>\r\n
+      \       <p>\r\nHere’s a rough idea of what to do: \r\n</p>\r\n        <ul>\r\n
+      \         <li>\r\nFind a XAML build script for your starting point, delete almost
+      all of it, and add\r\none InvokeProcess activity that calls out to PowerShell.
+      \r\n</li>\r\n          <li>\r\nMake sure to pass in necessary arguments like
+      SourcesDirectory, BinariesDirectory,\r\netc. \r\n</li>\r\n          <li>\r\nPut
+      all your compiling, test running, ClickOnce manifest building, packaging, deploying\r\nto
+      Dev environment-ing, XML configuration modifications…put all these things in
+      the\r\nPowerShell script.</li>\r\n          <li>\r\n            <a href=\"http://codebetter.com/jameskovacs/2010/04/12/psake-v4-00/\">Investigate
+      psake\r\nif you’re serious about doing your build in PowerShell</a>. \r\n</li>\r\n
+      \         <li>\r\nIf you’re not a PowerShell fan, by all means call out to MSBuild
+      or NAnt using the\r\nInvokeProcess activity. Whatever you do, just don’t try
+      and wrangle with the TFS 2010\r\nbuild XAML. \r\n</li>\r\n        </ul>\r\n
+      \       <p>\r\nIt’s worth the extra effort to get the call-out mechanism working,
+      even if it seems\r\nlike “this is taking longer than it should.”\r\n</p>\r\n
+      \       <h3>Use Arguments for your TFS 2010 Workflow Builds\r\n</h3>\r\n        <p>\r\nThe
+      one thing I like about the TFS 2010 build system is the concept of workflow
+      arguments,\r\nwherein you can change settings “at runtime,” or specifically
+      when queueing up a build.\r\nThis is particularly good for us if we want to
+      temporarily turn off tests or run a\r\n“deploy” build from TFS with certain
+      parameters provided only at runtime. In TeamCity\r\nthere were a few freetext
+      text boxes that allowed you to type whatever arguments you\r\nwanted, but there
+      was no guidance per-se. Nothing to tell you “Our build script is\r\nlooking
+      for precisely three things: a) the NUnit tools directory (though I’ve provided\r\na
+      default); b) whether or not you want to deploy to the Dev environment; c) whether\r\nto
+      run tests.” The TFS 2010 Workflow does exactly this in an extensible way. Nice.\r\n</p>\r\n
+      \       <p>\r\nYou can set up your “call out to PowerShell/MSBuild/NAnt/whatever”
+      activity to pass\r\nany of these runtime-provided arguments as you need them.\r\n</p>\r\n
+      \       <h3>My framework/platform strategy\r\n</h3>\r\n        <p>\r\nI have
+      a few basic strategies for using frameworks or platforms or basically anything\r\nto
+      do with computers:\r\n</p>\r\n        <ul>\r\n          <li>\r\n            <strong>\r\n
+      \             <font style=\"background-color: #ffff00\">If it works, learn to
+      use it well.</font>\r\n            </strong> For\r\nexample, Windows 7’s new
+      features/hotkeys/start menu search, Google Reader hotkeys,\r\nC# syntax, ReSharper,
+      the commercial ORM we’re using. I’ll generally spend the time\r\nit takes to
+      a) learn the product, and b) use it as intended.</li>\r\n          <li>\r\n
+      \           <strong>\r\n              <font style=\"background-color: #ffff00\">If
+      it doesn’t work, avoid it.</font>\r\n            </strong> For\r\nexample, Windows
+      Vista’s start menu search—I turned it off completely. The MSTest\r\ntest runner
+      falls in this category. I am also not a fan of most of the more advanced\r\nWPF
+      language features, and don’t use them.</li>\r\n        </ul>\r\n        <p>\r\nI
+      also react very differently to frameworks I trust and those I don’t trust (i.e.\r\nthose
+      that “work” and those that “don’t work”):\r\n</p>\r\n        <ul>\r\n          <li>\r\n
+      \           <strong>If I’m experiencing a problem with a framework I trust,
+      I’ll read up and try\r\nto find the correct solution</strong> because I’ll assume
+      I’m at fault. Today this\r\nmeans, if I see NUnit’s test runner throw an OutOfMemoryException,
+      I’ll blame us first.</li>\r\n          <li>\r\n            <strong>If I’m experiencing
+      a problem with a framework I don’t trust, I’ll write the\r\ndirtiest, quickest
+      workaround available </strong>because assume the framework at fault.\r\nI learned
+      this lesson the hard way while working on a “quick” SP Workflow project\r\na
+      few years ago. Today this means, if I see MSTest’s test runner throw an OutOfMemoryException,\r\nI’ll
+      blame MSTest and switch us to NUnit.</li>\r\n        </ul>\r\n        <p>\r\nSomething
+      I don’t think I’m saying outright is, these labels of “it works” or “it\r\ndoesn’t
+      work” affect how I deal with <u>everything</u> I do with software. With TFS\r\nas
+      a source control solution, I’m dealing with it as\r\n</p>\r\n        <ol>\r\n
+      \         <li>\r\nA product that works great for SVN-style source control. Edit,
+      merge, commit. Works\r\ngreat. Merge even works as of TFS 2010. <strong>Try
+      to figure out why you’re having\r\nproblems.</strong></li>\r\n          <li>\r\nA
+      product that does not work offline or remotely. Don’t try offline mode, period,\r\nand
+      avoid doing heavy TFS work (e.g. moving directories of files around) remotely.
+      <strong>Avoid\r\nor work around the problem</strong>, in other words.</li>\r\n
+      \         <li>\r\nA product that branches, painfully. If you experience problems
+      with branching, <strong>work\r\naround the problem, </strong>potentially by
+      losing source control history. I’m okay\r\nwith losing file history. A lot of
+      people are not okay with that. Branch less, because\r\nit’s less painful than
+      dealing with the problems of having too few branches (and boy\r\nhowdy do we
+      ever need more branches).</li>\r\n        </ol>\r\n        <p>\r\nWith MSTest,
+      I deal with it as\r\n</p>\r\n        <ol>\r\n          <li>\r\nA unit test syntax
+      and local test runner that works great (if slow). <strong>Learn\r\nhow to use
+      it properly</strong>.</li>\r\n          <li>\r\nAn inconsistent CI test runner.
+      <strong>Avoid it if possible.</strong></li>\r\n        </ol>\r\n        <p>\r\nWith
+      TFS Build, I deal with it as\r\n</p>\r\n        <ol>\r\n          <li>\r\nA
+      bad language/environment for writing build scripts. <strong>Avoid it/escape
+      the\r\nXAML</strong> as soon as possible.</li>\r\n          <li>\r\nA reasonably
+      consistent CI server that is painful to navigate. <strong>Learn to use\r\nit</strong>,
+      and make the conscious choice to lose 5-10 minutes every day to navigating\r\nTFS
+      menus, and to allow for confusion given the TFS tray app doesn’t work well and\r\nmost
+      of the build status UI is confusing and inconsistent. Once you’re consciously\r\nokay
+      with losing some time navigating through the menus and closing+reloading build\r\nstatus
+      windows, you stop caring about those 5-10 minutes. It works. If you can’t stop\r\ncaring
+      about everything, you’ll eventually go crazy. Right? \r\n</li>\r\n        </ol>\r\n
+      \       <p>\r\nDid you see the pattern there? I have an internal list in my
+      head of which features\r\nI can trust and which ones I can’t trust. This list
+      keeps me sane.\r\n</p>\r\n        <p>\r\nDo others maintain their own internal
+      “I can trust this software” list, or am I just <strong><font size=\"5\"><font
+      color=\"#ff0000\">c</font><font color=\"#00ff00\">r</font><font color=\"#0000ff\">a</font><font
+      color=\"#ff0000\">z</font><font color=\"#00ff00\">y</font></font></strong>?\r\n</p>\r\n
+      \     </div>\r\n    </content>\r\n  </entry>\r\n  <entry>\r\n    <title>The
+      Ruby Train Goes Choo-Choo</title>\r\n    <link rel=\"alternate\" type=\"text/html\"
+      href=\"http://www.pseale.com/blog/TheRubyTrainGoesChooChoo.aspx\" />\r\n    <id>http://www.pseale.com/blog/PermaLink,guid,52b63c26-88af-487f-ae1f-5820031d9850.aspx</id>\r\n
+      \   <published>2011-07-05T22:01:48.1401695-07:00</published>\r\n    <updated>2011-07-14T12:25:22.3699219-07:00</updated>\r\n
+      \   <category term=\".NET\" label=\".NET\" scheme=\"http://www.pseale.com/blog/CategoryView,category,NET.aspx\"
+      />\r\n    <category term=\"Ruby\" label=\"Ruby\" scheme=\"http://www.pseale.com/blog/CategoryView,category,Ruby.aspx\"
+      />\r\n    <content type=\"html\">&lt;h3&gt;Microsoft MVPs, all aboard!\r\n&lt;/h3&gt;\r\n&lt;p
+      style=\"font-style: italic; letter-spacing: -0.06em; font-family: times new
+      roman, serif; font-size: 1.3em\"&gt;\r\n“&lt;a style=\"text-decoration: none\"
+      href=\"http://7enn.com/2011/07/04/appreciating-the-power-of-a-true-community/\"&gt;It’s\r\nlike
+      we were all reinventing wheels and barrels in .NET land in the past 5 years,\r\nwhen
+      just on the other side of the island, people were beginning to wonder what is\r\nthe
+      best material to pave a highway with? … It’s like the Ruby community lives 3x\r\nfaster
+      than the .NET community, and has been for the past 5 years.&lt;/a&gt;”\r\n&lt;/p&gt;\r\n&lt;hr
+      /&gt;\r\n&lt;p style=\"font-style: italic; letter-spacing: -0.06em; font-family:
+      times new roman, serif; font-size: 1.3em\"&gt;\r\n“&lt;a style=\"text-decoration:
+      none\" href=\"http://flux88.com/2011/05/rails-intrigue-video-at-nhdnug/\"&gt;Why\r\nis
+      it a pattern that, … people try out Rails, and they just never come back?&lt;/a&gt;”\r\n&lt;/p&gt;\r\n&lt;hr
+      /&gt;\r\n&lt;p style=\"font-style: italic; letter-spacing: -0.06em; font-family:
+      times new roman, serif; font-size: 1.3em\"&gt;\r\n“&lt;a style=\"text-decoration:
+      none\" href=\"http://lassala.net/2011/05/26/tooling-for-rails-development/\"&gt;I’m\r\nvery
+      happy with the tooling I have at hand at this point. I can’t really say, right\r\nnow,
+      that I’m missing anything from my .NET development environment. Quite the contrary,\r\nactually;
+      not having to cope with the lockups of VS, the non-sense behavior of TFS,\r\nthe
+      testing-hostile tools and frameworks, has been a blessing.&lt;/a&gt;”\r\n&lt;/p&gt;\r\n&lt;hr
+      /&gt;\r\n&lt;p style=\"font-style: italic; letter-spacing: -0.06em; font-family:
+      times new roman, serif; font-size: 1.3em\"&gt;\r\n“&lt;a style=\"text-decoration:
+      none\" href=\"http://www.codethinked.com/what-asp.net-mvc-could-learn-from-rails\"&gt;ASP.NET\r\nMVC
+      is a fine framework. I just don’t feel like it is as productive as it could
+      be.&lt;/a&gt;”\r\n&lt;/p&gt;\r\n&lt;hr /&gt;\r\n&lt;p style=\"font-size: 0.8em\"&gt;\r\n&amp;hellip;the
+      above list hastily compiled off the top of my head.\r\n&lt;/p&gt;\r\n&lt;h3&gt;There
+      are no .NET developers\r\n&lt;/h3&gt;\r\n&lt;p style=\"font-style: italic; letter-spacing:
+      -0.06em; font-family: times new roman, serif; font-size: 1.3em\"&gt;\r\n“&lt;a
+      style=\"text-decoration: none\" href=\"http://davybrion.com/blog/2011/06/keeping-things-interesting-or-avoiding-net-at-home/\"&gt;Other\r\nthan
+      that, I'd rather not spend time on [learning .NET at home]. It's not that i
+      don't\r\nlike .NET, but i just don't find it a very interesting space to be
+      in anymore. There's\r\nvery little innovation going on and the new things that
+      the community and Microsoft\r\nare working on most often seem like either new
+      libraries or frameworks to keep doing\r\nthe same things we've been doing for
+      years, or building things that other development\r\ncommunities already have
+      for a while now. It also doesn't help that a lot of the people\r\nwho used to
+      be in the ALT.NET community seem to be spending a lot of their spare time\r\nlearning
+      new languages and platforms instead of pushing for improvement in the .NET\r\ncommunity
+      like they used to do.”&lt;/a&gt;\r\n&lt;/p&gt;\r\n&lt;hr /&gt;\r\n&lt;p style=\"font-style:
+      italic; letter-spacing: -0.06em; font-family: times new roman, serif; font-size:
+      1.3em\"&gt;\r\n“&lt;a style=\"text-decoration: none\" href=\"http://www.codethinked.com/what-asp.net-mvc-could-learn-from-rails/comment-page-1#comment-23749\"&gt;What\r\nif
+      .NET developers stopped identifying themselves as .NET developers? What if they\r\njust
+      considered themselves to be developers? I think we’d see a lot less, “how do\r\nwe
+      get Microsoft X to catch up with Y?” and a lot more “Let’s just use Y because
+      it\r\nalready does what we want.”&lt;/a&gt; \r\n&lt;/p&gt;\r\n&lt;p style=\"font-style:
+      italic; letter-spacing: -0.06em; font-family: times new roman, serif; font-size:
+      1.3em\"&gt;\r\n&lt;a style=\"text-decoration: none\" href=\"http://www.codethinked.com/what-asp.net-mvc-could-learn-from-rails/comment-page-1#comment-23749\"&gt;Seriously,\r\nthe
+      amount of energy being poured into playing catch up is saddening. Imagine if
+      all\r\nof that effort was poured into the tool that’s already better at this.&lt;/a&gt;\r\n&lt;/p&gt;\r\n&lt;p
+      style=\"font-style: italic; letter-spacing: -0.06em; font-family: times new
+      roman, serif; font-size: 1.3em\"&gt;\r\n&lt;a style=\"text-decoration: none\"
+      href=\"http://www.codethinked.com/what-asp.net-mvc-could-learn-from-rails/comment-page-1#comment-23749\"&gt;&lt;font
+      color=\"#9b00d3\"&gt;There\r\nare no .NET Developers.&lt;/font&gt; There are
+      only developers who have been brainwashed\r\ninto thinking they can only write
+      code in .NET.&lt;/a&gt;”\r\n&lt;/p&gt;\r\n&lt;h3&gt;Takeaways\r\n&lt;/h3&gt;\r\n&lt;ol&gt;\r\n&lt;li&gt;\r\n&lt;strong&gt;Ruby
+      (Rails) and other non-.NET frameworks are crossing the chasm into the\r\nmainstream.&lt;/strong&gt;
+      \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;strong&gt;Rails is a better platform.&lt;/strong&gt;
+      Every former .NET developer who has first\r\ntried, then written, about Ruby
+      on Rails has reported it’s both more enjoyable and\r\nmore productive. &lt;strong&gt;&lt;font
+      style=\"background-color: #ffff00\" color=\"#c0504d\"&gt;Every&lt;/font&gt;&lt;/strong&gt;,
+      &lt;strong&gt;&lt;font style=\"background-color: #ffff00\" color=\"#d19049\"&gt;single&lt;/font&gt;&lt;/strong&gt;,
+      &lt;strong&gt;&lt;font style=\"background-color: #ffff00\" color=\"#a5b592\"&gt;one&lt;/font&gt;&lt;/strong&gt;.
+      &lt;a href=\"http://kenegozi.com/blog/2011/07/08/the-ruby-train-goes-blah-blah-blah\"&gt;&lt;font
+      color=\"#ff0000\"&gt;EDIT\r\n2011-07-11: ok, maybe I exaggerated. Ken has something
+      to say as a .NET/Ruby guy who\r\nstill likes .NET as much as/more than Ruby&lt;/font&gt;&lt;/a&gt;
+      \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\nI’m sensing (and feeling) &lt;strong&gt;Microsoft’s
+      .NET platform is stagnating&lt;/strong&gt;,\r\nespecially recently. Aside from
+      multiple positive reports [&lt;a href=\"http://news.ycombinator.com/item?id=2658101\"&gt;1&lt;/a&gt;,
+      &lt;a href=\"http://twitter.com/#!/jphamilton/status/66356800177455104\"&gt;2&lt;/a&gt;]\r\non
+      the NHibernate rewrite, I have nothing to look forward to in .NET. And while
+      I’m\r\nhere, let me be the first to say: &lt;a href=\"http://arstechnica.com/microsoft/news/2011/06/windows-8-for-software-developers-the-longhorn-dream-reborn.ars\"&gt;providing\r\na
+      new platform for Windows development&lt;/a&gt; excites me in the same way that
+      iPhone-platform\r\ndevelopment excites me—that is to say, not at all. \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;strong&gt;You
+      don’t have to self-identify as a .NET developer.&lt;/strong&gt; Instead, self-identify\r\nas
+      a developer whose skillset is in .NET. Learn another platform (&lt;a href=\"http://twitter.com/#!/ampgt/status/87596504604360704\"&gt;which\r\nis
+      surprisingly easy&lt;/a&gt;) instead of investing extra effort in .NET. I happen
+      to like\r\nthe WPF project I work on, and my next project will probably be .NET
+      (given my skillset),\r\nbut there’s no reason I have to &lt;em&gt;assume&lt;/em&gt;
+      it will be .NET. \r\n&lt;/li&gt;\r\n&lt;/ol&gt;\r\n&lt;h3&gt;&lt;font color=\"#ff0000\"&gt;EDIT
+      2011-07-14&lt;/font&gt;: New Takeaways\r\n&lt;/h3&gt;\r\n&lt;p&gt;\r\nThere
+      have been many, many comments over what I’ve written. My average blog post gets\r\n0
+      comments. The median for blog comments here is also 0. The 75% quartile for
+      blog\r\ncomments: also 0. The 90 percentile mark for blog comments—you guessed
+      it—also 0!\r\nSo it was something of a shock to see people are actually reading
+      this post, and commenting\r\nor blogging responses.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nAnd
+      &lt;em&gt;very few &lt;/em&gt;of them seem all that happy with my post.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nMany
+      of them assume that I am a Ruby zealot, or that this post was about “Ruby vs.\r\n.NET”,
+      &lt;strong&gt;so I must have written something poorly above&lt;/strong&gt;.
+      I don’t know.\r\nMy new takeaways (which supersede the old list) will hopefully
+      give you a better idea\r\nof what I meant to say originally.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nIt’s
+      important to note the context as well. &lt;strong&gt;My blog is mostly targeted
+      at\r\npeople like me, that is to say, .NET developers&lt;/strong&gt;, and the
+      people who forgot\r\nto unsubscribe when I stopped posting about SharePoint.
+      The post should not categorically\r\noffend everybody, no matter what background,
+      but from all the feedback I’m getting:\r\nit is.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nOn
+      with the takeaways:\r\n&lt;/p&gt;\r\n&lt;ol&gt;\r\n&lt;li&gt;\r\n&lt;strong&gt;.NET
+      developers (i.e., &lt;font color=\"#ff0000\"&gt;YOU&lt;/font&gt;) should check
+      out\r\nRails. &lt;/strong&gt;If you are a .NET developer, and you haven’t checked
+      out other frameworks\r\nlike Ruby on Rails, you should do so. Instead of learning
+      about &lt;a href=\"http://www.lhotka.net/weblog/WhySilverlightIsTheFuture.aspx\"&gt;Silverlight&lt;/a&gt;,\r\nfor
+      example, or &lt;a href=\"http://www.buildwindows.com/\"&gt;whatever v1 Microsoft
+      product\r\nthat comes out of BUILD&lt;/a&gt;, or waste your time studying for
+      MS certifications (seriously?),\r\ncheck out Rails. Rails is a viable way do
+      develop web applications and is worth the\r\ntime investment. Somewhere down
+      the line, you may even be able to get paid to do Rails\r\nwork, even in a city
+      like Houston, even outside of the startup scene. And, &lt;a href=\"http://twitter.com/#!/ampgt/status/87596504604360704\"&gt;it\r\nis
+      surprisingly easy to learn other platforms.&lt;/a&gt; \r\n&lt;br /&gt;\r\nPS&amp;#8212;these
+      are not strawmen alternative learning investments I’m setting up. &lt;a href=\"http://web.archive.org/web/20090609152339/http://blog.saviantllc.com/archive/2009/03/09/4.aspx\"&gt;There\r\nare
+      real people&lt;/a&gt;, real .NET developers, who spend their time struggling
+      through\r\nWCF books to take the exam, or go “all in” and study up on the newest
+      MS framework, &lt;em&gt;and\r\nnever quite get caught up&lt;/em&gt;. \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;strong&gt;Drop
+      the “.NET developer” mindset.&lt;/strong&gt; There is a kind of assumption\r\namong
+      .NET developers that we are .NET developers, and will use whatever the .NET\r\nframework
+      provides to solve our problems. If we need to develop a web application,\r\nfor
+      example, we’ll consider ASP.NET WebForms or MVC, or maybe one of the alternate\r\n.NET
+      web frameworks. Or SharePoint. We don’t look outside the walls. So, &lt;strong&gt;look\r\noutside
+      the walls.&lt;/strong&gt; .NET isn’t as fresh and shiny as it used to appear,
+      and\r\nthe alternatives are getting quite good (some would say: &lt;em&gt;better&lt;/em&gt;,
+      believe\r\nit or not). Again, &lt;a href=\"http://twitter.com/#!/ampgt/status/87596504604360704\"&gt;it\r\nis
+      surprisingly easy to learn other platforms.&lt;/a&gt; \r\n&lt;/li&gt;\r\n&lt;/ol&gt;</content>\r\n
+      \ </entry>\r\n  <entry>\r\n    <title>The True Measure Of Productivity</title>\r\n
+      \   <link rel=\"alternate\" type=\"text/html\" href=\"http://www.pseale.com/blog/TheTrueMeasureOfProductivity.aspx\"
+      />\r\n    <id>http://www.pseale.com/blog/PermaLink,guid,34308fc8-3e63-406e-870f-b55a28c19685.aspx</id>\r\n
+      \   <published>2011-03-22T08:23:38.322-07:00</published>\r\n    <updated>2011-03-22T08:23:38.3226954-07:00</updated>\r\n
+      \   <category term=\".NET\" label=\".NET\" scheme=\"http://www.pseale.com/blog/CategoryView,category,NET.aspx\"
+      />\r\n    <category term=\"Awesomeness\" label=\"Awesomeness\" scheme=\"http://www.pseale.com/blog/CategoryView,category,Awesomeness.aspx\"
+      />\r\n    <content type=\"xhtml\">\r\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n
+      \       <p>\r\n          <a href=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/The-True-Measure-Of-Productivity_915F/true-measure-of-productivity_2.png\">\r\n
+      \           <img style=\"background-image: none; border-bottom: 0px; border-left:
+      0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px;
+      border-right: 0px; padding-top: 0px\" title=\"true-measure-of-productivity\"
+      border=\"0\" alt=\"true-measure-of-productivity\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/The-True-Measure-Of-Productivity_915F/true-measure-of-productivity_thumb.png\"
+      width=\"409\" height=\"406\" />\r\n          </a>\r\n        </p>\r\n        <p>\r\nThis
+      screenshot was taken in the wild by me, at my computer a while back.\r\n</p>\r\n
+      \       <p>\r\nEach Cassini tray icon roughly equals one standard unit of productivity.
+      By this completely\r\nunbiased, objective measure, I’m about seven hundred times
+      more productive than you.\r\nGive or take.\r\n</p>\r\n      </div>\r\n    </content>\r\n
+      \ </entry>\r\n  <entry>\r\n    <title>Quotes From The Internet</title>\r\n    <link
+      rel=\"alternate\" type=\"text/html\" href=\"http://www.pseale.com/blog/QuotesFromTheInternet.aspx\"
+      />\r\n    <id>http://www.pseale.com/blog/PermaLink,guid,c7656a65-4c3e-4ab7-92e6-b8519d97bda8.aspx</id>\r\n
+      \   <published>2011-03-18T11:54:18.9537557-07:00</published>\r\n    <updated>2011-03-18T11:54:18.9537557-07:00</updated>\r\n
+      \   <category term=\".NET\" label=\".NET\" scheme=\"http://www.pseale.com/blog/CategoryView,category,NET.aspx\"
+      />\r\n    <content type=\"xhtml\">\r\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n
+      \       <p>\r\nI’m just here today to pass along a few gems, both relating to
+      OOP.\r\n</p>\r\n        <p>\r\n          <a href=\"http://news.ycombinator.com/item?id=2340105\">\r\n
+      \           <img style=\"background-image: none; border-bottom: 0px; border-left:
+      0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px;
+      border-right: 0px; padding-top: 0px\" title=\"quote2\" border=\"0\" alt=\"quote2\"
+      src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/97a716667d69_C08D/quote2_3.png\"
+      width=\"661\" height=\"307\" />\r\n          </a>\r\n        </p>\r\n        <p>\r\n
+      \         <a href=\"http://news.ycombinator.com/item?id=2332418\">\r\n            <img
+      style=\"background-image: none; border-bottom: 0px; border-left: 0px; padding-left:
+      0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px;
+      padding-top: 0px\" title=\"quote1\" border=\"0\" alt=\"quote1\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/97a716667d69_C08D/quote1_94ad99ad-98eb-45e8-8351-e7df965ca067.png\"
+      width=\"662\" height=\"150\" />\r\n          </a>\r\n        </p>\r\n      </div>\r\n
+      \   </content>\r\n  </entry>\r\n  <entry>\r\n    <title>TFS As Your Build/CI
+      Server: Only Positive Takeaways 1 of 2</title>\r\n    <link rel=\"alternate\"
+      type=\"text/html\" href=\"http://www.pseale.com/blog/TFSAsYourBuildCIServerOnlyPositiveTakeaways1Of2.aspx\"
+      />\r\n    <id>http://www.pseale.com/blog/PermaLink,guid,58295a52-afbf-42e2-ac82-bccf50ec806d.aspx</id>\r\n
+      \   <published>2011-02-08T22:00:00-08:00</published>\r\n    <updated>2011-02-03T17:10:03.9125169-08:00</updated>\r\n
+      \   <category term=\".NET\" label=\".NET\" scheme=\"http://www.pseale.com/blog/CategoryView,category,NET.aspx\"
+      />\r\n    <content type=\"xhtml\">\r\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n
+      \       <p>\r\nThis post is a grab bag of information, techniques, and landmines
+      I wish someone had\r\ntold me when we first set out to run our build/deploy
+      on top of TFS. What follows\r\nis a short, all-positive compilation of everything
+      I’ve learned about TFS 2010. I’ll\r\nassume you work with TFS on a daily basis,
+      and thus won’t attempt to explain TFS concepts\r\n(shelving, for example).\r\n</p>\r\n
+      \       <h3>All positive\r\n</h3>\r\n        <p>\r\nAll-positive means that
+      <strong>I will not complain about TFS</strong>. I will not.\r\nI’ll <strong>only
+      </strong>provide helpful workarounds I’ve found. \r\n</p>\r\n        <h3>Mini-review
+      of TFS’s continuous integration featureset\r\n</h3>\r\n        <p>\r\nBetween
+      TeamCity and TFS, having used both in two environments and having recently\r\nused
+      the newest versions of both, I’d prefer TeamCity in a landslide. I can fire
+      off\r\nout a bulleted list of specific ways TeamCity is better, but in the interest
+      of staying\r\npositive, let’s just move on.\r\n</p>\r\n        <h3>Tips for
+      working with TFS source control\r\n</h3>\r\n        <h4>Merging\r\n</h4>\r\n
+      \       <p>\r\n          <strong>If in doubt, don’t automerge</strong>.<strong>
+      If you are having problems\r\nwith TFS merges, you can solve all your problems
+      by manually merging every file.</strong> \r\nTFS 2005 was notoriously bad at
+      auto-merging (i.e. performing server-side merges),\r\nso the only way to win,
+      was not to play. \r\n</p>\r\n        <p>\r\n          <strong>In TFS 2010, I
+      will 99% certify that automerging works.</strong> TFS 2010\r\nhas improved,
+      and our team has had almost perfect success with automerging, though\r\nthere
+      are hiccups here and there. We’ve had merging issues, but I’m not convinced\r\nour
+      merging issues are automerge issues. 99% is pretty good. Let me know in the
+      comments\r\nif you can definitely blame TFS 2010 automerge for a botched merge.\r\n</p>\r\n
+      \       <p>\r\n          <strong>Replace your client-side merge tool with one
+      you can trust.</strong> The built-in\r\nVS2010 merge/compare tool works. However,
+      I had “an incident.” “Incidents” are bad\r\nwhen merging. What happened is,
+      the VS merge tool mistakenly matched up two entirely\r\ndifferent methods and
+      attempted to “merge” the changes. Merging the contents of method\r\nA() into
+      method B() is bad. It’s bad enough to go looking for a replacement. So, <a href=\"http://www.richard-banks.org/2009/09/using-p4merge-with-visual-studio-2008.html\">following\r\nthese
+      instructions, I replaced the built-in merge tool with Perforce’s free P4Merge</a>.\r\n</p>\r\n
+      \       <p>\r\n          <strong>Weird merge conflicts with renamed files? Accept
+      the lesser victory and step\r\na) delete, then step b) re-create any files that
+      cause weird merge issues.</strong> This\r\nbreaks the file’s version history,
+      but solves your bigger problem.\r\n</p>\r\n        <h3>Workspace tips\r\n</h3>\r\n
+      \       <p>\r\nI know lots of you have problems with TFS and how it deals with
+      files. I don’t. I\r\ndon’t know if I’m just not exercising the tool enough,
+      but I’m not having problems, <em>now\r\nthat I know what not to do</em>. Specific
+      advice follows:\r\n</p>\r\n        <p>\r\n          <strong>Don’t go offline.
+      The consequences can be worse than you think.</strong> I’ve\r\nnever had success
+      with offline mode, and what’s worse, until you go back online, the\r\nTeam Explorer
+      hides your TFS server from the list. I’ve had something of a <a href=\"http://www.neilpullinger.co.uk/2009/11/solution-is-offline-because-its.html\">traumatic\r\nexperience</a>
+      with offline mode, so it’s hard to stay positive or even fake sound\r\npositive
+      when describing offline mode. Just don’t go offline unless you know how to\r\nget
+      back online. For the record, I’m using the newest of the new with TFS 2010 and\r\nVisual
+      Studio 2010, and even so, even with the newest tools I’m experiencing problems.\r\nI’ll
+      give a blanket recommendation that you don’t try it.\r\n</p>\r\n        <p>\r\n
+      \         <strong>Do as much editing as possible inside Visual Studio Solutions
+      or Projects.</strong> It’s\r\neasier to create, edit, move, and delete files
+      inside Solutions or Projects (files\r\ninside Solutions are automatically tracked
+      in TFS). Treat Solutions ands Projects\r\nas a rail rides: stay in the cart
+      travelling slowly down the rails. Do not exit the\r\ncart. In case of fire,
+      follow emergency procedures (spelled out further below).\r\n</p>\r\n        <p>\r\nThis
+      goes against advice I’ve heard. I’ve heard that TFS source control is <strong>more\r\nmanageable
+      from the command-line</strong> than via Visual Studio. But for me, I prefer\r\nto
+      let Visual Studio’s integration automatically check out files for editing. So,\r\nwhenever
+      possible I work underneath the protective umbrella of Solutions and Projects.\r\n</p>\r\n
+      \       <p>\r\n          <strong>Remember TFS does not automatically track file
+      changes, not even partially</strong> like\r\nSVN or git. This means:\r\n</p>\r\n
+      \       <p>\r\n          <strong>Explicitly rename or move files</strong> in
+      Source Control Explorer.\r\n</p>\r\n        <p>\r\n          <strong>Explicitly
+      delete files</strong> from Source Control Explorer.\r\n</p>\r\n        <p>\r\n
+      \         <strong>Explicitly add files</strong> from Source Control Explorer.\r\n</p>\r\n
+      \       <p>\r\n          <strong>Check out files in Source Control Explorer
+      to edit</strong>. Or, reworded:\r\n</p>\r\n        <p>\r\n          <strong>Be
+      sure to check out <u>first</u>, <u>before</u> editing files outside of\r\nVisual
+      Studio.</strong> This means when running any kind of code generation, generating\r\nassembly
+      info files, or even something as simple as editing PowerShell scripts with\r\nthe
+      ISE—in all cases, be sure to check out <strong>first</strong>. <strong>Then</strong>
+      edit. <strong>Last, </strong>check\r\nin (or undo). \r\n</p>\r\n        <p>\r\nIf
+      you don’t follow these steps in order, you’ll experience bad things. Notably,
+      if\r\nyou try to check out <strong>after </strong>successfully editing a file,
+      you’re presented\r\nwith a merge conflict.\r\n</p>\r\n        <p>\r\n          <strong>If
+      something gets weird, destroy your entire folder (or entire Workspace)\r\nand
+      get latest+force override.</strong> Don’t try to get too specific and get one\r\nor
+      two files. Delete the whole folder, then get latest+force override. It’s quick,\r\njust
+      do it.\r\n</p>\r\n        <p>\r\n          <strong>There’s no good way to temporarily
+      edit a file </strong>(e.g. temporarily\r\nchange the connection string in your
+      app.config)<strong> without triggering a checkout.</strong> If\r\nyou ever need
+      to temporarily edit a file but don’t ever want to check in the change,\r\nwell…there’s
+      really no good way to go about it. In fact there are several not-good\r\nways
+      to go about it:\r\n</p>\r\n        <ol>\r\n        </ol>\r\n        <ol>\r\n
+      \         <li>\r\nJust check out the file and edit it, and <strong>simply remember
+      </strong>to undo\r\nyour changes later. \r\n</li>\r\n          <li>\r\nCheat.
+      Open the file via Windows Explorer, and unset its Read-Only flag. And, when\r\nyou
+      want the file to go back to its original state, <strong>simply remember</strong>
+      to\r\nget the latest version of the file + force override. \r\n</li>\r\n          <li>\r\nCheat.
+      Open a prompt at the root of your workspace and run <font face=\"Courier New\">attrib\r\n-r
+      *.* /s</font>. This is the nuclear option, as TFS will now assume you’ve edited\r\nevery
+      single file in your workspace, and will treat any updates as merge conflicts.\r\nDon’t
+      do this. I’ve done it so I can tell you not to try it. \r\n</li>\r\n        </ol>\r\n
+      \       <p>\r\n          <strong>Shelvesets work.</strong> Trust them. Use them.
+      Use them frequently. Make\r\nas many of them as you want. Give them dumb names
+      if they contain trash (I have shelvesets\r\nnamed “aaaaaaa” and “aaaaaaaaaaaa”,
+      and of course, one named “help”). You can find\r\nthem later, just sort by date.
+      Easy.\r\n</p>\r\n        <p>\r\n          <strong>Always shelve from Source
+      Control Explorer</strong> to keep things simple.\r\nIf you Shelve a Solution,
+      you may miss files. I’ve missed files when I shelved a Solution.\r\nDon’t be
+      me.\r\n</p>\r\n        <h3>MSTest tips (specifically: using MSTest for your
+      unit and integration tests)\r\n</h3>\r\n        <p>\r\n          <strong>Switching
+      from NUnit is a cinch.</strong> All the attribute names are different,\r\nbut
+      only slightly. In With the exception of one MSTest feature:\r\n</p>\r\n        <p>\r\n
+      \         <strong>Learn about localtestrun.config and how it works.</strong>
+      We’ve started using\r\nit, and while it’s convenient, it’s essentially a non-composable*
+      way to copy files\r\nyou need for your tests. \r\n<br /><font size=\"1\">* i.e.
+      once you start using localtestrun.config, you can’t just switch\r\nto NUnit
+      or XUnit without some pain. Alternately, if you had coded up manual file\r\ncopying,
+      you wouldn’t have any issues converting to or from NUnit/XUnit.Also, the\r\nlocaltestrun.config
+      may be responsible for our extremely slow test runs.</font></p>\r\n        <p>\r\n
+      \         <strong>The test runner is excellent…and slow.</strong> It’s not entirely
+      the test\r\nrunner’s fault, as the Resharper test runner is equally slow (I’ve
+      tried). I gave\r\nup using Resharper’s test runner when I found out it was just
+      as slow, <strong>and</strong> has\r\nimperfect (broken) localtestrun.config
+      support. Note, tests are slower by a large\r\nfactor if you’re running code
+      coverage.\r\n</p>\r\n        <p>\r\nIf not for the slowness and the occasional
+      bug and some wonky behavior during debug\r\nsessions, I’d say the VS test runner
+      is as good as Resharper’s test runner or TestDriven.NET.\r\nShort note about
+      TestDriven.NET: like VirtualBox, it’s not free for corporate use.\r\nRead the
+      EULA.\r\n</p>\r\n        <p>\r\n          <strong>IntelliTrace sounds nice,
+      but crashes test runs.</strong> We turned it off\r\nso it stopped crashing our
+      test runs.\r\n</p>\r\n        <p>\r\n          <strong>Learn the keystrokes
+      for running tests.</strong> CTRL+R, t. CTRL+R, a. Similar\r\nkey chords to run
+      tests with the debugger attached. If you forget the keystrokes,\r\ngo to the
+      Test-&gt;Run menu and they’re listed there. Just memorize them.\r\n</p>\r\n
+      \       <p>\r\n          <strong>Ignore most of the Visual Studio testing features.
+      They do not help you write\r\nunit or integration tests.</strong> Specifically:\r\n</p>\r\n
+      \       <ul>\r\n          <li>\r\nAll “Test”s available from the right-click-&gt;Add
+      menu are a bad idea. Add a “Class”\r\ninstead. Diagram: \r\n</li>\r\n        </ul>\r\n
+      \       <p>\r\n          <img style=\"background-image: none; border-right-width:
+      0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width:
+      0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px\" title=\"mstest1\"
+      border=\"0\" alt=\"mstest1\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/TFS-As-Your-CI-Server-Only-Positive-Take_DC45/mstest1_3.png\"
+      width=\"704\" height=\"689\" />\r\n        </p>\r\n        <ul>\r\n          <li>\r\n
+      \           <strong>Create Unit Test (</strong>“Unit Test…” as seen in the screenshot
+      above<strong>)\r\nin particular will only mislead you.</strong> The other tests
+      (e.g. Coded UI Tests)\r\nare useful in other contexts, but I can’t think of
+      any situation for which the “Create\r\nUnit Test” dialog is useful. \r\n</li>\r\n
+      \       </ul>\r\n        <p>\r\n          <strong>Start from an empty class
+      when writing new unit tests.</strong> While the\r\n“Basic Unit Test” template
+      works (and is an excellent tool to help you learn the MSTest\r\nattributes),
+      a clean file is better.  Apply YAGNI. You don’t need a TestInitialize\r\nor
+      ClassInitialize method yet, so don’t add them. You can add either of them later,\r\nif
+      you need them. For now, leave them out. YAGNI. This is what one of my new test\r\nclasses
+      look like:\r\n</p>\r\n        <p>\r\n          <a href=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/TFS-As-Your-CI-Server-Only-Positive-Take_DC45/mstest2_2.png\">\r\n
+      \           <img style=\"background-image: none; border-right-width: 0px; padding-left:
+      0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width:
+      0px; border-left-width: 0px; padding-top: 0px\" title=\"mstest2\" border=\"0\"
+      alt=\"mstest2\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/TFS-As-Your-CI-Server-Only-Positive-Take_DC45/mstest2_thumb.png\"
+      width=\"704\" height=\"232\" />\r\n          </a>\r\n          <br />\r\n          <font
+      size=\"1\">*note: I am using this naming convention presently. It’s not so bad.\r\nWe
+      add the class name prefix to the method name (UrlHelper_) so test results can
+      be\r\nsorted and understood and so there aren’t hundreds of “When_etc” names
+      in a row. And\r\nyes, I’m aware that you can add columns, specifically the test
+      class’s full name,\r\nto the test results display, but it’s not a first-class
+      citizen and doesn’t help when\r\nrunning tests in the build. <strong>Stay on
+      the rails</strong> and just embed the\r\nclass name in your test method. Side
+      note: sometimes I need to split out my test classes\r\nto support more than
+      one test fixture (context) per class-under-test, and I do so.\r\nRead up on
+      test fixtures and class-per-fixture if you’re intrigued as to why I’d want\r\nsuch
+      a thing.</font>\r\n        </p>\r\n        <p>\r\n          <strong>If you have
+      a bad test portfolio (i.e. “our tests suck”), it’s not MSTest’s\r\nfault</strong>.
+      Using NUnit, XUnit, MSpec, or any of the (literally 20 or so) .NET\r\nBDD frameworks
+      will not help you if you don’t have the basics. MSTest is indeed limiting\r\nin
+      some ways, but I’m far more limited by my coding/design knowledge than MSTest
+      itself.\r\nWith not much extra effort, you can be successful with MSTest. So,
+      now that we’re\r\nnot blaming MSTest, how do we improve our bad tests?\r\n</p>\r\n
+      \       <p>\r\n          <strong>Learn</strong> about unit testing, integration
+      testing, acceptance testing,\r\nATDD, BDD, design by example, context/specification,
+      behavior testing, UI testing,\r\n“subcutaneous” UI testing, functional testing,
+      end-to-end tests, fast/slow tests,\r\ndesign tests, outside-in tests, mocks,
+      stubs, fakes, doubles, what to test, what not\r\nto test, when to delete tests,
+      when to apply DRY to your tests and when not, how much\r\nto maintain your tests,
+      how to organize your tests, the misrepresentation of test\r\nfixtures as TestClasses,
+      using automocking tools, using IoC with tests, using object\r\nmothers, using
+      test builders. Dealing with threading. Using SQLite in-memory with\r\nyour ORM
+      to speed up your integration tests. I can’t tell you how to write your tests\r\nor
+      why today. Everyone else (“the entire internet combined”) can.\r\n</p>\r\n        <p>\r\n
+      \         <strong>Troubleshooting: if a test just flat-out isn’t running, find
+      it in the test\r\nlist (Test-&gt;Windows-&gt;Test List Editor) and ensure it
+      is enabled.</strong> Disabled\r\ntests just don’t run. MSTest allows you to
+      disable tests via the test lists view,\r\npresumably because … I don’t know
+      why. But it can be done, and it’s really weird when\r\nsomeone does it and I
+      can’t run a test and I don’t know why.\r\n</p>\r\n        <p>\r\n          <strong>I
+      don’t know what to do with the .vsmdi file either.</strong> Check it in\r\nand
+      try to pretend it doesn’t exist. It stores such things as the mysterious “Test\r\nIs
+      Enabled” flag, and details for any test lists you may have, and all of these
+      wonderful\r\nthings. If you accidentally break the vsmdi file after checking
+      it in, use the power\r\nand magic of source control and revert changes.\r\n</p>\r\n
+      \       <p>\r\n          <strong>Related: If you need to disable a test, use
+      the [Ignore] attribute like every\r\nother framework.</strong> Don’t argue,
+      just do it.\r\n</p>\r\n        <p>\r\n          <strong>Related: I haven’t found
+      a use for test lists.</strong> I’m applying YAGNI\r\nand ignoring them until
+      I can figure out how to use them. Don’t use test lists unless\r\nyou know why
+      you should.\r\n</p>\r\n        <h3>TFS as a continuous integration server\r\n</h3>\r\n
+      \       <p>\r\nFirst, let me define <strong>build machine</strong> as the computer
+      on which your\r\nTFS build agent runs. Bueno. Let’s get rolling.\r\n</p>\r\n
+      \       <p>\r\n          <strong>Turn off code coverage?</strong> According
+      to several blog posts (<a href=\"http://bartwullems.blogspot.com/2010/02/code-coverage-issues-with-team-build.html\">here’s\r\none</a>),
+      if your build fails because “<em>The process cannot access the file ‘data.coverage'\r\nbecause
+      it is being used by another process.</em>”, then you need to turn off code\r\ncoverage.\r\n</p>\r\n
+      \       <p>\r\n          <strong>On your build machine, restart the build agent
+      every evening to prevent slowness\r\ncaused by memory leaks.</strong> Don’t
+      argue, just do it, particularly if you notice\r\nyour builds slow down after
+      a while. If you’re horrified by the thought of restarting\r\nservices as a rule,
+      you should look into the wealth of options IIS provides to restart\r\nunhealthy
+      app pools. You’re not alone. According to Unix guys, It’s the Windows way.\r\nGive
+      in and just run the following script as a Windows Scheduled Task every night:\r\n</p>\r\n
+      \       <p>\r\n          <font size=\"2\" face=\"Courier New\">REM BEGIN BATCH
+      FILE SWEETNESS \r\n<br /></font>\r\n          <font size=\"2\" face=\"Courier
+      New\">REM –=-=-=-=-=-=-=-=-–=-=-=-=-=-=-=-=-–=-=-=-=-=-=-=-=- \r\n<br /></font>\r\n
+      \         <font size=\"2\" face=\"Courier New\">net stop TFSBuildServiceHost
+      \r\n<br /></font>\r\n          <font size=\"2\" face=\"Courier New\">net start
+      TFSBuildServiceHost \r\n<br /></font>\r\n          <font size=\"2\" face=\"Courier
+      New\">REM –=-=-=-=-=-=-=-=-–=-=-=-=-=-=-=-=-–=-=-=-=-=-=-=-=- \r\n<br /></font>\r\n
+      \         <font size=\"2\" face=\"Courier New\">REM END BATCH FILE SWEETNESS</font>\r\n
+      \       </p>\r\n        <p>\r\n          <strong>Run only one build agent at
+      a time, per build machine if you’re running MSTest.</strong> If\r\nyou have
+      one build machine, one build. Two machines, two builds. One per machine.\r\nWhy,
+      you ask? MSTest aborts test runs if you run two MSTest runs simultaneously.
+      I\r\ndon’t know why. If you run NUnit or just skip unit tests altogether, you
+      can run more\r\nsimultaneous builds. But to avoid phantom build failures, don’t
+      cheat and just run\r\none build at a time.\r\n</p>\r\n        <p>\r\n          <strong>Similarly,
+      don’t log into or log out of the build machine while MSTest is\r\nrunning, as
+      it will abort any running MSTest test run.</strong> Seriously. I have\r\na theory
+      as to why this is so, but it doesn’t really matter why. Just know that, if\r\nyou’re
+      running tests, don’t log in or out.\r\n</p>\r\n        <p>\r\n          <strong>TFS
+      has a tray app called “Build Notifications”. Use it.</strong> It works\r\nfor
+      notifications, which arrive within a few minutes of build completion. One caveat:\r\nunlike
+      TeamCity, you are not notified when a test run <strong>begins</strong> to fail,\r\nbut
+      when the test run <strong>completes</strong>.\r\n</p>\r\n        <p>\r\n          <strong>The
+      tray app’s build status screen cannot be trusted </strong>to be accurate,\r\nso
+      leave the tray app alone and just use Visual Studio/Team Explorer to look at
+      your\r\nbuilds. In other words, use the TFS tray app only for the alerts.\r\n</p>\r\n
+      \       <p>\r\n          <img style=\"background-image: none; border-right-width:
+      0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width:
+      0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px\" title=\"buildnotifications1\"
+      border=\"0\" alt=\"buildnotifications1\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/TFS-As-Your-CI-Server-Only-Positive-Take_DC45/buildnotifications1_3.png\"
+      width=\"277\" height=\"520\" />\r\n        </p>\r\n        <p>\r\n          <strong>Refresh
+      doesn’t work on the build status screen in Visual Studio.</strong> It’s\r\nbuggy
+      and doesn’t properly refresh all the time, sometimes misplacing running or completed\r\nbuilds.
+      To work around this behavior and truly refresh, close and reopen the window.\r\n</p>\r\n
+      \       <h3>Work in progress – part 2 to come\r\n</h3>\r\n        <p>\r\nHello
+      everybody! If I’m ignorant of something that would solve any of the problems\r\nI’ve
+      experienced above (notably, speeding up test runs would be GREAT), let me know.\r\n</p>\r\n
+      \       <p>\r\nAssuming I get up the gumption, I’m also going to write a second
+      post covering:\r\n</p>\r\n        <ul>\r\n          <li>\r\n2 second template
+      chooser workflow \r\n</li>\r\n          <li>\r\nJFHCI, which has poisoned me
+      against workflow foundation forever and which informs\r\nmy … am I allowed to
+      use the word <em>philosophy</em> when describing build systems?\r\nLet’s go
+      with it: …informs my build system philosophy. \r\n<ul><li>\r\nPreferring a malleable
+      (i.e., code-based, not XML or XAML) build script, \r\n</li><li>\r\nHardcoding
+      developer configuration the smart way in my C# project, i.e. where it’s\r\neasiest
+      to change \r\n</li><li>\r\nMinimizing premature configuration and thus, minimizing
+      web.config/app.config file\r\nsizes and the nightmare that is XML transforms
+      \r\n</li><li>\r\nHowever, using WF where it works: adding build “arguments”
+      for things that you actually\r\ndo change from build to build. E.g. changing
+      the drop folder, turning off automated\r\ndeployment to a dev environment. \r\n</li></ul></li>\r\n
+      \         <li>\r\nJailbreak from XAML prison: \r\n<ul><li>\r\nCalling out to
+      MSBuild \r\n</li><li>\r\nCalling out to PowerShell \r\n</li><li>\r\nCalling
+      out to custom Activities in C# (and why) \r\n</li></ul></li>\r\n        </ul>\r\n
+      \     </div>\r\n    </content>\r\n  </entry>\r\n  <entry>\r\n    <title>Pretend
+      You’re On The Domain With Runas /NetOnly</title>\r\n    <link rel=\"alternate\"
+      type=\"text/html\" href=\"http://www.pseale.com/blog/PretendYoureOnTheDomainWithRunasNetOnly.aspx\"
+      />\r\n    <id>http://www.pseale.com/blog/PermaLink,guid,22d7823f-6b6b-4ebc-99c5-6e7656e20108.aspx</id>\r\n
+      \   <published>2011-02-01T22:00:00-08:00</published>\r\n    <updated>2011-01-29T13:37:38.947321-08:00</updated>\r\n
+      \   <category term=\"Awesomeness\" label=\"Awesomeness\" scheme=\"http://www.pseale.com/blog/CategoryView,category,Awesomeness.aspx\"
+      />\r\n    <content type=\"html\">&lt;h3&gt;Bullet point summary, for the skimmers\r\n&lt;/h3&gt;\r\n&lt;p&gt;\r\nYour
+      attention is already waning, so I’ll get with the bullet points:\r\n&lt;/p&gt;\r\n&lt;ul&gt;\r\n&lt;li&gt;\r\n&lt;font
+      face=\"Courier New\"&gt;Runas&lt;/font&gt; is useful in surprising ways, including
+      troubleshooting\r\nbuild breakages, security testing, and running as your service
+      account. This is the\r\nold, boring runas. \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;font
+      face=\"Courier New\"&gt;Runas&lt;/font&gt; features the &lt;font size=\"3\"
+      face=\"Courier New\"&gt;/netonly&lt;/font&gt; switch,\r\nwhich &lt;strong&gt;makes
+      the impossible possible&lt;/strong&gt; on VMs and off-domain machines.\r\nI’ll
+      save some of the thunder for later. \r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;h3&gt;Introduction\r\n&lt;/h3&gt;\r\n&lt;p&gt;\r\n&lt;a
+      href=\"http://www.youtube.com/results?search_query=nick+burns\"&gt;&lt;img style=\"background-image:
+      none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display:
+      inline; float: right; border-top-width: 0px; border-bottom-width: 0px; border-left-width:
+      0px; padding-top: 0px\" title=\"Nick Burns\" border=\"0\" alt=\"You&amp;#39;re
+      welcome!\" align=\"right\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Off-Domain_13D80/nick_burns_3.jpg\"
+      width=\"240\" height=\"180\" /&gt;&lt;/a&gt;I\r\nfeel sorry for everyone who
+      is forced to do their day-to-day work on a corporate machine.\r\nIt seems that
+      in the last few years, virus scanners have dug their filthy, performance-sapping\r\nclaws
+      into your network connection, your email, and your (Internet Explorer) browser.\r\nAll
+      this added to the “scan every file before it’s accessed” behavior we’ve all
+      come\r\nto know and love.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nOn behalf of corporate
+      IT everywhere: &lt;em&gt;&lt;strong&gt;you’re welcome&lt;/strong&gt;&lt;/em&gt;.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nIt’s
+      brutal out there for those of us beholden to the dreaded corporate desktop image.\r\nOops—did
+      I say us? I mean you. You—you’re beholden to whatever IT gives you. I’m living\r\nthe
+      high life*. \r\n&lt;br /&gt;\r\n&lt;font size=\"1\"&gt;* this is a metaphor&lt;/font&gt;&amp;#160;\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nAt
+      work we’ve run some tests (literally—we routinely run a pile of integration
+      tests),\r\nand my old, busted laptop* is somewhere in the area of&lt;strong&gt;
+      five times faster&lt;/strong&gt; than\r\nthe new hotness desktops running the
+      corporate Windows XP image. But let’s not belabor\r\nthe point. \r\n&lt;br /&gt;\r\n&lt;font
+      size=\"1\"&gt;* “What a piece of junk!” “She'll make point five past lightspeed.\r\nShe
+      may not look like much, but she's got it where it counts, kid. I've made a lot\r\nof
+      special modifications myself.”&lt;/font&gt;\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nFor
+      those of you reading this on a corporate desktop, thanks for getting this far,\r\nbut
+      the following blog post probably won’t help you. You’re already on the domain,\r\nso
+      you will rarely (if ever) need this trick! Enjoy running Windows XP for another\r\nfive-to-ten
+      years!\r\n&lt;/p&gt;\r\n&lt;h3&gt;Now that we’ve gotten rid of the losers\r\n&lt;/h3&gt;\r\n&lt;p&gt;\r\n…let’s
+      get on with it. &lt;font face=\"Courier New\"&gt;Runas&lt;/font&gt; allows you
+      to impersonate\r\nanother user while running most any Windows app.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nFor
+      server admins, this means you can run with an unprivileged account for your
+      day-to-day\r\ntasks (like waiting patiently while Outlook runs &lt;font face=\"Courier
+      New\"&gt;chkdsk&lt;/font&gt; on\r\nyour 4GB PST file) and perform your catastrophic
+      admin mistakes (like accidentally\r\npromote a domain controller) inside a management
+      console or command shell running\r\nas a Domain Admin. You still make catastrophic
+      mistakes, but not catastrophic mistakes\r\nspecifically because you’re running
+      a Windows account with full administrative privileges\r\nall the time. There’s
+      a whole world of catastrophic mistakes for you to discover and\r\nexperience
+      as an admin. Moving along.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nThis &lt;font face=\"Courier
+      New\"&gt;Runas&lt;/font&gt; behavor is the plain, vanilla &lt;font face=\"Courier
+      New\"&gt;Runas&lt;/font&gt; ,\r\nand you can get this behavior by&lt;font face=\"Courier
+      New\"&gt; SHIFT+RIGHTCLICKing&lt;/font&gt; on\r\npretty much anything in Windows.
+      To make things easier, you can also create shortcuts\r\non your desktop to always
+      prompt you to log in as someone else (AKA “run as” someone\r\nelse).\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nFor
+      developers, this means you can run SQL Server Management Studio as your app’s\r\nservice
+      account so you can talk to your test database…your app’s &lt;strong&gt;test&lt;/strong&gt;
+      service\r\naccount, I’m sure.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nAlso for developers,
+      you can also launch a browser window as another Windows user.\r\nThis is a great
+      trick for testing out security on web apps that use Integrated Windows\r\nAuthentication.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nAlso
+      also for developers, you can impersonate your build service account to run your\r\nbuild
+      so that your prompt runs &lt;strong&gt;100.0% precisely the way TFS/TeamCity/Whatever\r\nruns
+      it&lt;/strong&gt;, in order to troubleshoot any weird problem with your build.
+      &lt;strong&gt;&lt;font color=\"#ff0000\"&gt;&amp;lt;==THIS\r\nIS A LIFESAVER&lt;/font&gt;&lt;/strong&gt;\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nFor
+      SP admins, you can launch browser windows as your farm account or whatever admin\r\naccount
+      you have, or of course, completely unprivileged accounts to test security\r\ntrimming.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nLet’s
+      see this in action:\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\n&lt;img style=\"background-image:
+      none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right:
+      0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px\"
+      title=\"runas8\" border=\"0\" alt=\"runas8\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Off-Domain_13D80/runas8_3.png\"
+      width=\"572\" height=\"367\" /&gt;\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\n&lt;strong&gt;Let’s
+      break down what just happened:&lt;/strong&gt;\r\n&lt;/p&gt;\r\n&lt;ol&gt;\r\n&lt;li&gt;\r\nI
+      ran PowerShell as myself (username “P”). This is evidenced when I interrogate
+      the\r\nUSERNAME environment variable. \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\nFrom
+      PowerShell, I perform a &lt;font face=\"Courier New\"&gt;Runas&lt;/font&gt;
+      &lt;font face=\"Courier New\"&gt;cmd.exe&lt;/font&gt;.\r\nThis launches the
+      cmd.exe shell.&lt;/li&gt;\r\n&lt;li&gt;\r\nFrom the impersonated cmd.exe shell,
+      I interrogate the USERNAME environment variable.\r\nThis shell is running as
+      svc-sql. &lt;em&gt;So smooth&lt;/em&gt;.&lt;/li&gt;\r\n&lt;/ol&gt;\r\n&lt;p&gt;\r\nAnd
+      yes, I give the SQL instance running on my laptop its own service account…what\r\nof
+      it. I’m &lt;strong&gt;not crazy&lt;/strong&gt;&lt;!&amp;#8212;EndFragment&amp;#8212;&gt;.\r\n&lt;/p&gt;\r\n&lt;h3&gt;But
+      I knew all that already—what if I’m not on the domain?\r\n&lt;/h3&gt;\r\n&lt;blockquote&gt;
+      \r\n&lt;p&gt;\r\nI’ll &lt;a href=\"http://twitter.com/#!/pseale/status/12632534634463232\"&gt;bring
+      the thunder&lt;/a&gt;,\r\nI promise.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nFirst of
+      all, a slight technicality. Wherever I say “domain” in this blog post, I\r\nmean
+      “AD forest”. Sometimes being precise with your vocabulary isn’t helpful.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nSo.
+      There are two major scenarios wherein you need (absolutely NEED) to run as a
+      user\r\non a different domain.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nONE: you’re running
+      a virtual machine running in its own little virtual world on its\r\nown virtual
+      domain, and &lt;strong&gt;NEED&lt;/strong&gt; to talk to the real domain, so
+      that\r\nyou can connect to the test database server and run some queries.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nTWO:
+      you’re running on a non-domain laptop running its own brand of non-corporate-imaged\r\nbliss,
+      and &lt;strong&gt;NEED&lt;/strong&gt; to talk to the real domain, so that you
+      can connect\r\nto the test database server and run some queries. Maybe accidentally
+      DROP some databases\r\nwhile your users are testing.\r\n&lt;/p&gt;\r\n&lt;/blockquote&gt;
+      \r\n&lt;p&gt;\r\n&lt;strong&gt;NEED. This is the face of NEED.&lt;/strong&gt;\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nAlso,
+      more rarely, if you NEED to connect Microsoft Excel directly to your database\r\nserver
+      to run a query, but must authenticate with Integrated authentication as another\r\nuser?
+      And you’re running off-domain? Don’t puke: pivot tables are really, really beautiful,\r\nand
+      I mean that sincerely. My love for pivot tables is pure as the driven snow.
+      Anyway,\r\nI’m not here to defend my Excel+SQL abomination, I’m here to bring
+      the thunder.\r\n&lt;/p&gt;\r\n&lt;h3&gt;Enter the /netonly switch\r\n&lt;/h3&gt;\r\n&lt;p&gt;\r\nUsing
+      &lt;font face=\"Courier New\"&gt;runas /netonly&lt;/font&gt; allows you to run
+      your app locally\r\nas you (in my case, the user named “P”), while authenticating
+      over a network with\r\nanother user. It’s like a rare kind of magic, like a
+      hornless unicorn.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nAlso like rare magic, I have
+      no idea how &lt;font face=\"Courier New\"&gt;runas /netonly&lt;/font&gt; works.\r\nThere’s
+      probably somebody who knows how it works (&lt;a href=\"http://blogs.msdn.com/b/oldnewthing/archive/2004/11/29/271551.aspx\"&gt;someone\r\nwho
+      has gazed into Win32, and Win32 has gazed back into them&lt;/a&gt;), but not
+      me. It’s\r\ngood enough for me to know that &lt;font face=\"Courier New\"&gt;runas
+      &lt;/font&gt;works…somehow.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\n&lt;img style=\"background-image:
+      none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display:
+      inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width:
+      0px; padding-top: 0px\" title=\"runas1\" border=\"0\" alt=\"runas1\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Off-Domain_13D80/runas1_3.png\"
+      width=\"704\" height=\"251\" /&gt;\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nLet me try
+      to break down what just happened in the screenshot above (and note the\r\ndifferences
+      with between vanilla &lt;font face=\"Courier New\"&gt;runas &lt;/font&gt;and
+      &lt;font face=\"Courier New\"&gt;runas\r\n/netonly&lt;/font&gt;):\r\n&lt;/p&gt;\r\n&lt;ol&gt;\r\n&lt;li&gt;\r\nI
+      ran PowerShell as myself (username “P”). This is evidenced when I interrogate
+      the\r\nUSERNAME environment variable. \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\nFrom
+      PowerShell, I perform a &lt;font face=\"Courier New\"&gt;runas /netonly cmd.exe&lt;/font&gt;.\r\nThis
+      launches the cmd.exe shell.&lt;/li&gt;\r\n&lt;li&gt;\r\nFrom the cmd.exe shell,
+      I interrogate the USERNAME environment variable. The impersonated\r\nshell is
+      still running as “P”. &lt;strong&gt;However&lt;/strong&gt;, were I to authenticate
+      with\r\nresources on another domain, Windows would send the credentials for
+      “OnTheINTERNET\\NobodyKnowsYoureADOG”.&lt;/li&gt;\r\n&lt;ol&gt;\r\n&lt;li&gt;\r\nThis
+      is the point where I should try to prove that, as far as authenticating over\r\nthe
+      network, your program behaves as if it’s the impersonated user. Unfortunately\r\nI
+      just tried to connect to CodePlex’s TFS as my example, and the work involved
+      connecting\r\nto CodePlex via TFS depressed me, so, I won’t be attempting this
+      today. Just try out\r\none of my sample scripts for yourself; it will take all
+      of 10 seconds to verify. Side\r\nnote: THANK YOU, CodePlex team, for first funding
+      SVNBridge, THEN including direct\r\nSVN support, then providing direct Mercurial
+      support.&lt;/li&gt;\r\n&lt;/ol&gt;\r\n&gt;\r\n&lt;h4&gt;Bringing the thunder:
+      SQL 2005 management studio\r\n&lt;/h4&gt;\r\n&lt;p&gt;\r\n&lt;font size=\"3\"
+      face=\"Courier New\"&gt;REM the following script assumes a 64-bit system, \r\n&lt;br
+      /&gt;\r\n&lt;/font&gt;&lt;font size=\"3\" face=\"Courier New\"&gt;REM and assumes
+      you installed SQL 2005 in\r\nthe default folder \r\n&lt;br /&gt;\r\n&lt;/font&gt;&lt;font
+      size=\"3\" face=\"Courier New\"&gt;REM change the parts below in &lt;font color=\"#ff0000\"&gt;RED&lt;/font&gt;
+      \r\n&lt;br /&gt;\r\n&lt;/font&gt;&lt;font size=\"3\" face=\"Courier New\"&gt;runas
+      /netonly /user:&lt;font color=\"#ff0000\"&gt;REALDOMAIN&lt;/font&gt;\\&lt;font
+      color=\"#ff0000\"&gt;YOURDOMAINUSERNAME&lt;/font&gt; &amp;quot;C:\\Program\r\nFiles
+      (x86)\\Microsoft SQL Server\\90\\Tools\\Binn\\VSShell\\Common7\\IDE\\SqlWb.exe&amp;quot;&lt;/font&gt;\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\n&lt;img
+      style=\"background-image: none; border-right-width: 0px; padding-left: 0px;
+      padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width:
+      0px; border-left-width: 0px; padding-top: 0px\" title=\"runas2\" border=\"0\"
+      alt=\"runas2\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Off-Domain_13D80/runas2_3.png\"
+      width=\"681\" height=\"346\" /&gt;\r\n&lt;/p&gt;\r\n&lt;h4&gt;Bringing the thunder:
+      SQL 2008 (&lt;font color=\"#ff0000\"&gt;eight&lt;/font&gt;) management\r\nstudio\r\n&lt;/h4&gt;\r\n&lt;p&gt;\r\n&lt;font
+      size=\"3\" face=\"Courier New\"&gt;REM the following script assumes a 64-bit
+      system, \r\n&lt;br /&gt;\r\n&lt;/font&gt;&lt;font size=\"3\" face=\"Courier
+      New\"&gt;REM and assumes you installed SQL 2008 in\r\nthe default folder \r\n&lt;br
+      /&gt;\r\n&lt;/font&gt;&lt;font size=\"3\" face=\"Courier New\"&gt;REM change
+      the parts below in &lt;font color=\"#ff0000\"&gt;RED&lt;/font&gt; \r\n&lt;br
+      /&gt;\r\n&lt;/font&gt;&lt;font size=\"3\" face=\"Courier New\"&gt;runas /netonly
+      /user:&lt;font color=\"#ff0000\"&gt;REALDOMAIN&lt;/font&gt;\\&lt;font color=\"#ff0000\"&gt;YOURDOMAINUSERNAME&lt;/font&gt;
+      &amp;quot;C:\\Program\r\nFiles (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\VSShell\\Common7\\IDE\\ssms.exe&amp;quot;&lt;/font&gt;\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\n&lt;img
+      style=\"background-image: none; border-right-width: 0px; padding-left: 0px;
+      padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width:
+      0px; border-left-width: 0px; padding-top: 0px\" title=\"runas3\" border=\"0\"
+      alt=\"runas3\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Off-Domain_13D80/runas3_3.png\"
+      width=\"681\" height=\"346\" /&gt;\r\n&lt;/p&gt;\r\n&lt;h4&gt;Bringing the thunder:
+      Excel 2007\r\n&lt;/h4&gt;\r\n&lt;p&gt;\r\n&lt;font size=\"3\" face=\"Courier
+      New\"&gt;REM the following script assumes a 64-bit system, \r\n&lt;br /&gt;\r\n&lt;/font&gt;&lt;font
+      size=\"3\" face=\"Courier New\"&gt;REM and assumes you installed Office in the\r\ndefault
+      folder \r\n&lt;br /&gt;\r\n&lt;/font&gt;&lt;font size=\"3\" face=\"Courier New\"&gt;REM
+      change the parts below in &lt;font color=\"#ff0000\"&gt;RED&lt;/font&gt; \r\n&lt;br
+      /&gt;\r\n&lt;/font&gt;&lt;font size=\"3\" face=\"Courier New\"&gt;runas /netonly
+      /user:&lt;font color=\"#ff0000\"&gt;REALDOMAIN&lt;/font&gt;\\&lt;font color=\"#ff0000\"&gt;YOURDOMAINUSERNAME&lt;/font&gt;
+      &amp;quot;C:\\Program\r\nFiles (x86)\\Microsoft Office\\Office12\\EXCEL.EXE&amp;quot;&lt;/font&gt;\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\n&lt;img
+      style=\"background-image: none; border-right-width: 0px; padding-left: 0px;
+      padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width:
+      0px; border-left-width: 0px; padding-top: 0px\" title=\"runas4\" border=\"0\"
+      alt=\"runas4\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Off-Domain_13D80/runas4_3.png\"
+      width=\"681\" height=\"346\" /&gt;\r\n&lt;/p&gt;\r\n&lt;h3&gt;Still not perfect\r\n&lt;/h3&gt;\r\n&lt;p&gt;\r\nThere
+      are a few scenarios where this still doesn’t work:\r\n&lt;/p&gt;\r\n&lt;ul&gt;\r\n&lt;li&gt;\r\nTFS
+      command-line client running from inside a cmd.exe prompt. To be fair to the
+      TFS\r\ncommand-line client, it goes out of its way to let you type in credentials
+      at runtime.&lt;/li&gt;\r\n&lt;li&gt;\r\nRemote debugging off-domain in Visual
+      Studio is still a challenge. I just tried to\r\nset it up on my laptop this
+      last week, and &lt;strong&gt;failed&lt;/strong&gt;. Note remote debugging\r\nrequires
+      some firewall tweaking as well, so maybe this is a PEBKAC-type problem and\r\nnot
+      a &lt;font face=\"Courier New\"&gt;runas /netonly&lt;/font&gt; problem.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;h3&gt;You’re
+      welcome\r\n&lt;/h3&gt;\r\n&lt;p&gt;\r\nThe pattern is simple: give &lt;font
+      face=\"Courier New\"&gt;runas&lt;/font&gt; your name, full\r\npath to the exe,
+      and type in your password when prompted. If you have NEED to run\r\nthe command
+      frequently, create a batch file and quickly make a &lt;a href=\"http://www.pseale.com/blog/SlickrunProtips.aspx\"&gt;SlickRun&lt;/a&gt;
+      MagicWord. \r\n&lt;/p&gt;\r\n&lt;p&gt;\r\nOr, let’s be honest, just drag a shortcut
+      of your newly-created batch file to the\r\nWindows 7 start menu and be done
+      with it. Searching for items in the Start Menu is\r\nalmost as good as SlickRun—a
+      good enough experience such that program launchers aren’t\r\nnecessary anymore.\r\n&lt;/p&gt;\r\n&lt;h3&gt;Credit
+      where due…thanks, TWITTER! (and I guess, Ryan)\r\n&lt;/h3&gt;\r\n&lt;p&gt;\r\n&lt;a
+      href=\"http://twitter.com/#!/ryanmcintyre\"&gt;&lt;img style=\"background-image:
+      none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display:
+      inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width:
+      0px; padding-top: 0px\" title=\"runas5\" border=\"0\" alt=\"runas5\" src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Off-Domain_13D80/runas5_3.png\"
+      width=\"761\" height=\"624\" /&gt;&lt;/a&gt;\r\n&lt;/p&gt;</content>\r\n  </entry>\r\n
+      \ <entry>\r\n    <title>Use The PowerShell Host As A Better Shell</title>\r\n
+      \   <link rel=\"alternate\" type=\"text/html\" href=\"http://www.pseale.com/blog/UseThePowerShellHostAsABetterShell.aspx\"
+      />\r\n    <id>http://www.pseale.com/blog/PermaLink,guid,b7d666be-a22c-46c1-bed1-9efa99402aab.aspx</id>\r\n
+      \   <published>2011-01-17T08:00:00-08:00</published>\r\n    <updated>2011-01-14T20:29:01.471696-08:00</updated>\r\n
+      \   <category term=\"Awesomeness\" label=\"Awesomeness\" scheme=\"http://www.pseale.com/blog/CategoryView,category,Awesomeness.aspx\"
+      />\r\n    <category term=\"PowerShell\" label=\"PowerShell\" scheme=\"http://www.pseale.com/blog/CategoryView,category,PowerShell.aspx\"
+      />\r\n    <content type=\"xhtml\">\r\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n
+      \       <p>\r\nWelcome to 2011. It smells terrific here!\r\n</p>\r\n        <h3>The
+      problem\r\n</h3>\r\n        <p>\r\nYou may not know it, but you have a problem.
+      You’re using the standard Windows command\r\nshell. This is a problem.\r\n</p>\r\n
+      \       <p>\r\n          <a href=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Use-The-PowerShell-Host-As-A-Better-Shel_12420/image_2.png\">\r\n
+      \           <img style=\"background-image: none; border-bottom: 0px; border-left:
+      0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px;
+      border-right: 0px; padding-top: 0px\" title=\"image\" border=\"0\" alt=\"image\"
+      src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Use-The-PowerShell-Host-As-A-Better-Shel_12420/image_thumb.png\"
+      width=\"681\" height=\"346\" />\r\n          </a>\r\n        </p>\r\n        <p>\r\nThe
+      problems are manyfold and boring, so I’ll briefly summarize:\r\n</p>\r\n        <ul>\r\n
+      \         <li>\r\nCutting and pasting is a problem.</li>\r\n          <li>\r\nThe
+      cmd shell’s default history is 100 lines. This is a problem.</li>\r\n          <li>\r\nDOS’s
+      autocomplete featureset predates the word intellisense. It’s bad.</li>\r\n          <li>\r\nDOS
+      hates double-quotes. A lot. \r\n</li>\r\n          <li>\r\nDOS also hates the
+      less-than/greater-than characters. Try this on: runas /user:PC\\windersUser\r\n/password:”I
+      believe in using long passphrases and good security etc and so forth\r\nso I’ll
+      throw in some special characters, like double-quotes (“) and a bunch of other\r\nrandom
+      stuff: &lt;&gt;file1\"</li>\r\n          <ul>\r\n            <li>\r\nI waxed
+      a little eloquent on the point above, and could go into futher boring detail,\r\nbut
+      just take my word for it. DOS doesn’t do windows, and DOS doesn’t escape special\r\ncharacters.
+      Ever.</li>\r\n          </ul>\r\n        </ul>\r\n        <h3>The solution\r\n</h3>\r\n
+      \       <p>\r\n          <a href=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Use-The-PowerShell-Host-As-A-Better-Shel_12420/junk1_4.png\">\r\n
+      \           <img style=\"background-image: none; border-bottom: 0px; border-left:
+      0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px;
+      border-right: 0px; padding-top: 0px\" title=\"junk1\" border=\"0\" alt=\"junk1\"
+      src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Use-The-PowerShell-Host-As-A-Better-Shel_12420/junk1_thumb_1.png\"
+      width=\"417\" height=\"526\" />\r\n          </a>\r\n        </p>\r\n        <p>\r\nThe
+      solution is to launch PowerShell. For the privileged few running Windows 7,
+      it\r\ncomes pre-installed. For the rest of us, minus the crazy dude still running
+      Windows\r\n2000 for security/paranoia reasons, PowerShell can be downloaded.\r\n</p>\r\n
+      \       <p>\r\nA small aside: the Start menu in Windows 7 is excellent. I don’t
+      maintain icons on\r\nmy desktop, the quick launch, pin programs to the taskbar,
+      clicking through the Start\r\nMenu. I just tap the Windows key and tap in a
+      few letters. For PowerShell, WINDOWS,\r\n“p” “o” “w”, then ENTER. That’s it.\r\n</p>\r\n
+      \       <p>\r\nI rarely use <a href=\"http://www.pseale.com/blog/SlickrunProtips.aspx\">SlickRun</a>
+      nowadays.\r\n</p>\r\n        <p>\r\nAhem. Onward.\r\n</p>\r\n        <h3>So
+      now I’m running PowerShell…now what?\r\n</h3>\r\n        <p>\r\nYou get:\r\n</p>\r\n
+      \       <ol>\r\n          <li>\r\nBetter autocomplete, especially with file
+      and pathnames.</li>\r\n          <li>\r\nBetter default settings, including
+      an output history that stores $HUGE_NUMBER lines.</li>\r\n          <li>\r\nA
+      shell that doesn’t hate spaces and double-quotes, and by extension, you.</li>\r\n
+      \         <li>\r\nLittle neat things, like dynamic vertical <strong>and horizontal</strong>
+      resizing,\r\nand…</li>\r\n          <li>\r\nEasy cutting and pasting. Allow
+      me to give a full tutorial below:</li>\r\n        </ol>\r\n        <h3>Cutting
+      to the clipboard\r\n</h3>\r\n        <p>\r\n          <a href=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Use-The-PowerShell-Host-As-A-Better-Shel_12420/junk1_6.png\">\r\n
+      \           <img style=\"background-image: none; border-bottom: 0px; border-left:
+      0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px;
+      border-right: 0px; padding-top: 0px\" title=\"junk1\" border=\"0\" alt=\"junk1\"
+      src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Use-The-PowerShell-Host-As-A-Better-Shel_12420/junk1_thumb_2.png\"
+      width=\"704\" height=\"600\" />\r\n          </a>\r\n        </p>\r\n        <h3>Pasting
+      to the PowerShell host\r\n</h3>\r\n        <p>\r\n          <a href=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Use-The-PowerShell-Host-As-A-Better-Shel_12420/junk2_4.png\">\r\n
+      \           <img style=\"background-image: none; border-bottom: 0px; border-left:
+      0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px;
+      border-right: 0px; padding-top: 0px\" title=\"junk2\" border=\"0\" alt=\"junk2\"
+      src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Use-The-PowerShell-Host-As-A-Better-Shel_12420/junk2_thumb_1.png\"
+      width=\"704\" height=\"701\" />\r\n          </a> \r\n</p>\r\n        <h3>It’s
+      The Little Things\r\n</h3>\r\n        <p>\r\nTonight I’m working through the
+      Ruby koans. I know, who cares. But I’m here to tell\r\nyou that, though there’s
+      not all that much difference tonight between using the cmd\r\nshell and the
+      PowerShell host, there’s a few little things that add up. Here’s a little\r\nthing:
+      just now, I made this simple, tiny improvement that combined the cls command\r\nand
+      the “run the koans” command into one line, which made iterating through the
+      Koans\r\nthat much more easier. Re-running the koans is now as easy as UPARROW,
+      ENTER:\r\n</p>\r\n        <p>\r\n          <a href=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Use-The-PowerShell-Host-As-A-Better-Shel_12420/junk3_2.png\">\r\n
+      \           <img style=\"background-image: none; border-bottom: 0px; border-left:
+      0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px;
+      border-right: 0px; padding-top: 0px\" title=\"junk3\" border=\"0\" alt=\"junk3\"
+      src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Use-The-PowerShell-Host-As-A-Better-Shel_12420/junk3_thumb.png\"
+      width=\"704\" height=\"103\" />\r\n          </a>\r\n        </p>\r\n        <h3>Footnotes\r\n</h3>\r\n
+      \       <p>\r\nI haven’t bothered trying Console2 yet.\r\n</p>\r\n        <p>\r\nI
+      know cmd.exe is <em>technically</em> not the DOS shell. <em>Technically</em>
+      it\r\nstill has all the interpreter problems DOS 3.3 had, so I’m calling it
+      DOS, plus the\r\nfull name for the built-in shell is probably something like
+      Microsoft Windows Command\r\nShell 2011 for the Microsoft Windows 7 Operating
+      System Administration Pack R2 (KB994112).\r\nI just made that up, but if you
+      think the name is a total exaggeration, go research\r\nwhy we call “VSTO” by
+      a four-letter acronym.\r\n</p>\r\n        <h3>Running cmd.exe inside PowerShell
+      (strictly for the lazy)\r\n</h3>\r\n        <p>\r\nIf you love everything I’ve
+      said, but can’t summon the mental energy to learn remedial\r\nPowerShell, that’s
+      okay. You can still gain some benefit from the PowerShell host\r\nrunning the
+      DOS command shell! Just type “cmd&lt;ENTER&gt;” at the prompt, to roll\r\ninto
+      the land of LEGACY.\r\n</p>\r\n        <p>\r\n          <a href=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Use-The-PowerShell-Host-As-A-Better-Shel_12420/junk4_2.png\">\r\n
+      \           <img style=\"background-image: none; border-bottom: 0px; border-left:
+      0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px;
+      border-right: 0px; padding-top: 0px\" title=\"junk4\" border=\"0\" alt=\"junk4\"
+      src=\"http://www.pseale.com/blog/content/binary/Windows-Live-Writer/Use-The-PowerShell-Host-As-A-Better-Shel_12420/junk4_thumb.png\"
+      width=\"704\" height=\"255\" />\r\n          </a>\r\n        </p>\r\n      </div>\r\n
+      \   </content>\r\n  </entry>\r\n  <entry>\r\n    <title>Linkblogging: Hardcoding
+      Vs. Configuration</title>\r\n    <link rel=\"alternate\" type=\"text/html\"
+      href=\"http://www.pseale.com/blog/LinkbloggingHardcodingVsConfiguration.aspx\"
+      />\r\n    <id>http://www.pseale.com/blog/PermaLink,guid,c60e7830-c63c-4db2-abdf-5c870da6789e.aspx</id>\r\n
+      \   <published>2010-08-03T22:00:00-07:00</published>\r\n    <updated>2010-07-30T21:28:16.9029166-07:00</updated>\r\n
+      \   <category term=\".NET\" label=\".NET\" scheme=\"http://www.pseale.com/blog/CategoryView,category,NET.aspx\"
+      />\r\n    <content type=\"xhtml\">\r\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n
+      \       <p>\r\nSometimes you keep things “in the family.” Other times, instead
+      of crafting and sending\r\nan email to your teammates with the assumption no
+      one read it, you blog whatever you\r\nwere going to write in the email. Then,
+      because (let’s be honest) none of your teammates\r\nread your blog, you cut-and-paste
+      the content from your blog post and send the email\r\nanyway. They’re not reading
+      your email either way, but at least you can now cite yourself\r\nas an authority,
+      now that you’ve blogged about the topic. Everybody knows blogging\r\nis a big
+      deal.\r\n</p>\r\n        <p>\r\nThis blog post is the latter case. In case you
+      weren’t taking careful notes from the\r\nabove paragraph, by “the latter” I
+      mean “this post was inspired by a work argument,\r\nand I promise not to sound
+      too vindictive or passive/agressivey while presenting my\r\ncase.” Enjoy!\r\n</p>\r\n
+      \       <p>\r\n          <strong>From Ayende </strong>(disclaimer: he wrote
+      a book about DSLs):\r\n</p>\r\n        <ul>\r\n          <li>\r\n            <a
+      href=\"http://ayende.com/Blog/archive/2008/08/21/Enabling-change-by-hard-coding-everything.aspx\">Enabling\r\nchange
+      by hard-coding everything</a> – Here Ayende teases at what is to come. Read\r\nthe
+      comments, if only to hear speculative counter-arguments (or more specifically,\r\nread
+      about real-world scenarios where hardcoding is abused).</li>\r\n          <li>\r\n
+      \           <a href=\"http://ayende.com/Blog/archive/2008/08/21/Enabling-change-by-hard-coding-everything-the-smart-way.aspx\">Enabling\r\nchange
+      by hard-coding everything: the smart way</a>\r\n          </li>\r\n          <li>\r\n
+      \           <a href=\"http://ayende.com/Blog/archive/2008/08/22/JFHCI-The-evil-that-is-configuration.aspx\">JFHCI:\r\nThe
+      evil that is configuration</a>\r\n          </li>\r\n          <li>\r\n            <a
+      href=\"http://ayende.com/Blog/archive/2008/08/22/JFHCI-Considering-Scale.aspx\">JFHCI:\r\nConsidering
+      scale</a>\r\n          </li>\r\n        </ul>\r\n        <p>\r\n          <strong>Similar
+      posts I came across recently:</strong>\r\n        </p>\r\n        <ul>\r\n          <li>\r\n
+      \           <a href=\"http://laribee.com/configuration-come-to-jesus\">Configuration
+      ‘come to Jesus’</a> –\r\nDavid Laribee talks about the evolution of developers
+      away from XML configuration.\r\nIn the comments, he gets to the heart of the
+      matter (so, read the comments).</li>\r\n          <li>\r\nOkay, apparently I
+      didn’t come across anything else recently. \r\n</li>\r\n        </ul>\r\n        <h3>A
+      further (lazy) case for hardcoding\r\n</h3>\r\n        <p>\r\nThis is by no
+      means an exhaustive linkblog post; I just (lazily) skimmed the surface.\r\nIf
+      you want to look at examples of people moving away from XML configuration, look\r\nat
+      the Castle/NHibernate stack. (Windsor XML configuration and .hbm schemas are
+      dying,\r\nbeing replaced with, dare I say it, “fluent interfaces”. The point
+      isn’t the <em>fluent </em>part,\r\nthe point is they’re code-based.) Witness
+      the ascent of psake and rake in .NET for\r\nbuild scripts. Witness MEF and the
+      scenarios it enables (we probably won’t need any\r\nof them, honestly). Witness
+      FubuMVC and it’s nigh-empty web.config.\r\n</p>\r\n        <p>\r\nI’d prefer
+      to discuss this with a concrete example, but, alas, I’m way too lazy. Let’s\r\njust
+      try doing this without expending any effort:\r\n</p>\r\n        <p>\r\nIf I
+      can summarize, XML (and by extension MSBuild and NAnt) can die in flames, and\r\nI
+      hope it does so sooner rather than later. <strike>The love of money </strike>XML\r\nconfiguration
+      is the root of all evil. The end.\r\n</p>\r\n      </div>\r\n    </content>\r\n
+      \ </entry>\r\n  <entry>\r\n    <title>I Took A Shot At Object Calisthenics</title>\r\n
+      \   <link rel=\"alternate\" type=\"text/html\" href=\"http://www.pseale.com/blog/ITookAShotAtObjectCalisthenics.aspx\"
+      />\r\n    <id>http://www.pseale.com/blog/PermaLink,guid,5bf036b7-3d60-443b-bff9-105be2984ced.aspx</id>\r\n
+      \   <published>2010-08-03T21:40:55.1544145-07:00</published>\r\n    <updated>2010-08-04T20:47:18.9182205-07:00</updated>\r\n
+      \   <category term=\".NET\" label=\".NET\" scheme=\"http://www.pseale.com/blog/CategoryView,category,NET.aspx\"
+      />\r\n    <category term=\"Object Calisthenics\" label=\"Object Calisthenics\"
+      scheme=\"http://www.pseale.com/blog/CategoryView,category,ObjectCalisthenics.aspx\"
+      />\r\n    <content type=\"xhtml\">\r\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n
+      \       <p>\r\n          <strong>\r\n            <font color=\"#ff0000\">Updated
+      2010-08-04:</font>\r\n          </strong> I’ve fixed some\r\nof my word awkwardness,
+      and added several TODOs at the bottom of the list. For your\r\nenjoyment!\r\n</p>\r\n
+      \       <p>\r\nThe problem with coding dojos is that no one else seems to want
+      to run them. I’ve\r\nlong desired to participate in a coding dojo where we work
+      through the object calisthenics\r\nrules. We’ve attempted it as a group once
+      before, but the results were poor. So poor,\r\nin fact, that when reminded of
+      it recently, one participant gave such a look of horror\r\nand shouted “oh no!”
+      It was as if he’d seen a chupacabra and was looking to escape\r\nout the window.
+      But it wasn’t a chupacabra—he’s just been through our group object\r\ncalisthenics
+      dojo and suffered a flashback. No worries Michael, you’ll remain anonymous.\r\n</p>\r\n
+      \       <p>\r\nDespite distasteful memories and general horribleness surrounding
+      everything I knew\r\nabout object calisthenics, I plodded onward. Slowly. And,
+      some year or so later, here\r\nI am, blogging about it, and here you are, skimming
+      my blog post, reading every fifth\r\nsentence or so. I don’t blame you.\r\n</p>\r\n
+      \       <p>\r\nI’m working through object calisthenics because I want to try
+      out the rules, and because\r\nI’m preparing for the <a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/223/Default.aspx\">upcoming\r\npublic
+      Houston TechFest dojo</a>. I plan to use examples from this codebase to explain\r\neach
+      of the rules, so it’s important to get it right. You don’t have to agonize over\r\nevery
+      tiny detail as much as me. Agonizing over code is <strong>not</strong> a rule\r\nof
+      object calisthenics; for this you can be thankful.\r\n</p>\r\n        <p>\r\nThe
+      problem with coding dojos is that no one else seems to want to run them. So
+      I’ll\r\ndo the best I can come October 9th. I hope I’m prepared.\r\n</p>\r\n
+      \       <h3>A note about object calisthenics\r\n</h3>\r\n        <p>\r\nI wrote
+      this project following the rules (and over-arching goals) outlined in <a href=\"http://webcache.googleusercontent.com/search?q=cache:www.xpteam.com/jeff/writings/objectcalisthenics.rtf+object+calisthenics\">the\r\noriginal
+      object calisthenics essay [Warning: RTF; will blow your mind]</a>. One major\r\nproblem
+      with choosing KataPotter to solve, is that I solved the problem without creating\r\nmany
+      collaborating objects. The essay says to “spend 20 hours and 1000 lines writing\r\ncode
+      that conforms 100% to these rules.” KataPotter is too small.\r\n</p>\r\n        <p>\r\nIf
+      I get in a blogging frenzy, I’ll blog in more detail about my experiences, and\r\nI’ll
+      go into depth into each rule and how I learned something from it. But, definitely\r\nnot
+      right now.\r\n</p>\r\n        <h3>I’ve uploaded it to GitHub\r\n</h3>\r\n        <p>\r\nI’ll
+      cut to the chase: <a title=\"http://github.com/pseale/KataPotterObjectCalisthenics\"
+      href=\"http://github.com/pseale/KataPotterObjectCalisthenics\">http://github.com/pseale/KataPotterObjectCalisthenics</a>
+      – <strong>this\r\nis the 90% finished product.</strong> I’ll list the remaining
+      effort below.\r\n</p>\r\n        <h3>Now for the remaining 90%\r\n</h3>\r\n
+      \       <p>\r\n          <strong>Obvious things I’ve missed?</strong>\r\n        </p>\r\n
+      \       <p>\r\nLet me know. I don’t know what I don’t know. These are the rumsfeldian
+      unknown unknowns.\r\nHelp me make them known unknowns, or known knowns, or known
+      known knowns. Whatever\r\nthey are, let me know.\r\n</p>\r\n        <p>\r\n
+      \         <strong>Allow my custom collections to implement IEnumerable&lt;T&gt;;
+      remove now-extraneous\r\nmethods.</strong> \r\n</p>\r\n        <p>\r\nOriginally
+      I decided IEnumerable&lt;T&gt; would be “cheating”, but you know what?\r\nIt’s
+      a collection. It’s not cheating. I have some <em><strong><font color=\"#800080\">dumb</font></strong></em>
+      code\r\nin there because I didn’t allow myself to deal with the collection as
+      a collection.\r\n</p>\r\n        <p>\r\n          <strong>Is this method signature
+      a violation?</strong>\r\n        </p>\r\n        <p>\r\npublic Money Add(decimal
+      amount);\r\n</p>\r\n        <p>\r\nNotice anything? It (potentially) violates
+      rule #3 Wrap all primitives and strings.\r\nThe decimal is a primitive, and
+      thus forbidden. I figure though, how else am I going\r\nto add two Money objects
+      to each other, if one of them can’t tell the other Money\r\nhow much it has?
+      <strong>That’s just dumb</strong>. Too much time already has been\r\nwasted
+      thinking about this, and, seriously, how else are you going to add two objects\r\ntogether?\r\n</p>\r\n
+      \       <p>\r\n          <strong>Break up BookCollection.</strong>\r\n        </p>\r\n
+      \       <p>\r\nIt’s doing too much. BookCollection should be about adding, removing,
+      and clearing\r\nbooks; it should be a first-class collection and nothing more.
+      All non-collection\r\nbehavior should be broken into another class. Perhaps
+      several classes, especially\r\nisolating anything related to those impenetrable
+      LINQ queries. Rule #4 says that we\r\nshould have first-class collections. Rule
+      #7 says to Keep all entities small (50 lines\r\nor less). Break it up.\r\n</p>\r\n
+      \       <p>\r\nUpdate: I should have been clued in by the fact that I have no
+      less than 4 test files\r\nfor this class, split by behavior. Consider me thoroughly
+      clued.\r\n</p>\r\n        <p>\r\n          <strong>Write a console app that
+      works.</strong>\r\n        </p>\r\n        <p>\r\nRight now Program.cs sits
+      alone, forlorn. It needs to a) get a list of books to calculate,\r\nb) run the
+      calculator, c) emit the result. It’s not hard, I’ve simply neglected it.\r\nAlso,
+      for the record, I don’t have to adhere to any rule craziness when writing the\r\nconsole
+      app.\r\n</p>\r\n        <p>\r\n          <strong>Strategy pattern abuse? Investigate.</strong>\r\n
+      \       </p>\r\n        <p>\r\nInvestigate the *BookSetCostCalculator classes
+      and figure out what the author meant\r\nby Rule #2, Don’t use the ELSE keyword.
+      Side note: remember, his rule predated the <a href=\"http://www.antiifcampaign.com/\">anti-if\r\ncampaign</a>.
+      I know that I would not allow such abomination to live in real code\r\nI’d check
+      in. I don’t like anything about the calculators. If there’s any way you\r\ncan
+      see to either a) expand the scope of this Strategy so that it’s used more than\r\none
+      place, and thus justify its existence, or b) at least find better names, let
+      me\r\nknow.\r\n</p>\r\n        <p>\r\nCombine BookSet with the *BookSetCostCalculators
+      somehow? For your sake, I won’t even\r\nattempt to explain my early thoughts.\r\n</p>\r\n
+      \       <p>\r\n          <strong>Null object abuse? Investigate ZeroMoney.</strong>\r\n
+      \       </p>\r\n        <p>\r\nAgain we’re hanging with our good buddy Rule
+      #2, Don’t use the ELSE keyword. This\r\ntime, the essay encourages us to try
+      out using the null object pattern. I think I’m\r\nabusing the pattern with my
+      ZeroMoney. I don’t think that’s what null objects are\r\nfor. Again, the simplicity
+      of the problem has snagged us, and I’ve tried to shoehorn\r\nin a null object
+      where I could have done without.\r\n</p>\r\n        <p>\r\nA second issue I
+      have with the null object pattern is: I don’t ever return null anyway,\r\nat
+      least not inside code that I control (both the caller and the called).  As\r\nthey
+      say, what’s up with that?\r\n</p>\r\n        <p>\r\n          <strong>Namespaces</strong>\r\n
+      \       </p>\r\n        <p>\r\nRule #7 is Keep all entities small. That means
+      ten (10) classes per namespace. My\r\nKataPotter solution is small enough that
+      it almost fits in a single namespace, but\r\nI should adhere to the spirit of
+      the rule and add some folders/namespaces. Maybe something\r\nwill emerge.\r\n</p>\r\n
+      \       <p>\r\nUpdate: I still hate that .NET makes it ugly/discouraging for
+      me to name both a namespace,\r\nand a class in that namespace the same thing.
+      Take KataPotter.Core.Book (the namespace)\r\nand its class Book. Every time
+      I want to refer to the class Book, I have to either\r\nput Book.Book or (what
+      I consider worse) use namespace aliases. \r\n</p>\r\n        <p>\r\n          <strong>What’s
+      the deal with some of those tests?</strong>\r\n        </p>\r\n        <p>\r\nI
+      don’t know why I was so nervous at the time about .Clone() not working, but
+      I was.\r\nSo sue me. I think it had something to do with taking baby steps and
+      trying to make\r\n.Clone() work while pretending IEnumerable&lt;T&gt; was forbidden.
+      But still, delete\r\nsome of those tests. And call out the “acceptance tests”
+      for what they are.\r\n</p>\r\n        <p>\r\nSecond note: move the dumb one-line
+      SetUp() code into each test. DRY or no, the SetUp()\r\ncode is hurting readability.\r\n</p>\r\n
+      \       <p>\r\nThird note: remove tests that test non-production code. E.g.
+      money.Add() tests cover\r\nnull values…why?\r\n</p>\r\n        <p>\r\n          <strong>Fix
+      “the .ToString()” cheating problem.</strong>\r\n        </p>\r\n        <p>\r\nThis
+      will take a little explanation. The problem with Rule #9 of object calisthenics\r\n(no
+      getters, setters, or properties) is that eventually something outside your code\r\nwill
+      want to interact with something adhering to the rules of object calisthenics,\r\nwithout
+      breaking rule #3! Okay. \r\n</p>\r\n        <p>\r\nOkay, let’s do this by example.
+      Let’s say you’re logging in somewhere. There’s a method\r\ncalled public LoginResult
+      Login(Username username, Password password). Now, how do\r\nyou know if the
+      login was successful? A bool property? No! A method called GetLoginSuccess()?\r\nNo!
+      You can’t even be clever and put a method on LoginResult called WasSuccessful()—because\r\nwhat
+      would you return? A bool? That would almost make sense, except Rule #3 is “Wrap\r\nall
+      primitives and strings.” If you try to do something clever like WasSuccessful(),\r\nyou’ll
+      have to return another custom object that wraps a bool, and, now you’re back\r\nfacing
+      the same problem with which you started!\r\n</p>\r\n        <p>\r\nIt’s a conundrum.\r\n</p>\r\n
+      \       <p>\r\nI got tired of thinking about it, and I figured, “Hey, I’m writing
+      a console app,\r\nat least in theory. I might as well implement ToString() and
+      use it as my dead-simple\r\nway to smuggle data out of these objects!” And I
+      did.\r\n</p>\r\n        <p>\r\nIf you look at the tests, you’ll see that all
+      of them compare strings. And in their\r\ndefense, they work, and others have
+      resorted to ToString() to test.\r\n</p>\r\n        <p>\r\nIf you bend your thinking
+      a little, and pretend ToString() is called ProjectOntoViewObject()\r\nthat just
+      so happens to return a string every time, maybe that would soothe your mind\r\na
+      tad? Does it?\r\n</p>\r\n        <p>\r\nIt still feels like cheating.\r\n</p>\r\n
+      \       <p>\r\nAs I’m supposed to adhere to the spirit of Rule #3 (Wrap all
+      primitives and strings)\r\nbut as I’m also supposed to be able to write code
+      that can be observed (thus saving\r\nus from the paradox of trees falling in
+      the forest), I’m permitted to break the rules\r\non the <strong>edges</strong>
+      of the API I’m building. In my case, in this KataPotter\r\nsolution, this means
+      Book, Money, BookCollection, and RemoveSetResult all have ToString()\r\nmethods.
+      These are the classes that either a) are at an API boundary, or b) I needed\r\nto
+      unit test badly.\r\n</p>\r\n        <p>\r\nThere are known alternatives to the
+      “.ToString()” problem, the most popular one for\r\ntesting being, implement
+      .Equals(). I didn’t like the idea, partially because we tried\r\nthat at our
+      group dojo with horrible, horrible results, and partially because you\r\nstill
+      can’t observe the objects in question, though you can throw them at similar\r\nobjects
+      in a supercollider at very high speeds and observe what happens. It seems\r\nlike
+      every test becomes a heavy exercise in mocking.\r\n</p>\r\n        <p>\r\nI’ll
+      stew on this one some more. I need to get rid of the cheating, particularly
+      on\r\ninternal classes where I can use mocks and expectations to figure out
+      what’s going\r\non. Maybe ToString() is legitimate enough on the boundary objects,
+      and may be permitted\r\nthere. Will continue to stew and advise.\r\n</p>\r\n
+      \       <p>\r\n          <strong>\r\n            <font color=\"#800000\">Updated:
+      What is this property doing in there?!? Property?\r\nRule 9? CHEATER!</font>\r\n
+      \         </strong>\r\n        </p>\r\n        <p>\r\nI have no excuse. My Book
+      objects have a property getter named “Title”, and other\r\nobjects make use
+      of the Title directly. Oops!\r\n</p>\r\n        <p>\r\n          <strong>\r\n
+      \           <font color=\"#800000\">Updated: What is “bool IsEmpty()” doing
+      in there?!?\r\nbool? Rule 3? CHEATER!</font>\r\n          </strong>\r\n        </p>\r\n
+      \       <p>\r\nGuilty again. BookCollection has declared a “public bool IsEmpty()”,
+      which is wrapped\r\nby an identical method on another class, which is then used
+      as part of a decision-making\r\nprocess. If I’m correct, it looks like I’m going
+      to have to introduce yet another\r\n(abuse of the) strategy pattern to eliminate
+      the bool returns.\r\n</p>\r\n        <p>\r\n          <strong>\r\n            <font
+      color=\"#800000\">Updated: what’s all this dead code doing in there?</font>\r\n
+      \         </strong>\r\n        </p>\r\n        <p>\r\nAs I happily refactor
+      away, I’m making major changes to the internal organization.\r\nThere are casualties.
+      Were I a careful C# citizen, I would use the internal keyword\r\ninstead of
+      public, and R# (and for those of you without, FxCop as well) would be able\r\nto
+      easily determine which internal methods and classes are never used, and would
+      be\r\nable to highlight them for me. Too bad I’m too lazy to change everything
+      from public\r\nto internal.\r\n</p>\r\n        <p>\r\nThankfully, R# <strong>also
+      includes solution-wide analysis</strong>, which lets me\r\nknow which public
+      methods and classes are unused as well. So, this is just a reminder\r\nto myself
+      to make sure that solution-wide analysis is turned on, so I don’t miss anything\r\nobvious.\r\n</p>\r\n
+      \     </div>\r\n    </content>\r\n  </entry>\r\n  <entry>\r\n    <title>#HTF2010</title>\r\n
+      \   <link rel=\"alternate\" type=\"text/html\" href=\"http://www.pseale.com/blog/HTF2010.aspx\"
+      />\r\n    <id>http://www.pseale.com/blog/PermaLink,guid,751c3d31-996c-403d-9f46-ab3a428521bc.aspx</id>\r\n
+      \   <published>2010-08-02T22:00:00-07:00</published>\r\n    <updated>2010-07-30T20:31:30.5430811-07:00</updated>\r\n
+      \   <category term=\".NET\" label=\".NET\" scheme=\"http://www.pseale.com/blog/CategoryView,category,NET.aspx\"
+      />\r\n    <content type=\"xhtml\">\r\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n
+      \       <p>\r\nThe Houston TechFest is coming!\r\n</p>\r\n        <p style=\"text-align:
+      center\">\r\n          <a title=\"Houston TechFest 2010 Agenda\" href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Agenda/tabid/55/Default.aspx\">\r\n
+      \           <img style=\"border-right-width: 0px; display: inline; border-top-width:
+      0px; border-bottom-width: 0px; border-left-width: 0px\" title=\"image\" border=\"0\"
+      alt=\"image\" src=\"http://www.pseale.com/blog/content/binary/WindowsLiveWriter/HTF2010_136DC/image_3.png\"
+      width=\"700\" height=\"280\" />\r\n            <br />\r\n(click image to see
+      full agenda)</a>\r\n        </p>\r\n        <blink>\r\n          <marquee>\r\n
+      \           <p>\r\n              <a style=\"padding-bottom: 0.3em; background-color:
+      yellow; padding-left: 0.3em; padding-right: 0.3em; letter-spacing: -2px; color:
+      red; font-size: 2.3em; text-decoration: blink; padding-top: 0.3em\" href=\"http://www.houstontechfest.com/\">#HTF2010:Houston\r\nTechFest
+      – October 9th, 2010, @UH</a>\r\n            </p>\r\n          </marquee>\r\n
+      \         <p>\r\n \r\n</p>\r\n          <p>\r\n            <strong>I’m particularly
+      interested in the following sessions:</strong>\r\n          </p>\r\n          <ul>\r\n
+      \           <li>\r\n              <a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/223/Default.aspx\">CODING\r\nDOJO
+      (extended session—bleeds into lunchtime)</a> – emphasis on <strong>bleed</strong>.\r\nI
+      have only one question: <strong>“WHO’S THE CHUMP RUNNING THIS DOJO?” </strong>I
+      <em>really </em>hope\r\nthe speaker comes prepared. \r\n</li>\r\n            <li>\r\n
+      \             <a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/191/Default.aspx\">The\r\nKeynote</a>
+      – Venkat is an excellent speaker. Assuming the projector in the main room\r\nworks
+      at all, … well, maybe even without the main room projector… from the title it\r\nsounds
+      like this is some kind of call to arms. Sweet. \r\n</li>\r\n            <li>\r\n
+      \             <a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/273/Default.aspx\">Peer\r\ncode
+      review – an Agile process</a> – assuming this talk is based on first-hand experience,\r\nthis
+      could be the most useful session in the entire TechFest. Code review has been,\r\nhmm,
+      how to say, <em>an underserved need</em> thus far in my career, and I wouldn’t\r\nmind
+      submitting myself to code reviews. \r\n</li>\r\n            <li>\r\n              <a
+      href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/235/Default.aspx\">Workflow\r\nsystems
+      – myths</a> – from a Microsoft DE. This could be dynamite. \r\n</li>\r\n            <li>\r\n
+      \             <a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/214/Default.aspx\">Pair\r\nprogramming</a>
+      – Part of the Claudio-fest AKA .NET 1 track. I’m not sure what’s going\r\nto
+      happen here, but I’ll give my stamp of approval sight/description unseen. \r\n</li>\r\n
+      \           <li>\r\nTwo excellent, globally-applicable sessions disguised as
+      SharePoint content: \r\n<ul><li><a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/194/Default.aspx\">Customizing\r\nthe
+      social aspects of SharePoint</a> – assuming this is a “lessons learned”-type
+      session,\r\nit will be excellent. \r\n</li><li><a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/280/Default.aspx\">Using\r\nsocial
+      networking as a support model</a> – again, assuming this relies on direct experience,\r\nwhich
+      I believe it does, this short session will be more valuable than a day of traditional\r\nSP
+      curriculum. \r\n</li></ul></li>\r\n            <li>\r\n              <a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/206/Default.aspx\">Advanced\r\nobject-oriented
+      programming</a> – I’m curious to see how this session goes. At some\r\npoint,
+      the concepts become sufficiently advanced such that the best way to explain\r\nthem
+      is to show code. However it’s done, the content looks interesting. \r\n</li>\r\n
+      \           <li>\r\n              <a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/233/Default.aspx\">Agile\r\nAdoption:
+      curing the disease</a> – conflicts with my session, otherwise I’m there.\r\nIncidentally,
+      I think that the lack of Agile-y coding skills (or as they’re sometimes\r\ncalled,
+      “agile engineering techniques”) are a huge barrier to Agile adoption. Just\r\nthat,
+      and human nature.</li>\r\n            <li>\r\n              <a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/279/Default.aspx\">Zen\r\ncoding</a>
+      – a more philosophical session.</li>\r\n            <li>\r\nThe Claudio-fest
+      AKA .NET 1 track – I won’t be attending because I’ve seen these sessions\r\nat
+      some time or other: \r\n<ul><li><a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/212/Default.aspx\">Design\r\npatterns</a>
+      – Claudio’s session here is code-heavy, in the best way. He presents\r\neach
+      design pattern by example, writing the code as you go, so you can follow along.
+      <strong>Highly </strong>recommended. \r\n</li><li><a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/222/Default.aspx\">Tips\r\nand
+      tricks to boost productivity</a> – this session is where I first learned about
+      <a href=\"http://www.pseale.com/blog/SlickRunProtips.aspx\">SlickRun</a>.\r\nClaudio
+      will introduce dozens of little, helpful tools in this session—you’ll pick\r\nup
+      something from this session. \r\n</li></ul></li>\r\n          </ul>\r\n          <p>\r\n
+      \           <strong>These sessions tickle my fancy:</strong>\r\n          </p>\r\n
+      \         <ul>\r\n            <li>\r\n              <a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/268/Default.aspx\">Distributed\r\nVersion
+      Control with Mercurial</a>\r\n            </li>\r\n            <li>\r\n              <a
+      href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/203/Default.aspx\">A\r\nscalable
+      Rails app deployed in 60 seconds</a> – for high comedy, click the link and\r\nread
+      the description! ho-ho! I think that’s a typo, that or Ben is pulling a big,\r\nbig
+      prank. Anyway, despite having never touched Rails, I’m interested in Heroku—the\r\nfeatureset
+      and testimonials are simply undeniable. \r\n</li>\r\n            <li>\r\n              <a
+      href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/270/Default.aspx\">Data\r\nmining</a>\r\n
+      \           </li>\r\n            <li>\r\n              <a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/236/Default.aspx\">Agile\r\nplanning:
+      it’s all relative</a>\r\n            </li>\r\n            <li>\r\n              <a
+      href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/261/Default.aspx\">Debunking\r\nAgile
+      (not)</a>\r\n            </li>\r\n            <li>\r\n              <a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/271/Default.aspx\">Developing\r\nand
+      debugging web content with Firebug</a>\r\n            </li>\r\n            <li>\r\n
+      \             <a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/244/Default.aspx\">WPF\r\nStyling</a>\r\n
+      \           </li>\r\n            <li>\r\n              <a href=\"http://www.houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/253/Default.aspx\">MongoDB</a>\r\n
+      \           </li>\r\n          </ul>\r\n          <p>\r\nI’m not particularly
+      interested in the introduction to * sessions, Azure (or anything\r\nCloud),
+      Windows Phone 7, the SharePoint technical sessions, Java, or anything SQL.\r\nBasically,
+      <strong>any technical content I can’t use within the next three months\r\nis
+      uninteresting to me</strong>. But that’s not the point. The point<strong> isn’t</strong>
+      that\r\nI’m uninterested in attending most of the sessions; the point <strong>is</strong>
+      that\r\nI’ve found something (in most cases, several somethings) in every time
+      slot I <strong>do</strong> want\r\nto attend. The Houston TechFest will have
+      something for everybody. Even me.\r\n</p>\r\n          <h3>Full Disclosure\r\n</h3>\r\n
+      \         <p>\r\nI am bound to disclose the fact that if you attend the Houston
+      TechFest, you will\r\nhave to give up the following:\r\n</p>\r\n          <p>\r\n
+      \           <img style=\"border-right-width: 0px; display: inline; border-top-width:
+      0px; border-bottom-width: 0px; border-left-width: 0px\" title=\"image\" border=\"0\"
+      alt=\"image\" src=\"http://www.pseale.com/blog/content/binary/WindowsLiveWriter/HTF2010_136DC/image_6.png\"
+      width=\"303\" height=\"902\" />\r\n          </p>\r\n          <p>\r\nYet again,
+      the Houston TechFest has chosen to tempt fate and has scheduled itself\r\non
+      the day of the largest UH football game of the year—Miss. St. is coming to town.\r\nLast
+      year when Texas Tech took the field at Robertson Stadium just hours after the\r\nTechFest’s
+      closing session, things ended badly for them. 29-28 badly!\r\n</p>\r\n        </blink>\r\n
+      \     </div>\r\n    </content>\r\n  </entry>\r\n  <entry>\r\n    <title>Linkblogging:
+      Object Calisthenics</title>\r\n    <link rel=\"alternate\" type=\"text/html\"
+      href=\"http://www.pseale.com/blog/LinkbloggingObjectCalisthenics.aspx\" />\r\n
+      \   <id>http://www.pseale.com/blog/PermaLink,guid,c769eb8a-3497-40fa-ae68-8a86ae129f34.aspx</id>\r\n
+      \   <published>2010-07-17T12:17:01.6858036-07:00</published>\r\n    <updated>2010-07-17T12:17:01.6858036-07:00</updated>\r\n
+      \   <category term=\".NET\" label=\".NET\" scheme=\"http://www.pseale.com/blog/CategoryView,category,NET.aspx\"
+      />\r\n    <category term=\"Object Calisthenics\" label=\"Object Calisthenics\"
+      scheme=\"http://www.pseale.com/blog/CategoryView,category,ObjectCalisthenics.aspx\"
+      />\r\n    <content type=\"html\">&lt;blockquote&gt; \r\n&lt;p&gt;\r\nIn preparation
+      for the upcoming session at the &lt;a href=\"http://www.houstontechfest.com/\"&gt;Houston\r\nTechFest&lt;/a&gt;
+      (October 9th, 2010, UH campus), I’m doing “internet research” AKA browsing\r\naround
+      a lot. I’m collecting here a list of everything I could find on the topic.\r\nBe
+      warned, this will be exhaustive (and thus, exhausting to read). Apologies in
+      advance.\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\n&amp;#160;\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\n&lt;strong&gt;The
+      original essay&lt;/strong&gt;\r\n&lt;/p&gt;\r\n&lt;ul&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://www.xpteam.com/jeff/writings/objectcalisthenics.rtf\"&gt;Object
+      Calisthenics\r\n[warning: RTF document]&lt;/a&gt; by &lt;a href=\"http://www.xpteam.com/jeff/\"&gt;Jeff
+      Bay&lt;/a&gt; –\r\nthis also appears as a chapter in &lt;a href=\"http://pragprog.com/titles/twa/thoughtworks-anthology\"&gt;The\r\nThoughtworks
+      Anthology&lt;/a&gt;. It’s well-written, and if you’re going to bother trying\r\nout
+      object calisthenics, &lt;strong&gt;please&lt;/strong&gt; read the original essay.
+      The most\r\nimportant thing to learn is &lt;strong&gt;not the rules themselves,
+      but the reasons the\r\nrules exist&lt;/strong&gt;, and thus, what you’re supposed
+      to take away from the entire\r\nexperience. \r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n&lt;strong&gt;Retrospectives
+      from people who have attempted object calisthenics&lt;/strong&gt;\r\n&lt;/p&gt;\r\n&lt;ul&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://www.markhneedham.com/blog/2008/11/06/object-calisthenics-first-thoughts/\"&gt;Object\r\ncalisthenics:
+      first thoughts&lt;/a&gt; by Mark Needham. Notable takeaways: \r\n&lt;ul&gt;\r\n&lt;li&gt;\r\nhe
+      was “surprised how difficult the problem was to solve using the Object Calisthenics\r\nrules.”
+      \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n“I noticed [after trying object calisthenics]
+      that I was always on the lookout for\r\nways to ensure that we didn't expose
+      any state, so it's had a slight influence on\r\nmy approach already.” \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\nUnit
+      testing is hard: \r\n&lt;ul&gt;\r\n&lt;li&gt;\r\nMark’s group implemented .Equals()
+      and .ToHashCode() for the sole purpose of being\r\nable to unit test while adhering
+      to the rules of object calisthenics. (It is generally\r\nfrowned upon to implement
+      production code for the sole purpose of building tests.) \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\nAnother
+      group used baby steps TDD and triangulation to build unit test. While Mark\r\n(in
+      the blog post) was supportive of this approach, I had less than stellar results\r\ntrying
+      this out in our coding dojo last year. \r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/li&gt;\r\n&lt;li&gt;\r\nThey
+      didn’t finish solving the problem. For those of you surprised by this, trust\r\nme:
+      if anyone ever finishes a problem in a coding dojo environment, it’s something\r\nof
+      a miracle. So, with this context, you may read the sentence as “Today, no miracle\r\noccurred;
+      we didn’t finish the problem during the coding dojo.” \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\nNotes
+      from the comments: \r\n&lt;ul&gt;\r\n&lt;li&gt;\r\nFrom Kris: Possibly encourage
+      people solve a small part of the problem by breaking\r\nthe rules, then, slowly
+      refactor their code to “make the rules pass” in a manner conceptually\r\nsimilar
+      to TDD’s red/green/refactor. \r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://blog.m.artins.net/first-sydney-coding-dojo/\"&gt;First Sydney
+      Coding Dojo&lt;/a&gt; (NOTE:\r\nthis is another perspective on the same dojo
+      mentioned above by Mark Needham) \r\n&lt;ul&gt;\r\n&lt;li&gt;\r\nCoding dojos
+      as a means of idea exchange: “Apart from being an amusing experience,\r\nit
+      was quite interesting to see the different approaches that people take to solve\r\nthe
+      same problem, - the design, the way they write tests, the code style, pretty
+      cool.” \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\nAlso interesting to note, the author
+      suggested improvements that would “improve productivity.”\r\nCoding dojo productivity
+      seems to ALWAYS be abysmal. \r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://schneide.wordpress.com/2009/11/29/follow-up-to-our-dev-brunch-november-2009/\"&gt;Object\r\ncalisthenics:
+      by example; inspected&lt;/a&gt; – quotes: \r\n&lt;ul&gt;\r\n&lt;li&gt;\r\n“…his
+      techniques included the use of the &lt;a href=\"http://en.wikipedia.org/wiki/Visitor_pattern\"&gt;Visitor\r\ndesign
+      pattern&lt;/a&gt;, which wasn’t the author’s first choice beforehands. Test
+      Driven\r\nDevelopment alone wouldn’t have led to this solution…” \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n“The
+      first observation was that the rules follow a dramatic composition that orders\r\nthem
+      from “most obvious and immediate code improvement” to “hardest to achieve code\r\nimprovement”
+      and in the same order from “easiest to acknowledge” to “most controversial”.\r\nAt
+      the end of the list, the audience rioted most of the time. But if you reject
+      the\r\nlast few rules, you’ve silently agreed to the first ones, the ones with
+      the greatest\r\npotential for immediate improvement.” \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n“It’s
+      a &lt;strong&gt;learning catalyst&lt;/strong&gt; for those of us that aren’t
+      born as programming\r\nsuper-heros. To speak &lt;a href=\"http://www.infoq.com/articles/implementations-patterns-br\"&gt;in\r\nterms
+      Kent Beck coined&lt;/a&gt;: Object Calisthenics provide some handy practices
+      that\r\nmight eventually lead to a better understanding of their underlying
+      principles. Even\r\nbeginners can follow the practices and review their code
+      on compliance. When they\r\nfully get to know the principles (like &lt;a href=\"http://en.wikipedia.org/wiki/Law_of_Demeter\"&gt;Law\r\nOf
+      Demeter&lt;/a&gt;, for example), they are already halfway there.” \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\nThis
+      is yet another example of “coding dojos are a safe learning environment”: “At\r\nlast,
+      Object Calisthenics, if performed as a group exercise, can be a team solder.\r\nYou
+      can rant over code together without regrets – the rules were made elsewhere.
+      And\r\nyou can discuss different solutions without feeling pointless – fulfilling
+      the rules\r\nis the common goal for a short time.” \r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://www.morkeleb.com/2009/11/11/alt-net-stockholm-coding-dojo/\"&gt;Alt.Net\r\nStockholm
+      coding dojo&lt;/a&gt; – it appears that they didn’t finish the problem, no miracle\r\noccurred
+      at this dojo either. The only other takeaway I have from this is that nobody\r\nwants
+      to stick to the object calisthenics rules. My pet theory is that people try\r\nto
+      avoid pain, and these rules cause a lot of thinking pain. \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://blog.avegagroup.se/MarcusHammarberg/archive/2010/01/05/trying-coding-dojo-kata-and-extreme-oop.aspx\"&gt;Trying\r\nCoding
+      dojo, kata and Extreme OOP&lt;/a&gt; - “Second - the rules are very hard to
+      follow…\r\nVery hard. We didn’t get quite there I felt.” \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n“Being
+      Cellfish” – a Microsoft employee’s detailed experiences with object calisthenics:
+      \r\n&lt;ul&gt;\r\n&lt;li&gt;\r\n&lt;a href=\"http://blogs.msdn.com/b/cellfish/archive/2009/08/26/team-coding-dojo-5.aspx\"&gt;Team\r\nCoding
+      Dojo 5&lt;/a&gt; - \r\n&lt;ul&gt;\r\n&lt;li&gt;\r\nOn refactoring as a tool
+      of emergent design: “This time we had a lot of design discussions\r\nand we
+      had to force our selfs to just do some refactoring and see where it took us.\r\nI
+      think it was great to see how we refactored and created new classes just to
+      later\r\nrefactor these classes to nothing and removing them. It was a great
+      experience in\r\nhow refactoring in steps reveals the design for you. We also
+      had the full test suite\r\nsave us a bunch of times from stupid bugs which is
+      also nice.” \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\nOn lack of productivity: “But refactoring
+      existing code to follow the object calisthenics\r\nrules is very hard and takes
+      time.” \r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://blogs.msdn.com/b/cellfish/archive/2009/08/15/object-calisthenics-first-contact.aspx\"&gt;Object\r\ncalisthenics:
+      first contact&lt;/a&gt; \r\n&lt;ul&gt;\r\n&lt;li&gt;\r\nOn small classes: “I
+      also learned that classes that I felt were really small and doing\r\nonly one
+      thing actually could be split up when I had to in order to conform to the\r\nrules.
+      Reminds me of when people thought atoms were the smallest building blocks of\r\nthe
+      universe and then it turned out to be something smaller&amp;hellip;” \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n“So
+      all in all I think doing a coding Kata while applying the object calisthenics\r\nrules
+      will improve my ability to write object oriented code” \r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n&lt;strong&gt;Explanations
+      of object calisthenics&lt;/strong&gt;\r\n&lt;/p&gt;\r\n&lt;ul&gt;\r\n&lt;li&gt;\r\n“Being
+      Cellfish” – a Microsoft employee’s detailed experiences with object calisthenics:
+      \r\n&lt;/li&gt;\r\n&lt;ul&gt;\r\n&lt;li&gt;\r\n&lt;a href=\"http://blogs.msdn.com/b/cellfish/archive/2009/08/16/object-calisthenics-rule-1-use-one-level-of-indentation-per-method.aspx\"&gt;Object\r\nCalisthenics:
+      Rule 1: Use one level of indentation per method&lt;/a&gt; \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://blogs.msdn.com/b/cellfish/archive/2009/08/17/object-calisthenics-rule-2-don-t-use-the-else-keyword.aspx\"&gt;Object\r\nCalisthenics:
+      Rule 2: Don't use the else keyword&lt;/a&gt; \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://blogs.msdn.com/b/cellfish/archive/2009/08/18/object-calisthenics-rule-3-wrap-all-primitives-and-strings.aspx\"&gt;Object\r\nCalisthenics:
+      Rule 3: Wrap all primitives and strings&lt;/a&gt; \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://blogs.msdn.com/b/cellfish/archive/2009/08/19/object-calisthenics-rule-4-use-only-one-dot-per-line.aspx\"&gt;Object\r\nCalisthenics:
+      Rule 4: Use only one dot per line&lt;/a&gt; \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://blogs.msdn.com/b/cellfish/archive/2009/08/20/object-calisthenics-rule-5-don-t-abbreviate.aspx\"&gt;Object\r\nCalisthenics:
+      Rule 5: Don't abbreviate&lt;/a&gt;&amp;#160; - “But the explanation for this
+      rule\r\nis that you should not abbreviate anything &lt;strong&gt;and&lt;/strong&gt;
+      &lt;font color=\"#800080\"&gt;&lt;strong&gt;each\r\nclass and method name should
+      be one or two words only&lt;/strong&gt;&lt;/font&gt;.” (emphasis\r\nadded)&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://blogs.msdn.com/b/cellfish/archive/2009/08/21/object-calisthenics-rule-6-keep-all-entities-small.aspx\"&gt;Object\r\nCalisthenics:
+      Rule 6: Keep all entities small&lt;/a&gt;\r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&amp;#160;&lt;a
+      href=\"http://blogs.msdn.com/b/cellfish/archive/2009/08/22/object-calisthenics-rule-7-don-t-use-any-classes-with-more-than-two-instance-variables.aspx\"&gt;Object\r\nCalisthenics:
+      Rule 7: Don't use any classes with more than two instance variables&lt;/a&gt;
+      -\r\n“All that said, remember that this is a rule intended for practice, not
+      necessarily\r\na good thing to always use in all code.” …agreed. This is by
+      far my least favorite\r\nrule, because I think that two instance variables is
+      an arbitrary number. I also assume\r\nthat the author doesn’t count dependencies
+      injected via dependency injection toward\r\nthe 2-instance-variable count, or
+      doesn’t do dependency injection at all? Well, I\r\nneed to practice what I preach
+      and just do it anyway and see what happens.&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://blogs.msdn.com/b/cellfish/archive/2009/08/23/object-calisthenics-rule-8-use-first-class-collections.aspx\"&gt;Object\r\nCalisthenics:
+      Rule 8: Use first class collections&lt;/a&gt;\r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://blogs.msdn.com/b/cellfish/archive/2009/08/24/object-calisthenics-rule-9-don-t-use-any-getters-setters-or-properties.aspx\"&gt;Object\r\nCalisthenics:
+      Rule 9: Don't use any getters, setters or properties&lt;/a&gt;\r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://www.cs.wm.edu/~noonan/cs301/Lectures/calisthenics/\"&gt;Slides
+      from lectures\r\non object calisthenics&lt;/a&gt; – all I can say about this
+      is, &lt;em&gt;awesome&lt;/em&gt;. It appears\r\nto be an OO programming course
+      taught in Java at William &amp;amp; Mary. \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://milano-xpug.pbworks.com/f/10080616-extreme-oop.pdf\"&gt;Extreme
+      OOP [warning:\r\nPDF]&lt;/a&gt; – this looks to be the &lt;a href=\"http://katas.softwarecraftsmanship.org/?p=80\"&gt;String\r\nCalculator
+      kata problem&lt;/a&gt; enforcing both TDD and Object Calisthenics, all at the\r\nsame
+      time. No worries, I won’t force TDD (I don’t have the fortitude). This contains\r\nabbreviated
+      explanations of each rule. \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a href=\"http://www.antiifcampaign.com/\"&gt;Rule
+      2: Don’t use the ELSE keyword – the\r\nanti-if campaign&lt;/a&gt; – and specifically,
+      &lt;a href=\"http://www.antiifcampaign.com/articles/the-simplest-anti-if-code.html\"&gt;their\r\narticle
+      that shows how to remove if’s via a code sample&lt;/a&gt; \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://stackoverflow.com/questions/1937362/who-does-number-two-work-for\"&gt;Rule\r\n2:
+      Don’t use the ELSE keyword –&amp;#160; Can you write an algorithm without an
+      if statement?\r\n[StackOverflow]&lt;/a&gt; \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://codemonkeyism.com/never-never-never-use-string-in-java-or-at-least-less-often/\"&gt;Rule\r\n3:
+      Wrap all primitives and Strings – titled Never, never, never use String in Java\r\n(or
+      at least less often)&lt;/a&gt; – lots of comments here. I just couldn’t bear
+      reading\r\nthem all. You read them and tell me if there’s anything here of use.
+      \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a href=\"https://dev.youdevise.com/YDBlog/index.php?title=my_new_favorite_extreme_oo_rule&amp;amp;more=1&amp;amp;c=1&amp;amp;tb=1&amp;amp;pb=1\"&gt;Rule\r\n4:
+      First-class collections – My favorite new extreme-OO rule&lt;/a&gt; - “This
+      new FooBarLookup\r\nclass also gave me the ability to write some &lt;a href=\"http://en.wikipedia.org/wiki/Higher-order_function\"&gt;high-order-function&lt;/a&gt;-esque\r\nmethods
+      that &lt;a href=\"http://en.wikipedia.org/wiki/Map_%28higher-order_function%29\"&gt;map&lt;/a&gt;
+      or &lt;a href=\"http://en.wikipedia.org/wiki/Filter_%28higher-order_function%29\"&gt;filter&lt;/a&gt;
+      the\r\nFoo’s and Bar’s in the Lookup. Happily, all of this iteration noise is
+      hidden inside\r\nthe encapsulated collection, and away from my business logic.”
+      \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a href=\"http://dotnet.robertmao.com/2008/06/17/write-code-with-no-getters/\"&gt;Rule\r\n9:
+      No getters/setters/properties – Write code with no getters?&lt;/a&gt; This is
+      a critical\r\nreview of articles written about the topic. The author is definitely
+      not happy about\r\nthe prospect. References the article &lt;a href=\"http://www.javaworld.com/javaworld/jw-09-2003/jw-0905-toolbox.html\"&gt;Why\r\ngetters
+      and setters are evil&lt;/a&gt;, which I remember reading a long time ago and
+      thinking,\r\n“that sounds crazy! but intriguing…”&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n&lt;strong&gt;Problem
+      sets/source code of object calisthenics attempts&lt;/strong&gt;\r\n&lt;/p&gt;\r\n&lt;ul&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://www.cs.wm.edu/~noonan/cs301/activity/calisthenics/\"&gt;Rewrite
+      Card.java\r\nusing object calisthenics rules&lt;/a&gt; (&lt;a href=\"http://www.cs.wm.edu/~noonan/cs301/activity/calisthenics/Card.java.txt\"&gt;Card.java&lt;/a&gt;)-\r\nFrom
+      the abovementioned univeristy lectures. \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"https://www.ohloh.net/p/pokqs\"&gt;pokqs [Java, Apache license]&lt;/a&gt;
+      – attempts\r\nto implement QuickSort (??? WHY ???) using the object calisthenics
+      rules. To each\r\nhis own I suppose. \r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n&lt;strong&gt;Reviews
+      from people who have read about (have not tried) object calisthenics&lt;/strong&gt;\r\n&lt;/p&gt;\r\n&lt;ul&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://jimbarritt.com/non-random/2009/03/04/object-calisthenics-jeff-bay/\"&gt;Object\r\nCalisthenics&lt;/a&gt;
+      - “Jeff explains in a great way a few principles and challenges the\r\nreader
+      to try them out in a rigorous way, just to see how it works out. This is a\r\ngreat
+      way to present it, its not saying “I know the right way and you must follow\r\nthe
+      rules”, its suggesting that you should give it a chance and you might begin
+      to\r\nsee some rewards, or “Try it, you might like it”.” \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://jimbarritt.com/non-random/2009/03/07/object-calisthenics-jeff-bay-part-2/\"&gt;Object\r\nCalisthenics,
+      Part 2&lt;/a&gt; – the author discusses how adding small methods eliminates\r\nwhat
+      people sometimes call “micro duplication”, and discusses the purpose of rule\r\n#3
+      (No static methods other than factory methods) in further detail. \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://dubroy.com/blog/if-this-is-object-calisthenics-i-think-ill-stay-on-the-couch/\"&gt;If\r\nthis
+      is object calisthenics, I think I’ll stay on the couch&lt;/a&gt; – from the
+      comments:\r\n“…but if [object calisthenics is] an exercise, then you need to
+      make sure that it’s\r\nworking the right muscles, and not hurting your overall
+      form. My belief is that these\r\nexercises are not working the right muscles.”
+      My counter-argument to the author is:\r\ndude, you come from SmallTalk land.
+      You have mastered the mama bear, (just-right!)\r\napproach to object-oriented
+      programming. Object calisthenics was written by a Java\r\nprogrammer, for the
+      (presumably) Java audience. Think of object calisthenics as the\r\npapa bear
+      object-oriented ruleset (too hot!) to counteract the standard baby bear\r\nprocedural-style
+      programming practice (too cold!) . Once the baby bear programmers\r\nhave tried
+      the papa bear’s porridge, they’ll…well…I sure hope they learn something.\r\nAnyway,
+      this article has good points \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a href=\"http://binstock.blogspot.com/2008/04/perfecting-oos-small-classes-and-short.html\"&gt;OO’s\r\nshort
+      classes and small methods&lt;/a&gt; – while the author endorses object calisthenics,\r\nI’m
+      hesitant to quote him on anything, as he hasn’t tried them out. In any event,\r\nthis
+      article was linked from proggit and received lots of comments with a mix between\r\nthose
+      expressing dubiousness, comments defending the “just try it” approach, and comments\r\ncompletely
+      misrepresenting the object calisthenics rules. &lt;a href=\"http://www.reddit.com/r/programming/comments/6gx7o/perfecting_oos_small_classes_and_short_methods/\"&gt;The\r\nreddit
+      comment thread is similar&lt;/a&gt;. Takeaway for me is, first, emphasize that
+      the\r\nrules make sense, and second, have a paper reference explaining the rules
+      in further\r\ndetail. There will be misunderstanding, guaranteed. \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n&lt;strong&gt;JACKPOT!
+      Blog post citing research from SCIENCE! SCIENCE, whereupon we can\r\nbase our
+      opinions, &lt;u&gt;as opposed to basing our opinions on other uninformed blog
+      posts&lt;/u&gt;!\r\nggggggggggggggggggggggg-yes!&lt;/strong&gt;\r\n&lt;/p&gt;\r\n&lt;ul&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://dubroy.com/blog/method-length-are-short-methods-actually-worse/\"&gt;Are\r\nshort
+      methods actually worse?&lt;/a&gt; – the author reviews the most commonly cited
+      research\r\non method length (make sure to read the update for the updated conclusion).
+      The author\r\nalso (separately, not influenced by the aforementioned research)
+      introduces a concept\r\nI can agree with: “By making your methods shorter, you’re
+      just trading one kind of\r\ncomplexity for another.” This I think is the #1
+      issue keeping people from adopting\r\nobject-oriented programming and the “explosion
+      of objects”—they can no longer find\r\ntheir code once it’s split between five
+      objects, instead of the one object that did\r\nEVERYTHING. \r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n&lt;strong&gt;Related
+      links&lt;/strong&gt;\r\n&lt;/p&gt;\r\n&lt;ul&gt;\r\n&lt;li&gt;\r\n&lt;a href=\"http://c2.com/cgi/wiki?RavioliCode\"&gt;Ravioli
+      Code (from the original gangster\r\nC2 wiki)&lt;/a&gt; – spaghetti is what happens
+      when you have a procedural mess. Ravioli\r\nis what happens when you have an
+      object-oriented mess. In defense of XP, (next link\r\nfollows)… \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a
+      href=\"http://xprogramming.com/images/circles.jpg\"&gt;XP Practices diagram&lt;/a&gt;,
+      from &lt;a href=\"http://xprogramming.com/xpmag/whatisxp\"&gt;What\r\nis XP&lt;/a&gt;
+      – “Simple Design” is a core element of XP. “[choosing the appropriate] Metaphor”\r\nis
+      also important to keep your code simple. Not mentioned in the XP diagram, but
+      implied\r\nis the concept of… \r\n&lt;/li&gt;\r\n&lt;li&gt;\r\n&lt;a href=\"http://c2.com/xp/YouArentGonnaNeedIt.html\"&gt;You
+      Ain’t Gonna Need It (YAGNI)\r\n(from the original gangster C2 wiki)&lt;/a&gt;
+      – don’t add &lt;strong&gt;anything &lt;/strong&gt;to\r\nyour code for “flexibility”,
+      “modularity”, “just in case,” “something I will need\r\nlater.” YOU, your SOURCE
+      CODE REPOSITORY, and your PROGRAM REQUIREMENTS are the most\r\nflexible pieces.
+      When you need something in your code later, add it later, at the\r\nmoment you
+      need it. \r\n&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;/blockquote&gt;</content>\r\n
+      \ </entry>\r\n  <entry>\r\n    <title>Houston TechFest Coding Dojo</title>\r\n
+      \   <link rel=\"alternate\" type=\"text/html\" href=\"http://www.pseale.com/blog/HoustonTechFestCodingDojo.aspx\"
+      />\r\n    <id>http://www.pseale.com/blog/PermaLink,guid,3e51dff1-53df-4440-8a79-c7136e42e8d1.aspx</id>\r\n
+      \   <published>2010-06-14T08:47:25.3593582-07:00</published>\r\n    <updated>2010-06-14T08:47:25.3593582-07:00</updated>\r\n
+      \   <category term=\".NET\" label=\".NET\" scheme=\"http://www.pseale.com/blog/CategoryView,category,NET.aspx\"
+      />\r\n    <content type=\"xhtml\">\r\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n
+      \       <p>\r\nThis is a placeholder in case my session is accepted. I will
+      post the details of the\r\nproblem, object calisthenics rules, the philosophy
+      behind coding dojos, and GitHub\r\nproject details, all as needed. For the rest
+      of you reading this, if you're interested\r\nin helping out (again assuming
+      the session is accepted), find me and I will gladly\r\naccept help (especially
+      during the session!). I would also like to do a public \"test\r\nrun\" of the
+      object calisthenics rules before inflicting it upon the TechFest audience.\r\nLet
+      me know if you're interested.\r\n</p>\r\n      </div>\r\n    </content>\r\n
+      \ </entry>\r\n</feed>\r\n"
+    http_version: '1.1'

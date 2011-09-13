@@ -1,0 +1,32 @@
+%h1.hidden #{@profile.name}'s Writing
+
+#profile
+  = render :partial => "header"
+  = render :partial => "profile_menu"
+  #profile_content
+    .grid_8
+      &nbsp;
+    .grid_5
+      .info_box
+        %h2 
+          Blogs
+          -if can?(:sync_profile, @profile) 
+            %a{:class => "add_blog module_link", :rel => "#add_blog"} add
+            #add_blog.overlay
+              = render :partial => "blogs/form", :locals => { :blog => Blog.new, :action_text => "Add", :disable_text => "Adding..." }
+        %ul
+          - @profile.blogs.each do |b|
+            %li
+              .blog_title= link_to b.title, b.url
+              .links
+                - if can? :edit, b
+                  %a{:class => "blog_link module_link", :rel => "#blog_#{b.id}"} edit
+                - if can? :delete, b
+                  = link_to "delete", [@profile, b], :id => "delete_blog_#{b.id}", :confirm => 'Are you sure?', :method => :delete
+            %div{:id => "blog_#{b.id}", :class => "overlay"}
+              = render :partial => "blogs/form", :locals => { :blog => b, :action_text => "Save", :disable_text => "Saving..." }
+
+    .clear
+  .clear
+.clear
+

@@ -11,11 +11,14 @@ class Ability
     can :sync_profile, Profile do |profile|
       user.profile == profile
     end
-    can :add_talk, Profile do |profile|
+    can [:add_talk], Profile do |profile|
       user.profile == profile
     end
     can [:follow], Profile do |profile|
       user.profile != profile
     end
+    can [:edit, :delete, :add_post], Blog do |blog|
+      user.profile == blog.profile
+    end    
   end
 end

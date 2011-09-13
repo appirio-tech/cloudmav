@@ -1,0 +1,6 @@
+= form_for [@profile, blog] do |f|
+
+  .label= f.label :rss, "Please provide the url for your rss feed"
+  .control= f.text_field :rss, :style => "width:450px;"
+  
+  .submit= f.submit action_text, :disable_with => disable_text

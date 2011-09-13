@@ -1,0 +1,7 @@
+.grid_16
+	%h2= @blog.title
+	%ul
+		- @blog.posts.each do |p|
+			%li= p.title
+
+.clear

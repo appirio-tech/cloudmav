@@ -29,6 +29,10 @@ gem "css3buttons", "1.0.1"
 # 3rd Party Services
 gem "gravtastic"
 
+# Rss
+gem "simple-rss", "1.2.3"
+gem "escape_utils", "0.2.3"
+
 # Api Gems
 gem "httparty", "0.7.8"
 gem "bitbucket_api", "0.0.1"

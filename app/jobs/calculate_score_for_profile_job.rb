@@ -18,6 +18,9 @@ class CalculateScoreForProfileJob
     calculate_score_for_slide_share(profile)
     calculate_score_for_talks(profile)
     
+    # writer
+    calculate_score_for_blogs(profile)
+    
     profile.save
   end
   
@@ -68,4 +71,14 @@ class CalculateScoreForProfileJob
       profile.earn(10, :speaker_points, "for Talk", talk) 
     end
   end
+  
+  def self.calculate_score_for_blogs(profile)
+    profile.blogs.each do |blog|
+      profile.earn(10, :writer_points, "for adding a blog", blog) 
+      blog.posts.each do |post|
+        profile.earn(3, :writer_points, "for adding a post", post) 
+      end
+    end    
+  end
+  
 end
