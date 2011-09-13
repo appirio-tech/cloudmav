@@ -11,5 +11,8 @@ class Ability
     can :sync_profile, Profile do |profile|
       user.profile == profile
     end
+    can :add_talk, Profile do |profile|
+      user.profile == profile
+    end
   end
 end

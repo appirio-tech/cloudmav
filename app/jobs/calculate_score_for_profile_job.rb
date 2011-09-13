@@ -15,7 +15,8 @@ class CalculateScoreForProfileJob
     
     # speaker
     calculate_score_for_speaker_rate(profile)
-    calculate_score_for_slide_share(profile)    
+    calculate_score_for_slide_share(profile)
+    calculate_score_for_talks(profile)
     
     profile.save
   end
@@ -60,5 +61,11 @@ class CalculateScoreForProfileJob
   def self.calculate_score_for_slide_share(profile)
     return unless profile.slide_share_profile
     profile.earn(10, :speaker_points, "for adding SlideShare", profile.slide_share_profile) 
+  end
+  
+  def self.calculate_score_for_talks(profile)
+    profile.talks.each do |talk|
+      profile.earn(10, :speaker_points, "for Talk", talk) 
+    end
   end
 end

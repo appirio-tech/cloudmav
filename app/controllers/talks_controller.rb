@@ -22,6 +22,7 @@ class TalksController < ApplicationController
     @talk.profile = @profile
         
     if @talk.save
+      @profile.calculate_score!
       flash[:notice] = "#{@talk.title} added as one of your talks"
       redirect_to [@profile, @talk]
     else
