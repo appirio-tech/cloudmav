@@ -24,9 +24,8 @@ class ProfilesController < ApplicationController
   end
 
   def knowledge
-    @tab = "knowledge"
-    # @knowledge_events = ProfileEvent.public.for_profile(@profile).categorized_as("Knowledge").order_by(:date.desc).page(1).per(10)
-    # @stack_overflow_profile = @profile.stack_overflow_profile
+    @tab = "knowledge"    
+    @stack_overflow_profile = @profile.stack_overflow_profile
   end
   
   def experience
