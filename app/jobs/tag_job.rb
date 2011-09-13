@@ -15,7 +15,7 @@ class TagJob
     taggable.save 
     
     taggable.related_items.each do |t|
-      tag t
+      tag(t) unless t.nil?
     end
   end
 

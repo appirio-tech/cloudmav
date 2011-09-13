@@ -10,7 +10,8 @@ class CoderProfile
   end
   
   def generate_tags
-    import_tags_from(self.profile.git_hub_profile)
+    return if self.profile.nil?
+    import_tags_from(self.profile.git_hub_profile) unless self.profile.git_hub_profile.nil?
   end
 
 end

@@ -52,6 +52,9 @@ class Talk
   def related_items
     [profile.speaker_profile]
   end
+  
+  def generate_tags
+  end
 
   def self.send_reminders!
     future_talks = Talk.where(:presentation_date => 1.week.from_now)

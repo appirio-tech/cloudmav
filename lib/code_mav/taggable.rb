@@ -62,6 +62,11 @@ module CodeMav
       def taggings_by_score
         self.taggings.sort{|x,y| y.score <=> x.score}
       end
+      
+      def has_tag?(tag)
+        tag_name = tag.respond_to?(:name) ? tag.name : tag 
+        tags.map{|t| t.downcase}.include?(tag_name.downcase)
+      end
     end
   end
 end

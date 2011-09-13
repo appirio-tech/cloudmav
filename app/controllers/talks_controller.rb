@@ -22,6 +22,7 @@ class TalksController < ApplicationController
     @talk.profile = @profile
         
     if @talk.save
+      @talk.retag!
       @profile.calculate_score!
       flash[:notice] = "#{@talk.title} added as one of your talks"
       redirect_to [@profile, @talk]
@@ -37,6 +38,7 @@ class TalksController < ApplicationController
   def update
     @talk = Talk.by_permalink(params[:id]).first
     if @talk.update_attributes(params[:talk])
+      @talk.retag!  
       flash[:notice] = "'#{@talk.title}' saved"
       redirect_to [@profile, @talk]
     else
