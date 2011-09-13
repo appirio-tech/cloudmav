@@ -3,8 +3,6 @@ class SpeakerProfile
   include Mongoid::Timestamps
   include CodeMav::Taggable
   
-  field :speaker_bio, :type => String
-
   belongs_to :profile
 
   def related_items
