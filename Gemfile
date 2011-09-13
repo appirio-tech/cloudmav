@@ -32,6 +32,7 @@ gem "gravtastic"
 # Api Gems
 gem "httparty", "0.7.8"
 gem "bitbucket_api", "0.0.1"
+gem "stack_overflow", "0.0.7"
 
 # Geolocation
 gem "geokit"

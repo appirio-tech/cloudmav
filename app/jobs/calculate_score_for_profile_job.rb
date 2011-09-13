@@ -5,6 +5,10 @@ class CalculateScoreForProfileJob
     profile = Profile.find(profile_id)
     profile.scorings.destroy_all
     
+    # knowledge
+    calculate_score_for_stack_overflow(profile)
+    
+    # coder
     calculate_score_for_git_hub(profile)
     calculate_score_for_bitbucket(profile)
     calculate_score_for_coder_wall(profile)
@@ -35,6 +39,13 @@ class CalculateScoreForProfileJob
     points = profile.coder_wall_profile.badges_count * 5
     profile.earn(10, :coder_points, "for adding CoderWall", profile.coder_wall_profile)
     profile.earn(points, :coder_points, "for CoderWall badges", profile.coder_wall_profile)    
+  end
+  
+  def self.calculate_score_for_stack_overflow(profile)
+    return unless profile.stack_overflow_profile
+    profile.earn(10, :knowledge_points, "for adding StackOverflow", profile.stack_overflow_profile)
+    rep_points = profile.stack_overflow_profile.reputation / 100
+    profile.earn(rep_points, :knowledge_points, "for StackOverflow reputation", profile.stack_overflow_profile)
   end
   
 end

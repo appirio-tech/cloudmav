@@ -1,0 +1,10 @@
+%p You can find your StackOverflow id by looking at the url for your profile.
+= image_tag "stack_overflow_find_id.png", :class => :photo
+%p Just go to StackOverflow, find your id, and enter it here. We can then sync your StackOverflow profile with your account.
+  
+= semantic_form_for [@profile, @stack_overflow_profile] do |f|
+  = f.inputs do
+    = f.input :stack_overflow_id
+  = f.buttons do
+    = big_primary_button_submit_tag "Save"
+

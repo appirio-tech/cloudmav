@@ -10,6 +10,7 @@ Codemav::Application.routes.draw do
     resources :git_hub_profiles
     resources :bitbucket_profiles
     resources :coder_wall_profiles
+    resources :stack_overflow_profiles
   end
   
   mount Resque::Server, :at => "/resque"  

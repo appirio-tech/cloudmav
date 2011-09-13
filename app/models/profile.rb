@@ -7,6 +7,7 @@ class Profile
   include CodeMav::Locatable
   include CodeMav::Scorable  
   include CodeMav::CoderModule
+  include CodeMav::KnowledgeModule  
   include CodeMav::Taggable
   
   gravtastic
@@ -43,6 +44,7 @@ class Profile
   end
   
   def generate_tags
+    import_tags_from(self.knowledge_profile)    
     import_tags_from(self.coder_profile)
   end
   
