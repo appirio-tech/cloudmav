@@ -13,7 +13,6 @@ class ProfilesController < ApplicationController
   
   def show
     @tab = "summary"
-    #@profile_events = ProfileEvent.public.for_profile(@profile).page(1).per(10).order_by(:date.desc)
   end
   
   def code
@@ -35,7 +34,6 @@ class ProfilesController < ApplicationController
 
   def writing
     @tab = "writing"
-    # @writing_events = ProfileEvent.public.for_profile(@profile).categorized_as("Writing").order_by(:date.desc).page(1).per(10)
     # @blog_posts = @profile.posts.page(params[:page]).per(5).order_by(:written_on.desc)
   end
   

@@ -71,7 +71,10 @@ group :test do
   gem "cucumber-rails", "1.0.2"
   gem "database_cleaner" # cleans database for every scenario run. works with mongoid now
   gem "launchy" # allows 'show me the page' to launch a browser
-    
+  
+  # mocks & stubs
+  gem "mocha", "0.9.12"
+  
   # mock web calls
   gem "vcr"
   gem "fakeweb"

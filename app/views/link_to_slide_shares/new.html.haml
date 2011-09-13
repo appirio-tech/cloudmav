@@ -1,0 +1,18 @@
+= content_for :title do
+  Add Slides to a Talk from SlideShare Talk
+
+.grid_16
+  %h1 Add Slides to a Talk from SlideShare Talk
+  = form_tag(:controller => "link_to_slide_shares", :action => "create", :method => "put") do
+    = hidden_field_tag :profile_id, @profile.username
+    = select("slide_share_talk", "talk_id", @slide_share_talks.map{|t| [t.title, t.id] })
+    = big_primary_button_submit_tag "Link"
+  %p
+    If you have not added the slides to SlideShare then first go to slideshare.net and add it.
+    = big_button_link_to "Add slides to SlideShare", "http://www.slideshare.net/upload", :target => "_blank"
+  %p
+    Then refresh CodeMav with your added SlideShare talk
+    = big_button_link_to "Refresh", refresh_profile_talk_link_to_slide_share_path(@profile, @talk)
+
+.clear
+

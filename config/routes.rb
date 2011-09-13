@@ -13,7 +13,18 @@ Codemav::Application.routes.draw do
     resources :stack_overflow_profiles
     resources :speaker_rate_profiles
     resources :slide_share_profiles
-    resources :talks
+    resources :talks do
+      resource :link_to_speaker_rate do
+        member do
+          get :refresh
+        end
+      end
+      resource :link_to_slide_share do
+        member do
+          get :refresh
+        end
+      end
+    end
   end
   
   mount Resque::Server, :at => "/resque"  
