@@ -9,6 +9,7 @@ Codemav::Application.routes.draw do
     resources :autodiscovers
     resources :git_hub_profiles
     resources :bitbucket_profiles
+    resources :coder_wall_profiles
   end
   
   mount Resque::Server, :at => "/resque"  

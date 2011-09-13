@@ -7,6 +7,7 @@ class CalculateScoreForProfileJob
     
     calculate_score_for_git_hub(profile)
     calculate_score_for_bitbucket(profile)
+    calculate_score_for_coder_wall(profile)
     
     profile.save
   end
@@ -27,6 +28,13 @@ class CalculateScoreForProfileJob
   def self.calculate_score_for_bitbucket(profile)
     return unless profile.bitbucket_profile
     profile.earn(10, :coder_points, "for adding Bitbucket", profile.bitbucket_profile)    
+  end
+  
+  def self.calculate_score_for_coder_wall(profile)
+    return unless profile.coder_wall_profile
+    points = profile.coder_wall_profile.badges_count * 5
+    profile.earn(10, :coder_points, "for adding CoderWall", profile.coder_wall_profile)
+    profile.earn(points, :coder_points, "for CoderWall badges", profile.coder_wall_profile)    
   end
   
 end
