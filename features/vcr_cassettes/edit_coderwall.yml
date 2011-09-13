@@ -1,0 +1,49 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://www.coderwall.com:80/subdigital.json
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/0.7.67
+      date:
+      - Tue, 13 Sep 2011 00:38:16 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - keep-alive
+      etag:
+      - ! '"f550677e51d93df902763e5f457bb869"'
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      last-modified:
+      - Sat, 03 Sep 2011 09:24:06 GMT
+      x-runtime:
+      - '0.069354'
+      cache-control:
+      - public
+      content-length:
+      - '1167'
+      x-varnish:
+      - '1555074713'
+      age:
+      - '0'
+      via:
+      - 1.1 varnish
+    body: ! '{"username":"subdigital","badges":[{"name":"Lab","badge":"http://coderwall.com/images/badges/labrador.png","description":"Have
+      at least one original repo where C# is the dominant language"},{"name":"Walrus","badge":"http://coderwall.com/images/badges/walrus.png","description":"The
+      walrus is no stranger to variety. Use at least 4 different languages throughout
+      all your repos"},{"name":"Forked","badge":"http://coderwall.com/images/badges/forked.png","description":"Have
+      a project valued enough to be forked by someone else"},{"name":"Charity","badge":"http://coderwall.com/images/badges/charity.png","description":"Fork
+      and commit to someone''s open source project in need"},{"name":"Mongoose","badge":"http://coderwall.com/images/badges/mongoose.png","description":"Have
+      at least one original repo where ruby is the dominant language"},{"name":"Bear
+      3","badge":"http://coderwall.com/images/badges/bear3.png","description":"Have
+      at least three original repos where objective-c is the dominant language"},{"name":"Bear","badge":"http://coderwall.com/images/badges/bear.png","description":"Have
+      at least one original repo where objective-c is the dominant language"}]}'
+    http_version: '1.1'

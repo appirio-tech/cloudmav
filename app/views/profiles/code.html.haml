@@ -12,8 +12,8 @@
     .grid_5
       = render :partial => "git_hub_profiles/profile"
       = render :partial => "bitbucket_profiles/profile"
-      /= render :partial => "shared/profile/coder_wall"
-      /= render :partial => "shared/tags", :locals => {:taggable => @profile.coder_profile}
+      = render :partial => "coder_wall_profiles/profile"
+      = render :partial => "shared/tags", :locals => {:taggable => @profile.coder_profile}
 
     .clear
   .clear

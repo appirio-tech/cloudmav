@@ -59,6 +59,9 @@ module CodeMav
         end
       end
       
+      def taggings_by_score
+        self.taggings.sort{|x,y| y.score <=> x.score}
+      end
     end
   end
 end

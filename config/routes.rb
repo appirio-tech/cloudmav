@@ -14,7 +14,6 @@ Codemav::Application.routes.draw do
   
   mount Resque::Server, :at => "/resque"  
   
-    
   match "/:username" => "profiles#show", :as => :profile
   match "/:username/experience" => "profiles#experience", :as => :profile_experience
   match "/:username/code" => "profiles#code", :as => :profile_code
