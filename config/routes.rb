@@ -1,4 +1,12 @@
 Codemav::Application.routes.draw do
+  namespace "api/v1", :as => :api do
+    resources :profiles do
+      member do
+        get :tags
+      end
+    end
+  end
+  
   devise_for :users do
     get "confirmation", :to => "devise/users#confirmation"
     get "login", :to => "devise/sessions#new"
