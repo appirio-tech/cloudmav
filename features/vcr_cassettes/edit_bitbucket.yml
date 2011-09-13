@@ -1,0 +1,51 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.bitbucket.org:443/1.0/users/claudiolassala
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Mon, 12 Sep 2011 23:57:47 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '1450'
+      expires:
+      - Mon, 12 Sep 2011 23:57:47 GMT
+      vary:
+      - Authorization, Cookie
+      last-modified:
+      - Mon, 12 Sep 2011 23:57:47 GMT
+      etag:
+      - ! '"92b65e88191c587e7042b554dcee4b1f"'
+      cache-control:
+      - max-age=0
+    body: ! "{\n    \"repositories\": [\n        {\n            \"website\": \"\",
+      \n            \"name\": \"ruby_koans\", \n            \"followers_count\": 1,
+      \n            \"owner\": \"claudiolassala\", \n            \"logo\": null, \n
+      \           \"resource_uri\": \"/api/1.0/repositories/claudiolassala/ruby_koans\",
+      \n            \"slug\": \"ruby_koans\", \n            \"description\": \"\"\n
+      \       }, \n        {\n            \"website\": \"\", \n            \"name\":
+      \"dart_score\", \n            \"followers_count\": 1, \n            \"owner\":
+      \"claudiolassala\", \n            \"logo\": null, \n            \"resource_uri\":
+      \"/api/1.0/repositories/claudiolassala/dart_score\", \n            \"slug\":
+      \"dart_score\", \n            \"description\": \"This is a simple app to help
+      tracking dart matches. It's mostly an app for me to practice Rails development,
+      really.  :)\"\n        }, \n        {\n            \"website\": \"\", \n            \"name\":
+      \"TimeTracker\", \n            \"followers_count\": 1, \n            \"owner\":
+      \"claudiolassala\", \n            \"logo\": null, \n            \"resource_uri\":
+      \"/api/1.0/repositories/claudiolassala/timetracker\", \n            \"slug\":
+      \"timetracker\", \n            \"description\": \"Sample app for presentations.\"\n
+      \       }\n    ], \n    \"user\": {\n        \"username\": \"claudiolassala\",
+      \n        \"first_name\": \"\", \n        \"last_name\": \"\", \n        \"avatar\":
+      \"https://secure.gravatar.com/avatar/1ec317f57c98711dbdafbc543691b4e7?d=identicon&s=32\",
+      \n        \"resource_uri\": \"/1.0/users/claudiolassala\"\n    }\n}"
+    http_version: '1.1'

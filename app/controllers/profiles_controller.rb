@@ -20,7 +20,7 @@ class ProfilesController < ApplicationController
     @tab = "code"
     # @code_events = ProfileEvent.public.for_profile(@profile).categorized_as("Code").order_by(:date.desc).page(1).per(10)
     @git_hub_profile = @profile.git_hub_profile
-    # @bitbucket_profile = @profile.bitbucket_profile
+    @bitbucket_profile = @profile.bitbucket_profile
     # @coder_wall_profile = @profile.coder_wall_profile
   end
 
