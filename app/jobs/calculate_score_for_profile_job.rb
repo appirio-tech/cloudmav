@@ -13,6 +13,9 @@ class CalculateScoreForProfileJob
     calculate_score_for_bitbucket(profile)
     calculate_score_for_coder_wall(profile)
     
+    # speaker
+    calculate_score_for_speaker_rate(profile)
+    
     profile.save
   end
   
@@ -48,4 +51,8 @@ class CalculateScoreForProfileJob
     profile.earn(rep_points, :knowledge_points, "for StackOverflow reputation", profile.stack_overflow_profile)
   end
   
+  def self.calculate_score_for_speaker_rate(profile)
+    return unless profile.speaker_rate_profile
+    profile.earn(10, :speaker_points, "for adding Speaker Rate", profile.speaker_rate_profile) 
+  end
 end

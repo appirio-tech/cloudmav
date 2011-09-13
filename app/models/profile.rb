@@ -7,7 +7,8 @@ class Profile
   include CodeMav::Locatable
   include CodeMav::Scorable  
   include CodeMav::CoderModule
-  include CodeMav::KnowledgeModule  
+  include CodeMav::KnowledgeModule
+  include CodeMav::SpeakerModule
   include CodeMav::Taggable
   
   gravtastic

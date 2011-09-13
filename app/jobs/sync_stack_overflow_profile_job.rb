@@ -23,6 +23,7 @@ class SyncStackOverflowProfileJob
     sync_answers(stack_overflow_profile)
 
     stack_overflow_profile.profile.save!
+    stack_overflow_profile.last_synced_date = DateTime.now
     stack_overflow_profile.save!
 
     stack_overflow_profile.retag!

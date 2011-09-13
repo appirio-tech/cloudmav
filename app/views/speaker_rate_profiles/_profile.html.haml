@@ -1,0 +1,28 @@
+- if @speaker_rate_profile || can?(:sync_profile, @profile)
+  .info_box#speaker_rate_info
+    .info_logo
+      = link_to image_tag("speaker_rate_info_logo.png"), "http://www.speakerrate.com"
+      -if can?(:sync_profile, @profile) && @speaker_rate_profile
+        .delete
+          = link_to "delete", [@profile, @speaker_rate_profile], :id=> :delete_speaker_rate, :confirm => 'Are you sure?', :method => :delete
+        .edit
+          %a{:class => "module_link", :rel => "#sync_speaker_rate"} edit
+    .info
+      - if @speaker_rate_profile
+        - if !@speaker_rate_profile.synced?
+          %p We are still processing. Hit refresh.
+        - else
+          = link_to "Go to my Speaker Rate Profile", @speaker_rate_profile.url, :target => "_blank"
+          %table
+            %tr
+              %td Rating
+              %td= @speaker_rate_profile.rating
+      -else
+        - if can? :sync_profile, @profile
+          - @speaker_rate_profile = SpeakerRateProfile.new
+          %p 
+            Do you have a Speaker Rate account? 
+            %a{:class => "module_link", :rel => "#sync_speaker_rate"} Yes
+      #sync_speaker_rate.overlay
+        = render :partial => "speaker_rate_profiles/form"
+  .clear

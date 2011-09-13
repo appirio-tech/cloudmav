@@ -1,0 +1,31 @@
+= content_for :title do
+  #{@profile.username} - Speaker Profile
+
+#profile
+  = render :partial => "header"
+  = render :partial => "profile_menu"
+  
+  #profile_content
+    .grid_8
+      %h2 Talks (#{@profile.talks.count})
+      - if can? :add_talk, @profile
+        .link= link_to "add a talk", new_profile_talk_path(@profile)
+      %ul.list
+        - @profile.talks.each do |talk|    
+          %li
+            .item_pic= image_tag talk.preview_pic
+            .item_info
+              .item_title= link_to talk.title, [@profile, talk]
+              .item_description
+                = truncate(talk.description, :length => 60)
+      &nbsp;
+
+    .grid_5
+      = render :partial => "speaker_rate_profiles/profile"
+      //= render :partial => "shared/profile/slide_share"
+      = render :partial => "shared/tags", :locals => { :taggable => @profile.speaker_profile }
+
+    .clear
+
+  .clear
+

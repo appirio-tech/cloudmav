@@ -41,7 +41,7 @@ class ProfilesController < ApplicationController
   
   def speaking
     @tab = "speaking"
-    # @speaker_rate_profile = @profile.speaker_rate_profile
+    @speaker_rate_profile = @profile.speaker_rate_profile
     # @slide_share_profile = @profile.slide_share_profile
   end
 

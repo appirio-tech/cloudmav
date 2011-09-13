@@ -9,3 +9,7 @@ end
 When /^I view their knowledge profile$/ do
   visit profile_knowledge_path(@other_user.profile)
 end
+
+When /^I view their speaker profile$/ do
+  visit profile_speaking_path(@other_user.profile)
+end

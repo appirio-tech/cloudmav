@@ -33,6 +33,8 @@ gem "gravtastic"
 gem "httparty", "0.7.8"
 gem "bitbucket_api", "0.0.1"
 gem "stack_overflow", "0.0.7"
+gem "speaker_rate", "0.0.5"
+gem "slide_share", "0.0.3"
 
 # Geolocation
 gem "geokit"
@@ -43,6 +45,13 @@ gem "resque-status"
 
 # Game mechanics
 gem "badgeable"
+
+# Search
+gem "sunspot", "1.2.1"
+gem "sunspot_rails", "1.2.1"
+
+# Friendly Url
+gem "has_permalink"
 
 # Gems used only for assets and not required
 # in production environments by default.
