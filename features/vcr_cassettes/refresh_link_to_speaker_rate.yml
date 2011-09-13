@@ -1,0 +1,72 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://speakerrate.com:80/speakers/10082.json
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache/2.2.9 (Ubuntu) Phusion_Passenger/3.0.3
+      x-powered-by:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.3
+      etag:
+      - ! '"eb00c7607e0c12bef4f4e852796c9b26"'
+      x-runtime:
+      - '60'
+      cache-control:
+      - private, max-age=0, must-revalidate
+      set-cookie:
+      - _spkr8_session=BAh7BzoOcmV0dXJuX3RvIhkvc3BlYWtlcnMvMTAwODIuanNvbjoPc2Vzc2lvbl9pZCIlNjhjZDRjYjE4YWJmMWYyYmFmODgyNTNjZmQ0NGIyZjM%3D--017c42cb6833fe019eb10be4d331bda8ebfeadb7;
+        domain=.speakerrate.com; path=/; expires=Tue, 27-Sep-2011 04:56:47 GMT; HttpOnly
+      status:
+      - '200'
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '3586'
+      date:
+      - Tue, 13 Sep 2011 04:56:47 GMT
+      x-varnish:
+      - '637332029'
+      age:
+      - '0'
+      via:
+      - 1.1 varnish
+      x-varnish-cache:
+      - MISS
+    body: ! '{"name":"rookieone","company":"ChaiOne","cached_content_rating":4.95,"location":"Houston,
+      TX","created_at":"2010/10/08 05:23:19 +0000","twitter_username":"RookieOne","title":"Lead
+      Developer","cached_delivery_rating":4.8,"talks":[{"cached_content_rating":null,"location":null,"created_at":"2011/09/05
+      03:16:02 +0000","title":"Vim - One Week Challenge","event_id":1027,"cached_delivery_rating":null,"updated_at":"2011/09/05
+      03:16:02 +0000","featured":false,"cached_rating":null,"timezone":null,"info":{"text":"I
+      heard from many sources that my productivity would increase if I used Vim as
+      my text editor. I attempted to scale the steep learning cliff (not so much a
+      curve...). One week I decided that I would learn by forcing myself to use vim
+      all week. Since that week I''ve embraced my inner vim. In this talk I will go
+      over the resources I used to learn vim and the basic cool operations that I
+      love with vim. Topics will include basic text operations, vimrc, creating color
+      schemes, and using vim plugins. If you ever wanted to give vim a shot but didn''t
+      know where to start, then you can start here."},"id":8270,"slides_url":"","when":"2011/08/20
+      13:15:00 +0000","talk_url":"http://www.codemav.com/profiles/rookieone/talks/vim-one-week-challenge","is_spam":false,"slideshare_key":null,"series_id":null,"room":"","rating":null},{"cached_content_rating":null,"location":"","created_at":"2010/10/08
+      04:59:39 +0000","title":"Virtual Brown Bag","event_id":612,"cached_delivery_rating":null,"updated_at":"2010/10/09
+      21:17:48 +0000","featured":false,"cached_rating":null,"timezone":null,"info":{"text":"Introduction
+      to the Virtual Brown bag online sessions."},"id":4758,"slides_url":"http://www.lassala.net/files/presentations/claudiolassala-houstontechfest2010.zip","when":"2010/10/09
+      12:00:00 +0000","talk_url":"http://houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/278/Default.aspx","is_spam":false,"slideshare_key":null,"series_id":null,"room":"","rating":null},{"cached_content_rating":4.95,"location":"","created_at":"2010/10/08
+      04:58:07 +0000","title":"Design Patterns","event_id":612,"cached_delivery_rating":4.8,"updated_at":"2010/12/23
+      22:56:01 +0000","featured":false,"cached_rating":4.88,"timezone":null,"info":{"text":"Design
+      Patterns are often used every day by every developer in one way or another.
+      A basic understanding of patterns and how to implement them is very useful for
+      all .NET developer, and this session tries to clarify design patterns in a way
+      that everybody can understand and start thinking about patterns in a more natural
+      way. Attendees will learn:   The definitions of some of the main patterns, how
+      patterns improve code quality, how to implement and use the patterns. covered
+      such as Command, Observer, Adapter, Strategy, Factory, etc."},"id":4757,"slides_url":"http://www.lassala.net/files/presentations/claudiolassala-houstontechfest2010.zip","when":"2010/10/09
+      10:30:00 +0000","talk_url":"http://houstontechfest.com/dotnetnuke/HoustonTechFest/Sessions/tabid/56/CodecampId/3/SessionId/212/Default.aspx","is_spam":false,"slideshare_key":null,"series_id":null,"room":"","rating":4.88}],"updated_at":"2011/03/01
+      19:11:29 +0000","cached_rating":4.88,"id":10082,"company_website":"http://www.chaione.com","avatar_processing":false,"avatar_url":"http://uploads.speakerrate.com/avatars/10082/thumb/stream.17678.0?1299006689","linkedin_url":null,"talk_count":3,"personal_website":"http://www.theabsentmindedcoder.com","is_spam":false,"avatar_updated_at":"2011/03/01
+      19:11:29 +0000","rating":4.88,"biography":{"text":""}}'
+    http_version: '1.1'
