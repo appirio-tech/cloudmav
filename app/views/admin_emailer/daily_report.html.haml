@@ -1,0 +1,11 @@
+%p
+  Total users = #{@total_users_count}
+
+%table
+  %tr
+    %th Username
+    %th Name
+  - @new_users.each do |u|
+    %tr
+      %td= u.username
+      %td= u.profile.name
