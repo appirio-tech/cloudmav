@@ -10,6 +10,7 @@ class Profile
   include CodeMav::KnowledgeModule
   include CodeMav::SpeakerModule
   include CodeMav::Taggable
+  include CodeMav::Followable
   
   gravtastic
   

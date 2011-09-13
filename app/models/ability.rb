@@ -14,5 +14,8 @@ class Ability
     can :add_talk, Profile do |profile|
       user.profile == profile
     end
+    can [:follow], Profile do |profile|
+      user.profile != profile
+    end
   end
 end

@@ -21,6 +21,7 @@ Codemav::Application.routes.draw do
     resources :stack_overflow_profiles
     resources :speaker_rate_profiles
     resources :slide_share_profiles
+    resources :followings
     resources :talks do
       resource :link_to_speaker_rate do
         member do

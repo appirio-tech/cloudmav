@@ -1,0 +1,16 @@
+#profile
+  = render :partial => "header"
+  = render :partial => "profile_menu"
+  
+  #profile_content
+    .grid_8
+      %ul#followings
+        = render :partial => "followings/following", :collection => @friends, :as => :profile
+      &nbsp;
+    .grid_5
+      //= render :partial => "shared/profile/twitter"
+      &nbsp;
+
+    .clear
+
+  .clear
