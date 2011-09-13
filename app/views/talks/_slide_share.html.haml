@@ -1,0 +1,19 @@
+#slide_share
+  %h3= image_tag "talk/slide_share.png"
+  - if @profile.slide_share_profile.nil?
+    - if @profile == current_profile
+      %p.not_added You have not signed up for a SlideShare account yet
+      .rate_it_button
+        = link_to "Sign up for SlideShare", "http://www.slideshare.net"
+    - else
+      %p.not_added #{@profile.display_name} has not signed up for a SlideShare account yet
+  - elsif !@talk.has_slide_share?
+    - if @profile == current_profile
+      .link_to_slide_share= big_button_link_to "Link SlideShare slides to this talk", new_profile_talk_link_to_slide_share_path(@profile, @talk)
+    - else
+      %p.not_added #{@profile.display_name} has not added the slides to their SlideShare account yet
+  - unless @talk.slideshow_html.nil?
+    #slideshow= @talk.slideshow_html.html_safe
+    - unless @talk.slide_share_download_url.nil?
+      = big_button_link_to "Download the slides", @talk.slide_share_download_url
+

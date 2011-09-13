@@ -12,6 +12,7 @@ Codemav::Application.routes.draw do
     resources :coder_wall_profiles
     resources :stack_overflow_profiles
     resources :speaker_rate_profiles
+    resources :slide_share_profiles
     resources :talks
   end
   

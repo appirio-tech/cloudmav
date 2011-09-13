@@ -1,0 +1,7 @@
+%p Just enter your Slide Share username and we can then sync with your account
+
+= semantic_form_for [@profile, @slide_share_profile] do |f|
+  = f.inputs do
+    = f.input :slide_share_username
+  = f.buttons do
+    = big_primary_button_submit_tag "Save"

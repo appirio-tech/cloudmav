@@ -22,7 +22,7 @@
 
     .grid_5
       = render :partial => "speaker_rate_profiles/profile"
-      //= render :partial => "shared/profile/slide_share"
+      = render :partial => "slide_share_profiles/profile"
       = render :partial => "shared/tags", :locals => { :taggable => @profile.speaker_profile }
 
     .clear
