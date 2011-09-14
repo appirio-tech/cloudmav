@@ -25,6 +25,7 @@ Codemav::Application.routes.draw do
     resources :speaker_bios
     resources :blogs
     resources :linkedin_profiles
+    resources :twitter_profiles
     resources :talks do
       resource :link_to_speaker_rate do
         member do

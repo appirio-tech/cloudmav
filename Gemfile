@@ -40,6 +40,7 @@ gem "stack_overflow", "0.0.7"
 gem "speaker_rate", "0.0.5"
 gem "slide_share", "0.0.3"
 gem "linkedin", "0.3.1"
+gem "twitter", "1.6.1"
 
 # Geolocation
 gem "geokit"

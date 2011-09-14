@@ -21,6 +21,9 @@ class CalculateScoreForProfileJob
     # writer
     calculate_score_for_blogs(profile)
     
+    # social
+    calculate_score_for_twitter(profile)
+    
     profile.save
   end
   
@@ -81,4 +84,8 @@ class CalculateScoreForProfileJob
     end    
   end
   
+  def self.calculate_score_for_twitter(profile)
+    return unless profile.twitter_profile
+    profile.earn(10, :social_points, "for adding Twitter", profile.twitter_profile) 
+  end
 end

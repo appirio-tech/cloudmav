@@ -13,6 +13,7 @@ class Profile
   include CodeMav::Followable
   include CodeMav::WriterModule
   include CodeMav::ExperienceModule
+  include CodeMav::SocialModule  
   
   gravtastic
   
