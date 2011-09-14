@@ -27,12 +27,12 @@ Devise.setup do |config|
   # Configure which authentication keys should be case-insensitive.
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
-  config.case_insensitive_keys = [ :username ]
+  #config.case_insensitive_keys = [ :username ]
 
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
   # modifying a user and when used to authenticate or find a user. Default is :email.
-  config.strip_whitespace_keys = [ :username ]
+  #config.strip_whitespace_keys = [ :username ]
 
   # Tell if authentication through request.params is enabled. True by default.
   # config.params_authenticatable = true
@@ -147,6 +147,9 @@ Devise.setup do |config|
   # and :restful_authentication_sha1 (then you should set stretches to 10, and copy
   # REST_AUTH_SITE_KEY to pepper)
   # config.encryptor = :sha512
+  config.encryptor = :bcrypt
+  config.pepper = "f55d247f27b6842c2719d5cdd6ca51afb28194ee93ce65d1a69dba075a2a7a1472da72ffc6562c16cff61a5ea6835116abf236b06a9416ee4d67a1a3cd7d5f92"
+  
 
   # ==> Configuration for :token_authenticatable
   # Defines name of the authentication token params key

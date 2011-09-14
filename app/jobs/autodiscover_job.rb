@@ -1,4 +1,5 @@
 class AutodiscoverJob
+  @queue = :autodiscover
   
   def self.perform(id)
     profile = Profile.find(id)

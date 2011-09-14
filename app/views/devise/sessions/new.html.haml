@@ -1,5 +1,13 @@
 .grid_16
   %h2 Sign in
+  = semantic_form_for User.new, :url => session_path("user") do |f|
+    = f.inputs do
+      = f.input :username, :required => false
+      = f.input :password, :required => false
+    = f.buttons do
+      = big_primary_button_submit_tag "Sign in"
+
+  %h2 Sign in
   = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
     = devise_error_messages!
     - if resource.errors.any?

@@ -31,4 +31,5 @@ class User
        self.profile.save
      end
   end
+
 end

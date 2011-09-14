@@ -12,7 +12,7 @@ module CodeMav
 
       def autodiscovered?
         things_to_discover = ["GitHub", "Bitbucket"]
-        result = self.autodiscover_histories.any_in(:name => things_to_discover)
+        result = self.autodiscover_histories.any_in(:name => things_to_discover).to_a
         result.count == things_to_discover.count
       end
         

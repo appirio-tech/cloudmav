@@ -1,4 +1,5 @@
 class AutodiscoverGitHubProfileJob
+  @queue = :autodiscover
   
   def self.perform(id)
     profile = Profile.find(id)

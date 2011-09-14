@@ -12,11 +12,8 @@ module NavigationHelpers
       '/'
     when /the registration page/
       new_user_registration_path
-    # Add more mappings here.
-    # Here is an example that pulls values out of the Regexp:
-    #
-    #   when /^(.*)'s profile page$/i
-    #     user_profile_path(User.find_by_login($1))
+    when /my profile page/
+      profile_path(@user.profile)
 
     else
       begin
