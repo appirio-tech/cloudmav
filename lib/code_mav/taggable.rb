@@ -67,6 +67,10 @@ module CodeMav
         tag_name = tag.respond_to?(:name) ? tag.name : tag 
         tags.map{|t| t.downcase}.include?(tag_name.downcase)
       end
+      
+      def get_tagging(name)
+        self.taggings.select{|t| t.tag.name == name}.first
+      end
     end
   end
 end

@@ -13,6 +13,18 @@ class Company
 
   scope :named, lambda {|name| where(:name => name) }
   
+  def related_items
+    []
+  end
+  
+  def generate_tags
+    self.employments.each do |job|
+      job.tags.each do |t| 
+        tag t
+      end
+    end    
+  end
+  
   def self.search(query, options = {})
     search = Sunspot.new_search(Company)
     search.build do
