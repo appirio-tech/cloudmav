@@ -1,16 +1,16 @@
 #profile_menu.grid_2
   %ul
-    / %li{:class => (@tab == "summary") ? "selected" : ""}
-    /   = link_to "Summary", profile_path(@profile)
-    / %li{:class => (@tab == "experience") ? "selected" : ""}
-    /   = link_to "Experience", profile_experience_path(@profile)
-    / %li{:class => (@tab == "knowledge") ? "selected" : ""}
-    /   = link_to "Knowledge", profile_knowledge_path(@profile)
-    / %li{:class => (@tab == "code") ? "selected" : ""}
-    /   = link_to "Code", profile_code_path(@profile)
-    / %li{:class => (@tab == "writing") ? "selected" : ""}
-    /   = link_to "Writing", profile_writing_path(@profile)
-    / %li{:class => (@tab == "speaking") ? "selected" : ""}
-    /   = link_to "Speaking", profile_speaking_path(@profile)
-    / %li{:class => (@tab == "social") ? "selected" : ""}
-    /   = link_to "Social", profile_social_path(@profile)
+    %li{:class => (@tab == "summary") ? "selected" : ""}
+      = link_to "Summary", profile_path(@profile)
+    %li{:class => (@tab == "experience") ? "selected" : ""}
+      = link_to "Experience", profile_experience_path(@profile)
+    %li{:class => (@tab == "knowledge") ? "selected" : ""}
+      = link_to "Knowledge", profile_knowledge_path(@profile)
+    %li{:class => (@tab == "code") ? "selected" : ""}
+      = link_to "Code", profile_code_path(@profile)
+    %li{:class => (@tab == "writing") ? "selected" : ""}
+      = link_to "Writing", profile_writing_path(@profile)
+    %li{:class => (@tab == "speaking") ? "selected" : ""}
+      = link_to "Speaking", profile_speaking_path(@profile)
+    %li{:class => (@tab == "social") ? "selected" : ""}
+      = link_to "Social", profile_social_path(@profile)
