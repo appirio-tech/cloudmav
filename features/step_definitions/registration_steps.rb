@@ -30,7 +30,7 @@ end
 Then /^I should be redirected to the autodiscover page$/ do
   user = User.where(:email => @user.email).first
   current_path = URI.parse(current_url).path
-  current_path.should == profile_autodiscovers_path(user.profile)
+  current_path.should == new_profile_autodiscover_path(user.profile)
 end
 
 When /^I register from the home page$/ do
