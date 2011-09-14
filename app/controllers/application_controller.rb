@@ -11,12 +11,9 @@ class ApplicationController < ActionController::Base
   
   # After sign in path is used by devise after user logs in
   def after_sign_in_path_for(user)
-    puts "AFTER SIGNIN!!!!"
     if current_user.profile.autodiscovered?
-      puts "GO TO PROFILE"
       profile_url(current_user.profile)
     else
-      puts "Autodiscover"
       new_profile_autodiscover_url(current_user.profile)
     end
   end

@@ -1,0 +1,21 @@
+%li
+  .item_pic
+    - if job.company.nil?
+      = image_tag "experience.png"
+    - elsif job.company.logo.nil?
+      = image_tag "experience.png"
+    - else
+      = image_tag job.company.logo.url
+  .item_info
+    .item_title
+      = job.title
+    %p 
+      with 
+      - if job.company
+        = job.company.name
+      //- else
+      //  #{job.company_name}
+    .range
+      = show_date job.start_date
+      = show_date job.end_date
+    .item_description= job.description

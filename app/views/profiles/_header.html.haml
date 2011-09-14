@@ -12,7 +12,7 @@
     .profile_name= @profile.display_name
     .user_name= "(#{@profile.username})"
     .profile_actions
-      - if @profile == current_profile
+      - if can? :edit, @profile
         = link_to "edit profile", edit_profile_path(@profile)
       - if can? :view_widgets, @profile
         |

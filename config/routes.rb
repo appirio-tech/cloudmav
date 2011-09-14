@@ -24,6 +24,7 @@ Codemav::Application.routes.draw do
     resources :followings
     resources :speaker_bios
     resources :blogs
+    resources :linkedin_profiles
     resources :talks do
       resource :link_to_speaker_rate do
         member do
@@ -46,6 +47,7 @@ Codemav::Application.routes.draw do
   mount Resque::Server, :at => "/resque"  
   
   match "/:username" => "profiles#show", :as => :profile
+  match "/:username/update" => "profiles#update", :as => :update_profile, :method => :put
   match "/:username/experience" => "profiles#experience", :as => :profile_experience
   match "/:username/code" => "profiles#code", :as => :profile_code
   match "/:username/knowledge" => "profiles#knowledge", :as => :profile_knowledge

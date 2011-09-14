@@ -1,0 +1,4 @@
+
+= form_for @linkedin_profile do |f|
+  = hidden_field_tag :username, @profile.username
+  .submit= f.submit "Sync", :disable_with => "Syncing..."

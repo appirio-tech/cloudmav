@@ -4,8 +4,7 @@ module CodeMav
       receiver.class_eval do
         has_many :jobs
         has_one :experience_profile
-
-        #has_one :linkedin_profile
+        has_one :linkedin_profile
       end
       
       receiver.send(:include, InstanceMethods)

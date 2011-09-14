@@ -29,12 +29,12 @@ class ProfilesController < ApplicationController
   
   def experience
     @tab = "experience"
-    # @linkedin_profile = @profile.linkedin_profile
+    @linkedin_profile = @profile.linkedin_profile
   end
 
   def writing
     @tab = "writing"
-    # @blog_posts = @profile.posts.page(params[:page]).per(5).order_by(:written_on.desc)
+    #@blog_posts = @profile.posts.page(params[:page]).per(5).order_by(:written_on.desc)
   end
   
   def speaking
@@ -50,23 +50,23 @@ class ProfilesController < ApplicationController
   end
   
   def edit
-    #authorize! :edit, @profile
+    authorize! :edit, @profile
   end
   
   def update
-    # authorize! :edit, @profile
-    # if @profile.update_attributes(params[:profile])
-    #   @profile.location = params[:location]
-    #   flash[:notice] = "Profile updated"
-    #   redirect_to @profile
-    # else
-    #   render :edit
-    # end
+    authorize! :edit, @profile
+    if @profile.update_attributes(params[:profile])
+      flash[:notice] = "Profile updated"
+      redirect_to @profile
+    else
+      render :edit
+    end
   end
   
   protected
     def set_profile
-      @profile = Profile.by_username(params[:username]).first
+      username = params[:id] || params[:username]
+      @profile = Profile.by_username(username).first
       unless @profile
         flash[:error] = "Sorry but we couldn't find a profile for #{params[:username]}"
         redirect_to root_path 

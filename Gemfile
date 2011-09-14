@@ -39,6 +39,7 @@ gem "bitbucket_api", "0.0.1"
 gem "stack_overflow", "0.0.7"
 gem "speaker_rate", "0.0.5"
 gem "slide_share", "0.0.3"
+gem "linkedin", "0.3.1"
 
 # Geolocation
 gem "geokit"

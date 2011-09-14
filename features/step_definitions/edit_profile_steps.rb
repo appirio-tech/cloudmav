@@ -1,13 +1,8 @@
 When /^I edit my profile$/ do
-#  click_link "edit profile"
-  l = find_link("edit profile")
-  puts "l is #{l.inspect}"
-  l.click
-#  When %Q{I follow "edit profile"}
+  click_link "edit profile"
 end
 
 When /^I change my name to "([^"]*)"$/ do |name|
-  And "show me the page"
   fill_in "profile_name", :with => name
   click_button "Save"
 end
