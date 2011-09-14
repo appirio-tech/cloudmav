@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     if current_user.profile.autodiscovered?
       profile_url(current_user.profile)
     else
-      profile_autodiscovers_url(current_user.profile)
+      new_profile_autodiscover_url(current_user.profile)
     end
   end
   

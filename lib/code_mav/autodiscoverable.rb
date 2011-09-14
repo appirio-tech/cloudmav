@@ -11,7 +11,7 @@ module CodeMav
     module InstanceMethods
 
       def autodiscovered?
-        things_to_discover = ["GitHub"]
+        things_to_discover = ["GitHub", "Bitbucket"]
         result = self.autodiscover_histories.any_in(:name => things_to_discover)
         result.count == things_to_discover.count
       end

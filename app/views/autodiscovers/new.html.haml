@@ -1,3 +1,6 @@
+= content_for :title do
+  Autodiscovery
+  
 .grid_16
   %h1.hidden Autodiscover
 
@@ -5,7 +8,7 @@
     %p Please be patient as we discover accounts for you.
     = image_tag "wait_bar_green.gif"
   #autodiscovered.hidden
-    = form_tag profile_autodiscovers_path(@profile) do
+    = form_tag profile_autodiscover_path(@profile) do
       .autodiscover_submit= submit_tag "Done"
 
   = render :partial => "autodiscover"
@@ -13,6 +16,3 @@
   %table#discovered
 
 .clear
-
-:javascript
-  $("#guidance").hide();

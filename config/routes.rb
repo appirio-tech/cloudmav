@@ -14,7 +14,7 @@ Codemav::Application.routes.draw do
   end
   
   resources :profiles do
-    resources :autodiscovers
+    resource :autodiscover
     resources :git_hub_profiles
     resources :bitbucket_profiles
     resources :coder_wall_profiles
