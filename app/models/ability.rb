@@ -23,5 +23,8 @@ class Ability
     if user.profile.moderator?
       can [:edit], Company
     end
+    if user.profile.admin?
+      can :admin, Profile
+    end
   end
 end

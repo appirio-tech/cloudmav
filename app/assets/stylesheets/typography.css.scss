@@ -1,0 +1,47 @@
+@import "colors.scss";
+
+$font-family: Helvetica, Arial;
+$font-magic-number: 24px;
+$standard-margin-bottom: $font-magic-number;
+
+html {
+  font-family: Helvetica, Arial, san-serif;
+  font-size: 16px;
+	color: $font-black;
+	// ~24px
+	line-height: 1.5em; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: $standard-margin-bottom;
+  font-weight: bold;
+}
+
+h1 {
+	font-size: 218%;
+	line-height: 1em;
+}
+
+h2 {
+	font-size: 164%;
+	line-height: 1.0909em;	
+}
+
+h3 {
+	font-size: 145%;
+	line-height: 1.2em;
+}
+
+h4 {
+	font-size: 118%;
+	line-height: 1.333em;
+}
+
+h5, h6 {
+	font-size: 100%;
+	line-height: 1.5em;
+}
+
+p {
+  margin-bottom: $standard-margin-bottom;
+}

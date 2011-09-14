@@ -26,3 +26,10 @@ Given /^I am logged in$/ do
   fill_in "user_password", :with => 'secret'
   click_button "Sign in"
 end
+
+Given /^I am logged in as an admin$/ do
+  And %Q{I am logged in}
+  @profile.is_admin = true
+  @profile.save
+  @profile.reload
+end

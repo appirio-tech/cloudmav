@@ -1,4 +1,8 @@
 Codemav::Application.routes.draw do
+  namespace "admin", :as => :admin do
+    match "typography" => "pages#typography", :as => :typography
+  end
+  
   namespace "api/v1", :as => :api do
     resources :profiles do
       member do

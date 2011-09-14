@@ -21,8 +21,11 @@ class Profile
   field :email, :type => String
   field :username, :type => String
   field :is_moderator, :type => Boolean, :default => false
+  field :is_admin, :type => Boolean, :default => false  
   
   index :username, :unique => true
+  
+  attr_protected :is_moderator, :is_admin
   
   belongs_to :user
   
@@ -67,5 +70,9 @@ class Profile
   
   def moderator?
     is_moderator
+  end
+  
+  def admin?
+    is_admin
   end
 end
