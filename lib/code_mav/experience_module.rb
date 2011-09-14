@@ -5,6 +5,8 @@ module CodeMav
         has_many :jobs
         has_one :experience_profile
         has_one :linkedin_profile
+        
+        before_create :create_experience_profile
       end
       
       receiver.send(:include, InstanceMethods)

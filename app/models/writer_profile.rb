@@ -1,4 +1,4 @@
-class KnowledgeProfile
+class WriterProfile
   include Mongoid::Document
   include Mongoid::Timestamps
   include CodeMav::Taggable
@@ -10,7 +10,6 @@ class KnowledgeProfile
   end
   
   def generate_tags
-    import_tags_from(self.profile.stack_overflow_profile) unless self.profile.stack_overflow_profile.nil?
   end
 
 end

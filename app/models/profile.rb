@@ -51,6 +51,9 @@ class Profile
   def generate_tags
     import_tags_from(self.knowledge_profile) unless self.knowledge_profile.nil?
     import_tags_from(self.coder_profile) unless self.coder_profile.nil?
+    import_tags_from(self.speaker_profile) unless self.speaker_profile.nil?
+    import_tags_from(self.experience_profile) unless self.experience_profile.nil?
+    import_tags_from(self.writer_profile) unless self.writer_profile.nil?        
   end
   
   def remove_badge(badge_name)

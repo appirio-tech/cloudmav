@@ -10,6 +10,9 @@ class SpeakerProfile
   end
   
   def generate_tags
+    self.profile.talks.each do |t|
+      import_tags_from(t)
+    end
   end
 
 end
