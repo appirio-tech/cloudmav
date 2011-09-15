@@ -1,4 +1,6 @@
 Codemav::Application.routes.draw do
+  match 'points' => 'pages#points', :as => :points
+  
   namespace "admin", :as => :admin do
     match "typography" => "pages#typography", :as => :typography
     match "form" => "pages#form", :as => :form    
@@ -49,6 +51,8 @@ Codemav::Application.routes.draw do
   
   resources :contacts
   match 'contact' => 'contacts#new', :as => :contact
+  
+  resource :talk_search
   
   mount Resque::Server, :at => "/resque"  
   

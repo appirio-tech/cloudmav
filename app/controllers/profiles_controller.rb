@@ -34,7 +34,7 @@ class ProfilesController < ApplicationController
 
   def writing
     @tab = "writing"
-    #@blog_posts = @profile.posts.page(params[:page]).per(5).order_by(:written_on.desc)
+    @blog_posts = @profile.posts.page(params[:page]).per(5).order_by(:written_on.desc)
   end
   
   def speaking

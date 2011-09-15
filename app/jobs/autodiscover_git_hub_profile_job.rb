@@ -3,7 +3,7 @@ class AutodiscoverGitHubProfileJob
   
   def self.perform(id)
     profile = Profile.find(id)
-    profile.autodiscover_histories.create(:name => "GitHub")
+    profile.add_autodiscover_history_for("GitHub")
         
     name_to_search = profile.username
     url = URI.parse("http://github.com/api/v2/json/user/search/#{name_to_search}")

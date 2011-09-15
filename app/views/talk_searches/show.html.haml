@@ -1,0 +1,12 @@
+= content_for :title do
+  Search Talks
+
+.grid_16
+  #talk_search_form
+    = form_tag talk_search_path do |f|
+      = text_field_tag "search", "", :placeholder => "Search talks"
+      = big_primary_button_submit_tag "Search"
+  #talk_search_results
+    = render :partial => "talk_search_results"
+
+.clear

@@ -1,6 +1,18 @@
+= content_for :title do
+  Registration
+  
 .grid_16
   %h1 Registration
-
+.clear
+.grid_8
+  = semantic_form_for @user, :url => registration_path("user") do |f|
+    = f.inputs do
+      = f.input :username, :required => false
+      = f.input :email, :required => false
+      = f.input :password, :as => :password, :required => false
+    = f.buttons do
+      = big_primary_button_submit_tag "Save"
+    
   = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
     - if resource.errors.any?
       #error_explanation

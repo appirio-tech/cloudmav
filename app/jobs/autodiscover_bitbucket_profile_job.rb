@@ -3,7 +3,7 @@ class AutodiscoverBitbucketProfileJob
   
   def self.perform(id)
     profile = Profile.find(id)
-    profile.autodiscover_histories.create(:name => "Bitbucket")
+    profile.add_autodiscover_history_for("Bitbucket")
     
     begin
       if profile.username

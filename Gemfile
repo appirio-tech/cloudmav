@@ -10,6 +10,7 @@ gem "mongo"
 gem "mongoid"
 gem "bson_ext"
 gem 'sqlite3' # cucumber yelled without this installed
+gem "kaminari" # for paging
 group :production do
   gem 'pg'
 end

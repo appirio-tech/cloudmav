@@ -18,22 +18,32 @@
 // 2.335	0.146	17.962
 // 1.443	0.09	11.100
 
+$form-padding: ms(-2);
+$form-border: 1px solid $font-de-emphasis;
+$form-focus-border: 1px solid $codemav-blue;
+$form-font-weight: bold;
+
+.form_defaults {
+	@include corners(3px);
+	padding: $form-padding;
+	font-weight: $form-font-weight;
+	color: $font-black;
+	border: $form-border;
+	font-size: ms(0);
+	margin-left: ms(-3);
+	margin-bottom: ms(-3);
+}
+.form_focus_defaults {
+	border: $form-focus-border;
+}
+
 form {
   label {
   }
 	input {
-		padding: ms(-2);
-		font-weight: bold;
-		font-size: ms(0);
-		color: $font-black;
-		border: 1px solid $font-de-emphasis;
-		margin-left: ms(-3);
-		margin-bottom: ms(-3);
-		@include corners(3px);
+		@extend .form_defaults;
 		&:focus {
-			border: 1px solid $codemav-blue;
-			//@include box-shadow(0px 0px 1px 1px $codemav-blue);
-			//@include box-shadow(1px 1px 2px 0 #fff000, -1px -2px 0 #ccc);
+			@extend .form_focus_defaults;
 		}
 	}
   // input {
@@ -75,6 +85,11 @@ form {
   //   }
   // }
 }
+
+
+
+
+
 
 // 
 // form.formtastic {

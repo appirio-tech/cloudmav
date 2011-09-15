@@ -8,8 +8,10 @@
     %p Please be patient as we discover accounts for you.
     = image_tag "wait_bar_green.gif"
   #autodiscovered.hidden
-    = form_tag profile_autodiscover_path(@profile) do
-      .autodiscover_submit= submit_tag "Done"
+    %h2 
+      Finished autodiscovery
+      = form_tag profile_autodiscover_path(@profile) do
+        = big_primary_button_submit_tag "Go to my profile"
 
   = render :partial => "autodiscover"
 
