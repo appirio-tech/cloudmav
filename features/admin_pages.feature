@@ -9,3 +9,10 @@ Feature: Admin Pages
     Given I am logged in as an admin
     When I view the admin typography page
     Then I should see all heading types
+    
+  Scenario: Form
+  
+    Given I am logged in as an admin
+    When I view the admin form page
+    Then I should see text input fields
+    And I should see submit button

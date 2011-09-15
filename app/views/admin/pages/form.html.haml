@@ -1,0 +1,17 @@
+= content_for :title do
+  CodeMav Form
+  
+= form_tag do 
+  = label_tag "Text 1"
+  = text_field_tag "text_field_1"
+  %br
+  = label_tag "Text 2"
+  = text_field_tag "text_field_2"  
+  %br
+  = big_primary_button_submit_tag "Save", :id => "submit"
+  
+= semantic_form_for [current_profile, current_profile.git_hub_profile] do |f|
+  = f.inputs do
+    = f.input :username, :hint => "what you sign in to GitHub with"
+  = f.buttons do
+    = big_primary_button_submit_tag "Save"

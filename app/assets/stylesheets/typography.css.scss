@@ -1,15 +1,35 @@
 @import "colors.scss";
 
 $font-family: Helvetica, Arial;
+$font-size: 16px;
 $font-magic-number: 24px;
 $standard-margin-bottom: $font-magic-number;
+$standard-line-height: $font-size * 1.2;
+$base-size: 16px;
+$ratio: $golden;
+
+// Modular Scale from modularscale.com using 16px as text size no important number
+// Pixels	Ems	% of 13
+// 751.538	46.971	5,781.062
+// 464.486	29.03	3,572.969
+// 287.074	17.942	2,208.262
+// 177.425	11.089	1,364.808
+// 109.657	6.854	843.515
+// 67.773	4.236	521.331
+// 41.887	2.618	322.208
+// 25.888	1.618	199.138
+// 16	1	123.077
+// 9.889	0.618	76.069
+// 6.112	0.382	47.015
+// 3.778	0.236	29.062
+// 2.335	0.146	17.962
+// 1.443	0.09	11.100
 
 html {
   font-family: Helvetica, Arial, san-serif;
-  font-size: 16px;
+  font-size: $font-size;
+	line-height: $standard-line-height;
 	color: $font-black;
-	// ~24px
-	line-height: 1.5em; 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,30 +38,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 218%;
-	line-height: 1em;
+	font-size: ms(2);
+	line-height: ms(2) * 1.2;
 }
 
 h2 {
-	font-size: 164%;
-	line-height: 1.0909em;	
+	font-size: ms(1);
+	line-height: ms(1) * 1.2;	
 }
 
-h3 {
-	font-size: 145%;
-	line-height: 1.2em;
-}
-
-h4 {
-	font-size: 118%;
-	line-height: 1.333em;
-}
-
-h5, h6 {
-	font-size: 100%;
-	line-height: 1.5em;
+h3, h4, h5, h6 {
+	font-size: $font-size;
+	line-height: $standard-line-height;
 }
 
 p {
   margin-bottom: $standard-margin-bottom;
 }
+
+.my_menu {
+	display:inline;
+	float: right;
+	li {
+		display:inline;
+	}
+}
+
+
+
