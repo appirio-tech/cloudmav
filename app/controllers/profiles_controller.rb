@@ -2,12 +2,12 @@ class ProfilesController < ApplicationController
   before_filter :set_profile, :except => [:index, :search]
 
   def index
-    #@profiles = Profile.order_by_score.page(params[:page]).per(10)
+    @profiles = Profile.order_by_score.page(params[:page]).per(10)
   end
 
   def search
     @search = params[:search] || ""
-    #@profiles = Profile.search(@search).results
+    @profiles = Profile.search(@search).results
     render :index
   end
   

@@ -45,6 +45,9 @@ Codemav::Application.routes.draw do
         end
       end
     end
+    collection do
+      post :search
+    end
   end
   
   resources :companies

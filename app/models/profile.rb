@@ -75,4 +75,26 @@ class Profile
   def admin?
     is_admin
   end
+  
+  class << self
+    def sync_all!
+      profiles_to_sync = Profile.all.to_a
+      profiles_to_sync.each do |p|
+        begin
+          p.sync!
+        rescue
+            puts "ERROR on syncing #{p.display_name}'s profile"
+        end
+      end
+    end
+    
+    def search(query, options = {})
+      search = Sunspot.new_search(Profile)
+      search.build do
+        keywords query do
+        end
+      end
+      search.execute
+    end
+  end  
 end

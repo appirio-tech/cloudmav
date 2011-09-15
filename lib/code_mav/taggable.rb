@@ -71,6 +71,10 @@ module CodeMav
       def get_tagging(name)
         self.taggings.select{|t| t.tag.name == name}.first
       end
+      
+      def all_tags
+        self.taggings.map{|t| t.tag.synonyms}.flatten
+      end
     end
   end
 end
