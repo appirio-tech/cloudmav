@@ -13,6 +13,7 @@ class SyncTwitterProfileJob
 
     twitter_profile.followers_count = twitter_info.followers_count
     twitter_profile.url = "http://www.twitter.com/#{twitter_profile.username}"
+    twitter_profile.last_synced_date = DateTime.now
 
     profile.save!
     twitter_profile.save!
