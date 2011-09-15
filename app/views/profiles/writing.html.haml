@@ -1,3 +1,6 @@
+= content_for :title do
+  #{@profile.username} - Writer Profile
+
 %h1.hidden #{@profile.name}'s Writing
 
 #profile
@@ -8,12 +11,11 @@
       &nbsp;
     .grid_5
       .info_box
-        %h2 
-          Blogs
-          -if can?(:sync_profile, @profile) 
-            %a{:class => "add_blog module_link", :rel => "#add_blog"} add
-            #add_blog.overlay
-              = render :partial => "blogs/form", :locals => { :blog => Blog.new, :action_text => "Add", :disable_text => "Adding..." }
+        %h2 Blogs
+        -if can?(:sync_profile, @profile) 
+          %a{:class => "add_blog module_link", :rel => "#add_blog"} add
+          #add_blog.overlay
+            = render :partial => "blogs/form", :locals => { :blog => Blog.new, :action_text => "Add", :disable_text => "Adding..." }
         %ul
           - @profile.blogs.each do |b|
             %li

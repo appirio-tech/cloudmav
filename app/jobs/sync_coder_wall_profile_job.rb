@@ -24,6 +24,7 @@ class SyncCoderWallProfileJob
       end
     end
 
+    coder_wall_profile.last_synced_date = DateTime.now
     coder_wall_profile.save
 
     profile.calculate_score!   

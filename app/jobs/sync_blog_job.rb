@@ -1,6 +1,7 @@
 require "open-uri"
 
 class SyncBlogJob
+  @queue = :sync
   
   def self.perform(id)
     blog = Blog.find(id)

@@ -14,6 +14,7 @@ class SyncBitbucketProfileJob
     bitbucket_profile.followers_count = bitbucket_profile.repositories.inject(0){|sum, r| sum + r.followers_count}
     bitbucket_profile.repository_count = bitbucket_profile.repositories.count
     bitbucket_profile.url = "http://www.bitbucket.org/#{bitbucket_profile.username}"
+    bitbucket_profile.last_synced_date = DateTime.now
     bitbucket_profile.save
     
     profile.award_badge("Bucketeer", :description => "For having a Bitbucket account")
