@@ -45,6 +45,16 @@ Codemav::Application.routes.draw do
         end
       end
     end
+    resources :linkedin_profiles do
+      member do
+        get :callback
+        post :confirm
+      end
+      # collection do
+      #   get :callback
+      #   post :confirm
+      # end
+    end
     collection do
       post :search
     end

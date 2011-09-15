@@ -7,7 +7,7 @@ class Job
   field :description, :type => String
   field :start_date, :type => DateTime
   field :end_date, :type => DateTime
-  field :imported_id, :type => String
+  field :imported_id, :type => String  
   
   belongs_to :company, :inverse_of => :employments
   belongs_to :profile

@@ -7,6 +7,7 @@ class Company
     
   field :name, :type => String
   field :description, :type => String
+  field :linkedin_id, :type => String
   mount_uploader :logo, CompanyLogoUploader
   
   has_many :employments, :class_name => "Job", :inverse_of => :company
