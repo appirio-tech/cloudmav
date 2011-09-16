@@ -16,6 +16,12 @@ Feature: Slide Share Profile
     And I should be awarded the "Sliding along" badge
     And I should have speaker points
     And I should have a slide count on my SlideShare profile
+    And my SlideShare profile should have the url
+    
+  Scenario: 
+    When I sync my SlideShare account with username "arisbartee"
+    Then I should have a SlideShare profile
+    And my SlideShare profile should have the url    
     
   Scenario: Sync with account that has only 1 slide
   

@@ -117,3 +117,17 @@ Then /^I should not have a SlideShare profile$/ do
   Profile.find(@profile.id).slide_share_profile.should be_nil
 end
 
+When /^I sync my SlideShare account with username "([^"]*)"$/ do |username|
+  VCR.use_cassette("slide_share_#{username}", :record => :new_episodes) do
+    visit new_profile_slide_share_profile_path(@profile)
+    fill_in "slide_share_profile_slide_share_username", :with => username
+    click_button "Save"
+  end
+end
+
+Then /^my SlideShare profile should have the url$/ do
+  @profile.reload  
+  @profile.slide_share_profile.url.should == "http://www.slideshare.net/#{@profile.slide_share_profile.slide_share_username}"
+end
+
+
