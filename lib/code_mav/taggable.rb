@@ -75,6 +75,11 @@ module CodeMav
       def all_tags
         self.taggings.map{|t| t.tag.synonyms}.flatten
       end
+      
+      def top_tags(options = {})
+        count = options[:count] || 3
+        taggings_by_score.take(count)
+      end
     end
   end
 end
