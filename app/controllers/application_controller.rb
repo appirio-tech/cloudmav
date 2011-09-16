@@ -24,6 +24,10 @@ class ApplicationController < ActionController::Base
     render :file => "#{Rails.root}/public/404.html", :status => 404, :layout => false
   end
   
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
+  end
+  
   def set_profile
     username = params[:username] || params[:profile_id]
     @profile = Profile.by_username(username).first

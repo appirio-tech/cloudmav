@@ -7,6 +7,13 @@ class TalksController < ApplicationController
   
   def show
     @talk = Talk.by_permalink(params[:id]).first
+    if @talk.nil?
+      @talk = Talk.where(:_id => params[:id]).first
+    end
+    
+    if @talk.nil?
+      not_found
+    end
   end
   
   def new
