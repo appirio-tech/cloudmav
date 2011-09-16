@@ -40,10 +40,6 @@ class Profile
     username
   end
   
-  def total_score
-    0
-  end
-  
   def calculate_score!
     Resque.enqueue(CalculateScoreForProfileJob, self.id)
   end
