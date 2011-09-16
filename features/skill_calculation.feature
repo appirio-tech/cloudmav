@@ -30,28 +30,16 @@ Feature: Skill Calculation
     And I should have 53 coder points
     And I should have 83 total points
 
-
-# 
-# Scenario 3:
-# 
-# 
-# 
-# Given there is a skill "ruby" for tags "ruby"
-# 
-# And there is a skill "c#" for tags "c#, csharp"
-# 
-# And there is a user
-# 
-# And the user has a talk worth "30" speaker points tagged with "ruby, csharp"
-# 
-# Then the talk should have "15" "ruby" speaker points
-# 
-# And the talk should have "15" "c#" speaker points
-# 
-# And the user should have "15" "ruby" points
-# 
-# And the user should have "15" "c#" points
-# 
-# And the user should have "30" speaker points
-# 
-# And the user should have "30" total points
+  Scenario: Talk with 2 skill tag
+  
+    Given I am a user
+    Given there is a skill "ruby" for tags "ruby"
+    And there is a skill "c#" for tags "c#, csharp"
+    And I have a talk worth 30 speaker points tagged with "ruby, csharp"
+    When my profile's skills are calculated
+    Then my talk should have 15 "ruby" speaker points
+    And my talk should have 15 "c#" speaker points
+    And I should have 15 "ruby" skill points
+    And I should have 15 "c#" skill points
+    And I should have 30 speaker points
+    And I should have 30 total points
