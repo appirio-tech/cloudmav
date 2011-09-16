@@ -72,6 +72,16 @@ class Profile
     is_admin
   end
   
+  def sync!
+    stack_overflow_profile.sync! unless stack_overflow_profile.nil?
+    git_hub_profile.sync! unless git_hub_profile.nil?
+    bitbucket_profile.sync! unless bitbucket_profile.nil?
+    coder_wall_profile.sync! unless coder_wall_profile.nil?
+    speaker_rate_profile.sync! unless speaker_rate_profile.nil?
+    slide_share_profile.sync! unless slide_share_profile.nil?
+    twitter_profile.sync! unless twitter_profile.nil?
+  end
+  
   class << self
     def sync_all!
       profiles_to_sync = Profile.all.to_a
