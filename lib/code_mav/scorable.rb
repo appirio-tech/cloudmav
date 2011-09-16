@@ -28,6 +28,7 @@ module CodeMav
       
       def score(point_type)
         score = 0
+        point_type = point_type.to_s
         self.scorings.select{|s| s.point_type == point_type}.each{|s| score += s.score }
         score        
       end

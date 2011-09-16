@@ -32,11 +32,15 @@ class CalculateScoreForProfileJob
     return unless profile.git_hub_profile
     profile.earn(10, :coder_points, "for adding GitHub", profile.git_hub_profile)
 
-    profile.git_hub_profile.repositories.each do |r|
+    repos = profile.git_hub_profile.repositories
+    return if repos.nil?
+    
+    repos.each do |r|
       points = 1
-      points = points + r.watchers * 0.1
-      points = points + r.forks * 0.15
+      points = points + (r.watchers || 0) * 0.1
+      points = points + (r.forks || 0) * 0.15
       points = points.round
+      r.earn(points, :coder_points, "for repository value", r)
       profile.earn(points, :coder_points, "for repository value", r)
     end
   end

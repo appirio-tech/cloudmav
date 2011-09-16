@@ -4,7 +4,7 @@ class Scoring
   include CodeMav::HasSubject
   
   field :name, :type => String
-  field :count, :type => Integer
+  field :point_type, :type => String
   field :score, :type => Integer, :default => 0
   
   embedded_in :scorable, :polymorphic => true

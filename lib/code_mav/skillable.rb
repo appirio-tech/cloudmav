@@ -14,8 +14,8 @@ module CodeMav
         self.skillings.destroy_all
       end
       
-      def earn_skill(points, skill_name, description, subject)
-        skilling = Skilling.new(:skill_name => skill_name, :description => description, :score => points)
+      def earn_skill(points, skill_name, point_type, description, subject)
+        skilling = Skilling.new(:skill_name => skill_name, :point_type => point_type, :description => description, :score => points)
         skilling.subject = subject
         self.skillings << skilling
         skilling.save
@@ -25,6 +25,14 @@ module CodeMav
       def skill_score(skill_name)
         score = 0
         self.skillings.select{|s| s.skill_name == skill_name}.each{|s| score += s.score }
+        score        
+      end
+      
+      def skill_score_for_type(skill_name, point_type)
+        score = 0
+        point_type = point_type.to_s
+        both = self.skillings.select{|s| s.skill_name == skill_name && s.point_type == point_type}     
+        self.skillings.select{|s| s.skill_name == skill_name && s.point_type == point_type}.each{|s| score += s.score }
         score        
       end
 

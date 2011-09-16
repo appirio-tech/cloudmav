@@ -4,6 +4,7 @@ class Skilling
   include CodeMav::HasSubject
   
   field :skill_name, :type => String
+  field :point_type, :type => String
   field :description, :type => String
   field :score, :type => Integer, :default => 0
   

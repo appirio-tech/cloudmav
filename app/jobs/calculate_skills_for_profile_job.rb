@@ -24,8 +24,8 @@ class CalculateSkillsForProfileJob
       if (skills.count > 0)
         skill_score = talk.total_score / skills.count
         skills.each do |skill|
-          talk.earn_skill(skill_score, skill.name, "for Talk", talk)
-          profile.earn_skill(skill_score, skill.name, "for Talk", talk)
+          talk.earn_skill(skill_score, skill.name, :speaker, "for Talk", talk)
+          profile.earn_skill(skill_score, skill.name, :speaker, "for Talk", talk)
         end
       end
       #profile.earn(talk.total_score, :speaker_points, "for Talk", talk) 

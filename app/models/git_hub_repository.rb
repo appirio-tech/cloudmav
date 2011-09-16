@@ -1,6 +1,7 @@
 class GitHubRepository 
   include Mongoid::Document
   include Mongoid::Timestamps
+  include CodeMav::Scorable
 
   field :name, :type => String
   field :url, :type => String

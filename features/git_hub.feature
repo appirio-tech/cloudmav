@@ -32,7 +32,7 @@ Feature: GitHub
   Scenario: Edit GitHub
  
     Given I am logged in
-    And I have a GitHub profile
+    And I have a synced GitHub profile
     When I edit my GitHub id
     Then I should have a GitHub profile
     And my old GitHub repositories should be deleted
@@ -41,7 +41,7 @@ Feature: GitHub
  Scenario: Delete GitHub
  
    Given I am logged in
-   And I have a GitHub profile
+   And I have a synced GitHub profile
    When I delete my GitHub profile
    Then I should not have a GitHub profile
    And I should not have the "Git R Done" badge

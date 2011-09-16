@@ -51,7 +51,7 @@ Then /^I should see their GitHub profile$/ do
   And %Q{I should see "Go to my GitHub Profile"}
 end
 
-Given /^I have a GitHub profile$/ do
+Given /^I have a synced GitHub profile$/ do
   VCR.use_cassette("my github", :record => :new_episodes) do
     g = Factory.create(:git_hub_profile, :username => "rookieone", :profile => @profile, :last_synced_date => DateTime.now)
     @profile.save
