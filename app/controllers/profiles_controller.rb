@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
   before_filter :set_profile, :except => [:index, :search]
 
   def index
+    @current_page = params[:page]
     @profiles = Profile.order_by_score.page(params[:page]).per(10)
   end
 

@@ -17,8 +17,9 @@
       %ul.search_results
         - @profiles.each do |p|
           = render :partial => "profiles/search_result", :locals => { :profile => p }
-      //= will_paginate @profiles
-      = paginate @profiles
+
+      - if @current_page
+        = paginate @profiles
           
 .clear
 
