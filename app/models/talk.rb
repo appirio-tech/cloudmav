@@ -3,6 +3,7 @@ class Talk
   include Mongoid::Timestamps
   include CodeMav::Taggable
   include CodeMav::Indexable
+  include CodeMav::Scorable
   
   field :title, :type => String
   field :permalink, :type => String

@@ -1,5 +1,6 @@
 Given /^I am a user$/ do
   @user = Factory.create(:user)
+  @profile = @user.profile
 end
 
 When /^I am awarded a badge "([^"]*)"$/ do |title|

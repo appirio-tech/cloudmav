@@ -15,13 +15,9 @@ module CodeMav
     end
     
     module InstanceMethods
-
-      def recalculate_score!
+      
+      def clear_score!
         self.scorings.destroy_all
-        self.total_score = 0
-        self.save
-        event = RecalculateScoreEvent.new(:profile => self)
-        event.save
       end
 
       def calculate_total_score
@@ -45,17 +41,6 @@ module CodeMav
         calculate_total_score
       end
 
-      def adjust_score(name, points, point_type)
-        scoring = self.scorings.select{|s| s.point_type == point_type && s.name == name}.first
-        if scoring.nil?
-          scoring = self.scorings.create(:name => name, :point_type => point_type, :score => points)
-        else
-          scoring.score = points
-          scoring.save
-        end
-        self.save
-        calculate_total_score
-      end
     end
   end
 end
