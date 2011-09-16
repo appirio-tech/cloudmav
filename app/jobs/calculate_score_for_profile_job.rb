@@ -25,6 +25,7 @@ class CalculateScoreForProfileJob
     calculate_score_for_twitter(profile)
     
     profile.save
+    profile.calculate_skills!
   end
   
   def self.calculate_score_for_git_hub(profile)

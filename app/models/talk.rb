@@ -4,6 +4,7 @@ class Talk
   include CodeMav::Taggable
   include CodeMav::Indexable
   include CodeMav::Scorable
+  include CodeMav::Skillable
   
   field :title, :type => String
   field :permalink, :type => String

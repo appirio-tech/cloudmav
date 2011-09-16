@@ -5,7 +5,8 @@ class Profile
   include Badgeable::Subject
   include CodeMav::Autodiscoverable
   include CodeMav::Locatable
-  include CodeMav::Scorable  
+  include CodeMav::Scorable
+  include CodeMav::Skillable
   include CodeMav::CoderModule
   include CodeMav::KnowledgeModule
   include CodeMav::SpeakerModule
@@ -42,6 +43,10 @@ class Profile
   
   def calculate_score!
     Resque.enqueue(CalculateScoreForProfileJob, self.id)
+  end
+
+  def calculate_skills!
+    Resque.enqueue(CalculateSkillsForProfileJob, self.id)
   end
   
   def related_items

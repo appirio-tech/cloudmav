@@ -1,4 +1,4 @@
-class AvailableSkill
+class Skill
   include Mongoid::Document
   include Mongoid::Timestamps
   
