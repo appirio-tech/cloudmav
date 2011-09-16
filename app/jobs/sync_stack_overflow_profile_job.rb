@@ -7,18 +7,8 @@ class SyncStackOverflowProfileJob
     
     return if stack_overflow_profile.stack_overflow_id.nil?
     
-    user = StackOverflow.get_user(stack_overflow_profile.stack_overflow_id)
-    stack_overflow_profile.profile.name = user["display_name"] if stack_overflow_profile.profile.name.nil?
-    stack_overflow_profile.url = "http://www.stackoverflow.com/users/#{stack_overflow_profile.stack_overflow_id}"
-    stack_overflow_profile.reputation = user["reputation"]
-    stack_overflow_profile.badge_html = user["badgeHtml"]
-    tags = StackOverflow.get_user_tags(stack_overflow_profile.stack_overflow_id)
-    so_tags = {}
-    tags["tags"].each do |t|
-      so_tags[t["name"]] = t["count"]
-    end
-    stack_overflow_profile.stack_overflow_tags = so_tags.to_yaml
-
+    sync_user_data(stack_overflow_profile)
+    sync_tags(stack_overflow_profile)
     sync_questions(stack_overflow_profile)
     sync_answers(stack_overflow_profile)
 
@@ -36,9 +26,29 @@ class SyncStackOverflowProfileJob
     profile.calculate_score!  
   end
   
+  def self.sync_user_data(stack_overflow_profile)
+    user = StackOverflow.get_user(stack_overflow_profile.stack_overflow_id)
+    return if user.nil?     
+    stack_overflow_profile.profile.name = user["display_name"] if stack_overflow_profile.profile.name.nil?
+    stack_overflow_profile.url = "http://www.stackoverflow.com/users/#{stack_overflow_profile.stack_overflow_id}"
+    stack_overflow_profile.reputation = user["reputation"]
+    stack_overflow_profile.badge_html = user["badgeHtml"]    
+  end
+  
+  def self.sync_tags(stack_overflow_profile)
+    tags = StackOverflow.get_user_tags(stack_overflow_profile.stack_overflow_id)
+    return if tags.nil?
+    so_tags = {}
+    tags["tags"].each do |t|
+      so_tags[t["name"]] = t["count"]
+    end
+    stack_overflow_profile.stack_overflow_tags = so_tags.to_yaml
+  end
+  
   def self.sync_questions(stack_overflow_profile)
     questions = StackOverflow.get_user_questions(stack_overflow_profile.stack_overflow_id)
-
+    return if questions.nil?
+    
     top_questions = questions.sort{|a,b| a["score"] <=> b["score"] }.first(3)
 
     top_questions.each do |so_question|
@@ -61,6 +71,7 @@ class SyncStackOverflowProfileJob
   
   def self.sync_answers(stack_overflow_profile)
     answers = StackOverflow.get_user_answers(stack_overflow_profile.stack_overflow_id)
+    return if answers.nil?
 
     top_answers = answers.sort{|a,b| a["score"] <=> b["score"] }.first(3)
 

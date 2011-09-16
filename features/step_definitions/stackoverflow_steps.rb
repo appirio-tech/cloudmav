@@ -91,3 +91,11 @@ end
 Then /^I should not have a StackOverflow profile$/ do
   Profile.find(@profile.id).stack_overflow_profile.should be_nil
 end
+
+When /^I sync my StackOverflow account with id "([^"]*)"$/ do |stackoverflow_id|
+  VCR.use_cassette("stack_overflow_#{stackoverflow_id}", :record => :all) do
+    visit new_profile_stack_overflow_profile_path(@profile)
+    fill_in "stack_overflow_profile_stack_overflow_id", :with => stackoverflow_id
+    click_button "Save"
+  end
+end

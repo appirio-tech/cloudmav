@@ -1,0 +1,141 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.stackoverflow.com:80/1.1/users/55833?key=ZJZ_DNRrgk6IQYQ0h_Duyg
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-max:
+      - '10000'
+      x-ratelimit-current:
+      - '9993'
+      x-aspnet-version:
+      - 4.0.30319
+      date:
+      - Fri, 16 Sep 2011 01:59:37 GMT
+      content-length:
+      - '170'
+    body: !binary |-
+      H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+      kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+      AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/SnRH/ucoucvpr1/3V
+      FD/AJ/e0wbrJ64b+/t73f+PklyT/TwAAAP//DccKFkQAAAA=
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.stackoverflow.com:80/1.1/users/55833/tags?key=ZJZ_DNRrgk6IQYQ0h_Duyg
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-max:
+      - '10000'
+      x-ratelimit-current:
+      - '9992'
+      x-aspnet-version:
+      - 4.0.30319
+      date:
+      - Fri, 16 Sep 2011 01:59:38 GMT
+      content-length:
+      - '169'
+    body: !binary |-
+      H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+      kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+      AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/SnRH/ucoucvpr1/3V
+      FD/AJw+0QZtdNPTn977/Gye/JPl/AgAA//9R4qF2QwAAAA==
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.stackoverflow.com:80/1.1/users/55833/questions?key=ZJZ_DNRrgk6IQYQ0h_Duyg
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-max:
+      - '10000'
+      x-ratelimit-current:
+      - '9988'
+      x-aspnet-version:
+      - 4.0.30319
+      date:
+      - Fri, 16 Sep 2011 01:59:42 GMT
+      content-length:
+      - '174'
+    body: !binary |-
+      H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+      kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+      AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/SnRH/ucoucvpr1/3V
+      FD/AJ/e0wS9a501bVMuGPvve93/j5Jck/08AAAD//8zP1wpIAAAA
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.stackoverflow.com:80/1.1/users/55833/answers?key=ZJZ_DNRrgk6IQYQ0h_Duyg
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-max:
+      - '10000'
+      x-ratelimit-current:
+      - '9986'
+      x-aspnet-version:
+      - 4.0.30319
+      date:
+      - Fri, 16 Sep 2011 01:59:44 GMT
+      content-length:
+      - '171'
+    body: !binary |-
+      H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+      kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+      AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/SnRH/ucoucvpr1/3V
+      FD/AJ/e0QbZsrvK6oU++9/3fOPklyf8TAAD//ypA8f9GAAAA
+    http_version: '1.1'
