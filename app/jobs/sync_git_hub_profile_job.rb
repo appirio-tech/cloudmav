@@ -31,7 +31,8 @@ class SyncGitHubProfileJob
     profile.award_badge("Git R Done", :description => "For having a GitHub account")
 
     profile.calculate_score!
-    git_hub_profile.retag!    
+    
+    git_hub_profile.repositories.each { |r| r.retag! }
   end
   
   def self.find_or_create_repository(git_hub_profile, r)

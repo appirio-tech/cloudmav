@@ -1,7 +1,9 @@
 class GitHubRepository 
   include Mongoid::Document
   include Mongoid::Timestamps
+  include CodeMav::Taggable
   include CodeMav::Scorable
+  include CodeMav::Skillable
 
   field :name, :type => String
   field :url, :type => String
@@ -15,6 +17,16 @@ class GitHubRepository
 
   def profile
     self.git_hub_profile.profile
+  end
+  
+  def related_items
+    [git_hub_profile]
+  end
+  
+  def generate_tags
+    unless language.nil?
+      tag language
+    end
   end
 
 end

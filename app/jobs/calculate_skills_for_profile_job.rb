@@ -7,6 +7,7 @@ class CalculateSkillsForProfileJob
     
     # knowledge
     # coder
+    calculate_skills_for_git_hub(profile)
     # speaker
     calculate_skills_for_talks(profile)
     
@@ -14,6 +15,23 @@ class CalculateSkillsForProfileJob
     # social
     
     profile.save
+  end
+  
+  def self.calculate_skills_for_git_hub(profile)
+    return if profile.git_hub_profile.nil?
+    
+    profile.git_hub_profile.repositories.each do |r|
+      r.clear_skills!      
+      skills = get_skills_from_taggable(r)
+      
+      if (skills.count > 0)
+        skill_score = r.total_score / skills.count
+        skills.each do |skill|
+          r.earn_skill(skill_score, skill.name, :coder, "for GitHub repository", r)
+          profile.earn_skill(skill_score, skill.name, :coder, "for GitHub repository", r)
+        end
+      end      
+    end
   end
   
   def self.calculate_skills_for_talks(profile)

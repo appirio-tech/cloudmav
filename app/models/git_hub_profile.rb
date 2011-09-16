@@ -21,9 +21,7 @@ class GitHubProfile
   
   def generate_tags
     self.repositories.each do |r|
-      unless r.language.blank?
-        self.tag r.language.downcase
-      end
+      import_tags_from(r)
     end
   end
   

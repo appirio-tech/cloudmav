@@ -32,14 +32,20 @@ Then /^I should have (\d+) "([^"]*)" skill points$/ do |points, skill_name|
 end
 
 Given /^I have a GitHub repo worth (\d+) coder points tagged with "([^"]*)"$/ do |points, tags|
-  @git_hub_profile = Factory.create(:git_hub_profile)
+  @git_hub_profile = Factory.create(:git_hub_profile, :profile => @profile)
   @git_hub_repository = GitHubRepository.new
+  @git_hub_repository.tags_text = tags
   @git_hub_repository.git_hub_profile = @git_hub_profile
   @git_hub_repository.save
+  @git_hub_repository.retag!
+  
   @git_hub_repository.earn(points, :coder_points, "for Repo", @git_hub_repository)
+  @profile.earn(points, :coder_points, "for Repo", @git_hub_repository)
+  
+  @git_hub_profile.reload
 end
 
 Then /^my GitHub repo should have (\d+) "([^"]*)" coder points$/ do |points, skill_name|
-  @git_hub_repo.reload
-  @git_hub_repo.skill_score(skill_name).should == points.to_i
+  @git_hub_repository.reload
+  @git_hub_repository.skill_score_for_type(skill_name, :coder).should == points.to_i
 end
