@@ -21,3 +21,14 @@ Then /^the talk should be updated$/ do
   talk = Talk.find(@talk.id)
   talk.title.should == "Updated Talk"
 end
+
+When /^I add links to a talk$/ do
+  visit edit_profile_talk_path(@profile, @talk)
+  fill_in "talk_links_block", :with => "http://www.github.com"
+  click_button "Save"
+end
+
+Then /^the talk should have links$/ do
+  @talk.reload
+  @talk.links.count.should == 1
+end

@@ -18,6 +18,7 @@ class Talk
   field :audience, :type => String
   field :url, :type => String
   field :video_url, :type => String
+  field :links, :type => Array
 
   field :has_slide_share, :type => Boolean, :default => false
   field :slide_share_id, :type => String
@@ -139,6 +140,15 @@ class Talk
     self.slideshow_html = talk.slideshow_html
     self.slide_share_thumbnail = talk.slide_share_thumbnail
     self.slide_share_download_url = talk.slide_share_download_url
+  end
+  
+  def links_block
+    return "" if self.links.nil?
+    self.links.join("\n")
+  end
+  
+  def links_block=(value)
+    self.links = value.split("\n")
   end
 
 end
