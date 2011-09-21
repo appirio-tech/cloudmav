@@ -1,26 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
+  <title>500 - Error</title>
   <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
-    div.dialog {
-      width: 25em;
-      padding: 0 4em;
-      margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
-      border-right-color: #999;
-      border-bottom-color: #999;
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+  </style>
+  <style type="text/css">
+  
+    header {
+      padding-top: 5px;
+      background: #373737;
+      height: 50px;
     }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
+    
+    footer {
+      background: #373737;
+      margin-top: 30px;
+      color: #868686;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    
+    body {
+      font-family: Helvetica, Arial, san-serif;
+      font-size: 16px;
+      line-height: 19.2px;
+      color: #333333;
+      padding: 0px;
+      width: 100%;
+      background-image: url("http://www.codemav.com/assets/background.png");
+      backgrond-repeat: repeat-x repeat-y;      
+    }
+    
+    a {
+      text-decoration: none;
+      color: #0477BF;
+    }
+    
+    a:visited {
+      color: #0477bf;
+    }
+    
+    a:hover {
+      color: #0477bf;
+      text-decoration: underline;
+    }
+    
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 960px;      
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 24px;
+      font-weight: bold;
+    }
+    
+    h1 {
+      font-size: 42px;
+      line-height: 50.4px;
+      color: #990000;
+    }
+    
+    #content {
+      margin-top: 20px;
+    }
+    
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+    
+    .copyright {
+      margin-top: 10px;
+    }
+    
+    footer a {
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      font-size: 10pt;
+      font-weight: bold;
+      color: white;
+    }
+
   </style>
 </head>
 
 <body>
-  <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <h1>We're sorry, but something went wrong.</h1>
-    <p>We've been notified about this issue and we'll take a look at it shortly.</p>
+  <header>
+    <div class="container">
+      <a href="http://www.codemav.com">
+        <img src="http://www.codemav.com/assets/main_code_mav_logo.png"></img>
+      </a>
+    </div>
+  </header>
+  
+  <div id="content">
+    <div class="container">
+      <h1>500 - Error</h1>
+      <p>Oh no! Looks like you found an error.</p>     
+    </div>
   </div>
+
+  <footer>
+    <div class="container">
+      <div class="copyright">
+        Copyright &copy; 2011 CodeMav. All Rights Reserved.
+      </div>
+      <div class="clear">
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
