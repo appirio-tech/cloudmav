@@ -148,7 +148,15 @@ class Talk
   end
   
   def links_block=(value)
-    self.links = value.split("\n")
+    values = value.split("\r")
+    self.links = values.map do |v|
+      v = v.strip
+      if v.starts_with?("http://")
+        v
+      else
+        "http://" + v
+      end
+    end
   end
 
 end

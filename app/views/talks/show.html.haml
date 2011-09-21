@@ -4,7 +4,14 @@
 #talk
   .grid_11
     %h1= @talk.title
+    - if can? :edit, @talk
+      = big_button_link_to "Edit", edit_profile_talk_path(@profile, @talk)
     %p#talk_description= @talk.description
+    - unless @talk.links.nil?
+      %h3 Links
+      %ul.standard
+        - @talk.links.each do |l|
+          %li= link_to l, l, :target => "_blank"
     = render :partial => "slide_share"
   
   .grid_5

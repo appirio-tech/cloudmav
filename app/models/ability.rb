@@ -23,6 +23,9 @@ class Ability
     if user.profile.moderator?
       can [:edit], Company
     end
+    can [:edit], Talk do |talk|
+      user.profile == talk.profile
+    end
     if user.profile.admin?
       can :admin, Profile
     end
