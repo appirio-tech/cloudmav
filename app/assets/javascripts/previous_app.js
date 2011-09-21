@@ -12,6 +12,8 @@ $(document).ready(function(){
     top: 160,
     mask: '#fff'
   });
+
+	$("select").chosen();
 });
 
 

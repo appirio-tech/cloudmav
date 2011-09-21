@@ -8,6 +8,9 @@
   = label_tag "Text 2"
   = text_field_tag "text_field_2"  
   %br
+  = label_tag "Select"
+  = select "example_select", "example_select", ["Option 1", "Option 2", "Option 3"]
+  %br
   = big_primary_button_submit_tag "Save", :id => "submit"
   
 = semantic_form_for [current_profile, current_profile.git_hub_profile] do |f|
@@ -15,3 +18,12 @@
     = f.input :username, :hint => "what you sign in to GitHub with"
   = f.buttons do
     = big_primary_button_submit_tag "Save"
+    
+/ :javascript
+/   
+/   $(document).ready(function() {
+/   
+/     $(".chzn-select").chosen();
+/      
+/     $("select").chosen({no_results_text: "No results matched"});
+/   });
