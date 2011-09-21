@@ -13,15 +13,29 @@
         %ul.standard
           - @talk.links.each do |l|
             %li= link_to l, l, :target => "_blank"
-    .grid_5#code_repositories
-      - if can? :edit, @talk
+    .grid_5
+      - if can?(:edit, @talk) || (talk.git_hub_repository || @talk.bitbucket_repository)
         %h3 Code Repositories
-        - if @talk.git_hub_repository.nil?
-          = big_button_link_to "Link GitHub repository", new_profile_talk_link_to_git_hub_repository_path(@profile, @talk)
-        - else
-          %p
-            = image_tag "talk/git_hub.png"
-            %span= @talk.git_hub_repository.name
+        
+      - if @talk.git_hub_repository || @talk.bitbucket_repository
+        %ul#code_repositories
+          - unless @talk.git_hub_repository.nil?
+            %li
+              = image_tag "talk/git_hub.png"
+              %span= @talk.git_hub_repository.name
+          - unless @talk.bitbucket_repository.nil?
+            %li
+              = image_tag "talk/bitbucket.png"
+              %span= @talk.bitbucket_repository.name        
+        
+      - if can?(:edit, @talk) 
+        %ul#link_code_repository
+          - if @talk.git_hub_repository.nil?
+            %li= big_button_link_to "Link GitHub repository", new_profile_talk_link_to_git_hub_repository_path(@profile, @talk)
+          - if @talk.bitbucket_repository.nil?
+            %li= big_button_link_to "Link Bitbucket repository", new_profile_talk_link_to_bitbucket_repository_path(@profile, @talk)
+          
+
     .clear
     
     = render :partial => "slide_share"

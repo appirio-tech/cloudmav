@@ -35,6 +35,7 @@ Codemav::Application.routes.draw do
     resources :twitter_profiles
     resources :talks do
       resource :link_to_git_hub_repository
+      resource :link_to_bitbucket_repository      
       resource :link_to_speaker_rate do
         member do
           get :refresh

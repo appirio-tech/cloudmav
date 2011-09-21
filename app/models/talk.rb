@@ -34,6 +34,7 @@ class Talk
 
   belongs_to :profile
   belongs_to :git_hub_repository
+  belongs_to :bitbucket_repository  
     
   validates_presence_of :title
 
