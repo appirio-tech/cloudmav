@@ -8,15 +8,16 @@
       = big_button_link_to "Edit", edit_profile_talk_path(@profile, @talk)
     %p#talk_description= @talk.description
     .grid_5
-      - unless @talk.links.nil?
+      - if can?(:edit, @talk) || !@talk.links.nil?
         %h3 Links
-        %ul.standard
-          - @talk.links.each do |l|
-            %li= link_to l, l, :target => "_blank"
+        - unless @talk.links.nil?
+          %ul.standard
+            - @talk.links.each do |l|
+              %li= link_to l, l, :target => "_blank"
+      &nbsp;            
     .grid_5
       - if can?(:edit, @talk) || (talk.git_hub_repository || @talk.bitbucket_repository)
         %h3 Code Repositories
-        
       - if @talk.git_hub_repository || @talk.bitbucket_repository
         %ul#code_repositories
           - unless @talk.git_hub_repository.nil?
@@ -34,7 +35,7 @@
             %li= big_button_link_to "Link GitHub repository", new_profile_talk_link_to_git_hub_repository_path(@profile, @talk)
           - if @talk.bitbucket_repository.nil?
             %li= big_button_link_to "Link Bitbucket repository", new_profile_talk_link_to_bitbucket_repository_path(@profile, @talk)
-          
+      &nbsp;
 
     .clear
     
