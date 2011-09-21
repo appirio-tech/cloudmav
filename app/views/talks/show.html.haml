@@ -23,11 +23,11 @@
           - unless @talk.git_hub_repository.nil?
             %li
               = image_tag "talk/git_hub.png"
-              %span= @talk.git_hub_repository.name
+              %span= link_to @talk.git_hub_repository.name, @talk.git_hub_repository.url, :target => "_blank"
           - unless @talk.bitbucket_repository.nil?
             %li
               = image_tag "talk/bitbucket.png"
-              %span= @talk.bitbucket_repository.name        
+              %span= link_to @talk.bitbucket_repository.name, @talk.bitbucket_repository.url, :target => "_blank"
         
       - if can?(:edit, @talk) 
         %ul#link_code_repository

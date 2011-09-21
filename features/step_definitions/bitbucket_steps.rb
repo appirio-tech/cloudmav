@@ -71,5 +71,9 @@ Then /^I should not have a Bitbucket profile$/ do
   Profile.find(@profile.id).bitbucket_profile.should be_nil
 end
 
-
+Then /^my Bitbucket repos should have their information$/ do
+  @profile.reload
+  repo = @profile.bitbucket_profile.repositories[0]
+  repo.url.should_not be_nil
+end
 

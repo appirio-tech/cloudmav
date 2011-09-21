@@ -10,6 +10,7 @@ Feature: BitbucketProfile
     When I sync my Bitbucket account
     Then I should have a Bitbucket profile
     And I should have the collection of my Bitbucket repos
+    And my Bitbucket repos should have their information
     And I should be awarded the "Bucketeer" badge
     And I should have 10 coder points
 

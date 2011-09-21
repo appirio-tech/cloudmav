@@ -26,7 +26,7 @@ class SyncBitbucketProfileJob
   def self.read_repositories(bitbucket_profile, repositories)
     repositories.each do |r|
       repo = find_or_initialize_repo(bitbucket_profile, r)
-      repo.url = r["url"]
+      repo.url = "http://bitbucket.org/#{bitbucket_profile.username}/#{r["slug"]}"
       repo.description = r["description"]
       repo.followers_count = r["followers_count"]
       repo.save
