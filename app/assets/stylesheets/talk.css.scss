@@ -5,6 +5,10 @@
 	  padding: 3px;
 	}
 
+  h3 {
+    border-bottom: 1px solid $lightest_gray;
+  }
+
 	.profile_info {
 	  padding-left: 10px;
 	  vertical-align: top;
@@ -42,11 +46,21 @@
 	    font-weight: bold;
 	  }
 	}
+	
+	#code_repositories {
+		p {
+			position: relative;
+			top: -4px;
+			span {
+				font-size: 18px;
+				position: relative;
+				top: -10px;
+			}
+		}
+	}
 
 	#slide_share {
-	  h3 {
-	    border-bottom: 1px solid $lightest_gray;
-	  }
+
 	  .not_added {
 	    margin-top: 25px;
 	  }
@@ -59,9 +73,6 @@
 	#speaker_rate {
 	  margin-top: 15px;
 	  margin-bottom: 40px;
-	  h3 {
-	    border-bottom: 1px solid $lightest_gray;
-	  }
 	  .speaker_rate_info {
 	    margin-left: 5px;
 	    margin-top: -15px;

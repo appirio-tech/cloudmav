@@ -14,6 +14,7 @@ class GitHubRepository
   field :language, :type => String
 
   belongs_to :git_hub_profile, :inverse_of => :repositories
+  has_many :talks
 
   def profile
     self.git_hub_profile.profile

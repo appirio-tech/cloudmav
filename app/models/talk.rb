@@ -33,6 +33,7 @@ class Talk
   field :speaker_rate_slides_url, :type => String
 
   belongs_to :profile
+  belongs_to :git_hub_repository
     
   validates_presence_of :title
 

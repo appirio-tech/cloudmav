@@ -7,11 +7,23 @@
     - if can? :edit, @talk
       = big_button_link_to "Edit", edit_profile_talk_path(@profile, @talk)
     %p#talk_description= @talk.description
-    - unless @talk.links.nil?
-      %h3 Links
-      %ul.standard
-        - @talk.links.each do |l|
-          %li= link_to l, l, :target => "_blank"
+    .grid_5
+      - unless @talk.links.nil?
+        %h3 Links
+        %ul.standard
+          - @talk.links.each do |l|
+            %li= link_to l, l, :target => "_blank"
+    .grid_5#code_repositories
+      - if can? :edit, @talk
+        %h3 Code Repositories
+        - if @talk.git_hub_repository.nil?
+          = big_button_link_to "Link GitHub repository", new_profile_talk_link_to_git_hub_repository_path(@profile, @talk)
+        - else
+          %p
+            = image_tag "talk/git_hub.png"
+            %span= @talk.git_hub_repository.name
+    .clear
+    
     = render :partial => "slide_share"
   
   .grid_5
