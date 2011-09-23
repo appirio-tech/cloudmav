@@ -6,4 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require jquery.tools.min.js
+//= require jquery-ui-1.8.16.custom.min.js
+//= require tagit
+//= require previous_app.js

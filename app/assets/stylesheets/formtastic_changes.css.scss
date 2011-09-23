@@ -31,6 +31,17 @@ form.formtastic {
 			@extend .form_focus_defaults;
 		}
   }
+	fieldset > ol > li.text textarea {
+		height: ms(4);
+	}
+	fieldset > ol > li ul.tagit {
+		@include form_defaults;
+		width: 71%;
+		margin-bottom: 16px;
+		margin-left: 4px;
+		padding: 4px;
+		height: ms(4);
+	}
 }
 form.formtastic fieldset.buttons {
 	padding-left: 0px;

@@ -23,6 +23,17 @@ $form-border: 1px solid $font-de-emphasis;
 $form-focus-border: 1px solid $codemav-blue;
 $form-font-weight: bold;
 
+@mixin form_defaults {
+	@include corners(3px);
+	padding: $form-padding;
+	font-weight: $form-font-weight;
+	color: $font-black;
+	border: $form-border;
+	font-size: ms(0);
+	margin-left: ms(-3);
+	margin-bottom: ms(-3);	
+}
+
 .form_defaults {
 	@include corners(3px);
 	padding: $form-padding;

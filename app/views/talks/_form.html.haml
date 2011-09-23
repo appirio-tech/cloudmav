@@ -3,6 +3,23 @@
     = f.input :title
     = f.input :description, :as => :text
     = f.input :links_block, :as => :text
+    = f.input :tags_text, :label => "Tags", :input_html => { :class => "tagit" }
+    %ul#tags
   = f.buttons do
     = big_primary_button_submit_tag "Save"
 
+:javascript
+  $(function() {
+    $(".tagit").each(function() {
+      var values_string = $(this).val();
+      var values = values_string.split(',');
+      $(this).hide();
+      $(this).parent().append("<ul name='tags'></ul>");
+      $(this).parent().find("ul").tagit({select:true, initialTags: values});
+      $(this).parent().find("select").attr("id", "tags");
+      //$(this).tagit({select: true});
+    });
+    
+    
+    //$('#tags').tagit({ select: true });    
+  });

@@ -11,7 +11,7 @@ $(document).ready(function(){
   $(".module_link").overlay({
     top: 160,
     mask: '#fff'
-  });
+  }); 
 
 });
 

@@ -26,6 +26,7 @@ class TalksController < ApplicationController
     authorize! :add_talk, @profile
     
     @talk = Talk.new(params[:talk])
+    @talk.tags_text = params[:tags]
     @talk.profile = @profile
         
     if @talk.save
@@ -44,7 +45,10 @@ class TalksController < ApplicationController
   
   def update
     @talk = Talk.by_permalink(params[:id]).first
+    
     if @talk.update_attributes(params[:talk])
+      @talk.tags_text = params[:tags]
+      @talk.save
       @talk.retag!  
       flash[:notice] = "'#{@talk.title}' saved"
       redirect_to [@profile, @talk]
