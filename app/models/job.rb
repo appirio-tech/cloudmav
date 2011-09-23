@@ -18,5 +18,18 @@ class Job
   
   def generate_tags
   end
+  
+  def job_duration_in_days
+    return 0 if self.start_date.nil?
+    sd = Time.parse(self.start_date.to_s)
+    if self.end_date.nil?
+      ed = Time.now
+    else
+      ed = Time.parse(self.end_date.to_s)
+    end
+    duration_in_seconds = (ed - sd)
+    # 60 secs in min; 60 mins in hour; 24 hours in day
+    duration_in_seconds / 60 / 60 / 24
+  end
 
 end

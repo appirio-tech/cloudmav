@@ -8,6 +8,9 @@ class CalculateScoreForProfileJob
     # knowledge
     calculate_score_for_stack_overflow(profile)
     
+    # experience
+    calculate_score_for_experience(profile)
+    
     # coder
     calculate_score_for_git_hub(profile)
     calculate_score_for_bitbucket(profile)
@@ -95,4 +98,14 @@ class CalculateScoreForProfileJob
     return unless profile.twitter_profile
     profile.earn(10, :social_points, "for adding Twitter", profile.twitter_profile) 
   end
+  
+  def self.calculate_score_for_experience(profile)
+    return unless profile.jobs
+    profile.jobs.each do |job|
+      duration = job.job_duration_in_days
+      points = duration * 0.333
+      profile.earn(points, :experience_points, "for job", job)
+    end
+  end
+  
 end
