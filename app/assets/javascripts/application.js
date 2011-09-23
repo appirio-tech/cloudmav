@@ -9,4 +9,6 @@
 //= require jquery.tools.min.js
 //= require jquery-ui-1.8.16.custom.min.js
 //= require tagit
+//= require underscore-min.js
+//= require backbone.js
 //= require previous_app.js
