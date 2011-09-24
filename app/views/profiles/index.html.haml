@@ -18,7 +18,7 @@
         - @profiles.each do |p|
           = render :partial => "profiles/search_result", :locals => { :profile => p }
 
-      - if @current_page
+      - if @profiles.respond_to? :current_page
         = paginate @profiles
           
 .clear

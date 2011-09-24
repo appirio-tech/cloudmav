@@ -11,7 +11,7 @@
       = f.input :email, :required => false
       = f.input :password, :as => :password, :required => false
     = f.buttons do
-      = big_primary_button_submit_tag "Save"
+      = big_primary_button_submit_tag "Register", :disable_with => "Registering..."
 
   %br
   = render :partial => "devise/shared/links"

@@ -40,7 +40,9 @@ When /^I register from the home page$/ do
   fill_in "user_email", :with => @user.email
   fill_in "user_password", :with => @user.password
   VCR.use_cassette("register_homepage", :record => :new_episodes) do
-    click_button "Register"
+    within ".register" do
+      click_button "Register"
+    end
   end
 end
 

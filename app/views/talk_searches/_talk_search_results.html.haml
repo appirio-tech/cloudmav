@@ -20,6 +20,7 @@
           .talk_profile_name= link_to talk.profile.username, talk.profile
 
         .clear
-  = paginate @talks
+  - if @talks.respond_to? :current_page
+    = paginate @talks
 
 

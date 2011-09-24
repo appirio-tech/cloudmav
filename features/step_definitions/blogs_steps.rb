@@ -4,7 +4,7 @@ When /^I add a blog$/ do
 
   VCR.use_cassette("blog", :record => :new_episodes) do
     fill_in "blog_rss", :with => "http://www.theabsentmindedcoder.com/feeds/posts/default?alt=rss"
-    click_button "Add"
+    click_button "Save"
   end
 end
 
@@ -30,7 +30,7 @@ When /^I add a blog "([^"]*)"$/ do |rss|
 
   VCR.use_cassette("blog_#{rss}", :record => :new_episodes) do
     fill_in "blog_rss", :with => rss 
-    click_button "Add"
+    click_button "Save"
   end
 end
 

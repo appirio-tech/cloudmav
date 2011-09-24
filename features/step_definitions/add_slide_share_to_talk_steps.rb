@@ -39,7 +39,7 @@ When /^I refresh from the link my talk to Slide Share$/ do
 
   visit new_profile_talk_link_to_slide_share_path(@profile, @talk)
   VCR.use_cassette('refresh_link_to_slide_share', :record => :new_episodes) do
-    click_link "Refresh"
+    click_link "Sync with SlideShare"
   end
 end
 

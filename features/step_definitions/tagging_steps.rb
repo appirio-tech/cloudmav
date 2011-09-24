@@ -1,7 +1,6 @@
 When /^I tag the talk with "([^"]*)"$/ do |tag|
-  visit edit_profile_talk_path(@profile, @talk)
-  fill_in "talk_tags_text", :with => tag
-  click_button "Save"
+  @talk.tags_text = tag
+  @talk.retag!
 end
 
 Then /^there should be a "([^"]*)" tag$/ do |tag|

@@ -13,11 +13,11 @@
   %br
   = big_primary_button_submit_tag "Save", :id => "submit"
   
-= semantic_form_for [current_profile, current_profile.git_hub_profile] do |f|
-  = f.inputs do
-    = f.input :username, :hint => "what you sign in to GitHub with"
-  = f.buttons do
-    = big_primary_button_submit_tag "Save"
+/ = semantic_form_for [current_profile, current_profile.git_hub_profile] do |f|
+/   = f.inputs do
+/     = f.input :username, :hint => "what you sign in to GitHub with"
+/   = f.buttons do
+/     = big_primary_button_submit_tag "Save"
     
 / :javascript
 /   

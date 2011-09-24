@@ -46,5 +46,6 @@ class SyncGitHubProfileJob
     repository.forks = r["forks"]
     repository.language = r["language"]
     repository.save
+    repository.retag!
   end
 end
