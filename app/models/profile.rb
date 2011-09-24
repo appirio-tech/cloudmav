@@ -91,11 +91,7 @@ class Profile
     def sync_all!
       profiles_to_sync = Profile.all.to_a
       profiles_to_sync.each do |p|
-        begin
-          p.sync!
-        rescue
-            puts "ERROR on syncing #{p.display_name}'s profile"
-        end
+        p.sync!
       end
     end
     

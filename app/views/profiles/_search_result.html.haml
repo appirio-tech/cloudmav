@@ -6,22 +6,25 @@
   .points_and_tags
     %ul.points
       %li.selected
-        .points= profile.total_score
+        .points= pointify profile.total_score
         .description points
       %li
-        .points= profile.score(:knowledge_points)
+        .points= pointify profile.score(:knowledge_points)
         .description knowledge
       %li
-        .points= profile.score(:coder_points)
+        .points= pointify profile.score(:experience_points)
+        .description experience
+      %li
+        .points= pointify profile.score(:coder_points)
         .description code
       %li
-        .points= profile.score(:writer_points)
+        .points= pointify profile.score(:writer_points)
         .description writing
       %li
-        .points= profile.score(:speaker_points)
+        .points= pointify profile.score(:speaker_points)
         .description speaking
       %li
-        .points= profile.score(:social_points)
+        .points= pointify profile.score(:social_points)
         .description social
       - unless profile.stack_overflow_profile.nil?
         %li{:style => "width: 80px"}

@@ -7,7 +7,7 @@ Feature: Earn points for experience
   Scenario: 1 job
   
     Given I am a user
-    And I have a job "Lead Developer" from "8/1/2010" to "9/1/2010"
+    And I have a job "Lead Developer" from "1/8/2010" to "1/9/2010"
     When my profile is scored
     Then I should have experience points for my jobs
     And my job "Lead Developer" should have experience points
