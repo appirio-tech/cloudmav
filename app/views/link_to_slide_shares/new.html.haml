@@ -3,12 +3,6 @@
 
 .grid_16
   %h1 Link your SlideShare slides
-  / %p
-  /   CodeMav imports your talks from SlideShare. This means that for every slide deck you add to SlideShare, CodeMav will create a talk.
-  / %p
-  /   But often times you want to have your slides connected to another talk. To import slides to your talk titled 
-  /   %span.bold "#{@talk.title}"
-  /   , check to see if your SlideShare slides have already been imported to one of your existing talks.
   = form_tag(:controller => "link_to_slide_shares", :action => "create", :method => "put") do
     = hidden_field_tag :profile_id, @profile.username
     = label_tag "slide_share_talk", "Your talks from SlideShare"
