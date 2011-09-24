@@ -9,7 +9,8 @@ class CalculateScoreForProfileJob
     calculate_score_for_stack_overflow(profile)
     
     # experience
-    calculate_score_for_experience(profile)
+    # comment out for now
+    # calculate_score_for_experience(profile)
     
     # coder
     calculate_score_for_git_hub(profile)
@@ -103,7 +104,7 @@ class CalculateScoreForProfileJob
     return unless profile.jobs
     profile.jobs.each do |job|
       duration = job.job_duration_in_days
-      points = duration * 0.333
+      points = duration * 0.1
       job.earn(points, :experience_points, "for job", job)
       profile.earn(points, :experience_points, "for job", job)
     end
