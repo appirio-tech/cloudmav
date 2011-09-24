@@ -48,7 +48,7 @@ namespace :codemav do
     end
   end
 
-  desc "Transfer Speaker Rate Info"
+  desc "Transfer SpeakerRate Info"
   task :transfer_speaker_rate_info => :environment do
     talks = Talk.where(:imported_from => "SpeakerRate")
     talks.all.to_a.each do |t|

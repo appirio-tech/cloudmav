@@ -1,8 +1,8 @@
-When /^I try to link my talk to Speaker Rate$/ do
+When /^I try to link my talk to SpeakerRate$/ do
   visit new_profile_talk_link_to_speaker_rate_path(@profile, @talk)
 end
 
-Then /^I should be able to add my talk to Speaker Rate$/ do
+Then /^I should be able to add my talk to SpeakerRate$/ do
   And %Q{I should see "Add talk to SpeakerRate"}
 end
 

@@ -1,17 +1,17 @@
-Feature: Add Speaker Rate to Talk
+Feature: Add SpeakerRate to Talk
 
   As a user
-  I want to link speaker rate to a talk
+  I want to link SpeakerRate to a talk
   So that people can rate my talk
 
-  Scenario: Add Talk to Speaker Rate
+  Scenario: Add Talk to SpeakerRate
 
     Given I am logged in
     And I have a talk
-    When I try to link my talk to Speaker Rate
-    Then I should be able to add my talk to Speaker Rate
+    When I try to link my talk to SpeakerRate
+    Then I should be able to add my talk to SpeakerRate
 
-  Scenario: Speaker Rate talk already added
+  Scenario: SpeakerRate talk already added
   
     Given I am logged in
     And I have a talk
@@ -20,7 +20,7 @@ Feature: Add Speaker Rate to Talk
     Then the talk should have my SpeakerRate info
     And my SpeakerRate talk should be deleted
   
-  Scenario: Added Talk to Speaker Rate and need to refresh
+  Scenario: Added Talk to SpeakerRate and need to refresh
   
     Given I am logged in
     And I have a talk

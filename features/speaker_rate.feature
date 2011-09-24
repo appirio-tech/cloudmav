@@ -1,4 +1,4 @@
-Feature: Speaker Rate Profile 
+Feature: SpeakerRate Profile 
 
 	As a user
 	I want to sync with my SpeakerRate account
