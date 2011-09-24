@@ -9,11 +9,11 @@
         .points= pointify profile.total_score
         .description points
       %li
+        .points= pointify profile.score(:experience_points)
+        .description experience        
+      %li
         .points= pointify profile.score(:knowledge_points)
         .description knowledge
-      %li
-        .points= pointify profile.score(:experience_points)
-        .description experience
       %li
         .points= pointify profile.score(:coder_points)
         .description code
