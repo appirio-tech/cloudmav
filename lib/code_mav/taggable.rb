@@ -19,6 +19,7 @@ module CodeMav
       
       def retag!
         return false if self.pending_tagging
+        self.save
         Resque.enqueue(TagJob, self.id, self.class.to_s)
         return true
       end

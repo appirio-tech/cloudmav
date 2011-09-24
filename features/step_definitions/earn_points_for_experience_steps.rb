@@ -4,6 +4,11 @@ Given /^I have a job "([^"]*)" from "([^"]*)" to "([^"]*)"$/ do |title, start_da
   @job = Factory.create(:job, :profile => @profile, :title => title, :start_date => sd, :end_date => ed)
 end
 
+Then /^I should have experience points for my jobs$/ do
+  @profile.reload
+  @profile.score(:experience_points).should > 0
+end
+
 Then /^my job "([^"]*)" should have experience points$/ do |title|
   @profile.reload
   job = @profile.jobs.where(:title => title).first

@@ -6,6 +6,10 @@ class CalculateSkillsForProfileJob
     profile.clear_skills!
     
     # knowledge
+    
+    # experience
+    calculate_skills_for_jobs(profile)
+    
     # coder
     calculate_skills_for_git_hub(profile)
     # speaker
@@ -48,6 +52,21 @@ class CalculateSkillsForProfileJob
       end
       #profile.earn(talk.total_score, :speaker_points, "for Talk", talk) 
     end
+  end
+  
+  def self.calculate_skills_for_jobs(profile)
+    profile.jobs.each do |job|
+      job.clear_skills!
+      skills = get_skills_from_taggable(job)
+
+      if (skills.count > 0)
+        skill_score = job.total_score / skills.count
+        skills.each do |skill|
+          job.earn_skill(skill_score, skill.name, :experience, "for Job", job)
+          profile.earn_skill(skill_score, skill.name, :experience, "for Job", job)
+        end
+      end
+    end    
   end
   
   def self.get_skills_from_taggable(taggable)

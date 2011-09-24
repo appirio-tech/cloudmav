@@ -53,6 +53,7 @@ end
 Given /^I have a job worth (\d+) experience points tagged with "([^"]*)"$/ do |points, tags|
   @job = Factory.create(:job, :profile => @profile)
   @job.tags_text = tags
+  @job.save
   @job.retag!
 
   @job.earn(points, :experience_points, "for Job", @job)
@@ -64,12 +65,4 @@ end
 Then /^my job should have (\d+) "([^"]*)" experience points$/ do |points, skill_name|
   @job.reload
   @job.skill_score_for_type(skill_name, :experience).should == points.to_i
-end
-
-Then /^I should have (\d+) "([^"]*)" experience points$/ do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
-end
-
-Then /^I should have (\d+) experience points$/ do |arg1|
-  pending # express the regexp above with the code you wish you had
 end

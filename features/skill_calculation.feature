@@ -29,7 +29,7 @@ Feature: Skill Calculation
     And I should have 30 speaker points
     And I should have 53 coder points
     And I should have 83 total points
-
+  
   Scenario: Talk with 2 skill tag
   
     Given I am a user

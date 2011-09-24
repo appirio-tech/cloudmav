@@ -18,14 +18,14 @@ Then /^I should have (\d+) social points$/ do |number|
   @profile.score(:social_points).should == number.to_i
 end
 
+Then /^I should have (\d+) experience points$/ do |number|
+  @profile.reload
+  @profile.score(:experience_points).should == number.to_i
+end
+
 Then /^I should have speaker points$/ do
   @profile.reload
   @profile.score(:speaker_points).should > 0
-end
-
-Then /^I should have experience points for my jobs$/ do
-  @profile.reload
-  @profile.score(:experience_points).should > 0
 end
 
 Then /^I should have (\d+) total points$/ do |number|
