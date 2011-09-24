@@ -1,18 +1,31 @@
 = content_for :title do
-  Add Slides to a Talk from SlideShare Talk
+  Link your SlideShare slides
 
 .grid_16
-  %h1 Add Slides to a Talk from SlideShare Talk
+  %h1 Link your SlideShare slides
+  / %p
+  /   CodeMav imports your talks from SlideShare. This means that for every slide deck you add to SlideShare, CodeMav will create a talk.
+  / %p
+  /   But often times you want to have your slides connected to another talk. To import slides to your talk titled 
+  /   %span.bold "#{@talk.title}"
+  /   , check to see if your SlideShare slides have already been imported to one of your existing talks.
   = form_tag(:controller => "link_to_slide_shares", :action => "create", :method => "put") do
     = hidden_field_tag :profile_id, @profile.username
+    = label_tag "slide_share_talk", "Your talks from SlideShare"
+    %br
     = select("slide_share_talk", "talk_id", @slide_share_talks.map{|t| [t.title, t.id] })
-    = big_primary_button_submit_tag "Link"
-  %p
-    If you have not added the slides to SlideShare then first go to slideshare.net and add it.
+    = big_primary_button_submit_tag "Link SlideShare slides"
+  %br
+  %br
+  %p 
+    If you can't find the slides you want, then you probably haven't added the slides to SlideShare.
+    %br
     = big_button_link_to "Add slides to SlideShare", "http://www.slideshare.net/upload", :target => "_blank"
-  %p
-    Then refresh CodeMav with your added SlideShare talk
-    = big_button_link_to "Refresh", refresh_profile_talk_link_to_slide_share_path(@profile, @talk)
+  
+  %p 
+    After the slides have been added be sure to come back here and sync with SlideShare.
+    %br
+    = big_button_link_to "Sync with SlideShare", refresh_profile_talk_link_to_slide_share_path(@profile, @talk)
 
 .clear
 

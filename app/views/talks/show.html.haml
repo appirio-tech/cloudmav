@@ -16,7 +16,7 @@
               %li= link_to l, l, :target => "_blank"
       &nbsp;            
     .grid_5
-      - if can?(:edit, @talk) || (talk.git_hub_repository || @talk.bitbucket_repository)
+      - if can?(:edit, @talk) || (@talk.git_hub_repository || @talk.bitbucket_repository)
         %h3 Code Repositories
       - if @talk.git_hub_repository || @talk.bitbucket_repository
         %ul#code_repositories
