@@ -64,6 +64,16 @@ form {
 			@extend .form_focus_defaults;
 		}
 	}
+  select {
+    @extend .form_defaults;
+		height: ms(1) + 8px;
+		width: ms(6);
+  }	
+	
+  // 1. font-size: 16px;
+  // 2. padding: 4px;
+  // 3. width: 200px;
+
   // input {
   //   font-size:$form_font_size;
   //   margin-top:$form_top_margin;
@@ -87,11 +97,7 @@ form {
   //    border: 1px solid $blue;
   //  }
   //}
-  // select {
-  //   font-size:$form_font_size;
-  //   margin-top:$form_top_margin;
-  //   padding: 4px;
-  // }
+
   // textarea {
   //   font-size:$form_font_size;
   //   margin-top:$form_top_margin;
