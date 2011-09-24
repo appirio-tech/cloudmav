@@ -43,3 +43,14 @@ Feature: Skill Calculation
     And I should have 15 "c#" skill points
     And I should have 30 speaker points
     And I should have 30 total points
+    
+  Scenario: Job with skill tag
+  
+    Given I am a user
+    And there is a skill "ruby" for tags "ruby"
+    And I have a job worth 50 experience points tagged with "ruby"
+    When my profile's skills are calculated
+    Then my job should have 50 "ruby" experience points
+    And I should have 50 "ruby" skill points
+    And I should have 50 experience points
+    And I should have 50 total points

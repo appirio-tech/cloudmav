@@ -104,6 +104,7 @@ class CalculateScoreForProfileJob
     profile.jobs.each do |job|
       duration = job.job_duration_in_days
       points = duration * 0.333
+      job.earn(points, :experience_points, "for job", job)
       profile.earn(points, :experience_points, "for job", job)
     end
   end

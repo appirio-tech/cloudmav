@@ -10,4 +10,5 @@ Feature: Earn points for experience
     And I have a job "Lead Developer" from "8/1/2010" to "9/1/2010"
     When my profile is scored
     Then I should have experience points for my jobs
+    And my job "Lead Developer" should have experience points
     
