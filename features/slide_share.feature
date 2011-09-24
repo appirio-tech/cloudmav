@@ -1,7 +1,7 @@
-Feature: Slide Share Profile 
+Feature: SlideShare Profile 
 
   As a user
-  I want to sync with my Slide Share account
+  I want to sync with my SlideShare account
   So that others can see my slides and my talks
 
   Background:

@@ -58,7 +58,7 @@ namespace :codemav do
     end
   end
 
-  desc "Transfer Slide Share Info"
+  desc "Transfer SlideShare Info"
   task :transfer_slide_share_info => :environment do
     talks = Talk.where(:imported_from => "SlideShare")
     talks.all.to_a.each do |t|

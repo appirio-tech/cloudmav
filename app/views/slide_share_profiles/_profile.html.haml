@@ -12,7 +12,7 @@
         - if !@slide_share_profile.synced?
           %p We are still processing. Hit refresh.
         - else
-          = link_to "Go to my Slide Share Profile", @profile.slide_share_profile.url, :target => "_blank"
+          = link_to "Go to my SlideShare Profile", @profile.slide_share_profile.url, :target => "_blank"
           %table
             %tr
               %td Slides count
@@ -21,7 +21,7 @@
         - if can? :sync_profile, @profile
           - @slide_share_profile = SlideShareProfile.new
           %p 
-            Do you have a Slide Share account? 
+            Do you have a SlideShare account? 
             %a{:class => "module_link", :rel => "#sync_slide_share"} Yes
       #sync_slide_share.overlay
         = render :partial => "slide_share_profiles/form"
