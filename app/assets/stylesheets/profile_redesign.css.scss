@@ -2,26 +2,15 @@
 @import "mixins";
 
 #profile_side_bar {
-	//border: 1px solid $dark_background;
 	@include box-shadow(0px 3px 3px lighten($black, 70%));
-	#profile_pic {
-		
-	//     padding: 3px;
-	}
 	#profile_menu {
 	  ul {
 	    @include gradient($dark_background, darken($dark_background, 2%));
 	  }
 	  li {
-	    //@include gradient($dark_gradient2, $dark_gradient1);
 		  padding-top: 10px;
 		  padding-bottom: 10px;
 		  border-bottom: 1px solid lighten($dark_background, 30%);
-      // .icon {
-      //  display: inline;
-      //  margin-left: 4px;
-      //  float: left;
-      // }
 			.points {
 				display: inline;
 				float: right;
@@ -46,12 +35,50 @@
   	    }
 	    }
 	  }
-	  .selected {
-	    
+	  .selected {	    
+	    @include gradient(lighten($codemav-blue, 10%), $codemav-blue);
+	    color: lighten($codemav-blue, 70%);
+	    .points {
+				color: lighten($codemav-blue, 0%);
+				background: lighten($codemav-blue, 50%);	      
+	    }
 	    a {
-	      color: $white;
 	    }
 	  }
 	}
 }
 
+ul#important_stats {
+  li {
+    display: inline;
+    font-size: ms(1);
+    margin-right: 26px;
+  }
+}
+
+ul#talks {
+  margin-top: ms(0);
+  li {
+    margin-bottom: ms(-1);
+    .preview_pic {      
+      float: left;
+      margin-right: ms(-1);
+      border: 1px solid $black;
+      img {
+        width: 110px;
+      }
+    }
+    .talk_info {
+      .talk_title {
+        font-weight: bold;
+        font-size: ms(1);
+      }
+      .talk_description {
+        color: lighten($black, 20%);
+        font-size: 12px;
+        width: 348px;
+        margin-left: 110px;
+      }
+    }
+  }
+}

@@ -3,26 +3,23 @@
   #profile_menu
     %ul
       %li{:class => (@tab == "summary") ? "selected" : ""}
-        //.icon= image_tag "tabs/summary_selected.png"
         .title= link_to "Summary", profile_path(@profile)
         .points= @profile.total_score
       %li{:class => (@tab == "experience") ? "selected" : ""}
-        //.icon= image_tag "tabs/experience_selected.png"
         .title= link_to "Experience", profile_experience_path(@profile)
         .points= @profile.score(:experience_points)
-      %li{:class => (@tab == "speaking") ? "selected" : ""}
-        //.icon= image_tag "tabs/speaking_selected.png"
+      %li{:class => (@tab == "knowledge") ? "selected" : ""}
         .title= link_to "Knowledge", profile_knowledge_path(@profile)
         .points= @profile.score(:knowledge_points)
       %li{:class => (@tab == "code") ? "selected" : ""}
         .title= link_to "Code", profile_code_path(@profile)
-        .points= @profile.score(:code_points)
+        .points= @profile.score(:coder_points)
       %li{:class => (@tab == "writing") ? "selected" : ""}
         .title= link_to "Writing", profile_writing_path(@profile)
-        .points= @profile.score(:writing_points)
+        .points= @profile.score(:writer_points)
       %li{:class => (@tab == "speaking") ? "selected" : ""}
         .title= link_to "Speaking", profile_speaking_path(@profile)
-        .points= @profile.score(:speaking_points)
+        .points= @profile.score(:speaker_points)
       %li{:class => (@tab == "social") ? "selected" : ""}
         .title= link_to "Social", profile_social_path(@profile)
         .points= @profile.score(:social_points)

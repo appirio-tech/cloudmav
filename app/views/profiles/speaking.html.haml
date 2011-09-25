@@ -8,17 +8,19 @@
   
   .grid_13
     %h2 #{@profile.display_name}'s Speaker Profile
-    %h2 Talks (#{@profile.talks.count})
+    %ul#important_stats
+      %li #{@profile.talks.count} talks
+      %li.points #{@profile.score(:speaker_points)} speaker points
     - if can? :add_talk, @profile
-      .link= link_to "add a talk", new_profile_talk_path(@profile)
-    %ul.list
+      .link= big_primary_button_link_to "add a talk", new_profile_talk_path(@profile)
+    %ul#talks
       - @profile.talks.each do |talk|    
         %li
-          .item_pic= image_tag talk.preview_pic
-          .item_info
-            .item_title= link_to talk.title, [@profile, talk]
-            .item_description
-              = truncate(talk.description, :length => 60)
+          .preview_pic= image_tag talk.preview_pic
+          .talk_info
+            .talk_title= link_to talk.title, [@profile, talk]
+            //.talk_description= truncate(talk.description, :length => 120)
+          .clear
     &nbsp;
     = render :partial => "speaker_rate_profiles/profile"
     = render :partial => "slide_share_profiles/profile"
