@@ -16,3 +16,9 @@
   -webkit-box-shadow: 5px 5px 2px $shadow; /* Safari and Chrome */
   box-shadow: 5px 5px 2px $shadow;
 }
+
+@mixin better_drop_shadow($shadow_color: lighten($black, 70%)) {
+  -moz-box-shadow: 3px 3px 1px $shadow; /* Firefox 3.6 and earlier */
+  -webkit-box-shadow: 3px 3px 1px $shadow; /* Safari and Chrome */
+  box-shadow: 3px 3px 1px $shadow;
+}

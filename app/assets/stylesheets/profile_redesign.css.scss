@@ -1,0 +1,57 @@
+@import "colors";
+@import "mixins";
+
+#profile_side_bar {
+	//border: 1px solid $dark_background;
+	@include box-shadow(0px 3px 3px lighten($black, 70%));
+	#profile_pic {
+		
+	//     padding: 3px;
+	}
+	#profile_menu {
+	  ul {
+	    @include gradient($dark_background, darken($dark_background, 2%));
+	  }
+	  li {
+	    //@include gradient($dark_gradient2, $dark_gradient1);
+		  padding-top: 10px;
+		  padding-bottom: 10px;
+		  border-bottom: 1px solid lighten($dark_background, 30%);
+      // .icon {
+      //  display: inline;
+      //  margin-left: 4px;
+      //  float: left;
+      // }
+			.points {
+				display: inline;
+				float: right;
+				font-weight: bold;
+				margin-right: 4px;
+				color: lighten($dark_background, 0%);
+				background: lighten($dark_background, 50%);
+        padding-left: 4px;
+        padding-right: 4px;
+        width: 26px;
+        text-align: right;
+        @include border-radius(4px);
+			}
+			.title {
+				display: inline;
+				margin-left: 10px;
+				font-weight: bold;
+			}
+		  a {
+		    color: lighten($dark_background, 70%);
+  			&:hover {
+  	    }
+	    }
+	  }
+	  .selected {
+	    
+	    a {
+	      color: $white;
+	    }
+	  }
+	}
+}
+
