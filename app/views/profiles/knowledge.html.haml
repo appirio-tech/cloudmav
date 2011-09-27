@@ -1,33 +1,44 @@
-%h1.hidden #{@profile.name}'s Knowledge
+= content_for :title do
+  #{@profile.display_name} - Knowledge
 
 #profile
-  = render :partial => "header"
-  = render :partial => "profile_menu"
-  #profile_content
-    .grid_8
+  = render :partial => "profile_side_bar"
+  
+  .grid_13
+    %h1 #{@profile.display_name} -> Knowledge
+    %ul#important_stats
       - if @stack_overflow_profile
-        - unless @stack_overflow_profile.questions.empty?
-          #stack_overflow_questions
-            %h2 Top 3 Stack Overflow Questions
-            %ul
-              - @stack_overflow_profile.questions.each do |q|
-                %li
-                  = link_to q.title, q.url, :target => "_blank"
-        - unless @stack_overflow_profile.answers.empty?
-          #stack_overflow_answers
-            %h2 Top 3 Stack Overflow Answers
-            %ul
-              - @stack_overflow_profile.answers.each do |a|
-                %li
-                  = link_to a.title, a.url, :target => "_blank"
+        %li 
+          #{@stack_overflow_profile.reputation}
+          = image_tag "syncable/mini_stack_overflow_logo.png"
+      %li.points #{@profile.score(:speaker_points)} knowledge points
 
-      &nbsp;
+    - if can?(:sync_profile, @profile)
+      %section#syncables
+        %h2 Syncables
+        %ul
+          %li= render :partial => "stack_overflow_profiles/profile"
+        .clear      
 
-    .grid_5
-      = render :partial => "stack_overflow_profiles/profile"
+    - unless @stack_overflow_profile.answers.empty?
+      %section#stack_overflow_answers
+        %h2 Top 3 Stack Overflow Answers
+        %ul
+          - @stack_overflow_profile.answers.each do |a|
+            %li
+              = link_to a.title, a.url, :target => "_blank"
+                      
+    - unless @stack_overflow_profile.questions.empty?
+      %section#stack_overflow_questions
+        %h2 Top 3 Stack Overflow Questions
+        %ul
+          - @stack_overflow_profile.questions.each do |q|
+            %li
+              = link_to q.title, q.url, :target => "_blank"
+    
+    - if @stack_overflow_profile
       = render :partial => "shared/tags", :locals => {:taggable => @profile.knowledge_profile}
+    
+      &nbsp;    
 
-    .clear
-  .clear
-.clear
-
+    .clear    
