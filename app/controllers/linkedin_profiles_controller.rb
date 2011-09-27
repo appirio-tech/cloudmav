@@ -25,6 +25,7 @@ class LinkedinProfilesController < ApplicationController
     @linkedin_profile = @profile.linkedin_profile
     @linkedin_profile.linkedin_request.set_request_pin!(params[:oauth_verifier])  
     @linkedin_profile.create_linkedin_positions!
+    @profile.calculate_score!
   end
   
   def confirm

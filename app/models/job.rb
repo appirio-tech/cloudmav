@@ -13,7 +13,31 @@ class Job
   
   belongs_to :company, :inverse_of => :employments
   belongs_to :profile
+  
+  scope :chronological_order, order_by([[:start_date, :desc]])
 
+  def company_name
+    self.company ? self.company.name : ""
+  end
+  
+  def display_description
+    (self.description.nil? || self.description.blank?) ? "No description provided" : self.description
+  end
+  
+  def display_date_range
+    sd = "No start date"
+    if self.start_date
+      sd = self.start_date.strftime("%m/%d/%y")
+    end
+    
+    ed = "Present"
+    if self.end_date
+      ed = self.end_date.strftime("%m/%d/%y")
+    end
+    
+    "#{sd} - #{ed}"
+  end
+  
   def related_items
     [company, profile.experience_profile]
   end

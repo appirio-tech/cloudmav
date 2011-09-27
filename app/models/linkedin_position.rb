@@ -12,6 +12,20 @@ class LinkedinPosition
   
   embedded_in :linkedin_profile
   
+  def date_range
+    sd = "No start date"
+    if self.start_date
+      sd = self.start_date.strftime("%m/%d/%y")
+    end
+    
+    ed = "Present"
+    if self.end_date
+      ed = self.end_date.strftime("%m/%d/%y")
+    end
+    
+    "#{sd} - #{ed}"    
+  end
+  
   def set_info_from_linkedin_position(position)
     self.imported_id = position.id
     self.title = position.title
@@ -20,26 +34,21 @@ class LinkedinPosition
       self.company_id = position.company.id 
       self.company_name = position.company.name
     end
-    start_year = position.start_year || Time.now.year
-    start_month = position.start_month || 1
-
-    if date_valid?(start_year, start_month)
-      self.start_date = DateTime.civil(start_year, start_month, 1)
-    end
     
-    end_year = position.end_year
-    end_month = position.end_month 
-    if date_valid?(end_year, end_month) 
-      self.end_date = DateTime.civil(end_year, end_month, 1)
-    else
-      self.end_date = nil
-    end
+    self.start_date = convert_linkedin_date(position.start_date)
+    self.end_date = convert_linkedin_date(position.end_date)
   end
   
-  def date_valid?(year, month)
-    return false unless year && month
-    return false if year == 0 || month == 0
-    true
+  def convert_linkedin_date(linkedin_date)
+    return nil if linkedin_date.nil?
+    year = linkedin_date.year
+    return nil if year.nil? || year == 0
+    month = linkedin_date.month
+    if month.nil? || month == 0
+      return DateTime.civil(year, 1, 1)
+    else
+      return DateTime.civil(year, month, 1)
+    end
   end
   
   def set_info_on_job(job)

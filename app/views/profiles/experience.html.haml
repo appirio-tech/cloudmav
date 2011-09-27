@@ -1,24 +1,38 @@
 = content_for :title do
-  #{@profile.username} - Experience Profile
+  #{@profile.display_name} - Experience Profile
   
 #profile
-  = render :partial => "header"
-  = render :partial => "profile_menu"
-  #profile_content
+  = render :partial => "profile_side_bar"
+  .grid_13
+    %h1 #{@profile.display_name} -> Experience
+    %ul#important_stats
+      %li #{@profile.jobs.count} jobs
+      %li.points #{@profile.score(:experience_points)} experience points
 
-    .grid_8
-      %h2 Jobs
+    - if can?(:sync_profile, @profile)
+      #syncables
+        %h2 Syncables
+        %ul
+          %li= render :partial => "linkedin_profiles/profile"
+        .clear
+          
+    #jobs
       - if @profile.jobs.empty?
         %p No jobs added
-
-      %ul.list
-        - @profile.jobs.each do |j|
-          = render :partial => "jobs/job", :locals => { :job => j }
+      - else
+        %ul
+          - @profile.jobs.chronological_order.each do |j|
+            %li.job
+              .title
+                = j.title
+                %span= j.display_date_range
+              .company_name= j.company_name
+              %p= j.display_description
       &nbsp;
 
-    .grid_5
-      = render :partial => "linkedin_profiles/profile"
-      = render :partial => "shared/tags", :locals => { :taggable => @profile.experience_profile }
-    .clear
+    / .grid_5
+    /   = render :partial => "linkedin_profiles/profile"
+    /   = render :partial => "shared/tags", :locals => { :taggable => @profile.experience_profile }
+    / .clear
 
 .clear

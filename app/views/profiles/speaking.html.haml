@@ -1,14 +1,11 @@
 = content_for :title do
-  #{@profile.username} - Speaker Profile
+  #{@profile.display_name} - Speaker Profile
 
 #profile
   = render :partial => "profile_side_bar"
-  //= render :partial => "header"
-  //= render :partial => "profile_menu"
   
   .grid_13
     %h1 #{@profile.display_name} -> Speaking
-    //    %h2 Speaking
     %ul#important_stats
       %li #{@profile.talks.count} talks
       - if @speaker_rate_profile

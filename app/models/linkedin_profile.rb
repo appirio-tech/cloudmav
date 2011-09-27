@@ -17,11 +17,6 @@ class LinkedinProfile
 
   def create_linkedin_positions!
      client = self.linkedin_request.create_client!
-     puts "client #{client.inspect}"
-     result = client.profile(:fields => %w(positions))
-     puts "result - #{result.inspect}"
-     puts "pos - #{result.positions.inspect}"
-     puts "all - #{result.positions.all.inspect}"
      positions = client.profile(:fields => %w(positions)).positions.all
      self.linkedin_positions = []
      positions.each do |p|
