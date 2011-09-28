@@ -1,0 +1,47 @@
+= content_for :title do
+  #{@profile.display_name} - Code
+
+#profile
+  = render :partial => "profiles/profile_side_bar"
+  
+  .grid_13
+    %h1 #{@profile.display_name} -> Code
+
+    - if can?(:sync_profile, @profile)
+      %ul#profile_actions
+        %li= big_edit_button_link_to "Edit your Coder Profile", edit_profile_code_path(@profile)
+                
+    %ul#important_stats
+      %li.points #{@profile.score(:coder_points)} coder points
+    
+    - if @coder_wall_profile
+      %section#coder_wall
+        %h2 Coderwall Badges
+        = link_to "Go to my Coderwall Profile", @coder_wall_profile.url, :target => "_blank"
+        %ul.coder_wall_badges
+          - @coder_wall_profile.badges.each do |badge|
+            %li
+              = image_tag badge.badge, :alt => badge.name
+              
+    - if @git_hub_profile
+      %section#git_hub
+        %h2 GitHub
+        = link_to "Go to my GitHub Profile", @git_hub_profile.url, :target => "_blank"
+        %ul
+          - @git_hub_profile.repositories.each do |repo|
+            %li
+              %span= link_to repo.name, repo.url
+              %span= repo.total_score
+              
+    - if @bitbucket_profile
+      %section#git_hub
+        %h2 Bitbucket
+        = link_to "Go to my Bitbucket Profile", @bitbucket_profile.url, :target => "_blank"
+        %ul
+          - @bitbucket_profile.repositories.each do |repo|
+            %li
+              %span= link_to repo.name, repo.url
+    &nbsp;
+    
+  .clear
+

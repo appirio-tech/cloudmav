@@ -28,6 +28,7 @@ Codemav::Application.routes.draw do
     resource :writing
     resource :experience
     resource :knowledge
+    resource :code
     
     resources :git_hub_profiles
     resources :bitbucket_profiles
@@ -81,7 +82,7 @@ Codemav::Application.routes.draw do
   match "/:username" => "profiles#show", :as => :profile
   match "/:username/update" => "profiles#update", :as => :update_profile, :method => :put
   match "/:username/experience" => "experiences#show", :as => :profile_experience
-  match "/:username/code" => "profiles#code", :as => :profile_code
+  match "/:username/code" => "codes#show", :as => :profile_code
   match "/:username/knowledge" => "knowledges#show", :as => :profile_knowledge
   match "/:username/writing" => "writings#show", :as => :profile_writing
   match "/:username/speaking" => "speakings#show", :as => :profile_speaking
