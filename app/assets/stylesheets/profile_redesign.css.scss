@@ -82,16 +82,46 @@
   }
 }
 
-ul#important_stats {
-  li {
-    display: inline;
-    font-size: ms(1);
-    margin-right: 26px;
-    img {
-      position: relative;
-      top: 4px;
+#important_stats {
+  table {
+    border-top: 1px solid $dark_background;
+    tr {
+      td {
+        padding-top: ms(-1);
+        padding-bottom: ms(-1);        
+        border-bottom: 1px solid $dark_background;
+      }
+      td.title {     
+      }
+      td.points {        
+        padding-left: ms(-1);
+        p {
+          @include border-radius(4px);
+          margin: 0px;    
+          padding: 6px;
+          font-weight: bold;
+          color: lighten($dark_background, 70%);
+    			background: $dark_background;
+	        text-align: right;
+        }  			
+      }
     }
   }
+  // @include gradient($dark_background, darken($dark_background, 2%));
+  
+  li {
+	  padding-top: 10px;
+	  padding-bottom: 10px;
+	  border-top: 1px solid lighten($dark_background, 30%);
+		.points {
+			display: inline;
+			float: right;
+
+		}
+		.title {
+
+		}
+	}
 }
 
 #syncables {
