@@ -3,7 +3,7 @@
 
 #profile_side_bar {
 	@include box-shadow(0px 5px 5px lighten($black, 10%));
-	border: 1px solid lighten($dark_background, 30%);
+	border: 1px solid $dark_background;
 	#profile_menu {
 	  ul {
 	    @include gradient($dark_background, darken($dark_background, 2%));
@@ -11,7 +11,7 @@
 	  li {
 		  padding-top: 10px;
 		  padding-bottom: 10px;
-		  border-bottom: 1px solid lighten($dark_background, 30%);
+		  border-top: 1px solid lighten($dark_background, 30%);
 			.points {
 				display: inline;
 				float: right;
@@ -67,6 +67,18 @@
   }
   ul#profile_actions {
     margin-bottom: ms(0);
+  }
+  .total_score {
+    @include box-shadow(0px 5px 5px lighten($black, 10%));
+    color: lighten($dark_background, 70%);
+    float:right;
+    font-size: ms(2);
+    width: ms(3);
+    @include border-radius(4px);
+		background: $dark_background;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: center;
   }
 }
 
@@ -151,9 +163,9 @@ ul#important_stats {
         float: left;
         margin-right: ms(-1);
         border: 1px solid $black;
-        img {
-          width: 110px;
-        }
+        // img {
+        //   width: 110px;
+        // }
       }
       .talk_info {
         .talk_title {

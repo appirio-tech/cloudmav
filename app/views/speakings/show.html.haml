@@ -5,7 +5,11 @@
   = render :partial => "profiles/profile_side_bar"
   
   .grid_13
+    .total_score
+      #{@profile.score(:speaker_points)}
+      
     %h1 #{@profile.display_name} -> Speaking
+      
     - if can?(:sync_profile, @profile)
       %ul#profile_actions
         %li= big_edit_button_link_to "Edit your Speaker Profile", edit_profile_speaking_path(@profile)
@@ -28,8 +32,9 @@
             .preview_pic= image_tag talk.preview_pic
             .talk_info
               .talk_title= link_to talk.title, [@profile, talk]
-              = render :partial => "shared/simple_tags", :locals => { :taggable => talk }
-              //.talk_description= truncate(talk.description, :length => 120)
+              .talk_description= truncate(talk.description, :length => 140)
+              //= render :partial => "shared/simple_tags", :locals => { :taggable => talk }
+
             .clear
     &nbsp;    
     
