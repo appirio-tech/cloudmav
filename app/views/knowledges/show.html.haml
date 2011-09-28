@@ -2,10 +2,15 @@
   #{@profile.display_name} - Knowledge
 
 #profile
-  = render :partial => "profile_side_bar"
+  = render :partial => "profiles/profile_side_bar"
   
   .grid_13
     %h1 #{@profile.display_name} -> Knowledge
+    
+    - if can?(:sync_profile, @profile)
+      %ul#profile_actions
+        %li= big_edit_button_link_to "Edit your Knowledge Profile", edit_profile_knowledge_path(@profile)    
+    
     %ul#important_stats
       - if @stack_overflow_profile
         %li 
