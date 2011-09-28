@@ -2,7 +2,8 @@
 @import "mixins";
 
 #profile_side_bar {
-	@include box-shadow(0px 3px 3px lighten($black, 70%));
+	@include box-shadow(0px 5px 5px lighten($black, 10%));
+	border: 1px solid lighten($dark_background, 30%);
 	#profile_menu {
 	  ul {
 	    @include gradient($dark_background, darken($dark_background, 2%));
