@@ -24,6 +24,7 @@ Codemav::Application.routes.draw do
     resource :autodiscover
     resource :speaking
     resource :writing
+    resource :experience
     resources :git_hub_profiles
     resources :bitbucket_profiles
     resources :coder_wall_profiles
@@ -75,7 +76,7 @@ Codemav::Application.routes.draw do
   
   match "/:username" => "profiles#show", :as => :profile
   match "/:username/update" => "profiles#update", :as => :update_profile, :method => :put
-  match "/:username/experience" => "profiles#experience", :as => :profile_experience
+  match "/:username/experience" => "experiences#show", :as => :profile_experience
   match "/:username/code" => "profiles#code", :as => :profile_code
   match "/:username/knowledge" => "profiles#knowledge", :as => :profile_knowledge
   match "/:username/writing" => "writings#show", :as => :profile_writing

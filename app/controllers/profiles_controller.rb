@@ -27,16 +27,6 @@ class ProfilesController < ApplicationController
     @tab = "knowledge"    
     @stack_overflow_profile = @profile.stack_overflow_profile
   end
-  
-  def experience
-    @tab = "experience"
-    @linkedin_profile = @profile.linkedin_profile
-  end
-
-  def writing
-    @tab = "writing"
-    @blog_posts = @profile.posts.page(params[:page]).per(5).order_by(:written_on.desc)
-  end
 
   def social
     @tab = "social"

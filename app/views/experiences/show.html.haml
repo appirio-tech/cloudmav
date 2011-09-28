@@ -2,19 +2,16 @@
   #{@profile.display_name} - Experience Profile
   
 #profile
-  = render :partial => "profile_side_bar"
+  = render :partial => "profiles/profile_side_bar"
   .grid_13
     %h1 #{@profile.display_name} -> Experience
+    - if can?(:sync_profile, @profile)
+      %ul#profile_actions
+        %li= big_edit_button_link_to "Edit your Experience Profile", edit_profile_experience_path(@profile)
+            
     %ul#important_stats
       %li #{@profile.jobs.count} jobs
       %li.points #{@profile.score(:experience_points)} experience points
-
-    - if can?(:sync_profile, @profile)
-      #syncables
-        %h2 Syncables
-        %ul
-          %li= render :partial => "linkedin_profiles/profile"
-        .clear
           
     #jobs
       - if @profile.jobs.empty?
@@ -29,10 +26,5 @@
               .company_name= j.company_name
               %p= j.display_description
       &nbsp;
-
-    / .grid_5
-    /   = render :partial => "linkedin_profiles/profile"
-    /   = render :partial => "shared/tags", :locals => { :taggable => @profile.experience_profile }
-    / .clear
 
 .clear
