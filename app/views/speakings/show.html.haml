@@ -27,16 +27,19 @@
               %p= @profile.speaker_rate_profile.rating
     
     #talks
-      %h2 Talks
-      - if can? :add_talk, @profile
-        .link= big_add_primary_button_link_to "add a talk", new_profile_talk_path(@profile)
+      %h2 
+        Talks
+        - if can? :add_talk, @profile
+          %ul.actions
+            %li= add_primary_button_link_to "add a talk", new_profile_talk_path(@profile)
       %ul
         - @profile.talks.each do |talk|    
           %li
             .preview_pic= image_tag talk.preview_pic
             .talk_info
               .talk_title= link_to talk.title, [@profile, talk]
-              .talk_description= truncate(talk.description, :length => 140)
+              .talk_description= truncate(talk.description, :length => 340)
+              //.talk_description= talk.description
               //= render :partial => "shared/simple_tags", :locals => { :taggable => talk }
 
             .clear

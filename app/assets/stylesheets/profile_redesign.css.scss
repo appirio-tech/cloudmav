@@ -186,29 +186,33 @@
 
 #talks {
   margin-top: ms(1);
-  .link {
-    margin-bottom: ms(-1);
+  .actions {
+    float:right;
+    position: relative;
+    top: -32px;
+    left: -4px;
   }
   ul {    
     li {
-      margin-top: ms(-1);
+      margin-top: ms(1);
       .preview_pic {      
         float: left;
         margin-right: ms(-1);
-        border: 1px solid $black;
-        // img {
-        //   width: 110px;
-        // }
+        border: 1px solid lighten($dark_background, 30%);
+        //@include box-shadow(0px 5px 5px lighten($black, 10%));
       }
       .talk_info {
+        position: relative;
+        top: -6px;
         .talk_title {
           font-weight: bold;
           font-size: ms(1);
+
         }
         .talk_description {
           color: lighten($black, 20%);
           font-size: 12px;
-          width: 348px;
+          width: 464px;
           margin-left: 110px;
         }
       }
