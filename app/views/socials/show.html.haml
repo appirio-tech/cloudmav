@@ -1,0 +1,21 @@
+= content_for :title do
+  #{@profile.display_name} - Social
+
+#profile
+  = render :partial => "profiles/profile_side_bar"
+  
+  .grid_13
+    %h1 #{@profile.display_name} -> Social
+ 
+    - if can?(:sync_profile, @profile)
+      %ul#profile_actions
+        %li= big_edit_button_link_to "Edit your Social Profile", edit_profile_social_path(@profile)
+                
+    %ul#important_stats
+      %li.points #{@profile.score(:social_points)} social points
+    
+          
+    &nbsp;
+    
+  .clear
+
