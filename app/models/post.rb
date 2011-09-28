@@ -10,4 +10,7 @@ class Post
   
   belongs_to :blog
   belongs_to :profile
+  
+  scope :chronological_order, order_by([[:written_on, :desc]])
+  
 end

@@ -1,0 +1,25 @@
+= content_for :title do
+  #{@profile.display_name} - Writing
+
+#profile
+  = render :partial => "profiles/profile_side_bar"
+  
+  .grid_13
+    %h1 #{@profile.display_name} -> Writing
+        
+    %ul#important_stats
+      %li #{@profile.blogs.count} blogs
+      %li #{@profile.posts.count} posts
+      %li.points #{@profile.score(:writer_points)} writer points
+    
+    %section#blog_posts
+      %h2 Blog Posts
+      %ul
+        - @profile.posts.chronological_order.each do |post|    
+          %li
+            = link_to post.title, post.url
+          
+    &nbsp;
+    
+  .clear
+
