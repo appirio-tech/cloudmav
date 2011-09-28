@@ -2,25 +2,21 @@
   #{@profile.display_name} - Speaking
 
 #profile
-  = render :partial => "profile_side_bar"
+  = render :partial => "profiles/profile_side_bar"
   
   .grid_13
     %h1 #{@profile.display_name} -> Speaking
+    - if can?(:sync_profile, @profile)
+      %ul#profile_actions
+        %li= big_edit_button_link_to "Edit your Speaker Profile", edit_profile_speaking_path(@profile)
+        
     %ul#important_stats
       %li #{@profile.talks.count} talks
-      - if @speaker_rate_profile
+      - if @profile.speaker_rate_profile
         %li 
-          #{@speaker_rate_profile.rating}
+          #{@profile.speaker_rate_profile.rating}
           = image_tag "syncable/mini_speaker_rate_logo.png"
       %li.points #{@profile.score(:speaker_points)} speaker points
-      
-    - if can?(:sync_profile, @profile)
-      #syncables
-        %h2 Syncables
-        %ul
-          %li= render :partial => "speaker_rate_profiles/profile"
-          %li= render :partial => "slide_share_profiles/profile"
-        .clear
     
     #talks
       %h2 Talks

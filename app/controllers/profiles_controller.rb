@@ -37,12 +37,6 @@ class ProfilesController < ApplicationController
     @tab = "writing"
     @blog_posts = @profile.posts.page(params[:page]).per(5).order_by(:written_on.desc)
   end
-  
-  def speaking
-    @tab = "speaking"
-    @speaker_rate_profile = @profile.speaker_rate_profile
-    @slide_share_profile = @profile.slide_share_profile
-  end
 
   def social
     @tab = "social"
