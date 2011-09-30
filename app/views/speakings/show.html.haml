@@ -2,17 +2,17 @@
   #{@profile.display_name} - Speaking
 
 #profile
-  = render :partial => "profiles/profile_side_bar"
+  
   
   .grid_13
     .total_score
       = @profile.score(:speaker_points)
       
     %h1
-      = "#{@profile.display_name} -> Speaking"
-      - if can?(:sync_profile, @profile)
-        %ul#profile_actions
-          %li= edit_button_link_to "Edit your Speaker Profile", edit_profile_speaking_path(@profile)
+      = "#{@profile.display_name}"
+    - if can?(:sync_profile, @profile)
+      %ul#profile_actions
+        %li= edit_button_link_to "Edit your Speaker Profile", edit_profile_speaking_path(@profile)
         
     %section#important_stats
       %table
@@ -44,6 +44,6 @@
 
             .clear
     &nbsp;    
-    
+  = render :partial => "profiles/profile_side_bar"
   .clear
 

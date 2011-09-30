@@ -52,6 +52,8 @@
 #profile {
   h1 {
     font-size: 32px;
+    margin-top: -12px;
+    margin-left: 86px;
   }
   h2 {
     font-size: ms(1);
@@ -66,26 +68,24 @@
     }
   }
   ul#profile_actions {
-    float:right;
-    position: relative;
-    top: -6px;
-    left: -36px;
   }
   .total_score {
     @include box-shadow(0px 5px 5px lighten($black, 10%));
     color: lighten($dark_background, 70%);
-    float: right;    
+    float: left; 
     width: ms(3);
     @include border-radius(4px);
 		background: $dark_background;
     padding-left: 4px;
     padding-right: 4px;
+    margin-right: 16px;
     text-align: center;
     font-size: ms(2);
   }
 }
 
 #important_stats {
+  margin-top: ms(0);
   table {
     border-top: 1px solid $dark_background;
     tr {
@@ -125,6 +125,13 @@
 
 		}
 	}
+}
+
+#skill_chart {
+  border: 1px solid $dark_background;
+  float: right;
+  width: 300px;
+  height: 150px;
 }
 
 #syncables {
