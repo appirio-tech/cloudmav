@@ -1,49 +1,29 @@
 = content_for :title do
-  #{@profile.display_name} - Speaking
+  #{@profile.username} - Speaker Profile
 
 #profile
+  = render :partial => "profiles/header"
+  = render :partial => "profiles/profile_menu"
   
-  
-  .grid_13
-    .total_score
-      = @profile.score(:speaker_points)
-      
-    %h1
-      = "#{@profile.display_name}"
-    - if can?(:sync_profile, @profile)
-      %ul#profile_actions
-        %li= edit_button_link_to "Edit your Speaker Profile", edit_profile_speaking_path(@profile)
-        
-    %section#important_stats
-      %table
-        %tr
-          %td.title Talks
-          %td.points
-            %p= @profile.talks.count
-        - if @profile.speaker_rate_profile
-          %tr
-            %td.title SpeakerRate rating
-            %td.points
-              %p= @profile.speaker_rate_profile.rating
-    
-    #talks
-      %h2 
-        Talks
-        - if can? :add_talk, @profile
-          %ul.actions
-            %li= add_primary_button_link_to "add a talk", new_profile_talk_path(@profile)
-      %ul
-        - @profile.talks.each do |talk|    
-          %li
-            .preview_pic= image_tag talk.preview_pic
-            .talk_info
-              .talk_title= link_to talk.title, [@profile, talk]
-              .talk_description= truncate(talk.description, :length => 340)
-              //.talk_description= talk.description
-              //= render :partial => "shared/simple_tags", :locals => { :taggable => talk }
+  #profile_content
+    .grid_13
+      %section
+        %h2 
+          Talks      
+          - if can? :add_talk, @profile
+            %span= add_button_link_to "add a talk", new_profile_talk_path(@profile)
+        %ul.talks
+          - @profile.talks.each do |talk|    
+            %li
+              .preview_pic= image_tag talk.preview_pic
+              .talk_info
+                .title= link_to talk.title, [@profile, talk]
+                %p.description= truncate(talk.description, :length => 390)
+              .clear
+      &nbsp;
+    .grid_2
 
-            .clear
-    &nbsp;    
-  = render :partial => "profiles/profile_side_bar"
+    .clear
+
   .clear
 

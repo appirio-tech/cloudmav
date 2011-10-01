@@ -3,46 +3,28 @@
 
 #profile_header {
   #profile_pic {
-    border: 1px solid $lightest_gray;
-    padding: 3px;
+    border: 1px solid lighten($dark_background, 50%);
   }
-  .profile_name {
-    padding-top: 3px;
-    color: $black;
-    font-size: 14pt;
-    font-weight: bold;
-    float: left;
+  h1 {
+    font-size: ms(1);
+    line-height: ms(1) * 1.2;
   }
   .user_name {
-    float: left;
-    color: $light_gray;
-    font-size: 10pt;
-    margin-left: 3px;
-    margin-top: 7px;
+    color: lighten($dark_background, 30%);
+    font-size: ms(0);
   }
-  .profile_actions {
-    position:relative;
-    left: 5px;
-    top: 6px;
-    a {
-      font-size: 10pt;
-    }
-  }
-
-  table {
-    margin-top: 5px;
-    margin-bottom: 4px;
+  .edit_profile {
+    position: relative;
+    top: -6px;
+    margin-left: 26px;
   }
   td {
     padding: 1px;
+    padding-right: 4px;
   }
   .location_image {
   }
   .location_text {
-    font-size: 10pt;
-    position: relative;
-    top: -3px;
-    left: 3px;
   }
   .email_image {
     img {
@@ -87,11 +69,22 @@
   margin-left: 110px;
   margin-top: 20px;
   background: $white;
-  border: 1px solid $lightest_gray;
-  border-top: 1px solid $dark_background;
+  border: 1px solid lighten($dark_background, 50%);
   padding-bottom: 50px;
   padding-top: 7px;
   padding-left: 15px;
+  
+  section {
+    h2 {
+      border-bottom: 1px solid $dark_background;
+      padding: 6px;
+      margin-bottom: ms(0);
+      span {
+        float: right;
+        margin-top: 2px;
+      }
+    }
+  }
 }
 
 #profile_badges {
@@ -355,6 +348,35 @@
     display:inline;
     img {
       width: 50px;
+    }
+  }
+}
+
+ul#actions {
+  li {
+    float: left;
+  }
+}
+
+ul.talks {
+  li {
+    height: 130px;
+    margin-bottom: ms(0);
+    .preview_pic {
+      float: left;
+      margin-right: ms(0);
+      border: 1px solid lighten($dark_background, 50%);
+    }
+    .talk_info {
+      position: relative;
+      top: -6px;
+      .title {
+        font-size: ms(1);
+      }
+      p.description {
+        font-size: 12px;
+        color: lighten($font-black, 20%);
+      }
     }
   }
 }
