@@ -2,20 +2,18 @@
   #{@profile.display_name} - Social
 
 #profile
-  = render :partial => "profiles/profile_side_bar"
-  
-  .grid_13
-    %h1 #{@profile.display_name} -> Social
- 
-    - if can?(:sync_profile, @profile)
-      %ul#profile_actions
-        %li= big_edit_button_link_to "Edit your Social Profile", edit_profile_social_path(@profile)
-                
-    %ul#important_stats
-      %li.points #{@profile.score(:social_points)} social points
-    
-          
-    &nbsp;
-    
-  .clear
+  = render :partial => "profiles/header"
+  = render :partial => "profiles/profile_menu"
 
+  #profile_content
+    .grid_13
+      - if @twitter_profile
+        %section#twitter
+          = link_to "Go to my Twitter page", @twitter_profile.url
+      &nbsp;
+    .grid_2
+
+    .clear
+
+  .clear
+.clear

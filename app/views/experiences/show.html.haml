@@ -1,30 +1,28 @@
 = content_for :title do
   #{@profile.display_name} - Experience Profile
-  
-#profile
-  = render :partial => "profiles/profile_side_bar"
-  .grid_13
-    %h1 #{@profile.display_name} -> Experience
-    - if can?(:sync_profile, @profile)
-      %ul#profile_actions
-        %li= big_edit_button_link_to "Edit your Experience Profile", edit_profile_experience_path(@profile)
-            
-    %ul#important_stats
-      %li #{@profile.jobs.count} jobs
-      %li.points #{@profile.score(:experience_points)} experience points
-          
-    #jobs
-      - if @profile.jobs.empty?
-        %p No jobs added
-      - else
-        %ul
-          - @profile.jobs.chronological_order.each do |j|
-            %li.job
-              .title
-                = j.title
-                %span= j.display_date_range
-              .company_name= j.company_name
-              %p= j.display_description
-      &nbsp;
 
+#profile
+  = render :partial => "profiles/header"
+  = render :partial => "profiles/profile_menu"
+
+  #profile_content
+    .grid_13
+      %section#jobs
+        - if @profile.jobs.empty?
+          %p No jobs added
+        - else
+          %ul
+            - @profile.jobs.chronological_order.each do |j|
+              %li.job
+                .title
+                  = j.title
+                  %span= j.display_date_range
+                .company_name= j.company_name
+                %p= j.display_description
+      &nbsp;
+    .grid_2
+
+    .clear
+
+  .clear
 .clear

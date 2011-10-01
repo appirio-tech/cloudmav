@@ -1,6 +1,6 @@
 .syncable_logo= link_to image_tag("syncable/twitter_logo.png"), "http://www.twitter.com"
 - @twitter_profile = @profile.twitter_profile || TwitterProfile.new
-.edit_form
+.edit_form#sync_twitter
   = form_for [@profile, @twitter_profile] do |f|
     = f.text_field :username
     = big_positive_loop_button_tag "Sync"

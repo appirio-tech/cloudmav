@@ -1,34 +1,34 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.stackoverflow.com:80/1.1/users/60336?key=
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      x-ratelimit-max: 
-      - "300"
-      x-aspnet-version: 
+    headers:
+      x-ratelimit-max:
+      - '300'
+      x-aspnet-version:
       - 4.0.30319
-      content-type: 
+      content-type:
       - application/json; charset=utf-8
-      date: 
+      date:
       - Tue, 13 Sep 2011 01:45:09 GMT
-      content-length: 
-      - "612"
-      content-encoding: 
+      content-length:
+      - '612'
+      content-encoding:
       - gzip
-      x-aspnetmvc-version: 
-      - "3.0"
-      x-ratelimit-current: 
-      - "275"
-      cache-control: 
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-current:
+      - '275'
+      cache-control:
       - private
-    body: !binary |
+    body: !binary |-
       H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
       kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
       AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/S3RH/ucou8vCvpvgB
@@ -43,38 +43,37 @@
       v4Evuo0n2exioAP5qge9WORlsbQcE/agX3ZfWuRLECWfRd+y33Zfm1YLfBdH
       z3zZfcnJUvQ1T9TcizxUYRnoBqsU6KuLqgSrODaiz5qivMzr7qeTulqyqtkz
       H/4S+YV/fP83Tn5J8v8EAAD//1oyycuzBAAA
-
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.stackoverflow.com:80/1.1/users/60336/tags?key=
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      x-ratelimit-max: 
-      - "300"
-      x-aspnet-version: 
+    headers:
+      x-ratelimit-max:
+      - '300'
+      x-aspnet-version:
       - 4.0.30319
-      content-type: 
+      content-type:
       - application/json; charset=utf-8
-      date: 
+      date:
       - Tue, 13 Sep 2011 01:45:10 GMT
-      content-length: 
-      - "402"
-      content-encoding: 
+      content-length:
+      - '402'
+      content-encoding:
       - gzip
-      x-aspnetmvc-version: 
-      - "3.0"
-      x-ratelimit-current: 
-      - "258"
-      cache-control: 
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-current:
+      - '258'
+      cache-control:
       - private
-    body: !binary |
+    body: !binary |-
       H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
       kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
       AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/S3Ycj/nuVXeT40/3V
@@ -84,74 +83,72 @@
       lm1dlc0Pv9/FIq+nRfZDn9tpNctXZf7uh91vmV3n9Q+701nWZpNiOSuWFz/s
       rld1tcrrtsh/6LzVtNflD7/Xn/5F67y+/mH3mi1ndfXDV1arebXML7LVD7vf
       RTUpynz7Kp/8sHvGgK9Ja/1sdYwf3/+Nk1+S/D8BAAD//7ZxiZkaCQAA
-
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.stackoverflow.com:80/1.1/users/60336/questions?key=
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      x-ratelimit-max: 
-      - "300"
-      x-aspnet-version: 
+    headers:
+      x-ratelimit-max:
+      - '300'
+      x-aspnet-version:
       - 4.0.30319
-      content-type: 
+      content-type:
       - application/json; charset=utf-8
-      date: 
+      date:
       - Tue, 13 Sep 2011 01:45:10 GMT
-      content-length: 
-      - "174"
-      content-encoding: 
+      content-length:
+      - '174'
+      content-encoding:
       - gzip
-      x-aspnetmvc-version: 
-      - "3.0"
-      x-ratelimit-current: 
-      - "270"
-      cache-control: 
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-current:
+      - '270'
+      cache-control:
       - private
-    body: !binary |
+    body: !binary |-
       H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
       kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
       AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/SnRH/ucoucvpr1/3V
       FD/AJ/e0wS9a501bVMuGPvve93/j5Jck/08AAAD//8zP1wpIAAAA
-
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.stackoverflow.com:80/1.1/users/60336/answers?key=
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      x-ratelimit-max: 
-      - "300"
-      x-aspnet-version: 
+    headers:
+      x-ratelimit-max:
+      - '300'
+      x-aspnet-version:
       - 4.0.30319
-      content-type: 
+      content-type:
       - application/json; charset=utf-8
-      date: 
+      date:
       - Tue, 13 Sep 2011 01:45:10 GMT
-      content-length: 
-      - "1079"
-      content-encoding: 
+      content-length:
+      - '1079'
+      content-encoding:
       - gzip
-      x-aspnetmvc-version: 
-      - "3.0"
-      x-ratelimit-current: 
-      - "269"
-      cache-control: 
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-current:
+      - '269'
+      cache-control:
       - private
-    body: !binary |
+    body: !binary |-
       H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
       kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
       AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/SgxH/ucoucvpr1/3V
@@ -176,111 +173,374 @@
       fddW7MplEnyk5Nkh7CDzm3uhSpsvaE7a27MlJUy+IbYkSLdiy0/3PfPy84Mt
       HzzY8zz/DWwZNvxGMjT7+/veVx+UogFfTjPEGLDCr9ts+vZltswpzCjKMiVm
       JIWYlZSnOa+rBQXMbUs/iG3bamX5ET++/xsnvyT5fwIAAP//v50ik30UAAA=
-
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://rbt8400-2.stedwards.edu:80/aaa/guest.html?wbaredirect=http://api.stackoverflow.com/1.1/users/60336?key=ZJZ_DNRrgk6IQYQ0h_Duyg
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      mime-version: 
-      - "1.0"
-      content-type: 
+    headers:
+      mime-version:
+      - '1.0'
+      content-type:
       - text/html
-      server: 
+      server:
       - TreeNeWS/0.0.1
-      date: 
+      date:
       - Oct 01, 07:38:33.849
-      content-length: 
-      - "24927"
-      cache-control: 
+      content-length:
+      - '24927'
+      cache-control:
       - no-cache
-    body: "<html>\n\
-      <head>\n\
-      <title>St. Edward's University Guest Wireless</title>\n\
-      <meta http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n\
-      <style type=\"text/css\">\n\
-      BODY {\n\
-      \tFONT-SIZE: 11px;\n\
-      \tCOLOR: #000000;\n\
-      \tFONT-FAMILY: Verdana, Arial, Helvetica, sans-serif\n\
-      }\n\
-      TD {\n\
-      \tFONT-SIZE: 11px;\n\
-      \tCOLOR: #000000;\n\
-      \tFONT-FAMILY: Verdana, Arial, Helvetica, sans-serif\n\
-      }\n\
-      H3 {\n\
-      \tFONT-SIZE: 14px;\n\
-      \tCOLOR: #000066;\n\
-      \tFONT-FAMILY: Verdana, Arial, Helvetica, sans-serif\n\
-      }\n\
-      .textbold {\n\
-      \tfont-weight:bolder;\n\
-      \tline-height:normal;\n\
-      }\n\n\
-      </style>\n\
-      <!-- Modify web page title below -->\n\
-      <!-- End modification web page title -->\n\
-      <meta content=\"Microsoft FrontPage 5.0\" name=\"GENERATOR\">\n\
-      </head>\n\
-      <body>\n\
-      <!-- Modify company .gif and greeting below -->\n\
-      <center>\n  <img alt=\"St. Edward's Univeristy\" src=\"seu.gif\" border=\"0\" width=\"60\" height=\"77\">\n\
-      </center>\n\
-      <h3>St. Edward's University Guest Wireless</h3>\n\
-      <!-- End modification company .gif and greeting -->\n\
-      <!-- DO_NOT_MODIFY_THE_SOURCE BEGIN -->\n\
-      <hr>\n\
-      <p>\n  <!-- END DO_NOT_MODIFY_THE_SOURCE -->\n  <!-- Modify warning statement below -->\n  <strong>WARNING:</strong> Guests have limited network access and limited bandwidth (equivalent to a dial-up modem). <br>\n  <br>\n  If you have a SEU login and password please connect to the \"stedwards\" wireless zone. <br>\n  <br>\n  Use of this network is subject to the SEU Techonology and Information Policy.<br>\n\
-      <div style=\"position:relative;  height:100px; overflow:auto;\">\n  <table bgcolor=\"#cccccc\" border=\"0\" cellpadding=\"2\" cellspacing=\"1\">\n    <tbody>\n      <tr>\n        <td colspan=\"5\"><a name=\"tech_policy\"></a><span class=\"lg_textbold\">I.\n          Technology Policy</span></td>\n      </tr>\n      <tr>\n        <td width=\"2%\">&nbsp;</td>\n        <td colspan=\"4\" class=\"textbold\"><a name=\"intro\"></a>A. Introduction </td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\" width=\"4%\">1.</td>\n        <td colspan=\"3\"> St. Edward's University provides\n          information technology resources for educational,\n          research, and administrative uses by its students,\n          faculty, staff and visiting scholars. This policy supports and supplements\n          the university's more general policies and procedures\n          governing faculty, students, staff, and facilities.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td align=\"right\" valign=\"top\"><span class=\"textbold\">2.</span></td>\n        <td colspan=\"3\">University information technology resources that are subject\n          to university policies include, but are not\n          limited to, the following:</td>\n      </tr>\n      <tr>\n        <td rowspan=\"3\" height=\"95\">&nbsp;</td>\n        <td rowspan=\"3\">&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">a.</td>\n        <td colspan=\"2\" valign=\"top\">Any computer related equipment\n          and/or data (electronic or printed) owned or\n          managed by the university. This\n          includes electrical power. </td>\n      </tr>\n      <tr>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">b.</td>\n        <td colspan=\"2\">Any computer, server (i.e.,\n          any computer that runs an application which allows\n          remote access to local resources), networking\n          device, telephone, copier, printer, fax machine,\n          or other information technology which is owned\n          or leased by the university or is connected to\n          any university network or system is subject to\n          university policies.</td>\n      </tr>\n      <tr>\n        <td class=\"textbold\" align=\"right\">c.</td>\n        <td colspan=\"2\">Any device that:</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td align=\"right\" valign=\"top\"><span class=\"textbold\">(1)</span></td>\n        <td>connects directly to the university data or telephone\n          networks,</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td align=\"right\" valign=\"top\"><span class=\"textbold\">(2)</span></td>\n        <td>uses university network-dialup facilities (campus\n          modem pool or wireless systems),</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td align=\"right\" valign=\"top\"><span class=\"textbold\">(3)</span></td>\n        <td>connects directly to a computer or other device\n          owned or operated by the university, and/or</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td width=\"3%\">&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\" width=\"5%\">(4)</td>\n        <td width=\"86%\">uses or affects university information\n          technology facilities.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td align=\"right\" valign=\"top\"><strong>3.</strong></td>\n        <td colspan=\"3\"><p>Prior to accessing technology in order to post information outside the jurisdiction of the university, you should review the appropriate university policy. Please review </p></td>\n      </tr>\n      <tr>\n        <td rowspan=\"3\" height=\"95\">&nbsp;</td>\n        <td rowspan=\"3\">&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">a.</td>\n        <td colspan=\"2\" valign=\"top\"><p>For staff: &nbsp; the Employee Handbook, \"Outside Activities\" policy available at\n            http://www.stedwards.edu/hr/content/policies-and-procedures</p></td>\n      </tr>\n      <tr>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">b.</td>\n        <td colspan=\"2\">For students:  the Student Code of Conduct, Article 2: Misconduct available at\n          http://www.stedwards.edu/stubook/stu_code/poli_proc/article2.html</td>\n      </tr>\n      <tr>\n        <td class=\"textbold\" align=\"right\">c.</td>\n        <td colspan=\"2\">For faculty: &nbsp; the Faculty Manual, 2.9 Faculty Rights and Responsibilities available at                              http://www.stedwards.edu/academic/faculty_manual.htm </td>\n      </tr>\n      <tr>\n        <td rowspan=\"2\">&nbsp;</td>\n        <td align=\"right\" valign=\"top\"><span class=\"textbold\">4.</span></td>\n        <td colspan=\"3\">Scholarly communities within the university may extend the SEU community beyond SEU faculty, staff &amp; students in support of academic goals and standards.</td>\n      </tr>\n      <tr>\n        <td align=\"right\" valign=\"top\"><strong>5.</strong></td>\n        <td colspan=\"3\">Under no circumstances may anyone\n          use information technology resources in ways\n          that are illegal or against university policies,\n          violate the university mission, threaten the\n          university's tax exempt or other status, or interfere\n          with reasonable use by other members of the university\n          community. For information on some of the possible consequences of misusing information technology resources described in Section III.C. of this policy, please refer to the Employee Handbook, the Student Code of Conduct, or the Faculty Manual.</td>\n      </tr>\n      <tr>\n        <td class=\"lg_textbold\">&nbsp;</td>\n        <td colspan=\"4\" class=\"textbold\"><a name=\"roles\"></a>B. Roles and\n          Responsibilities</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\">1.</td>\n        <td colspan=\"3\" class=\"textbold\">The University </td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">a.</td>\n        <td colspan=\"2\">The university owns most of the computers\n          and all of the internal computer networks used\n          on campus. The university also has various rights\n          to the software and information residing on,\n          developed on, or licensed for these computers\n          and networks. The university administers, protects,\n          and monitors this aggregation of computers, software,\n          and networks. In its management of information\n          technology, the university and its administrative\n          and academic departments take responsibility\n          for the following:</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(1)</td>\n        <td>Managing\n          computing resources so that members of the university\n          community are not denied fair access to them;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(2)</td>\n        <td>Establishing\n          and supporting reasonable standards of security\n          for electronic information that community members\n          produce, use, or distribute, and ensuring the\n          privacy and accuracy of administrative information\n          that the university maintains;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(3)</td>\n        <td>Delineating\n          the limits of privacy that can be expected in\n          the use of networked computer resources and preserving\n          freedom of expression over this medium without\n          permitting abusive or unlawful activities;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(4)</td>\n        <td>Enforcing\n          policies by restricting access and initiating\n          disciplinary proceedings as appropriate;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(5)</td>\n        <td>Ensuring\n          that central university computer systems do not\n          lose critical information because of failures\n          or breakdowns;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(6)</td>\n        <td>Protecting\n          individual passwords from disclosure;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(7)</td>\n        <td>Providing\n          network access, including wireless access.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\">2.</td>\n        <td colspan=\"3\" class=\"textbold\">The Individual </td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">a.</td>\n        <td colspan=\"2\">All members of the university community\n          must follow the policies that make these resources\n          secure and efficient. All users are subject to\n          university policies and other statements of conduct\n          as published in the Student Handbook, Faculty\n          Handbook, and Employee Handbook as well as all\n          applicable federal, state, and local laws.&nbsp; The\n          University prohibits individual commercial use\n          of university computer systems. Incidental personal\n          use by employees is allowed at the discretion\n          of the cost center manager.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">b.</td>\n        <td colspan=\"2\">Examples of responsible use of technology\n          include but are not limited to the following:</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(1)</td>\n        <td>Observing\n          policies governing the privacy of others, including\n          restrictions placed upon accessible data (secured\n          or otherwise) stored locally or transmitted across\n          network systems;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(2)</td>\n        <td>Using\n          resources efficiently, and accepting limitations\n          or restrictions on computing resources\x97such\n          as storage space, time limits, or amount of resources\n          consumed\x97when asked to do so;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(3)</td>\n        <td>Backing\n          up files and other data regularly;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(4)</td>\n        <td>Preventing\n          unauthorized network access to or from their\n          computers or computer accounts;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(5)</td>\n        <td>Protecting\n          personal passwords and respecting security restrictions\n          on all systems;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(6)</td>\n        <td>Respecting\n          the rights of others to be free from harassment\n          or intimidation, to the same extent that this\n          right is recognized otherwise on campus;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(7)</td>\n        <td>Honoring\n          copyright and other intellectual-property rights;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(8)</td>\n        <td>Taking\n          reasonable precautions to avoid introducing computer\n          contaminants, such as viruses, trojans and worms\n          into university computer systems.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(9)</td>\n        <td><p>Honoring academic freedom for professional presentations in public forums and correspondence. </p></td>\n      </tr>\n      <tr>\n        <td rowspan=\"2\">&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(10)</td>\n        <td>Honoring scholarly postings and articles for publishing in social computing environments, including but not limited to blog and wiki tichnology; </td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td valign=\"top\"><strong>c.</strong></td>\n        <td colspan=\"2\">Individuals who are not members of the university community may be allowed or invited to present information for publication on an electronic site (e.g. faculty blogs, wikis, or other research projects) hosted by the university provided that all laws, including copyright laws, are satisfied and the faculty member overseeing the presentation reasonably believes this information also satisfies academic conventions for scholarly research. Those items not meeting these criteria either may not be published on that electronic site or may be removed from public display by that faculty member. Notice of these criteria should also be diplayed to anyone submitting materials to that electronic site.</td>\n      </tr>\n      <tr>\n        <td colspan=\"5\"><a name=\"tech_policy\"></a><span class=\"lg_textbold\">II.\n          Information Policy</span></td>\n      </tr>\n      <tr>\n        <td width=\"2%\">&nbsp;</td>\n        <td colspan=\"4\" class=\"textbold\"><a name=\"privacy\"></a>A.\n          Privacy Policy </td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\" width=\"4%\">1.</td>\n        <td colspan=\"3\">St Edward\x92s University complies\n          with all federal and state regulations regarding\n          privacy.&nbsp; SEU will not release non-directory\n          personal data or information to investigators,\n          attorneys, or agencies unless directed to do\n          so by a valid court order.&nbsp; St. Edward's\n          University respects the privacy of users\x92 electronic\n          files and communications residing on the university\x92s\n          computer system.&nbsp; The university takes precautions\n          to ensure privacy of personal data and information.\n          Personal data will be transferred and stored\n          in a secure manner according to industry practices. </td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td align=\"right\" valign=\"top\"><span class=\"textbold\">2.</span></td>\n        <td colspan=\"3\">Refer to the Roles and Responsibilities\n          section for detail. Individual users of the computer\n          system should be aware of the inherent limitations\n          of shared network resources.&nbsp; No computer\n          security system can absolutely prevent unauthorized\n          persons from accessing stored information, and\n          the university can not and does not guarantee\n          the privacy or confidentiality of stored information\n          or electronic communications.&nbsp; </td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\">3.</td>\n        <td colspan=\"3\">Routine Collection of Electronically\n          Recorded Information</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">a.</td>\n        <td colspan=\"2\" valign=\"top\">Authorized\n          Information Technology personnel may actively\n          scan any computer local to the SEU campus(es)\n          for the purpose of detecting security vulnerabilities\n          on workstations/servers.&nbsp; This is in order\n          to protect Information Technology resources from\n          deliberate or accidental abuse.&nbsp; No other\n          department/user has authorization for this type\n          of activity. The university reserves the right\n          to monitor and access a user\x92s communications,\n          files, and stored information under the following\n          circumstances:</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td align=\"right\" valign=\"top\"><span class=\"textbold\">(1)</span></td>\n        <td>When\n          necessary to protect the integrity, security,\n          and proper functioning of the university\x92s\n          computing system or to protect the university\n          from liability.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td align=\"right\" valign=\"top\"><span class=\"textbold\">(2)</span></td>\n        <td>When\n          required by federal, state, or local law or university\n          policies or regulations as reflected in this\n          policy, Faculty Handbook, Student Handbook, and\n          Employee Handbook.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td align=\"right\" valign=\"top\"><span class=\"textbold\">(3)</span></td>\n        <td>When\n          necessary to ensure that high standards of maintenance\n          are met. SEU does not monitor which web sites\n          users visit nor look at what users put in written\n          communications such as emails, news articles,\n          or chat rooms unless an abuse of such services\n          is reported.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td width=\"3%\">&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\" width=\"5%\">(4)</td>\n        <td width=\"86%\">When\n          necessary to tune web server performance and\n          debug problems.&nbsp; Web server logs are primarily\n          used by system administrators and are deleted\n          periodically.&nbsp; However, they may be included\n          on tape backups of the system. These logs typically\n          contain internet address of computer being used,\n          web pages requested, browser used, date and time,\n          and for some applications, user-identifiable\n          information.&nbsp;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td align=\"right\"><span class=\"textbold\">4.</span></td>\n        <td colspan=\"3\" class=\"textbold\">Use/Release\n          of Electronically Recorded Information</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td align=\"right\">&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">a.</td>\n        <td colspan=\"2\">St. Edward\x92s University does\n          not attempt to identify individuals or their\n          usage habits. Administration does watch for illegal\n          attempts to upload or alter information, to create\n          conditions that would cause a denial of service\n          or other damage, or to launch attacks on other\n          sites. St. Edward\x92s reserves the right\n          to use web server logs, account records, and\n          other system information to identify the person(s)\n          responsible. Any monitoring or access to a user\x92s\n          files or communications will be no more extensive\n          than is necessary to accomplish the purpose for\n          which it is authorized. Affected users will be\n          notified of such monitoring or access to the\n          extent allowed by law or university policy, provided\n          that it will not compromise the university\x92s\n          investigation or the investigation of any law\n          enforcement organization.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td align=\"right\">&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">b.</td>\n        <td colspan=\"2\">Release of electronically recorded\n          information \n          \n          \n          to investigate violations of the Technology and Information Policy and other university policies  must be authorized by the appropriate\n          Vice President, with the concurrence of the Vice-President\n          for Information Technology.</td>\n      </tr>\n      <tr>\n        <td class=\"lg_textbold\">&nbsp;</td>\n        <td colspan=\"4\" class=\"textbold\"><a name=\"copyright\"></a>B.\n          Copyright Policy </td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">1.</td>\n        <td colspan=\"3\">The owner of a university computing\n          account or the designated user of a university-owned\n          microcomputer is responsible and liable for respecting\n          all copyright and contractual agreements concerning\n          use and reproduction of software or documentation.\n          Instructional Technology is the university department\n          responsible for maintaining licensing records;\n          consequently, the university recommends that\n          all software installed on university-owned microcomputers\n          be purchased through Instructional Technology.\n          In the event a user installs, on a university-owned\n          microcomputer, software not purchased through\n          Instructional Technology, that user must forward\n          proof of licensing documentation to Instructional\n          Technology.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">2.</td>\n        <td colspan=\"3\">Use of copyrighted materials, regardless\n          of medium, is subject to all applicable fair\n          use and copyright regulations.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">3.</td>\n        <td colspan=\"3\">Violations of licensing agreements\n          or copyright law will result in removal of copyrighted\n          material and could result in suspension of the\n          user's university computing account.</td>\n      </tr>\n    </tbody>\n  </table>\n\
-      </div>\n\
-      </p>\n\
-      <p> Click \"I Agree to Network Terms\" below to continue. </p>\n\
-      <!-- End modification of warning statement -->\n\
-      <hr>\n\
-      <br>\n\
-      <form name=\"weblogin\" action=\"https://rbt8400-2.stedwards.edu/aaa/guest.html?wbaredirect=http://api.stackoverflow.com/1.1/users/60336?key=ZJZ_DNRrgk6IQYQ0h_Duyg\" method=\"post\">\n  <input value=\"wba_login\" name=\"fname\" type=\"hidden\">\n  <table border=\"0\" cellpadding=\"3\">\n    <tbody>\n      <tr>\n        <td><input maxlength=\"32\" size=\"15\" name=\"username\" value=\"guest\" type=\"hidden\"></td>\n      </tr>\n      <tr>\n        <td><input maxlength=\"32\" size=\"15\" name=\"key\" value=\"guest\" type=\"hidden\"></td>\n      </tr>\n      <tr>\n        <td colspan=\"2\" align=\"right\"><input onclick=\"this.value = 'Submitted'\" value=\" I Agree to Network Terms \" type=\"submit\"></td>\n      </tr>\n    </tbody>\n  </table>\n\
-      </form>\n\
-      </body>\n\
-      </html>"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+    body: ! "<html>\n<head>\n<title>St. Edward's University Guest Wireless</title>\n<meta
+      http-equiv=\"Content-Type\" content=\"text/html; charset=windows-1252\">\n<style
+      type=\"text/css\">\nBODY {\n\tFONT-SIZE: 11px;\n\tCOLOR: #000000;\n\tFONT-FAMILY:
+      Verdana, Arial, Helvetica, sans-serif\n}\nTD {\n\tFONT-SIZE: 11px;\n\tCOLOR:
+      #000000;\n\tFONT-FAMILY: Verdana, Arial, Helvetica, sans-serif\n}\nH3 {\n\tFONT-SIZE:
+      14px;\n\tCOLOR: #000066;\n\tFONT-FAMILY: Verdana, Arial, Helvetica, sans-serif\n}\n.textbold
+      {\n\tfont-weight:bolder;\n\tline-height:normal;\n}\n\n</style>\n<!-- Modify
+      web page title below -->\n<!-- End modification web page title -->\n<meta content=\"Microsoft
+      FrontPage 5.0\" name=\"GENERATOR\">\n</head>\n<body>\n<!-- Modify company .gif
+      and greeting below -->\n<center>\n  <img alt=\"St. Edward's Univeristy\" src=\"seu.gif\"
+      border=\"0\" width=\"60\" height=\"77\">\n</center>\n<h3>St. Edward's University
+      Guest Wireless</h3>\n<!-- End modification company .gif and greeting -->\n<!--
+      DO_NOT_MODIFY_THE_SOURCE BEGIN -->\n<hr>\n<p>\n  <!-- END DO_NOT_MODIFY_THE_SOURCE
+      -->\n  <!-- Modify warning statement below -->\n  <strong>WARNING:</strong>
+      Guests have limited network access and limited bandwidth (equivalent to a dial-up
+      modem). <br>\n  <br>\n  If you have a SEU login and password please connect
+      to the \"stedwards\" wireless zone. <br>\n  <br>\n  Use of this network is subject
+      to the SEU Techonology and Information Policy.<br>\n<div style=\"position:relative;
+      \ height:100px; overflow:auto;\">\n  <table bgcolor=\"#cccccc\" border=\"0\"
+      cellpadding=\"2\" cellspacing=\"1\">\n    <tbody>\n      <tr>\n        <td colspan=\"5\"><a
+      name=\"tech_policy\"></a><span class=\"lg_textbold\">I.\n          Technology
+      Policy</span></td>\n      </tr>\n      <tr>\n        <td width=\"2%\">&nbsp;</td>\n
+      \       <td colspan=\"4\" class=\"textbold\"><a name=\"intro\"></a>A. Introduction
+      </td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td class=\"textbold\"
+      align=\"right\" valign=\"top\" width=\"4%\">1.</td>\n        <td colspan=\"3\">
+      St. Edward's University provides\n          information technology resources
+      for educational,\n          research, and administrative uses by its students,\n
+      \         faculty, staff and visiting scholars. This policy supports and supplements\n
+      \         the university's more general policies and procedures\n          governing
+      faculty, students, staff, and facilities.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td align=\"right\" valign=\"top\"><span class=\"textbold\">2.</span></td>\n
+      \       <td colspan=\"3\">University information technology resources that are
+      subject\n          to university policies include, but are not\n          limited
+      to, the following:</td>\n      </tr>\n      <tr>\n        <td rowspan=\"3\"
+      height=\"95\">&nbsp;</td>\n        <td rowspan=\"3\">&nbsp;</td>\n        <td
+      class=\"textbold\" align=\"right\" valign=\"top\">a.</td>\n        <td colspan=\"2\"
+      valign=\"top\">Any computer related equipment\n          and/or data (electronic
+      or printed) owned or\n          managed by the university. This\n          includes
+      electrical power. </td>\n      </tr>\n      <tr>\n        <td class=\"textbold\"
+      align=\"right\" valign=\"top\">b.</td>\n        <td colspan=\"2\">Any computer,
+      server (i.e.,\n          any computer that runs an application which allows\n
+      \         remote access to local resources), networking\n          device, telephone,
+      copier, printer, fax machine,\n          or other information technology which
+      is owned\n          or leased by the university or is connected to\n          any
+      university network or system is subject to\n          university policies.</td>\n
+      \     </tr>\n      <tr>\n        <td class=\"textbold\" align=\"right\">c.</td>\n
+      \       <td colspan=\"2\">Any device that:</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td align=\"right\"
+      valign=\"top\"><span class=\"textbold\">(1)</span></td>\n        <td>connects
+      directly to the university data or telephone\n          networks,</td>\n      </tr>\n
+      \     <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n
+      \       <td align=\"right\" valign=\"top\"><span class=\"textbold\">(2)</span></td>\n
+      \       <td>uses university network-dialup facilities (campus\n          modem
+      pool or wireless systems),</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td align=\"right\"
+      valign=\"top\"><span class=\"textbold\">(3)</span></td>\n        <td>connects
+      directly to a computer or other device\n          owned or operated by the university,
+      and/or</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n
+      \       <td width=\"3%\">&nbsp;</td>\n        <td class=\"textbold\" align=\"right\"
+      valign=\"top\" width=\"5%\">(4)</td>\n        <td width=\"86%\">uses or affects
+      university information\n          technology facilities.</td>\n      </tr>\n
+      \     <tr>\n        <td>&nbsp;</td>\n        <td align=\"right\" valign=\"top\"><strong>3.</strong></td>\n
+      \       <td colspan=\"3\"><p>Prior to accessing technology in order to post
+      information outside the jurisdiction of the university, you should review the
+      appropriate university policy. Please review </p></td>\n      </tr>\n      <tr>\n
+      \       <td rowspan=\"3\" height=\"95\">&nbsp;</td>\n        <td rowspan=\"3\">&nbsp;</td>\n
+      \       <td class=\"textbold\" align=\"right\" valign=\"top\">a.</td>\n        <td
+      colspan=\"2\" valign=\"top\"><p>For staff: &nbsp; the Employee Handbook, \"Outside
+      Activities\" policy available at\n            http://www.stedwards.edu/hr/content/policies-and-procedures</p></td>\n
+      \     </tr>\n      <tr>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">b.</td>\n
+      \       <td colspan=\"2\">For students:  the Student Code of Conduct, Article
+      2: Misconduct available at\n          http://www.stedwards.edu/stubook/stu_code/poli_proc/article2.html</td>\n
+      \     </tr>\n      <tr>\n        <td class=\"textbold\" align=\"right\">c.</td>\n
+      \       <td colspan=\"2\">For faculty: &nbsp; the Faculty Manual, 2.9 Faculty
+      Rights and Responsibilities available at                              http://www.stedwards.edu/academic/faculty_manual.htm
+      </td>\n      </tr>\n      <tr>\n        <td rowspan=\"2\">&nbsp;</td>\n        <td
+      align=\"right\" valign=\"top\"><span class=\"textbold\">4.</span></td>\n        <td
+      colspan=\"3\">Scholarly communities within the university may extend the SEU
+      community beyond SEU faculty, staff &amp; students in support of academic goals
+      and standards.</td>\n      </tr>\n      <tr>\n        <td align=\"right\" valign=\"top\"><strong>5.</strong></td>\n
+      \       <td colspan=\"3\">Under no circumstances may anyone\n          use information
+      technology resources in ways\n          that are illegal or against university
+      policies,\n          violate the university mission, threaten the\n          university's
+      tax exempt or other status, or interfere\n          with reasonable use by other
+      members of the university\n          community. For information on some of the
+      possible consequences of misusing information technology resources described
+      in Section III.C. of this policy, please refer to the Employee Handbook, the
+      Student Code of Conduct, or the Faculty Manual.</td>\n      </tr>\n      <tr>\n
+      \       <td class=\"lg_textbold\">&nbsp;</td>\n        <td colspan=\"4\" class=\"textbold\"><a
+      name=\"roles\"></a>B. Roles and\n          Responsibilities</td>\n      </tr>\n
+      \     <tr>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\">1.</td>\n
+      \       <td colspan=\"3\" class=\"textbold\">The University </td>\n      </tr>\n
+      \     <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\"
+      align=\"right\" valign=\"top\">a.</td>\n        <td colspan=\"2\">The university
+      owns most of the computers\n          and all of the internal computer networks
+      used\n          on campus. The university also has various rights\n          to
+      the software and information residing on,\n          developed on, or licensed
+      for these computers\n          and networks. The university administers, protects,\n
+      \         and monitors this aggregation of computers, software,\n          and
+      networks. In its management of information\n          technology, the university
+      and its administrative\n          and academic departments take responsibility\n
+      \         for the following:</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\"
+      align=\"right\" valign=\"top\">(1)</td>\n        <td>Managing\n          computing
+      resources so that members of the university\n          community are not denied
+      fair access to them;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\"
+      align=\"right\" valign=\"top\">(2)</td>\n        <td>Establishing\n          and
+      supporting reasonable standards of security\n          for electronic information
+      that community members\n          produce, use, or distribute, and ensuring
+      the\n          privacy and accuracy of administrative information\n          that
+      the university maintains;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\"
+      align=\"right\" valign=\"top\">(3)</td>\n        <td>Delineating\n          the
+      limits of privacy that can be expected in\n          the use of networked computer
+      resources and preserving\n          freedom of expression over this medium without\n
+      \         permitting abusive or unlawful activities;</td>\n      </tr>\n      <tr>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n
+      \       <td class=\"textbold\" align=\"right\" valign=\"top\">(4)</td>\n        <td>Enforcing\n
+      \         policies by restricting access and initiating\n          disciplinary
+      proceedings as appropriate;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\"
+      align=\"right\" valign=\"top\">(5)</td>\n        <td>Ensuring\n          that
+      central university computer systems do not\n          lose critical information
+      because of failures\n          or breakdowns;</td>\n      </tr>\n      <tr>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n
+      \       <td class=\"textbold\" align=\"right\" valign=\"top\">(6)</td>\n        <td>Protecting\n
+      \         individual passwords from disclosure;</td>\n      </tr>\n      <tr>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n
+      \       <td class=\"textbold\" align=\"right\" valign=\"top\">(7)</td>\n        <td>Providing\n
+      \         network access, including wireless access.</td>\n      </tr>\n      <tr>\n
+      \       <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\">2.</td>\n
+      \       <td colspan=\"3\" class=\"textbold\">The Individual </td>\n      </tr>\n
+      \     <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\"
+      align=\"right\" valign=\"top\">a.</td>\n        <td colspan=\"2\">All members
+      of the university community\n          must follow the policies that make these
+      resources\n          secure and efficient. All users are subject to\n          university
+      policies and other statements of conduct\n          as published in the Student
+      Handbook, Faculty\n          Handbook, and Employee Handbook as well as all\n
+      \         applicable federal, state, and local laws.&nbsp; The\n          University
+      prohibits individual commercial use\n          of university computer systems.
+      Incidental personal\n          use by employees is allowed at the discretion\n
+      \         of the cost center manager.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">b.</td>\n
+      \       <td colspan=\"2\">Examples of responsible use of technology\n          include
+      but are not limited to the following:</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\"
+      align=\"right\" valign=\"top\">(1)</td>\n        <td>Observing\n          policies
+      governing the privacy of others, including\n          restrictions placed upon
+      accessible data (secured\n          or otherwise) stored locally or transmitted
+      across\n          network systems;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\"
+      align=\"right\" valign=\"top\">(2)</td>\n        <td>Using\n          resources
+      efficiently, and accepting limitations\n          or restrictions on computing
+      resources\x97such\n          as storage space, time limits, or amount of resources\n
+      \         consumed\x97when asked to do so;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\"
+      align=\"right\" valign=\"top\">(3)</td>\n        <td>Backing\n          up files
+      and other data regularly;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\"
+      align=\"right\" valign=\"top\">(4)</td>\n        <td>Preventing\n          unauthorized
+      network access to or from their\n          computers or computer accounts;</td>\n
+      \     </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(5)</td>\n
+      \       <td>Protecting\n          personal passwords and respecting security
+      restrictions\n          on all systems;</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\"
+      align=\"right\" valign=\"top\">(6)</td>\n        <td>Respecting\n          the
+      rights of others to be free from harassment\n          or intimidation, to the
+      same extent that this\n          right is recognized otherwise on campus;</td>\n
+      \     </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(7)</td>\n
+      \       <td>Honoring\n          copyright and other intellectual-property rights;</td>\n
+      \     </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(8)</td>\n
+      \       <td>Taking\n          reasonable precautions to avoid introducing computer\n
+      \         contaminants, such as viruses, trojans and worms\n          into university
+      computer systems.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\" valign=\"top\">(9)</td>\n
+      \       <td><p>Honoring academic freedom for professional presentations in public
+      forums and correspondence. </p></td>\n      </tr>\n      <tr>\n        <td rowspan=\"2\">&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td class=\"textbold\"
+      align=\"right\" valign=\"top\">(10)</td>\n        <td>Honoring scholarly postings
+      and articles for publishing in social computing environments, including but
+      not limited to blog and wiki tichnology; </td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td valign=\"top\"><strong>c.</strong></td>\n        <td colspan=\"2\">Individuals
+      who are not members of the university community may be allowed or invited to
+      present information for publication on an electronic site (e.g. faculty blogs,
+      wikis, or other research projects) hosted by the university provided that all
+      laws, including copyright laws, are satisfied and the faculty member overseeing
+      the presentation reasonably believes this information also satisfies academic
+      conventions for scholarly research. Those items not meeting these criteria either
+      may not be published on that electronic site or may be removed from public display
+      by that faculty member. Notice of these criteria should also be diplayed to
+      anyone submitting materials to that electronic site.</td>\n      </tr>\n      <tr>\n
+      \       <td colspan=\"5\"><a name=\"tech_policy\"></a><span class=\"lg_textbold\">II.\n
+      \         Information Policy</span></td>\n      </tr>\n      <tr>\n        <td
+      width=\"2%\">&nbsp;</td>\n        <td colspan=\"4\" class=\"textbold\"><a name=\"privacy\"></a>A.\n
+      \         Privacy Policy </td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td class=\"textbold\" align=\"right\" valign=\"top\" width=\"4%\">1.</td>\n
+      \       <td colspan=\"3\">St Edward\x92s University complies\n          with
+      all federal and state regulations regarding\n          privacy.&nbsp; SEU will
+      not release non-directory\n          personal data or information to investigators,\n
+      \         attorneys, or agencies unless directed to do\n          so by a valid
+      court order.&nbsp; St. Edward's\n          University respects the privacy of
+      users\x92 electronic\n          files and communications residing on the university\x92s\n
+      \         computer system.&nbsp; The university takes precautions\n          to
+      ensure privacy of personal data and information.\n          Personal data will
+      be transferred and stored\n          in a secure manner according to industry
+      practices. </td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td
+      align=\"right\" valign=\"top\"><span class=\"textbold\">2.</span></td>\n        <td
+      colspan=\"3\">Refer to the Roles and Responsibilities\n          section for
+      detail. Individual users of the computer\n          system should be aware of
+      the inherent limitations\n          of shared network resources.&nbsp; No computer\n
+      \         security system can absolutely prevent unauthorized\n          persons
+      from accessing stored information, and\n          the university can not and
+      does not guarantee\n          the privacy or confidentiality of stored information\n
+      \         or electronic communications.&nbsp; </td>\n      </tr>\n      <tr>\n
+      \       <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\">3.</td>\n
+      \       <td colspan=\"3\">Routine Collection of Electronically\n          Recorded
+      Information</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n
+      \       <td class=\"textbold\" align=\"right\" valign=\"top\">a.</td>\n        <td
+      colspan=\"2\" valign=\"top\">Authorized\n          Information Technology personnel
+      may actively\n          scan any computer local to the SEU campus(es)\n          for
+      the purpose of detecting security vulnerabilities\n          on workstations/servers.&nbsp;
+      This is in order\n          to protect Information Technology resources from\n
+      \         deliberate or accidental abuse.&nbsp; No other\n          department/user
+      has authorization for this type\n          of activity. The university reserves
+      the right\n          to monitor and access a user\x92s communications,\n          files,
+      and stored information under the following\n          circumstances:</td>\n
+      \     </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n
+      \       <td>&nbsp;</td>\n        <td align=\"right\" valign=\"top\"><span class=\"textbold\">(1)</span></td>\n
+      \       <td>When\n          necessary to protect the integrity, security,\n
+      \         and proper functioning of the university\x92s\n          computing
+      system or to protect the university\n          from liability.</td>\n      </tr>\n
+      \     <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n
+      \       <td align=\"right\" valign=\"top\"><span class=\"textbold\">(2)</span></td>\n
+      \       <td>When\n          required by federal, state, or local law or university\n
+      \         policies or regulations as reflected in this\n          policy, Faculty
+      Handbook, Student Handbook, and\n          Employee Handbook.</td>\n      </tr>\n
+      \     <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n
+      \       <td align=\"right\" valign=\"top\"><span class=\"textbold\">(3)</span></td>\n
+      \       <td>When\n          necessary to ensure that high standards of maintenance\n
+      \         are met. SEU does not monitor which web sites\n          users visit
+      nor look at what users put in written\n          communications such as emails,
+      news articles,\n          or chat rooms unless an abuse of such services\n          is
+      reported.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td>&nbsp;</td>\n
+      \       <td width=\"3%\">&nbsp;</td>\n        <td class=\"textbold\" align=\"right\"
+      valign=\"top\" width=\"5%\">(4)</td>\n        <td width=\"86%\">When\n          necessary
+      to tune web server performance and\n          debug problems.&nbsp; Web server
+      logs are primarily\n          used by system administrators and are deleted\n
+      \         periodically.&nbsp; However, they may be included\n          on tape
+      backups of the system. These logs typically\n          contain internet address
+      of computer being used,\n          web pages requested, browser used, date and
+      time,\n          and for some applications, user-identifiable\n          information.&nbsp;</td>\n
+      \     </tr>\n      <tr>\n        <td>&nbsp;</td>\n        <td align=\"right\"><span
+      class=\"textbold\">4.</span></td>\n        <td colspan=\"3\" class=\"textbold\">Use/Release\n
+      \         of Electronically Recorded Information</td>\n      </tr>\n      <tr>\n
+      \       <td>&nbsp;</td>\n        <td align=\"right\">&nbsp;</td>\n        <td
+      class=\"textbold\" align=\"right\" valign=\"top\">a.</td>\n        <td colspan=\"2\">St.
+      Edward\x92s University does\n          not attempt to identify individuals or
+      their\n          usage habits. Administration does watch for illegal\n          attempts
+      to upload or alter information, to create\n          conditions that would cause
+      a denial of service\n          or other damage, or to launch attacks on other\n
+      \         sites. St. Edward\x92s reserves the right\n          to use web server
+      logs, account records, and\n          other system information to identify the
+      person(s)\n          responsible. Any monitoring or access to a user\x92s\n
+      \         files or communications will be no more extensive\n          than
+      is necessary to accomplish the purpose for\n          which it is authorized.
+      Affected users will be\n          notified of such monitoring or access to the\n
+      \         extent allowed by law or university policy, provided\n          that
+      it will not compromise the university\x92s\n          investigation or the investigation
+      of any law\n          enforcement organization.</td>\n      </tr>\n      <tr>\n
+      \       <td>&nbsp;</td>\n        <td align=\"right\">&nbsp;</td>\n        <td
+      class=\"textbold\" align=\"right\" valign=\"top\">b.</td>\n        <td colspan=\"2\">Release
+      of electronically recorded\n          information \n          \n          \n
+      \         to investigate violations of the Technology and Information Policy
+      and other university policies  must be authorized by the appropriate\n          Vice
+      President, with the concurrence of the Vice-President\n          for Information
+      Technology.</td>\n      </tr>\n      <tr>\n        <td class=\"lg_textbold\">&nbsp;</td>\n
+      \       <td colspan=\"4\" class=\"textbold\"><a name=\"copyright\"></a>B.\n
+      \         Copyright Policy </td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td class=\"textbold\" align=\"right\" valign=\"top\">1.</td>\n        <td
+      colspan=\"3\">The owner of a university computing\n          account or the
+      designated user of a university-owned\n          microcomputer is responsible
+      and liable for respecting\n          all copyright and contractual agreements
+      concerning\n          use and reproduction of software or documentation.\n          Instructional
+      Technology is the university department\n          responsible for maintaining
+      licensing records;\n          consequently, the university recommends that\n
+      \         all software installed on university-owned microcomputers\n          be
+      purchased through Instructional Technology.\n          In the event a user installs,
+      on a university-owned\n          microcomputer, software not purchased through\n
+      \         Instructional Technology, that user must forward\n          proof
+      of licensing documentation to Instructional\n          Technology.</td>\n      </tr>\n
+      \     <tr>\n        <td>&nbsp;</td>\n        <td class=\"textbold\" align=\"right\"
+      valign=\"top\">2.</td>\n        <td colspan=\"3\">Use of copyrighted materials,
+      regardless\n          of medium, is subject to all applicable fair\n          use
+      and copyright regulations.</td>\n      </tr>\n      <tr>\n        <td>&nbsp;</td>\n
+      \       <td class=\"textbold\" align=\"right\" valign=\"top\">3.</td>\n        <td
+      colspan=\"3\">Violations of licensing agreements\n          or copyright law
+      will result in removal of copyrighted\n          material and could result in
+      suspension of the\n          user's university computing account.</td>\n      </tr>\n
+      \   </tbody>\n  </table>\n</div>\n</p>\n<p> Click \"I Agree to Network Terms\"
+      below to continue. </p>\n<!-- End modification of warning statement -->\n<hr>\n<br>\n<form
+      name=\"weblogin\" action=\"https://rbt8400-2.stedwards.edu/aaa/guest.html?wbaredirect=http://api.stackoverflow.com/1.1/users/60336?key=ZJZ_DNRrgk6IQYQ0h_Duyg\"
+      method=\"post\">\n  <input value=\"wba_login\" name=\"fname\" type=\"hidden\">\n
+      \ <table border=\"0\" cellpadding=\"3\">\n    <tbody>\n      <tr>\n        <td><input
+      maxlength=\"32\" size=\"15\" name=\"username\" value=\"guest\" type=\"hidden\"></td>\n
+      \     </tr>\n      <tr>\n        <td><input maxlength=\"32\" size=\"15\" name=\"key\"
+      value=\"guest\" type=\"hidden\"></td>\n      </tr>\n      <tr>\n        <td
+      colspan=\"2\" align=\"right\"><input onclick=\"this.value = 'Submitted'\" value=\"
+      I Agree to Network Terms \" type=\"submit\"></td>\n      </tr>\n    </tbody>\n
+      \ </table>\n</form>\n</body>\n</html>"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.stackoverflow.com:80/1.1/users/60336?key=ZJZ_DNRrgk6IQYQ0h_Duyg
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      x-ratelimit-max: 
-      - "10000"
-      x-aspnet-version: 
-      - 4.0.30319
-      content-type: 
-      - application/json; charset=utf-8
-      date: 
-      - Sat, 01 Oct 2011 14:19:04 GMT
-      content-length: 
-      - "615"
-      content-encoding: 
-      - gzip
-      x-aspnetmvc-version: 
-      - "3.0"
-      x-ratelimit-current: 
-      - "9967"
-      cache-control: 
+    headers:
+      cache-control:
       - private
-    body: !binary |
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-max:
+      - '10000'
+      x-ratelimit-current:
+      - '9991'
+      x-aspnet-version:
+      - 4.0.30319
+      date:
+      - Sat, 01 Oct 2011 20:32:23 GMT
+      content-length:
+      - '615'
+    body: !binary |-
       H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
       kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
       AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/S3RH/ucou8vCvpvgB
@@ -295,38 +555,37 @@
       tdlF/A180W08yWYXAx3IVz3oxSIvi6XlmLAH/bL70iJfgij5LPqW/bb72rRa
       4Ls4eubL7ktOlqKveaLmXuShCstAOVitQF9dVCVYxbERfdYU5WVedz+d1NWS
       dc2e+fCXyC/84/u/cfJLkv8nAAD//63engO0BAAA
-
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.stackoverflow.com:80/1.1/users/60336/tags?key=ZJZ_DNRrgk6IQYQ0h_Duyg
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      x-ratelimit-max: 
-      - "10000"
-      x-aspnet-version: 
-      - 4.0.30319
-      content-type: 
-      - application/json; charset=utf-8
-      date: 
-      - Sat, 01 Oct 2011 14:19:05 GMT
-      content-length: 
-      - "402"
-      content-encoding: 
-      - gzip
-      x-aspnetmvc-version: 
-      - "3.0"
-      x-ratelimit-current: 
-      - "9965"
-      cache-control: 
+    headers:
+      cache-control:
       - private
-    body: !binary |
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-max:
+      - '10000'
+      x-ratelimit-current:
+      - '9993'
+      x-aspnet-version:
+      - 4.0.30319
+      date:
+      - Sat, 01 Oct 2011 20:32:24 GMT
+      content-length:
+      - '402'
+    body: !binary |-
       H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
       kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
       AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/S3Ycj/nuVXeT40/3V
@@ -336,74 +595,72 @@
       lm1dlc0Pv9/FIq+nRfZDn9tpNctXZf7uh91vmV3n9Q+701nWZpNiOSuWFz/s
       rld1tcrrtsh/6LzVtNflD7/Xn/5F67y+/mH3mi1ndfXDV1arebXML7LVD7vf
       RTUpynz7Kp/8sHvGgK9Ja/1sdYwf3/+Nk1+S/D8BAAD//7ZxiZkaCQAA
-
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.stackoverflow.com:80/1.1/users/60336/questions?key=ZJZ_DNRrgk6IQYQ0h_Duyg
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      x-ratelimit-max: 
-      - "10000"
-      x-aspnet-version: 
-      - 4.0.30319
-      content-type: 
-      - application/json; charset=utf-8
-      date: 
-      - Sat, 01 Oct 2011 14:19:06 GMT
-      content-length: 
-      - "174"
-      content-encoding: 
-      - gzip
-      x-aspnetmvc-version: 
-      - "3.0"
-      x-ratelimit-current: 
-      - "9966"
-      cache-control: 
+    headers:
+      cache-control:
       - private
-    body: !binary |
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-max:
+      - '10000'
+      x-ratelimit-current:
+      - '9995'
+      x-aspnet-version:
+      - 4.0.30319
+      date:
+      - Sat, 01 Oct 2011 20:32:24 GMT
+      content-length:
+      - '174'
+    body: !binary |-
       H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
       kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
       AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/SnRH/ucoucvpr1/3V
       FD/AJ/e0wS9a501bVMuGPvve93/j5Jck/08AAAD//8zP1wpIAAAA
-
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://api.stackoverflow.com:80/1.1/users/60336/answers?key=ZJZ_DNRrgk6IQYQ0h_Duyg
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      x-ratelimit-max: 
-      - "10000"
-      x-aspnet-version: 
-      - 4.0.30319
-      content-type: 
-      - application/json; charset=utf-8
-      date: 
-      - Sat, 01 Oct 2011 14:19:06 GMT
-      content-length: 
-      - "1077"
-      content-encoding: 
-      - gzip
-      x-aspnetmvc-version: 
-      - "3.0"
-      x-ratelimit-current: 
-      - "9958"
-      cache-control: 
+    headers:
+      cache-control:
       - private
-    body: !binary |
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-max:
+      - '10000'
+      x-ratelimit-current:
+      - '9993'
+      x-aspnet-version:
+      - 4.0.30319
+      date:
+      - Sat, 01 Oct 2011 20:32:24 GMT
+      content-length:
+      - '1078'
+    body: !binary |-
       H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
       kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
       AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/SgxH/ucoucvpr1/3V
@@ -426,7 +683,6 @@
       O09XdbXK6/Z6nH5eVTP6EwOb5r/HLRnw3u69b4gBAek2DLj7wPcpf14w4N79
       hzsHrp9hBuw27DKgx5u3Z8C9TyNazvvo9gz47eqKrGp6lr5d0m9X87ydk8Zr
       K3bnMolAUvLuEHuQBc69eKXNFzQp7e35kvIm3xBfEqRb8eWn+56B+XnClw8e
-      7B24Nhv4Mmz4jSRq9j/d8b76oEwNGHOaIdCAIX7dZtO3L7NlTrFGUZYpcSOp
-      xKykdM15XS0obG5b+kF821Yry5D48f3fOPklyf8TAAD//8uU+6uFFAAA
-
-    http_version: "1.1"
+      7B24Nhv4Mmz4jSRq9inu7jPm18rUgDGnGQINGOLXbTZ9+zJb5hRrFGWZEjeS
+      SsxKStec19WCwua2pR/Et221sgyJH9//jZNfkvw/AQAA//+3xKqKhRQAAA==
+    http_version: '1.1'
