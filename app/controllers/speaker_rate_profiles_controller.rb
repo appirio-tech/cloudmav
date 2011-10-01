@@ -7,11 +7,12 @@ class SpeakerRateProfilesController < LoggedInController
   
   def create
     authorize! :sync_profile, @profile
+    
     @speaker_rate_profile = SpeakerRateProfile.new(params[:speaker_rate_profile])
     @speaker_rate_profile.profile = @profile
     @speaker_rate_profile.sync!
         
-    redirect_to profile_speaking_path(@profile)
+    redirect_to edit_profile_path(@profile)
   end
   
   def edit
@@ -21,13 +22,16 @@ class SpeakerRateProfilesController < LoggedInController
 
   def update
     authorize! :sync_profile, @profile
+    @speaker_rate_profile = @profile.speaker_rate_profile
     
-    if @profile.speaker_rate_profile.update_attributes(params[:speaker_rate_profile])
-      @profile.speaker_rate_profile.resync!
-      redirect_to profile_speaking_path(@profile)
+    if @speaker_rate_profile.speaker_rate_id == params[:speaker_rate_profile][:speaker_rate_id]
+      @speaker_rate_profile.sync!
     else
-      render :edit
+      if @profile.speaker_rate_profile.update_attributes(params[:speaker_rate_profile])
+        @profile.speaker_rate_profile.resync!
+      end
     end
+    redirect_to edit_profile_path(@profile)
   end
 
   def destroy

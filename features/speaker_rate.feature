@@ -16,6 +16,7 @@ Feature: SpeakerRate Profile
     And my talks should have their SpeakerRate info
 		And I should be awarded the "I need validation" badge
 		And I should have speaker points for SpeakerRate
+    And I should be on my edit profile page		
 		
   Scenario: Sync again
   
@@ -23,29 +24,29 @@ Feature: SpeakerRate Profile
     When I sync my SpeakerRate account
     Then I should not have duplicate talks from SpeakerRate
   
-  Scenario: Don't see SpeakerRate on users without SpeakerRate
-
-    Given there is another user
-    When I view their speaker profile
-    Then I should not see their SpeakerRate profile
-
-  Scenario: See SpeakerRate on users with SpeakerRate
-
-    Given there is another user
-    And the other user has a SpeakerRate profile
-    When I view their speaker profile
-    Then I should see their SpeakerRate profile
+  # Scenario: Don't see SpeakerRate on users without SpeakerRate
+  # 
+  #   Given there is another user
+  #   When I view their speaker profile
+  #   Then I should not see their SpeakerRate profile
+  # 
+  # Scenario: See SpeakerRate on users with SpeakerRate
+  # 
+  #   Given there is another user
+  #   And the other user has a SpeakerRate profile
+  #   When I view their speaker profile
+  #   Then I should see their SpeakerRate profile
 
   Scenario: Edit SpeakerRate
-
+  
     Given I have a SpeakerRate profile
     When I edit my SpeakerRate id
     Then I should have a SpeakerRate profile
     And my talks should not have their SpeakerRate info
     And I should have my new talks
-
+  
   Scenario: Delete SpeakerRate
-
+  
     Given I have a SpeakerRate profile
     When I delete my SpeakerRate profile
     Then I should not have a SpeakerRate profile

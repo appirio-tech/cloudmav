@@ -1,8 +1,10 @@
 When /^I sync my SpeakerRate account$/ do
   VCR.use_cassette('speaker_rate', :record => :new_episodes) do
-    visit new_profile_speaker_rate_profile_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "speaker_rate_profile_speaker_rate_id", :with => '10082'
-    click_button "Save"
+    within("#sync_speaker_rate") do
+      click_button "Sync"
+    end
   end
 end
 
@@ -35,9 +37,11 @@ end
 
 Given /^I synced my SpeakerRate account$/ do
   VCR.use_cassette('speaker_rate', :record => :new_episodes) do
-    visit new_profile_speaker_rate_profile_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "speaker_rate_profile_speaker_rate_id", :with => '10082'
-    click_button "Save"
+    within("#sync_speaker_rate") do
+      click_button "Sync"
+    end
   end
 end
 
@@ -73,10 +77,10 @@ When /^I edit my SpeakerRate id$/ do
   VCR.use_cassette("edit speakerrate", :record => :new_episodes) do
     profile = Profile.find(@profile.id)
     @old_talks = profile.talks.to_a
-    visit profile_speaking_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "speaker_rate_profile_speaker_rate_id", :with => "3274"
     within "#sync_speaker_rate" do
-      click_button "Save"
+      click_button "Sync"
     end
   end
 end
@@ -92,7 +96,7 @@ Then /^my talks should not have their SpeakerRate info$/ do
 end
 
 When /^I delete my SpeakerRate profile$/ do
-  visit profile_speaking_path(@profile)
+  visit edit_profile_path(@profile)
   profile = Profile.find(@profile.id)
   @old_talks = profile.talks.to_a
   click_link "delete_speaker_rate"

@@ -1,6 +1,6 @@
 .syncable_logo= link_to image_tag("syncable/speaker_rate_logo.png"), "http://www.speakerrate.com"
 - @speaker_rate_profile = @profile.speaker_rate_profile || SpeakerRateProfile.new
-.edit_form
+.edit_form#sync_speaker_rate
   = form_for [@profile, @speaker_rate_profile] do |f|
     = f.text_field :speaker_rate_id
     = big_positive_loop_button_tag "Sync"

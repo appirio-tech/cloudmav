@@ -27,7 +27,7 @@ class SyncSpeakerRateProfileJob
       talk.speaker_rate_url = "speakerrate.com/talks/#{t["id"]}"
       talk.save
     end
-    
+        
     profile.award_badge("I need validation", :description => "For having a SpeakerRate account")
     profile.save
     
