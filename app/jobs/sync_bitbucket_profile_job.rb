@@ -4,7 +4,6 @@ class SyncBitbucketProfileJob
   def self.perform(id)
     bitbucket_profile = BitbucketProfile.find(id)
     profile = bitbucket_profile.profile
-    
     user_info = BitbucketApi.get_user(bitbucket_profile.username)
 
     repositories = user_info["repositories"]

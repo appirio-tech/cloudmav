@@ -41,21 +41,3 @@
 
   .clear
 
-
-#profile
-  = render :partial => "profiles/profile_side_bar"
-  
-  .grid_13
-    %h1 #{@profile.display_name} -> Code
-
-    - if can?(:sync_profile, @profile)
-      %ul#profile_actions
-        %li= big_edit_button_link_to "Edit your Coder Profile", edit_profile_code_path(@profile)
-                
-    %ul#important_stats
-      %li.points #{@profile.score(:coder_points)} coder points
-    
-    
-    
-  .clear
-

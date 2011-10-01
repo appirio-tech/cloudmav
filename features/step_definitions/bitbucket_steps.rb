@@ -1,8 +1,10 @@
 When /^I sync my Bitbucket account$/ do
   VCR.use_cassette("bitbucket", :record => :new_episodes) do
-    visit new_profile_bitbucket_profile_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "bitbucket_profile_username", :with => 'rookieone'
-    click_button "Save"
+    within("#sync_bitbucket") do
+      click_button "Sync"
+    end
   end
 end
 
@@ -42,10 +44,10 @@ When /^I edit my Bitbucket id$/ do
   VCR.use_cassette("edit bitbucket", :record => :new_episodes) do
     profile = Profile.find(@profile.id)
     @old_repositories = profile.bitbucket_profile.repositories.to_a
-    visit profile_code_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "bitbucket_profile_username", :with => "claudiolassala"
     within("#sync_bitbucket") do
-      click_button "Save"
+      click_button "Sync"
     end
   end
 end
@@ -61,7 +63,7 @@ Then /^I should have my new Bitbucket repositories$/ do
 end
 
 When /^I delete my Bitbucket profile$/ do
-  visit profile_code_path(@profile)
+  visit edit_profile_path(@profile)
   profile = Profile.find(@profile.id)
   @old_repositories = profile.bitbucket_profile.repositories.to_a
   click_link "delete_bitbucket"

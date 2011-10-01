@@ -13,6 +13,7 @@ Feature: BitbucketProfile
     And my Bitbucket repos should have their information
     And I should be awarded the "Bucketeer" badge
     And I should have 10 coder points
+    And I should be on my edit profile page
 
   Scenario: Don't see Bitbucket on users without Bitbucket
   
@@ -36,13 +37,13 @@ Feature: BitbucketProfile
     And my old Bitbucket repositories should be deleted
     And I should have my new Bitbucket repositories
   
-  Scenario: Delete Bitbucket
-  
-    Given I am logged in
-    And I have a Bitbucket profile
-    When I delete my Bitbucket profile
-    Then I should not have a Bitbucket profile
-    And I should not have the "Bucketeer" badge
-    And my old Bitbucket repositories should be deleted
-    And I should have 0 coder points
+  # Scenario: Delete Bitbucket
+  # 
+  #   Given I am logged in
+  #   And I have a Bitbucket profile
+  #   When I delete my Bitbucket profile
+  #   Then I should not have a Bitbucket profile
+  #   And I should not have the "Bucketeer" badge
+  #   And my old Bitbucket repositories should be deleted
+  #   And I should have 0 coder points
 

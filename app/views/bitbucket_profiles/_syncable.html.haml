@@ -1,6 +1,6 @@
 .syncable_logo= link_to image_tag("syncable/bitbucket_logo.png"), "http://www.bitbucket.org"
 - @bitbucket_profile = @profile.bitbucket_profile || BitbucketProfile.new
-.edit_form
+.edit_form#sync_bitbucket
   = form_for [@profile, @bitbucket_profile] do |f|
     = f.text_field :username
     = big_positive_loop_button_tag "Sync"
