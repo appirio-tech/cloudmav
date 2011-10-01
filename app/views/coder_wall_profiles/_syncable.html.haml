@@ -1,6 +1,6 @@
 .syncable_logo= link_to image_tag("syncable/coder_wall_logo.png"), "http://www.coderwall.com"
 - @coder_wall_profile = @profile.coder_wall_profile || CoderWallProfile.new
-.edit_form
+.edit_form#sync_coder_wall
   = form_for [@profile, @coder_wall_profile] do |f|
     = f.text_field :username
     = big_positive_loop_button_tag "Sync"

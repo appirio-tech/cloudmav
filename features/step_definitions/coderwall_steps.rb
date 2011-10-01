@@ -1,8 +1,10 @@
 When /^I sync my CoderWall account$/ do
   VCR.use_cassette("coder_wall", :record => :new_episodes) do
-    visit new_profile_coder_wall_profile_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "coder_wall_profile_username", :with => 'rookieone'
-    click_button "Save"
+    within("#sync_coder_wall") do
+      click_button "Sync"
+    end
   end
 end
 
@@ -55,10 +57,10 @@ When /^I edit my CoderWall username$/ do
   VCR.use_cassette("edit coderwall", :record => :new_episodes) do
     profile = Profile.find(@profile.id)
     @old_badges = profile.coder_wall_profile.badges.to_a
-    visit profile_code_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "coder_wall_profile_username", :with => "subdigital"
     within("#sync_coder_wall") do
-      click_button "Save"
+      click_button "Sync"
     end
   end
 end
@@ -74,7 +76,7 @@ Then /^I should have my new CoderWall badges$/ do
 end
 
 When /^I delete my CoderWall profile$/ do
-  visit profile_code_path(@profile)
+  visit edit_profile_path(@profile)
   profile = Profile.find(@profile.id)
   click_link "delete_coder_wall"
 end
