@@ -7,6 +7,10 @@
 
   #profile_content
     .grid_13
+      %section
+        %ul#followings
+          = render :partial => "followings/following", :collection => @friends, :as => :profile
+        
       - if @twitter_profile
         %section#twitter
           = link_to "Go to my Twitter page", @twitter_profile.url
