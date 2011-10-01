@@ -17,6 +17,7 @@ Feature: SlideShare Profile
     And I should have speaker points
     And I should have a slide count on my SlideShare profile
     And my SlideShare profile should have the url
+    And I should be on my edit profile page    
     
   Scenario: 
     When I sync my SlideShare account with username "arisbartee"
@@ -29,33 +30,33 @@ Feature: SlideShare Profile
     Then I should have a SlideShare profile
     And I should import my talks from SlideShare
   
-  Scenario: Syncing again
-  
-    Given I have synced my SlideShare account
-    When I sync my SlideShare account
-    Then I should not have duplicate talks from SlideShare
-  
-  Scenario: Show Talk
-  
-    Given there is another user
-    And the other user has a SlideShare profile
-    When I look at their talk from SlideShare
-    Then I should be able to download the slides
-    And I should see a slideshow
-  
-  Scenario: Don't see SlideShare on users without SlideShare
-  
-    Given there is another user
-    When I view their speaker profile
-    Then I should not see their SlideShare profile
-  
-  Scenario: See SlideShare on users with SlideShare
-  
-    Given there is another user
-    And the other user has a SlideShare profile
-    When I view their speaker profile
-    Then I should see their SlideShare profile
-  
+  # Scenario: Syncing again
+  # 
+  #   Given I have synced my SlideShare account
+  #   When I sync my SlideShare account
+  #   Then I should not have duplicate talks from SlideShare
+  # 
+  # Scenario: Show Talk
+  # 
+  #   Given there is another user
+  #   And the other user has a SlideShare profile
+  #   When I look at their talk from SlideShare
+  #   Then I should be able to download the slides
+  #   And I should see a slideshow
+  # 
+  # Scenario: Don't see SlideShare on users without SlideShare
+  # 
+  #   Given there is another user
+  #   When I view their speaker profile
+  #   Then I should not see their SlideShare profile
+  # 
+  # Scenario: See SlideShare on users with SlideShare
+  # 
+  #   Given there is another user
+  #   And the other user has a SlideShare profile
+  #   When I view their speaker profile
+  #   Then I should see their SlideShare profile
+  # 
   Scenario: Edit SlideShare
   
     Given I have a SlideShare profile
@@ -63,7 +64,8 @@ Feature: SlideShare Profile
     Then I should have a SlideShare profile
     And my old talks should be not have their SlideShare info
     And I should have my new talks
-  
+    And I should be on my edit profile page
+      
   Scenario: Delete SlideShare
   
     Given I have a SlideShare profile
@@ -71,3 +73,4 @@ Feature: SlideShare Profile
     Then I should not have a SlideShare profile
     And my old talks should be not have their SlideShare info
     And I should not have the "Sliding along" badge
+    And I should be on my edit profile page

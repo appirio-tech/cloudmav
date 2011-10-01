@@ -1,8 +1,10 @@
 When /^I sync my SlideShare account$/ do
   VCR.use_cassette("slide_share", :record => :new_episodes) do
-    visit new_profile_slide_share_profile_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
-    click_button "Save"
+    within("#sync_slide_share") do
+      click_button "Sync"
+    end
   end
 end
 
@@ -38,9 +40,11 @@ end
 
 Given /^I have synced my SlideShare account$/ do
   VCR.use_cassette("slide_share", :record => :new_episodes) do
-    visit new_profile_slide_share_profile_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
-    click_button "Save"
+    within("#sync_slide_share") do
+      click_button "Sync"
+    end
   end
 end
 
@@ -91,10 +95,10 @@ When /^I edit my SlideShare username$/ do
   VCR.use_cassette("edit slideshare", :record => :new_episodes) do
     profile = Profile.find(@profile.id)
     @old_talks = profile.talks.to_a
-    visit profile_speaking_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => "themoleskin"
     within("#sync_slide_share") do
-      click_button "Save"
+      click_button "Sync"
     end
   end
 end
@@ -107,7 +111,7 @@ Then /^my old talks should be not have their SlideShare info$/ do
 end
 
 When /^I delete my SlideShare profile$/ do
-  visit profile_speaking_path(@profile)
+  visit edit_profile_path(@profile)
   profile = Profile.find(@profile.id)
   @old_talks = profile.talks.to_a
   click_link "delete_slide_share"
