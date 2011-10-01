@@ -1,0 +1,7 @@
+.syncable_logo= link_to image_tag("syncable/linkedin_logo.png"), "http://www.linkedin.com"
+.edit_form#sync_slide_share
+  = big_positive_loop_button_link_to "Sync with LinkedIn", new_profile_linkedin_profile_path(@profile)
+- if @profile.linkedin_profile
+  .delete_button
+    = big_negative_remove_button_link_to "delete", [@profile, @profile.linkedin_profile], :id=> :delete_linkedin, :confirm => 'Are you sure?', :method => :delete
+.clear
