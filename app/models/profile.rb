@@ -22,7 +22,8 @@ class Profile
   field :email, :type => String
   field :username, :type => String
   field :is_moderator, :type => Boolean, :default => false
-  field :is_admin, :type => Boolean, :default => false  
+  field :is_admin, :type => Boolean, :default => false
+  field :last_synced_date, :type => DateTime
   
   index :username, :unique => true
   
@@ -85,6 +86,12 @@ class Profile
     speaker_rate_profile.sync! unless speaker_rate_profile.nil?
     slide_share_profile.sync! unless slide_share_profile.nil?
     twitter_profile.sync! unless twitter_profile.nil?
+  end
+  
+  def display_last_synced_date
+    return DateTime.now.strftime("%b %e / %l:%M %p ") if self.last_synced_date.nil?
+    
+    last_synced_date.strftime("%b %e / %l:%M %p ")
   end
   
   class << self

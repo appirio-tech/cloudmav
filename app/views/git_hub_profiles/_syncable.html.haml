@@ -1,0 +1,11 @@
+.syncable_logo= link_to image_tag("syncable/git_hub_logo.png"), "http://www.github.com"
+- @git_hub_profile = @profile.git_hub_profile || GitHubProfile.new
+.edit_form
+  = form_for [@profile, @git_hub_profile] do |f|
+    = f.text_field :username
+    = big_positive_loop_button_tag "Sync"
+
+- if @profile.git_hub_profile
+  .delete_button
+    = big_negative_remove_button_link_to "delete", [@profile, @git_hub_profile], :id=> :delete_git_hub, :confirm => 'Are you sure?', :method => :delete
+.clear

@@ -9,6 +9,10 @@ module CodeMav
     end
     
     module InstanceMethods
+      
+      def display_last_sync_date
+        last_synced_date.strftime("%e %b %Y %H:%m:%S%p")
+      end
 
       def synced?
         !self.last_synced_date.nil?

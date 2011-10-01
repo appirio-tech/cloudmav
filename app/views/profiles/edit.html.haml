@@ -12,7 +12,11 @@
       = big_save_primary_button_submit_tag "Save"
   
   #syncables
-    %h2 Syncables
+    %h2 
+      Syncables
+      %span
+        last synced on #{@profile.display_last_synced_date} &nbsp;
+        = big_positive_loop_button_link_to "Sync my profile", "/"        
   
     %section
       %h3 Knowledge
@@ -20,9 +24,21 @@
         %li= render :partial => "stack_overflow_profiles/syncable"
         
     %section
+      %h3 Code
+      %ul
+        %li= render :partial => "git_hub_profiles/syncable"
+        %li= render :partial => "bitbucket_profiles/syncable"
+        %li= render :partial => "coder_wall_profiles/syncable"
+                    
+    %section
       %h3 Speaking
       %ul
         %li= render :partial => "speaker_rate_profiles/syncable"
         %li= render :partial => "slide_share_profiles/syncable"
-    
+
+    %section
+      %h3 Social
+      %ul
+        %li= render :partial => "twitter_profiles/syncable"
+               
 .clear
