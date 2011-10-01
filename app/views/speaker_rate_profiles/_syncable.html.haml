@@ -1,0 +1,12 @@
+.syncable_logo= link_to image_tag("syncable/speaker_rate_logo.png"), "http://www.speakerrate.com"
+- @speaker_rate_profile = @profile.speaker_rate_profile || SpeakerRateProfile.new
+.edit_form
+  = form_for [@profile, @speaker_rate_profile] do |f|
+    = f.text_field :speaker_rate_id
+    = big_positive_loop_button_tag "Sync"
+
+- if @profile.speaker_rate_profile
+  .delete_button
+    = big_negative_remove_button_link_to "delete", [@profile, @speaker_rate_profile], :id=> :delete_speaker_rate, :confirm => 'Are you sure?', :method => :delete
+    
+.clear

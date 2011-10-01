@@ -1,0 +1,41 @@
+
+
+#edit_profile {
+  h1 {
+    margin-bottom: ms(0);
+  }
+  
+  #syncables {
+    margin-top: ms(1);
+    h2 {
+      margin-bottom: ms(0);
+      border-bottom: 1px solid $dark_background;
+    }
+    section {      
+      margin-bottom: ms(0);
+      padding: ms(0);
+      background: $white;
+      h3 {
+        margin-bottom: ms(0);
+      }
+      ul {
+        li {
+          .syncable_logo {
+            float: left;
+            margin-right: ms(0);
+            width: 133px;
+          }         
+          .edit_form {
+            float: left;
+            margin-right: ms(-1);
+          } 
+          .delete_button {
+            float: left;
+            position: relative;
+            top: 2px;
+          }
+        }
+      }
+    }
+  }
+}
