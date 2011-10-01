@@ -15,6 +15,7 @@ Feature: GitHub
     And my GitHub profile should be tagged
 		And my coder profile should have my GitHub profile tags
     And my profile should have my GitHub profile tags
+    And I should be on my edit profile page
 
   Scenario: Don't see GitHub on users without GitHub
  
@@ -37,6 +38,7 @@ Feature: GitHub
     Then I should have a GitHub profile
     And my old GitHub repositories should be deleted
     And I should have my new GitHub repositories
+    And I should be on my edit profile page
  
  Scenario: Delete GitHub
  
@@ -47,3 +49,4 @@ Feature: GitHub
    And I should not have the "Git R Done" badge
    And my old GitHub repositories should be deleted
    And I should have 0 coder points
+   And I should be on my edit profile page

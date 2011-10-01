@@ -1,8 +1,10 @@
 When /^I sync my GitHub account$/ do
   VCR.use_cassette("github", :record => :new_episodes) do
-    visit new_profile_git_hub_profile_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "git_hub_profile_username", :with => 'rookieone'
-    click_button "Save"
+    within("#sync_git_hub") do
+      click_button "Sync"
+    end
   end
 end
 
@@ -37,7 +39,7 @@ Then /^my profile should have my GitHub profile tags$/ do
 end
 
 Then /^I should not see their GitHub profile$/ do
-  And %Q{I should not see "Go to my GitHub Profile"}
+  And %Q{I should not see "GitHub"}
 end
 
 Given /^the other user has a GitHub profile$/ do
@@ -48,7 +50,7 @@ Given /^the other user has a GitHub profile$/ do
 end
 
 Then /^I should see their GitHub profile$/ do
-  And %Q{I should see "Go to my GitHub Profile"}
+  And %Q{I should see "GitHub"}
 end
 
 Given /^I have a synced GitHub profile$/ do
@@ -63,10 +65,10 @@ When /^I edit my GitHub id$/ do
   VCR.use_cassette("edit github", :record => :new_episodes) do
     profile = Profile.find(@profile.id)
     @old_repositories = profile.git_hub_profile.repositories.to_a
-    visit profile_code_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "git_hub_profile_username", :with => "panesofglass"
     within("#sync_git_hub") do
-      click_button "Save"
+      click_button "Sync"
     end
   end
 end
@@ -82,7 +84,7 @@ Then /^I should have my new GitHub repositories$/ do
 end
 
 When /^I delete my GitHub profile$/ do
-  visit profile_code_path(@profile)
+  visit edit_profile_path(@profile)
   profile = Profile.find(@profile.id)
   @old_repositories = profile.git_hub_profile.repositories.to_a
   click_link "delete_git_hub"

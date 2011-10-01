@@ -1,6 +1,6 @@
 .syncable_logo= link_to image_tag("syncable/git_hub_logo.png"), "http://www.github.com"
 - @git_hub_profile = @profile.git_hub_profile || GitHubProfile.new
-.edit_form
+.edit_form#sync_git_hub
   = form_for [@profile, @git_hub_profile] do |f|
     = f.text_field :username
     = big_positive_loop_button_tag "Sync"

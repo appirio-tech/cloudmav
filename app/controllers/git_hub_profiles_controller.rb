@@ -11,7 +11,7 @@ class GitHubProfilesController < LoggedInController
     @git_hub_profile.profile = @profile
     @git_hub_profile.sync!
     
-    redirect_to profile_code_path(@profile)
+    redirect_to edit_profile_path(@profile)
   end
 
   def edit
@@ -24,7 +24,7 @@ class GitHubProfilesController < LoggedInController
     @git_hub_profile = GitHubProfile.find(params[:id])
     if @git_hub_profile.update_attributes(params[:git_hub_profile])
       @git_hub_profile.resync!
-      redirect_to profile_code_path(@profile)
+      redirect_to edit_profile_path(@profile)
     else
       render :edit
     end
@@ -37,7 +37,7 @@ class GitHubProfilesController < LoggedInController
 
     respond_to do |format|
       format.html {
-        redirect_to profile_code_path(@profile)
+        redirect_to edit_profile_path(@profile)
       }
       format.js 
     end
