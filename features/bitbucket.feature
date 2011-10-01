@@ -36,14 +36,15 @@ Feature: BitbucketProfile
     Then I should have a Bitbucket profile
     And my old Bitbucket repositories should be deleted
     And I should have my new Bitbucket repositories
+    And I should be on my edit profile page
+      
+  Scenario: Delete Bitbucket
   
-  # Scenario: Delete Bitbucket
-  # 
-  #   Given I am logged in
-  #   And I have a Bitbucket profile
-  #   When I delete my Bitbucket profile
-  #   Then I should not have a Bitbucket profile
-  #   And I should not have the "Bucketeer" badge
-  #   And my old Bitbucket repositories should be deleted
-  #   And I should have 0 coder points
-
+    Given I am logged in
+    And I have a Bitbucket profile
+    When I delete my Bitbucket profile
+    Then I should not have a Bitbucket profile
+    And I should not have the "Bucketeer" badge
+    And my old Bitbucket repositories should be deleted
+    And I should have 0 coder points
+    And I should be on my edit profile page
