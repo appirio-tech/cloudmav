@@ -16,7 +16,7 @@ Feature: StackOverflowProfile
     And my StackOverflow profile should be tagged
     And my profile should have my StackOverflow profile tags
     And I should have my top questions and top answers
-    And I should be on my profile knowledge page
+    And I should be on my edit profile page
     
   Scenario: Sync for 55833
   
@@ -43,12 +43,12 @@ Feature: StackOverflowProfile
     Then I should have a StackOverflow profile
     And I should have my new StackOverflow questions
     And I should have my new StackOverflow answers
-    And I should be on my profile knowledge page    
+    And I should be on my edit profile page
   
   Scenario: Delete StackOverflow
   
     Given I have a StackOverflow profile
     When I delete my StackOverflow profile
     Then I should not have a StackOverflow profile
-    And I should be on my profile knowledge page    
-
+    And I should be on my edit profile page    
+  
