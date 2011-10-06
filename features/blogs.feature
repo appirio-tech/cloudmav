@@ -39,4 +39,4 @@ Feature: Blogs
     And I should not have the "iBlog" badge
     And my old posts should be deleted
     And I should have 0 writing points
-		
+      

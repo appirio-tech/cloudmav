@@ -11,7 +11,7 @@ class Ability
     can :sync_profile, Profile do |profile|
       user.profile == profile
     end
-    can [:add_talk, :edit], Profile do |profile|
+    can [:add_talk, :add_blog, :edit], Profile do |profile|
       user.profile == profile
     end
     can [:follow], Profile do |profile|

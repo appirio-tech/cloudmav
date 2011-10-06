@@ -7,8 +7,21 @@
 
   #profile_content
     .grid_13
+      %section#blogs
+        %h2
+          Blog
+          - if can? :add_blog, @profile
+            %span= add_button_link_to "add a blog", new_profile_blog_path(@profile)
+        %ul
+          - @profile.blogs.each do |blog|
+            %li{:id => blog.id}
+              = link_to blog.title, [@profile, blog]
+              - if can? :add_blog, @profile
+                = negative_remove_button_link_to "delete", [@profile, blog], :confirm => 'Are you sure?', :method => :delete
+        
       %section#blog_posts
-        %h2 Blog Posts
+        %h2 
+          Blog Posts      
         %ul
           - @profile.posts.chronological_order.each do |post|    
             %li
