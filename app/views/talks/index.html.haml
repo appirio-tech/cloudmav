@@ -10,7 +10,7 @@
       %li
         .item_pic
           - unless talk.slide_share_thumbnail.nil?
-            = image_tag talk.slides_thumbnail
+            = image_tag talk.slide_share_thumbnail
           -else
             = image_tag "default_talk.png"
         .item_info
