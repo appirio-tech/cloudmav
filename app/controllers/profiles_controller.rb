@@ -32,11 +32,14 @@ class ProfilesController < ApplicationController
   
   protected
     def set_profile
-      username = params[:id] || params[:username]
-      @profile = Profile.by_username(username).first
-      unless @profile
-        flash[:error] = "Sorry but we couldn't find a profile for #{params[:username]}"
-        redirect_to root_path 
-      end
+        username = params[:id] || params[:username]
+      
+        @profile = Profile.by_username(username).first
+        unless @profile
+          flash[:error] = "Sorry but we couldn't find a profile for #{params[:username]}"
+          redirect_to root_path 
+        end
+      rescue BSON::InvalidStringEncoding
+        document_not_found
     end
 end
