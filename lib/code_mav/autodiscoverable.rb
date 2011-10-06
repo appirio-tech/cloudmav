@@ -9,7 +9,11 @@ module CodeMav
     end
     
     module InstanceMethods
-
+      def make_autodiscovered!
+        add_autodiscover_history_for("GitHub")
+        add_autodiscover_history_for("Bitbucket")
+      end
+      
       def autodiscovered?
         things_to_discover = ["GitHub", "Bitbucket"]
         result = self.autodiscover_histories.any_in(:name => things_to_discover).to_a

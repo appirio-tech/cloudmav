@@ -61,3 +61,7 @@ Then /^I should not be registered$/ do
   user = User.where(:email => @user.email).first
   user.should be_nil
 end
+
+Then /^I should be redirected to edit my profile$/ do
+  And %Q{I should see "Edit Profile"}
+end
