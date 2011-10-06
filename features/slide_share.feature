@@ -57,6 +57,7 @@ Feature: SlideShare Profile
   #   When I view their speaker profile
   #   Then I should see their SlideShare profile
   # 
+  
   Scenario: Edit SlideShare
   
     Given I have a SlideShare profile
