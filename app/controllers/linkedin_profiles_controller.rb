@@ -13,7 +13,9 @@ class LinkedinProfilesController < ApplicationController
 
   def new
     if @profile.linkedin_profile.nil?
-      @profile.linkedin_profile.create
+      @profile.linkedin_profile = LinkedinProfile.new
+      @profile.linkedin_profile.save
+      @profile.save
     end
     create_client
     request_token = @client.request_token(:oauth_callback => callback_profile_linkedin_profile_url(@profile, @profile.linkedin_profile))
