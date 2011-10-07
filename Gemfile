@@ -73,6 +73,9 @@ gem 'carrierwave-mongoid', "0.1.0", :require => 'carrierwave/mongoid'
 # Exceptions
 gem "airbrake"
 
+# Email
+gem "sendgrid"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
