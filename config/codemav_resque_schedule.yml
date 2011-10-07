@@ -1,0 +1,13 @@
+queue_profiles_for_syncing:
+  cron: "0 0 * * *"
+  class: SyncAllProfilesJob
+  queue: sync
+  args: 
+  description: "Adds all the profiles to the queue to be synced"
+  
+send_daily_admin_email:
+  cron: "0 0 * * *"
+  class: SendDailyEmailJob
+  queue: sync
+  args: 
+  description: "Send daily email"

@@ -49,6 +49,7 @@ gem "geokit"
 # Async Processing
 gem "resque", :require => 'resque/server'
 gem "resque-status"
+gem "resque-scheduler"
 
 # Game mechanics
 gem "badgeable"
