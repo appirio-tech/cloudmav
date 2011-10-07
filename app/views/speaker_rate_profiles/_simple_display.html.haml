@@ -1,0 +1,5 @@
+- if @profile.speaker_rate_profile
+  %li
+    .logo= image_tag "syncable/speaker_rate_logo.png"
+    %span= link_to @profile.speaker_rate_profile.speaker_rate_id, @profile.speaker_rate_profile.url, :target => "_blank"
+  .clear

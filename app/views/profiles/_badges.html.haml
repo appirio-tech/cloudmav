@@ -1,5 +1,5 @@
-#profile_badges
-  %h3 Badges
+%section#profile_badges
+  %h2 Badges
 
   - if @profile.badges.empty?
     No badges yet
@@ -8,6 +8,7 @@
       - @profile.badges.each do |b|
         %li.badge{:title => b.name}
           = image_tag "silver_badge.png"
+    .clear
 .clear
 
 :javascript

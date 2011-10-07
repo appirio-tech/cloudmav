@@ -6,9 +6,15 @@
   = render :partial => "profile_menu"
   #profile_content
     .grid_8
+      
+        
       Skill breakdown coming soon.
       &nbsp;
     .grid_5
+      = render :partial => "accounts"
+      
+    .clear
+    .grid_13
       = render :partial => "badges"
       = render :partial => "shared/tags", :locals => {:taggable => @profile}
     .clear
