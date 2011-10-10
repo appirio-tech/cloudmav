@@ -12,7 +12,7 @@ class CodesController < ApplicationController
     
     @bitbucket_profile = @profile.bitbucket_profile
     @bitbucket_repositories = []
-    if @bitbucket_repositories
+    if @bitbucket_profile
       @bitbucket_repositories = @bitbucket_profile.repositories.page(params[:page]).per(5)
     end
     
