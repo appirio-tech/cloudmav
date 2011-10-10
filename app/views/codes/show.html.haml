@@ -20,11 +20,24 @@
         %section#git_hub
           %h2 GitHub
           = link_to "Go to my GitHub Profile", @git_hub_profile.url, :target => "_blank"
-          %ul
-            - @git_hub_profile.repositories.each do |repo|
-              %li
-                %span= link_to repo.name, repo.url
-                %span= repo.total_score
+          %h3 Top 5 Repositories
+          %table
+            - @git_hub_repositories.each do |repo|
+              %tr
+                %td.repo_name= link_to repo.name, repo.url
+                %td.language= repo.language
+                %td
+                  .points
+                    .number= repo.forks
+                    .description forks
+                %td
+                  .points
+                    .number= repo.watchers
+                    .description watchers                    
+                %td
+                  .points
+                    .number= repo.total_score
+                    .description code
               
       - if @bitbucket_profile
         %section#git_hub

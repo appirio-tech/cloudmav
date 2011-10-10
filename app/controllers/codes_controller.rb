@@ -4,6 +4,7 @@ class CodesController < ApplicationController
   def show
     @tab = "code"
     @git_hub_profile = @profile.git_hub_profile
+    @git_hub_repositories = @git_hub_profile.repositories.order_by_score.page(params[:page]).per(5)
     @bitbucket_profile = @profile.bitbucket_profile
     @coder_wall_profile = @profile.coder_wall_profile
   end
