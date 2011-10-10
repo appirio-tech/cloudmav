@@ -17,14 +17,16 @@
                 = image_tag badge.badge, :alt => badge.name
               
       - if @git_hub_profile
-        %section#git_hub
+        %section#git_hub.code_details
           %h2 GitHub
           = link_to "Go to my GitHub Profile", @git_hub_profile.url, :target => "_blank"
-          %h3 Top 5 Repositories
+          %h3 Top Repositories
           %table
             - @git_hub_repositories.each do |repo|
               %tr
-                %td.repo_name= link_to repo.name, repo.url
+                %td
+                  .repo_name= link_to repo.name, repo.url
+                  .repo_description= repo.description
                 %td.language= repo.language
                 %td
                   .points
@@ -40,13 +42,20 @@
                     .description code
               
       - if @bitbucket_profile
-        %section#git_hub
+        %section#bitbucket.code_details
           %h2 Bitbucket
           = link_to "Go to my Bitbucket Profile", @bitbucket_profile.url, :target => "_blank"
-          %ul
-            - @bitbucket_profile.repositories.each do |repo|
-              %li
-                %span= link_to repo.name, repo.url
+          %h3 Top Repositories
+          %table
+            - @bitbucket_repositories.each do |repo|
+              %tr
+                %td
+                  .repo_name= link_to repo.name, repo.url
+                  .repo_description= repo.description
+                %td
+                  .points
+                    .number= repo.followers_count
+                    .description followers
       &nbsp;
     .grid_2
 
