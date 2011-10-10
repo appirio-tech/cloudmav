@@ -1,8 +1,12 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :current_profile
+  before_filter :unseen_badges
   
   rescue_from Mongoid::Errors::DocumentNotFound, :with => :document_not_found
+  rescue_from BSON::InvalidObjectId, :with => :document_not_found
+  rescue_from CanCan::AccessDenied, :with => :access_denied
+  rescue_from RSolr::RequestError, :with => :solr_error
   
   def current_profile
     return nil if current_user.nil?
@@ -32,5 +36,21 @@ class ApplicationController < ActionController::Base
   def set_profile
     username = params[:username] || params[:profile_id]
     @profile = Profile.by_username(username).first
+  end
+  
+  def access_denied
+    flash[:error] = "Not authorized to perform that action"
+    redirect_to root_path
+  end
+  
+  def solr_error
+    
+  end
+  
+  def unseen_badges
+    return unless current_user
+    unseen_badgings = current_profile.badgings.unseen.to_a
+    @unseen_badges = unseen_badgings.map(&:badge)
+    unseen_badgings.each {|b| b.mark_as_seen }
   end
 end
