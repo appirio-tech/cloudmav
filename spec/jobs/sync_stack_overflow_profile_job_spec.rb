@@ -10,14 +10,14 @@ describe "SyncStackOverflowProfileJob" do
       @so_profile.save
       @so_profile.stubs(:retag!)
       @profile.reload
-
+  
       VCR.use_cassette("stack_overflow_sync_event", :record => :all) do
         SyncStackOverflowProfileJob.perform(@so_profile.id)
       end
       @profile.reload
       @so_profile.reload
     end
-
+  
     it { @profile.score(:knowledge_points).should == 10 + (@so_profile.reputation / 100) }
     it { @so_profile.url.should == "http://www.stackoverflow.com/users/29407" }
     it { @so_profile.reputation.should_not be_nil }
@@ -25,7 +25,7 @@ describe "SyncStackOverflowProfileJob" do
     it { @so_profile.questions.count.should == 3 }
     it { @so_profile.answers.count.should == 3 }
   end
-
+  
   describe "sync 60336 again" do
     before(:each) do
       @profile = Factory.create(:user).profile
@@ -77,5 +77,25 @@ describe "SyncStackOverflowProfileJob" do
     it { @so_profile.questions.count.should > 0 }
     it { @so_profile.answers.count.should > 0 }
   end
+  
+  describe "sync 83667" do
+    before(:each) do
+      @profile = Factory.create(:user).profile
+      @so_profile = StackOverflowProfile.new(:stack_overflow_id => 83667)
+      @profile.stack_overflow_profile = @so_profile
+      @so_profile.save
+      @so_profile.stubs(:retag!)
+      @profile.reload
+  
+      VCR.use_cassette("stack_overflow_sync_83667", :record => :all) do
+        SyncStackOverflowProfileJob.perform(@so_profile.id)
+      end
+      @profile.reload
+      @so_profile.reload
+    end
+  
+    it { @so_profile.url.should == "http://www.stackoverflow.com/users/83667" }
+    it { @so_profile.reputation.should_not be_nil }  
+  end  
 
 end
