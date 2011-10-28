@@ -15,6 +15,7 @@ class User
   scope :users_created_today, lambda { where(:created_at.lte => Time.now.end_of_day.utc, :created_at.gte => Time.now.beginning_of_day.utc) }
 
   validates_format_of :username, :with => /\A[a-zA-Z0-9]+\z/, :message => "Only letters and numbers allowed"
+  validates_uniqueness_of :username
   
   before_create :add_profile
   before_create :downcase_username
