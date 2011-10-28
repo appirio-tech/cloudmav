@@ -7,6 +7,8 @@ require 'rspec/rails'
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+
+
 RSpec.configure do |config|
   # == Mock Framework
   #
@@ -24,4 +26,18 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+  
+  VCR.config do |c|
+    c.cassette_library_dir = 'spec/vcr_cassettes'
+    c.stub_with :fakeweb
+  end
+  
+  config.before :each do
+    Mongoid.master.collections.select {|c| c.name !~ /system/ }.each(&:drop)
+    module Resque 
+      def self.enqueue(klass, *args)
+        klass.perform(*args)
+      end
+    end
+  end
 end

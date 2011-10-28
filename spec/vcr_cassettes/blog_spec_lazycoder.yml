@@ -1,0 +1,1392 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://lazycoder.com:80/weblog/feed/
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 307
+      message: Temporary Redirect
+    headers:
+      date:
+      - Fri, 28 Oct 2011 03:08:48 GMT
+      server:
+      - Apache/2.2.21 (Unix) mod_ssl/2.2.21 OpenSSL/0.9.7a mod_fcgid/2.3.6 Phusion_Passenger/2.2.15
+        mod_bwlimited/1.4
+      x-pingback:
+      - http://www.lazycoder.com/weblog/xmlrpc.php
+      etag:
+      - ! '"2b4e71aaee53554b3f4abd8ce812fd8a"'
+      last-modified:
+      - Mon, 24 Oct 2011 21:01:33 GMT
+      location:
+      - http://feeds.feedburner.com/Lazycoder
+      content-length:
+      - '0'
+      content-type:
+      - text/html
+    body: 
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://feeds.feedburner.com:80/Lazycoder
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      content-type:
+      - text/xml; charset=UTF-8
+      etag:
+      - soDVmNdnIODWNx8hRV3Ih07j9c8
+      last-modified:
+      - Fri, 28 Oct 2011 02:42:35 GMT
+      date:
+      - Fri, 28 Oct 2011 03:08:49 GMT
+      expires:
+      - Fri, 28 Oct 2011 03:08:49 GMT
+      cache-control:
+      - private, max-age=0
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+      transfer-encoding:
+      - chunked
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<?xml-stylesheet type=\"text/xsl\"
+      media=\"screen\" href=\"/~d/styles/rss2full.xsl\"?><?xml-stylesheet type=\"text/css\"
+      media=\"screen\" href=\"http://feeds.feedburner.com/~d/styles/itemcontent.css\"?><rss
+      xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" xmlns:wfw=\"http://wellformedweb.org/CommentAPI/\"
+      xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:atom=\"http://www.w3.org/2005/Atom\"
+      xmlns:sy=\"http://purl.org/rss/1.0/modules/syndication/\" xmlns:slash=\"http://purl.org/rss/1.0/modules/slash/\"
+      version=\"2.0\">\r\n\r\n<channel>\r\n\t<title>Lazycoder</title>\r\n\t\r\n\t<link>http://www.lazycoder.com/weblog</link>\r\n\t<description
+      />\r\n\t<lastBuildDate>Mon, 24 Oct 2011 21:01:33 +0000</lastBuildDate>\r\n\t<language>en</language>\r\n\t<sy:updatePeriod>hourly</sy:updatePeriod>\r\n\t<sy:updateFrequency>1</sy:updateFrequency>\r\n\t<generator>http://wordpress.org/?v=3.2.1</generator>\r\n\t\t<atom10:link
+      xmlns:atom10=\"http://www.w3.org/2005/Atom\" rel=\"self\" type=\"application/rss+xml\"
+      href=\"http://feeds.feedburner.com/Lazycoder\" /><feedburner:info xmlns:feedburner=\"http://rssnamespace.org/feedburner/ext/1.0\"
+      uri=\"lazycoder\" /><atom10:link xmlns:atom10=\"http://www.w3.org/2005/Atom\"
+      rel=\"hub\" href=\"http://pubsubhubbub.appspot.com/\" /><item>\r\n\t\t<title>Herding
+      Code 124: Anthony van der Hoorn and Nik Molnar on Glimpse</title>\r\n\t\t<link>http://feedproxy.google.com/~r/HerdingCode/~3/kiPrw3V2lcY/</link>\r\n\t\t<comments>http://feedproxy.google.com/~r/HerdingCode/~3/kiPrw3V2lcY/#comments</comments>\r\n\t\t<pubDate>Mon,
+      24 Oct 2011 21:01:33 +0000</pubDate>\r\n\t\t<dc:creator>Scott Koon</dc:creator>\r\n\t\t\t\t<category><![CDATA[interview]]></category>\r\n\t\t<category><![CDATA[podcast]]></category>\r\n\t\t<category><![CDATA[herdingcode]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://herdingcode.com/?p=355</guid>\r\n\t\t<description><![CDATA[On
+      this episode, the guys talk to Anthony van der Hoorn and Nik Molnar about Glimpse,
+      which allows you to debug your web site or web service right in the browser.
+      Jon asks why Glimpse was created. Anthony gives a high-level explanation of
+      what Glimpse does. Glimpse is for your server what Firebug is for [...]]]></description>\r\n\t\t\t<content:encoded><![CDATA[<p>On
+      this episode, the guys talk to Anthony van der Hoorn and Nik Molnar about Glimpse,
+      which allows you to debug your web site or web service right in the browser.</p>\n<ul>\n<li>Jon
+      asks why Glimpse was created.</li>\n<li>Anthony gives a high-level explanation
+      of what Glimpse does.</li>\n<li>Glimpse is for your server what Firebug is for
+      your browser.</li>\n<li>Glimpse exposes a plugin architecture that allows it
+      to be extended as necessary.</li>\n<li>Kevin asks if Glimpse can be leveraged
+      from application code. Nik explains it is possible, but 99% of the functionality
+      you need will not require any extra code in your application.</li>\n<li>You
+      can point your logging framework to Glimpse and then you can see log entries
+      relevant to the request.</li>\n<li>The guys talk about how Glimpse fits in with
+      NLog, ELMAH, mvc-mini-profiler, etc.</li>\n<li>Nik says Firebug + Fiddler +
+      Glimpse is the trifecta of development tools.</li>\n<li>Jon asks how Glimpse
+      can be used to help a user experiencing trouble with a production site.</li>\n<li>Jon
+      asks about running Glimpse in production.</li>\n<li>Twitter question from @danielauger:
+      &#8220;What was the most difficult metric to tap into?&#8221;</li>\n<li>Anthony
+      and Nik explain all the detail that is tracked in the Execution tab of Glimpse.</li>\n<li>Anthony
+      talks about how they decided to display all the data that Glimpse has.</li>\n<li>Jon
+      and Anthony talk about how Glimpse could be used to improve page response times.</li>\n<li>Kevin
+      asks about the performance overhead of using Glimpse and using it in production.</li>\n<li>Nik
+      explains how Glimpse plugins are enabled/disabled.</li>\n<li>Jon asks about
+      seeing the validation rules for a particular request.</li>\n<li>Anthony talks
+      about what is added in to core Glimpse versus what goes in to Glimpse plugins.</li>\n<li>Jon
+      asks about how Glimpse handles Ajax.</li>\n<li>Kevin asks about record-and-replay
+      functionality in Glimpse.</li>\n<li>Jon asks about the implementation of the
+      client side display of Glimpse data.</li>\n<li>Nik explains how to configure
+      Glimpse to easily compare differences between test, staging and production environments.</li>\n<li>Jon
+      asks about the future of Glimpse.</li>\n</ul>\n<p>Show links:</p>\n<ul>\n<li><a
+      href=\"http://getglimpse.com/\">Glimpse</a>: <a href=\"https://github.com/Glimpse/Glimpse\">git
+      repo</a>, <a href=\"http://nuget.org/List/Packages/Glimpse\">Glimpse for ASP.NET
+      NuGet package</a>, <a href=\"http://nuget.org/List/Packages/Glimpse.Mvc3\">Glimpse
+      for ASP.NET MVC NuGet package</a></li>\n<li><a href=\"http://www.blog.anthonyvanderhoorn.com/\">Anthony
+      van der Hoorn</a> (<a href=\"http://twitter.com/#!/anthony_vdh\">@anthony_vdh</a>)</li>\n<li>Nik
+      Molnar (<a href=\"http://twitter.com/#!/nikmd23\">@nikmd23</a>)</li>\n<li><a
+      href=\"http://glimpse.codeplex.com/documentation\">CodePlex documentation for
+      adding Glimpse manually</a></li>\n<li><a href=\"http://nlog-project.org/\">NLog</a></li>\n<li><a
+      href=\"http://code.google.com/p/elmah/\">ELMAH</a></li>\n<li><a href=\"http://code.google.com/p/mvc-mini-profiler/\">mvc-mini-profiler</a></li>\n<li><a
+      href=\"http://getfirebug.com\">Firebug</a></li>\n<li><a href=\"http://fiddler2.com\">Fiddler</a></li>\n<li><a
+      href=\"http://www.c4mvc.net/meeting/?id=23\">C4MVC talk on Glimpse</a></li>\n</ul>\n<p><strong>Download
+      / Listen:</strong></p>\n<p align=\"left\"><a title=\"Herding Code 124: Anthony
+      van der Hoorn and Nik Molnar on Glimpse\" href=\"http://herdingcode.com/wp-content/uploads/HerdingCode-0124-Anthony-van-der-Hoorn-and-Nik-Molnar-on-Glimpse.mp3\">Herding
+      Code 124: Anthony van der Hoorn and Nik Molnar on Glimpse</a></p>\n<p><em>Note:
+      Thanks to <a href=\"http://twitter.com/rossfuhrman%20\">@rossfuhrman </a>for
+      typing our show notes this week!</em></p>\n<p><a href=\"http://feedads.g.doubleclick.net/~a/tyQwTDPnF_nYPF_j3s4Et0Aiu_I/0/da\"><img
+      src=\"http://feedads.g.doubleclick.net/~a/tyQwTDPnF_nYPF_j3s4Et0Aiu_I/0/di\"
+      border=\"0\" ismap=\"true\"></img></a><br/><br />\n<a href=\"http://feedads.g.doubleclick.net/~a/tyQwTDPnF_nYPF_j3s4Et0Aiu_I/1/da\"><img
+      src=\"http://feedads.g.doubleclick.net/~a/tyQwTDPnF_nYPF_j3s4Et0Aiu_I/1/di\"
+      border=\"0\" ismap=\"true\"></img></a></p>\n<p><img src=\"http://feeds.feedburner.com/~r/HerdingCode/~4/kiPrw3V2lcY\"
+      height=\"1\" width=\"1\"/></p>\n\n\n\nShare and Enjoy:\n\n\n\t<a rel=\"nofollow\"
+      \ href=\"http://delicious.com/post?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FkiPrw3V2lcY%2F&amp;title=Herding%20Code%20124%3A%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20on%20Glimpse&amp;notes=On%20this%20episode%2C%20the%20guys%20talk%20to%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20about%20Glimpse%2C%20which%20allows%20you%20to%20debug%20your%20web%20site%20or%20web%20service%20right%20in%20the%20browser.%20Jon%20asks%20why%20Glimpse%20was%20created.%20Anthony%20gives%20a%20high-level%20explanation%20of%20what%20Glimpse%20does.%20Glimpse%20is%20for%20your%20server%20what%20Firebug%20is%20for%20%5B...%5D\"
+      title=\"del.icio.us\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/delicious.png\"
+      title=\"del.icio.us\" alt=\"del.icio.us\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dotnetkicks.com/kick/?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FkiPrw3V2lcY%2F&amp;title=Herding%20Code%20124%3A%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20on%20Glimpse\"
+      title=\"DotNetKicks\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dotnetkicks.png\"
+      title=\"DotNetKicks\" alt=\"DotNetKicks\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dzone.com/links/add.html?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FkiPrw3V2lcY%2F&amp;title=Herding%20Code%20124%3A%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20on%20Glimpse\"
+      title=\"DZone\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dzone.png\"
+      title=\"DZone\" alt=\"DZone\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://reddit.com/submit?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FkiPrw3V2lcY%2F&amp;title=Herding%20Code%20124%3A%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20on%20Glimpse\"
+      title=\"Reddit\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/reddit.png\"
+      title=\"Reddit\" alt=\"Reddit\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FkiPrw3V2lcY%2F&amp;title=Herding%20Code%20124%3A%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20on%20Glimpse&amp;bodytext=On%20this%20episode%2C%20the%20guys%20talk%20to%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20about%20Glimpse%2C%20which%20allows%20you%20to%20debug%20your%20web%20site%20or%20web%20service%20right%20in%20the%20browser.%20Jon%20asks%20why%20Glimpse%20was%20created.%20Anthony%20gives%20a%20high-level%20explanation%20of%20what%20Glimpse%20does.%20Glimpse%20is%20for%20your%20server%20what%20Firebug%20is%20for%20%5B...%5D\"
+      title=\"Digg\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/digg.png\"
+      title=\"Digg\" alt=\"Digg\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.stumbleupon.com/submit?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FkiPrw3V2lcY%2F&amp;title=Herding%20Code%20124%3A%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20on%20Glimpse\"
+      title=\"StumbleUpon\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/stumbleupon.png\"
+      title=\"StumbleUpon\" alt=\"StumbleUpon\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FkiPrw3V2lcY%2F&amp;title=Herding%20Code%20124%3A%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20on%20Glimpse&amp;source=Lazycoder+&amp;summary=On%20this%20episode%2C%20the%20guys%20talk%20to%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20about%20Glimpse%2C%20which%20allows%20you%20to%20debug%20your%20web%20site%20or%20web%20service%20right%20in%20the%20browser.%20Jon%20asks%20why%20Glimpse%20was%20created.%20Anthony%20gives%20a%20high-level%20explanation%20of%20what%20Glimpse%20does.%20Glimpse%20is%20for%20your%20server%20what%20Firebug%20is%20for%20%5B...%5D\"
+      title=\"LinkedIn\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/linkedin.png\"
+      title=\"LinkedIn\" alt=\"LinkedIn\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.facebook.com/share.php?u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FkiPrw3V2lcY%2F&amp;t=Herding%20Code%20124%3A%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20on%20Glimpse\"
+      title=\"Facebook\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/facebook.png\"
+      title=\"Facebook\" alt=\"Facebook\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.friendfeed.com/share?title=Herding%20Code%20124%3A%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20on%20Glimpse&amp;link=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FkiPrw3V2lcY%2F\"
+      title=\"FriendFeed\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/friendfeed.png\"
+      title=\"FriendFeed\" alt=\"FriendFeed\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://news.ycombinator.com/submitlink?u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FkiPrw3V2lcY%2F&amp;t=Herding%20Code%20124%3A%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20on%20Glimpse\"
+      title=\"HackerNews\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/hackernews.png\"
+      title=\"HackerNews\" alt=\"HackerNews\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.netvibes.com/share?title=Herding%20Code%20124%3A%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20on%20Glimpse&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FkiPrw3V2lcY%2F\"
+      title=\"Netvibes\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/netvibes.png\"
+      title=\"Netvibes\" alt=\"Netvibes\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://posterous.com/share?linkto=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FkiPrw3V2lcY%2F&amp;title=Herding%20Code%20124%3A%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20on%20Glimpse&amp;selection=On%20this%20episode%2C%20the%20guys%20talk%20to%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20about%20Glimpse%2C%20which%20allows%20you%20to%20debug%20your%20web%20site%20or%20web%20service%20right%20in%20the%20browser.%20Jon%20asks%20why%20Glimpse%20was%20created.%20Anthony%20gives%20a%20high-level%20explanation%20of%20what%20Glimpse%20does.%20Glimpse%20is%20for%20your%20server%20what%20Firebug%20is%20for%20%5B...%5D\"
+      title=\"Posterous\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/posterous.png\"
+      title=\"Posterous\" alt=\"Posterous\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.tumblr.com/share?v=3&amp;u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FkiPrw3V2lcY%2F&amp;t=Herding%20Code%20124%3A%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20on%20Glimpse&amp;s=On%20this%20episode%2C%20the%20guys%20talk%20to%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20about%20Glimpse%2C%20which%20allows%20you%20to%20debug%20your%20web%20site%20or%20web%20service%20right%20in%20the%20browser.%20Jon%20asks%20why%20Glimpse%20was%20created.%20Anthony%20gives%20a%20high-level%20explanation%20of%20what%20Glimpse%20does.%20Glimpse%20is%20for%20your%20server%20what%20Firebug%20is%20for%20%5B...%5D\"
+      title=\"Tumblr\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/tumblr.png\"
+      title=\"Tumblr\" alt=\"Tumblr\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://twitter.com/home?status=Herding%20Code%20124%3A%20Anthony%20van%20der%20Hoorn%20and%20Nik%20Molnar%20on%20Glimpse%20-%20http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FkiPrw3V2lcY%2F\"
+      title=\"Twitter\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/twitter.png\"
+      title=\"Twitter\" alt=\"Twitter\" class=\"sociable-hovers\" /></a>\n\n\n<br/><br/><div
+      class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=LGgt6q4oht4:kiPrw3V2lcY:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=LGgt6q4oht4:kiPrw3V2lcY:V_sGLiPBpWU\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=LGgt6q4oht4:kiPrw3V2lcY:V_sGLiPBpWU\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=LGgt6q4oht4:kiPrw3V2lcY:D7DqB2pKExk\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=LGgt6q4oht4:kiPrw3V2lcY:D7DqB2pKExk\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=LGgt6q4oht4:kiPrw3V2lcY:dnMXMwOfBR0\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=dnMXMwOfBR0\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=LGgt6q4oht4:kiPrw3V2lcY:F7zBnMyn0Lo\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=LGgt6q4oht4:kiPrw3V2lcY:F7zBnMyn0Lo\"
+      border=\"0\"></img></a>\n</div>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://herdingcode.com/?feed=rss2&amp;p=355</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n<enclosure
+      url=\"http://feedproxy.google.com/~r/HerdingCode/~5/KZHMwxi3b70/HerdingCode-0124-Anthony-van-der-Hoorn-and-Nik-Molnar-on-Glimpse.mp3\"
+      length=\"47267831\" type=\"audio/mpeg\" />\r\n\t\t</item>\r\n\t\t<item>\r\n\t\t<title>Herding
+      Code 123: Andreas Håkansson and Steven Robbins on NancyFx</title>\r\n\t\t<link>http://feedproxy.google.com/~r/HerdingCode/~3/z-WvaMPMXzM/</link>\r\n\t\t<comments>http://feedproxy.google.com/~r/HerdingCode/~3/z-WvaMPMXzM/#comments</comments>\r\n\t\t<pubDate>Mon,
+      17 Oct 2011 21:18:12 +0000</pubDate>\r\n\t\t<dc:creator>Scott Koon</dc:creator>\r\n\t\t\t\t<category><![CDATA[interview]]></category>\r\n\t\t<category><![CDATA[podcast]]></category>\r\n\t\t<category><![CDATA[herdingcode]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://herdingcode.com/?p=350</guid>\r\n\t\t<description><![CDATA[On
+      this episode, the guys talk to Andreas and Steven about Nancy, a lightweight,
+      low-ceremony, framework for building HTTP based services on .Net and Mono. Scott
+      Koon asks why Nancy was developed and what are the problems going up against
+      ASP.NET. Andreas explains Nancy is a lighter approach and doesn&#8217;t get
+      in the way. Andreas [...]]]></description>\r\n\t\t\t<content:encoded><![CDATA[<p>On
+      this episode, the guys talk to Andreas and Steven about Nancy, a lightweight,
+      low-ceremony, framework for building HTTP based services on .Net and Mono.</p>\n<ul>\n<li>Scott
+      Koon asks why Nancy was developed and what are the problems going up against
+      ASP.NET.</li>\n<li>Andreas explains Nancy is a lighter approach and doesn&#8217;t
+      get in the way.</li>\n<li>Andreas explains a basic Hello World &#8211; 5 lines
+      of code, and Steven points out a Nancy app fits in a single Tweet.</li>\n<li>Nancy
+      has No System.Web dependencies &#8211; just depends on the Client profile, and
+      works great on Mono.</li>\n<li>Jon asks about support for OWIN, a Rack equivalent
+      for .NET. Combining Nancy and OWIN allows you to have an end-to-end OSS solution.</li>\n<li>Jon
+      asks about support for view engines, and Andreas says that Nancy supports most
+      major view engines including Razor and Spark. There are quite a few Nuget plugins.</li>\n<li>Andreas
+      points out that you can do most things in Nancy that you can do in ASP.NET MVC.</li>\n<li>Jon
+      asks if you can add Nancy to an existing ASP.NET MVC app.</li>\n<li>The group
+      discusses the value of having many competing web frameworks.</li>\n<li>Steven
+      explains Nancy isn&#8217;t about crushing the competition, just providing a
+      different approach that some people might prefer.</li>\n<li>Jon asks Andreas
+      about his post about the value of OSS being the vision not the code.</li>\n<li>Jon
+      asks about web application security for Nancy &#8211; since it&#8217;s a lightweight
+      framework, am I on my own when it comes to security? Steven explains the security
+      features in Nancy, and how they work without requiring a dependency on System.Web.</li>\n<li>Jon
+      asks how many users of Nancy there are.</li>\n<li>Kevin asks what the most challenging
+      part of developing Nancy has been. &#8211; Steven: HTTP implementation and the
+      syntax simplicity. Andreas: fighting C# syntax limitations.</li>\n<li>Kevin
+      asks whether Nancy is trying to be ASP.NET MVC.</li>\n<li>The group discusses
+      extensibility and custom configurations.</li>\n<li>Andreas explains Nancy will
+      be adding static and trace diagnostics in the future.</li>\n<li>Twitter question
+      from @bitbonk: &#8220;Relate or compare NancyFx with WCF Web <acronym title='Application
+      Interface'><span class='caps'>API</span></acronym>.&#8221;</li>\n<li>Twitter
+      question from @codereflection: &#8220;can we get around having to mock httpcontext
+      w/ Nancy? Do we even need to?&#8221;</li>\n<li>Via Twitter, @kppullin asks about
+      how the Nancy team decides how to add features.</li>\n<li>Jon asks about the
+      best places for interested users to get information, and there&#8217;s a discussion
+      of documentation, Google Groups, Twitter, and screencasts.</li>\n<li>Jon asks
+      about a NuGet packages that would have some samples. Andreas explains why the
+      samples are included along with the source code on Github instead.</li>\n<li>Kevin
+      asks whether they do performance testing, and how Nancy&#8217;s performance
+      stacks up.</li>\n</ul>\n<p>Show Links:</p>\n<ul>\n<li><a href=\"http://www.nancyfx.org/\">NancyFX</a>
+      <a href=\"htttps://github.com/NancyFx\">git repo</a>, <a href=\"http://nuget.org/List/Search?packageType=Packages&amp;searchCategory=All+Categories&amp;searchTerm=nancy&amp;sortOrder=package-download-count&amp;pageSize=25\">NuGet
+      package</a>, <a href=\"https://groups.google.com/forum/#!forum/nancy-web-framework\">Google
+      Group</a>, <a href=\"http://twitter.com/#!/NancyFx\">@NancyFx</a></li>\n<li><a
+      href=\"http://thecodejunkie.com/\">Andreas Håkansson </a>(<a href=\"http://twitter.com/#!/TheCodeJunkie\">@TheCodeJunkie</a>)</li>\n<li><a
+      href=\"http://www.grumpydev.com/\">Steven Robbin</a> (<a href=\"http://twitter.com/#!/Grumpydev\">@Grumpydev</a>)</li>\n<li><a
+      href=\"http://hanselminutes.com/270/nancy-sinatra-and-the-explosion-of-net-micro-web-frameworks-with-andreas-hkansson\">Nancy,
+      Sinatra and the Explosion of .NET Micro Web Frameworks with Andreas Håkansson</a></li>\n</ul>\n<p><strong>Download
+      / Listen:</strong></p>\n<p align=\"left\"><a href=\"http://herdingcode.com/wp-content/uploads/HerdingCode-0123-Andreas-Hakansson-and-Steven-Robbins-on-NancyFx.mp3\">Herding
+      Code 123: Andreas Håkansson and Steven Robbins on NancyFx</a></p>\n<p><em>Note:
+      Thanks to <a href=\"http://twitter.com/rossfuhrman%20\">@rossfuhrman </a>for
+      typing our show notes this week!</em></p>\n<p><a href=\"http://feedads.g.doubleclick.net/~a/F3fv8iHI86hefRPCPb3iXPlqXrM/0/da\"><img
+      src=\"http://feedads.g.doubleclick.net/~a/F3fv8iHI86hefRPCPb3iXPlqXrM/0/di\"
+      border=\"0\" ismap=\"true\"></img></a><br/><br />\n<a href=\"http://feedads.g.doubleclick.net/~a/F3fv8iHI86hefRPCPb3iXPlqXrM/1/da\"><img
+      src=\"http://feedads.g.doubleclick.net/~a/F3fv8iHI86hefRPCPb3iXPlqXrM/1/di\"
+      border=\"0\" ismap=\"true\"></img></a></p>\n<p><img src=\"http://feeds.feedburner.com/~r/HerdingCode/~4/z-WvaMPMXzM\"
+      height=\"1\" width=\"1\"/></p>\n\n\n\nShare and Enjoy:\n\n\n\t<a rel=\"nofollow\"
+      \ href=\"http://delicious.com/post?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2Fz-WvaMPMXzM%2F&amp;title=Herding%20Code%20123%3A%20Andreas%20H%C3%A5kansson%20and%20Steven%20Robbins%20on%20NancyFx&amp;notes=On%20this%20episode%2C%20the%20guys%20talk%20to%20Andreas%20and%20Steven%20about%20Nancy%2C%20a%20lightweight%2C%20low-ceremony%2C%20framework%20for%20building%20HTTP%20based%20services%20on%20.Net%20and%20Mono.%20Scott%20Koon%20asks%20why%20Nancy%20was%20developed%20and%20what%20are%20the%20problems%20going%20up%20against%20ASP.NET.%20Andreas%20explains%20Nancy%20is%20a%20lighter%20approach%20and%20doesn%26%238217%3Bt%20get%20in%20the%20way.%20Andreas%20%5B...%5D\"
+      title=\"del.icio.us\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/delicious.png\"
+      title=\"del.icio.us\" alt=\"del.icio.us\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dotnetkicks.com/kick/?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2Fz-WvaMPMXzM%2F&amp;title=Herding%20Code%20123%3A%20Andreas%20H%C3%A5kansson%20and%20Steven%20Robbins%20on%20NancyFx\"
+      title=\"DotNetKicks\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dotnetkicks.png\"
+      title=\"DotNetKicks\" alt=\"DotNetKicks\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dzone.com/links/add.html?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2Fz-WvaMPMXzM%2F&amp;title=Herding%20Code%20123%3A%20Andreas%20H%C3%A5kansson%20and%20Steven%20Robbins%20on%20NancyFx\"
+      title=\"DZone\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dzone.png\"
+      title=\"DZone\" alt=\"DZone\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://reddit.com/submit?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2Fz-WvaMPMXzM%2F&amp;title=Herding%20Code%20123%3A%20Andreas%20H%C3%A5kansson%20and%20Steven%20Robbins%20on%20NancyFx\"
+      title=\"Reddit\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/reddit.png\"
+      title=\"Reddit\" alt=\"Reddit\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2Fz-WvaMPMXzM%2F&amp;title=Herding%20Code%20123%3A%20Andreas%20H%C3%A5kansson%20and%20Steven%20Robbins%20on%20NancyFx&amp;bodytext=On%20this%20episode%2C%20the%20guys%20talk%20to%20Andreas%20and%20Steven%20about%20Nancy%2C%20a%20lightweight%2C%20low-ceremony%2C%20framework%20for%20building%20HTTP%20based%20services%20on%20.Net%20and%20Mono.%20Scott%20Koon%20asks%20why%20Nancy%20was%20developed%20and%20what%20are%20the%20problems%20going%20up%20against%20ASP.NET.%20Andreas%20explains%20Nancy%20is%20a%20lighter%20approach%20and%20doesn%26%238217%3Bt%20get%20in%20the%20way.%20Andreas%20%5B...%5D\"
+      title=\"Digg\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/digg.png\"
+      title=\"Digg\" alt=\"Digg\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.stumbleupon.com/submit?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2Fz-WvaMPMXzM%2F&amp;title=Herding%20Code%20123%3A%20Andreas%20H%C3%A5kansson%20and%20Steven%20Robbins%20on%20NancyFx\"
+      title=\"StumbleUpon\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/stumbleupon.png\"
+      title=\"StumbleUpon\" alt=\"StumbleUpon\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2Fz-WvaMPMXzM%2F&amp;title=Herding%20Code%20123%3A%20Andreas%20H%C3%A5kansson%20and%20Steven%20Robbins%20on%20NancyFx&amp;source=Lazycoder+&amp;summary=On%20this%20episode%2C%20the%20guys%20talk%20to%20Andreas%20and%20Steven%20about%20Nancy%2C%20a%20lightweight%2C%20low-ceremony%2C%20framework%20for%20building%20HTTP%20based%20services%20on%20.Net%20and%20Mono.%20Scott%20Koon%20asks%20why%20Nancy%20was%20developed%20and%20what%20are%20the%20problems%20going%20up%20against%20ASP.NET.%20Andreas%20explains%20Nancy%20is%20a%20lighter%20approach%20and%20doesn%26%238217%3Bt%20get%20in%20the%20way.%20Andreas%20%5B...%5D\"
+      title=\"LinkedIn\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/linkedin.png\"
+      title=\"LinkedIn\" alt=\"LinkedIn\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.facebook.com/share.php?u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2Fz-WvaMPMXzM%2F&amp;t=Herding%20Code%20123%3A%20Andreas%20H%C3%A5kansson%20and%20Steven%20Robbins%20on%20NancyFx\"
+      title=\"Facebook\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/facebook.png\"
+      title=\"Facebook\" alt=\"Facebook\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.friendfeed.com/share?title=Herding%20Code%20123%3A%20Andreas%20H%C3%A5kansson%20and%20Steven%20Robbins%20on%20NancyFx&amp;link=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2Fz-WvaMPMXzM%2F\"
+      title=\"FriendFeed\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/friendfeed.png\"
+      title=\"FriendFeed\" alt=\"FriendFeed\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://news.ycombinator.com/submitlink?u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2Fz-WvaMPMXzM%2F&amp;t=Herding%20Code%20123%3A%20Andreas%20H%C3%A5kansson%20and%20Steven%20Robbins%20on%20NancyFx\"
+      title=\"HackerNews\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/hackernews.png\"
+      title=\"HackerNews\" alt=\"HackerNews\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.netvibes.com/share?title=Herding%20Code%20123%3A%20Andreas%20H%C3%A5kansson%20and%20Steven%20Robbins%20on%20NancyFx&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2Fz-WvaMPMXzM%2F\"
+      title=\"Netvibes\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/netvibes.png\"
+      title=\"Netvibes\" alt=\"Netvibes\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://posterous.com/share?linkto=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2Fz-WvaMPMXzM%2F&amp;title=Herding%20Code%20123%3A%20Andreas%20H%C3%A5kansson%20and%20Steven%20Robbins%20on%20NancyFx&amp;selection=On%20this%20episode%2C%20the%20guys%20talk%20to%20Andreas%20and%20Steven%20about%20Nancy%2C%20a%20lightweight%2C%20low-ceremony%2C%20framework%20for%20building%20HTTP%20based%20services%20on%20.Net%20and%20Mono.%20Scott%20Koon%20asks%20why%20Nancy%20was%20developed%20and%20what%20are%20the%20problems%20going%20up%20against%20ASP.NET.%20Andreas%20explains%20Nancy%20is%20a%20lighter%20approach%20and%20doesn%26%238217%3Bt%20get%20in%20the%20way.%20Andreas%20%5B...%5D\"
+      title=\"Posterous\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/posterous.png\"
+      title=\"Posterous\" alt=\"Posterous\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.tumblr.com/share?v=3&amp;u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2Fz-WvaMPMXzM%2F&amp;t=Herding%20Code%20123%3A%20Andreas%20H%C3%A5kansson%20and%20Steven%20Robbins%20on%20NancyFx&amp;s=On%20this%20episode%2C%20the%20guys%20talk%20to%20Andreas%20and%20Steven%20about%20Nancy%2C%20a%20lightweight%2C%20low-ceremony%2C%20framework%20for%20building%20HTTP%20based%20services%20on%20.Net%20and%20Mono.%20Scott%20Koon%20asks%20why%20Nancy%20was%20developed%20and%20what%20are%20the%20problems%20going%20up%20against%20ASP.NET.%20Andreas%20explains%20Nancy%20is%20a%20lighter%20approach%20and%20doesn%26%238217%3Bt%20get%20in%20the%20way.%20Andreas%20%5B...%5D\"
+      title=\"Tumblr\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/tumblr.png\"
+      title=\"Tumblr\" alt=\"Tumblr\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://twitter.com/home?status=Herding%20Code%20123%3A%20Andreas%20H%C3%A5kansson%20and%20Steven%20Robbins%20on%20NancyFx%20-%20http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2Fz-WvaMPMXzM%2F\"
+      title=\"Twitter\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/twitter.png\"
+      title=\"Twitter\" alt=\"Twitter\" class=\"sociable-hovers\" /></a>\n\n\n<br/><br/><div
+      class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=Zvw8dZ3GQ2k:z-WvaMPMXzM:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=Zvw8dZ3GQ2k:z-WvaMPMXzM:V_sGLiPBpWU\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=Zvw8dZ3GQ2k:z-WvaMPMXzM:V_sGLiPBpWU\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=Zvw8dZ3GQ2k:z-WvaMPMXzM:D7DqB2pKExk\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=Zvw8dZ3GQ2k:z-WvaMPMXzM:D7DqB2pKExk\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=Zvw8dZ3GQ2k:z-WvaMPMXzM:dnMXMwOfBR0\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=dnMXMwOfBR0\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=Zvw8dZ3GQ2k:z-WvaMPMXzM:F7zBnMyn0Lo\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=Zvw8dZ3GQ2k:z-WvaMPMXzM:F7zBnMyn0Lo\"
+      border=\"0\"></img></a>\n</div>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://herdingcode.com/?feed=rss2&amp;p=350</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n<enclosure
+      url=\"http://feedproxy.google.com/~r/HerdingCode/~5/u5OwOje67oc/HerdingCode-0123-Andreas-Hakansson-and-Steven-Robbins-on-NancyFx.mp3\"
+      length=\"34995281\" type=\"audio/mpeg\" />\r\n\t\t</item>\r\n\t\t<item>\r\n\t\t<title>Herding
+      Code 122: Bert Belder on porting Node.js to Windows</title>\r\n\t\t<link>http://feedproxy.google.com/~r/HerdingCode/~3/ogeNnOuSFGA/</link>\r\n\t\t<comments>http://feedproxy.google.com/~r/HerdingCode/~3/ogeNnOuSFGA/#comments</comments>\r\n\t\t<pubDate>Tue,
+      11 Oct 2011 18:57:36 +0000</pubDate>\r\n\t\t<dc:creator>Scott Koon</dc:creator>\r\n\t\t\t\t<category><![CDATA[interview]]></category>\r\n\t\t<category><![CDATA[podcast]]></category>\r\n\t\t<category><![CDATA[herdingcode]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://herdingcode.com/?p=347</guid>\r\n\t\t<description><![CDATA[This
+      episode of Herding Code the guys talk to Bert Belder, a Node.js developer who&#8217;s
+      working on the native Windows port. Kevin asks how Bert got started with Node.js.
+      Bert explains that he was working on a PHP based system which had a good amount
+      of logic in Javascript, and he started looking to node [...]]]></description>\r\n\t\t\t<content:encoded><![CDATA[<p>This
+      episode of Herding Code the guys talk to Bert Belder, a Node.js developer who&#8217;s
+      working on the native Windows port.</p>\n<ul>\n<li>Kevin asks how Bert got started
+      with Node.js. Bert explains that he was working on a <acronym title='PHP Hypertext
+      Processor'><span class='caps'>PHP</span></acronym> based system which had a
+      good amount of logic in Javascript, and he started looking to node as a way
+      to consolidate that logic. </li>\n<li>K. Scott ask Bert about how you&#8217;d
+      go about sharing Javascript between client and server. </li>\n<li>Kevin asks
+      how the Windows port of Node.js got started, and whether there was any resistance
+      to it. </li>\n<li>Jon asks if the eventing model in Windows was one of the more
+      difficult things Bert had to work on. Bert explains that getting REPL (read
+      evaluate print loop) to work on Windows as it did on Unix was actually one of
+      the more difficult challenges at the beginning. </li>\n<li>K. Scott asks about
+      experience of running Node.js. Bert talks about how Node.js runs as an executable,
+      and it&#8217;s up to you to set up an HTTP server. </li>\n<li>Kevin asks about
+      the team that&#8217;s working on the Windows port. </li>\n<li>Kevin asks Bert
+      for more info on technical challenges on getting Node.js not only working on
+      Windows, but really performing. Bert describes some challenges in implementing
+      I/O Completion Ports, spawning child processes, etc. </li>\n<li>Jon says that
+      some of the initial negative feedback he&#8217;d seen on the announcement of
+      the Windows port was concern over negative performance implications for the
+      Unix version, and Bert says that one of the criteria they&#8217;re working under
+      is that Unix performance not be degraded.</li>\n<li>Kevin asks Bert if he had
+      a background in high performance networking, of if he&#8217;d been&#160; figuring
+      things out as he went along. Bert explains that he and the team have had a good
+      amount of time to work on this, so they had a pretty good idea of how to solve
+      this. </li>\n<li>Jon asks about performance testing, and Bert describes some
+      of the load tests that they use. </li>\n<li>K. Scott asks about if most Node.js
+      modules will work on Windows. Bert says he guesses 90% will work, and the ones
+      that won&#8217;t are making operating-system specific assumptions. </li>\n<li>Jon
+      asks Bert about his work on libuv, the abstracted platform layer for Node.js,
+      and Kevin asks about the process of designing this abstraction layer. </li>\n<li>Kevin
+      asks Bert if there are places where Windows is more flexible or powerful than
+      Linux. Bert explains that since node was written for Unix first, it wasn&#8217;t
+      built to exploit Windows advantages, but with Windows kernel mode HTTP stack
+      might be useful in the future. </li>\n<li>K. Scott asks if the port could have
+      been aided by open source projects like Cygwin. Bert explains how Cygwin isn&#8217;t
+      really helpful in making node.js work well on Windows. </li>\n<li>Jon asks if
+      dropping support for Cygwin in Node.js will affect users, and Bert says the
+      only effect may be for addons which are written so as to be Unix-only. </li>\n<li>Kevin
+      asks about Windows support for NPM. </li>\n<li>There&#8217;s a discussion about
+      the different hosting options on Windows including Azure and iisnode. Kevin
+      asks about service hosting to allow socket level access (below <acronym title='Internet
+      Infomation Server'><span class='caps'>IIS</span></acronym>). </li>\n<li>Kevin
+      asks if there&#8217;s a plan for cross-platform system support for modules that
+      need native access. Bert talks about changes to npm to support binary hosting
+      so operating system specific binaries can be automatically downloaded. </li>\n<li>Kevin
+      asks if there will be a focused effort to get node module authors to support
+      Windows. </li>\n<li>Jon asks about multi-core scenarios. Bert talks about different
+      options, explaining that iisnode can help with this, but he hasn&#8217;t seen
+      options for interprocess communication in iisnode or in in either multi-core
+      scenarios. </li>\n<li>Kevin asks about the use of gyp for the node.js build
+      process and about Bert&#8217;s development environment on Windows. </li>\n<li>Kevin
+      wraps up by asking Bert how to pronounce his twitter handle. </li>\n</ul>\n<p>Show
+      Links:</p>\n<ul>\n<li><a href=\"https://github.com/piscisaureus\">Bert Belder</a>&#160;<a
+      href=\"http://twitter.com/piscisaureus\">(@piscisaureus)</a> </li>\n<li><a href=\"http://nodejs.org/\">Node.js</a>
+      </li>\n<li><a href=\"http://blog.nodejs.org/2011/06/23/porting-node-to-windows-with-microsoft%E2%80%99s-help/\">Porting
+      Node to Windows with Microsoft&#8217;s Help</a> (announcement post on blog.nodejs.com)
+      </li>\n<li><a href=\"http://msdn.microsoft.com/en-us/library/aa365198(VS.85).aspx\">I/O
+      Completion Ports (<acronym title='Microsoft Developer Network'><span class='caps'>MSDN</span></acronym>)</a>
+      </li>\n<li><a href=\"http://en.wikipedia.org/wiki/ApacheBench\">ApacheBench</a>
+      </li>\n<li><a href=\"https://github.com/joyent/libuv\">libuv</a> (github) </li>\n<li>\n<div><a
+      href=\"http://www.hanselman.com/blog/InstallingAndRunningNodejsApplicationsWithinIISOnWindowsAreYouMad.aspx\">Installing
+      and Running node.js applications within <acronym title='Internet Infomation
+      Server'><span class='caps'>IIS</span></acronym> on Windows &#8211; Are you mad?</a>
+      (Scott Hanselman post about iisnode)</div>\n</li>\n<li>\n<div><a href=\"http://code.google.com/p/gyp/\">gyp
+      (Generate Your Project)</a></div>\n</li>\n</ul>\n<p><strong>Download / Listen:</strong></p>\n<p
+      align=\"left\"><a href=\"http://herdingcode.com/wp-content/uploads/HerdingCode-0122-Bert-Belder-on-porting-nodejs-to-Windows.mp3\">Herding
+      Code 122: Bert Belder on porting node.js to Windows</a></p>\n<p><a href=\"http://feedads.g.doubleclick.net/~a/U5C8joPSnRKo9AWgL_9eu-tDKRg/0/da\"><img
+      src=\"http://feedads.g.doubleclick.net/~a/U5C8joPSnRKo9AWgL_9eu-tDKRg/0/di\"
+      border=\"0\" ismap=\"true\"></img></a><br/><br />\n<a href=\"http://feedads.g.doubleclick.net/~a/U5C8joPSnRKo9AWgL_9eu-tDKRg/1/da\"><img
+      src=\"http://feedads.g.doubleclick.net/~a/U5C8joPSnRKo9AWgL_9eu-tDKRg/1/di\"
+      border=\"0\" ismap=\"true\"></img></a></p>\n<p><img src=\"http://feeds.feedburner.com/~r/HerdingCode/~4/ogeNnOuSFGA\"
+      height=\"1\" width=\"1\"/></p>\n\n\n\nShare and Enjoy:\n\n\n\t<a rel=\"nofollow\"
+      \ href=\"http://delicious.com/post?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FogeNnOuSFGA%2F&amp;title=Herding%20Code%20122%3A%20Bert%20Belder%20on%20porting%20Node.js%20to%20Windows&amp;notes=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Bert%20Belder%2C%20a%20Node.js%20developer%20who%26%238217%3Bs%20working%20on%20the%20native%20Windows%20port.%20Kevin%20asks%20how%20Bert%20got%20started%20with%20Node.js.%20Bert%20explains%20that%20he%20was%20working%20on%20a%20PHP%20based%20system%20which%20had%20a%20good%20amount%20of%20logic%20in%20Javascript%2C%20and%20he%20started%20looking%20to%20node%20%5B...%5D\"
+      title=\"del.icio.us\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/delicious.png\"
+      title=\"del.icio.us\" alt=\"del.icio.us\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dotnetkicks.com/kick/?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FogeNnOuSFGA%2F&amp;title=Herding%20Code%20122%3A%20Bert%20Belder%20on%20porting%20Node.js%20to%20Windows\"
+      title=\"DotNetKicks\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dotnetkicks.png\"
+      title=\"DotNetKicks\" alt=\"DotNetKicks\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dzone.com/links/add.html?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FogeNnOuSFGA%2F&amp;title=Herding%20Code%20122%3A%20Bert%20Belder%20on%20porting%20Node.js%20to%20Windows\"
+      title=\"DZone\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dzone.png\"
+      title=\"DZone\" alt=\"DZone\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://reddit.com/submit?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FogeNnOuSFGA%2F&amp;title=Herding%20Code%20122%3A%20Bert%20Belder%20on%20porting%20Node.js%20to%20Windows\"
+      title=\"Reddit\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/reddit.png\"
+      title=\"Reddit\" alt=\"Reddit\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FogeNnOuSFGA%2F&amp;title=Herding%20Code%20122%3A%20Bert%20Belder%20on%20porting%20Node.js%20to%20Windows&amp;bodytext=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Bert%20Belder%2C%20a%20Node.js%20developer%20who%26%238217%3Bs%20working%20on%20the%20native%20Windows%20port.%20Kevin%20asks%20how%20Bert%20got%20started%20with%20Node.js.%20Bert%20explains%20that%20he%20was%20working%20on%20a%20PHP%20based%20system%20which%20had%20a%20good%20amount%20of%20logic%20in%20Javascript%2C%20and%20he%20started%20looking%20to%20node%20%5B...%5D\"
+      title=\"Digg\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/digg.png\"
+      title=\"Digg\" alt=\"Digg\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.stumbleupon.com/submit?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FogeNnOuSFGA%2F&amp;title=Herding%20Code%20122%3A%20Bert%20Belder%20on%20porting%20Node.js%20to%20Windows\"
+      title=\"StumbleUpon\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/stumbleupon.png\"
+      title=\"StumbleUpon\" alt=\"StumbleUpon\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FogeNnOuSFGA%2F&amp;title=Herding%20Code%20122%3A%20Bert%20Belder%20on%20porting%20Node.js%20to%20Windows&amp;source=Lazycoder+&amp;summary=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Bert%20Belder%2C%20a%20Node.js%20developer%20who%26%238217%3Bs%20working%20on%20the%20native%20Windows%20port.%20Kevin%20asks%20how%20Bert%20got%20started%20with%20Node.js.%20Bert%20explains%20that%20he%20was%20working%20on%20a%20PHP%20based%20system%20which%20had%20a%20good%20amount%20of%20logic%20in%20Javascript%2C%20and%20he%20started%20looking%20to%20node%20%5B...%5D\"
+      title=\"LinkedIn\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/linkedin.png\"
+      title=\"LinkedIn\" alt=\"LinkedIn\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.facebook.com/share.php?u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FogeNnOuSFGA%2F&amp;t=Herding%20Code%20122%3A%20Bert%20Belder%20on%20porting%20Node.js%20to%20Windows\"
+      title=\"Facebook\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/facebook.png\"
+      title=\"Facebook\" alt=\"Facebook\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.friendfeed.com/share?title=Herding%20Code%20122%3A%20Bert%20Belder%20on%20porting%20Node.js%20to%20Windows&amp;link=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FogeNnOuSFGA%2F\"
+      title=\"FriendFeed\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/friendfeed.png\"
+      title=\"FriendFeed\" alt=\"FriendFeed\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://news.ycombinator.com/submitlink?u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FogeNnOuSFGA%2F&amp;t=Herding%20Code%20122%3A%20Bert%20Belder%20on%20porting%20Node.js%20to%20Windows\"
+      title=\"HackerNews\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/hackernews.png\"
+      title=\"HackerNews\" alt=\"HackerNews\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.netvibes.com/share?title=Herding%20Code%20122%3A%20Bert%20Belder%20on%20porting%20Node.js%20to%20Windows&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FogeNnOuSFGA%2F\"
+      title=\"Netvibes\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/netvibes.png\"
+      title=\"Netvibes\" alt=\"Netvibes\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://posterous.com/share?linkto=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FogeNnOuSFGA%2F&amp;title=Herding%20Code%20122%3A%20Bert%20Belder%20on%20porting%20Node.js%20to%20Windows&amp;selection=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Bert%20Belder%2C%20a%20Node.js%20developer%20who%26%238217%3Bs%20working%20on%20the%20native%20Windows%20port.%20Kevin%20asks%20how%20Bert%20got%20started%20with%20Node.js.%20Bert%20explains%20that%20he%20was%20working%20on%20a%20PHP%20based%20system%20which%20had%20a%20good%20amount%20of%20logic%20in%20Javascript%2C%20and%20he%20started%20looking%20to%20node%20%5B...%5D\"
+      title=\"Posterous\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/posterous.png\"
+      title=\"Posterous\" alt=\"Posterous\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.tumblr.com/share?v=3&amp;u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FogeNnOuSFGA%2F&amp;t=Herding%20Code%20122%3A%20Bert%20Belder%20on%20porting%20Node.js%20to%20Windows&amp;s=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Bert%20Belder%2C%20a%20Node.js%20developer%20who%26%238217%3Bs%20working%20on%20the%20native%20Windows%20port.%20Kevin%20asks%20how%20Bert%20got%20started%20with%20Node.js.%20Bert%20explains%20that%20he%20was%20working%20on%20a%20PHP%20based%20system%20which%20had%20a%20good%20amount%20of%20logic%20in%20Javascript%2C%20and%20he%20started%20looking%20to%20node%20%5B...%5D\"
+      title=\"Tumblr\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/tumblr.png\"
+      title=\"Tumblr\" alt=\"Tumblr\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://twitter.com/home?status=Herding%20Code%20122%3A%20Bert%20Belder%20on%20porting%20Node.js%20to%20Windows%20-%20http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FogeNnOuSFGA%2F\"
+      title=\"Twitter\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/twitter.png\"
+      title=\"Twitter\" alt=\"Twitter\" class=\"sociable-hovers\" /></a>\n\n\n<br/><br/><div
+      class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IAmG6cqcniQ:ogeNnOuSFGA:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IAmG6cqcniQ:ogeNnOuSFGA:V_sGLiPBpWU\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=IAmG6cqcniQ:ogeNnOuSFGA:V_sGLiPBpWU\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IAmG6cqcniQ:ogeNnOuSFGA:D7DqB2pKExk\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=IAmG6cqcniQ:ogeNnOuSFGA:D7DqB2pKExk\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IAmG6cqcniQ:ogeNnOuSFGA:dnMXMwOfBR0\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=dnMXMwOfBR0\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IAmG6cqcniQ:ogeNnOuSFGA:F7zBnMyn0Lo\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=IAmG6cqcniQ:ogeNnOuSFGA:F7zBnMyn0Lo\"
+      border=\"0\"></img></a>\n</div>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://herdingcode.com/?feed=rss2&amp;p=347</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n<enclosure
+      url=\"http://feedproxy.google.com/~r/HerdingCode/~5/z-0TDqoZfgA/HerdingCode-0122-Bert-Belder-on-porting-nodejs-to-Windows.mp3\"
+      length=\"29509163\" type=\"audio/mpeg\" />\r\n\t\t</item>\r\n\t\t<item>\r\n\t\t<title>Herding
+      Code 121: Sara Chipps updates us on Girl Develop It at one year</title>\r\n\t\t<link>http://feedproxy.google.com/~r/HerdingCode/~3/IGNGCnrS2Ig/</link>\r\n\t\t<comments>http://feedproxy.google.com/~r/HerdingCode/~3/IGNGCnrS2Ig/#comments</comments>\r\n\t\t<pubDate>Fri,
+      23 Sep 2011 20:18:53 +0000</pubDate>\r\n\t\t<dc:creator>Scott Koon</dc:creator>\r\n\t\t\t\t<category><![CDATA[podcast]]></category>\r\n\t\t<category><![CDATA[herdingcode]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://herdingcode.com/?p=346</guid>\r\n\t\t<description><![CDATA[This
+      episode of Herding Code Kevin and Jon catch up with Sara Chipps to find out
+      how Girl Develop It is going. Kevin jumps right into it by asking Sara about
+      what&#8217;s been going on over the past year. Sara goes back to what was on
+      their minds as they were first getting started with [...]]]></description>\r\n\t\t\t<content:encoded><![CDATA[<p>This
+      episode of Herding Code Kevin and Jon catch up with Sara Chipps to find out
+      how Girl Develop It is going.</p>\n<ul>\n<li>Kevin jumps right into it by asking
+      Sara about what&#8217;s been going on over the past year. Sara goes back to
+      what was on their minds as they were first getting started with their first
+      class, and how that&#8217;s grown to 6 cities worldwide, and their original
+      New York chapter offers 20 classes a month with 5 teachers. </li>\n<li>Kevin
+      asks where the other teachers came from, and Sara spins a tall tale about flamethrower
+      classes. Well, maybe it&#8217;s true, but I find it a bit suspect. </li>\n<li>Kevin
+      asks about where the classes are held. </li>\n<li>Jon asks about how the money
+      part works out. Sara explains how the class fees, donations, and teacher payments
+      all work out. </li>\n<li>Kevin asks Sara about about what tools they teach,
+      and Sara mentions Aptana. </li>\n<li>Jon asks for some success stories and Sara
+      tells a few. </li>\n<li>Kevin asks how many students go through several classes;
+      Sara says they see about 25% frequent fliers. </li>\n<li>Jon asks if there&#8217;s
+      some measurement of how much the students actually learn. Sara explains that
+      the classes include a good amount of hands-on work and homework, and that she
+      and the other teachers continue to learn how to gage when students are getting
+      lost. </li>\n<li>Kevin asks if there are some students that just don&#8217;t
+      get it, and Sara says that some students have a tough time understanding that
+      a single missing character can break a whole program. Everyone commiserates
+      about this fun part of software development. Jon speculates that young women
+      may be missing out on some of the split between cold logic and reason because
+      they don&#8217;t play enough video games. </li>\n<li>Jon notes that a lot of
+      real world computer programming involves problem solving and support network
+      and asks if students are equipped with those things. Sara talks about how anyone
+      watching her code will see a good amount of debugging; additionally she teaches
+      students about how to use StackOverflow so they can get their questions solved.
+      </li>\n<li>Kevin asks how the curriculum and courses have evolved over the past
+      year. Sara and Jon talk about the amount of time and effort involved in preparing
+      decent training materials.</li>\n<li>Kevin asks about changes in teaching approach
+      over the course of the past year. Sara said she&#8217;s moved from code-only
+      to using some slides, and that when writing code it&#8217;s important to walk
+      through it in pretty good detail.</li>\n<li>Kevin asks what&#8217;s been different
+      from expectations, and Sara talks about both the amount of interest and community
+      goodwill.</li>\n<li>Kevin asks about how Girl Develop It has spread to other
+      cities, and asks about how much of the content is shared between cities.</li>\n<li>Jon
+      asks about how the branding and design is handled.</li>\n<li>Jon asks if there
+      are advanced classes or seminars.</li>\n<li>Jon asks Sara what sort of projects
+      she&#8217;s been working on lately. Sara says it&#8217;s pretty much all Javascript
+      lately.</li>\n<li>Kevin asks if there will be a node.js class (drink!)</li>\n<li>Kevin
+      asks what&#8217;s next for Girl Develop It, which prompts Sara to talk about
+      the first Girl Develop It hack-a-thon. Apparently these are like a guy hack-a-thon
+      except with less pizza and body odor and more resort and catering.</li>\n<li>Kevin
+      asks if Girl Develop It could develop into a full time gig. Sara says that all
+      the leaders love developing and don&#8217;t want to give that up, so they&#8217;re
+      still trying to figure that out.</li>\n<li>Jon asks how listeners can support
+      Girl Develop It. Sara lists a range of options, including book, laptop donations,
+      and meeting space. Kevin asks about cash contributions.</li>\n<li>Jon and Kevin
+      note that there are no West Coast US branches. Sara mentions that a bay area
+      location may start soon.</li>\n<li>Kevin asks about the 15% male attendance
+      in Girl Develop It, and Sara explains how that works.</li>\n<li>Jon asks if
+      there&#8217;s potential for virtual events and video recordings. Sara explains
+      that, while it sounds great logistically, it misses out on a lot of the most
+      important aspects of the Girl Develop It classroom experience. They&#8217;ve
+      got trial running in the Columbus branch, though, so they&#8217;ll see how it
+      goes.</li>\n<li>Sara teases about an interesting hack-a-thon project they did
+      recently using the Aviary <acronym title='Application Interface'><span class='caps'>API</span></acronym>&#8217;s
+      called Stash Your Stash, which removes moustaches from photos because &quot;they&#8217;re
+      super creepy!&quot;</li>\n</ul>\n<p>Show Links:</p>\n<ul>\n<li><a href=\"http://sarajchipps.com/\">Sara
+      Chipps</a> (<a href=\"http://twitter.com/#!/sarajchipps\">@sarajchipps</a>)
+      </li>\n<li><a href=\"http://girldevelopit.com/\">Girl Develop It</a> </li>\n<li><a
+      href=\"http://madagascarinstitute.com/about/\">The Madagascar Institute</a>
+      </li>\n<li><a href=\"http://www.aptana.com/\">Aptana</a> </li>\n<li><a href=\"http://girldevelopit.tumblr.com/post/7811652677/hamptons-hackathon-for-humanity-results\">Hamptons
+      Hackathon for Humanity</a></li>\n<li><a href=\"http://commutingintraffic.com/\">Commuting
+      In Traffic</a></li>\n</ul>\n<p><strong>Download / Listen:</strong></p>\n<p align=\"left\"><a
+      href=\"http://herdingcode.com/wp-content/uploads/HerdingCode-0121-Sara-Chipps-updates-us-on-Girl-Develop-It.mp3\">Herding
+      Code 121: Sara Chipps updates us on Girl Develop It at one year</a></p>\n<p><a
+      href=\"http://feedads.g.doubleclick.net/~a/zbQT_2dH5wYf9i2ouLMQKo-HPD4/0/da\"><img
+      src=\"http://feedads.g.doubleclick.net/~a/zbQT_2dH5wYf9i2ouLMQKo-HPD4/0/di\"
+      border=\"0\" ismap=\"true\"></img></a><br/><br />\n<a href=\"http://feedads.g.doubleclick.net/~a/zbQT_2dH5wYf9i2ouLMQKo-HPD4/1/da\"><img
+      src=\"http://feedads.g.doubleclick.net/~a/zbQT_2dH5wYf9i2ouLMQKo-HPD4/1/di\"
+      border=\"0\" ismap=\"true\"></img></a></p>\n<p><img src=\"http://feeds.feedburner.com/~r/HerdingCode/~4/IGNGCnrS2Ig\"
+      height=\"1\" width=\"1\"/></p>\n\n\n\nShare and Enjoy:\n\n\n\t<a rel=\"nofollow\"
+      \ href=\"http://delicious.com/post?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FIGNGCnrS2Ig%2F&amp;title=Herding%20Code%20121%3A%20Sara%20Chipps%20updates%20us%20on%20Girl%20Develop%20It%20at%20one%20year&amp;notes=This%20episode%20of%20Herding%20Code%20Kevin%20and%20Jon%20catch%20up%20with%20Sara%20Chipps%20to%20find%20out%20how%20Girl%20Develop%20It%20is%20going.%20Kevin%20jumps%20right%20into%20it%20by%20asking%20Sara%20about%20what%26%238217%3Bs%20been%20going%20on%20over%20the%20past%20year.%20Sara%20goes%20back%20to%20what%20was%20on%20their%20minds%20as%20they%20were%20first%20getting%20started%20with%20%5B...%5D\"
+      title=\"del.icio.us\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/delicious.png\"
+      title=\"del.icio.us\" alt=\"del.icio.us\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dotnetkicks.com/kick/?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FIGNGCnrS2Ig%2F&amp;title=Herding%20Code%20121%3A%20Sara%20Chipps%20updates%20us%20on%20Girl%20Develop%20It%20at%20one%20year\"
+      title=\"DotNetKicks\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dotnetkicks.png\"
+      title=\"DotNetKicks\" alt=\"DotNetKicks\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dzone.com/links/add.html?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FIGNGCnrS2Ig%2F&amp;title=Herding%20Code%20121%3A%20Sara%20Chipps%20updates%20us%20on%20Girl%20Develop%20It%20at%20one%20year\"
+      title=\"DZone\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dzone.png\"
+      title=\"DZone\" alt=\"DZone\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://reddit.com/submit?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FIGNGCnrS2Ig%2F&amp;title=Herding%20Code%20121%3A%20Sara%20Chipps%20updates%20us%20on%20Girl%20Develop%20It%20at%20one%20year\"
+      title=\"Reddit\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/reddit.png\"
+      title=\"Reddit\" alt=\"Reddit\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FIGNGCnrS2Ig%2F&amp;title=Herding%20Code%20121%3A%20Sara%20Chipps%20updates%20us%20on%20Girl%20Develop%20It%20at%20one%20year&amp;bodytext=This%20episode%20of%20Herding%20Code%20Kevin%20and%20Jon%20catch%20up%20with%20Sara%20Chipps%20to%20find%20out%20how%20Girl%20Develop%20It%20is%20going.%20Kevin%20jumps%20right%20into%20it%20by%20asking%20Sara%20about%20what%26%238217%3Bs%20been%20going%20on%20over%20the%20past%20year.%20Sara%20goes%20back%20to%20what%20was%20on%20their%20minds%20as%20they%20were%20first%20getting%20started%20with%20%5B...%5D\"
+      title=\"Digg\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/digg.png\"
+      title=\"Digg\" alt=\"Digg\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.stumbleupon.com/submit?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FIGNGCnrS2Ig%2F&amp;title=Herding%20Code%20121%3A%20Sara%20Chipps%20updates%20us%20on%20Girl%20Develop%20It%20at%20one%20year\"
+      title=\"StumbleUpon\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/stumbleupon.png\"
+      title=\"StumbleUpon\" alt=\"StumbleUpon\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FIGNGCnrS2Ig%2F&amp;title=Herding%20Code%20121%3A%20Sara%20Chipps%20updates%20us%20on%20Girl%20Develop%20It%20at%20one%20year&amp;source=Lazycoder+&amp;summary=This%20episode%20of%20Herding%20Code%20Kevin%20and%20Jon%20catch%20up%20with%20Sara%20Chipps%20to%20find%20out%20how%20Girl%20Develop%20It%20is%20going.%20Kevin%20jumps%20right%20into%20it%20by%20asking%20Sara%20about%20what%26%238217%3Bs%20been%20going%20on%20over%20the%20past%20year.%20Sara%20goes%20back%20to%20what%20was%20on%20their%20minds%20as%20they%20were%20first%20getting%20started%20with%20%5B...%5D\"
+      title=\"LinkedIn\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/linkedin.png\"
+      title=\"LinkedIn\" alt=\"LinkedIn\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.facebook.com/share.php?u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FIGNGCnrS2Ig%2F&amp;t=Herding%20Code%20121%3A%20Sara%20Chipps%20updates%20us%20on%20Girl%20Develop%20It%20at%20one%20year\"
+      title=\"Facebook\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/facebook.png\"
+      title=\"Facebook\" alt=\"Facebook\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.friendfeed.com/share?title=Herding%20Code%20121%3A%20Sara%20Chipps%20updates%20us%20on%20Girl%20Develop%20It%20at%20one%20year&amp;link=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FIGNGCnrS2Ig%2F\"
+      title=\"FriendFeed\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/friendfeed.png\"
+      title=\"FriendFeed\" alt=\"FriendFeed\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://news.ycombinator.com/submitlink?u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FIGNGCnrS2Ig%2F&amp;t=Herding%20Code%20121%3A%20Sara%20Chipps%20updates%20us%20on%20Girl%20Develop%20It%20at%20one%20year\"
+      title=\"HackerNews\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/hackernews.png\"
+      title=\"HackerNews\" alt=\"HackerNews\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.netvibes.com/share?title=Herding%20Code%20121%3A%20Sara%20Chipps%20updates%20us%20on%20Girl%20Develop%20It%20at%20one%20year&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FIGNGCnrS2Ig%2F\"
+      title=\"Netvibes\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/netvibes.png\"
+      title=\"Netvibes\" alt=\"Netvibes\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://posterous.com/share?linkto=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FIGNGCnrS2Ig%2F&amp;title=Herding%20Code%20121%3A%20Sara%20Chipps%20updates%20us%20on%20Girl%20Develop%20It%20at%20one%20year&amp;selection=This%20episode%20of%20Herding%20Code%20Kevin%20and%20Jon%20catch%20up%20with%20Sara%20Chipps%20to%20find%20out%20how%20Girl%20Develop%20It%20is%20going.%20Kevin%20jumps%20right%20into%20it%20by%20asking%20Sara%20about%20what%26%238217%3Bs%20been%20going%20on%20over%20the%20past%20year.%20Sara%20goes%20back%20to%20what%20was%20on%20their%20minds%20as%20they%20were%20first%20getting%20started%20with%20%5B...%5D\"
+      title=\"Posterous\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/posterous.png\"
+      title=\"Posterous\" alt=\"Posterous\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.tumblr.com/share?v=3&amp;u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FIGNGCnrS2Ig%2F&amp;t=Herding%20Code%20121%3A%20Sara%20Chipps%20updates%20us%20on%20Girl%20Develop%20It%20at%20one%20year&amp;s=This%20episode%20of%20Herding%20Code%20Kevin%20and%20Jon%20catch%20up%20with%20Sara%20Chipps%20to%20find%20out%20how%20Girl%20Develop%20It%20is%20going.%20Kevin%20jumps%20right%20into%20it%20by%20asking%20Sara%20about%20what%26%238217%3Bs%20been%20going%20on%20over%20the%20past%20year.%20Sara%20goes%20back%20to%20what%20was%20on%20their%20minds%20as%20they%20were%20first%20getting%20started%20with%20%5B...%5D\"
+      title=\"Tumblr\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/tumblr.png\"
+      title=\"Tumblr\" alt=\"Tumblr\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://twitter.com/home?status=Herding%20Code%20121%3A%20Sara%20Chipps%20updates%20us%20on%20Girl%20Develop%20It%20at%20one%20year%20-%20http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FIGNGCnrS2Ig%2F\"
+      title=\"Twitter\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/twitter.png\"
+      title=\"Twitter\" alt=\"Twitter\" class=\"sociable-hovers\" /></a>\n\n\n<br/><br/><div
+      class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IdBUthGS04Q:IGNGCnrS2Ig:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IdBUthGS04Q:IGNGCnrS2Ig:V_sGLiPBpWU\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=IdBUthGS04Q:IGNGCnrS2Ig:V_sGLiPBpWU\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IdBUthGS04Q:IGNGCnrS2Ig:D7DqB2pKExk\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=IdBUthGS04Q:IGNGCnrS2Ig:D7DqB2pKExk\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IdBUthGS04Q:IGNGCnrS2Ig:dnMXMwOfBR0\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=dnMXMwOfBR0\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IdBUthGS04Q:IGNGCnrS2Ig:F7zBnMyn0Lo\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=IdBUthGS04Q:IGNGCnrS2Ig:F7zBnMyn0Lo\"
+      border=\"0\"></img></a>\n</div>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://herdingcode.com/?feed=rss2&amp;p=346</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n<enclosure
+      url=\"http://feedproxy.google.com/~r/HerdingCode/~5/DgOqT7HyPos/HerdingCode-0121-Sara-Chipps-updates-us-on-Girl-Develop-It.mp3\"
+      length=\"34795145\" type=\"audio/mpeg\" />\r\n\t\t</item>\r\n\t\t<item>\r\n\t\t<title>Herding
+      Code 120: Ryan Stewart on RIAs and All Things Adobe</title>\r\n\t\t<link>http://herdingcode.com/?p=343</link>\r\n\t\t<comments>http://herdingcode.com/?p=343#comments</comments>\r\n\t\t<pubDate>Tue,
+      13 Sep 2011 03:48:53 +0000</pubDate>\r\n\t\t<dc:creator>Scott Koon</dc:creator>\r\n\t\t\t\t<category><![CDATA[interview]]></category>\r\n\t\t<category><![CDATA[podcast]]></category>\r\n\t\t<category><![CDATA[herdingcode]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://herdingcode.com/?p=343</guid>\r\n\t\t<description><![CDATA[This
+      episode of Herding Code the guys talk to Ryan Stewart, a developer evangelist
+      at Adobe. Scott K asks about the pricing of Adobe products. Ryan explains why
+      things are priced as they are and talks about the subscription model alternative.
+      Jon talks about the open other free or inexpensive alternatives for beginning
+      Adobe development [...]]]></description>\r\n\t\t\t<content:encoded><![CDATA[<p>This
+      episode of Herding Code the guys talk to Ryan Stewart, a developer evangelist
+      at Adobe.</p>\n<ul>\n<li>Scott K asks about the pricing of Adobe products. Ryan
+      explains why things are priced as they are and talks about the subscription
+      model alternative. </li>\n<li>Jon talks about the open other free or inexpensive
+      alternatives for beginning Adobe development since the formats are generally
+      open sourced. Ryan agrees and also explains that Adobe&#8217;s entire pricing
+      model is built around tools, whereas Microsoft&#8217;s includes both tools and
+      servers. </li>\n<li>Jon asks about the licensing around Flash Media Server.
+      Ryan explains that it&#8217;s not something general developers will need to
+      deal with. </li>\n<li>Scott K speculates around the idea of appliances from
+      Adobe which would be complete video / media processing systems. Ryan says he
+      thinks that&#8217;s interesting but he doesn&#8217;t expect anything like that
+      to happen. </li>\n<li>Jon asks about the general trends away from some rich
+      internet abuses in the past. Ryan and Jon talk about the polyfill approach for
+      using Flash and RIA technologies to augment browsers when the features aren&#8217;t
+      supported. Ryan and Scott K talk about how developers and the tech press have
+      quickly forgotten that many of the new emerging browser capabilities (typography,
+      media, animation) are modeled after capabilities that RIA technologies initially
+      pioneered. </li>\n<li>Scott K points out that this is a good segue to the new
+      Edge tool. Ryan talks about how Edge is a designer tool that creates CSS3 and
+      JavaScript animation using the timeline that Flash designers are used to. Jon
+      mentions that this makes more sense to him when thinking about Adobe primarily
+      as a developer tools company rather than a platform oriented company. </li>\n<li>Jon
+      asks about Adobe support for HTML5 / CSS3 development in Edge with Flash fallback.
+      Ryan talks about how they generally keep them separate, and if browser-based
+      animation isn&#8217;t supported it just won&#8217;t play. </li>\n<li>Kevin asks
+      about how Edge affects the accessibility of the underlying content. </li>\n<li>Jon
+      asks about how Flash Builder 4.5 allows for developing native iOS and Android
+      applications. Ryan explains how it works and clarifies how it complies with
+      Apple developer guidelines. There&#8217;s a mention of the popular Mono apps
+      which run on iOS. </li>\n<li>Twitter question from Chris Edwards: &quot;What
+      are the are the best tools for automated testing of Flash UI&#8217;s&quot; &#8211;
+      Ryan recommends HP Quick Test Pro </li>\n<li>Scott K asks about Adobe Air &#8211;
+      it seemed great, but seems to have kind of fallen out of favor. What&#8217;s
+      the deal there? Ryan talks about how Air was both a great, bold idea, but also
+      a new challenge for Adobe, in that Air applications are much longer running
+      than most Flash apps. </li>\n<li>Jon asks about some annoyances in installing
+      updates for Air, Flash, etc. Ryan explains some of the reasons for the updates.
+      Jon asks about the possibility to add in more of an auto-update experience.
+      </li>\n<li>Jon asks Ryan about some of the new features in Flash. Ryan talks
+      about a lot of features, including Stage Video and 3D GPU support and graphics
+      features. Scott K. asks if there are opportunities for leveraging WebGL, and
+      Ryan says that there have been discussions about that but nothing&#8217;s in
+      progress yet. </li>\n<li>Ryan asks the guys what they&#8217;re expecting at
+      at BUILD, and they all clam up. Scott K. ask about Flash on Windows Phone. Ryan
+      says it&#8217;d be great, but he&#8217;d be surprised given the Silverlight
+      support on Windows Phone. Kevin&#8217;s happy that speculation will finally
+      stop. Scott K. talks it&#8217;s good that developers are having to care about
+      memory and <acronym title='Central Processing Unit'><span class='caps'>CPU</span></acronym>
+      usage again. </li>\n<li>Ryan talks about the difficulty of bringing richness
+      and creativity to the client without adversely impacting performance. </li>\n<li>Scott
+      K asks about the current state of Adobe Labs. Ryan points out that the Adobe
+      MAX conference is coming up in October, so Labs will probably be pretty quiet
+      until then. </li>\n<li>Jon asks about Muse. Ryan explains that really targeted
+      at print designers who want to create web content, so it&#8217;s not really
+      a tool for web designers or developers. </li>\n<li>Jon asks about some Adobe
+      client products which are developed in Air. </li>\n<li>Scott K. asks about what
+      big surprises may be happening at MAX this year. Ryan and and Scott K. speculate
+      a bit more about BUILD, and Ryan tells listeners who recognize him at BUILD
+      to please say hi. Jon says he might sneak in if he can locate a catering costume.
+      </li>\n</ul>\n<p>Show Links:</p>\n<ul>\n<li><a href=\"http://blog.digitalbackcountry.com/\">Ryan
+      Stewart</a> (<a href=\"http://twitter.com/ryanstewart\">@ryanstewart</a>) </li>\n<li><a
+      href=\"http://labs.adobe.com/\">Adobe Labs</a> </li>\n<li><a href=\"http://max.adobe.com/\">Adobe
+      MAX</a> </li>\n<li><a href=\"http://www8.hp.com/us/en/software/software-solution.html?compURI=tcm:245-937061\">HP
+      Quick Test Pro</a> </li>\n</ul>\n<p><strong>Download / Listen:</strong></p>\n<p
+      align=\"left\"><a href=\"http://herdingcode.com/wp-content/uploads/HerdingCode-0120-Ryan-Stewart-on-RIAs-and-all-things-Adobe.mp3\">Herding
+      Code 120: Ryan Stewart on RIAs and all things Adobe</a></p>\n\n\n\nShare and
+      Enjoy:\n\n\n\t<a rel=\"nofollow\"  href=\"http://delicious.com/post?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D343&amp;title=Herding%20Code%20120%3A%20Ryan%20Stewart%20on%20RIAs%20and%20All%20Things%20Adobe&amp;notes=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Ryan%20Stewart%2C%20a%20developer%20evangelist%20at%20Adobe.%20Scott%20K%20asks%20about%20the%20pricing%20of%20Adobe%20products.%20Ryan%20explains%20why%20things%20are%20priced%20as%20they%20are%20and%20talks%20about%20the%20subscription%20model%20alternative.%20Jon%20talks%20about%20the%20open%20other%20free%20or%20inexpensive%20alternatives%20for%20beginning%20Adobe%20development%20%5B...%5D\"
+      title=\"del.icio.us\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/delicious.png\"
+      title=\"del.icio.us\" alt=\"del.icio.us\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dotnetkicks.com/kick/?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D343&amp;title=Herding%20Code%20120%3A%20Ryan%20Stewart%20on%20RIAs%20and%20All%20Things%20Adobe\"
+      title=\"DotNetKicks\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dotnetkicks.png\"
+      title=\"DotNetKicks\" alt=\"DotNetKicks\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dzone.com/links/add.html?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D343&amp;title=Herding%20Code%20120%3A%20Ryan%20Stewart%20on%20RIAs%20and%20All%20Things%20Adobe\"
+      title=\"DZone\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dzone.png\"
+      title=\"DZone\" alt=\"DZone\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://reddit.com/submit?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D343&amp;title=Herding%20Code%20120%3A%20Ryan%20Stewart%20on%20RIAs%20and%20All%20Things%20Adobe\"
+      title=\"Reddit\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/reddit.png\"
+      title=\"Reddit\" alt=\"Reddit\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D343&amp;title=Herding%20Code%20120%3A%20Ryan%20Stewart%20on%20RIAs%20and%20All%20Things%20Adobe&amp;bodytext=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Ryan%20Stewart%2C%20a%20developer%20evangelist%20at%20Adobe.%20Scott%20K%20asks%20about%20the%20pricing%20of%20Adobe%20products.%20Ryan%20explains%20why%20things%20are%20priced%20as%20they%20are%20and%20talks%20about%20the%20subscription%20model%20alternative.%20Jon%20talks%20about%20the%20open%20other%20free%20or%20inexpensive%20alternatives%20for%20beginning%20Adobe%20development%20%5B...%5D\"
+      title=\"Digg\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/digg.png\"
+      title=\"Digg\" alt=\"Digg\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.stumbleupon.com/submit?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D343&amp;title=Herding%20Code%20120%3A%20Ryan%20Stewart%20on%20RIAs%20and%20All%20Things%20Adobe\"
+      title=\"StumbleUpon\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/stumbleupon.png\"
+      title=\"StumbleUpon\" alt=\"StumbleUpon\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D343&amp;title=Herding%20Code%20120%3A%20Ryan%20Stewart%20on%20RIAs%20and%20All%20Things%20Adobe&amp;source=Lazycoder+&amp;summary=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Ryan%20Stewart%2C%20a%20developer%20evangelist%20at%20Adobe.%20Scott%20K%20asks%20about%20the%20pricing%20of%20Adobe%20products.%20Ryan%20explains%20why%20things%20are%20priced%20as%20they%20are%20and%20talks%20about%20the%20subscription%20model%20alternative.%20Jon%20talks%20about%20the%20open%20other%20free%20or%20inexpensive%20alternatives%20for%20beginning%20Adobe%20development%20%5B...%5D\"
+      title=\"LinkedIn\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/linkedin.png\"
+      title=\"LinkedIn\" alt=\"LinkedIn\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.facebook.com/share.php?u=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D343&amp;t=Herding%20Code%20120%3A%20Ryan%20Stewart%20on%20RIAs%20and%20All%20Things%20Adobe\"
+      title=\"Facebook\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/facebook.png\"
+      title=\"Facebook\" alt=\"Facebook\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.friendfeed.com/share?title=Herding%20Code%20120%3A%20Ryan%20Stewart%20on%20RIAs%20and%20All%20Things%20Adobe&amp;link=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D343\"
+      title=\"FriendFeed\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/friendfeed.png\"
+      title=\"FriendFeed\" alt=\"FriendFeed\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://news.ycombinator.com/submitlink?u=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D343&amp;t=Herding%20Code%20120%3A%20Ryan%20Stewart%20on%20RIAs%20and%20All%20Things%20Adobe\"
+      title=\"HackerNews\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/hackernews.png\"
+      title=\"HackerNews\" alt=\"HackerNews\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.netvibes.com/share?title=Herding%20Code%20120%3A%20Ryan%20Stewart%20on%20RIAs%20and%20All%20Things%20Adobe&amp;url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D343\"
+      title=\"Netvibes\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/netvibes.png\"
+      title=\"Netvibes\" alt=\"Netvibes\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://posterous.com/share?linkto=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D343&amp;title=Herding%20Code%20120%3A%20Ryan%20Stewart%20on%20RIAs%20and%20All%20Things%20Adobe&amp;selection=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Ryan%20Stewart%2C%20a%20developer%20evangelist%20at%20Adobe.%20Scott%20K%20asks%20about%20the%20pricing%20of%20Adobe%20products.%20Ryan%20explains%20why%20things%20are%20priced%20as%20they%20are%20and%20talks%20about%20the%20subscription%20model%20alternative.%20Jon%20talks%20about%20the%20open%20other%20free%20or%20inexpensive%20alternatives%20for%20beginning%20Adobe%20development%20%5B...%5D\"
+      title=\"Posterous\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/posterous.png\"
+      title=\"Posterous\" alt=\"Posterous\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.tumblr.com/share?v=3&amp;u=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D343&amp;t=Herding%20Code%20120%3A%20Ryan%20Stewart%20on%20RIAs%20and%20All%20Things%20Adobe&amp;s=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Ryan%20Stewart%2C%20a%20developer%20evangelist%20at%20Adobe.%20Scott%20K%20asks%20about%20the%20pricing%20of%20Adobe%20products.%20Ryan%20explains%20why%20things%20are%20priced%20as%20they%20are%20and%20talks%20about%20the%20subscription%20model%20alternative.%20Jon%20talks%20about%20the%20open%20other%20free%20or%20inexpensive%20alternatives%20for%20beginning%20Adobe%20development%20%5B...%5D\"
+      title=\"Tumblr\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/tumblr.png\"
+      title=\"Tumblr\" alt=\"Tumblr\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://twitter.com/home?status=Herding%20Code%20120%3A%20Ryan%20Stewart%20on%20RIAs%20and%20All%20Things%20Adobe%20-%20http%3A%2F%2Fherdingcode.com%2F%3Fp%3D343\"
+      title=\"Twitter\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/twitter.png\"
+      title=\"Twitter\" alt=\"Twitter\" class=\"sociable-hovers\" /></a>\n\n\n<br/><br/><div
+      class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=P5YBhfltBro:aMxyOy1iglo:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=P5YBhfltBro:aMxyOy1iglo:V_sGLiPBpWU\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=P5YBhfltBro:aMxyOy1iglo:V_sGLiPBpWU\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=P5YBhfltBro:aMxyOy1iglo:D7DqB2pKExk\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=P5YBhfltBro:aMxyOy1iglo:D7DqB2pKExk\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=P5YBhfltBro:aMxyOy1iglo:dnMXMwOfBR0\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=dnMXMwOfBR0\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=P5YBhfltBro:aMxyOy1iglo:F7zBnMyn0Lo\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=P5YBhfltBro:aMxyOy1iglo:F7zBnMyn0Lo\"
+      border=\"0\"></img></a>\n</div>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://herdingcode.com/?feed=rss2&amp;p=343</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n<enclosure
+      url=\"http://herdingcode.com/wp-content/uploads/HerdingCode-0120-Ryan-Stewart-on-RIAs-and-all-things-Adobe.mp3\"
+      length=\"40310009\" type=\"audio/mpeg\" />\r\n\t\t</item>\r\n\t\t<item>\r\n\t\t<title>Herding
+      Code 119: On The Writing Technical Books (with Jesse Liberty, Phil Haack, and
+      Brad Wilson)</title>\r\n\t\t<link>http://herdingcode.com/?p=342</link>\r\n\t\t<comments>http://herdingcode.com/?p=342#comments</comments>\r\n\t\t<pubDate>Sat,
+      27 Aug 2011 03:47:41 +0000</pubDate>\r\n\t\t<dc:creator>Scott Koon</dc:creator>\r\n\t\t\t\t<category><![CDATA[interview]]></category>\r\n\t\t<category><![CDATA[podcast]]></category>\r\n\t\t<category><![CDATA[herdingcode]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://herdingcode.com/?p=342</guid>\r\n\t\t<description><![CDATA[This
+      episode of Herding Code the guys talk to Jesse Liberty, Phil Haack, and Brad
+      Wilson about writing technical books. Jesse has written dozens of technical
+      books, and both Brad and Phil worked with Jon and K. Scott on the recently released
+      ASP.NET Professional MVC 3 book. What&#8217;s it like to write a book? Why [...]]]></description>\r\n\t\t\t<content:encoded><![CDATA[<p>This
+      episode of Herding Code the guys talk to Jesse Liberty, Phil Haack, and Brad
+      Wilson about writing technical books. Jesse has written dozens of technical
+      books, and both Brad and Phil worked with Jon and K. Scott on the recently released
+      ASP.NET Professional MVC 3 book. What&#8217;s it like to write a book? Why do
+      it at all? How does the process work? How is it changing? Is Angry Birds your
+      favorite story? Join us for a very literary version of Herding Code to find
+      out.</p>\n<ul>\n<li>We start with a listener question from @<a href=\"http://twitter.com/#!/tpdorsey\">tpdorsey</a>
+      (Terrence Dorsey): &#8220;*Printed* books? If so, why bother? I ask this as
+      a print writer and editor for 17 of last 20 years.&#8221;</li>\n<li>There&#8217;s
+      a discussion of the value that the editorial process adds to books as compared
+      to blog posts.</li>\n<li>Twitter question from <a href=\"http://twitter.com/schwarty\">@schwarty</a>:
+      &#8220;Best way to work a first time deal? Submit queries? Try to team up with
+      co-writers?&#8221; Phil, Brad, Jon, K. Scott, and Jesse tell stories about how
+      they got their first book deals.</li>\n<li>Phil notes that most authors get
+      a start in other mediums &#8211; blogs, magazines, possibly StackOverflow in
+      the future.</li>\n<li>Jesse talks about his investigation of self-publishing.
+      In the end, he decided that the editorial process tipped the scales towards
+      working with a publishing company.</li>\n<li>Jon references Twitter questions
+      from <a href=\"http://twitter.com/#!/devhammer\">@devhammer</a> and <a href=\"http://twitter.com/#!/jglozano\">@jglozano</a>
+      on dealing with procrastination, making time to write, etc. He points to positive
+      pressure of working for a publisher under a schedule and a contract to get the
+      book out the door. Brad talks about how peer pressure from other authors to
+      keep up is also helpful.</li>\n<li>There&#8217;s discussion about the challenge
+      writing up an outline before starting the book. Phil talks about how the publishing
+      industry in general is pretty stuck on older technologies like FTP, and in general
+      the process feels like waterfall software development.</li>\n<li>Jesse says
+      that if you&#8217;re reasonably on schedule, publishers are pretty flexible
+      about changes to the outline.</li>\n<li>Brad answers listener questions from
+      <a href=\"http://twitter.com/#!/stevenproctor\">@stevenproctor</a> &#8220;Have
+      you found e-readers coming into their own to influence how you think about book?&#8221;
+      and &#8220;has it changed how you think about layout/presentation for cross
+      format reading&#8221; saying that it was difficult to write without seeing what
+      the end result would look like, but he was very happy when he saw the end result,
+      both in print and the e-book format.</li>\n<li>Jon talks about how working with
+      book templates from various publishers has taught him to appreciate the use
+      of styles in Word, explaining a case where he was able to search for code snippets
+      based on the styles that were used.</li>\n<li>Kevin asks some interesting questions
+      about whether working on the book puts pressures on when to ship the product,
+      and whether writing a book about a product points out features that should be
+      changed. Brad explains that the king of product changes due to writing (blogging
+      in this case) is Scott Guthrie.</li>\n<li>Phil talks about how Eilon (the technical
+      reviewer) was good at keeping him from digging too far into minute details that
+      nobody would care about. Jon explains that Eilon pointed out that the Controllers
+      chapter was going way into the weeds before actually showing the most common
+      use case, and Brad says that he&#8217;s in good company with an example from
+      Charles Petzold&#8217;s book on Windows programming.</li>\n<li>Jon talks about
+      the tricky chicken-and-egg situation with trying to explain the MVC pattern
+      in depth, since an in-depth explanation of the Model, View, and Controller requires
+      an in-depth understanding of the other components. Jon asks Jesse about how
+      he handles that, and Jesse talks about the importance of having a model user
+      and getting volunteer readers as you&#8217;re writing.</li>\n<li>Jon talks about
+      the benefit of working with other authors. Brad talks about the this is more
+      important with products with quick release cycles, and Phil compares book writing
+      with software development techniques.</li>\n<li>There&#8217;s a discussion on
+      ensuring a consistent voice in a book with more than one author.</li>\n<li>Phil,
+      Jon, and Brad discuss the conflict between beginner and advanced content. Are
+      the experts who are asking for advanced content representative of most readers?
+      Phil points out that writing advanced content is a lot more fun, but limits
+      the audience. Can a book please everyone? Is there a way to include beginner
+      and advanced content? Jesse describes some ways he handles this, and says that
+      it&#8217;s important to set expectations.</li>\n<li>Jon talks about the decision
+      to remove NerdDinner, referring instead to the MVC Music Store tutorial.</li>\n<li>Jesse
+      says that it&#8217;s remarkable that books are still selling well, since they&#8217;re
+      competing with blogs, tutorials, videos, etc. He speculates that the main selling
+      point for books now is in context: telling a story. Jon asks how he manages
+      to do that.</li>\n<li>Phil talks about the decision to put all the book&#8217;s
+      code samples in NuGet (triggering the Haacked NuGet Drinking Game clause).</li>\n<li>Jesse
+      talks about the mismatch between the publisher&#8217;s requirements for a flow
+      of completed chapters and the software developer&#8217;s desire to refactor.</li>\n<li>Jon
+      asks K. Scott how writing magazine articles compares to writing for a book.</li>\n<li>That&#8217;s
+      pretty much it.</li>\n</ul>\n<p>Show Links:</p>\n<ul>\n<li><a href=\"http://jesseliberty.com\">Jesse
+      Liberty</a> (<a href=\"http://twitter.com/#!/jesseliberty\">@jesseliberty</a>)</li>\n<li><a
+      href=\"http://haacked.com\">Phil Haack</a> (<a href=\"http://twitter.com/#!/haacked\">@haacked</a>)</li>\n<li><a
+      href=\"http://bradwilson.typepad.com/\">Brad Wilson</a> (<a href=\"http://twitter.com/#!/bradwilson\">@bradwilson</a>)</li>\n<li><a
+      href=\"http://www.amazon.com/gp/product/1118076583/ref=as_li_ss_il?ie=UTF8&amp;tag=youvebeenhaac-20&amp;linkCode=as2&amp;camp=217145&amp;creative=399373&amp;creativeASIN=1118076583\">Professional
+      ASP.NET MVC 3</a> on <a href=\"http://www.amazon.com/gp/product/1118076583/ref=as_li_ss_il?ie=UTF8&amp;tag=youvebeenhaac-20&amp;linkCode=as2&amp;camp=217145&amp;creative=399373&amp;creativeASIN=1118076583\">Amazon</a>
+      and at <a href=\"http://www.wrox.com/WileyCDA/WroxTitle/productCd-1118076583.html\">Wrox.com</a></li>\n<li><a
+      href=\"http://www.amazon.com/Jesse-Liberty/e/B000APP6I6\">Jesse&#8217;s dozens
+      of books on Amazon</a></li>\n<li><a href=\"http://weblogs.asp.net/leftslipper/\">Eilon
+      Lipton</a></li>\n</ul>\n<p><strong>Download / Listen:</strong></p>\n<p align=\"left\"><a
+      href=\"http://herdingcode.com/wp-content/uploads/HerdingCode-0119-On-The-Writing-Of-Technical-Books.mp3\">Herding
+      Code 118: On The Writing Technical Books (with Jesse Liberty, Phil Haack, and
+      Brad Wilson)</a></p>\n\n\n\nShare and Enjoy:\n\n\n\t<a rel=\"nofollow\"  href=\"http://delicious.com/post?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D342&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;notes=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"del.icio.us\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/delicious.png\"
+      title=\"del.icio.us\" alt=\"del.icio.us\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dotnetkicks.com/kick/?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D342&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"DotNetKicks\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dotnetkicks.png\"
+      title=\"DotNetKicks\" alt=\"DotNetKicks\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dzone.com/links/add.html?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D342&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"DZone\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dzone.png\"
+      title=\"DZone\" alt=\"DZone\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://reddit.com/submit?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D342&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"Reddit\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/reddit.png\"
+      title=\"Reddit\" alt=\"Reddit\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D342&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;bodytext=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"Digg\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/digg.png\"
+      title=\"Digg\" alt=\"Digg\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.stumbleupon.com/submit?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D342&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"StumbleUpon\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/stumbleupon.png\"
+      title=\"StumbleUpon\" alt=\"StumbleUpon\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D342&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;source=Lazycoder+&amp;summary=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"LinkedIn\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/linkedin.png\"
+      title=\"LinkedIn\" alt=\"LinkedIn\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.facebook.com/share.php?u=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D342&amp;t=Herding%20Code%20119%3A%20On%20The%20Writing%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"Facebook\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/facebook.png\"
+      title=\"Facebook\" alt=\"Facebook\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.friendfeed.com/share?title=Herding%20Code%20119%3A%20On%20The%20Writing%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;link=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D342\"
+      title=\"FriendFeed\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/friendfeed.png\"
+      title=\"FriendFeed\" alt=\"FriendFeed\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://news.ycombinator.com/submitlink?u=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D342&amp;t=Herding%20Code%20119%3A%20On%20The%20Writing%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"HackerNews\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/hackernews.png\"
+      title=\"HackerNews\" alt=\"HackerNews\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.netvibes.com/share?title=Herding%20Code%20119%3A%20On%20The%20Writing%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D342\"
+      title=\"Netvibes\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/netvibes.png\"
+      title=\"Netvibes\" alt=\"Netvibes\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://posterous.com/share?linkto=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D342&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;selection=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"Posterous\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/posterous.png\"
+      title=\"Posterous\" alt=\"Posterous\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.tumblr.com/share?v=3&amp;u=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D342&amp;t=Herding%20Code%20119%3A%20On%20The%20Writing%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;s=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"Tumblr\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/tumblr.png\"
+      title=\"Tumblr\" alt=\"Tumblr\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://twitter.com/home?status=Herding%20Code%20119%3A%20On%20The%20Writing%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29%20-%20http%3A%2F%2Fherdingcode.com%2F%3Fp%3D342\"
+      title=\"Twitter\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/twitter.png\"
+      title=\"Twitter\" alt=\"Twitter\" class=\"sociable-hovers\" /></a>\n\n\n<br/><br/><div
+      class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=ZvvN_UJ46rE:cik9EivEAwQ:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=ZvvN_UJ46rE:cik9EivEAwQ:V_sGLiPBpWU\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=ZvvN_UJ46rE:cik9EivEAwQ:V_sGLiPBpWU\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=ZvvN_UJ46rE:cik9EivEAwQ:D7DqB2pKExk\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=ZvvN_UJ46rE:cik9EivEAwQ:D7DqB2pKExk\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=ZvvN_UJ46rE:cik9EivEAwQ:dnMXMwOfBR0\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=dnMXMwOfBR0\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=ZvvN_UJ46rE:cik9EivEAwQ:F7zBnMyn0Lo\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=ZvvN_UJ46rE:cik9EivEAwQ:F7zBnMyn0Lo\"
+      border=\"0\"></img></a>\n</div>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://herdingcode.com/?feed=rss2&amp;p=342</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n<enclosure
+      url=\"http://herdingcode.com/wp-content/uploads/HerdingCode-0119-On-The-Writing-Of-Technical-Books.mp3\"
+      length=\"43245014\" type=\"audio/mpeg\" />\r\n\t\t</item>\r\n\t\t<item>\r\n\t\t<title>Herding
+      Code 119: On The Writing Of Technical Books (with Jesse Liberty, Phil Haack,
+      and Brad Wilson)</title>\r\n\t\t<link>http://feedproxy.google.com/~r/HerdingCode/~3/wnfG1ZPbk4Y/</link>\r\n\t\t<comments>http://feedproxy.google.com/~r/HerdingCode/~3/wnfG1ZPbk4Y/#comments</comments>\r\n\t\t<pubDate>Fri,
+      26 Aug 2011 18:27:55 +0000</pubDate>\r\n\t\t<dc:creator>Scott Koon</dc:creator>\r\n\t\t\t\t<category><![CDATA[interview]]></category>\r\n\t\t<category><![CDATA[podcast]]></category>\r\n\t\t<category><![CDATA[herdingcode]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://herdingcode.com/?p=337</guid>\r\n\t\t<description><![CDATA[This
+      episode of Herding Code the guys talk to Jesse Liberty, Phil Haack, and Brad
+      Wilson about writing technical books. Jesse has written dozens of technical
+      books, and both Brad and Phil worked with Jon and K. Scott on the recently released
+      ASP.NET Professional MVC 3 book. What&#8217;s it like to write a book? Why [...]]]></description>\r\n\t\t\t<content:encoded><![CDATA[<p>This
+      episode of Herding Code the guys talk to Jesse Liberty, Phil Haack, and Brad
+      Wilson about writing technical books. Jesse has written dozens of technical
+      books, and both Brad and Phil worked with Jon and K. Scott on the recently released
+      ASP.NET Professional MVC 3 book. What&#8217;s it like to write a book? Why do
+      it at all? How does the process work? How is it changing? Is Angry Birds your
+      favorite story? Join us for a very literary version of Herding Code to find
+      out.</p>\n<ul>\n<li>We start with a listener question from @<a href=\"http://twitter.com/#!/tpdorsey\">tpdorsey</a>
+      (Terrence Dorsey): &quot;*Printed* books? If so, why bother? I ask this as a
+      print writer and editor for 17 of last 20 years.&quot; </li>\n<li>There&#8217;s
+      a discussion of the value that the editorial process adds to books as compared
+      to blog posts. </li>\n<li>Twitter question from <a href=\"http://twitter.com/schwarty\">@schwarty</a>:
+      &quot;Best way to work a first time deal? Submit queries? Try to team up with
+      co-writers?&quot; Phil, Brad, Jon, K. Scott, and Jesse tell stories about how
+      they got their first book deals. </li>\n<li>Phil notes that most authors get
+      a start in other mediums &#8211; blogs, magazines, possibly StackOverflow in
+      the future. </li>\n<li>Jesse talks about his investigation of self-publishing.
+      In the end, he decided that the editorial process tipped the scales towards
+      working with a publishing company. </li>\n<li>Jon references Twitter questions
+      from <a href=\"http://twitter.com/#!/devhammer\">@devhammer</a> and <a href=\"http://twitter.com/#!/jglozano\">@jglozano</a>
+      on dealing with procrastination, making time to write, etc. He points to positive
+      pressure of working for a publisher under a schedule and a contract to get the
+      book out the door. Brad talks about how peer pressure from other authors to
+      keep up is also helpful. </li>\n<li>There&#8217;s discussion about the challenge
+      writing up an outline before starting the book. Phil talks about how the publishing
+      industry in general is pretty stuck on older technologies like FTP, and in general
+      the process feels like waterfall software development. </li>\n<li>Jesse says
+      that if you&#8217;re reasonably on schedule, publishers are pretty flexible
+      about changes to the outline. </li>\n<li>Brad answers listener questions from
+      <a href=\"http://twitter.com/#!/stevenproctor\">@stevenproctor</a> &quot;Have
+      you found e-readers coming into their own to influence how you think about book?&quot;
+      and &quot;has it changed how you think about layout/presentation for cross format
+      reading&quot; saying that it was difficult to write without seeing what the
+      end result would look like, but he was very happy when he saw the end result,
+      both in print and the e-book format. </li>\n<li>Jon talks about how working
+      with book templates from various publishers has taught him to appreciate the
+      use of styles in Word, explaining a case where he was able to search for code
+      snippets based on the styles that were used. </li>\n<li>Kevin asks some interesting
+      questions about whether working on the book puts pressures on when to ship the
+      product, and whether writing a book about a product points out features that
+      should be changed. Brad explains that the king of product changes due to writing
+      (blogging in this case) is Scott Guthrie. </li>\n<li>Phil talks about how Eilon
+      (the technical reviewer) was good at keeping him from digging too far into minute
+      details that nobody would care about. Jon explains that Eilon pointed out that
+      the Controllers chapter was going way into the weeds before actually showing
+      the most common use case, and Brad says that he&#8217;s in good company with
+      an example from Charles Petzold&#8217;s book on Windows programming. </li>\n<li>Jon
+      talks about the tricky chicken-and-egg situation with trying to explain the
+      MVC pattern in depth, since an in-depth explanation of the Model, View, and
+      Controller requires an in-depth understanding of the other components. Jon asks
+      Jesse about how he handles that, and Jesse talks about the importance of having
+      a model user and getting volunteer readers as you&#8217;re writing. </li>\n<li>Jon
+      talks about the benefit of working with other authors. Brad talks about the
+      this is more important with products with quick release cycles, and Phil compares
+      book writing with software development techniques. </li>\n<li>There&#8217;s
+      a discussion on ensuring a consistent voice in a book with more than one author.
+      </li>\n<li>Phil, Jon, and Brad discuss the conflict between beginner and advanced
+      content. Are the experts who are asking for advanced content representative
+      of most readers? Phil points out that writing advanced content is a lot more
+      fun, but limits the audience. Can a book please everyone? Is there a way to
+      include beginner and advanced content? Jesse describes some ways he handles
+      this, and says that it&#8217;s important to set expectations. </li>\n<li>Jon
+      talks about the decision to remove NerdDinner, referring instead to the MVC
+      Music Store tutorial. </li>\n<li>Jesse says that it&#8217;s remarkable that
+      books are still selling well, since they&#8217;re competing with blogs, tutorials,
+      videos, etc. He speculates that the main selling point for books now is in context:
+      telling a story. Jon asks how he manages to do that. </li>\n<li>Phil talks about
+      the decision to put all the book&#8217;s code samples in NuGet (triggering the
+      Haacked NuGet Drinking Game clause).</li>\n<li>Jesse talks about the mismatch
+      between the publisher&#8217;s requirements for a flow of completed chapters
+      and the software developer&#8217;s desire to refactor.</li>\n<li>Jon asks K.
+      Scott how writing magazine articles compares to writing for a book.</li>\n<li>That&#8217;s
+      pretty much it.</li>\n</ul>\n<p>Show Links:</p>\n<ul>\n<li><a href=\"http://jesseliberty.com\">Jesse
+      Liberty</a> (<a href=\"http://twitter.com/#!/jesseliberty\">@jesseliberty</a>)</li>\n<li><a
+      href=\"http://haacked.com\">Phil Haack</a> (<a href=\"http://twitter.com/#!/haacked\">@haacked</a>)</li>\n<li><a
+      href=\"http://bradwilson.typepad.com/\">Brad Wilson</a> (<a href=\"http://twitter.com/#!/bradwilson\">@bradwilson</a>)</li>\n<li><a
+      href=\"http://www.amazon.com/gp/product/1118076583/ref=as_li_ss_il?ie=UTF8&amp;tag=youvebeenhaac-20&amp;linkCode=as2&amp;camp=217145&amp;creative=399373&amp;creativeASIN=1118076583\">Professional
+      ASP.NET MVC 3</a> on <a href=\"http://www.amazon.com/gp/product/1118076583/ref=as_li_ss_il?ie=UTF8&amp;tag=youvebeenhaac-20&amp;linkCode=as2&amp;camp=217145&amp;creative=399373&amp;creativeASIN=1118076583\">Amazon</a>
+      and at <a href=\"http://www.wrox.com/WileyCDA/WroxTitle/productCd-1118076583.html\">Wrox.com</a></li>\n<li><a
+      href=\"http://www.amazon.com/Jesse-Liberty/e/B000APP6I6\">Jesse&#8217;s dozens
+      of books on Amazon</a></li>\n<li><a href=\"http://weblogs.asp.net/leftslipper/\">Eilon
+      Lipton</a></li>\n</ul>\n<p><strong>Download / Listen:</strong></p>\n<p align=\"left\"><a
+      href=\"http://herdingcode.com/wp-content/uploads/HerdingCode-0119-On-The-Writing-Of-Technical-Books.mp3\">Herding
+      Code 118: On The Writing Technical Books (with Jesse Liberty, Phil Haack, and
+      Brad Wilson)</a></p>\n<p><a href=\"http://feedads.g.doubleclick.net/~a/gvosB0cGnGcCboh-j90w-Ajk_fw/0/da\"><img
+      src=\"http://feedads.g.doubleclick.net/~a/gvosB0cGnGcCboh-j90w-Ajk_fw/0/di\"
+      border=\"0\" ismap=\"true\"></img></a><br/><br />\n<a href=\"http://feedads.g.doubleclick.net/~a/gvosB0cGnGcCboh-j90w-Ajk_fw/1/da\"><img
+      src=\"http://feedads.g.doubleclick.net/~a/gvosB0cGnGcCboh-j90w-Ajk_fw/1/di\"
+      border=\"0\" ismap=\"true\"></img></a></p>\n<p><img src=\"http://feeds.feedburner.com/~r/HerdingCode/~4/wnfG1ZPbk4Y\"
+      height=\"1\" width=\"1\"/></p>\n\n\n\nShare and Enjoy:\n\n\n\t<a rel=\"nofollow\"
+      \ href=\"http://delicious.com/post?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;notes=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"del.icio.us\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/delicious.png\"
+      title=\"del.icio.us\" alt=\"del.icio.us\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dotnetkicks.com/kick/?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"DotNetKicks\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dotnetkicks.png\"
+      title=\"DotNetKicks\" alt=\"DotNetKicks\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dzone.com/links/add.html?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"DZone\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dzone.png\"
+      title=\"DZone\" alt=\"DZone\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://reddit.com/submit?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"Reddit\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/reddit.png\"
+      title=\"Reddit\" alt=\"Reddit\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;bodytext=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"Digg\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/digg.png\"
+      title=\"Digg\" alt=\"Digg\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.stumbleupon.com/submit?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"StumbleUpon\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/stumbleupon.png\"
+      title=\"StumbleUpon\" alt=\"StumbleUpon\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;source=Lazycoder+&amp;summary=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"LinkedIn\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/linkedin.png\"
+      title=\"LinkedIn\" alt=\"LinkedIn\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.facebook.com/share.php?u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;t=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"Facebook\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/facebook.png\"
+      title=\"Facebook\" alt=\"Facebook\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.friendfeed.com/share?title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;link=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F\"
+      title=\"FriendFeed\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/friendfeed.png\"
+      title=\"FriendFeed\" alt=\"FriendFeed\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://news.ycombinator.com/submitlink?u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;t=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"HackerNews\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/hackernews.png\"
+      title=\"HackerNews\" alt=\"HackerNews\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.netvibes.com/share?title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F\"
+      title=\"Netvibes\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/netvibes.png\"
+      title=\"Netvibes\" alt=\"Netvibes\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://posterous.com/share?linkto=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;selection=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"Posterous\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/posterous.png\"
+      title=\"Posterous\" alt=\"Posterous\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.tumblr.com/share?v=3&amp;u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;t=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;s=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"Tumblr\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/tumblr.png\"
+      title=\"Tumblr\" alt=\"Tumblr\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://twitter.com/home?status=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29%20-%20http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F\"
+      title=\"Twitter\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/twitter.png\"
+      title=\"Twitter\" alt=\"Twitter\" class=\"sociable-hovers\" /></a>\n\n\n<br/><br/><div
+      class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IrKNiHbE7VU:wnfG1ZPbk4Y:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IrKNiHbE7VU:wnfG1ZPbk4Y:V_sGLiPBpWU\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=IrKNiHbE7VU:wnfG1ZPbk4Y:V_sGLiPBpWU\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IrKNiHbE7VU:wnfG1ZPbk4Y:D7DqB2pKExk\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=IrKNiHbE7VU:wnfG1ZPbk4Y:D7DqB2pKExk\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IrKNiHbE7VU:wnfG1ZPbk4Y:dnMXMwOfBR0\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=dnMXMwOfBR0\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IrKNiHbE7VU:wnfG1ZPbk4Y:F7zBnMyn0Lo\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=IrKNiHbE7VU:wnfG1ZPbk4Y:F7zBnMyn0Lo\"
+      border=\"0\"></img></a>\n</div>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://herdingcode.com/?feed=rss2&amp;p=337</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n<enclosure
+      url=\"http://feedproxy.google.com/~r/HerdingCode/~5/Devt-UVpDpE/HerdingCode-0119-On-The-Writing-Of-Technical-Books.mp3\"
+      length=\"43245014\" type=\"audio/mpeg\" />\r\n\t\t</item>\r\n\t\t<item>\r\n\t\t<title>Herding
+      Code 119: On The Writing Of Technical Books (with Jesse Liberty, Phil Haack,
+      and Brad Wilson)</title>\r\n\t\t<link>http://feedproxy.google.com/~r/HerdingCode/~3/wnfG1ZPbk4Y/</link>\r\n\t\t<comments>http://feedproxy.google.com/~r/HerdingCode/~3/wnfG1ZPbk4Y/#comments</comments>\r\n\t\t<pubDate>Fri,
+      26 Aug 2011 18:27:55 +0000</pubDate>\r\n\t\t<dc:creator>Scott Koon</dc:creator>\r\n\t\t\t\t<category><![CDATA[interview]]></category>\r\n\t\t<category><![CDATA[podcast]]></category>\r\n\t\t<category><![CDATA[herdingcode]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://herdingcode.com/?p=337</guid>\r\n\t\t<description><![CDATA[This
+      episode of Herding Code the guys talk to Jesse Liberty, Phil Haack, and Brad
+      Wilson about writing technical books. Jesse has written dozens of technical
+      books, and both Brad and Phil worked with Jon and K. Scott on the recently released
+      ASP.NET Professional MVC 3 book. What&#8217;s it like to write a book? Why [...]]]></description>\r\n\t\t\t<content:encoded><![CDATA[<p>This
+      episode of Herding Code the guys talk to Jesse Liberty, Phil Haack, and Brad
+      Wilson about writing technical books. Jesse has written dozens of technical
+      books, and both Brad and Phil worked with Jon and K. Scott on the recently released
+      ASP.NET Professional MVC 3 book. What&#8217;s it like to write a book? Why do
+      it at all? How does the process work? How is it changing? Is Angry Birds your
+      favorite story? Join us for a very literary version of Herding Code to find
+      out.</p>\n<ul>\n<li>We start with a listener question from @<a href=\"http://twitter.com/#!/tpdorsey\">tpdorsey</a>
+      (Terrence Dorsey): &quot;*Printed* books? If so, why bother? I ask this as a
+      print writer and editor for 17 of last 20 years.&quot; </li>\n<li>There&#8217;s
+      a discussion of the value that the editorial process adds to books as compared
+      to blog posts. </li>\n<li>Twitter question from <a href=\"http://twitter.com/schwarty\">@schwarty</a>:
+      &quot;Best way to work a first time deal? Submit queries? Try to team up with
+      co-writers?&quot; Phil, Brad, Jon, K. Scott, and Jesse tell stories about how
+      they got their first book deals. </li>\n<li>Phil notes that most authors get
+      a start in other mediums &#8211; blogs, magazines, possibly StackOverflow in
+      the future. </li>\n<li>Jesse talks about his investigation of self-publishing.
+      In the end, he decided that the editorial process tipped the scales towards
+      working with a publishing company. </li>\n<li>Jon references Twitter questions
+      from <a href=\"http://twitter.com/#!/devhammer\">@devhammer</a> and <a href=\"http://twitter.com/#!/jglozano\">@jglozano</a>
+      on dealing with procrastination, making time to write, etc. He points to positive
+      pressure of working for a publisher under a schedule and a contract to get the
+      book out the door. Brad talks about how peer pressure from other authors to
+      keep up is also helpful. </li>\n<li>There&#8217;s discussion about the challenge
+      writing up an outline before starting the book. Phil talks about how the publishing
+      industry in general is pretty stuck on older technologies like FTP, and in general
+      the process feels like waterfall software development. </li>\n<li>Jesse says
+      that if you&#8217;re reasonably on schedule, publishers are pretty flexible
+      about changes to the outline. </li>\n<li>Brad answers listener questions from
+      <a href=\"http://twitter.com/#!/stevenproctor\">@stevenproctor</a> &quot;Have
+      you found e-readers coming into their own to influence how you think about book?&quot;
+      and &quot;has it changed how you think about layout/presentation for cross format
+      reading&quot; saying that it was difficult to write without seeing what the
+      end result would look like, but he was very happy when he saw the end result,
+      both in print and the e-book format. </li>\n<li>Jon talks about how working
+      with book templates from various publishers has taught him to appreciate the
+      use of styles in Word, explaining a case where he was able to search for code
+      snippets based on the styles that were used. </li>\n<li>Kevin asks some interesting
+      questions about whether working on the book puts pressures on when to ship the
+      product, and whether writing a book about a product points out features that
+      should be changed. Brad explains that the king of product changes due to writing
+      (blogging in this case) is Scott Guthrie. </li>\n<li>Phil talks about how Eilon
+      (the technical reviewer) was good at keeping him from digging too far into minute
+      details that nobody would care about. Jon explains that Eilon pointed out that
+      the Controllers chapter was going way into the weeds before actually showing
+      the most common use case, and Brad says that he&#8217;s in good company with
+      an example from Charles Petzold&#8217;s book on Windows programming. </li>\n<li>Jon
+      talks about the tricky chicken-and-egg situation with trying to explain the
+      MVC pattern in depth, since an in-depth explanation of the Model, View, and
+      Controller requires an in-depth understanding of the other components. Jon asks
+      Jesse about how he handles that, and Jesse talks about the importance of having
+      a model user and getting volunteer readers as you&#8217;re writing. </li>\n<li>Jon
+      talks about the benefit of working with other authors. Brad talks about the
+      this is more important with products with quick release cycles, and Phil compares
+      book writing with software development techniques. </li>\n<li>There&#8217;s
+      a discussion on ensuring a consistent voice in a book with more than one author.
+      </li>\n<li>Phil, Jon, and Brad discuss the conflict between beginner and advanced
+      content. Are the experts who are asking for advanced content representative
+      of most readers? Phil points out that writing advanced content is a lot more
+      fun, but limits the audience. Can a book please everyone? Is there a way to
+      include beginner and advanced content? Jesse describes some ways he handles
+      this, and says that it&#8217;s important to set expectations. </li>\n<li>Jon
+      talks about the decision to remove NerdDinner, referring instead to the MVC
+      Music Store tutorial. </li>\n<li>Jesse says that it&#8217;s remarkable that
+      books are still selling well, since they&#8217;re competing with blogs, tutorials,
+      videos, etc. He speculates that the main selling point for books now is in context:
+      telling a story. Jon asks how he manages to do that. </li>\n<li>Phil talks about
+      the decision to put all the book&#8217;s code samples in NuGet (triggering the
+      Haacked NuGet Drinking Game clause).</li>\n<li>Jesse talks about the mismatch
+      between the publisher&#8217;s requirements for a flow of completed chapters
+      and the software developer&#8217;s desire to refactor.</li>\n<li>Jon asks K.
+      Scott how writing magazine articles compares to writing for a book.</li>\n<li>That&#8217;s
+      pretty much it.</li>\n</ul>\n<p>Show Links:</p>\n<ul>\n<li><a href=\"http://jesseliberty.com\">Jesse
+      Liberty</a> (<a href=\"http://twitter.com/#!/jesseliberty\">@jesseliberty</a>)</li>\n<li><a
+      href=\"http://haacked.com\">Phil Haack</a> (<a href=\"http://twitter.com/#!/haacked\">@haacked</a>)</li>\n<li><a
+      href=\"http://bradwilson.typepad.com/\">Brad Wilson</a> (<a href=\"http://twitter.com/#!/bradwilson\">@bradwilson</a>)</li>\n<li><a
+      href=\"http://www.amazon.com/gp/product/1118076583/ref=as_li_ss_il?ie=UTF8&amp;tag=youvebeenhaac-20&amp;linkCode=as2&amp;camp=217145&amp;creative=399373&amp;creativeASIN=1118076583\">Professional
+      ASP.NET MVC 3</a> on <a href=\"http://www.amazon.com/gp/product/1118076583/ref=as_li_ss_il?ie=UTF8&amp;tag=youvebeenhaac-20&amp;linkCode=as2&amp;camp=217145&amp;creative=399373&amp;creativeASIN=1118076583\">Amazon</a>
+      and at <a href=\"http://www.wrox.com/WileyCDA/WroxTitle/productCd-1118076583.html\">Wrox.com</a></li>\n<li><a
+      href=\"http://www.amazon.com/Jesse-Liberty/e/B000APP6I6\">Jesse&#8217;s dozens
+      of books on Amazon</a></li>\n<li><a href=\"http://weblogs.asp.net/leftslipper/\">Eilon
+      Lipton</a></li>\n</ul>\n<p><strong>Download / Listen:</strong></p>\n<p align=\"left\"><a
+      href=\"http://herdingcode.com/wp-content/uploads/HerdingCode-0119-On-The-Writing-Of-Technical-Books.mp3\">Herding
+      Code 118: On The Writing Technical Books (with Jesse Liberty, Phil Haack, and
+      Brad Wilson)</a></p>\n<p><a href=\"http://feedads.g.doubleclick.net/~a/gvosB0cGnGcCboh-j90w-Ajk_fw/0/da\"><img
+      src=\"http://feedads.g.doubleclick.net/~a/gvosB0cGnGcCboh-j90w-Ajk_fw/0/di\"
+      border=\"0\" ismap=\"true\"></img></a><br/><br />\n<a href=\"http://feedads.g.doubleclick.net/~a/gvosB0cGnGcCboh-j90w-Ajk_fw/1/da\"><img
+      src=\"http://feedads.g.doubleclick.net/~a/gvosB0cGnGcCboh-j90w-Ajk_fw/1/di\"
+      border=\"0\" ismap=\"true\"></img></a></p>\n<p><img src=\"http://feeds.feedburner.com/~r/HerdingCode/~4/wnfG1ZPbk4Y\"
+      height=\"1\" width=\"1\"/></p>\n\n\n\nShare and Enjoy:\n\n\n\t<a rel=\"nofollow\"
+      \ href=\"http://delicious.com/post?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;notes=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"del.icio.us\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/delicious.png\"
+      title=\"del.icio.us\" alt=\"del.icio.us\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dotnetkicks.com/kick/?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"DotNetKicks\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dotnetkicks.png\"
+      title=\"DotNetKicks\" alt=\"DotNetKicks\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dzone.com/links/add.html?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"DZone\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dzone.png\"
+      title=\"DZone\" alt=\"DZone\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://reddit.com/submit?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"Reddit\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/reddit.png\"
+      title=\"Reddit\" alt=\"Reddit\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;bodytext=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"Digg\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/digg.png\"
+      title=\"Digg\" alt=\"Digg\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.stumbleupon.com/submit?url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"StumbleUpon\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/stumbleupon.png\"
+      title=\"StumbleUpon\" alt=\"StumbleUpon\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;source=Lazycoder+&amp;summary=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"LinkedIn\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/linkedin.png\"
+      title=\"LinkedIn\" alt=\"LinkedIn\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.facebook.com/share.php?u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;t=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"Facebook\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/facebook.png\"
+      title=\"Facebook\" alt=\"Facebook\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.friendfeed.com/share?title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;link=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F\"
+      title=\"FriendFeed\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/friendfeed.png\"
+      title=\"FriendFeed\" alt=\"FriendFeed\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://news.ycombinator.com/submitlink?u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;t=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29\"
+      title=\"HackerNews\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/hackernews.png\"
+      title=\"HackerNews\" alt=\"HackerNews\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.netvibes.com/share?title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;url=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F\"
+      title=\"Netvibes\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/netvibes.png\"
+      title=\"Netvibes\" alt=\"Netvibes\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://posterous.com/share?linkto=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;title=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;selection=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"Posterous\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/posterous.png\"
+      title=\"Posterous\" alt=\"Posterous\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.tumblr.com/share?v=3&amp;u=http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F&amp;t=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29&amp;s=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%20about%20writing%20technical%20books.%20Jesse%20has%20written%20dozens%20of%20technical%20books%2C%20and%20both%20Brad%20and%20Phil%20worked%20with%20Jon%20and%20K.%20Scott%20on%20the%20recently%20released%20ASP.NET%20Professional%20MVC%203%20book.%20What%26%238217%3Bs%20it%20like%20to%20write%20a%20book%3F%20Why%20%5B...%5D\"
+      title=\"Tumblr\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/tumblr.png\"
+      title=\"Tumblr\" alt=\"Tumblr\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://twitter.com/home?status=Herding%20Code%20119%3A%20On%20The%20Writing%20Of%20Technical%20Books%20%28with%20Jesse%20Liberty%2C%20Phil%20Haack%2C%20and%20Brad%20Wilson%29%20-%20http%3A%2F%2Ffeedproxy.google.com%2F%7Er%2FHerdingCode%2F%7E3%2FwnfG1ZPbk4Y%2F\"
+      title=\"Twitter\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/twitter.png\"
+      title=\"Twitter\" alt=\"Twitter\" class=\"sociable-hovers\" /></a>\n\n\n<br/><br/><div
+      class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IrKNiHbE7VU:wnfG1ZPbk4Y:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IrKNiHbE7VU:wnfG1ZPbk4Y:V_sGLiPBpWU\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=IrKNiHbE7VU:wnfG1ZPbk4Y:V_sGLiPBpWU\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IrKNiHbE7VU:wnfG1ZPbk4Y:D7DqB2pKExk\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=IrKNiHbE7VU:wnfG1ZPbk4Y:D7DqB2pKExk\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IrKNiHbE7VU:wnfG1ZPbk4Y:dnMXMwOfBR0\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=dnMXMwOfBR0\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=IrKNiHbE7VU:wnfG1ZPbk4Y:F7zBnMyn0Lo\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=IrKNiHbE7VU:wnfG1ZPbk4Y:F7zBnMyn0Lo\"
+      border=\"0\"></img></a>\n</div>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://herdingcode.com/?feed=rss2&amp;p=337</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n<enclosure
+      url=\"http://feedproxy.google.com/~r/HerdingCode/~5/Devt-UVpDpE/HerdingCode-0119-On-The-Writing-Of-Technical-Books.mp3\"
+      length=\"43245014\" type=\"audio/mpeg\" />\r\n\t\t</item>\r\n\t\t<item>\r\n\t\t<title>How
+      we learn to write code</title>\r\n\t\t<link>http://www.lazycoder.com/weblog/2011/08/24/how-we-learn-to-write-code/</link>\r\n\t\t<comments>http://www.lazycoder.com/weblog/2011/08/24/how-we-learn-to-write-code/#comments</comments>\r\n\t\t<pubDate>Wed,
+      24 Aug 2011 13:41:23 +0000</pubDate>\r\n\t\t<dc:creator>Scott</dc:creator>\r\n\t\t\t\t<category><![CDATA[discussion]]></category>\r\n\t\t<category><![CDATA[ComputerScience]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.lazycoder.com/weblog/?p=1804</guid>\r\n\t\t<description><![CDATA[Great
+      post titled &#8220;Your code is my hell&#8221; describing some particular problems
+      with Ruby and Rails projects. One thing that is brought up in the comments that
+      I wanted to expand the discussion on is how universities teach programming.
+      I blame the education system for developers. Shockingly few universities and
+      colleges deal with the &#8220;why&#8221; [...]]]></description>\r\n\t\t\t<content:encoded><![CDATA[<p>Great
+      post titled &#8220;<a href=\"http://avdi.org/devblog/2011/08/22/your-code-is-my-hell/\"
+      title=\"Your code is my hell\">Your code is my hell</a>&#8221; describing some
+      particular problems with Ruby and Rails projects.</p>\n<p>One thing that is
+      brought up in the comments that I wanted to expand the discussion on is how
+      universities teach programming. </p>\n<blockquote cite=\"Chris Charabaruk\"><p>\nI
+      blame the education system for developers. Shockingly few universities and colleges
+      deal with the &#8220;why&#8221; of programming, only the &#8220;how&#8221;,
+      and almost all seem more focused on the tuition money coming in rather than
+      the quality of education going out. The only programmers worth a damn anymore
+      are the ones who taught themselves from youth, and we&#8217;re outnumbered by
+      the 9-to-5ers churned out by higher education.\n</p></blockquote>\n<p>I think
+      the &#8220;why&#8221; of programming can&#8217;t really be taught, or at least
+      it is miscommunicated. The &#8220;why&#8221; is often thought of in terms of
+      features or user needs. These needs do have to be considered, and &#8220;git
+      &#8216;er done&#8221; is valid thinking. But maybe it should be expanded to
+      &#8220;git &#8216;er done right&#8221;. </p>\n<p>The &#8220;why&#8221; of programming
+      can also be thought of in terms of developers and maintainers needs. Why do
+      we need unit tests? So people who come after us, including us a few years from
+      now, who have to work on this code can tell if something breaks when they make
+      a change without having to wait for QA or the users to tell them.</p>\n<p>Mostly
+      it seems like we learn to program by working on new, or greenfield, projects.
+      All the classroom assignments start with creating a brand new project with well
+      defined requirements. All the sample code put out by Microsoft, Apple, Google,
+      and others assumes the same starting point. While it is important to start new
+      projects, most of the code you will work on as a professional developer, in
+      my experience, is NOT written by you from scratch.</p>\n<p>Maybe young developers
+      and university students would benefit more from joining an internship program?
+      Or maybe university CS departments could function as consultants or &#8220;offshore&#8221;
+      firms and provide low-cost temporary employees to firms, killing two birds with
+      one stone.</p>\n\n\n\nShare and Enjoy:\n\n\n\t<a rel=\"nofollow\"  href=\"http://delicious.com/post?url=http%3A%2F%2Fwww.lazycoder.com%2Fweblog%2F2011%2F08%2F24%2Fhow-we-learn-to-write-code%2F&amp;title=How%20we%20learn%20to%20write%20code&amp;notes=Great%20post%20titled%20%22Your%20code%20is%20my%20hell%22%20describing%20some%20particular%20problems%20with%20Ruby%20and%20Rails%20projects.%0D%0A%0D%0AOne%20thing%20that%20is%20brought%20up%20in%20the%20comments%20that%20I%20wanted%20to%20expand%20the%20discussion%20on%20is%20how%20universities%20teach%20programming.%20%0D%0A%0D%0A%0D%0AI%20blame%20\"
+      title=\"del.icio.us\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/delicious.png\"
+      title=\"del.icio.us\" alt=\"del.icio.us\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dotnetkicks.com/kick/?url=http%3A%2F%2Fwww.lazycoder.com%2Fweblog%2F2011%2F08%2F24%2Fhow-we-learn-to-write-code%2F&amp;title=How%20we%20learn%20to%20write%20code\"
+      title=\"DotNetKicks\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dotnetkicks.png\"
+      title=\"DotNetKicks\" alt=\"DotNetKicks\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dzone.com/links/add.html?url=http%3A%2F%2Fwww.lazycoder.com%2Fweblog%2F2011%2F08%2F24%2Fhow-we-learn-to-write-code%2F&amp;title=How%20we%20learn%20to%20write%20code\"
+      title=\"DZone\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dzone.png\"
+      title=\"DZone\" alt=\"DZone\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://reddit.com/submit?url=http%3A%2F%2Fwww.lazycoder.com%2Fweblog%2F2011%2F08%2F24%2Fhow-we-learn-to-write-code%2F&amp;title=How%20we%20learn%20to%20write%20code\"
+      title=\"Reddit\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/reddit.png\"
+      title=\"Reddit\" alt=\"Reddit\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.lazycoder.com%2Fweblog%2F2011%2F08%2F24%2Fhow-we-learn-to-write-code%2F&amp;title=How%20we%20learn%20to%20write%20code&amp;bodytext=Great%20post%20titled%20%22Your%20code%20is%20my%20hell%22%20describing%20some%20particular%20problems%20with%20Ruby%20and%20Rails%20projects.%0D%0A%0D%0AOne%20thing%20that%20is%20brought%20up%20in%20the%20comments%20that%20I%20wanted%20to%20expand%20the%20discussion%20on%20is%20how%20universities%20teach%20programming.%20%0D%0A%0D%0A%0D%0AI%20blame%20\"
+      title=\"Digg\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/digg.png\"
+      title=\"Digg\" alt=\"Digg\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww.lazycoder.com%2Fweblog%2F2011%2F08%2F24%2Fhow-we-learn-to-write-code%2F&amp;title=How%20we%20learn%20to%20write%20code\"
+      title=\"StumbleUpon\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/stumbleupon.png\"
+      title=\"StumbleUpon\" alt=\"StumbleUpon\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.lazycoder.com%2Fweblog%2F2011%2F08%2F24%2Fhow-we-learn-to-write-code%2F&amp;title=How%20we%20learn%20to%20write%20code&amp;source=Lazycoder+&amp;summary=Great%20post%20titled%20%22Your%20code%20is%20my%20hell%22%20describing%20some%20particular%20problems%20with%20Ruby%20and%20Rails%20projects.%0D%0A%0D%0AOne%20thing%20that%20is%20brought%20up%20in%20the%20comments%20that%20I%20wanted%20to%20expand%20the%20discussion%20on%20is%20how%20universities%20teach%20programming.%20%0D%0A%0D%0A%0D%0AI%20blame%20\"
+      title=\"LinkedIn\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/linkedin.png\"
+      title=\"LinkedIn\" alt=\"LinkedIn\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.lazycoder.com%2Fweblog%2F2011%2F08%2F24%2Fhow-we-learn-to-write-code%2F&amp;t=How%20we%20learn%20to%20write%20code\"
+      title=\"Facebook\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/facebook.png\"
+      title=\"Facebook\" alt=\"Facebook\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.friendfeed.com/share?title=How%20we%20learn%20to%20write%20code&amp;link=http%3A%2F%2Fwww.lazycoder.com%2Fweblog%2F2011%2F08%2F24%2Fhow-we-learn-to-write-code%2F\"
+      title=\"FriendFeed\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/friendfeed.png\"
+      title=\"FriendFeed\" alt=\"FriendFeed\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://news.ycombinator.com/submitlink?u=http%3A%2F%2Fwww.lazycoder.com%2Fweblog%2F2011%2F08%2F24%2Fhow-we-learn-to-write-code%2F&amp;t=How%20we%20learn%20to%20write%20code\"
+      title=\"HackerNews\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/hackernews.png\"
+      title=\"HackerNews\" alt=\"HackerNews\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.netvibes.com/share?title=How%20we%20learn%20to%20write%20code&amp;url=http%3A%2F%2Fwww.lazycoder.com%2Fweblog%2F2011%2F08%2F24%2Fhow-we-learn-to-write-code%2F\"
+      title=\"Netvibes\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/netvibes.png\"
+      title=\"Netvibes\" alt=\"Netvibes\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://posterous.com/share?linkto=http%3A%2F%2Fwww.lazycoder.com%2Fweblog%2F2011%2F08%2F24%2Fhow-we-learn-to-write-code%2F&amp;title=How%20we%20learn%20to%20write%20code&amp;selection=Great%20post%20titled%20%22Your%20code%20is%20my%20hell%22%20describing%20some%20particular%20problems%20with%20Ruby%20and%20Rails%20projects.%0D%0A%0D%0AOne%20thing%20that%20is%20brought%20up%20in%20the%20comments%20that%20I%20wanted%20to%20expand%20the%20discussion%20on%20is%20how%20universities%20teach%20programming.%20%0D%0A%0D%0A%0D%0AI%20blame%20\"
+      title=\"Posterous\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/posterous.png\"
+      title=\"Posterous\" alt=\"Posterous\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.tumblr.com/share?v=3&amp;u=http%3A%2F%2Fwww.lazycoder.com%2Fweblog%2F2011%2F08%2F24%2Fhow-we-learn-to-write-code%2F&amp;t=How%20we%20learn%20to%20write%20code&amp;s=Great%20post%20titled%20%22Your%20code%20is%20my%20hell%22%20describing%20some%20particular%20problems%20with%20Ruby%20and%20Rails%20projects.%0D%0A%0D%0AOne%20thing%20that%20is%20brought%20up%20in%20the%20comments%20that%20I%20wanted%20to%20expand%20the%20discussion%20on%20is%20how%20universities%20teach%20programming.%20%0D%0A%0D%0A%0D%0AI%20blame%20\"
+      title=\"Tumblr\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/tumblr.png\"
+      title=\"Tumblr\" alt=\"Tumblr\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://twitter.com/home?status=How%20we%20learn%20to%20write%20code%20-%20http%3A%2F%2Fwww.lazycoder.com%2Fweblog%2F2011%2F08%2F24%2Fhow-we-learn-to-write-code%2F\"
+      title=\"Twitter\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/twitter.png\"
+      title=\"Twitter\" alt=\"Twitter\" class=\"sociable-hovers\" /></a>\n\n\n<br/><br/><div
+      class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=KFk2X1INsIQ:iGdNnK1r1Lw:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=KFk2X1INsIQ:iGdNnK1r1Lw:V_sGLiPBpWU\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=KFk2X1INsIQ:iGdNnK1r1Lw:V_sGLiPBpWU\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=KFk2X1INsIQ:iGdNnK1r1Lw:D7DqB2pKExk\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=KFk2X1INsIQ:iGdNnK1r1Lw:D7DqB2pKExk\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=KFk2X1INsIQ:iGdNnK1r1Lw:dnMXMwOfBR0\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=dnMXMwOfBR0\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=KFk2X1INsIQ:iGdNnK1r1Lw:F7zBnMyn0Lo\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=KFk2X1INsIQ:iGdNnK1r1Lw:F7zBnMyn0Lo\"
+      border=\"0\"></img></a>\n</div>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.lazycoder.com/weblog/2011/08/24/how-we-learn-to-write-code/feed/</wfw:commentRss>\r\n\t\t<slash:comments>8</slash:comments>\r\n\t\t</item>\r\n\t\t<item>\r\n\t\t<title>Herding
+      Code 118: Paul Betts on SassAndCoffee</title>\r\n\t\t<link>http://herdingcode.com/?p=334</link>\r\n\t\t<comments>http://herdingcode.com/?p=334#comments</comments>\r\n\t\t<pubDate>Thu,
+      11 Aug 2011 01:54:08 +0000</pubDate>\r\n\t\t<dc:creator>Scott Koon</dc:creator>\r\n\t\t\t\t<category><![CDATA[interview]]></category>\r\n\t\t<category><![CDATA[podcast]]></category>\r\n\t\t<category><![CDATA[herdingcode]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://herdingcode.com/?p=334</guid>\r\n\t\t<description><![CDATA[This
+      episode of Herding Code the guys talk to Paul Betts about SassAndCoffee, a NuGet
+      package that adds runtime Sass and CoffeeScript compilation to ASP.NET. Jon
+      asks Paul about his role on the Office Labs team [Spoiler alert! Since this
+      podcast, Paul has started a new job at GitHub!] Jon asks Paul about why he [...]]]></description>\r\n\t\t\t<content:encoded><![CDATA[<p>This
+      episode of Herding Code the guys talk to Paul Betts about SassAndCoffee, a NuGet
+      package that adds runtime Sass and CoffeeScript compilation to ASP.NET.</p>\n<ul>\n<li>Jon
+      asks Paul about his role on the Office Labs team <em>[Spoiler alert! Since this
+      podcast, Paul has started a new job at GitHub!]</em></li>\n<li>Jon asks Paul
+      about why he got interested in Sass and Coffee for web development.</li>\n<li>Jon
+      asks Paul how an Office dev gets away with liking Ruby and Python.</li>\n<li>Paul
+      describes Sass (Syntactically Awesome Stylesheets), a meta-language for <acronym
+      title='Cascading Style Sheets'><span class='caps'>CSS</span></acronym> that
+      adds in variables, nested rules, inheritance, mixins, etc.</li>\n<li>Paul explains
+      how SassAndCoffee is designed to eliminate fiddling, so he&#8217;s gone to great
+      lengths to make the NuGet package just work without any setup.</li>\n<li>Kevin
+      points out that this is at run-time rather than at build. Paul talks about the
+      advantages of run-time compilation (especially interactive <acronym title='Cascading
+      Style Sheets'><span class='caps'>CSS</span></acronym> edit / refresh) as well
+      as potential downsides (performance, potential for compilation errors). Scott
+      K also mentions that it might be useful for CDN deployment and continuous integration.</li>\n<li>Jon
+      asks about the new package definition file the 1.0 release, and Paul explains
+      how it tells Visual Studio that the .coffee files are to be included with the
+      project build.</li>\n<li>Paul explains how the CoffeeScript compiler works using
+      an HttpHandler, Jurrassic, and V8. Jon asks if he&#8217;d looked at IronJS,
+      and Paul describes why that didn&#8217;t work for him.</li>\n<li>Paul explains
+      the hurdles he went through to get V8 running under an ASP.NET HttpHandler,
+      since V8 assumes that it will always be accessed from a single threaded process.</li>\n<li>Jon
+      asks Paul about his use of uglify.js for Javascript optimization and compression.</li>\n<li>Scott
+      K asks about the ability to swap out other compilers, e.g. the Google Closure
+      Compiler.</li>\n<li>Paul talks about some of the commits he&#8217;s had recently,
+      including support for Nancy, better cache configuration and some useful refactoring.
+      Jon and Paul discuss how some refactoring patches &#8211; especially blind Resharpering
+      &#8211; are less than helpful.</li>\n<li>The discussion shifts to how Paul got
+      Sass working without requiring the user to have a local Ruby installation, including
+      some crazy tricks with the DLR&#8217;s platform resource library to embed a
+      portion of the Ruby standard library as an embedded resource in the NuGet package
+      via a virtual R: drive.</li>\n<li>Jon asks if it&#8217;s possible for others
+      to reuse Paul&#8217;s Ruby embedding technique in other applications.</li>\n<li>Jon,
+      K. Scott, and Paul discuss commenting policy, and Paul explains why he liberally
+      commented certain sections of the code.</li>\n<li>Paul mentions how the V8 integration
+      falls back to Jurassic in case it can&#8217;t run for some reason.</li>\n<li>Kevin
+      asks if Paul looked into creating native ports of Sass or CoffeeScript, and
+      Paul explains why he decided to set up compilers for the original versions rather
+      than port them.</li>\n<li>Jon talks about how he&#8217;d looked at Zen Coding
+      and mused about how to implement it in Visual Studio, deciding as Paul had that
+      it&#8217;s better</li>\n<li>Twitter question from @elijahmanor about IDE support
+      for Sass and CoffeeScript. Note: since the podcast, the Mindscape Web Workbench
+      has made this available.</li>\n<li>Scott K points out that the MVC 4 roadmap
+      includes support for recipes, which should help with extending the IDE via NuGet.</li>\n<li>Paul
+      wraps up the nerdy internals of SassAndCoffee by explaining how he&#8217;s handling
+      loading the 32 and 64 bit versions of the V8 C++ CLI DLL depending on the user&#8217;s
+      <acronym title='Central Processing Unit'><span class='caps'>CPU</span></acronym>
+      architecture.</li>\n<li>Jon asks about what server-side hosting requirements
+      are needed to run SassAndCoffee.</li>\n<li>Kevin asks whether the V8 <acronym
+      title='Application Interface'><span class='caps'>API</span></acronym> was easy
+      to work with, and Paul says no.</li>\n<li>Jon mentions that he appreciated all
+      the thanks that Paul had in the readme, and Paul talks about how great it feels
+      to thank people.</li>\n<li>Jon asks what&#8217;s next for SassAndCoffee, and
+      Paul says he wants to add Compass.</li>\n<li>Jon (jokingly) mentions that he&#8217;s
+      a fan of BrainScript and asks for support.</li>\n<li>Paul and Jon discuss some
+      of the nuttier esoteric languages they&#8217;ve seen.</li>\n<li>Jon asks what
+      else Paul&#8217;s up to; Paul talks about the Reactive Extensions book he&#8217;s
+      working on with Jesse Liberty. Jon asks Paul a bit about what&#8217;s new and
+      interesting with Reactive Extensions.</li>\n<li>Jon asks Paul about the interaction
+      between Reactive Extensions and Interactive Extensions, and Paul explains by
+      way of a Reactive Extensions history lesson.</li>\n<li>There&#8217;s a discussion
+      on the (intentional) lack of a ForEach operator in LINQ</li>\n<li>K Scott tells
+      his terrifying story from NDC in which Eric Lippert was sitting in his talk.</li>\n<li>Scott
+      K asks about Reactive UI, another of Paul&#8217;s projects, an MVVM framework
+      which leverages Reactive Extensions.</li>\n</ul>\n<p>Show Links:</p>\n<ul>\n<li>SassAndCoffee
+      <a href=\"https://github.com/xpaulbettsx/SassAndCoffee\">git repo</a>, <a href=\"http://nuget.org/List/Packages/SassAndCoffee\">NuGet
+      package</a></li>\n<li><a href=\"http://blog.paulbetts.org/\">Paul Betts</a>
+      (<a href=\"http://twitter.com/#!/xpaulbettsx\">@xpaulbettsx</a>)</li>\n<li><a
+      href=\"http://sass-lang.com/\">Sass</a></li>\n<li><a href=\"http://coffeescript.org\">CoffeeScript</a></li>\n<li><a
+      href=\"https://github.com/fholm/IronJS\">IronJS</a></li>\n<li><a href=\"http://jurassic.codeplex.com/\">Jurassic</a></li>\n<li><a
+      href=\"http://code.google.com/p/v8/\">V8 JavaScript Engine</a></li>\n<li><a
+      href=\"https://github.com/mishoo/UglifyJS#readme\">UglifyJS</a></li>\n<li><a
+      href=\"http://code.google.com/closure/compiler/\">Google Closure Compiler</a></li>\n<li><a
+      href=\"http://code.google.com/p/zen-coding/\">Zen Coding</a></li>\n<li><a href=\"http://www.mindscapehq.com/products/web-workbench\">Mindscape
+      Web Workbench</a></li>\n<li><a href=\"http://aspnet.codeplex.com/wikipage?title=ASP.NET%20MVC%204%20RoadMap\">ASP.NET
+      MVC 4 Roadmap</a></li>\n<li><a href=\"http://compass-style.org/\">Compass</a></li>\n<li>Silly
+      language things on <a href=\"http://esolangs.org/wiki/Main_Page\">Esolangs.org</a>\n<ul>\n<li><a
+      href=\"https://github.com/jussi-kalliokoski/BrainScript/tree/\">BrainScript</a></li>\n<li><a
+      href=\"http://shakespearelang.sourceforge.net/\">Shakespere</a></li>\n<li><a
+      href=\"http://en.wikipedia.org/wiki/COMEFROM\">COMEFROM</a></li>\n<li><a href=\"http://esolangs.org/wiki/TwoDucks\">TwoDucks</a></li>\n</ul>\n</li>\n<li><a
+      href=\"http://www.amazon.com/Programming-Reactive-Extensions-Jesse-Liberty/dp/1430237473\">Programming
+      Reactive Extensions and LINQ by Paul Betts and Jesse Liberty</a></li>\n<li><a
+      href=\"http://msdn.microsoft.com/en-us/data/gg577609\">Reactive Extensions</a></li>\n<li>Eric
+      Lippert&#8217;s post: <a href=\"http://blogs.msdn.com/b/ericlippert/archive/2009/05/18/foreach-vs-foreach.aspx\">&#8220;foreach&#8221;
+      vs. &#8220;ForEach&#8221;</a></li>\n<li><a href=\"http://www.reactiveui.net/\">ReactiveUI</a></li>\n<li><a
+      href=\"http://youarenotsosmart.com/2011/03/25/the-sunk-cost-fallacy/\">You Are
+      Not So Smart &#8211; The Sunk Cost Fallacy</a></li>\n</ul>\n<p><strong>Download
+      / Listen:</strong></p>\n<p align=\"left\"><a href=\"http://herdingcode.com/wp-content/uploads/HerdingCode-0118-Paul-Betts-on-SassAndCoffee.mp3\">Herding
+      Code 118: Paul Betts on SassAndCoffee</a></p>\n\n\n\nShare and Enjoy:\n\n\n\t<a
+      rel=\"nofollow\"  href=\"http://delicious.com/post?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D334&amp;title=Herding%20Code%20118%3A%20Paul%20Betts%20on%20SassAndCoffee&amp;notes=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Paul%20Betts%20about%20SassAndCoffee%2C%20a%20NuGet%20package%20that%20adds%20runtime%20Sass%20and%20CoffeeScript%20compilation%20to%20ASP.NET.%20Jon%20asks%20Paul%20about%20his%20role%20on%20the%20Office%20Labs%20team%20%5BSpoiler%20alert%21%20Since%20this%20podcast%2C%20Paul%20has%20started%20a%20new%20job%20at%20GitHub%21%5D%20Jon%20asks%20Paul%20about%20why%20he%20%5B...%5D\"
+      title=\"del.icio.us\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/delicious.png\"
+      title=\"del.icio.us\" alt=\"del.icio.us\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dotnetkicks.com/kick/?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D334&amp;title=Herding%20Code%20118%3A%20Paul%20Betts%20on%20SassAndCoffee\"
+      title=\"DotNetKicks\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dotnetkicks.png\"
+      title=\"DotNetKicks\" alt=\"DotNetKicks\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.dzone.com/links/add.html?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D334&amp;title=Herding%20Code%20118%3A%20Paul%20Betts%20on%20SassAndCoffee\"
+      title=\"DZone\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/dzone.png\"
+      title=\"DZone\" alt=\"DZone\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://reddit.com/submit?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D334&amp;title=Herding%20Code%20118%3A%20Paul%20Betts%20on%20SassAndCoffee\"
+      title=\"Reddit\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/reddit.png\"
+      title=\"Reddit\" alt=\"Reddit\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D334&amp;title=Herding%20Code%20118%3A%20Paul%20Betts%20on%20SassAndCoffee&amp;bodytext=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Paul%20Betts%20about%20SassAndCoffee%2C%20a%20NuGet%20package%20that%20adds%20runtime%20Sass%20and%20CoffeeScript%20compilation%20to%20ASP.NET.%20Jon%20asks%20Paul%20about%20his%20role%20on%20the%20Office%20Labs%20team%20%5BSpoiler%20alert%21%20Since%20this%20podcast%2C%20Paul%20has%20started%20a%20new%20job%20at%20GitHub%21%5D%20Jon%20asks%20Paul%20about%20why%20he%20%5B...%5D\"
+      title=\"Digg\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/digg.png\"
+      title=\"Digg\" alt=\"Digg\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.stumbleupon.com/submit?url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D334&amp;title=Herding%20Code%20118%3A%20Paul%20Betts%20on%20SassAndCoffee\"
+      title=\"StumbleUpon\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/stumbleupon.png\"
+      title=\"StumbleUpon\" alt=\"StumbleUpon\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D334&amp;title=Herding%20Code%20118%3A%20Paul%20Betts%20on%20SassAndCoffee&amp;source=Lazycoder+&amp;summary=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Paul%20Betts%20about%20SassAndCoffee%2C%20a%20NuGet%20package%20that%20adds%20runtime%20Sass%20and%20CoffeeScript%20compilation%20to%20ASP.NET.%20Jon%20asks%20Paul%20about%20his%20role%20on%20the%20Office%20Labs%20team%20%5BSpoiler%20alert%21%20Since%20this%20podcast%2C%20Paul%20has%20started%20a%20new%20job%20at%20GitHub%21%5D%20Jon%20asks%20Paul%20about%20why%20he%20%5B...%5D\"
+      title=\"LinkedIn\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/linkedin.png\"
+      title=\"LinkedIn\" alt=\"LinkedIn\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.facebook.com/share.php?u=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D334&amp;t=Herding%20Code%20118%3A%20Paul%20Betts%20on%20SassAndCoffee\"
+      title=\"Facebook\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/facebook.png\"
+      title=\"Facebook\" alt=\"Facebook\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://www.friendfeed.com/share?title=Herding%20Code%20118%3A%20Paul%20Betts%20on%20SassAndCoffee&amp;link=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D334\"
+      title=\"FriendFeed\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/friendfeed.png\"
+      title=\"FriendFeed\" alt=\"FriendFeed\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://news.ycombinator.com/submitlink?u=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D334&amp;t=Herding%20Code%20118%3A%20Paul%20Betts%20on%20SassAndCoffee\"
+      title=\"HackerNews\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/hackernews.png\"
+      title=\"HackerNews\" alt=\"HackerNews\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.netvibes.com/share?title=Herding%20Code%20118%3A%20Paul%20Betts%20on%20SassAndCoffee&amp;url=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D334\"
+      title=\"Netvibes\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/netvibes.png\"
+      title=\"Netvibes\" alt=\"Netvibes\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://posterous.com/share?linkto=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D334&amp;title=Herding%20Code%20118%3A%20Paul%20Betts%20on%20SassAndCoffee&amp;selection=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Paul%20Betts%20about%20SassAndCoffee%2C%20a%20NuGet%20package%20that%20adds%20runtime%20Sass%20and%20CoffeeScript%20compilation%20to%20ASP.NET.%20Jon%20asks%20Paul%20about%20his%20role%20on%20the%20Office%20Labs%20team%20%5BSpoiler%20alert%21%20Since%20this%20podcast%2C%20Paul%20has%20started%20a%20new%20job%20at%20GitHub%21%5D%20Jon%20asks%20Paul%20about%20why%20he%20%5B...%5D\"
+      title=\"Posterous\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/posterous.png\"
+      title=\"Posterous\" alt=\"Posterous\" class=\"sociable-hovers\" /></a>\n\t<a
+      rel=\"nofollow\"  href=\"http://www.tumblr.com/share?v=3&amp;u=http%3A%2F%2Fherdingcode.com%2F%3Fp%3D334&amp;t=Herding%20Code%20118%3A%20Paul%20Betts%20on%20SassAndCoffee&amp;s=This%20episode%20of%20Herding%20Code%20the%20guys%20talk%20to%20Paul%20Betts%20about%20SassAndCoffee%2C%20a%20NuGet%20package%20that%20adds%20runtime%20Sass%20and%20CoffeeScript%20compilation%20to%20ASP.NET.%20Jon%20asks%20Paul%20about%20his%20role%20on%20the%20Office%20Labs%20team%20%5BSpoiler%20alert%21%20Since%20this%20podcast%2C%20Paul%20has%20started%20a%20new%20job%20at%20GitHub%21%5D%20Jon%20asks%20Paul%20about%20why%20he%20%5B...%5D\"
+      title=\"Tumblr\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/tumblr.png\"
+      title=\"Tumblr\" alt=\"Tumblr\" class=\"sociable-hovers\" /></a>\n\t<a rel=\"nofollow\"
+      \ href=\"http://twitter.com/home?status=Herding%20Code%20118%3A%20Paul%20Betts%20on%20SassAndCoffee%20-%20http%3A%2F%2Fherdingcode.com%2F%3Fp%3D334\"
+      title=\"Twitter\"><img src=\"http://www.lazycoder.com/weblog/wp-content/plugins/sociable/images/twitter.png\"
+      title=\"Twitter\" alt=\"Twitter\" class=\"sociable-hovers\" /></a>\n\n\n<br/><br/><div
+      class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=iIDQj_7pnhc:JKa2WvPGdPs:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=iIDQj_7pnhc:JKa2WvPGdPs:V_sGLiPBpWU\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=iIDQj_7pnhc:JKa2WvPGdPs:V_sGLiPBpWU\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=iIDQj_7pnhc:JKa2WvPGdPs:D7DqB2pKExk\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=iIDQj_7pnhc:JKa2WvPGdPs:D7DqB2pKExk\"
+      border=\"0\"></img></a> <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=iIDQj_7pnhc:JKa2WvPGdPs:dnMXMwOfBR0\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?d=dnMXMwOfBR0\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/Lazycoder?a=iIDQj_7pnhc:JKa2WvPGdPs:F7zBnMyn0Lo\"><img
+      src=\"http://feeds.feedburner.com/~ff/Lazycoder?i=iIDQj_7pnhc:JKa2WvPGdPs:F7zBnMyn0Lo\"
+      border=\"0\"></img></a>\n</div>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://herdingcode.com/?feed=rss2&amp;p=334</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n<enclosure
+      url=\"http://herdingcode.com/wp-content/uploads/HerdingCode-0118-Paul-Betts-on-SassAndCoffee.mp3\"
+      length=\"56397351\" type=\"audio/mpeg\" />\r\n\t\t</item>\r\n\t</channel>\r\n</rss>\r\n"
+    http_version: '1.1'

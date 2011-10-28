@@ -1,0 +1,1269 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://www.mkoby.com:80/feed
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 301
+      message: Moved Permanently
+    headers:
+      date:
+      - Fri, 28 Oct 2011 03:08:53 GMT
+      server:
+      - Apache/2.2.21 (Unix) mod_ssl/2.2.21 OpenSSL/0.9.7a mod_fcgid/2.3.6 Phusion_Passenger/2.2.15
+        mod_bwlimited/1.4
+      x-pingback:
+      - http://www.mkoby.com/xmlrpc.php
+      etag:
+      - ! '"d568fb3b47ff03a3045d3038e8db86b5"'
+      last-modified:
+      - Mon, 17 Oct 2011 21:00:12 GMT
+      location:
+      - http://www.mkoby.com/feed/
+      content-length:
+      - '0'
+      content-type:
+      - text/html
+    body: 
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://www.mkoby.com:80/feed/
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 302
+      message: Temporary Redirect
+    headers:
+      date:
+      - Fri, 28 Oct 2011 03:08:54 GMT
+      server:
+      - Apache/2.2.21 (Unix) mod_ssl/2.2.21 OpenSSL/0.9.7a mod_fcgid/2.3.6 Phusion_Passenger/2.2.15
+        mod_bwlimited/1.4
+      x-pingback:
+      - http://www.mkoby.com/xmlrpc.php
+      etag:
+      - ! '"d568fb3b47ff03a3045d3038e8db86b5"'
+      set-cookie:
+      - PHPSESSID=163c2716a1fb394762cf8e760768dc04; path=/
+      last-modified:
+      - Mon, 17 Oct 2011 21:00:12 GMT
+      location:
+      - http://feeds.feedburner.com/AlmostNotYet
+      content-length:
+      - '0'
+      content-type:
+      - text/html
+    body: 
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://feeds.feedburner.com:80/AlmostNotYet
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      last-modified:
+      - Fri, 28 Oct 2011 03:08:54 GMT
+      etag:
+      - F5UsHLaQKDXLk5TF4wd7FlRbCcY
+      content-type:
+      - text/xml; charset=UTF-8
+      date:
+      - Fri, 28 Oct 2011 03:08:54 GMT
+      expires:
+      - Fri, 28 Oct 2011 03:08:54 GMT
+      cache-control:
+      - private, max-age=0
+      x-content-type-options:
+      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+      transfer-encoding:
+      - chunked
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<?xml-stylesheet type=\"text/xsl\"
+      media=\"screen\" href=\"/~d/styles/rss2full.xsl\"?><?xml-stylesheet type=\"text/css\"
+      media=\"screen\" href=\"http://feeds.feedburner.com/~d/styles/itemcontent.css\"?><rss
+      xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" xmlns:wfw=\"http://wellformedweb.org/CommentAPI/\"
+      xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:atom=\"http://www.w3.org/2005/Atom\"
+      xmlns:sy=\"http://purl.org/rss/1.0/modules/syndication/\" xmlns:slash=\"http://purl.org/rss/1.0/modules/slash/\"
+      xmlns:geo=\"http://www.w3.org/2003/01/geo/wgs84_pos#\" xmlns:feedburner=\"http://rssnamespace.org/feedburner/ext/1.0\"
+      version=\"2.0\">\r\n\r\n<channel>\r\n\t<title>Michael Koby</title>\r\n\t\r\n\t<link>http://www.mkoby.com</link>\r\n\t<description>Commentary
+      on Technology, Media, News &amp; More</description>\r\n\t<lastBuildDate>Mon,
+      17 Oct 2011 21:00:12 +0000</lastBuildDate>\r\n\t<language>en</language>\r\n\t<sy:updatePeriod>hourly</sy:updatePeriod>\r\n\t<sy:updateFrequency>1</sy:updateFrequency>\r\n\t<generator>http://wordpress.org/?v=3.1</generator>\r\n\t\t<atom10:link
+      xmlns:atom10=\"http://www.w3.org/2005/Atom\" rel=\"self\" type=\"application/rss+xml\"
+      href=\"http://feeds.feedburner.com/AlmostNotYet\" /><feedburner:info uri=\"almostnotyet\"
+      /><atom10:link xmlns:atom10=\"http://www.w3.org/2005/Atom\" rel=\"hub\" href=\"http://pubsubhubbub.appspot.com/\"
+      /><geo:lat>29.767921</geo:lat><geo:long>-95.743138</geo:long><feedburner:emailServiceId>AlmostNotYet</feedburner:emailServiceId><feedburner:feedburnerHostname>http://feedburner.google.com</feedburner:feedburnerHostname><feedburner:feedFlare
+      href=\"http://www.live.com/?add=http%3A%2F%2Ffeeds.feedburner.com%2FAlmostNotYet\"
+      src=\"http://tkfiles.storage.msn.com/x1piYkpqHC_35nIp1gLE68-wvzLZO8iXl_JMledmJQXP-XTBOLfmQv4zhj4MhcWEJh_GtoBIiAl1Mjh-ndp9k47If7hTaFno0mxW9_i3p_5qQw\">Subscribe
+      with Live.com</feedburner:feedFlare><item>\r\n\t\t<title>Houston Techfest 2011
+      – Wrap Up</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/sHjBTZf4diw/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/10/17/houston-techfest-2011-wrap-up/#comments</comments>\r\n\t\t<pubDate>Mon,
+      17 Oct 2011 21:00:12 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[General]]></category>\r\n\t\t<category><![CDATA[programming]]></category>\r\n\t\t<category><![CDATA[.net]]></category>\r\n\t\t<category><![CDATA[c]]></category>\r\n\t\t<category><![CDATA[houston
+      techfest]]></category>\r\n\t\t<category><![CDATA[mono]]></category>\r\n\t\t<category><![CDATA[presentations]]></category>\r\n\t\t<category><![CDATA[presenting]]></category>\r\n\t\t<category><![CDATA[rails]]></category>\r\n\t\t<category><![CDATA[ruby]]></category>\r\n\t\t<category><![CDATA[ruby
+      on rails]]></category>\r\n\t\t<category><![CDATA[speaking]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1682</guid>\r\n\t\t<description>Had
+      a great time this past weekend at Houston Techfest. Attended a couple of great
+      sessions and also presented a couple of sessions of my own.  If you attended
+      either of these sessions, please click the SpeakerRate links and rate the sessions
+      and leave comments on anything you felt was missing so that I might be able
+      to better present at future events. &lt;a href=\"http://www.mkoby.com/2011/10/17/houston-techfest-2011-wrap-up/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>Had
+      a great time this past weekend at <a title=\"Houston Techfest\" href=\"http://www.houstontechfest.com\">Houston
+      Techfest</a>.  Attended a couple of great sessions and also presented a couple
+      of sessions of my own.  If you attended either of these sessions, please click
+      the SpeakerRate links and rate the sessions and leave comments on anything you
+      felt was missing so that I might be able to better present at future events.</p>\n<p>Below
+      are my thoughts on the two sessions I presented.</p>\n<h3>Deploying Rails Applications:
+      Lessons Learned</h3>\n<p>This session was the weaker of the two.  Reason being
+      is I didn&#8217;t prepare enough for it.  While the content was decent, it could
+      have had a little more meat and a lot less fluff.  This is something I plan
+      to correct in all future sessions.  However, the discussion, questions, and
+      general feel of the room wasn&#8217;t bad.  I just think that I could have done
+      a better job of delivering some real content on this session.</p>\n<p><a title=\"CodeMav
+      - Deploying Rails Applications: Lessons Learned\" href=\"http://codemav.com/profiles/mkoby/talks/deploying-rails-applications-lessons-learned\">CodeMav
+      Link</a></p>\n<p><a title=\"SpeakerRate - Deploying Rails Applications: Lessons
+      Learned\" href=\"http://speakerrate.com/talks/8533\">SpeakerRate Link</a></p>\n<div
+      style=\"width:340px\" id=\"__ss_9684780\"> <strong style=\"display:block;margin:12px
+      0 4px\"><iframe src=\"http://www.slideshare.net/slideshow/embed_code/9684780\"
+      width=\"340\" height=\"284\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\"
+      scrolling=\"no\"></iframe></div>\n<h3>Cross Platform Development with Mono and
+      C#</h3>\n<p>This session was better attended than I had planned. In the past
+      talks I&#8217;ve given on Mono and cross platform .NET development were sparsely
+      (if at all) attended.  I think a large reason for this is <a title=\"Xamarin\"
+      href=\"http://xamarin.com/\">Xamarin</a>, specifically their <a title=\"MonoTouch\"
+      href=\"iOS MonoTouch\">MonoTouch</a> and <a title=\"Mono for Android\" href=\"http://android.xamarin.com/\">Mono
+      for Android</a> products, and the interest they have generated in the .NET community
+      for doing mobile development.  This session had good questions, discussion,
+      and I even managed to get a little &#8220;wow factor&#8221; in with the <a title=\"Mono's
+      C# Shell (REPL)\" href=\"http://tirania.org/blog/archive/2008/Sep-08.html\">csharp
+      shell</a> from Mono.</p>\n<p><a title=\"CodeMav - Cross Platform Development
+      with Mono and C#\" href=\"http://codemav.com/profiles/mkoby/talks/cross-platform-development-with-mono-and-c\">CodeMav
+      Link</a></p>\n<p><a title=\"SpeakerRate - Cross Platform Development with Mono
+      and C#\" href=\"http://speakerrate.com/talks/8381-cross-platform-development-with-mono-and-c\">SpeakerRate
+      Link</a></p>\n<div style=\"width:340px\" id=\"__ss_9476382\"> <strong style=\"display:block;margin:12px
+      0 4px\"><iframe src=\"http://www.slideshare.net/slideshow/embed_code/9476382\"
+      width=\"340\" height=\"284\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\"
+      scrolling=\"no\"></iframe></div>\n<h3>Final Thoughts</h3>\n<p>Overall the experience
+      was good. I think that I can do better next time, but given the size of the
+      event and how well the sessions seemed to go in general, I think that I did
+      okay.  Again, if you attended either of these sessions, please click the SpeakerRate
+      links and rate the sessions</p>\n<div class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=sHjBTZf4diw:jLQtpn8aw0M:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=sHjBTZf4diw:jLQtpn8aw0M:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/sHjBTZf4diw\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/10/17/houston-techfest-2011-wrap-up/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/10/17/houston-techfest-2011-wrap-up/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Why
+      Amazon’s Tablet Makes Sense for Amazon</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/jvv5mUSkNBg/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/09/03/why-amazons-tablet-makes-sense-for-amazon/#comments</comments>\r\n\t\t<pubDate>Sat,
+      03 Sep 2011 18:24:09 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[Technology]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1679</guid>\r\n\t\t<description>In
+      case you missed it, Techcrunch has announced that they've played with Amazon's
+      soon to be released seven inch Kindle tablet.  Since then there's been a lot
+      of talk about if this tablet will really be able to compete with the iPad.  And
+      that's where people start missing the point. &lt;a href=\"http://www.mkoby.com/2011/09/03/why-amazons-tablet-makes-sense-for-amazon/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>In
+      case you missed it, Techcrunch has announced that they&#8217;ve <a href=\"http://techcrunch.com/2011/09/02/amazon-kindle-tablet/\">played
+      with Amazon&#8217;s soon to be released seven inch Kindle tablet</a>.  Since
+      then there&#8217;s been a lot of talk about if this tablet will really be able
+      to compete with the iPad.  And that&#8217;s where people start missing the point.</p>\n<p>Amazon
+      isn&#8217;t looking to make a tablet that competes with the iPad. They&#8217;re
+      looking to compete with something closer to <a href=\"http://www.barnesandnoble.com/nookcolor/#logo\">Barnes
+      and Noble&#8217;s Nook Color</a>.  They&#8217;re also looking for something
+      that will heavily tie into their existing content outlets like the Mp3 Store,
+      or the Instant Video service.  A content consumption device that plugs into
+      Amazon&#8217;s store makes perfect sense for Amazon.  And by making it a seven
+      inch tablet that&#8217;s (rumored) to cost $250, they&#8217;re looking for heavy
+      adoption from those that already own a Kindle or are looking to get a Kindle.</p>\n<p>That&#8217;s
+      why this kind of tablet makes sense for Amazon.  They want something smaller
+      than the iPad&#8217;s 10 inch display because they want the device to be light,
+      and easy to hold in bed or on an airplane.  They want you to throw it in your
+      bag without worrying about space.  And they want to be the one&#8217;s that
+      sell you the content that goes on that device. And just like Apple, Amazon wants
+      you to buy content through them Apple does the same thing with iPad and iTunes
+      (and the App Store and the iBook Store).</p>\n<p>The price point is worth mentioning,
+      at $250 it&#8217;s half of the cheapest new iPad.  At $250 it&#8217;s also around
+      $60 more than the most expensive e-ink Kindle.  If they can bring the price
+      down to around $199 while bring the e-ink Kindle price down as well, then they
+      have an interesting marketing position on their hands.  But still at $250, people
+      are going to be interested, and they&#8217;re going to reconsider that $500
+      iPad.  The question among non-geeks is &#8220;Do I get an iPad or a Kindle?&#8221;
+      (and the answer to this largely depends on what you want to do).  At the rumored
+      price point, Amazon is hoping to help make such a question easier for the general
+      public.</p>\n<div class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=jvv5mUSkNBg:8DJepcvGHpg:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=jvv5mUSkNBg:8DJepcvGHpg:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/jvv5mUSkNBg\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/09/03/why-amazons-tablet-makes-sense-for-amazon/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/09/03/why-amazons-tablet-makes-sense-for-amazon/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Have
+      an idea? Ship It! – A Houston Code Camp Presentation</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/m8BN3CaMHxE/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/08/21/have-an-idea-ship-it-a-houston-code-camp-presentation/#comments</comments>\r\n\t\t<pubDate>Sun,
+      21 Aug 2011 17:13:43 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[General]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1676</guid>\r\n\t\t<description>Yesterday,
+      I attended and presented at Houston Code Camp.  You can see what others were
+      saying by looking at the twitter hashtag #houcodecamp.  The event was a resounding
+      success and I&amp;#8217;m hoping we do another next year. Regarding my presentation.
+      &amp;#8230; &lt;a href=\"http://www.mkoby.com/2011/08/21/have-an-idea-ship-it-a-houston-code-camp-presentation/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>Yesterday,
+      I attended and presented at <a title=\"Houston Code Camp\" href=\"http://www.houstoncodecamp.com\">Houston
+      Code Camp</a>.  You can see what others were saying by looking at the twitter
+      hashtag <a title=\"#houcodecamp\" href=\"https://twitter.com/#!/search?q=%23houcodecamp\">#houcodecamp</a>.
+       The event was a resounding success and I&#8217;m hoping we do another next
+      year.</p>\n<p>Regarding my presentation.  I presented on shipping an idea.  Taking
+      an idea you have from idea/inception all the way to launching it.  I would say
+      that my session went well, had a decent attendance, and good questions were
+      asked during the session.  I have posted the slides for the presentation on
+      SlideShare, and have a Speaker Rate page.  Please feel free to visit the links.
+       If you attended my session, please rate me over on the Speaker Rate link.</p>\n<p><a
+      title=\"Have an idea? Ship it!\" href=\"http://www.slideshare.net/mkoby1/ship-it\">Presentation
+      on SlideShare</a></p>\n<p><a title=\"Speaker Rate: Have an idea? Ship it!\"
+      href=\"http://speakerrate.com/talks/8182-have-an-idea-ship-it\">Session on Speaker
+      Rate</a></p>\n<div class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=m8BN3CaMHxE:SYy3iiUpZyE:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=m8BN3CaMHxE:SYy3iiUpZyE:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/m8BN3CaMHxE\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/08/21/have-an-idea-ship-it-a-houston-code-camp-presentation/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/08/21/have-an-idea-ship-it-a-houston-code-camp-presentation/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>XKCD
+      &amp; Password Security</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/lBWlc5N-15I/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/08/15/xkcd-password-security/#comments</comments>\r\n\t\t<pubDate>Mon,
+      15 Aug 2011 13:00:42 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[Security]]></category>\r\n\t\t<category><![CDATA[passwords]]></category>\r\n\t\t<category><![CDATA[xkcd]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1672</guid>\r\n\t\t<description>If
+      you were on the internet last week, you probably saw an article, twitter, or
+      Facebook post about the xkcd comic on password strength. The comic, which was
+      (most likely) inspired by an article entitled, “The Usability of Passwords”
+      basically says that using a multi-word password (3 or more words), is more secure
+      than what I have referred to as “complex passwords” in past articles on this
+      blog. The writer of the original article makes the point (which is what the
+      xkcd comic points to) that passwords using three or more dictionary words, has
+      more entropy and is thus harder to crack, therefore making them more secure.
+      While there is a bit of truth to the article, it leads to some false understandings
+      of how hackers actually go about hacking passwords, and make assumptions that
+      aren’t entirely accurate. &lt;a href=\"http://www.mkoby.com/2011/08/15/xkcd-password-security/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>If
+      you were on the internet last week, you probably saw an article, twitter, or
+      Facebook post about the <a href=\"http://xkcd.com/936/\">xkcd comic on password
+      strength</a>.  The comic, which was (most likely) inspired by an article entitled,
+      “<a href=\"http://www.baekdal.com/tips/password-security-usability\">The Usability
+      of Passwords</a>” basically says that using a multi-word password (3 or more
+      words), is more secure than what I have referred to as “complex passwords” in
+      past articles on this blog.  The writer of the original article makes the point
+      (which is what the xkcd comic points to) that passwords using three or more
+      dictionary words, has more entropy and is thus harder to crack, therefore making
+      them more secure.  While there is a bit of truth to the article, it leads to
+      some false understandings of how hackers actually go about hacking passwords,
+      and make assumptions that aren’t entirely accurate.<span id=\"more-1672\"></span></p>\n<h3>Hacking
+      Passwords</h3>\n<p>The original article explains several methods for hacking
+      passwords. These are, asking, guessing, brute force, common word attacks, and
+      dictionary attacks.  You can look at the article to see how the original author
+      describes these methods, but many of them should be self explanatory.  Asking
+      and guessing for passwords are what regular non-hacker type people will do.
+      \ Hackers will also ask for passwords, but they’ll do so in the form of social
+      engineering. <a href=\"http://en.wikipedia.org/wiki/Social_engineering_(security)\">Social
+      engineering</a> is basically tricking the person into giving you the password
+      by (most often) pretending to be someone they can trust, like an internal security
+      or IT employee.</p>\n<p>The brute force, common work, and dictionary attacks
+      will be performed by hackers, but not necessarily in the manner described by
+      the author.</p>\n<h4>How the Author Says These Work</h4>\n<p>The author of “Usability
+      of Passwords” says that these methods are most likely performed at the computer,
+      network, or website that the hacker is attempting to gain access to.  And because
+      of this fact the author leads the reader to believe that by allowing only a
+      small number of attempts, followed by a “lock out period” that stops the hacker
+      from logging in for an hour, is enough to keep his password strategy safe.</p>\n<p>Before
+      I go further, I want to say that limiting the number of attempts and instituting
+      a lock out period is a good security practice, and should be implemented by
+      large corporations.</p>\n<h4>How Hackers Really Hack Passwords</h4>\n<p>The
+      author of “Usability of Passwords” is correct in the fact that hackers will
+      use brute force and dictionary attacks to hack a password.  But he’s incorrect
+      in that they are used primarily at the login screens.<br />\nMost hackers (at
+      least the good ones) will attempt to acquire the password through social engineering,
+      and then failing that will work on getting the password hash file off a computer.
+      \ What is a “password hash file” you ask? It’s a file that’s on a computer where
+      the username and the hashed password of the user(s) of the computer is stored.
+      \ Getting this file is generally a lot of work for the hacker and this is why
+      they’ll usually just attempt to use social engineering.</p>\n<p>Once the hacker
+      has the password hash file, they’ll use various programs (I won’t link to them
+      here, you can Google to see what I’m referring to) to then crack the password
+      hashes on their local computers.  It is this process where the hacker will use
+      the brute force and dictionary attacks.</p>\n<p>The other problem is that some
+      of the dictionary hacking programs can be modified to try combinations of words
+      thus making the idea of using multiple words in a password not nearly as secure
+      as the author would lead you to believe.  Is it secure? Not really. Will it
+      take longer for the hacker to crack said password? Yes it will.</p>\n<h3>The
+      Graphics Card Problem</h3>\n<p>Another fact that the author ignores (but is
+      mentioned in the article’s comments”, is that graphics cards are incredibly
+      fast.  And there are applications available that allow a hacker to utilize their
+      graphics card(s) processor (GPU) to crack password hashes at an alarming rate.
+      \ More information on this process can be found by reading <a href=\"http://mytechencounters.wordpress.com/2011/04/03/gpu-password-cracking-crack-a-windows-password-using-a-graphic-card/\">this
+      article</a>.</p>\n<p>What this means is that utilizing brute force and dictionary
+      attacks can be done in even less time.</p>\n<h3>Why Complex Passwords Are Better</h3>\n<p>So
+      basically I told you all that to tell you this.  Complex passwords are better
+      than using dictionary words. Period.</p>\n<p>A complex password is a password
+      that meets following requirements:<br />\nAt least 8 characters (a minimum of
+      12 is preferred)<br />\nContains BOTH upper case and lower case letters<br />\nContains
+      numbers<br />\nContains at least 1 special character (examples: !@#$%{^]&amp;*)</p>\n<p>Why
+      are these better?  Because they can’t be easily figured out with a dictionary
+      attack. They also make brute force attacks more difficult.  It’s hard to guess
+      passwords if they have weird characters in them.  Long passwords, that meet
+      the other requirements will take years to crack, even when using graphics cards.</p>\n<p>The
+      idea is to make it difficult for the hacker to guess, or hack your password,
+      even if they get that password hash.  But complex passwords, or multiple word
+      passwords don’t help get around the social engineering problem (the user willfully
+      giving someone their password).</p>\n<h3>But I Can’t Remember Complex Passwords</h3>\n<p>The
+      author’s point about using multiple dictionary words, along with the punchline
+      of the xkcd comic, is that such passwords are easier to remember over complex
+      passwords.  And while this is an extremely valid point, it defeats the purpose
+      of passwords.  Passwords a form of security (some would argue they provide a
+      false sense of security, but that’s a different topic).  So passwords should
+      themselves be as secure as possible.  This idea of secure passwords comes at
+      the cost of easily being able to remember your passwords, especially since to
+      be really secure you should have a different password for each website that
+      requires one.</p>\n<p>This is where “password safes” come into play.  Applications
+      like <a href=\"http://www.keepass.info\">Keepass</a>, <a href=\"http://www.lastpass.com\">LastPass</a>
+      (what I use), and <a href=\"http://agilebits.com/products/1Password\">1Password</a>,
+      allow you to store passwords for individual sites, and they all integrate into
+      your web browser to some degree.  All of these applications also have password
+      generators that allow you to create complex, non-dictionary passwords.  These
+      generated passwords are then saved with the corresponding site you’ve generated
+      for.  What these applications allow you to do is to have a different complex
+      password for each website you visit.</p>\n<p>You’re probably asking “how can
+      storing all my passwords in a single place be secure” and it wouldn’t be a bad
+      question.  The thing about the applications I’ve listed is they all use high
+      quality encryption to store the passwords and they all require the use of a
+      good “master password” and will warn you when your master password is insecure.
+      \ You want to have a very secure (around 15-20 characters) complex password
+      as your master password.  And you want to make sure that you use that password
+      only for accessing your password safe.</p>\n<h3>Conclusion</h3>\n<p>In the end,
+      the author of “Usability of Passwords” makes a convincing case, but not if you
+      know how hackers really operate.  His intentions are good though, the idea of
+      using harder to guess/hack passwords is noble regardless of how you say it should
+      be done.  But I believe that some of his ideas lead to a false sense of security
+      because of a lack of understanding.</p>\n<p>Hopefully, I’ve explained to you
+      why some of the ideas presented in the original article were not so great, and
+      have in turn caused you to think about your passwords, and how to create more
+      secure passwords.  I highly recommend that you begin using a password safe,
+      and changing your passwords around the internet to more secure, complex passwords.</p>\n<div
+      class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=lBWlc5N-15I:hewEuwSA6cI:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=lBWlc5N-15I:hewEuwSA6cI:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/lBWlc5N-15I\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/08/15/xkcd-password-security/feed/</wfw:commentRss>\r\n\t\t<slash:comments>2</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/08/15/xkcd-password-security/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Cutting
+      Worker Costs on Heroku</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/PdL9Rug72pw/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/08/02/cutting-worker-costs-on-heroku/#comments</comments>\r\n\t\t<pubDate>Tue,
+      02 Aug 2011 22:30:53 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[Just
+      for Bands]]></category>\r\n\t\t<category><![CDATA[programming]]></category>\r\n\t\t<category><![CDATA[gems]]></category>\r\n\t\t<category><![CDATA[heroku]]></category>\r\n\t\t<category><![CDATA[ruby]]></category>\r\n\t\t<category><![CDATA[ruby
+      on rails]]></category>\r\n\r\n\t\t<guid isPermaLink=\"false\">http://www.mkoby.com/?p=1667</guid>\r\n\t\t<description>When
+      we launched LiveShow, we utilized what Heroku calls a \"Worker Dyno\" to handle
+      background tasks, specifically sending emails.  Using a Heroku worker dyno allows
+      you to offload work to a background task so that it doesn't hold up the actual
+      web server portion of your app.  The downside to worker dynos is they cost money,
+      $0.05/hour to be exact.  And when you run one all day, everyday for a month,
+      that can add up. &lt;a href=\"http://www.mkoby.com/2011/08/02/cutting-worker-costs-on-heroku/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>When
+      we launched <a title=\"Just for Bands\" href=\"http://www.justforbands.com\">Just
+      for Bands</a>, my partner Erick and I decided to go with Heroku&#8217;s cloud
+      hosting service to host our <a title=\"LiveShow\" href=\"http://www.booktheliveshow.com\">LiveShow</a>
+      application.  The reasons for this had to do with simplicity in managing the
+      &#8220;server&#8221; and cost.  Heroku is fairly cheap, and the level of service
+      they provide through their add-ons only increases that value.  If you have a
+      Ruby on Rails application to launch and you don&#8217;t want to think about
+      servers, <a title=\"Heroku\" href=\"http://www.heroku.com\">Heroku</a> is definitely
+      worth looking at.</p>\n<h3>Heroku Worker Dynos</h3>\n<p>When we launched LiveShow,
+      we utilized what Heroku calls a &#8220;<a title=\"Heroku: Worker Dynos &amp;
+      Delayed Job\" href=\"http://devcenter.heroku.com/articles/delayed-job\">Worker
+      Dyno</a>&#8221; to handle background tasks, specifically sending emails.  Using
+      a Heroku worker dyno allows you to offload work to a background task so that
+      it doesn&#8217;t hold up the actual web server portion of your app.  The downside
+      to worker dynos is they cost money, $0.05/hour to be exact.  And when you run
+      one all day, everyday for a month, that can add up.  In the case of LiveShow,
+      to the tune of over $50 a month. And for a company that isn&#8217;t making any
+      real money at the moment, that&#8217;s a lot of money going out with next to
+      none coming in.<span id=\"more-1667\"></span></p>\n<h3>Enter HireFire</h3>\n<p>When
+      doing some research for another project, I stumbled on the <a title=\"HireFire
+      gem\" href=\"https://github.com/meskyanichi/hirefire\">HireFire</a> gem.  This
+      gem is a must have for anyone who is using Heroku and the worker dynos.  The
+      use of this gem saved us close to $35 in July alone.</p>\n<p>What does it do?
+      It&#8217;s simple, you set up this gem, and you deploy the changes to Heroku.
+      Once the changes are live on Heroku, you can turn off your worker dyno because
+      this gem will activate one when you generate a background task. You read correctly,
+      it will &#8220;hire&#8221; a Heroku worker dyno when it notices a new background
+      task has been created.  Once the background task has completed successfully,
+      the HireFire gem will them kill (read &#8220;fire&#8221;) the worker dyno.  So
+      the worker dynos are only alive when they&#8217;re needed.</p>\n<p>You can imagine
+      how something like this would reduce the cost of someone (like Just for Bands)
+      that relies on these workers to push out emails and perform other tasks.</p>\n<h3>The
+      Downside</h3>\n<p>If you used scheduled background tasks (DelayedJob&#8217;s
+      run_at option), this won&#8217;t help.  Because HireFire will see the pending
+      job, it will actually keep the worker alive until that job has been ran successfully.</p>\n<p>Also,
+      currently, the gem requires you to store your Heroku account credentials in
+      server environment variables on Heroku. There is work to move to using the Heroku
+      API key that each user is given, but it hasn&#8217;t been fully implemented
+      yet.  It needs the credentials in order to hire/fire the worker dynos, since
+      it uses Heroku&#8217;s APIs for doing the work.</p>\n<h3>Conclusion</h3>\n<p>Seriously,
+      if you&#8217;re running a Heroku app, and you are using the DelayedJobs or any
+      of the background task runners that HireFire supports, you should highly consider
+      using this gem.  It will drastically reduce your costs, and thus keep your pocket
+      book in check.</p>\n<div class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=PdL9Rug72pw:nUdi7HRoGqI:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=PdL9Rug72pw:nUdi7HRoGqI:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/PdL9Rug72pw\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/08/02/cutting-worker-costs-on-heroku/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/08/02/cutting-worker-costs-on-heroku/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>The
+      Noows</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/F7v7u7HbFXY/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/07/05/the-noows/#comments</comments>\r\n\t\t<pubDate>Tue,
+      05 Jul 2011 12:30:06 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[Noows]]></category>\r\n\t\t<category><![CDATA[Projects]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1661</guid>\r\n\t\t<description>Today,
+      I'm happy to announce the \"official\" launch of my second side project, The
+      Noows. What is \"The Noows\" you ask? Quite simply it's a site that lets you,
+      the user, determine exactly what is news. The site works similar to Digg or
+      Reddit in that you click the little button next to the article links and they're
+      \"upvoted\" and moved to the top of the homepage. &lt;a href=\"http://www.mkoby.com/2011/07/05/the-noows/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>Today,
+      I&#8217;m happy to announce the &#8220;official&#8221; launch of my second side
+      project, <a title=\"The Noows\" href=\"http://www.thenoows.com\">The Noows</a>.
+      \ What is &#8220;The Noows&#8221; you ask?  Quite simply it&#8217;s a site that
+      lets you, the user, determine exactly what is news.  The site works similar
+      to Digg or Reddit in that you click the little button next to the article links
+      and they&#8217;re &#8220;upvoted&#8221; and moved to the top of the homepage.
+      \ The site (currently) differs from Digg and Reddit in that there is no algorithm
+      that determines a certain item is &#8220;front page material&#8221; clicking
+      any link will move it to the top of the homepage.<span id=\"more-1661\"></span></p>\n<h2>Where
+      the Idea Comes From</h2>\n<p>In 2008 I became very upset with Digg and it&#8217;s
+      army of pro-Obama, voters that upvoted any article that was pro-Obama and constantly
+      buried any article that showed Obama to be a double-talker, or displayed him
+      making a error on facts.  A year or so later a big deal was made about the conservative
+      movement that sought to upvote and anti-Obama articles and downvote any anti-republican
+      articles.</p>\n<p>Both of these actions were wrong. To me a site like Digg or
+      Reddit works best people aren&#8217;t trying to game it for a particular political
+      agenda.</p>\n<h2>The Solution</h2>\n<p>I needed to solve two problems with The
+      Noows, I wanted to eliminate the ability for others to submit stories, and remove
+      the ability to game the site.  The first one is easy to solve, and I did it
+      by just relying on the RSS feeds from official news sources (CNN, MSNBC, Fox
+      News, and eventually newspapers and such).  The idea was to remove the ability
+      for people to submit their own articles, thus removing the need for them to
+      game the site.</p>\n<p>The second solution is currently two-fold. First, I rely
+      on Facebook authentication for user creation and login. Since most people really
+      only have one Facebook account, they can&#8217;t create multiple accounts on
+      the site without also creating multiple Facebook accounts.  This (hopefully)
+      makes it more trouble than it&#8217;s worth at the moment for a person to want
+      to &#8220;game&#8221; the site to make sure certain articles are seen.</p>\n<p>The
+      second part of the solution is that there is currently no algorithm. You click
+      the &#8220;Noows?&#8221; button, that article gets moved to the top of the homepage.
+      Doesn&#8217;t matter if it&#8217;s already on the homepage or not, it gets bumped
+      to the top.  The idea here is that the stuff a lot of people really think is
+      news worthy will always be at the top of the site.  Will there eventually be
+      an algorithm to determine what goes to the top? It&#8217;s possible, depends
+      on what people want and if I ever see a real need for it.</p>\n<h2>Conclusion</h2>\n<p>Will
+      the site ever be popular? Who knows. Really I just wanted to get it out there
+      so people can start using it.  I think something that aggregates other news
+      sites and brings stuff together in a way that allows everyone to see various
+      articles on the same subject has value.  There might even be some value in a
+      future feature that lets users decide on the left/right/center of particular
+      articles.  But for the meantime, I hope that some of you can come to use it
+      as a goto place to get your news fix.</p>\n<div class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=F7v7u7HbFXY:pXQySMLHf64:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=F7v7u7HbFXY:pXQySMLHf64:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/F7v7u7HbFXY\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/07/05/the-noows/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/07/05/the-noows/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Why
+      Robert Scoble is Wrong (And a Little Right) About Apps</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/ZZEz2zc473Y/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/06/23/why-robert-scoble-is-wrong-about-apps/#comments</comments>\r\n\t\t<pubDate>Thu,
+      23 Jun 2011 23:30:41 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[Commentary]]></category>\r\n\t\t<category><![CDATA[Internet]]></category>\r\n\t\t<category><![CDATA[Technology]]></category>\r\n\t\t<category><![CDATA[android]]></category>\r\n\t\t<category><![CDATA[app
+      store]]></category>\r\n\t\t<category><![CDATA[iphone]]></category>\r\n\t\t<category><![CDATA[meego]]></category>\r\n\t\t<category><![CDATA[nokia]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1659</guid>\r\n\t\t<description>Robert
+      Scoble is no stranger to opinions. He has several of them, and he posts them
+      on Twitter daily. Sometimes his opinions are valid, other times they can come
+      across as blatant fanboy.  That's okay though, that's what the internet is for.
+      \ But he has recently taken the stance that the success of the platform is based
+      solely on the number of native applications it has available. &lt;a href=\"http://www.mkoby.com/2011/06/23/why-robert-scoble-is-wrong-about-apps/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p><a
+      href=\"http://scobleizer.com/\">Robert Scoble</a> is no stranger to opinions.
+      He has several of them, and he posts them on Twitter daily. Sometimes his opinions
+      are valid, other times they can come across as blatant fanboy.  That&#8217;s
+      okay though, that&#8217;s what the internet is for.  But he has recently taken
+      the stance that the success of the platform is based solely on the number of
+      native applications it has available.</p>\n<p>While this view isn&#8217;t completely
+      incorrect, it&#8217;s the only truth. What Scoble will constantly say whenever
+      he comes across a new device (say Android tablet, or Nokia&#8217;s newest MeeGo
+      device), he&#8217;ll say something like &#8220;cool device, but no apps so I
+      won&#8217;t use it&#8221;, which again is his prerogative.  But he often ignores
+      one glaring fact. The iPhone became a successful platform without any native
+      apps. When the iPhone first launched you could only do web applications, there
+      was no native development kit to write native apps (outside of Apple). However,
+      even without the native apps, the iPhone became an incredibly popular device.
+      When native iOS applications arrived over a year later, it only further cemented
+      the iPhone&#8217;s popularity.</p>\n<p>So the iPhone, Scoble&#8217;s goto argument,
+      was itself without native applications for the first year of its existence,
+      but it was a good platform (the first of it&#8217;s kind actually) and this
+      is why it gained the attention of developers (it&#8217;s popularity didn&#8217;t
+      hurt either). Yes, now the iPhone has a large number of iOS applications in
+      it&#8217;s app store, so do Android phones (yes, I realize Android tablet apps
+      are lacking, but that doesn&#8217;t mean they aren&#8217;t being worked on),
+      and MeeGo will probably do okay as well. While MeeGo probably won&#8217;t be
+      as large in market share as iOS or Android, Nokia sells most of its stuff outside
+      the United States where there are a good amount of people who actually buy Nokia
+      products.</p>\n<p>Consider another argument of Nokia and the Symbian platform.
+      Nokia and Symbian owned a nice chunk of the mobile phone market, especially
+      outside the United States (this is something people forget about Nokia when
+      they try to discuss its &#8220;irrelevance&#8221;). In fact up until recently,
+      Nokia had more market share worldwide than Apple or Google&#8217;s Android.
+      However the platform became meaningless in a market with iOS and Android. This
+      happened mainly because Nokia was slow to catch Symbian up to what people were
+      loving about iOS and Android and as a result people stopped developing for Symbian
+      devices.</p>\n<p>So Robert, apps are important, but what matters is a solid
+      platform to develop those applications on.  Android, Windows Phone 7, and MeeGo
+      (iOS too) offer such platforms. Without a platform that is attractive to developers,
+      there will never be any applications for it. MeeGo has the attention of developers.
+      It might not be the ones in Silicon Valley, but they&#8217;re not the only developers
+      on the planet. The platform is important, because the platform brings developers
+      who then write the apps.</p>\n<div class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=ZZEz2zc473Y:YRLIZlJTk-w:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=ZZEz2zc473Y:YRLIZlJTk-w:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/ZZEz2zc473Y\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/06/23/why-robert-scoble-is-wrong-about-apps/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/06/23/why-robert-scoble-is-wrong-about-apps/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Quick
+      Thoughts on WWDC 2011 Announcements</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/0wmA4fFINXQ/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/06/06/quick-thoughts-on-wwdc-2011-announcements/#comments</comments>\r\n\t\t<pubDate>Mon,
+      06 Jun 2011 23:30:48 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[Technology]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1654</guid>\r\n\t\t<description>Earlier
+      today Apple kicked off it&amp;#8217;s annual developer conference with it&amp;#8217;s
+      usual keynote address from Apple&amp;#8217;s commander in chief Steve Jobs.
+       Lots of announcements this time around as they talked OSX, iOS, and their new
+      cloud venture known as iCloud. &amp;#8230; &lt;a href=\"http://www.mkoby.com/2011/06/06/quick-thoughts-on-wwdc-2011-announcements/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>Earlier
+      today Apple kicked off it&#8217;s annual developer conference with it&#8217;s
+      usual keynote address from Apple&#8217;s commander in chief Steve Jobs.  Lots
+      of announcements this time around as they talked OSX, iOS, and their new cloud
+      venture known as iCloud.  I wanted to touch on a few of the announcements and
+      give my two cents.</p>\n<p>Please note, that I was pretty happy with the round
+      of announcements for OSX and so I won&#8217;t be covering those too much here.</p>\n<h2>Twitter
+      iOS Integration</h2>\n<p>This was a popular one that was rumored in the days
+      leading up to the keynote and picked up some heavy steam over the weekend.  While
+      much of this is nice, I think that it greatly demonstrates the key differences
+      between iOS and Google&#8217;s mobile offering, Android. With iOS, Twitter had
+      to work directly with Apple to bring in such deep integration into their mobile
+      OS.  The contact sync, tweet photos from the photos app, etc, all have been
+      in the Android version of the Twitter app for some time now. Why? Twitter didn&#8217;t
+      have to wait to work with Google. Twitter could do it all themselves with the
+      APIs provided by Google for the Android operating system. Apple however had
+      to bake it in for their users to see such deep integration.</p>\n<h2>iOS Notifications</h2>\n<p>The
+      notification system on iOS today sucks, badly. Anyone that has used Android
+      devices, knows that its notification system has long been superior to iOS.  It
+      was non-intrusive, and easy to manage. With iOS 5, Apple is introducing a notification
+      system that looks very similar to Android&#8217;s. But really, it&#8217;s about
+      time for this change. They&#8217;ve needed for so long, and from the looks of
+      what I saw, it seems like a good system even if you can tell it&#8217;s largely
+      based on Android&#8217;s way of doing things, with some Apple flair thrown in.</p>\n<h2>iOS
+      Goes PC Free (Cutting the Cord)</h2>\n<p>Apple was the one&#8217;s that said
+      they were ushering in the &#8220;post PC era&#8221; when they announced the
+      iPad2. However, if you bought an iPhone or an iPad, the first thing you had
+      to do was connect it to a PC or Mac computer. That&#8217;s not very &#8220;post-pc&#8221;
+      is it? But with iOS 5, new devices are ready to go without the need for connecting
+      it to another device. This is good stuff, considering that even pro-iPhone himself,
+      Robert Scoble, has said this was one of the things where Android was winning.</p>\n<p>Apple
+      also announced wireless iTunes syncing, and cloud based connectivity to get
+      content on all their devices, so getting a new i-device will be similar to getting
+      a new Android device. Activate, login, and your stuff downloads to the device.</p>\n<h2>iTunes
+      Match</h2>\n<p>With iCloud, Apple also announced iTunes Match, which scans your
+      iTunes library, matches any tracks you haven&#8217;t purchased with those in
+      the iTunes, and uploads anything it can&#8217;t match. Giving you access to
+      your entire music collection.  However, it costs $24.99/year. The price isn&#8217;t
+      horrific, but if I can upload my collection to Google Music for free, there&#8217;s
+      not exactly a value add for that $24.99. Especially since I&#8217;m okay with
+      having that initial upload period (yes it sucks, but after it&#8217;s all there
+      it&#8217;s just uploading new stuff which goes much faster). However, I&#8217;m
+      willing to bet bucks to dollars that the yearly fee is mostly going to paying
+      the labels for licensing.</p>\n<p>What I do like is the matching technology
+      and I really thought Google would come out with something like this for their
+      service, but since they didn&#8217;t reach an agreement with the labels, I&#8217;m
+      sure that&#8217;s why they haven&#8217;t done something similar.  So there&#8217;s
+      some good, some bad here.  But I would expect Google, Amazon, and even Microsoft
+      to start offering a similar service soon.</p>\n<div class=\"feedflare\">\n<a
+      href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=0wmA4fFINXQ:Oi3zl0tFjKM:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=0wmA4fFINXQ:Oi3zl0tFjKM:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/0wmA4fFINXQ\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/06/06/quick-thoughts-on-wwdc-2011-announcements/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/06/06/quick-thoughts-on-wwdc-2011-announcements/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Completely
+      Removing RVM</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/4LBLEVgukQU/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/06/03/completely-removing-rvm/#comments</comments>\r\n\t\t<pubDate>Fri,
+      03 Jun 2011 16:30:08 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[programming]]></category>\r\n\t\t<category><![CDATA[ruby]]></category>\r\n\t\t<category><![CDATA[ruby
+      version manager]]></category>\r\n\t\t<category><![CDATA[rvm]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1650</guid>\r\n\t\t<description>Today
+      I had to change an single user installation of Ruby Version Manager (RVM), to
+      a system wide installation.  But after removing the .rvm folder and .rvmrc file
+      from the user directory, running the RVM installation script would still install
+      to the user directory instead of the system wide /usr/local/rvm directory.  What
+      I found is that RVM will embed itself deeply in your system and there are a
+      few more things you have to do, below are the steps to completely remove RVM
+      from your computer. &lt;a href=\"http://www.mkoby.com/2011/06/03/completely-removing-rvm/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>Today
+      I had to change an single user installation of <a href=\"https://rvm.beginrescueend.com/\">Ruby
+      Version Manager (RVM)</a>, to a system wide installation.  But after removing
+      the .rvm folder and .rvmrc file from the user directory, running the RVM installation
+      script would still install to the user directory instead of the system wide
+      /usr/local/rvm directory.  What I found is that RVM will embed itself deeply
+      in your system and there are a few more things you have to do, below are the
+      steps to completely remove RVM from your computer.</p>\n<p>First you&#8217;ll
+      need to remove the stuff in your /home directory:</p>\n<pre class=\"brush: bash;
+      title: ; notranslate\">\nrm -rf .rvm*\n</pre>\n<p>Next you&#8217;ll want to
+      remove the following line from your .bash_profile</p>\n<pre class=\"brush: plain;
+      title: ; notranslate\">\n[[ -s &quot;$HOME/.rvm/scripts/rvm&quot; ]] &amp;&amp;
+      . &quot;$HOME/.rvm/scripts/rvm&quot; # Load RVM function\n</pre>\n<p>You&#8217;ll
+      then want to remove the /etc/rvmrc file as this has some information about the
+      RVM install in your /home folder</p>\n<pre class=\"brush: bash; title: ; notranslate\">\nsudo
+      rm -rf /etc/rvm*\n</pre>\n<p>Finally you&#8217;ll want to remove the group it
+      created (this will be there if you attempted a system wide install, but hadn&#8217;t
+      cleared out everything, running this command will have no effect if the group
+      isn&#8217;t there)</p>\n<pre class=\"brush: bash; title: ; notranslate\">\nsudo
+      groupdel rvm\n</pre>\n<p>This should remove RVM from your system completely,
+      and allow you to do a system wide install that will install to /usr/local/rvm
+      as expected.</p>\n<div class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=4LBLEVgukQU:_FxHlT0CarY:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=4LBLEVgukQU:_FxHlT0CarY:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/4LBLEVgukQU\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/06/03/completely-removing-rvm/feed/</wfw:commentRss>\r\n\t\t<slash:comments>1</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/06/03/completely-removing-rvm/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>My
+      Thoughts on LastPass</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/d62VyP0luFI/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/05/06/my-thoughts-on-lastpass/#comments</comments>\r\n\t\t<pubDate>Fri,
+      06 May 2011 13:30:35 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[Commentary]]></category>\r\n\t\t<category><![CDATA[Internet]]></category>\r\n\t\t<category><![CDATA[lastpass]]></category>\r\n\t\t<category><![CDATA[passwords]]></category>\r\n\t\t<category><![CDATA[Security]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1647</guid>\r\n\t\t<description>If
+      you've known me for any length of time, you probably know that I highly encourage
+      everyone to use a password vault of some kind. There are several good ones available
+      some of them are free, other's cost money. Over the years I've tried several
+      and the ones I've used the most are KeePass and more recently LastPass. &lt;a
+      href=\"http://www.mkoby.com/2011/05/06/my-thoughts-on-lastpass/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>If
+      you&#8217;ve known me for any length of time, you probably know that I highly
+      encourage everyone to use a password vault of some kind.  There are several
+      good ones available some of them are free, other&#8217;s cost money.  Over the
+      years I&#8217;ve tried several and the ones I&#8217;ve used the most are <a
+      href=\"http://www.keepass.info\">KeePass</a> and more recently <a title=\"LastPass\"
+      href=\"http://www.lastpass.com\">LastPass</a>.</p>\n<p>Yesterday, the internet
+      was on fire over the <a href=\"http://blog.lastpass.com/2011/05/lastpass-security-notification.html\">possible
+      intrusion to LastPass&#8217;s server</a>s (please read this as I feel it&#8217;s
+      the proper way to handle such a situation).  But I want to point out 2 things,
+      which are mentioned in the article:</p>\n<ol>\n<li>LastPass is very clear in
+      that they are not 100% sure something was breached</li>\n<li>They did notice
+      a traffic anomaly that they couldn&#8217;t explain</li>\n</ol>\n<p>These are
+      very important points that need to be considered when it comes to using LastPass.
+       But I want to give my thoughts since I actually use the service.</p>\n<h2>Your
+      Passwords Are Probably Safe</h2>\n<p>One of the main arguments people give against
+      LastPass is that it puts all your passwords in the cloud on their servers.  While
+      true, that&#8217;s not the full story. You can read their website where they
+      <a href=\"https://lastpass.com/whylastpass_technology.php\">explain how it all
+      works</a>, but I&#8217;ll give you the gist. Basically when you sign up for
+      last pass, the vault for your passwords is created locally, encrypted, and then
+      uploaded to their servers.  They don&#8217;t have a way to unlock it on their
+      end. You have to have your master password to be able to unlock anything around
+      your LastPass vault.</p>\n<p>On top of that, LastPass is giving everyone a set
+      of options. A user can do any of the following:</p>\n<ol>\n<li>Change their
+      master password</li>\n<li>Not change their master password now, and be reminded
+      to do so later</li>\n<li>Take the risk and not change their master password</li>\n</ol>\n<p>By
+      making people change their passwords, they&#8217;re attempting to negate any
+      issue a possible intrusion might cause.  If you have a really strong master
+      password, then you&#8217;re probably okay (if your master password is &#8220;password&#8221;
+      you&#8217;re doing it wrong).</p>\n<p>Also, I think that LastPass handled this
+      situation really well. They informed their users, and are requiring them to
+      take action, even though all they found was a traffic anomaly, and not an actual
+      breach. They are standing on the side of caution, and since they&#8217;re a
+      password vault, that&#8217;s exactly what you should want them to do.</p>\n<h2>What
+      I&#8217;m Going to Do (and What You Should Do Too)</h2>\n<p>I&#8217;m going
+      to move to using two factor authentication with my LastPass account.  What this
+      means is that not only will I need my LastPass credentials (email address and
+      password), but also some other way of authenticating myself to access my LastPass
+      password vault.  LastPass offers multiple options for this, and they should
+      be researched to find one that works best for you.</p>\n<p>However, other password
+      vaults offer similar functionality.  I know that KeePass offers this, but I&#8217;m
+      not sure about <a href=\"http://agilebits.com/onepassword\">1Password</a>.</p>\n<p>If
+      you&#8217;re using a password vault, I would recommend moving to using two factor
+      authentication.  I would also recommend doing so for any site that offers the
+      ability to use two factor authentication (Gmail and several banks offer this).
+       Doing so helps lower the risk of you being compromised.</p>\n<h2>Password Vaults</h2>\n<p>Below
+      is a list of password vaults. Please consider using one of these and start using
+      secure passwords (and different passwords on different sites).  Please note
+      that outside of LastPass and KeePass I don&#8217;t know too much about the others.</p>\n<ul>\n<li><a
+      href=\"http://www.lastpass.com\">LastPass</a></li>\n<li><a href=\"http://www.keepass.info\">KeePass</a></li>\n<li><a
+      href=\"http://agilebits.com/onepassword\">1Password</a></li>\n<li><a href=\"http://passwordsafe.sourceforge.net/\">Password
+      Safe</a></li>\n<li><a href=\"http://www.roboform.com/\">RoboForm</a></li>\n</ul>\n<div
+      class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=d62VyP0luFI:fxtcqdnjbgA:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=d62VyP0luFI:fxtcqdnjbgA:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/d62VyP0luFI\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/05/06/my-thoughts-on-lastpass/feed/</wfw:commentRss>\r\n\t\t<slash:comments>1</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/05/06/my-thoughts-on-lastpass/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Using
+      Git Submodules</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/3xpiUHp4yN0/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/05/02/using-git-submodules/#comments</comments>\r\n\t\t<pubDate>Mon,
+      02 May 2011 14:30:20 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[programming]]></category>\r\n\t\t<category><![CDATA[git
+      github]]></category>\r\n\r\n\t\t<guid isPermaLink=\"false\">http://www.mkoby.com/?p=1638</guid>\r\n\t\t<description>I
+      recently spent some time setting up my *nix configuration files for Bash and
+      VIM in a repository on Github. Since I used several git repositories for handling
+      my various VIM plugins and color schemes, I utilized git’s submodule functionality
+      &amp;#8230; &lt;a href=\"http://www.mkoby.com/2011/05/02/using-git-submodules/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p><img
+      class=\"alignright size-full wp-image-1644\" title=\"Git Logo\" src=\"http://www.mkoby.com/wp-content/uploads/2011/04/250px-Git-logo.svg_.png\"
+      alt=\"\" width=\"250\" height=\"96\" />I recently spent some time setting up
+      my *nix configuration files for Bash and VIM in a <a href=\"http://www.github.com/mkoby/dotmatrix\">repository
+      on Github</a>. Since I used several git repositories for handling my various
+      VIM plugins and color schemes, I utilized git’s submodule functionality to link
+      to the original repositories, allowing me to keep the plugins up to date.  Today
+      I want to look a little closer at <a href=\"http://www.kernel.org/pub/software/scm/git/docs/git-submodule.html\">Git
+      submodules</a> and how I’m using them.</p>\n<h2>Setting Up a Submodule</h2>\n<p>Setting
+      up a submodule in git, is actually fairly easy, you just pass in the repository
+      address and the folder you want it to go to. So for example, on my VIM plugins,
+      I use the <a href=\"https://github.com/tpope/vim-rails\">vim-rails plugin by
+      Tim Pope</a>. So to create a git submodule off of this repository for the plugin
+      I use the following:</p>\n<pre class=\"brush: bash; title: ; notranslate\">\n[~/git/dotmatrix]$
+      git submodule add \\\nhttps://github.com/tpope/vim-rails.git \\\nvim/bundle/vim-rails\n</pre>\n<p>This
+      will create a “vim-rails” folder in vim/bundle/ and then download the files
+      from the repository. Meaning that when I commit and then push my dotmatrix repository,
+      it will upload the information for the submodules into my repository on Github.
+      When I set up a new computer, I simply install Git, and then run the following:</p>\n<pre
+      class=\"brush: bash; title: ; notranslate\">\n[~/git]$ git clone \\\ngit@github.com:mkoby/dotmatrix.git
+      --recursive\n</pre>\n<p>You’ll note the “&#8211;recursive” argument, this is
+      what tells git to first download the files for the repository and then recursively
+      create the folders and download the files for the submodules.  I then run my
+      setup script that sets up the various configuration files to their appropriate
+      locations so that I’m ready to code with just a few commands.</p>\n<h2>Updating
+      the Submodules</h2>\n<p>Once you have the submodules, you have to update them
+      from time to time. Maybe there’s a bug fix, or maybe a new feature in your submodules.
+      To update them is actually quite simple, you simply run the following command:</p>\n<pre
+      class=\"brush: bash; title: ; notranslate\">\n[~/git/dotmatrix]$ git submodule
+      foreach \\\ngit pull origin master\n</pre>\n<p>This goes through each submodule’s
+      folder and runs a regular “git pull” on the folder bringing in the latest changes.
+      The “foreach” argument is actually built into git’s submodule functionality,
+      so there is no hidden magic here.</p>\n<h2>Conclusion</h2>\n<p>This is the primary
+      place I’m using Git’s Submodule functionality, but this could be used to separate
+      out various project files into separate repositories for better project organization.
+      If anyone sees that I’m doing something wrong, just let me know as I’m always
+      looking to improve my workflows.</p>\n<div class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=3xpiUHp4yN0:DhuHccKcrvM:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=3xpiUHp4yN0:DhuHccKcrvM:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/3xpiUHp4yN0\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/05/02/using-git-submodules/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/05/02/using-git-submodules/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Moving
+      On, Leaving Sogeti</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/Ssigv0A7fK8/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/04/29/moving-on-leaving-sogeti/#comments</comments>\r\n\t\t<pubDate>Fri,
+      29 Apr 2011 22:45:53 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[General]]></category>\r\n\t\t<category><![CDATA[programming]]></category>\r\n\t\t<category><![CDATA[ruby
+      on rails]]></category>\r\n\t\t<category><![CDATA[work]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1627</guid>\r\n\t\t<description>But
+      good things always have to come to an end at some point and a new beginning
+      must be made. There are always new lessons to learn, new challenges to overcome,
+      and cool new projects to get involved with. So as of today, I’m not longer employed
+      by Sogeti, and will be moving on to a stealth-startup here in Houston. &lt;a
+      href=\"http://www.mkoby.com/2011/04/29/moving-on-leaving-sogeti/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>Almost
+      four years ago, I left working for Prudential Real Estate Services to go work
+      as a consultant Sogeti. The intent was to surround myself with programmers in
+      hopes that I could learn to become a better programmer myself. I’d like to say
+      that the experiment was a success.  I met some really great people, who taught
+      me a great many things. It wasn’t all about the programming all the time, but
+      I did get to work on tons of different projects, doing many different kinds
+      of work.</p>\n<p>But good things always have to come to an end at some point
+      and a new beginning must be made. There are always new lessons to learn, new
+      challenges to overcome, and cool new projects to get involved with.  So as of
+      today, I’m not longer employed by Sogeti, and will be moving on to a stealth-startup
+      here in Houston.</p>\n<p>Before you ask, no, this is not my startup, it’s someone
+      elses. I’ll still be working on Just for Bands and a couple of other projects
+      I have in the works (more on these soon, I hope). But this is a company that
+      hired me to work with them on getting their product launched.  Since I have
+      a little bit of experience in that area, here’s hoping I can help them with
+      theirs.</p>\n<p>What will I be doing? At first it will mainly be Ruby on Rails
+      work. But long term there is some mobile application development that will need
+      to be done and I’m hoping I can get my feet wet in that area too. I’m the second
+      developer on the ground, so there’s some room for growth as well. It promises
+      to be an interesting project where I will get to apply some of the things I
+      have recently learned about Ruby, Ruby on Rails, and getting an app from idea
+      to launch. Hopefully I can learn a few things along the way as well.</p>\n<div
+      class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=Ssigv0A7fK8:bykc7zxREnM:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=Ssigv0A7fK8:bykc7zxREnM:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/Ssigv0A7fK8\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/04/29/moving-on-leaving-sogeti/feed/</wfw:commentRss>\r\n\t\t<slash:comments>2</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/04/29/moving-on-leaving-sogeti/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Google,
+      Android, and Open Source</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/0GtnYJXPaaE/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/04/01/google-android-and-open-source/#comments</comments>\r\n\t\t<pubDate>Fri,
+      01 Apr 2011 15:00:10 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[Commentary]]></category>\r\n\t\t<category><![CDATA[Technology]]></category>\r\n\t\t<category><![CDATA[android]]></category>\r\n\t\t<category><![CDATA[Google]]></category>\r\n\t\t<category><![CDATA[mobile
+      phones]]></category>\r\n\r\n\t\t<guid isPermaLink=\"false\">http://www.mkoby.com/?p=1621</guid>\r\n\t\t<description>Google
+      announced that they would be holding back with regards to releasing the latest
+      version of the Android operating system. The release in question, Android 3.0
+      aka Honeycomb aka the version for tablets. The reasoning for this they say is
+      two fold: 1) the code isn’t ready to be released to the public, and 2) they
+      don’t want manufacturers attempting to put Honeycomb on smaller form factor
+      devices (read “mobile phones”).\r\n\r\nThen Google announced today that they
+      were going to tighten the requirements on releasing Android based products.
+      More specifically they were going to enforce the clause in their licensing agreement
+      (the one that allows companies to use the “with Google” tag on their devices
+      like the recently released Motorola Xoom) that the devices must meet certain
+      standards and certain objectives must be met.\r\n\r\nI want to look at both
+      of these things in this article, because they kind of go hand in hand. &lt;a
+      href=\"http://www.mkoby.com/2011/04/01/google-android-and-open-source/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p><a
+      href=\"http://www.mkoby.com/wp-content/uploads/2011/04/honeycombdroid.png\"><img
+      class=\"alignright size-full wp-image-1623\" style=\"margin: 3px;\" title=\"Android
+      Honeycomb\" src=\"http://www.mkoby.com/wp-content/uploads/2011/04/honeycombdroid.png\"
+      alt=\"\" width=\"300\" height=\"240\" /></a>Google announced that they would
+      be holding back with regards to releasing the latest version of the Android
+      operating system. The release in question, Android 3.0 aka Honeycomb aka the
+      version for tablets. The reasoning for this they say is two fold: 1) the code
+      isn’t ready to be released to the public, and 2) they don’t want manufacturers
+      attempting to put Honeycomb on smaller form factor devices (read “mobile phones”).</p>\n<p>Then
+      Google announced yesterday that they were going to tighten the requirements
+      on releasing Android based products. More specifically they were going to enforce
+      the clause in their licensing agreement (the one that allows companies to use
+      the “with Google” tag on their devices like the recently released Motorola Xoom)
+      that the devices must meet certain standards and certain objectives must be
+      met.</p>\n<p>I want to look at both of these things in this article, because
+      they kind of go hand in hand.<span id=\"more-1621\"></span></p>\n<h3>Open Sourcing
+      Code</h3>\n<p>If you are not familiar with the term “open source” to simplify
+      things (because trust me that term is a can of worms), it basically means that
+      the source code, or rather the application code for a computer program is available
+      to the public to download, modify, and even re-release, if they adhere to the
+      license under which the code was released.</p>\n<p>The base Android operating
+      system is open sourced. If you want, you can follow the instructions and download
+      the Android Open Source Project (AOSP) to your computer, modify the code, compile
+      it, and (if brave enough) put it on your device. As newer versions of Android
+      are released on devices, the source code is then placed into the AOSP source
+      code repository.  What Google recently announced is that they would be holding
+      back releasing Honeycomb source to the AOSP repository. Lets look at their reasons,
+      and my thoughts on them as well.</p>\n<p>But before going further I want to
+      make one thing clear. Google never stated that they would never release the
+      Honeycomb source code. Not once. They just said they weren’t going to release
+      it “rignt now”.  There’s a huge difference.</p>\n<h4>The Code Isn’t Ready for
+      Release</h4>\n<p>If you’ve followed the Android story, you know that recently
+      Google hired one of the primary user interface (UI) designers from Palm. He
+      was (obviously) tasked with bringing a nicer user experience to Android (something
+      that many people have long complained about). Honeycomb is the first release
+      of this new UI (you could say Android 2.3 was, but really that was nothing more
+      than a new skin, Honeycomb’s UI changes go deep).</p>\n<p>When it comes to Honeycomb,
+      the turnaround time on the new tablet version of Android was pretty quick (say
+      around 9 months). And if anyone knows anything about writing code, they probably
+      know that this means the code is hacked together is probably held together with
+      little more than scotch tape. In other words, this isn’t Google’s finest work
+      and so they’re not really wanting to put it out on display to the public just
+      yet.</p>\n<p>Also, it was announced (before this announcment, oh how quickly
+      the internet forgets), that much of the user interface changes in Honeycomb
+      would be merged into “Ice Cream” (the next version of the phone OS), and that
+      Google plans to bring all of Android back under a single version again, eliminating
+      the need for two different versions of the OS for different kinds of devices.
+      \ So when I read this announcement, this was my first thought.</p>\n<p>“Of course”
+      I said to myself, “why not wait to release the code when you’re back to a single
+      codebase.”</p>\n<p>It makes sense to first clean up the code, and then bring
+      it back in line with the rest of the code so that you can return to a single
+      code base when it’s released.</p>\n<h4>Non-Tablet Devices</h4>\n<p>The first
+      Android tablets to hit the market all ran Android 2.2 (ie Frozen Yogurt, aka
+      Froyo). Google advised companies to not do this, stating that Froyo wasn’t designed
+      with tablets in mind. When they made that public statement they also announced
+      that they were in fact working on a version for tablets, and pleaded with manufacturers
+      to hold off on releasing Android based tablets.</p>\n<p>Those manufacturers
+      didn’t listen.</p>\n<p>So Google is learning from their mistakes. They know
+      they’re going to merge the 2 form factor code bases back into a single code
+      base, they’ve announced as such. They do not want manufacturers putting Honeycomb
+      on phone size devices (the opposite of what was done with the tablets).</p>\n<p>This
+      goes back to Google probably wanting to wait until they’re back onto a single
+      code base for all device types before releasing the source code to AOSP.</p>\n<h3>Google
+      Tightens Their Grip</h3>\n<p>When Android was first announced, they went to
+      great lengths to push the open source angle. What this open sourcing of Android
+      meant was that manufacturers had a base operating system to build off of. It
+      gave them a fighting edge in the fight against the now (out of the blue) popular
+      Apple iPhone. Really, the iPhone came out and caught every cell phone manufacturer
+      off guard, they didn’t have a plan to compete, Android helped. There was a base
+      OS that they could build on, and many did.  Phone makers HTC, Samsung, and Motorola
+      all released devices using Android with their own user interface.</p>\n<p>These
+      interfaces (some of them) improve on the user interface of Android.  The SenseUI
+      from HTC being fairly popular. But they cause delays when it comes to getting
+      newer versions of Android onto mobile phones because the manufacturers have
+      to make deep modifcations to have the new version of Android work with their
+      third party user interfaces. This in turn leads to what many people have begun
+      calling “fragmentation” and means that there are, at any given moment, a number
+      of different Android versions on phones in the market.</p>\n<p>Google also has
+      some language in their license for Android that sets certain requirements for
+      the devices if they want to use the “with Google” branding and install the Google
+      applications suite (Gmail, Android Market, etc). What Google has actually announced
+      is that they will be more strictly enforcing this clause. The end goal, limiting
+      fragmentation. Limiting the number of different versions of Android in the wild
+      at any given moment.</p>\n<h3>Conclusion</h3>\n<p>I don’t view either one of
+      these decisions as Google going back on the “Android is open source” mantra.
+      One is just ensuring their best work is in the public repository, and the other
+      is taking just a little more control over the operating system which really
+      just means good things down the road with regards to OS updates and other things
+      related to Android specifically. To me the idea is to bring things more in line
+      to a single way of doing things rather than having a bunch of divergent paths
+      for the Android operating system. The end result being less fragmentation, a
+      single code base, and an overall better experience on Android.</p>\n<div class=\"feedflare\">\n<a
+      href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=0GtnYJXPaaE:HiZAdzgDoE0:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=0GtnYJXPaaE:HiZAdzgDoE0:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/0GtnYJXPaaE\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/04/01/google-android-and-open-source/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/04/01/google-android-and-open-source/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Build
+      Only What’s Necessary</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/rZl3GUVzSVA/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/02/01/build-only-whats-necessary/#comments</comments>\r\n\t\t<pubDate>Tue,
+      01 Feb 2011 14:30:06 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[General]]></category>\r\n\t\t<category><![CDATA[building]]></category>\r\n\t\t<category><![CDATA[launching]]></category>\r\n\t\t<category><![CDATA[startup]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1615</guid>\r\n\t\t<description>Is
+      that feature/idea absolutely essential to booking a show for your band?\r\n\r\nIf
+      the answer to that question was a \"No\" then we shelved the idea for possible
+      later inclusion.  It might seem like a really weird idea to not build as many
+      features as possible, but doing so keeps you on the path to actually launching
+      your product.  If we hadn't followed that one simple rule when deciding where
+      to focus our work, Erick and I would still be working on LiveShow and wouldn't
+      have gotten it out the door.  If you don't ever release your product/application
+      then you can never make money off of it. &lt;a href=\"http://www.mkoby.com/2011/02/01/build-only-whats-necessary/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>When
+      Erick and I set out to build <a title=\"LiveShow - Simple Booking Management
+      to Help You Amplify Your Career\" href=\"http://www.booktheliveshow.com\">LiveShow</a>,
+      we wrote down literally every idea that came to mind.  No matter how outrageous,
+      complex, forward thinking, backwards thinking, or idiotic, if it was an idea
+      related to booking shows we wrote it down.  When it came time to actually build
+      the application, it became my job to keep us on the straight and narrow.  Because
+      as we worked on the application, more ideas came to mind.</p>\n<h3>Is it Absolutely
+      Necessary</h3>\n<p>Eventually it all came down to one simple question: Is that
+      feature/idea absolutely essential to booking a show for your band?</p>\n<p>If
+      the answer to that question was a &#8220;No&#8221; then we shelved the idea
+      for possible later inclusion.  It might seem like a really weird idea to not
+      build as many features as possible, but doing so keeps you on the path to actually
+      launching your product.  If we hadn&#8217;t followed that one simple rule when
+      deciding where to focus our work, Erick and I would still be working on LiveShow
+      and wouldn&#8217;t have gotten it out the door.  If you don&#8217;t ever release
+      your product/application then you can never make money off of it.</p>\n<h3>Release
+      Early, Release Often</h3>\n<p>Creating an an application that runs and works
+      on the internet means that you can release a product early and gradually add
+      to its feature set as time passes.  The phrase is often heard in what is known
+      as the &#8220;agile development method&#8221; and it&#8217;s called &#8220;Release
+      early, release often&#8221; and it means to release the product at the earliest
+      possible point and then gradually improve it over time (have many successive
+      releases).</p>\n<p>If you want an example of a company that does this frequently,
+      look no further than Google.  A good example of Google doing this would be Gmail,
+      their online email product.  When Gmail was first released it allowed you to
+      do 2 things with the emails you got: read them or archive them.  There was no
+      &#8220;delete&#8221; button because Gmail gave users one gigabyte of space,
+      compared to Yahoo and Hotmail which gave around 250 megabytes of storage, that
+      was a lot of space.  They believed you&#8217;d never need to delete an email
+      again.  Over time they found that customers really wanted to be able to delete
+      so they added a delete button, and then they add a &#8220;Trash&#8221; folder
+      so you could recover accidentally deleted emails.  They also over time added
+      Google Talk to Gmail.  And more recently they added the ability to make phone
+      calls from within Gmail.  Gmail is just one example of Google doing this.  Android
+      is another example, so is Google Calendar.</p>\n<p>The idea is to get your product
+      out in front of the public.  Even if it doesn&#8217;t have all the features
+      you&#8217;d want it to have, if it at least accomplishes the basic goal of the
+      application then it&#8217;s good enough to launch with.  Just because you launch
+      it doesn&#8217;t mean it&#8217;s done.  You can still make changes, add features,
+      and fix bugs.  Getting the product out in front of people allows you to figure
+      out how people will use your application.  You might find that they use it in
+      a way that you hadn&#8217;t foreseen and that might give you a whole new direction
+      to go in (read about Flickr&#8217;s early beginnings for a good example of this).</p>\n<h3>Conclusion</h3>\n<p>When
+      you start to build something, ask yourself what is the absolute essential things
+      your product needs to allow users to achieve their goals.  If a feature or idea
+      isn&#8217;t a part of that, then shelve it for later.  You want to get the product
+      out to the public so they can use it, not keep it to yourself until it&#8217;s
+      &#8220;perfect&#8221; because realistically it will never be perfect.  Get it
+      out there.</p>\n<div class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=rZl3GUVzSVA:FzZ9lbFZ-vo:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=rZl3GUVzSVA:FzZ9lbFZ-vo:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/rZl3GUVzSVA\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/02/01/build-only-whats-necessary/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/02/01/build-only-whats-necessary/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Thinking
+      of Starting a Web Business, You Can Do It</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/obvQHm7F2H8/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/01/31/thinking-of-starting-a-web-business-you-can-do-it/#comments</comments>\r\n\t\t<pubDate>Mon,
+      31 Jan 2011 14:30:01 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[General]]></category>\r\n\t\t<category><![CDATA[business]]></category>\r\n\t\t<category><![CDATA[startup]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1608</guid>\r\n\t\t<description>Do
+      you say something like \"Man it would be great is someone would create a site
+      that does [fill in the blank]\" a lot?  Do you find yourself coming up with
+      great ideas only to forget them a couple of hours later?  Have you ever told
+      an idea to your friends, have them tell you it's horrible, only to see the exact
+      product a year later released by someone else?\r\n\r\nWell, do something about
+      it. &lt;a href=\"http://www.mkoby.com/2011/01/31/thinking-of-starting-a-web-business-you-can-do-it/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>Do
+      you say something like &#8220;Man it would be great is someone would create
+      a site that does [fill in the blank]&#8221; a lot?  Do you find yourself coming
+      up with great ideas only to forget them a couple of hours later?  Have you ever
+      told an idea to your friends, have them tell you it&#8217;s horrible, only to
+      see the exact product a year later released by someone else?</p>\n<p>Well, do
+      something about it.</p>\n<h3>Write Your Ideas Down</h3>\n<p>Have a great idea?
+       Write it down.  In a notebook, in <a title=\"Evernote\" href=\"http://www.evernote.com\">Evernote</a>
+      (or <a title=\"SpringPad\" href=\"http://springpadit.com/\">SpringPad</a>),
+      on a napkin that you put in your pocket, write the idea down.  Basically store
+      it somewhere that you won&#8217;t lose it later.  If you write the idea down,
+      you can come back to it later.  I can&#8217;t tell you the number of ideas I
+      let slip away because I had this great idea while I was at work and didn&#8217;t
+      write it down.  So I started carrying a <a href=\"http://www.amazon.com/gp/product/8883701143?ie=UTF8&amp;tag=almosnotyet-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=8883701143\">notebook</a>
+      (Amazon affiliate link) around.  When I have an idea, I stop and write it in
+      my notebook on one of the pages dedicated to business ideas.  This allows me
+      to easily find it later.  If I don&#8217;t have the notebook with me for some
+      reason, I open up Evernote (web page or application) and write it down in a
+      note that is specific to my business ideas.  Sure it means I have to look in
+      two places when I&#8217;m reviewing those ideas, but at least I don&#8217;t
+      forget the idea.</p>\n<p>Don&#8217;t just write down the idea.  Write down anything
+      related to it.  For example, I once had an idea to give companies the ability
+      to create their own secure chat server, so I wrote the idea down, but I also
+      wrote down to look at cloud computing options that would allow me to start and
+      stop servers as needed, chat server software, protocols, and so on.  That way
+      I just didn&#8217;t write down the idea but also the surrounding ideas so I
+      knew what direction I wanted to go.</p>\n<h3>Pick An Idea</h3>\n<p>After you&#8217;ve
+      gotten a few ideas written down, spend a Saturday reviewing them.  Flesh them
+      out a little.  What do you need to implement those ideas?  What things should
+      you research more?  Which one really gets you fired up?  If you find that an
+      idea sparks a million other thoughts about that idea, go with it.  If you aren&#8217;t
+      passionate about it, you&#8217;re probably not going to get very far with it.
+       However, if you find that a specific idea really gets your brain going, focus
+      on it.  It&#8217;s really about passion.  You&#8217;re going to have to really
+      like that idea to be able to spend the next year or so working on it.</p>\n<h3>Keep
+      it Simple</h3>\n<p>That idea that&#8217;s spawning a million thoughts a second,
+      that&#8217;s good.  But don&#8217;t let yourself get carried away with all those
+      secondary ideas.  Write them down so you don&#8217;t lose them to the ether.
+       Instead, after you&#8217;ve written them down go ahead and pick the absolute
+      essentials.  For every sub-idea, ask &#8220;is this absolutely essential to
+      accomplishing the initial idea&#8221; and if the answer is &#8220;no&#8221;
+      then move onto the next sub-idea.  This will help you determine what&#8217;s
+      really important to the idea.  The ideas that aren&#8217;t absolutely essential
+      can be worked on/implemented after launch.</p>\n<p><strong>This is important</strong>:
+      If it&#8217;s not absolutely essential to the achieve the goal of your product,
+      you don&#8217;t need it to launch.</p>\n<h3>Build It</h3>\n<p>This is one of
+      the most important thing to do.  Build it.  Get working on it as soon as you
+      can.  You&#8217;ll hit road blocks, have burn out, and have to put some time
+      in during your off hours.  But if you don&#8217;t build it, you can&#8217;t
+      release it.  Set up a schedule to work on the project.  A couple of hours a
+      day, no less than three days a week.  Having such a schedule really helps you
+      to set aside time for the project but still allow you to have a life.  Having
+      a life outside of work and your side project will delay any burn out experience
+      you&#8217;re likely to have.</p>\n<p>When you do hit a period of burn out, work
+      on something else related to the project.  Don&#8217;t have the website design,
+      work on that.  Formulate plans for after the launch of the product.  Organize
+      the to-do list or write a blog post about what you&#8217;re working on or some
+      of the lessons learned so far.  These things help you get through the burn outs
+      but allow you to maintain momentum and your work schedule.</p>\n<h3>Release
+      It</h3>\n<p>This is probably the most important part of the whole process.  Getting
+      it out to the public.  Letting real users hack away and break things.  Hey,
+      thinks are going to break, accept this truth early on and you will be less stressed
+      about it.  But releasing your product means you completed the process.  You
+      took an idea from inception all the way to release.  Sure you probably hit some
+      snags along the way.  It probably took you a little longer than you initially
+      thought (it always does).  But, it&#8217;s released, it&#8217;s out there.</p>\n<p>Unfortunately,
+      just releasing the product isn&#8217;t enough.  You&#8217;ll need to make enhancements.
+       Those ideas I said you need to put to the side because they&#8217;re not essential,
+      start cherry picking those and working on them.  You&#8217;ll have bugs to fix.
+       There will be customers to support, they&#8217;re going to request things.
+       Getting here though is the just the start of the journey.  If you can get to
+      this point, you&#8217;ve made it farther than most.</p>\n<div class=\"feedflare\">\n<a
+      href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=obvQHm7F2H8:AI_vaTuceX8:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=obvQHm7F2H8:AI_vaTuceX8:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/obvQHm7F2H8\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/01/31/thinking-of-starting-a-web-business-you-can-do-it/feed/</wfw:commentRss>\r\n\t\t<slash:comments>1</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/01/31/thinking-of-starting-a-web-business-you-can-do-it/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Vim,
+      RubyTest, &amp; RSpec</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/ofeBhUj9B4g/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/01/29/vim-rubytest-and-rspec/#comments</comments>\r\n\t\t<pubDate>Sat,
+      29 Jan 2011 20:36:40 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[programming]]></category>\r\n\t\t<category><![CDATA[rspec]]></category>\r\n\t\t<category><![CDATA[ruby]]></category>\r\n\t\t<category><![CDATA[spec]]></category>\r\n\t\t<category><![CDATA[testing]]></category>\r\n\t\t<category><![CDATA[vim]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1613</guid>\r\n\t\t<description>If
+      you use the Vim editor (or one of it&amp;#8217;s counterparts like gVim), use
+      the RubyTest Vim Plugin, and you use RSpec for some of your testing then you
+      might run into a problem that I was experiencing where it &amp;#8230; &lt;a
+      href=\"http://www.mkoby.com/2011/01/29/vim-rubytest-and-rspec/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>If
+      you use the Vim editor (or one of it&#8217;s counterparts like gVim), use the
+      RubyTest Vim Plugin, and you use RSpec for some of your testing then you might
+      run into a problem that I was experiencing where it gives you the error:</p>\n<pre
+      class=\"brush: plain; title: ; notranslate\">\n:!echo 'spec -f specdoc spec/greeter_spec.rb
+      -l 8' &amp;&amp; spec -f specdoc spec/greeter_spec.rb -l 8\nspec -f specdoc
+      spec/greeter_spec.rb -l 8\n/bin/bash: spec: command not found\n\nshell returned
+      127\n</pre>\n<p>Well, since I use RSpec 2.x (since I&#8217;m just now starting
+      to use RSpec), the above error is quite annoying because the &#8216;spec&#8217;
+      command isn&#8217;t really used anymore (at least from what I can find on the
+      internet).  So to get the RubyTest plugin to work with RSpec (and the &#8216;rspec&#8217;
+      command) you have to make a small change the plugin as marked below via a diff.</p>\n<pre
+      class=\"brush: diff; title: ; notranslate\">\n--- rubytest.vim.old\t2011-01-29
+      14:29:19.897897990 -0600\n+++ rubytest.vim\t2011-01-29 14:30:16.487584334 -0600\n@@
+      -21,10 +21,10 @@\n   let g:rubytest_cmd_testcase = &quot;ruby %p -n '/%c/'&quot;\n
+      endif\n if !exists(&quot;g:rubytest_cmd_spec&quot;)\n-  let g:rubytest_cmd_spec
+      = &quot;spec -f specdoc %p&quot;\n+  let g:rubytest_cmd_spec = &quot;rspec -f
+      d %p&quot;\n endif\n if !exists(&quot;g:rubytest_cmd_example&quot;)\n-  let
+      g:rubytest_cmd_example = &quot;spec -f specdoc %p -l %c&quot;\n+  let g:rubytest_cmd_example
+      = &quot;rspec -f d %p -l %c&quot;\n endif\n if !exists(&quot;g:rubytest_cmd_feature&quot;)\n
+      \  let g:rubytest_cmd_feature = &quot;cucumber %p&quot;\n</pre>\n<div class=\"feedflare\">\n<a
+      href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=ofeBhUj9B4g:vfzE81uOpHw:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=ofeBhUj9B4g:vfzE81uOpHw:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/ofeBhUj9B4g\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/01/29/vim-rubytest-and-rspec/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/01/29/vim-rubytest-and-rspec/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Testing
+      in Rails, It’s Important</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/OuFeTVGZaBQ/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/01/28/testing-in-rails-its-important/#comments</comments>\r\n\t\t<pubDate>Fri,
+      28 Jan 2011 22:15:06 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[Just
+      for Bands]]></category>\r\n\t\t<category><![CDATA[programming]]></category>\r\n\t\t<category><![CDATA[ruby
+      on rails]]></category>\r\n\t\t<category><![CDATA[testing]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1603</guid>\r\n\t\t<description>Over
+      the course of 2010 I spent most of my off time working on my side project, Just
+      for Bands.  Specifically the first application to come from Just for Bands known
+      as LiveShow.  The LiveShow application was written in Ruby on Rails with the
+      plan to deploy it to Heroku (a successful plan I might add).  But the main point
+      of this post is the idea of doing Test Driven Development (or TDD) in Ruby on
+      Rails and how it allowed my partner and I to build an app quickly. &lt;a href=\"http://www.mkoby.com/2011/01/28/testing-in-rails-its-important/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>Over
+      the course of 2010 I spent most of my off time working on my side project, <a
+      title=\"Just for Bands\" href=\"http://www.justforbands.com\">Just for Bands</a>.
+       Specifically the first application to come from Just for Bands known as LiveShow.
+       The <a title=\"LiveShow - Simple Booking Management to Help Amplify Your Career\"
+      href=\"http://www.booktheliveshow.com\">LiveShow</a> application was written
+      in Ruby on Rails with the plan to deploy it to Heroku (a successful plan I might
+      add).  But the main point of this post is the idea of doing Test Driven Development
+      (or TDD) in <a title=\"Ruby on Rails\" href=\"http://www.rubyonrails.org\">Ruby
+      on Rails</a> and how it allowed my partner and I to build an app quickly.</p>\n<h3>Testing
+      is Built In</h3>\n<p>Something to know about testing frameworks and Ruby on
+      Rails, there&#8217;s one built in.  The built in testing framework in Ruby on
+      Rails is Test::Unit.  There are other frameworks that you can substitute in
+      place of Test::Unit, but as far as &#8220;out of the box&#8221; frameworks go,
+      you could do worse.  Having a framework built in allowed me to teach Erick (my
+      partner, who had never worked in Rails before) how to follow the TDD workflow:
+      Write test, run test (seeing it fail), write minimal code to make test pass,
+      see test pass, <strong>refactor</strong> (bold because people tend to forget
+      this step).  Erick had never done test driven development before, and I had
+      never used Test::Unit (or written a Ruby on Rails app) before, so sticking with
+      the built in framework allowed us to minimize the number of things we needed
+      to learn from the get go.</p>\n<h3>Delegation of Responsibilities</h3>\n<p>Erick
+      and I had a pretty strict division of responsibilities with regards to the work
+      needed on the application.  Since I&#8217;ve been developing code professionally
+      for almost a decade, I was the developer.  Erick was the sweeper, going between
+      design and development duties where ever needed.  And we hired a graphic designer,
+      John to handle the more complex design work.  Having such divisions allowed
+      us to separate out the work.  But it left me in a position where I felt I couldn&#8217;t
+      develop a ton of code because I didn&#8217;t have any screens to wire up.  This
+      came from a lack of deep understanding of the MVC (Model View Controller) pattern
+      that Rails is based on.  To keep it quick, this pattern means there&#8217;s
+      separation between the UI, data, and processing layers.</p>\n<h3>Testing Allows
+      Coding Without The User Interface</h3>\n<p>Because the MVC pattern is designed
+      with separation of various application elements in mind, I was able to develop
+      the backend code without any screens.  The idea of testing functionality as
+      you develop using the built in test framework allowed most of the major functionality
+      to be written and built while the design was worked out else where.  This was
+      crucial to our ability to get the product built and launched in one year&#8217;s
+      time, while learning new languages and tools.  Once the functionality was done,
+      it was just a matter of tying it together with the user interface once we had
+      a design we were happy with.  Of course there were things that didn&#8217;t
+      work quite like expected when we got the interface wired up, but it was less
+      work than doing it from scratch, and having to wait would have meant delaying
+      the product.</p>\n<p>Also, with the tests we were able to see if it was the
+      UI not working correctly or if it was really our functionality.  In a couple
+      of places we were testing for the wrong thing, or had an error in our test that
+      caused a false positive.  But those were much quicker to iron out with the tests
+      in place.  Having unit tested as we developed, we were able to save tons of
+      time on the backend of the project fixing bugs.</p>\n<div class=\"feedflare\">\n<a
+      href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=OuFeTVGZaBQ:0ZdU3o2QH7s:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=OuFeTVGZaBQ:0ZdU3o2QH7s:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/OuFeTVGZaBQ\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/01/28/testing-in-rails-its-important/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/01/28/testing-in-rails-its-important/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Ship
+      It</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/LblzenRJVVU/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/01/10/ship-it/#comments</comments>\r\n\t\t<pubDate>Mon,
+      10 Jan 2011 13:30:19 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[Just
+      for Bands]]></category>\r\n\r\n\t\t<guid isPermaLink=\"false\">http://www.mkoby.com/?p=1599</guid>\r\n\t\t<description>With
+      the launch of LiveShow by Just for Bands last week, the stress of getting something
+      done and pushed for public consumption is only half done.  Having actually \"shipped\"
+      a working product, I understand that it is the larger (and harder) half. &lt;a
+      href=\"http://www.mkoby.com/2011/01/10/ship-it/\"&gt;Continue reading &lt;span
+      class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p><a
+      href=\"http://www.booktheliveshow.com\"><img class=\"alignright size-full wp-image-1600\"
+      style=\"margin: 5px;\" title=\"LiveShow\" src=\"http://www.mkoby.com/wp-content/uploads/2011/01/ad-liveshow.jpg\"
+      alt=\"LiveShow\" width=\"205\" height=\"125\" /></a>With the launch of <a title=\"LiveShow
+      - Just for Bands\" href=\"http://www.booktheliveshow.com\">LiveShow</a> by <a
+      title=\"Just for Bands\" href=\"http://www.justforbands.com\">Just for Bands</a>
+      last week, the stress of getting something done and pushed for public consumption
+      is only half done.  Having actually &#8220;shipped&#8221; a working product,
+      I understand that it is the larger (and harder) half.</p>\n<p>LiveShow took
+      about 2 hours a night 4-5 nights a week for an entire year to get ready.  The
+      idea was always to get a basic product that did just what was needed to accomplish
+      the goal done and pushed out for people to use.  Yes, we occasionally got burned
+      out.  Yes, some things didn&#8217;t go quite as planned.  Yes, we got behind
+      sometimes.  But we met our goal and launched within a year&#8217;s timeframe.
+       What was the secret?  We didn&#8217;t stop.  If we got burned out we worked
+      on other aspects, brainstormed, and generally found busy work that needed to
+      be done.</p>\n<p>But the real secret comes from the time boxing.  Saying to
+      ourselves nightly &#8220;I have 2 hours, I want to have [Feature X] working
+      by then&#8221; and then working towards that.  The feature being worked on could
+      have just been one piece of a larger feature.  But time boxing allowed us to
+      really focus on what we were working on.  When you have a seriously limited
+      amount of time, it helps decide what needs to be worked on.  On several occasions
+      I scrapped my work and started fresh the next night because something took me
+      longer than 2 hours during the first go.  Most of the time, I was doing it wrong
+      to begin with, but I had to do it wrong to find the right way and those couple
+      of hours that might have seemed like a waste were actual pivotal in finding
+      a solution that worked (and in many places more elegant).</p>\n<p>Time boxing
+      also allowed us to maintain family and social obligations.  We started this
+      project with our own time, our own money, and had to learn a few things on the
+      way.  We didn&#8217;t quit our day jobs and we certainly couldn&#8217;t deprive
+      our families of our time.  Time boxing allowed us to maintain a normal life.
+       Sure we worked a little more than usual after hours, but the focus that time
+      boxing allows and the fact that we limited our time allowed us to not get carried
+      away.</p>\n<p>If you&#8217;re looking to do your own side project, I recommend
+      time boxing yourself to a couple of hours a night 3-5 nights a week.  This will
+      allow you to be moving constantly towards your goal without taking over your
+      life.  It certainly worked for Erick and I when working on LiveShow, and it&#8217;s
+      one of the tent pole points of <a title=\"Getting Real from 37Signals\" href=\"http://gettingreal.37signals.com/\">37Signals&#8217;
+      book &#8220;Getting Real&#8221;</a>.  Give it shot, you have nothing to lose.</p>\n<div
+      class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=LblzenRJVVU:QjnAMejPlWk:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=LblzenRJVVU:QjnAMejPlWk:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/LblzenRJVVU\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/01/10/ship-it/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/01/10/ship-it/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>LiveShow
+      Ships</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/iDKGssmsTz8/</link>\r\n\t\t<comments>http://www.mkoby.com/2011/01/03/liveshow-ships/#comments</comments>\r\n\t\t<pubDate>Mon,
+      03 Jan 2011 23:30:14 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[Just
+      for Bands]]></category>\r\n\t\t<category><![CDATA[justforbands]]></category>\r\n\t\t<category><![CDATA[liveshow]]></category>\r\n\r\n\t\t<guid
+      isPermaLink=\"false\">http://www.mkoby.com/?p=1593</guid>\r\n\t\t<description>Yep,
+      \ today my partner Erick and I announced that LiveShow, the first Just for Bands
+      app was ready for the world's viewing.  It took a year's worth of programming
+      time at home after work and on weekends, learning a new programming language,
+      learning a new web framework for writing web applications, designing a data
+      model, and figuring out where the app should live.  But, it's officially shipped
+      as of today around 1:30pm. &lt;a href=\"http://www.mkoby.com/2011/01/03/liveshow-ships/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p><a
+      href=\"http://www.mkoby.com/wp-content/uploads/2011/01/shipitsquirrel.png\"><img
+      class=\"alignleft size-medium wp-image-1594\" style=\"margin: 3px;\" title=\"Ship
+      it Squirrel\" src=\"http://www.mkoby.com/wp-content/uploads/2011/01/shipitsquirrel-300x225.png\"
+      alt=\"Ship it Squirrel\" width=\"300\" height=\"225\" /></a>Yep,  today my partner
+      Erick and I announced that <a title=\"LiveShow - Simple Booking Management to
+      Amplify Your Career\" href=\"http://www.booktheliveshow.com\">LiveShow</a>,
+      the first <a title=\"Just for Bands - Simple Band Management to Help You Amplify
+      Your Career\" href=\"http://www.justforbands.com\">Just for Bands</a> app was
+      ready for the world&#8217;s viewing.  It took a year&#8217;s worth of programming
+      time at home after work and on weekends, learning a new programming language,
+      learning a new web framework for writing web applications, designing a data
+      model, and figuring out where the app should live.  But, it&#8217;s officially
+      shipped as of today around 1:30pm.</p>\n<p>What is LiveShow?  Simply, it&#8217;s
+      a communication manager for bands that lets them track what band members are
+      talking to what venues with regards to booking live shows (concerts, gigs, etc).
+       The idea was simplicity.  Get people in and out quickly so they can move on
+      to other tasks.  No one wants to sit and organize communications, add things
+      to a calendar, set reminders, and so on.  LiveShow does it automatically.  As
+      the user logs a communication with a potential venue, LiveShow will automatically
+      set a reminder and the user will be emailed about the follow up when it&#8217;s
+      time.</p>\n<p>This was my first time doing a project from the ground up and
+      as the main technical person who was in charge of backend design, coding practices,
+      and development tools used so I&#8217;ll be spending some time over the next
+      few blog posts going talking about some of the decisions we made from a technical
+      standpoint, so keep an eye out for those if you&#8217;re interested.  With this
+      post, I officially enter the &#8220;start up&#8221; world, and become an entrepreneur.
+       Hopefully good times are ahead.</p>\n<div class=\"feedflare\">\n<a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=iDKGssmsTz8:P5XEyjZ1R4w:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=iDKGssmsTz8:P5XEyjZ1R4w:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/iDKGssmsTz8\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2011/01/03/liveshow-ships/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2011/01/03/liveshow-ships/</feedburner:origLink></item>\r\n\t\t<item>\r\n\t\t<title>Discount
+      Calculator Released!</title>\r\n\t\t<link>http://feedproxy.google.com/~r/AlmostNotYet/~3/0W1GfVrLUFA/</link>\r\n\t\t<comments>http://www.mkoby.com/2010/10/21/discount-calculator-released/#comments</comments>\r\n\t\t<pubDate>Fri,
+      22 Oct 2010 00:45:24 +0000</pubDate>\r\n\t\t<dc:creator>Michael Koby</dc:creator>\r\n\t\t\t\t<category><![CDATA[Discount
+      Calculator]]></category>\r\n\t\t<category><![CDATA[android]]></category>\r\n\t\t<category><![CDATA[java]]></category>\r\n\t\t<category><![CDATA[mobile
+      apps]]></category>\r\n\r\n\t\t<guid isPermaLink=\"false\">http://www.mkoby.com/?p=1590</guid>\r\n\t\t<description>This
+      past weekend I released a new Android app to the Android Marketplace.  This
+      one is a simple discount calculator.  No frills, just simple enter price, enter
+      discount, hit &amp;#8220;calculate&amp;#8221; button to see actual price.  If
+      you&amp;#8217;re looking for a &amp;#8230; &lt;a href=\"http://www.mkoby.com/2010/10/21/discount-calculator-released/\"&gt;Continue
+      reading &lt;span class=\"meta-nav\"&gt;&amp;#8594;&lt;/span&gt;&lt;/a&gt;</description>\r\n\t\t\t<content:encoded><![CDATA[<p>This
+      past weekend I released a new Android app to the Android Marketplace.  This
+      one is a simple <a title=\"Discount Calculator on AppBrain\" href=\"http://www.appbrain.com/app/discount-calculator/koby.discountcalculator\">discount
+      calculator</a>.  No frills, just simple enter price, enter discount, hit &#8220;calculate&#8221;
+      button to see actual price.  If you&#8217;re looking for a QR code, look below.</p>\n<p
+      style=\"text-align: center;\"><img class=\"aligncenter size-full wp-image-1591\"
+      title=\"Discount Calculator QR Code\" src=\"http://www.mkoby.com/wp-content/uploads/2010/10/discountcalc.png\"
+      alt=\"\" width=\"150\" height=\"150\" /></p>\n<div class=\"feedflare\">\n<a
+      href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=0W1GfVrLUFA:vXSilouHw3k:yIl2AUoC8zA\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=yIl2AUoC8zA\" border=\"0\"></img></a>
+      <a href=\"http://feeds.feedburner.com/~ff/AlmostNotYet?a=0W1GfVrLUFA:vXSilouHw3k:qj6IDK7rITs\"><img
+      src=\"http://feeds.feedburner.com/~ff/AlmostNotYet?d=qj6IDK7rITs\" border=\"0\"></img></a>\n</div><img
+      src=\"http://feeds.feedburner.com/~r/AlmostNotYet/~4/0W1GfVrLUFA\" height=\"1\"
+      width=\"1\"/>]]></content:encoded>\r\n\t\t\t<wfw:commentRss>http://www.mkoby.com/2010/10/21/discount-calculator-released/feed/</wfw:commentRss>\r\n\t\t<slash:comments>0</slash:comments>\r\n\t\t<feedburner:origLink>http://www.mkoby.com/2010/10/21/discount-calculator-released/</feedburner:origLink></item>\r\n\t</channel>\r\n</rss>\r\n"
+    http_version: '1.1'
