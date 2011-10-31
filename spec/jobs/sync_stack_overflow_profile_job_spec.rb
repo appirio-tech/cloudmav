@@ -96,6 +96,25 @@ describe "SyncStackOverflowProfileJob" do
   
     it { @so_profile.url.should == "http://www.stackoverflow.com/users/83667" }
     it { @so_profile.reputation.should_not be_nil }  
-  end  
+  end
+  
+  describe "sync Jared314" do
+    before(:each) do
+      @profile = Factory.create(:user).profile
+      @so_profile = StackOverflowProfile.new(:stack_overflow_id => "Jared314")
+      @profile.stack_overflow_profile = @so_profile
+      @so_profile.save
+      @so_profile.stubs(:retag!)
+      @profile.reload
+  
+      VCR.use_cassette("stack_overflow_sync_Jared314", :record => :all) do
+        SyncStackOverflowProfileJob.perform(@so_profile.id)
+      end
+      @profile.reload
+      @so_profile.reload
+    end  
+    
+    it { @so_profile.url.should be_nil }
+  end
 
 end

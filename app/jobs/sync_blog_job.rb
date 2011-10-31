@@ -7,10 +7,6 @@ class SyncBlogJob
     blog = Blog.find(id)
     profile = blog.profile
     
-    unless blog.rss.starts_with?("http://")
-      blog.rss = "http://#{blog.rss}"
-    end
-
     rss = SimpleRSS.parse open(blog.rss)
     return if rss.nil?
 
@@ -35,6 +31,13 @@ class SyncBlogJob
     profile.save
     
     profile.calculate_score!
+  end
+  
+  def self.figure_out_rss(blog)
+    unless blog.rss.starts_with?("http://")
+      blog.rss = "http://#{blog.rss}"
+      blog.save
+    end   
   end
   
   def self.has_post?(blog, rss_item)

@@ -1,0 +1,73 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.stackoverflow.com:80/1.1/users/Jared314/tags?key=ZJZ_DNRrgk6IQYQ0h_Duyg
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 404
+      message: Not Found
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-max:
+      - '10000'
+      x-ratelimit-current:
+      - '9968'
+      x-aspnet-version:
+      - 4.0.30319
+      date:
+      - Mon, 31 Oct 2011 00:02:21 GMT
+      content-length:
+      - '216'
+    body: !binary |-
+      H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+      kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+      AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Ud5XVf1R49S/ov+nlaznP7c39kf
+      6SeLvGmyC3z40Zt5njZ5fZnX6Txr0mXVpufVejlLs+V1Oy+WF+kia6f8S0tN
+      X+W/aJ037fZXr87GHwHaL/mNk1+S/D8BAAD///o71zt4AAAA
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.stackoverflow.com:80/1.1/users/Jared314?key=ZJZ_DNRrgk6IQYQ0h_Duyg
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 404
+      message: Not Found
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-max:
+      - '10000'
+      x-ratelimit-current:
+      - '9960'
+      x-aspnet-version:
+      - 4.0.30319
+      date:
+      - Mon, 31 Oct 2011 00:05:35 GMT
+      content-length:
+      - '216'
+    body: !binary |-
+      H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+      kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+      AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Ud5XVf1R49S/ov+nlaznP7c39kf
+      6SeLvGmyC3z40Zt5njZ5fZnX6Txr0mXVpufVejlLs+V1Oy+WF+kia6f8S0tN
+      X+W/aJ037fZXr87GHwHaL/mNk1+S/D8BAAD///o71zt4AAAA
+    http_version: '1.1'
