@@ -1,14 +1,25 @@
-.grid_8
-  %h1 Sign in
+= form_for resource, :url => session_path(resource_name), :class => "form-stacked" do |f|
+  %fieldset
+    %legend Sign in
+    .clearfix
+      = f.label :username
+      .input
+        = f.text_field :username, :class => "xlarge"
+    .clearfix
+      = f.label :password
+      .input
+        = f.password_field :password, :class => "xlarge"
+  .actions
+    = f.submit "Sign in", :class => "btn primary"
   
-  = semantic_form_for resource, :url => session_path(resource_name) do |f|
-    = f.inputs do
-      = f.input :username, :required => false
-      = f.input :password, :required => false
-      - if devise_mapping.rememberable?
-        = f.input :remember_me, :as => :boolean
-    = f.buttons do
-      = big_primary_button_submit_tag "Sign in"
+  / = semantic_form_for resource, :url => session_path(resource_name) do |f|
+  /   = f.inputs do
+  /     = f.input :username, :required => false
+  /     = f.input :password, :required => false
+  /     - if devise_mapping.rememberable?
+  /       = f.input :remember_me, :as => :boolean
+  /   = f.buttons do
+  /     = big_primary_button_submit_tag "Sign in"
 
   %br
   = render :partial => "devise/shared/links"

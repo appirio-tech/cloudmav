@@ -1,15 +1,8 @@
-.grid_16
+.pull-right
+  %a{:href => "http://twitter.com/codemav", :class => "twitter-follow-button", "data-button" => "grey", "data-text-color" => "#ffffff", "data-link-color" => "#00AEFF", "data-show-count" => "false", "data-width" => "150px"} Follow @codemav
+  = javascript_include_tag "http://platform.twitter.com/widgets.js"
 
-  .right
-    %a{:href => "http://twitter.com/codemav", :class => "twitter-follow-button", "data-button" => "grey", "data-text-color" => "#ffffff", "data-link-color" => "#00AEFF", "data-show-count" => "false", "data-width" => "150px"} Follow @codemav
-    = javascript_include_tag "http://platform.twitter.com/widgets.js"
-
-  %ul
-    %li= link_to "Contact", "" #contact_path
-
-.clear
-  
-.grid_16.copyright
-  Copyright &copy; 2011 CodeMav. All Rights Reserved.
-.clear
+%ul.pills
+  %li= link_to "Contact", contact_path
+%p Copyright &copy; 2011 CodeMav. All Rights Reserved.
 

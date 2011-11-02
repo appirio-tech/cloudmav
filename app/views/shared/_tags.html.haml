@@ -3,7 +3,8 @@
   - if taggable.nil? || taggable.taggings.empty?
     No tags 
   - else
+    %ul
     - taggable.taggings_by_score.each do |tagging|
-      .tag
+      %li.tag
         .tag_score= number_with_precision tagging.score, :precision => 0
         = tagging

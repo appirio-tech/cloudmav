@@ -9,26 +9,18 @@
     = render :partial => "shared/analytics"
 
 %body
-  #header
-    .container_16
-      .grid_16
-        .title_icon= link_to image_tag("main_code_mav_logo.png"), root_path 
-        = render :partial => "shared/login_info"
+
+  .topbar#header
+    .topbar-inner
+      .container
+        %h3= link_to image_tag("main_code_mav_logo.png"), root_path 
         = render :partial => "shared/menu"
-      .clear
-    .clear
-  .clear
+        = render :partial => "shared/login_info"
+  
+  .container#content
+    = flashy
+    = render :partial => 'shared/recent_badges'
+    = yield
 
-  #content
-    .container_16
-      = flashy
-      = render :partial => 'shared/recent_badges'
-      = yield
-    .clear
-  .clear
-
-  #footer
-    .container_16
+    %footer
       = render :partial => "shared/footer"
-    .clear
-  .clear

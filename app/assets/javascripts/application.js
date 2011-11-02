@@ -11,4 +11,6 @@
 //= require tagit
 //= require underscore-min.js
 //= require backbone.js
+//= require bootstrap-twipsy.js
+//= require bootstrap-popover.js
 //= require previous_app.js

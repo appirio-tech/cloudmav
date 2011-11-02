@@ -4,19 +4,19 @@
 #profile
   = render :partial => "header"
   = render :partial => "profile_menu"
+  .clearfix
+  
   #profile_content
-    .grid_8
-      
-        
+    .span8  
       Skill breakdown coming soon.
       &nbsp;
-    .grid_5
+    .span5
       = render :partial => "accounts"
       
-    .clear
-    .grid_13
+    .clearfix
+    .span13
       = render :partial => "badges"
       = render :partial => "shared/tags", :locals => {:taggable => @profile}
-    .clear
-  .clear
-.clear
+    .clearfix
+  .clearfix
+.clearfix
