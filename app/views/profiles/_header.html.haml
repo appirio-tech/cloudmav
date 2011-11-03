@@ -4,7 +4,7 @@
       = render :partial => "profiles/tweet_profile"
     = render :partial => "profiles/evernote"
   %h1
-    = image_tag @profile.gravatar_url(:size => 110), :id => :profile_pic
+    = image_tag @profile.gravatar_url(:size => 45), :id => :profile_pic
     = @profile.display_name
     %small
       = @profile.username
