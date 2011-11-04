@@ -6,17 +6,13 @@
   = render :partial => "profile_menu"
   .clearfix
   
-  #profile_content
-    .span8  
+  .row#profile_content
+    .span12
       Skill breakdown coming soon.
       &nbsp;
-    .span5
+    .span4
       = render :partial => "accounts"
-      
-    .clearfix
-    .span13
+  .row     
+    .span16
       = render :partial => "badges"
       = render :partial => "shared/tags", :locals => {:taggable => @profile}
-    .clearfix
-  .clearfix
-.clearfix

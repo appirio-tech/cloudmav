@@ -1,4 +1,4 @@
-.page-header
+.page-header#profile_header
   .pull-right
     - if can? :tweet, @profile
       = render :partial => "profiles/tweet_profile"
@@ -10,27 +10,11 @@
       = @profile.username
       - if can? :edit, @profile
         = link_to "edit profile", edit_profile_path(@profile), :class => "btn"
-       
-.row#profile_header
-  .right
 
-  .span2
-    = image_tag @profile.gravatar_url(:size => 110), :id => :profile_pic
-  .span12
-    %h1
-      = @profile.display_name
-      %small
-        = @profile.username
-        - if can? :edit, @profile
-          = link_to "edit profile", edit_profile_path(@profile), :class => "btn"
-    .clearfix
-      %span
-        .location_image= image_tag "location_pin.png"
-        .location_text= @profile.location_text
-    .clearfix
-    = render :partial => "profiles/points"
-  .span2
-    %div{:id => "follow_#{@profile.id}"}
-      = render :partial => "shared/following", :locals => { :profile => @profile }
-  .clear
-.clearfix
+
+
+.pull-right
+  %div{:id => "follow_#{@profile.id}"}
+    = render :partial => "shared/following", :locals => { :profile => @profile }  
+.span16
+  = render :partial => "profiles/points"  

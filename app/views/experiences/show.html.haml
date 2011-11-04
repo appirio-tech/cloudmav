@@ -11,13 +11,13 @@
         - if @profile.jobs.empty?
           %p No jobs added
         - else
-          %ul
+          %ul.unstyled
             - @profile.jobs.chronological_order.each do |j|
               %li.job
-                .title
+                %h3
                   = j.title
-                  %span= j.display_date_range
-                .company_name= j.company_name
+                  %small= j.company_name
+                %span= j.display_date_range
                 %p= j.display_description
       &nbsp;
     .grid_2
