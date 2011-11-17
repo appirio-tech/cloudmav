@@ -1,64 +1,77 @@
-@import "colors";
-@import "mixins";
-
-#talk_search_form {
-  text-align:center;
-  font-size: 14pt;
-  [type=text] {
-    font-size: 14pt;
-    width: 500px;
+#talk_search_results {
+  .talk {
+    margin-bottom: 10px;
+  }  
+  img {
+    border: 1px solid #DDD;
   }
 }
 
-#no_results {
-  font-size: 18pt;
-  text-align:center;
-  margin-top: 20px;
-  color: $light_black;
-}
 
-.talk_search_result {
-  margin-top: 20px;
-   .talk_pic {
-     float: left;
-     img {
-       background: #fff;
-       padding: 3px;
-       border: 1px solid $gray_background;
-       width: 100px;
-     }
-   }
-   .talk_info {
-     float: left;
-     width: 500px;
-     margin-left: 10px;
-     .talk_title {
-       font-size: 16pt;
-     }
-     .talk_description {
-       font-size: 10pt;
-       margin-top: 5px;
-     }
-     .tags {
-       margin-top: 5px;
-     }
-   }
-   .talk_author {
-     float: left;
-     margin-left: 20px;
-     .talk_profile_name {
-       float: left;
-       font-size: 14pt;
-       margin-top: 5px;
-       margin-left: 10px;
-     }
-     .talk_profile_pic {
-       float: left;
-       img {
-         background: #fff;
-         padding: 3px;
-         border: 1px solid $gray_background;
-       }
-     }
-   }
-}
+// @import "colors";
+// @import "mixins";
+// 
+// 
+// 
+// 
+// #talk_search_form {
+//   text-align:center;
+//   font-size: 14pt;
+//   [type=text] {
+//     font-size: 14pt;
+//     width: 500px;
+//   }
+// }
+// 
+// #no_results {
+//   font-size: 18pt;
+//   text-align:center;
+//   margin-top: 20px;
+//   color: $light_black;
+// }
+// 
+// .talk_search_result {
+//   margin-top: 20px;
+//    .talk_pic {
+//      float: left;
+//      img {
+//        background: #fff;
+//        padding: 3px;
+//        border: 1px solid $gray_background;
+//        width: 100px;
+//      }
+//    }
+//    .talk_info {
+//      float: left;
+//      width: 500px;
+//      margin-left: 10px;
+//      .talk_title {
+//        font-size: 16pt;
+//      }
+//      .talk_description {
+//        font-size: 10pt;
+//        margin-top: 5px;
+//      }
+//      .tags {
+//        margin-top: 5px;
+//      }
+//    }
+//    .talk_author {
+//      float: left;
+//      margin-left: 20px;
+//      .talk_profile_name {
+//        float: left;
+//        font-size: 14pt;
+//        margin-top: 5px;
+//        margin-left: 10px;
+//      }
+//      .talk_profile_pic {
+//        float: left;
+//        img {
+//          background: #fff;
+//          padding: 3px;
+//          border: 1px solid $gray_background;
+//        }
+//      }
+//    }
+// }
