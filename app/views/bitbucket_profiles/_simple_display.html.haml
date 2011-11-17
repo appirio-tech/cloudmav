@@ -1,5 +1,4 @@
 - if @profile.bitbucket_profile
-  %li
-    .logo= image_tag "syncable/bitbucket_logo.png"
-    %span= link_to @profile.bitbucket_profile.username, @profile.bitbucket_profile.url, :target => "_blank"
-  .clear
+  %tr
+    %td= image_tag "syncable/bitbucket_logo.png"
+    %td= link_to @profile.bitbucket_profile.username, @profile.bitbucket_profile.url, :target => "_blank"
