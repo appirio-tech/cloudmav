@@ -1,9 +1,9 @@
-.tags
+%ul.unstyled.tags
   - if taggable.nil? || taggable.taggings.empty?
     no tags
   - else
     - taggable.top_tags.each do |tagging|
-      .tag
+      %li
         .tag_score= number_with_precision tagging.score, :precision => 0
-        = tagging
+        %span= tagging
 

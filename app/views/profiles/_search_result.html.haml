@@ -1,16 +1,18 @@
-%li.profile_search_results
-  .profile_pic= image_tag profile.gravatar_url(:size => 60)
-  .profile_info
-    .profile_name= link_to profile.display_name, profile_path(profile)
-    .profile_username #{profile.username}
-  .points_and_tags
-    %ul.points
+%li.row.profile_search_results
+  .span2= image_tag profile.gravatar_url(:size => 90), :class => "profile_pic"
+  .span3
+    %h3= link_to profile.display_name, profile_path(profile)
+    %p #{profile.username}
+    .social{:id => "follow_#{profile.id}"}
+      = render :partial => "shared/following", :locals => { :profile => profile }    
+  .span10.points_and_tags
+    %ul.unstyled.points
       %li.selected
         .points= pointify profile.total_score
         .description points
       %li
         .points= pointify profile.score(:experience_points)
-        .description experience        
+        .description experience
       %li
         .points= pointify profile.score(:knowledge_points)
         .description knowledge
@@ -31,8 +33,7 @@
           .image= image_tag "stack_overflow_points_icon.png"
           .points= pointify profile.stack_overflow_profile.reputation
           .description rep
+    %br
+    %br
+    %br
     = render :partial => "shared/simple_tags", :locals => { :taggable => profile }
-  .social{:id => "follow_#{profile.id}"}
-    = render :partial => "shared/following", :locals => { :profile => profile }
-
-  .clear
