@@ -3,8 +3,8 @@
 
 $(document).ready(function(){
 
-  $('.flash').slideDown('fast', function() {
-    $('.flash').delay(5000).slideUp('slow');
+  $('.alert-message').slideDown('fast', function() {
+    $('.alert-message').delay(5000).slideUp('slow');
   });
 
   // overlay
