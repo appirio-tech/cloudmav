@@ -1,11 +1,10 @@
-.syncable_logo= link_to image_tag("syncable/bitbucket_logo.png"), "http://www.bitbucket.org"
-- @bitbucket_profile = @profile.bitbucket_profile || BitbucketProfile.new
-.edit_form#sync_bitbucket
-  = form_for [@profile, @bitbucket_profile] do |f|
-    = f.text_field :username
-    = big_positive_loop_button_tag "Sync"
 
-- if @profile.bitbucket_profile
-  .delete_button
-    = big_negative_remove_button_link_to "delete", [@profile, @bitbucket_profile], :id=> :delete_bitbucket, :confirm => 'Are you sure?', :method => :delete
-.clear
+%li.row
+  .span3= link_to image_tag("syncable/bitbucket_logo.png"), "http://www.bitbucket.org"
+  .span10
+    - @bitbucket_profile = @profile.bitbucket_profile || BitbucketProfile.new
+    = form_for [@profile, @bitbucket_profile] do |f|
+      = f.text_field :username, :class => "xlarge"
+      = submit_tag "Sync", :class => "btn success"
+      - if @profile.bitbucket_profile
+        = link_to "Delete", [@profile, @bitbucket_profile], :id=> :delete_bitbucket, :confirm => 'Are you sure?', :method => :delete, :class => "btn danger"

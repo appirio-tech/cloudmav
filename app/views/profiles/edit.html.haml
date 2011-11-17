@@ -4,46 +4,56 @@
 #edit_profile.grid_16
   %h1 Edit Profile
 
-  = semantic_form_for @profile, :url => update_profile_path(@profile) do |f|
-    = f.inputs do
-      = f.input :name
-      = f.input :email
-      = f.input :location
-    = f.buttons do
-      = big_save_primary_button_submit_tag "Save"
+  = form_for @profile, :url => update_profile_path(@profile) , :class => "form-stacked" do |f|
+    %fieldset
+      .clearfix
+        = f.label :name
+        .input
+          = f.text_field :name, :class => "xlarge"
+      .clearfix
+        = f.label :email
+        .input
+          = f.text_field :email, :class => "xlarge"        
+      .clearfix
+        = f.label :location
+        .input
+          = f.text_field :location, :class => "xlarge"
+    .actions
+      = f.submit "Save", :disable_with => "Saving...", :class => "btn primary"
+      
   
   #syncables
-    %h2 
+    %h1
       Syncables
-      %span
+      %small
         last synced on #{@profile.display_last_synced_date} &nbsp;
   
     %section
       %h3 Knowledge
-      %ul
-        %li= render :partial => "stack_overflow_profiles/syncable"
+      %ul.unstyled
+        = render :partial => "stack_overflow_profiles/syncable"
         
     %section
       %h3 Experience
-      %ul
-        %li= render :partial => "linkedin_profiles/syncable"
+      %ul.unstyled
+        = render :partial => "linkedin_profiles/syncable"
                 
     %section
       %h3 Code
-      %ul
-        %li= render :partial => "git_hub_profiles/syncable"
+      %ul.unstyled
+        = render :partial => "git_hub_profiles/syncable"
         %li= render :partial => "bitbucket_profiles/syncable"
         %li= render :partial => "coder_wall_profiles/syncable"
                     
     %section
       %h3 Speaking
-      %ul
+      %ul.unstyled
         %li= render :partial => "speaker_rate_profiles/syncable"
         %li= render :partial => "slide_share_profiles/syncable"
 
     %section
       %h3 Social
-      %ul
+      %ul.unstyled
         %li= render :partial => "twitter_profiles/syncable"
                
 .clear
