@@ -279,3 +279,43 @@
     body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<User>\n  <Name>arisbartee</Name>\n
       \ <Count>0</Count>\n</User>\n"
     http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://www.slideshare.net:80/api/2/get_slideshows_by_user?api_key=IUKyhLLC&ts=1321511067&hash=74ddb2ac89ad9120428bcc955c08ea6a2eb98d28&format=json&username_for=arisbartee
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/0.6.39
+      content-type:
+      - application/xml; charset=iso-8859-1
+      status:
+      - 200 OK
+      x-xss-protection:
+      - '0'
+      x-bench-route:
+      - api2/get_slideshows_by_user
+      x-runtime:
+      - '44'
+      cache-control:
+      - private, no-cache, must-revalidate, must-revalidate
+      content-length:
+      - '99'
+      date:
+      - Thu, 17 Nov 2011 06:22:01 GMT
+      x-varnish:
+      - '1011778592'
+      age:
+      - '0'
+      via:
+      - 1.1 varnish
+      set-cookie:
+      - SERVERID=w1; path=/
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<User>\n  <Name>arisbartee</Name>\n
+      \ <Count>0</Count>\n</User>\n"
+    http_version: '1.1'

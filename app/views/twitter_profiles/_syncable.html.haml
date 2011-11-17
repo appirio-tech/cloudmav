@@ -3,8 +3,9 @@
   .span3= link_to image_tag("syncable/twitter_logo.png"), "http://www.twitter.com"
   .span10
     - @twitter_profile = @profile.twitter_profile || TwitterProfile.new
-    = form_for [@profile, @twitter_profile] do |f|
-      = f.text_field :username, :class => "xlarge"
-      = submit_tag "Sync", :class => "btn success"
-      - if @profile.twitter_profile
-        = link_to "Delete", [@profile, @twitter_profile], :id=> :delete_twitter, :confirm => 'Are you sure?', :method => :delete, :class => "btn danger"
+    #sync_twitter
+      = form_for [@profile, @twitter_profile] do |f|
+        = f.text_field :username, :class => "xlarge"
+        = submit_tag "Sync", :class => "btn success"
+        - if @profile.twitter_profile
+          = link_to "Delete", [@profile, @twitter_profile], :id=> :delete_twitter, :confirm => 'Are you sure?', :method => :delete, :class => "btn danger"

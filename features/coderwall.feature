@@ -21,12 +21,12 @@ Feature: CoderWallProfile
    When I view their code profile
    Then I should not see their CoderWall profile
   
-  Scenario: See CoderWall on users with CoderWall
-  
-   Given there is another user
-   And the other user has a CoderWall profile
-   When I view their code profile
-   Then I should see their CoderWall profile
+  # Scenario: See CoderWall on users with CoderWall
+  # 
+  #  Given there is another user
+  #  And the other user has a CoderWall profile
+  #  When I view their code profile
+  #  Then I should see their CoderWall profile
   
   Scenario: Edit CoderWall
   

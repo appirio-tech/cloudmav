@@ -10,7 +10,7 @@ class SyncStackOverflowProfileJob
     user = StackOverflow.get_user(stack_overflow_profile.stack_overflow_id)
     return if user.nil?   
     
-    sync_user_data(user)
+    sync_user_data(user, stack_overflow_profile)
     sync_tags(stack_overflow_profile)
     sync_questions(stack_overflow_profile)
     sync_answers(stack_overflow_profile)
@@ -29,7 +29,7 @@ class SyncStackOverflowProfileJob
     profile.calculate_score!  
   end
   
-  def self.sync_user_data(user)
+  def self.sync_user_data(user, stack_overflow_profile)
     stack_overflow_profile.profile.name = user["display_name"] if stack_overflow_profile.profile.name.nil?
     stack_overflow_profile.url = "http://www.stackoverflow.com/users/#{stack_overflow_profile.stack_overflow_id}"
     stack_overflow_profile.reputation = user["reputation"]
@@ -39,7 +39,6 @@ class SyncStackOverflowProfileJob
   def self.sync_tags(stack_overflow_profile)
     tags = StackOverflow.get_user_tags(stack_overflow_profile.stack_overflow_id)
     return if tags.nil?
-    puts "tags #{tags.inspect}"
     so_tags = {}
     tags["tags"].each do |t|
       so_tags[t["name"]] = t["count"]
