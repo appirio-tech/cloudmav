@@ -6,24 +6,16 @@
   = render :partial => "profiles/profile_menu"
   
   #profile_content
-    .grid_13
-      %section
-        %h2 
-          Talks      
-          - if can? :add_talk, @profile
-            %span= add_button_link_to "add a talk", new_profile_talk_path(@profile)
-        %ul.talks
-          - @profile.talks.each do |talk|    
-            %li
-              .preview_pic= image_tag talk.preview_pic
-              .talk_info
-                .title= link_to talk.title, [@profile, talk]
-                %p.description= truncate(talk.description, :length => 390)
-              .clear
-      &nbsp;
-    .grid_2
-
-    .clear
-
-  .clear
-
+    %section.page-header
+      %h1
+        Talks
+        %small
+        - if can? :add_talk, @profile
+          = add_button_link_to "add a talk", new_profile_talk_path(@profile)
+      %ul.talks.unstyled
+        - @profile.talks.each do |talk|    
+          %li.row.talk
+            .span3= image_tag talk.preview_pic, :class => "talk_preview_pic"
+            .span13
+              %h3= link_to talk.title, [@profile, talk]
+              %p= truncate(talk.description, :length => 390)
