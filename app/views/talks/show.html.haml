@@ -1,12 +1,36 @@
 = content_for :title do
   = @talk.title
 
+.page-header#profile_header
+  %h1
+    = @talk.title
+    %small
+      - if can? :edit, @talk
+        = link_to "Edit", edit_profile_talk_path(@profile, @talk), :class => "btn"
+        
+#talk.row
+  .span10
+    %p= @talk.description
+    
+  .span5
+    %table
+      %tr
+        %td= image_tag @profile.gravatar_url(:size => 70), :id => :profile_pic
+        %td.profile_info
+          %h3= link_to @profile.display_name, @profile
+          %span= link_to @profile.username, @profile
+          %p= link_to "See other talks by this user", profile_speaking_path(@profile)
+      %tr
+        %td.score
+          %p= pointify @profile.score(:speaker_points)
+        %td.score_title speaker points
+    = render :partial => "speaker_rate"
+    = render :partial => "shared/tags", :locals => { :taggable => @talk }  
 #talk
   .grid_11
-    %h1= @talk.title
-    - if can? :edit, @talk
-      = big_button_link_to "Edit", edit_profile_talk_path(@profile, @talk)
-    %p#talk_description= @talk.description
+    %h1
+
+    %p#talk_description
     .grid_5
       - if can?(:edit, @talk) || !@talk.links.nil?
         %h3 Links
@@ -42,18 +66,6 @@
     = render :partial => "slide_share"
   
   .grid_5
-    %table
-      %tr
-        %td= image_tag @profile.gravatar_url(:size => 50), :id => :profile_pic
-        %td.profile_info
-          .name= link_to @profile.display_name, @profile
-          .username= link_to @profile.username, @profile
-          .other_talks= link_to "See other talks by this user", profile_speaking_path(@profile)
-      %tr
-        %td.score
-          %p= pointify @profile.score(:speaker_points)
-        %td.score_title speaker points
-    = render :partial => "speaker_rate"
-    = render :partial => "shared/tags", :locals => { :taggable => @talk }
+
   .clear
 
