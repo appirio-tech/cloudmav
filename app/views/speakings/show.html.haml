@@ -11,7 +11,7 @@
         Talks
         %small
         - if can? :add_talk, @profile
-          = add_button_link_to "add a talk", new_profile_talk_path(@profile)
+          = link_to "add a talk", new_profile_talk_path(@profile), :class => "btn"
       %ul.talks.unstyled
         - @profile.talks.each do |talk|    
           %li.row.talk
