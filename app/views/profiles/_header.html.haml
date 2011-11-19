@@ -11,10 +11,8 @@
       - if can? :edit, @profile
         = link_to "edit profile", edit_profile_path(@profile), :class => "btn"
 
-
-
-.pull-right
-  %div{:id => "follow_#{@profile.id}"}
+.row
+  .span14
+    = render :partial => "profiles/points"
+  .span2
     = render :partial => "shared/following", :locals => { :profile => @profile }  
-.span16
-  = render :partial => "profiles/points"  
