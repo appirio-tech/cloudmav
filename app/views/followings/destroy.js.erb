@@ -1,0 +1,2 @@
+$("#following_<%= @profile.id %>").empty();
+$("#following_<%= @profile.id %>").append("<%= escape_javascript (render :partial => "shared/following", :locals => { :profile => @profile }) %>");
