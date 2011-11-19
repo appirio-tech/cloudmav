@@ -1,5 +1,4 @@
 - if @profile.coder_wall_profile
-  %li
-    .logo= image_tag "syncable/coder_wall_logo.png"
-    %span= link_to @profile.coder_wall_profile.username, @profile.coder_wall_profile.url, :target => "_blank"
-  .clear
+  %tr
+    %td= image_tag "syncable/coder_wall_logo.png"
+    %td= link_to @profile.coder_wall_profile.username, @profile.coder_wall_profile.url, :target => "_blank"
