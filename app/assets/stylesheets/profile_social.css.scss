@@ -1,0 +1,19 @@
+table#followings {
+  .points {
+    @include corners;
+    background: $gray_background;
+    color: $gray_foreground;
+    text-align:center;
+    padding: 6px;
+    font-weight:bold;
+    font-size: 110%;
+    width: 85px;
+    img {
+      float: left;
+    }
+    p {
+      font-size: 80%;
+      margin-bottom: 0px;
+    }
+  }
+}
