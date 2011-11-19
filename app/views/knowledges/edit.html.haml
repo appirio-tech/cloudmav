@@ -1,0 +1,18 @@
+= content_for :title do
+  Edit your Knowledge Profile
+
+#profile
+  = render :partial => "profiles/profile_side_bar"
+  
+  .grid_13
+    %h1 Edit your Knowledge Profile
+    = link_to "Go back to your knowledge profile", profile_knowledge_path(@profile)
+      
+    %section#syncables
+      %h2 Syncables
+      %ul
+        %li= render :partial => "stack_overflow_profiles/profile"
+      .clear
+
+  .clear
+

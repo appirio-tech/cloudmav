@@ -1,55 +1,40 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: https://api.bitbucket.org:443/1.0/users/rookieone
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      server: 
-      - nginx/0.7.67
-      date: 
-      - Mon, 06 Jun 2011 02:33:42 GMT
-      content-type: 
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Mon, 12 Sep 2011 23:55:46 GMT
+      content-type:
       - application/json; charset=utf-8
-      content-length: 
-      - "629"
-      expires: 
-      - Mon, 06 Jun 2011 02:33:42 GMT
-      vary: 
+      content-length:
+      - '629'
+      expires:
+      - Mon, 12 Sep 2011 23:55:46 GMT
+      vary:
       - Authorization, Cookie
-      last-modified: 
-      - Mon, 06 Jun 2011 02:33:42 GMT
-      etag: 
-      - "\"461de131fe9ff4174d01da7d06943834\""
-      cache-control: 
+      last-modified:
+      - Mon, 12 Sep 2011 23:55:46 GMT
+      etag:
+      - ! '"461de131fe9ff4174d01da7d06943834"'
+      cache-control:
       - max-age=0
-      strict-transport-security: 
-      - max-age=500
-    body: |-
-      {
-          "repositories": [
-              {
-                  "website": "", 
-                  "name": "Design Patterns", 
-                  "followers_count": 1, 
-                  "owner": "rookieone", 
-                  "logo": null, 
-                  "resource_uri": "/api/1.0/repositories/rookieone/design-patterns", 
-                  "slug": "design-patterns", 
-                  "description": ""
-              }
-          ], 
-          "user": {
-              "username": "rookieone", 
-              "first_name": "", 
-              "last_name": "", 
-              "avatar": "https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?d=identicon&s=32", 
-              "resource_uri": "/1.0/users/rookieone"
-          }
-      }
-    http_version: "1.1"
+    body: ! "{\n    \"repositories\": [\n        {\n            \"website\": \"\",
+      \n            \"name\": \"Design Patterns\", \n            \"followers_count\":
+      1, \n            \"owner\": \"rookieone\", \n            \"logo\": null, \n
+      \           \"resource_uri\": \"/api/1.0/repositories/rookieone/design-patterns\",
+      \n            \"slug\": \"design-patterns\", \n            \"description\":
+      \"\"\n        }\n    ], \n    \"user\": {\n        \"username\": \"rookieone\",
+      \n        \"first_name\": \"\", \n        \"last_name\": \"\", \n        \"avatar\":
+      \"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?d=identicon&s=32\",
+      \n        \"resource_uri\": \"/1.0/users/rookieone\"\n    }\n}"
+    http_version: '1.1'

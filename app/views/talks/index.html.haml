@@ -9,8 +9,8 @@
     - @profile.talks.each do |talk|    
       %li
         .item_pic
-          - unless talk.slides_thumbnail.nil?
-            = image_tag talk.slides_thumbnail
+          - unless talk.slide_share_thumbnail.nil?
+            = image_tag talk.slide_share_thumbnail
           -else
             = image_tag "default_talk.png"
         .item_info

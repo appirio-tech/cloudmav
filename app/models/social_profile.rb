@@ -8,6 +8,9 @@ class SocialProfile
   def related_items
     [profile]
   end
+  
+  def generate_tags
+  end
 
 end
 

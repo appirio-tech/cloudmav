@@ -3,5 +3,5 @@ class FollowingBy
   include Mongoid::Timestamps
   include CodeMav::HasSubject
 
-
+  belongs_to :following_by_able, :polymorphic => true
 end

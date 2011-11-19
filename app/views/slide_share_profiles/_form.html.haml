@@ -1,6 +1,7 @@
-%p Just enter your Slide Share username and we can then sync with your account
+%p Just enter your SlideShare username and we can then sync with your account
 
-= form_for [@profile, @slide_share_profile] do |f|
-  .label= f.label :slide_share_username, "Username"
-  .control= f.text_field :slide_share_username
-  .submit= f.submit "Save", :disable_with => "Saving"
+= semantic_form_for [@profile, @slide_share_profile] do |f|
+  = f.inputs do
+    = f.input :slide_share_username
+  = f.buttons do
+    = big_primary_button_submit_tag "Save"

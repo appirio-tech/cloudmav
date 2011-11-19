@@ -1,2 +1,0 @@
-= form_for [profile, current_profile.following_for(profile)], :remote => true, :html => { :method => :delete } do |f|
-  .submit= f.submit "Following", :disable_with => "Unfollowing...", :id => "unfollow"

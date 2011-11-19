@@ -1,0 +1,38 @@
+
+var something_discovered = false;
+
+<% unless @profile.git_hub_profile.nil? %>
+  if ($("#git_hub").length === 0) {
+    $("#discovered").append("<%= escape_javascript (render :partial => "git_hub") %>");
+  }
+  something_discovered = true;
+<% end %>
+
+<% unless @profile.bitbucket_profile.nil? %>
+  if ($("#bitbucket").length === 0) {
+    $("#discovered").append("<%= escape_javascript (render :partial => "bitbucket") %>");
+  }
+  something_discovered = true;
+<% end %>
+
+<% if @profile.autodiscovered? %>
+
+  $("#autodiscovering").hide();
+  $("#autodiscovered").show();
+
+  if (!something_discovered) {
+    $("#discovered").after("<span id='nothing_discovered'>Sorry we couldn't discover any more accounts for you. You can always enter them in by hand.</span>");
+  }
+
+<% else %>
+
+  function discoverProfile() {
+    console.log("url : <%= profile_autodiscover_path(@profile) %>");
+    $.get("<%= profile_autodiscover_path(@profile) %>", function(){}, "script");
+  }
+
+  setTimeout("discoverProfile()", 1000);
+
+<% end %>
+
+

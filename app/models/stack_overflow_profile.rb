@@ -1,7 +1,6 @@
 class StackOverflowProfile
   include Mongoid::Document
   include CodeMav::Taggable
-  include CodeMav::Eventable
   include CodeMav::Syncable
   
   field :stack_overflow_id
@@ -18,12 +17,15 @@ class StackOverflowProfile
     [profile.knowledge_profile]
   end
   
-  def as_json(opts={})
-    { 
-      :stack_overflow_id => stack_overflow_id,
-      :reputation => reputation,
-      :url => url,
-      :badge_html => badge_html
-    }
+  def generate_tags
+    so_name = 0
+    so_count = 1
+
+    return if self.stack_overflow_tags.nil?
+
+    so_tags = YAML.load(self.stack_overflow_tags)
+    so_tags.each do |so_tag|
+      tag so_tag[so_name], :count => so_tag[so_count]
+    end
   end
 end

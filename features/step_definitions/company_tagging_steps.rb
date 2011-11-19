@@ -1,18 +1,13 @@
-
-Given /^there is a company$/ do
-  @company = Factory.create(:company)
-end
-
 Given /^there is an employee with a job tagged "([^"]*)"$/ do |tag|
   employee = Factory.create(:user).profile
   employee.save
-  job = Factory.build(:job, :profile => employee, :company_name => @company.name, :tags_text => tag)
-  job.save
+  job = Factory.create(:job, :profile => employee, :company => @company, :tags_text => tag)
+  job.retag!
 end
 
 When /^the company's tags are calculated$/ do
   company = Company.find(@company.id)
-  company.save
+  company.retag!
 end
 
 Then /^the company should be tagged "([^"]*)"$/ do |tag|

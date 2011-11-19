@@ -1,0 +1,11 @@
+
+%li.row
+  .span3= link_to image_tag("syncable/slide_share_logo.png"), "http://www.slideshare.net"
+  .span10
+    - @slide_share_profile = @profile.slide_share_profile || SlideShareProfile.new
+    #slide_share
+      = form_for [@profile, @slide_share_profile] do |f|
+        = f.text_field :slide_share_username, :class => "xlarge"
+        = submit_tag "Sync", :class => "btn success"
+        - if @profile.slide_share_profile
+          = link_to "Delete", [@profile, @slide_share_profile], :id=> :delete_slide_share, :confirm => 'Are you sure?', :method => :delete, :class => "btn danger"

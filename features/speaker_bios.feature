@@ -7,6 +7,5 @@ Feature: Speaker Bios
   Scenario: Add Speaker Bio
   
     Given I am logged in
-    When I set my speaker bio
-    And I press "Save"
+    When I add a speaker bio
     Then I should have a speaker bio

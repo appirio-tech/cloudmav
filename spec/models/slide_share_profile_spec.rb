@@ -9,6 +9,7 @@ describe SlideShareProfile do
       VCR.use_cassette("slide_share", :record => :new_episodes) do
         @slide_share_profile.sync!
       end
+      @slide_share_profile.reload
     end
     
     it { @slide_share_profile.url.should_not be_nil }

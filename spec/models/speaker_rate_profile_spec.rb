@@ -9,6 +9,7 @@ describe SpeakerRateProfile do
       VCR.use_cassette("speaker_rate", :record => :new_episodes) do
         @speaker_rate_profile.sync!
       end
+      @speaker_rate_profile.reload
     end
     
     it { @speaker_rate_profile.url.should_not be_nil }

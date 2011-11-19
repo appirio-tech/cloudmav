@@ -1,19 +1,15 @@
-%li{"data-type" => "following" }
-  .following_pic
-    = image_tag profile.gravatar_url(:size => 50)
-  .following_info
-    .following_username
-      = link_to profile.username, profile
-    .clear
-    %ul.following_points
-      %li
-        .points= profile.total_score
-        .description points
-      - unless profile.stack_overflow_profile.nil?
-        %li.stack_overflow
-          .image= image_tag "stack_overflow_points_icon.png"
-          .points= pointify profile.stack_overflow_profile.reputation
-          .description rep
-    .clear
-  .clear
-
+%tr
+  %td= image_tag profile.gravatar_url(:size => 50)
+  %td
+    %h3= link_to profile.username, profile
+  %td
+    .points
+      = profile.total_score
+      %p points
+  %td
+    - unless profile.stack_overflow_profile.nil?
+      .points
+        = image_tag "stack_overflow_points_icon.png"
+        = pointify profile.stack_overflow_profile.reputation
+        %p rep
+  

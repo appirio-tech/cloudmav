@@ -1,27 +1,71 @@
 = content_for :title do
   = @talk.title
 
-= content_for :css do
-  = stylesheet_link_tag "talk"
+.page-header#profile_header
+  %h1
+    = @talk.title
+    %small
+      - if can? :edit, @talk
+        = link_to "Edit", edit_profile_talk_path(@profile, @talk), :class => "btn"
+        
+#talk.row
+  .span10
+    %p= @talk.description
+    
+  .span5
+    %table
+      %tr
+        %td= image_tag @profile.gravatar_url(:size => 70), :id => :profile_pic
+        %td.profile_info
+          %h3= link_to @profile.display_name, @profile
+          %span= link_to @profile.username, @profile
+          %p= link_to "See other talks by this user", profile_speaking_path(@profile)
+      %tr
+        %td.score
+          %p= pointify @profile.score(:speaker_points)
+        %td.score_title speaker points
+    = render :partial => "speaker_rate"
+    = render :partial => "shared/tags", :locals => { :taggable => @talk }  
+#talk
+  .grid_11
+    %h1
 
-.grid_11
-  %h1= @talk.title
-  %p#talk_description= @talk.description
-  = render :partial => "slide_share"
+    %p#talk_description
+    .grid_5
+      - if can?(:edit, @talk) || !@talk.links.nil?
+        %h3 Links
+        - unless @talk.links.nil?
+          %ul.standard
+            - @talk.links.each do |l|
+              %li= link_to l, l, :target => "_blank"
+      &nbsp;            
+    .grid_5
+      - if can?(:edit, @talk) || (@talk.git_hub_repository || @talk.bitbucket_repository)
+        %h3 Code Repositories
+      - if @talk.git_hub_repository || @talk.bitbucket_repository
+        %ul#code_repositories
+          - unless @talk.git_hub_repository.nil?
+            %li
+              = image_tag "talk/git_hub.png"
+              %span= link_to @talk.git_hub_repository.name, @talk.git_hub_repository.url, :target => "_blank"
+          - unless @talk.bitbucket_repository.nil?
+            %li
+              = image_tag "talk/bitbucket.png"
+              %span= link_to @talk.bitbucket_repository.name, @talk.bitbucket_repository.url, :target => "_blank"
+        
+      - if can?(:edit, @talk) 
+        %ul#link_code_repository
+          - if @talk.git_hub_repository.nil?
+            %li= big_button_link_to "Link GitHub repository", new_profile_talk_link_to_git_hub_repository_path(@profile, @talk)
+          - if @talk.bitbucket_repository.nil?
+            %li= big_button_link_to "Link Bitbucket repository", new_profile_talk_link_to_bitbucket_repository_path(@profile, @talk)
+      &nbsp;
+
+    .clear
+    
+    = render :partial => "slide_share"
   
-.grid_5
-  %table
-    %tr
-      %td= image_tag @profile.gravatar_url(:size => 50), :id => :profile_pic
-      %td.profile_info
-        .name= link_to @profile.display_name, @profile
-        .username= link_to @profile.username, @profile
-        .other_talks= link_to "See other talks by this user", profile_speaking_path(@profile)
-    %tr
-      %td.score
-        %p= pointify @profile.score(:speaker_points)
-      %td.score_title speaker points
-  = render :partial => "speaker_rate"
-  = render :partial => "shared/tags", :locals => { :taggable => @talk }
-.clear
+  .grid_5
+
+  .clear
 

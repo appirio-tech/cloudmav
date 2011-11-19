@@ -21,5 +21,3 @@ module CodeMav
     end
   end
 end
-
-

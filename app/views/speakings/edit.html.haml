@@ -1,0 +1,23 @@
+= content_for :title do
+  Edit your Speaker Profile
+
+#profile
+  = render :partial => "profiles/profile_side_bar"
+  
+  .grid_13
+    %h1 Edit your Speaker Profile
+    = link_to "Go back to your speaker profile", profile_speaking_path(@profile)
+
+    %section#speaker_bios
+      %h2 Speaker Biographies
+      %p Coming Soon
+      
+    %section#syncables
+      %h2 Syncables
+      %ul
+        %li= render :partial => "speaker_rate_profiles/profile"
+        %li= render :partial => "slide_share_profiles/profile"
+      .clear
+
+  .clear
+

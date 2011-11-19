@@ -1,0 +1,17 @@
+= content_for :title do
+  #{@profile.display_name} - Social
+
+#profile
+  = render :partial => "profiles/header"
+  = render :partial => "profiles/profile_menu"
+
+  #profile_content
+    - if @twitter_profile
+      %section#twitter
+        = link_to "Go to my Twitter page", @twitter_profile.url
+      &nbsp;
+
+    %table#followings
+      = render :partial => "followings/following", :collection => @friends, :as => :profile
+        
+

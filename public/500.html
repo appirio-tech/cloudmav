@@ -1,66 +1,120 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ERROR 500</title>
-  <link href="/stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css">
-  <link href="/stylesheets/960.css" media="screen" rel="stylesheet" type="text/css">
-  <link href="/stylesheets/codemav.css" media="screen" rel="stylesheet" type="text/css">
+  <title>500 - Error</title>
   <style type="text/css">
-    #error_message {
-      background-repeat:no-repeat;
-      background-position:right top; 
-      height: 320px;
-    }
-    #error_message p {
-      font-size: 28px;
-      letter-spacing: 1px;
-      color: #000;
-      margin-bottom: 15px;
-    }
-    h1 {
-      text-transform: uppercase;
-      color: #990000;
-      text-align:center;
-      border-top: 2px solid #990000;
-      border-bottom: 2px solid #990000;
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+  </style>
+  <style type="text/css">
+  
+    header {
       padding-top: 5px;
-      padding-bottom: 5px;
-      margin-bottom: 30px;
+      background: #373737;
+      height: 50px;
     }
+    
+    footer {
+      background: #373737;
+      margin-top: 30px;
+      color: #868686;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    
+    body {
+      font-family: Helvetica, Arial, san-serif;
+      font-size: 16px;
+      line-height: 19.2px;
+      color: #333333;
+      padding: 0px;
+      width: 100%;
+      background-image: url("http://www.codemav.com/assets/background.png");
+      backgrond-repeat: repeat-x repeat-y;      
+    }
+    
+    a {
+      text-decoration: none;
+      color: #0477BF;
+    }
+    
+    a:visited {
+      color: #0477bf;
+    }
+    
+    a:hover {
+      color: #0477bf;
+      text-decoration: underline;
+    }
+    
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      width: 960px;      
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 24px;
+      font-weight: bold;
+    }
+    
+    h1 {
+      font-size: 42px;
+      line-height: 50.4px;
+      color: #990000;
+    }
+    
+    #content {
+      margin-top: 20px;
+    }
+    
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+    
+    .copyright {
+      margin-top: 10px;
+    }
+    
+    footer a {
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      font-size: 10pt;
+      font-weight: bold;
+      color: white;
+    }
+
   </style>
 </head>
 
 <body>
-  <div id="header">
-    <div class="container_16">
-      <div class="grid_16">
-        <div class="title_icon">
-          <a href="http://www.codemav.com"><image src="http://www.codemav.com/images/main_code_mav_logo.png"></image></a>
-        </div>
-      </div>
+  <header>
+    <div class="container">
+      <a href="http://www.codemav.com">
+        <img src="http://www.codemav.com/assets/main_code_mav_logo.png"></img>
+      </a>
     </div>
-  </div>
-
+  </header>
+  
   <div id="content">
-    <div class="container_16">
-
-      <h1>!!! Error !!!</h1>
-      <div id="error_message" class="grid_14">
-        <p>Oh no! Looks like you found an error.</p>
-      </div>
+    <div class="container">
+      <h1>500 - Error</h1>
+      <p>Oh no! Looks like you found an error.</p>     
     </div>
   </div>
 
-  <div id="footer">
-    <div class="container_16">
-      <div class="grid_16">
-        <div class="copyright">
-          Copyright &copy; 2011 CodeMav. All Rights Reserved.
-        </div>
+  <footer>
+    <div class="container">
+      <div class="copyright">
+        Copyright &copy; 2011 CodeMav. All Rights Reserved.
       </div>
       <div class="clear">
       </div>
     </div>
-  </div>
+  </footer>
 </body>
 </html>

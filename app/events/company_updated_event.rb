@@ -1,3 +1,0 @@
-class CompanyUpdatedEvent < CompanyEvent
-
-end

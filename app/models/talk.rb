@@ -3,7 +3,8 @@ class Talk
   include Mongoid::Timestamps
   include CodeMav::Taggable
   include CodeMav::Indexable
-  include CodeMav::Eventable
+  include CodeMav::Scorable
+  include CodeMav::Skillable
   
   field :title, :type => String
   field :permalink, :type => String
@@ -17,6 +18,7 @@ class Talk
   field :audience, :type => String
   field :url, :type => String
   field :video_url, :type => String
+  field :links, :type => Array
 
   field :has_slide_share, :type => Boolean, :default => false
   field :slide_share_id, :type => String
@@ -31,6 +33,8 @@ class Talk
   field :speaker_rate_slides_url, :type => String
 
   belongs_to :profile
+  belongs_to :git_hub_repository
+  belongs_to :bitbucket_repository  
     
   validates_presence_of :title
 
@@ -52,6 +56,9 @@ class Talk
 
   def related_items
     [profile.speaker_profile]
+  end
+  
+  def generate_tags
   end
 
   def self.send_reminders!
@@ -135,6 +142,23 @@ class Talk
     self.slideshow_html = talk.slideshow_html
     self.slide_share_thumbnail = talk.slide_share_thumbnail
     self.slide_share_download_url = talk.slide_share_download_url
+  end
+  
+  def links_block
+    return "" if self.links.nil?
+    self.links.join("\n")
+  end
+  
+  def links_block=(value)
+    values = value.split("\r")
+    self.links = values.map do |v|
+      v = v.strip
+      if v.starts_with?("http://")
+        v
+      else
+        "http://" + v
+      end
+    end
   end
 
 end

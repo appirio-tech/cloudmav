@@ -1,0 +1,31 @@
+= content_for :title do
+  #{@profile.display_name} - Knowledge
+
+#profile
+  = render :partial => "profiles/header"
+  = render :partial => "profiles/profile_menu"
+
+  .row#profile_content
+    .span16
+      - if @stack_overflow_profile
+        - unless @stack_overflow_profile.answers.empty?
+          %section#stack_overflow_answers
+            %h2 Top 3 Stack Overflow Answers
+            %ol
+              - @stack_overflow_profile.answers.each do |a|
+                %li= link_to a.title, a.url, :target => "_blank"
+                      
+        - unless @stack_overflow_profile.questions.empty?
+          %section#stack_overflow_questions
+            %h2 Top 3 Stack Overflow Questions
+            %ol
+              - @stack_overflow_profile.questions.each do |q|
+                %li= link_to q.title, q.url, :target => "_blank"
+      
+        = render :partial => "shared/tags", :locals => {:taggable => @profile.knowledge_profile}
+    .grid_2
+
+    .clear
+
+  .clear
+.clear

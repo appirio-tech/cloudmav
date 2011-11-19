@@ -1,4 +1,9 @@
 namespace :codemav do    
+  desc "Test"
+  task :test => :environment do
+    puts "Test to see if rake is working"
+  end
+  
   desc "Clear data"
   task :clear_data => :environment do
     Mongoid.master.collections.select {|c| c.name !~ /system/ }.each(&:drop)
@@ -27,10 +32,10 @@ namespace :codemav do
     end
   end
 
-  desc "Recalculate points"
-  task :recalc_points => :environment do
+  desc "Calculate score"
+  task :calc_score => :environment do
     Profile.all.to_a.each do |p|
-      p.recalculate_score!
+      p.calculate_score!
     end
   end
 
@@ -43,7 +48,7 @@ namespace :codemav do
     end
   end
 
-  desc "Transfer Speaker Rate Info"
+  desc "Transfer SpeakerRate Info"
   task :transfer_speaker_rate_info => :environment do
     talks = Talk.where(:imported_from => "SpeakerRate")
     talks.all.to_a.each do |t|
@@ -53,7 +58,7 @@ namespace :codemav do
     end
   end
 
-  desc "Transfer Slide Share Info"
+  desc "Transfer SlideShare Info"
   task :transfer_slide_share_info => :environment do
     talks = Talk.where(:imported_from => "SlideShare")
     talks.all.to_a.each do |t|
@@ -62,9 +67,17 @@ namespace :codemav do
       t.save
     end
   end
+  
+  desc "Set autodiscover histories"
+  task :set_autodiscover_histories => :environment do
+    Profile.all.to_a.each do |p|
+      p.add_autodiscover_history_for("GitHub")
+      p.add_autodiscover_history_for("Bitbucket")
+    end      
+  end
 
-  desc "Test"
-  task :test => :environment do
-    puts "Test to see if rake is working"
+  desc "Set autodiscover histories"
+  task :sync_profiles => :environment do
+    Profile.sync_all!
   end
 end

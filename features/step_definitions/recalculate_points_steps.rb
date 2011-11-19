@@ -15,10 +15,9 @@ end
 When /^my score is recalculated$/ do
   profile = Profile.find(@profile.id)
   @previous_score = profile.total_score
-  profile.recalculate_score!
+  profile.calculate_score!
 end
 
 Then /^my score should be the same$/ do
   Profile.find(@profile.id).total_score.should == @previous_score
 end
-

@@ -1,0 +1,447 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://wizardsofsmart.net:80/feed
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 301
+      message: Moved Permanently
+    headers:
+      date:
+      - Fri, 28 Oct 2011 03:08:43 GMT
+      server:
+      - Apache/2.2.15 (Unix) mod_ssl/2.2.15 OpenSSL/0.9.8e-fips-rhel5 DAV/2 Phusion_Passenger/2.2.11
+        mod_fcgid/2.3.5 SVN/1.5.7 mod_auth_passthrough/2.1 mod_bwlimited/1.4 FrontPage/5.0.2.2635
+        PHP/5.2.13
+      x-powered-by:
+      - PHP/5.2.13
+      x-pingback:
+      - http://wizardsofsmart.net/wp/xmlrpc.php
+      last-modified:
+      - Tue, 11 Oct 2011 04:39:24 GMT
+      etag:
+      - ! '"2dbbfc753de1baafbd9fc372b7c570ae"'
+      location:
+      - http://wizardsofsmart.net/feed/
+      content-length:
+      - '0'
+      content-type:
+      - text/html
+    body: 
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://wizardsofsmart.net:80/feed/
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 28 Oct 2011 03:08:44 GMT
+      server:
+      - Apache/2.2.15 (Unix) mod_ssl/2.2.15 OpenSSL/0.9.8e-fips-rhel5 DAV/2 Phusion_Passenger/2.2.11
+        mod_fcgid/2.3.5 SVN/1.5.7 mod_auth_passthrough/2.1 mod_bwlimited/1.4 FrontPage/5.0.2.2635
+        PHP/5.2.13
+      x-powered-by:
+      - PHP/5.2.13
+      x-pingback:
+      - http://wizardsofsmart.net/wp/xmlrpc.php
+      last-modified:
+      - Tue, 11 Oct 2011 04:39:24 GMT
+      etag:
+      - ! '"2dbbfc753de1baafbd9fc372b7c570ae"'
+      transfer-encoding:
+      - chunked
+      content-type:
+      - text/xml; charset=UTF-8
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\"\n\txmlns:content=\"http://purl.org/rss/1.0/modules/content/\"\n\txmlns:wfw=\"http://wellformedweb.org/CommentAPI/\"\n\txmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n\txmlns:atom=\"http://www.w3.org/2005/Atom\"\n\txmlns:sy=\"http://purl.org/rss/1.0/modules/syndication/\"\n\txmlns:slash=\"http://purl.org/rss/1.0/modules/slash/\"\n\t>\n\n<channel>\n\t<title>Wizards
+      of Smart</title>\n\t<atom:link href=\"http://wizardsofsmart.net/feed/\" rel=\"self\"
+      type=\"application/rss+xml\" />\n\t<link>http://wizardsofsmart.net</link>\n\t<description>.NET
+      Design Patterns</description>\n\t<lastBuildDate>Tue, 11 Oct 2011 04:39:24 +0000</lastBuildDate>\n\t<language>en</language>\n\t<sy:updatePeriod>hourly</sy:updatePeriod>\n\t<sy:updateFrequency>1</sy:updateFrequency>\n\t<generator>http://wordpress.org/?v=3.3-aortic-dissection</generator>\n\t\t<item>\n\t\t<title>OOP
+      to me means only messaging local retention&#8230;</title>\n\t\t<link>http://wizardsofsmart.net/quote/oop-to-me-means-only-messaging-local/</link>\n\t\t<comments>http://wizardsofsmart.net/quote/oop-to-me-means-only-messaging-local/#comments</comments>\n\t\t<pubDate>Tue,
+      11 Oct 2011 04:38:47 +0000</pubDate>\n\t\t<dc:creator>panesofglass</dc:creator>\n\t\t\t\t<category><![CDATA[quote]]></category>\n\t\t<category><![CDATA[message
+      passing]]></category>\n\t\t<category><![CDATA[object-oriented programming]]></category>\n\n\t\t<guid
+      isPermaLink=\"false\">http://wizardsofsmart.net/quote/oop-to-me-means-only-messaging-local/</guid>\n\t\t<description><![CDATA[OOP
+      to me means only messaging, local retention and protection and hiding of state-process,
+      and extreme late-binding of all things. It can be done in Smalltalk and in LISP.
+      Dr. Alan Kay, http://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/doc_kay_oop_en]]></description>\n\t\t\t<content:encoded><![CDATA[<p>OOP
+      to me means only messaging, local retention and protection and hiding of state-process,
+      and extreme late-binding of all things. It can be done in Smalltalk and in LISP.</p>\n\n<p><cite>Dr.
+      Alan Kay, <a href=\"http://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/doc_kay_oop_en\"
+      rel=\"nofollow\" onclick=\"urchinTracker('/outgoing/userpage.fu-berlin.de/_ram/pub/pub_jf47ht81Ht/doc_kay_oop_en?referer=');\">http://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/doc_kay_oop_en</a></cite></p>]]></content:encoded>\n\t\t\t<wfw:commentRss>http://wizardsofsmart.net/quote/oop-to-me-means-only-messaging-local/feed/</wfw:commentRss>\n\t\t<slash:comments>0</slash:comments>\n\t\t</item>\n\t\t<item>\n\t\t<title>Iteratee
+      in F# &#8211; Part 1</title>\n\t\t<link>http://wizardsofsmart.net/post/iteratee-in-f/</link>\n\t\t<comments>http://wizardsofsmart.net/post/iteratee-in-f/#comments</comments>\n\t\t<pubDate>Mon,
+      10 Oct 2011 17:00:59 +0000</pubDate>\n\t\t<dc:creator>panesofglass</dc:creator>\n\t\t\t\t<category><![CDATA[post]]></category>\n\t\t<category><![CDATA[F#]]></category>\n\t\t<category><![CDATA[functional
+      programming]]></category>\n\t\t<category><![CDATA[Iteratee]]></category>\n\n\t\t<guid
+      isPermaLink=\"false\">http://wizardsofsmart.net/post/iteratee-in-f/</guid>\n\t\t<description><![CDATA[I&#8217;ve
+      been playing with Iteratees lately in my work with Dave on fracture-io. The
+      Iteratee module used in this post is part of the FSharpx library and provides
+      a set of types and functions for building compositional, input processing components.
+      A fold, by any other name A common scenario for I/O processing is parsing an
+      [...]]]></description>\n\t\t\t<content:encoded><![CDATA[<p>I&#8217;ve been playing
+      with <a href=\"http://okmij.org/ftp/Streams.html\" onclick=\"urchinTracker('/outgoing/okmij.org/ftp/Streams.html?referer=');\">Iteratees</a>
+      lately in my work with <a href=\"http://twitter.com/#!/7sharp9\" onclick=\"urchinTracker('/outgoing/twitter.com/_/7sharp9?referer=');\">Dave</a>
+      on <a href=\"https://github.com/fractureio/fracture\" onclick=\"urchinTracker('/outgoing/github.com/fractureio/fracture?referer=');\">fracture-io</a>.</p>\n\n<p>The
+      <code>Iteratee</code> module used in this post is part of the <a href=\"http://github.com/fsharp/fsharpx\"
+      onclick=\"urchinTracker('/outgoing/github.com/fsharp/fsharpx?referer=');\">FSharpx</a>
+      library and provides a set of types and functions for building compositional,
+      input processing components.</p>\n\n<h2>A fold, by any other name</h2>\n\n<p>A
+      common scenario for I/O processing is parsing an HTTP request message. Granted,
+      most will rely on ASP.NET, HttpListener, or WCF to do this for them. However,
+      HTTP request parsing has a lot of interesting elements that are useful for demonstrating
+      problem areas in inefficient resource usage using other techniques. For our
+      running sample, we&#8217;ll focus on parsing the headers of the following HTTP
+      request message:</p>\n\n<pre><code>let httpRequest : byte [] = @\"GET /some/uri
+      HTTP/1.1\nAccept:text/html,application/xhtml+xml,application/xml\nAccept-Charset:ISO-8859-1,utf-8;q=0.7,*;q=0.3\nAccept-Encoding:gzip,deflate,sdch\nAccept-Language:en-US,en;q=0.8\nCache-Control:max-age=0\nConnection:keep-alive\nHost:stackoverflow.com\nIf-Modified-Since:Sun,
+      25 Sep 2011 20:55:29 GMT\nReferer:<a href=\"http://www.bing.com/search?setmkt=en-US&#038;q=don&#039;t+use+IEnumerable%3Cbyte%3E\"
+      rel=\"nofollow\" onclick=\"urchinTracker('/outgoing/www.bing.com/search?setmkt=en-US_038_q=don_039_t+use+IEnumerable_3Cbyte_3E&amp;referer=');\">http://www.bing.com/search?setmkt=en-US&#038;q=don&#039;t+use+IEnumerable%3Cbyte%3E</a>\nUser-Agent:Mozilla/5.0
+      (Windows NT 6.1; WOW64) AppleWebKit/535.4 (KHTML, like Gecko) Chrome/16.0.889.0
+      Safari/535.4\n\n&lt;!DOCTYPE HTML PUBLIC \"\"-//W3C//DTD HTML 4.01//EN\"\" \"\"http://www.w3.org/TR/html4/strict.dtd\"\"&gt;\n&lt;html&gt;\n&lt;head&gt;\n...\n&lt;/head&gt;\n&lt;body&gt;\n...\n&lt;/body&gt;\n&lt;/html&gt;\"B\n</code></pre>\n\n<p>When
+      parsing an HTTP request message, we most likely want to return not just a list
+      of strings but something more descriptive, such as an abstract syntax tree represented
+      as a F# discriminated union. A perfect candidate for taking in our request message
+      above and producing the desired result is <a href=\"http://msdn.microsoft.com/en-us/library/ee353471.aspx\"
+      onclick=\"urchinTracker('/outgoing/msdn.microsoft.com/en-us/library/ee353471.aspx?referer=');\"><code>Seq.fold</code></a>.</p>\n\n<pre><code>val
+      fold : ('State -&gt; 'a -&gt; 'State) -&gt; 'State -&gt; seq&lt;'a&gt; -&gt;
+      'State\n</code></pre>\n\n<p>The left fold is a very useful function. It equivalent
+      to the <a href=\"http://msdn.microsoft.com/en-us/library/system.linq.enumerable.aggregate.aspx\"
+      onclick=\"urchinTracker('/outgoing/msdn.microsoft.com/en-us/library/system.linq.enumerable.aggregate.aspx?referer=');\"><code>Enumerable.Aggregate</code></a>
+      extension method in LINQ. This function takes in a state transformation function,
+      an initial seed value, and a sequence of data, and produces a final state value
+      incrementally.</p>\n\n<p>Looks like we&#8217;re done here. However, there are
+      still problems with stopping here:</p>\n\n<h3>Composition</h3>\n\n<p>You can
+      certainly use function composition to generate an appropriate state incrementing
+      function, but you would still have the problem of being able to pause to delay
+      selecting the appropriate message body processor.</p>\n\n<h3>Early termination</h3>\n\n<p>Suppose
+      you really only ever want just the message headers. How would you stop processing
+      to free your resources as quickly as possible? Forget it. Fold is going to keep
+      going until it runs out of chunks. Even if you have your fold function stop
+      updating the state after the headers are complete, you won&#8217;t get a result
+      until the entire data stream has been processed.</p>\n\n<h2>Iteratees</h2>\n\n<p>The
+      iteratee itself is a data consumer. It consumes data in chunks until it has
+      either consumed enough data to produce a result or receives an EOF.</p>\n\n<p>An
+      iteratee is based on the <code>fold</code> operator with two differences:</p>\n\n<ol>\n<li><p>The
+      iteratee may complete its processing early by returning a Done state. The iteratee
+      may return the unused portion of any chunk it was passed in its Done state.
+      This should not be confused with the rest of the stream not yet provided by
+      the enumerator.</p></li>\n<li><p>The iteratee does not pull data but receives
+      chunks of data from an &#8220;enumerator&#8221;. It returns a continuation to
+      receive and process the next chunk. This means that an iteratee may be paused
+      at any time, either by neglecting to pass it any additional data or by passing
+      an Empty chunk.</p></li>\n</ol>\n\n<h2>Inspiration</h2>\n\n<p>For those interested
+      in reading more, there are any number of articles and examples. Here are a few
+      I&#8217;ve referenced quite frequently:</p>\n\n<ul>\n<li><a href=\"http://okmij.org/ftp/Haskell/Iteratee/IterateeIO-talk-notes.pdf\"
+      onclick=\"urchinTracker('/outgoing/okmij.org/ftp/Haskell/Iteratee/IterateeIO-talk-notes.pdf?referer=');\">Iteratee
+      IO</a></li>\n<li><a href=\"https://john-millikin.com/software/enumerator/\"
+      onclick=\"urchinTracker('/outgoing/john-millikin.com/software/enumerator/?referer=');\">enumerator
+      package for Haskell</a></li>\n<li><a href=\"http://www.yesodweb.com/book/enumerator\"
+      onclick=\"urchinTracker('/outgoing/www.yesodweb.com/book/enumerator?referer=');\">Yesod
+      Book &#8211; Enumerator package</a></li>\n<li><a href=\"http://apocalisp.wordpress.com/2010/10/17/scalaz-tutorial-enumeration-based-io-with-iteratees/\"
+      onclick=\"urchinTracker('/outgoing/apocalisp.wordpress.com/2010/10/17/scalaz-tutorial-enumeration-based-io-with-iteratees/?referer=');\">Scalaz
+      Tutorial: Enumeration-Based I/O with Iteratees</a></li>\n</ul>\n\n<p>The Scalaz
+      version arguably comes closest to the F# implementation, but I have generally
+      based my implementations on the Haskell source. I&#8217;ve got two implementations
+      currently, a version based on the <a href=\"http://hackage.haskell.org/package/enumerator\"
+      onclick=\"urchinTracker('/outgoing/hackage.haskell.org/package/enumerator?referer=');\">enumerator
+      package</a>, and a <a href=\"http://en.wikipedia.org/wiki/Continuation-passing_style\"
+      onclick=\"urchinTracker('/outgoing/en.wikipedia.org/wiki/Continuation-passing_style?referer=');\">continuation-passing
+      style</a> version based on the <a href=\"http://hackage.haskell.org/package/iteratee\"
+      onclick=\"urchinTracker('/outgoing/hackage.haskell.org/package/iteratee?referer=');\">iteratee
+      package</a>.</p>\n\n<p>The iteratee is composed of one of two states, either
+      a done state with a result and the remainder of the data stream, or a continue
+      state containing a continuation to continue processing.</p>\n\n<pre><code>type
+      Iteratee&lt;'el, 'a&gt; =\n    | Done -&gt; 'a * Stream&lt;'el&gt;\n    | Continue
+      -&gt; (Stream&lt;'el&gt; -&gt; Iteratee&lt;'el, 'a&gt;)\n</code></pre>\n\n<p>The
+      <code>Stream</code> type used here is not <code>System.IO.Stream</code> but
+      yet another discriminated union to represent different stream chunk states:</p>\n\n<pre><code>type
+      Stream&lt;'el&gt; =\n    | Chunk -&gt; 'el  // A chunk of data\n    | Empty
+      \        // An empty chunk represents a pause and can be used as a transition
+      in compositions\n    | EOF           // Denotes that no chunks remain\n</code></pre>\n\n<h3>Some
+      Iteratees</h3>\n\n<p>The following are some sample iteratees using the List&lt;&#8217;a>
+      type in F#. While not the most efficient, they are easy to express concisely
+      and are thus better for illustrating the use of iteratees.</p>\n\n<pre><code>let
+      length&lt;'a&gt; : Iteratee&lt;'a list, int&gt; =\n    let rec step n = function\n
+      \       | Empty | Chunk [] -&gt; Continue (step n)\n        | Chunk x -&gt;
+      Continue (step (n + x.Length))\n        | EOF -&gt; Done(n, EOF)\n    in Continue
+      (step 0)\n\nlet peek&lt;'a&gt; : Iteratee&lt;'a list, 'a option&gt; =\n    let
+      rec inner =\n        let rec step = function\n            | Empty | Chunk ([]:'a
+      list) -&gt; inner\n            | Chunk(x::xs) as s -&gt; Done(Some x, s)\n            |
+      EOF -&gt; Done(None, EOF)\n        Continue step\n    in inner\n\nlet head&lt;'a&gt;
+      : Iteratee&lt;'a list, 'a option&gt; =\n    let rec inner =\n        let rec
+      step = function\n            | Empty | Chunk ([]:'a list) -&gt; inner\n            |
+      Chunk(x::xs) -&gt; Done(Some x, Chunk xs)\n            | EOF -&gt; Done(None,
+      EOF)\n        Continue step\n    in inner\n\nlet drop n =\n    let rec step
+      n = function\n        | Empty | Chunk [] -&gt; Continue &lt;| step n\n        |
+      Chunk str -&gt;\n            if str.Length &lt; n then\n                Continue
+      &lt;| step (n - str.Length)\n            else let extra = List.skip n str in
+      Done((), Chunk extra)\n        | EOF -&gt; Done((), EOF)\n    in if n &lt;=
+      0 then empty&lt;_&gt; else Continue (step n)\n\nlet private dropWithPredicate
+      pred listOp =\n    let rec step = function\n        | Empty | Chunk [] -&gt;
+      Continue step\n        | Chunk x -&gt;\n            match listOp pred x with\n
+      \           | [] -&gt; Continue step\n            | x' -&gt; Done((), Chunk
+      x')\n        | EOF as s -&gt; Done((), s)\n    in Continue step\n\nlet dropWhile
+      pred = dropWithPredicate pred List.skipWhile\nlet dropUntil pred = dropWithPredicate
+      pred List.skipUntil\n\nlet take n =\n    let rec step before n = function\n
+      \       | Empty | Chunk [] -&gt; Continue &lt;| step before n\n        | Chunk
+      str -&gt;\n            if str.Length &lt; n then\n                Continue &lt;|
+      step (before @ str) (n - str.Length)\n            else let str', extra = List.splitAt
+      n str in Done(before @ str', Chunk extra)\n        | EOF -&gt; Done(before,
+      EOF)\n    in if n &lt;= 0 then Done([], Empty) else Continue (step [] n)\n\nlet
+      private takeWithPredicate (pred:'a -&gt; bool) listOp =\n    let rec step before
+      = function\n        | Empty | Chunk [] -&gt; Continue (step before)\n        |
+      Chunk str -&gt;\n            match listOp pred str with\n            | str',
+      [] -&gt; Continue (step (before @ str'))\n            | str', extra -&gt; Done(before
+      @ str', Chunk extra)\n        | EOF -&gt; Done(before, EOF)\n    in Continue
+      (step [])\n\nlet takeWhile pred = takeWithPredicate pred List.span\nlet takeUntil
+      pred = takeWithPredicate pred List.split\n\nlet heads str =\n    let rec loop
+      count str =\n        match count, str with\n        | (count, []) -&gt; Done(count,
+      EOF)\n        | (count, str) -&gt; Continue (step count str)\n    and step count
+      str s =\n        match str, s with\n        | str, Empty -&gt; loop count str\n
+      \       | str, (Chunk []) -&gt; loop count str\n        | c::t, (Chunk (c'::t'))
+      -&gt;\n            if c = c' then step (count + 1) t (Chunk t') \n            else
+      Done(count, Chunk (c'::t'))\n        | _, s -&gt; Done(count, s)\n    loop 0
+      str\n\n// readLines clearly shows the composition allowed by iteratees.\n//
+      Note the use of the heads and takeUntil combinators.\nlet readLines =\n    let
+      toString chars = String(Array.ofList chars)\n    let newlines = ['\\r';'\\n']\n
+      \   let newline = ['\\n']\n    let isNewline c = c = '\\r' || c = '\\n'\n    let
+      terminators = heads newlines &gt;&gt;= fun n -&gt; if n = 0 then heads newline
+      else Done(n, Empty)\n    let rec lines acc = takeUntil isNewline &gt;&gt;= fun
+      l -&gt; terminators &gt;&gt;= check acc l\n    and check acc l count =\n        match
+      l, count with\n        | _, 0 -&gt; Done(Choice1Of2 (List.rev acc |&gt; List.map
+      toString), Chunk l)\n        | [], _ -&gt; Done(Choice2Of2 (List.rev acc |&gt;
+      List.map toString), EOF)\n        | l, _ -&gt; lines (l::acc)\n    lines []\n</code></pre>\n\n<h2>Enumerators</h2>\n\n<p>Enumerators
+      feed data into iteratees, advancing their state until they complete.</p>\n\n<pre><code>//
+      Feed the EOF chunk to the iteratee in order to force the result.\nlet rec enumEOF
+      = function \n    | Done(x,_) -&gt; Done(x, EOF)\n    | Continue k -&gt;\n        match
+      k EOF with\n        | Continue _ -&gt; failwith \"enumEOF: divergent iteratee\"\n
+      \       | i -&gt; enumEOF i\n\n// Run the iteratee and either return the result
+      or throw an exception for a divergent iteratee.\nlet run i =\n    match enumEOF
+      i with\n    | Done(x,_) -&gt; x\n    | Continue _ -&gt; failwith \"run: divergent
+      iteratee\"\n\n// Feed the data stream to the iteratee as a single chunk.\n//
+      This is useful for testing but not conserving memory.\n// val enumeratePure1Chunk
+      :: 'a list -&gt; Enumerator&lt;'a list,'b&gt;\nlet enumeratePure1Chunk str i
+      =\n    match str, i with \n    | [], _ -&gt; i\n    | _, Done(_,_) -&gt; i\n
+      \   | _::_, Continue k -&gt; k (Chunk str)\n\n// Feed data to the iteratee in
+      chunks of size n.\n// val enumeratePureNChunk :: 'a list -&gt; int -&gt; Enumerator&lt;'a
+      list,'b&gt;\nlet rec enumeratePureNChunk n str i =\n    match str, i with\n
+      \   | [], _ -&gt; i\n    | _, Done(_,_) -&gt; i\n    | _::_, Continue k -&gt;\n
+      \       let x, xs = List.splitAt n str in enumeratePureNChunk n xs (k (Chunk
+      x))\n\n// Feed data to the iteratee one value at a time.\n//val enumerate ::
+      'a list -&gt; Enumerator&lt;'a list,'b&gt;\nlet rec enumerate str i = \n    match
+      str, i with\n    | [], _ -&gt; i\n    | _, Done(_,_) -&gt; i\n    | x::xs, Continue
+      k -&gt; enumerate xs (k (Chunk [x]))\n</code></pre>\n\n<h2>Reading an HTML Request
+      by Lines</h2>\n\n<p>Back to our earlier example of reading HTTP requests, let&#8217;s
+      see how we might read it by lines. I&#8217;ll add a few caveats. This is not
+      encapsulating the <code>Stream</code> well as we are using a memory stream.
+      I could wrap this up in an <code>enumerateMemoryStream</code> function that
+      takes all the bytes to read (which will likely happen soon). The example below
+      is using the <code>Iteratee.Binary</code> module, not the <code>Iteratee.List</code>
+      module.</p>\n\n<pre><code>let runIteratee() =\n    let sw = Stopwatch.StartNew()\n
+      \   let result =\n        [ for _ in 1..10000 do\n            use stream = new
+      MemoryStream(httpRequest)\n            yield! match enumStream 128 stream readLines
+      |&gt; run with\n                   | Choice1Of2 x -&gt; x\n                   |
+      Choice2Of2 y -&gt; y ]\n    sw.Stop()\n    printfn \"Iteratee read %d lines
+      in %d ms\" result.Length sw.ElapsedMilliseconds\n</code></pre>\n\n<h2>So what?</h2>\n\n<h3>System.IO.Stream-based
+      processing</h3>\n\n<p>The System.IO.Stream type should be familiar to anyone
+      who has ever worked with I/O in .NET. Streams are the primary abstraction available
+      for working with streams of data, whether over the file system (FileStream)
+      or network protocols (NetworkStream). Streams also have a nice support structure
+      in the form of TextReaders and TextWriters, among other, similar types.</p>\n\n<p>Using
+      the standard Stream processing apis, you might write something like the following:</p>\n\n<pre><code>let
+      rec readConsecutiveLines (reader:System.IO.StreamReader) cont =\n    if reader.EndOfStream
+      then cont []\n    else let line = reader.ReadLine()\n         if System.String.IsNullOrEmpty(line)
+      then cont []\n         else readConsecutiveLines reader (fun tail -&gt; cont
+      (line::tail))\n\nlet readFromStream() =\n    let sw = System.Diagnostics.Stopwatch.StartNew()\n
+      \   let result =\n        [ for _ in 1..10000 do \n            use stream =
+      new System.IO.MemoryStream(httpRequest)\n            use reader = new System.IO.StreamReader(stream)\n
+      \           yield readConsecutiveLines reader id ]\n    sw.Stop()\n    printfn
+      \"Stream read %d in %d ms\" result.Length sw.ElapsedMilliseconds\n\nreadFromStream()\n</code></pre>\n\n<p>What
+      might be the problems with this approach?</p>\n\n<h4>Blocking the current thread</h4>\n\n<p>This
+      is a synchronous use of reading from a Stream. In fact, <code>StreamReader</code>
+      can only be used in a synchronous fashion. There are no methods that even offer
+      the Asynchronous Programming Model (APM). For that, you&#8217;ll need to read
+      from the <code>Stream</code> in chunks and find the line breaks yourself. We&#8217;ll
+      get to more on this in a few minutes.</p>\n\n<h4>Poor composition</h4>\n\n<p>First
+      off, the sample above is performing side effects throughout, and side-effects
+      don&#8217;t compose. You might suggest using standard function composition to
+      create a complete message parser, but what if you don&#8217;t know ahead of
+      time what type of request body you&#8217;ll receive? Can you pause processing
+      to select the appropriate processor? You could certainly address this with some
+      conditional branching, but where exactly do you tie that into your current logic?
+      Also, the current parser breaks on lines using the StreamReader&#8217;s built
+      in logic. If you want to do parsing on individual lines, where would you tie
+      in that logic?</p>\n\n<h4>Memory consumption</h4>\n\n<p>In this example, we
+      are not taking any care about our memory use. To that end, you might argue that
+      we should just use <code>StreamReader.ReadToEnd()</code> and then break up the
+      string using a compositional parser like <a href=\"http://http://www.quanttec.com/fparsec/\"
+      onclick=\"urchinTracker('/outgoing/http_//www.quanttec.com/fparsec/?referer=');\">FParsec</a>.
+      If we don&#8217;t care about careful use of memory, that&#8217;s actually quite
+      a good idea. However, in most network I/O situations &#8212; such as writing
+      high-performance servers &#8212; you really want to control your memory use
+      very carefully. <code>StreamReader</code> does allow you to specify the chunk
+      size, so it&#8217;s not a complete case against using <code>StreamReader</code>,
+      which is why this is a last-place argument. And of course, you can certainly
+      go after <code>Stream.Read()</code> directly.</p>\n\n<h3>IEnumerable-based processing</h3>\n\n<p>How
+      can we add better compositionality and refrain from blocking the thread? One
+      way others have solved this problem is through the use of iterators. A common
+      example can be found on <a href=\"http://stackoverflow.com/questions/2630359/convert-stream-to-ienumerable-if-possible-when-keeping-laziness\"
+      onclick=\"urchinTracker('/outgoing/stackoverflow.com/questions/2630359/convert-stream-to-ienumerable-if-possible-when-keeping-laziness?referer=');\">Stack
+      Overflow</a>. Iterators allow you to publish a lazy stream of data, either one
+      element at a time or in chunks, and through LINQ or F#&#8217;s <code>Seq</code>
+      module, chain together processors for the data.</p>\n\n<pre><code>// Read the
+      stream byte by byte\nlet readStreamByByte (stream: System.IO.Stream) =\n    seq
+      { while true do\n            let x = stream.ReadByte()\n            if (int
+      x) &lt; 0 then ()\n            else yield x }\n\n// Read the stream by chunks\nlet
+      readStreamByChunk chunkSize (stream: System.IO.Stream) =\n    let buffer = Array.zeroCreate&lt;byte&gt;
+      chunkSize\n    seq { while true do\n            let bytesRead = stream.Read(buffer,
+      0, chunkSize)\n            if bytesRead = 0 then ()\n            else yield
+      buffer }\n\n// When you are sure you want text by lines\nlet readStreamByLines
+      (reader: System.IO.StreamReader) =\n    seq { while not reader.EndOfStream do\n
+      \           yield reader.ReadLine() }\n</code></pre>\n\n<p>Three options are
+      presented. In each, I&#8217;m using a <code>Stream</code> or <code>StreamReader</code>,
+      but you could just as easily replace those with a <code>byte[]</code>, <code>ArraySegment&lt;byte&gt;</code>,
+      or <code>SocketAsyncEventArgs</code>. What could be wrong with these options?</p>\n\n<h4>Lazy,
+      therefore resource contentious</h4>\n\n<p>Iterators are pull-based, so you&#8217;ll
+      only retrieve a chunk when requested. This sounds pretty good for your processing
+      code, but it&#8217;s not a very good situation for your sockets. If you have
+      data coming in, you want to get it moved out as quickly as possible to free
+      up your allocated threads and pinned memory buffers for more incoming or outgoing
+      traffic.</p>\n\n<h4>Lazy, therefore non-deterministic</h4>\n\n<p>Each of these
+      items is lazy; therefore, it&#8217;s impossible to know when you can free up
+      resources. Who owns the <code>Stream</code> or <code>StreamReader</code> passed
+      into each method? When is it safe to free the resource? If used immediately
+      within a function, you may be fine, but you&#8217;d also be just as well off
+      if you used a <code>list</code> or <code>array</code> comprehension and blocked
+      until all bytes were read. (The one possible exception might be when using a
+      <a href=\"http://tomasp.net/blog/csharp-async.aspx\" onclick=\"urchinTracker('/outgoing/tomasp.net/blog/csharp-async.aspx?referer=');\">co-routine
+      style async pattern</a>.)</p>\n\n<h2>Summary</h2>\n\n<p>Iteratees are able to
+      resolve a number of issues related to general stream processing, as well as
+      either lazy, e.g. seq&lt;<em>>- or Async&lt;</em>>-based, non-determinism. I&#8217;m
+      sure you are wondering why I didn&#8217;t dive deeper in explaining the iteratees
+      above. In the next part, we&#8217;ll explore a more idiomatic .NET solution
+      for creating iteratees. We&#8217;ll then decompose the iteratees above and cover
+      each in more detail. In the meantime, please checkout <a href=\"http://github.com/fsharp/fsharpx\"
+      onclick=\"urchinTracker('/outgoing/github.com/fsharp/fsharpx?referer=');\">FSharpx</a>
+      for additional information.</p>]]></content:encoded>\n\t\t\t<wfw:commentRss>http://wizardsofsmart.net/post/iteratee-in-f/feed/</wfw:commentRss>\n\t\t<slash:comments>1</slash:comments>\n\t\t</item>\n\t\t<item>\n\t\t<title>Planning
+      for Functional.net 2012</title>\n\t\t<link>http://wizardsofsmart.net/news/planning-for-functional-net-2012/</link>\n\t\t<comments>http://wizardsofsmart.net/news/planning-for-functional-net-2012/#comments</comments>\n\t\t<pubDate>Fri,
+      07 Oct 2011 15:36:54 +0000</pubDate>\n\t\t<dc:creator>panesofglass</dc:creator>\n\t\t\t\t<category><![CDATA[News]]></category>\n\t\t<category><![CDATA[post]]></category>\n\n\t\t<guid
+      isPermaLink=\"false\">http://wizardsofsmart.net/?p=463</guid>\n\t\t<description><![CDATA[]]></description>\n\t\t\t<content:encoded><![CDATA[<a
+      href=\"http://polldaddy.com/poll/5565598/\" onclick=\"urchinTracker('/outgoing/polldaddy.com/poll/5565598/?referer=');\">View
+      This Poll</a>]]></content:encoded>\n\t\t\t<wfw:commentRss>http://wizardsofsmart.net/news/planning-for-functional-net-2012/feed/</wfw:commentRss>\n\t\t<slash:comments>0</slash:comments>\n\t\t</item>\n\t\t<item>\n\t\t<title>Help
+      us choose a Fracture I/O logo!</title>\n\t\t<link>http://wizardsofsmart.net/projects/help-us-choose-a-fracture-io-logo/</link>\n\t\t<comments>http://wizardsofsmart.net/projects/help-us-choose-a-fracture-io-logo/#comments</comments>\n\t\t<pubDate>Thu,
+      08 Sep 2011 17:42:13 +0000</pubDate>\n\t\t<dc:creator>panesofglass</dc:creator>\n\t\t\t\t<category><![CDATA[Projects]]></category>\n\n\t\t<guid
+      isPermaLink=\"false\">http://wizardsofsmart.net/?p=454</guid>\n\t\t<description><![CDATA[]]></description>\n\t\t\t<content:encoded><![CDATA[<a
+      href=\"http://polldaddy.com/poll/5487548/\" onclick=\"urchinTracker('/outgoing/polldaddy.com/poll/5487548/?referer=');\">View
+      This Poll</a>]]></content:encoded>\n\t\t\t<wfw:commentRss>http://wizardsofsmart.net/projects/help-us-choose-a-fracture-io-logo/feed/</wfw:commentRss>\n\t\t<slash:comments>2</slash:comments>\n\t\t</item>\n\t\t<item>\n\t\t<title>Interested
+      in presenting at a conference on functional&#8230;</title>\n\t\t<link>http://wizardsofsmart.net/news/interested-in-presenting-at-a-conference-on-functional/</link>\n\t\t<comments>http://wizardsofsmart.net/news/interested-in-presenting-at-a-conference-on-functional/#comments</comments>\n\t\t<pubDate>Sat,
+      03 Sep 2011 22:37:15 +0000</pubDate>\n\t\t<dc:creator>panesofglass</dc:creator>\n\t\t\t\t<category><![CDATA[News]]></category>\n\t\t<category><![CDATA[status]]></category>\n\t\t<category><![CDATA[conference]]></category>\n\t\t<category><![CDATA[functional
+      programming]]></category>\n\t\t<category><![CDATA[functional.net]]></category>\n\n\t\t<guid
+      isPermaLink=\"false\">http://wizardsofsmart.net/status/interested-in-presenting-at-a-conference-on-functional/</guid>\n\t\t<description><![CDATA[Interested
+      in presenting at a conference on functional programming? Want to reach out to
+      a potentially huge audience? Don&#8217;t mind the feeling of speaking alone
+      to a webcam? Then Functional.net is for you! Please check it out and submit
+      a talk. This is all going down on February 17, 2012 (tentative), and we&#8217;d
+      love to [...]]]></description>\n\t\t\t<content:encoded><![CDATA[<p>Interested
+      in presenting at a conference on functional programming? Want to reach out to
+      a potentially huge audience? Don&#8217;t mind the feeling of speaking alone
+      to a webcam? Then <a href=\"http://fpish.net/org/functional-net-2012\" onclick=\"urchinTracker('/outgoing/fpish.net/org/functional-net-2012?referer=');\">Functional.net</a>
+      is for you! Please check it out and submit a talk. This is all going down on
+      February 17, 2012 (tentative), and we&#8217;d love to have you.</p>]]></content:encoded>\n\t\t\t<wfw:commentRss>http://wizardsofsmart.net/news/interested-in-presenting-at-a-conference-on-functional/feed/</wfw:commentRss>\n\t\t<slash:comments>0</slash:comments>\n\t\t</item>\n\t\t<item>\n\t\t<title>Organizing
+      Code Files</title>\n\t\t<link>http://wizardsofsmart.net/post/organizing-code-files/</link>\n\t\t<comments>http://wizardsofsmart.net/post/organizing-code-files/#comments</comments>\n\t\t<pubDate>Sat,
+      03 Sep 2011 22:31:32 +0000</pubDate>\n\t\t<dc:creator>panesofglass</dc:creator>\n\t\t\t\t<category><![CDATA[post]]></category>\n\t\t<category><![CDATA[organization]]></category>\n\n\t\t<guid
+      isPermaLink=\"false\">http://wizardsofsmart.net/post/organizing-code-files/</guid>\n\t\t<description><![CDATA[I
+      used to find projects with a few large files (1000+ loc) distasteful. Of late,
+      I&#8217;m starting to find large numbers of nested folders and files distasteful.
+      Is it just a case of &#8220;the grass is always greener?&#8221; I don&#8217;t
+      think so. I use the VsVim plugin for Visual Studio at work and at home. [...]]]></description>\n\t\t\t<content:encoded><![CDATA[<p>I
+      used to find projects with a few large files (1000+ loc) distasteful. Of late,
+      I&#8217;m starting to find large numbers of nested folders and files distasteful.
+      Is it just a case of &#8220;the grass is always greener?&#8221; I don&#8217;t
+      think so. I use the <a href=\"http://bit.ly/pYPyWz\" onclick=\"urchinTracker('/outgoing/bit.ly/pYPyWz?referer=');\">VsVim</a>
+      plugin for Visual Studio at work and at home. I&#8217;ve also started using
+      <a href=\"http://bit.ly/pYSmIw\" onclick=\"urchinTracker('/outgoing/bit.ly/pYSmIw?referer=');\">Debugger
+      Canvas</a> on projects at home, which is really nice but only available for
+      Visual Studio Ultimate. With these tools, popping over to the Solution Explorer
+      is actually a little more painful. I also use <a href=\"http://bit.ly/nvAGCC\"
+      onclick=\"urchinTracker('/outgoing/bit.ly/nvAGCC?referer=');\">ReSharper</a>
+      at work, which allows me to jump to different types without caring at all about
+      the file layout.</p>\n\n<p>In a recent dinner discussion, a familiar topic arose
+      as to why we even care about files in our code at all. It&#8217;s the old, familiar
+      way of dealing with it, but why does that have to mean anything? Smalltalk stored
+      all of the code paths internally within its virtual machine. Why are we still
+      stuck on a file system approach 30 years later?</p>\n\n<p>In that spirit, I&#8217;m
+      trying something a little extreme with my <a href=\"http://bit.ly/og6V81\" onclick=\"urchinTracker('/outgoing/bit.ly/og6V81?referer=');\">FSharp.Monad</a>
+      project. Check out the <a href=\"http://bit.ly/oqC1ua\" onclick=\"urchinTracker('/outgoing/bit.ly/oqC1ua?referer=');\">refactor
+      branch</a>, and you&#8217;ll notice that the many projects/files in the master
+      branch have been reduced to a single project with two files. It&#8217;s a bit
+      extreme, but I have been better able to navigate it using only VsVim since I
+      made the changes.</p>\n\n<p>In the spirit of experimental coding, I&#8217;m
+      interested in your thoughts and feedback. Is this stupid, or is there something
+      to this? What do you do? What do you like?</p>]]></content:encoded>\n\t\t\t<wfw:commentRss>http://wizardsofsmart.net/post/organizing-code-files/feed/</wfw:commentRss>\n\t\t<slash:comments>2</slash:comments>\n\t\t</item>\n\t\t<item>\n\t\t<title>The
+      iteratee is continuing to hang me up&#8230;</title>\n\t\t<link>http://wizardsofsmart.net/status/the-iteratee-is-continuing-to-hang-me-up/</link>\n\t\t<comments>http://wizardsofsmart.net/status/the-iteratee-is-continuing-to-hang-me-up/#comments</comments>\n\t\t<pubDate>Sat,
+      03 Sep 2011 00:09:15 +0000</pubDate>\n\t\t<dc:creator>panesofglass</dc:creator>\n\t\t\t\t<category><![CDATA[status]]></category>\n\t\t<category><![CDATA[functional
+      programming]]></category>\n\n\t\t<guid isPermaLink=\"false\">http://wizardsofsmart.net/status/the-iteratee-is-continuing-to-hang-me-up/</guid>\n\t\t<description><![CDATA[The
+      iteratee is continuing to hang me up. I&#8217;m very close, but in the meantime,
+      I&#8217;ll be focusing on convincing Scott Hanselman that he really should care
+      about functional programming. (Note that I will not be attempting to convince
+      him of the importance of F#.)]]></description>\n\t\t\t<content:encoded><![CDATA[<p>The
+      iteratee is continuing to hang me up. I&#8217;m very close, but in the meantime,
+      I&#8217;ll be focusing on convincing <a href=\"http://www.scotthanselman.com/blog/\"
+      target=\"_blank\" onclick=\"urchinTracker('/outgoing/www.scotthanselman.com/blog/?referer=');\">Scott
+      Hanselman</a> that he really should care about functional programming. (Note
+      that I will not be attempting to convince him of the importance of F#.)</p>]]></content:encoded>\n\t\t\t<wfw:commentRss>http://wizardsofsmart.net/status/the-iteratee-is-continuing-to-hang-me-up/feed/</wfw:commentRss>\n\t\t<slash:comments>0</slash:comments>\n\t\t</item>\n\t\t<item>\n\t\t<title>I&#8217;m
+      working on a few seemingly unrelated posts&#8230;</title>\n\t\t<link>http://wizardsofsmart.net/status/im-working-on-a-few-seemingly-unrelated-posts/</link>\n\t\t<comments>http://wizardsofsmart.net/status/im-working-on-a-few-seemingly-unrelated-posts/#comments</comments>\n\t\t<pubDate>Tue,
+      19 Jul 2011 19:26:30 +0000</pubDate>\n\t\t<dc:creator>panesofglass</dc:creator>\n\t\t\t\t<category><![CDATA[status]]></category>\n\t\t<category><![CDATA[F#]]></category>\n\t\t<category><![CDATA[HTTP]]></category>\n\t\t<category><![CDATA[Iteratee]]></category>\n\n\t\t<guid
+      isPermaLink=\"false\">http://wizardsofsmart.net/status/im-working-on-a-few-seemingly-unrelated-posts/</guid>\n\t\t<description><![CDATA[I&#8217;m
+      working on a few, seemingly unrelated posts: Iteratees in F# and their use in
+      creating a chunk-driven parser HTTP as the command line interface (CLI) for
+      the web Stay-tuned]]></description>\n\t\t\t<content:encoded><![CDATA[<p>I&#8217;m
+      working on a few, seemingly unrelated posts:</p>\n\n<ol>\n<li>Iteratees in F#
+      and their use in creating a chunk-driven parser</li>\n<li>HTTP as the command
+      line interface (CLI) for the web</li>\n</ol>\n\n<p>Stay-tuned</p>]]></content:encoded>\n\t\t\t<wfw:commentRss>http://wizardsofsmart.net/status/im-working-on-a-few-seemingly-unrelated-posts/feed/</wfw:commentRss>\n\t\t<slash:comments>0</slash:comments>\n\t\t</item>\n\t\t<item>\n\t\t<title>Re:
+      unREST</title>\n\t\t<link>http://wizardsofsmart.net/post/re-unrest/</link>\n\t\t<comments>http://wizardsofsmart.net/post/re-unrest/#comments</comments>\n\t\t<pubDate>Mon,
+      11 Jul 2011 20:57:14 +0000</pubDate>\n\t\t<dc:creator>panesofglass</dc:creator>\n\t\t\t\t<category><![CDATA[post]]></category>\n\t\t<category><![CDATA[HTTP]]></category>\n\t\t<category><![CDATA[REST]]></category>\n\n\t\t<guid
+      isPermaLink=\"false\">http://wizardsofsmart.net/post/re-unrest/</guid>\n\t\t<description><![CDATA[Tried
+      commenting on the unREST blog post, but I kept getting an error that I was trying
+      to post illegal content. You equate the HTTP version of REST with REST itself.
+      That is inaccurate. I think what you don&#8217;t like is HTTP. I&#8217;ve never
+      understood why SOAP didn&#8217;t drive directly off of TCP. It doesn&#8217;t
+      [...]]]></description>\n\t\t\t<content:encoded><![CDATA[<p>Tried commenting
+      on <a href=\"http://www.ebpml.org/blog2/index.php/2011/06/29/unrest\" onclick=\"urchinTracker('/outgoing/www.ebpml.org/blog2/index.php/2011/06/29/unrest?referer=');\">the
+      unREST blog post</a>, but I kept getting an error that I was trying to post
+      illegal content.</p>\n\n<ol>\n<li><p>You equate the HTTP version of REST with
+      REST itself. That is inaccurate. I think what you don&#8217;t like is HTTP.</p></li>\n<li><p>I&#8217;ve
+      never understood why SOAP didn&#8217;t drive directly off of TCP. It doesn&#8217;t
+      really use HTTP except for transport, which is really useless.</p></li>\n<li><p>I&#8217;m
+      all for different application protocols. Build your own indeed. You are quite
+      right that, in many cases, another person&#8217;s uniform interface is not the
+      best. These can be REST or not, that&#8217;s really up to you.</p></li>\n<li><p>I
+      find REST breathtakingly simple. I like it, so I apparently disagree with you,
+      and I&#8217;m alright with that.</p></li>\n</ol>]]></content:encoded>\n\t\t\t<wfw:commentRss>http://wizardsofsmart.net/post/re-unrest/feed/</wfw:commentRss>\n\t\t<slash:comments>0</slash:comments>\n\t\t</item>\n\t\t<item>\n\t\t<title>The
+      Frank application signature is curre&#8230;</title>\n\t\t<link>http://wizardsofsmart.net/status/the-frank-application-signature-is-curre/</link>\n\t\t<comments>http://wizardsofsmart.net/status/the-frank-application-signature-is-curre/#comments</comments>\n\t\t<pubDate>Wed,
+      29 Jun 2011 00:09:24 +0000</pubDate>\n\t\t<dc:creator>panesofglass</dc:creator>\n\t\t\t\t<category><![CDATA[status]]></category>\n\t\t<category><![CDATA[F#]]></category>\n\t\t<category><![CDATA[Frank]]></category>\n\t\t<category><![CDATA[routing]]></category>\n\t\t<category><![CDATA[Web
+      Application]]></category>\n\n\t\t<guid isPermaLink=\"false\">http://wizardsofsmart.net/status/the-frank-application-signature-is-curre/</guid>\n\t\t<description><![CDATA[The
+      Frank application signature is currently undergoing a change from 'Request -&#62;
+      Async&#60;'Response&#62; to 'Request -&#62; 'Response, where the 'Response includes
+      a Body type that is: type Body = &#124; Bytes of byte[] &#124; AsyncBytes of
+      byte[] Async &#124; Segment of byte ArraySegment &#124; AsyncSegment of byte
+      ArraySegment Async &#124; Str of string &#124; AsyncStr [...]]]></description>\n\t\t\t<content:encoded><![CDATA[<p>The
+      Frank application signature is currently undergoing a change from <code>'Request
+      -&gt; Async&lt;'Response&gt;</code> to <code>'Request -&gt; 'Response</code>,
+      where the <code>'Response</code> includes a <code>Body</code> type that is:</p>\n\n<pre><code>type
+      Body =\n| Bytes of byte[]\n| AsyncBytes of byte[] Async\n| Segment of byte ArraySegment\n|
+      AsyncSegment of byte ArraySegment Async\n| Str of string\n| AsyncStr of string
+      Async\n| Sequence of Body seq\n| AsyncSequence of Body AsyncSeq    \n</code></pre>\n\n<p>Now
+      to your questions:</p>\n\n<p><strong>Q: Why are you getting rid of the async
+      processing?</strong></p>\n\n<p>A: I&#8217;m not. Most requests have already
+      pulled in all the data required for processing, so wrapping the entire transaction
+      in an Async needlessly is just waste. The <code>Body</code> of the <code>'Response</code>
+      can now be either <code>Async</code> or not, which can further wrap asynchronous
+      access to the <code>'Request</code> body.</p>]]></content:encoded>\n\t\t\t<wfw:commentRss>http://wizardsofsmart.net/status/the-frank-application-signature-is-curre/feed/</wfw:commentRss>\n\t\t<slash:comments>12</slash:comments>\n\t\t</item>\n\t</channel>\n</rss>\n"
+    http_version: '1.1'

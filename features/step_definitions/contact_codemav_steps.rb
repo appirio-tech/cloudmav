@@ -18,4 +18,3 @@ Then /^CodeMav should receive a contact email$/ do
   email.body.should include @contact.subject
   email.body.should include @contact.description
 end
-

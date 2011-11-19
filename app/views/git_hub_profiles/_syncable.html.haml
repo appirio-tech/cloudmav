@@ -1,0 +1,11 @@
+
+%li.row
+  .span3= link_to image_tag("syncable/git_hub_logo.png"), "http://www.github.com"
+  .span10
+    - @git_hub_profile = @profile.git_hub_profile || GitHubProfile.new
+    #sync_git_hub
+      = form_for [@profile, @git_hub_profile] do |f|
+        = f.text_field :username, :class => "xlarge"
+        = submit_button_tag "Sync", :class => "btn success"
+        - if @profile.git_hub_profile
+          = link_to "Delete", [@profile, @git_hub_profile], :id=> :delete_git_hub, :confirm => 'Are you sure?', :method => :delete, :class => "btn danger"

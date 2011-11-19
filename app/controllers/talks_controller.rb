@@ -7,6 +7,13 @@ class TalksController < ApplicationController
   
   def show
     @talk = Talk.by_permalink(params[:id]).first
+    if @talk.nil?
+      @talk = Talk.where(:_id => params[:id]).first
+    end
+    
+    if @talk.nil?
+      not_found
+    end
   end
   
   def new
@@ -19,9 +26,12 @@ class TalksController < ApplicationController
     authorize! :add_talk, @profile
     
     @talk = Talk.new(params[:talk])
+    @talk.tags_text = params[:tags]
     @talk.profile = @profile
         
     if @talk.save
+      @talk.retag!
+      @profile.calculate_score!
       flash[:notice] = "#{@talk.title} added as one of your talks"
       redirect_to [@profile, @talk]
     else
@@ -35,7 +45,11 @@ class TalksController < ApplicationController
   
   def update
     @talk = Talk.by_permalink(params[:id]).first
+    
     if @talk.update_attributes(params[:talk])
+      @talk.tags_text = params[:tags]
+      @talk.save
+      @talk.retag!  
       flash[:notice] = "'#{@talk.title}' saved"
       redirect_to [@profile, @talk]
     else

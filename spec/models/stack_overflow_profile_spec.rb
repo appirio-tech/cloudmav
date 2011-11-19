@@ -9,6 +9,7 @@ describe StackOverflowProfile do
       VCR.use_cassette("stack_overflow", :record => :all) do
         @so_profile.sync!
       end
+      @so_profile.reload
       @profile.reload
     end
     

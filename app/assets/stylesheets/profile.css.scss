@@ -1,0 +1,427 @@
+@import "colors";
+@import "mixins";
+
+#profile_header {
+  #profile_pic {
+    border: 1px solid lighten($dark_background, 50%);
+  }
+  h1 {
+    font-size: ms(1);
+    line-height: ms(1) * 1.2;
+  }
+  .user_name {
+    color: lighten($dark_background, 30%);
+    font-size: ms(0);
+  }
+  .edit_profile {
+    position: relative;
+    top: -6px;
+    margin-left: 26px;
+  }
+  td {
+    padding: 1px;
+    padding-right: 4px;
+  }
+  .location_image {
+  }
+  .location_text {
+  }
+  .email_image {
+    img {
+      padding-left: 10px;
+    }
+  }
+  ul, li {
+    display: inline;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;   
+  }
+  #points {
+    li {
+      @include corners;
+      background: $gray_background;
+      color: $gray_foreground;
+      float: left;
+      text-align:center;
+      padding: 5px;
+      margin-right: 5px;
+      margin-top: 3px;
+      .image {
+        float: left;
+      }
+      .points {
+        font-weight:bold;
+        font-size: 13pt;
+      }
+      .description {
+        font-size: 10pt;
+      }
+    }
+    .selected {
+      background: $dark_background;
+      color: $dark_foreground;
+    }
+  }
+}
+
+#profile_content {
+  margin-left: 110px;
+  margin-top: 20px;
+  background: $white;
+  border: 1px solid lighten($dark_background, 50%);
+  padding-bottom: 50px;
+  padding-top: 7px;
+  padding-left: 15px;
+  
+  section {
+    margin-bottom: ms(0);
+    h2 {
+      border-bottom: 1px solid $dark_background;
+      padding: 6px;
+      margin-bottom: ms(0);
+      span {
+        float: right;
+        margin-top: 2px;
+      }
+    }
+  }
+  
+  ul#accounts {
+    margin-bottom: ms(0);
+    li {
+      .logo {
+        float: left;
+        width: 124px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+      }
+      span a {
+        position: relative;
+        top: 10px;
+      }
+    }
+  }
+}
+
+#profile_menu {
+  margin-top: 20px;
+  margin-right: -10px;
+  font-size: 10pt;
+  font-weight: bold;
+  ul {
+    @include gradient($gray_gradient2, $gray_gradient1);
+  }
+  li {
+    border-top: 1px solid $dark_background;
+    border-right: 1px solid $lightest_gray;
+    border-left: 1px solid $lightest_gray;
+    padding: 10px;
+    padding-left: 17px;
+    a {
+      color: $dark_background;
+    }
+    &:hover {
+      border-left: 7px solid $dark_background;
+      padding-left: 11px;
+    }
+  }
+  .selected {
+    @include gradient($dark_gradient1, $dark_gradient2);
+    border-right: 1px solid $dark_background;
+    border-left: 7px solid $blue;
+    padding-left: 10px;
+    a {
+      color: $white;
+    }
+  }
+}
+
+#event_feed {
+  width: 400px;
+}
+
+.list {
+  width: 470px;
+  margin-top: 5px;
+  li {
+    clear: both;
+    padding: 5px;
+  }
+  .item_pic {
+    border: 2px solid #EBEBEB;
+    float:left;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .item_info {
+    border-bottom: 2px solid #EBEBEB;
+    margin-left: 55px;
+    padding-bottom: 7px;
+    margin-top: 0px;
+    .item_title {
+      margin-top: 0px;
+      font-size: 11pt;
+      font-weight: bold;
+      a {
+        color: $black;
+        text-decoration: none;
+        &:hover {
+          color: $hover_blue;
+        }
+      }
+    }
+    .item_description {
+      margin-top: 5px;
+      color: #979797;
+      font-size: 10pt;
+    }
+    .range {
+      font-size: 9pt;
+    }
+  }
+}
+
+
+#badges {
+  li {
+    float: left;
+  }
+}
+
+.info_box {
+  width: 250px;
+  float: right;
+  margin-bottom: 15px;
+  .info_logo {
+    background: $white;
+    border-bottom: 1px solid $gray_foreground;
+    .edit {
+      float:right;
+      padding-top: 29px;
+    }
+    .delete {
+      float:right;
+      padding-top: 29px;
+      margin-left: 5px;
+    }
+  }
+  .info {
+    padding: 5px;
+  }
+  font-size: 11pt;
+  table {
+    margin-top: 10px;
+    td {
+      font-size:1.3em;
+    }
+    td:first-child {
+      font-size:1em;
+      padding-right: 10px;
+      text-transform: lowercase;
+    }
+  }
+  h2 {
+    border-bottom: 1px solid $gray_foreground;
+    padding-bottom: 5px;
+  }
+}
+
+.add_blog {
+  float: right;
+  @include corners(3px);
+  @include gradient($gray_gradient2, $gray_gradient1);
+  border: 1px solid $gray_foreground;
+  color: $gray_text;
+  padding: 3px;
+  margin-top: 3px;
+  font-size: 10pt;
+  cursor: pointer;
+  &:hover {
+    @include gradient($dark_gradient1, $dark_gradient2);
+    color: $off_white;
+    border: 1px solid $blue;
+  }
+}
+
+#count_box {
+ margin-top: 10px;
+ margin-bottom: 10px;
+ .space{
+    width: 30px;
+  }
+  .count {
+    font-size: 12pt;
+    font-weight:bold;
+    color: #545454;
+  }
+  .count_of {
+    font-size: 12pt;
+    padding-left: 5px;
+    color: #7E7E7E;
+  }
+}
+
+
+
+
+#followings {
+  margin-top:10px;
+  [data-type=following] {
+    width: 225px;
+    float: left;
+    margin-bottom: 7px;
+    margin-right: 3px;
+  }
+  .following_pic {
+    float: left;
+    border: 1px solid $lightest_gray;
+    padding: 3px;
+  }
+  .following_info {
+    float: left;
+    margin-left: 7px;
+    .following_username {
+      font-size: 12pt;
+      margin-bottom: 5px;
+    }
+    .following_points {
+      li {
+        @include corners;
+        background: $gray_background;
+        color: $gray_foreground;
+        float: left;
+        text-align:center;
+        padding: 3px;
+        margin-right: 3px;
+        margin-top: 3px;
+        .points {
+          font-weight:bold;
+          font-size: 8pt;
+        }
+        .description {
+          font-size: 7pt;
+        }
+      }
+      .stack_overflow {
+        width: 50px;
+        img {
+          width: 20px; 
+          float: left;
+        }
+      }
+    }
+  }
+
+}
+
+
+.blog_title a {
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: 12pt;
+}
+.info_box ul li .links {
+  margin-top: 5px;
+  float:right;
+  a {
+    font-size: 10pt;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.sync_error {
+  color: #990000;
+}
+
+#stack_overflow_questions {
+  li {
+    margin-bottom: 10px;
+    margin-left: 15px;
+  }
+}
+
+#stack_overflow_answers {
+  li {
+    margin-bottom: 10px;
+    margin-left: 15px;
+  }
+}
+
+.coder_wall_badges {
+  margin-top: 10px;
+  li {
+    display:inline;
+    img {
+      width: 50px;
+    }
+  }
+}
+
+ul#actions {
+  li {
+    float: left;
+  }
+}
+
+ul.talks {
+  li {
+    height: 130px;
+    margin-bottom: ms(0);
+    .preview_pic {
+      float: left;
+      margin-right: ms(0);
+      border: 1px solid lighten($dark_background, 50%);
+    }
+    .talk_info {
+      position: relative;
+      top: -6px;
+      .title {
+        font-size: ms(1);
+      }
+      p.description {
+        font-size: 12px;
+        color: lighten($font-black, 20%);
+      }
+    }
+  }
+}
+
+.code_details {
+  h3 {
+    margin-top: ms(1);
+    margin-bottom: 4px;
+  }
+  table {
+    border-top: 1px solid lighten($dark_background, 60%);
+    tr {
+      height: 68px;
+      td {
+        border-bottom: 1px solid lighten($dark_background, 60%);
+        padding: 6px;
+      }
+    }
+  }
+  .repo_description {
+    font-size: 12px;
+    width: 287px;
+  }
+  .points {
+    @include corners;
+    background: $gray_background;
+    color: $gray_foreground;
+    padding: 10px;
+    margin-right: 10px;
+    text-align: center;
+    .number {
+      font-weight: bold;
+    }
+    .description {
+      font-size: 12px;
+    }
+  }
+}

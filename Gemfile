@@ -1,90 +1,105 @@
 source 'http://rubygems.org'
 
-# Rails
 gem 'rails', '3.1.0'
-
-# Rails 3.1 - Asset Pipeline
-group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
-  gem 'uglifier'
-end
-
-gem 'json', '1.4.6'
-#gem 'coffee-script'
-#gem 'uglifier'
-# Rails 3.1 - JavaScript
-#gem 'jquery-rails'
-
-
 gem 'rake', '0.8.7'
-
-gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'haml', '3.1.2'
+gem 'json', '1.4.6'
+gem 'jquery-rails'
 
 # Database
 gem "mongo"
 gem "mongoid"
-#gem "will_paginate"
-gem "kaminari"
+gem "bson_ext"
+gem 'sqlite3' # cucumber yelled without this installed
+gem "kaminari" # for paging
+group :production do
+  gem 'pg'
+end
 
 # Authentication and Authorization
-gem 'devise'
+gem "devise"
 gem "cancan"
 
-gem "bson_ext", "1.3.1"
-gem "geokit", "1.6.0"
-gem "badgeable", "0.4.0"
-gem "gravtastic", "3.2.6"
+# Server
+gem "powify"
+
+# View / UI
+gem "haml"
+gem "formtastic", "1.2.4"
+gem "css3buttons", "1.0.1"
+
+# 3rd Party Services
+gem "gravtastic"
+
+# Rss
+gem "simple-rss", "1.2.3"
+gem "escape_utils", "0.2.3"
+
+# Api Gems
+gem "httparty", "0.7.8"
+gem "bitbucket_api", "0.0.1"
+gem "stack_overflow", "0.0.8"
+gem "speaker_rate", "0.0.5"
+gem "slide_share", "0.0.3"
+gem "linkedin", "0.3.1"
+gem "twitter", "1.6.1"
+
+# Geolocation
+gem "geokit"
+
+# Async Processing
+gem "resque", :require => 'resque/server'
+gem "resque-status"
+gem "resque-scheduler"
+
+# Game mechanics
+gem "badgeable"
+
+# Search
+gem "sunspot", "1.2.1"
+gem "sunspot_rails", "1.2.1"
+
+# Friendly Url
+gem "has_permalink"
+
+# CodeMav Api
+gem "rabl", "0.3.0"
+
+# Attach images to models and store in the s3 cloud
 gem 'fog', "0.11.0"
 gem 'rmagick', "2.13.1"
 gem "carrierwave", "0.5.7"
 gem 'carrierwave-mongoid', "0.1.0", :require => 'carrierwave/mongoid'
-gem "ruby-duration" , "2.0.2"
 
-gem "httparty", "0.7.8"
-gem "nokogiri", "1.5.0"
-gem "speaker_rate", "0.0.5"
-gem "slide_share", "0.0.3"
-gem "sunspot", "1.2.1"
-gem "sunspot_rails", "1.2.1"
+# Exceptions
+gem "airbrake"
 
-gem "stack_overflow", "0.0.7"
-gem "linkedin", "0.3.1"
-gem "delayed_job", "2.1.4"
-gem "delayed_job_mongoid", "1.0.4"
-gem "target_api", "0.0.1"
-gem "less", "2.0.5"
-gem "twitter", "1.6.1"
-gem "embedly", "1.0.0"
-gem "simple-rss", "1.2.3"
-gem "htmlentities", "4.3.0"
-gem "chronic", "0.6.2"
-gem "icalendar", "1.1.6"
-gem "bitbucket_api", "0.0.1"
-gem "ssl_requirement", "0.1.0"
-gem "rack-ssl-enforcer", "0.2.3"
-gem "formtastic", "1.2.4"
-gem "css3buttons", "1.0.1"
-gem "rabl", "0.3.0"
-gem "escape_utils", "0.2.3"
-gem "has_permalink"
+# Email
+gem "sendgrid"
 
-group :production do
-  gem 'therubyracer-heroku', '0.8.1.pre3'
-  gem 'pg'
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails', "  ~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
+  gem 'uglifier'
+  gem 'bourbon'
 end
 
-group :development, :test do
-  gem 'launchy', '2.0.5'
-  gem 'ghost', "0.2.8" #used to set local routes easily
-  gem 'cucumber-rails'
-  gem "database_cleaner"
-  gem "rspec-rails", "2.6.1"
-  gem 'factory_girl_rails', "1.1.0"
-  gem 'capybara', "1.0.1"
-  gem "fakeweb", "1.3.0"
-  gem "mocha", "0.9.12"
-  gem "vcr", "1.11.1"
-end
+group :test do
+  # rspec gems
+  gem "rspec-rails"
+  gem "factory_girl_rails"
   
+  # cucumber gems
+  gem "cucumber", "1.0.3"
+  gem "cucumber-rails", "1.0.2"
+  gem "database_cleaner" # cleans database for every scenario run. works with mongoid now
+  gem "launchy" # allows 'show me the page' to launch a browser
+  
+  # mocks & stubs
+  gem "mocha", "0.9.12"
+  
+  # mock web calls
+  gem "vcr"
+  gem "fakeweb"
+end

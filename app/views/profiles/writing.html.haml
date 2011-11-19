@@ -1,3 +1,6 @@
+= content_for :title do
+  #{@profile.username} - Writer Profile
+
 %h1.hidden #{@profile.name}'s Writing
 
 #profile
@@ -5,36 +8,14 @@
   = render :partial => "profile_menu"
   #profile_content
     .grid_8
-      #event_feed
-        .filter
-          %ul
-            %li Filter :
-            %li.active
-              = link_to "All", profile_events_path(@profile, :filter => "Writing"), :remote => true, :rel => "nofollow"
-            %li
-              = link_to "Blog", profile_events_path(@profile, :filter => "Writing", :subfilter => "Blog"), :remote => true, :rel => "nofollow"
-
-      %ul.list#events
-        = render :partial => "events/event", :collection => @writing_events, :as => :event
-        %li.event_load &nbsp; 
-        %li.more_events
-          = form_tag profile_events_path(@profile), :remote => true, :method => :get do |f|
-            = hidden_field_tag :filter, "Writing"
-            = hidden_field_tag :subfilter, "All"
-            = hidden_field_tag :page, 2
-            = submit_tag "Click to load more", :id => "more_events"
       &nbsp;
-
-
-
     .grid_5
       .info_box
-        %h2 
-          Blogs
-          -if can?(:add_blog, @profile) 
-            %a{:class => "add_blog module_link", :rel => "#add_blog"} add
-            #add_blog.overlay
-              = render :partial => "blogs/form", :locals => { :blog => Blog.new, :action_text => "Add", :disable_text => "Adding..." }
+        %h2 Blogs
+        -if can?(:sync_profile, @profile) 
+          %a{:class => "add_blog module_link", :rel => "#add_blog"} add
+          #add_blog.overlay
+            = render :partial => "blogs/form", :locals => { :blog => Blog.new, :action_text => "Add", :disable_text => "Adding..." }
         %ul
           - @profile.blogs.each do |b|
             %li

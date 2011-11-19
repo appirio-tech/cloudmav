@@ -1,7 +1,6 @@
 class CoderWallProfile
   include Mongoid::Document
   include CodeMav::Taggable
-  include CodeMav::Eventable
   include CodeMav::Syncable
   
   field :username
@@ -15,5 +14,7 @@ class CoderWallProfile
     [profile.coder_profile]
   end
   
+  def generate_tags
+  end
+  
 end
-

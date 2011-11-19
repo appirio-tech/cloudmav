@@ -2,16 +2,18 @@ class PagesController < ApplicationController
   
   def home
     if current_profile
-      redirect_to backlog_path
+      puts "redirect to #{profile_path(current_profile)}"
+      redirect_to profile_path(current_profile)
+      #redirect_to backlog_path
+    else 
+      @user = User.new
     end
-    @user = User.new
   end
   
   def api_documentation
   end
 
   def points
-
   end
   
 end

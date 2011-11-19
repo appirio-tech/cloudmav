@@ -1,7 +1,7 @@
 <%= javascript_tag do -%>
 
   function discoverProfile() {
-    $.get("<%= profile_autodiscovers_path(@profile, :autodiscover_id => @autodiscover_id) %>", function(data){
+    $.get("<%= profile_autodiscover_path(@profile) %>", function(data){
     }, "script");
   }
 

@@ -1,2 +1,0 @@
-class CompanyAddedEvent < CompanyEvent
-end

@@ -12,7 +12,7 @@ Given /^I have jobs$/ do
 end
 
 When /^I delete my LinkedIn profile$/ do
-  visit profile_experience_path(@profile)
+  visit edit_profile_path(@profile)
   click_link "delete_linkedin"
 end
 
@@ -24,10 +24,3 @@ Then /^I should not have any jobs$/ do
   profile = Profile.find(@profile.id)
   profile.jobs.count.should == 0
 end
-
-Then /^I should not have any job events$/ do
-  JobAddedEvent.for_profile(@profile).count.should == 0
-end
-
-
-

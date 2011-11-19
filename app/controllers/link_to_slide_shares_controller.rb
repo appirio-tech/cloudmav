@@ -11,16 +11,14 @@ class LinkToSlideSharesController < LoggedInController
     @slide_share_talk = Talk.find(params[:slide_share_talk][:talk_id])
     @talk.copy_slide_share_info_from(@slide_share_talk)
     @talk.save
-    TalkEvent.for_talk(@slide_share_talk).destroy_all
     @slide_share_talk.destroy
     redirect_to [@profile, @talk]
   end
 
   def refresh
     authorize! :sync_profile, @profile
-
-    event = SlideShareProfileSyncEvent.new(:slide_share_profile => @profile.slide_share_profile, :profile => @profile)
-    event.sync
+    
+    SyncSlideShareProfileJob.perform(@profile.slide_share_profile.id)
     redirect_to new_profile_talk_link_to_slide_share_path(@profile, @talk)
   end
 
@@ -29,6 +27,5 @@ class LinkToSlideSharesController < LoggedInController
   def set_talk
     @talk = Talk.by_permalink(params[:talk_id]).first
   end
-
 
 end

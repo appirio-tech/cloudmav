@@ -6,7 +6,6 @@ Feature: LinkedIn
 
   Background:
     Given I am logged in
-    And there are guidances
 
   Scenario: Delete LinkedIn
 
@@ -15,4 +14,3 @@ Feature: LinkedIn
     When I delete my LinkedIn profile
     Then I should not have a LinkedIn profile
     And I should not have any jobs
-    And I should not have any job events

@@ -1,18 +1,18 @@
 module ApplicationHelper
-  
+
   def flashy
     f_names = [:notice, :error, :warning, :message, :success, :alert]
     fl = ''
 
     for name in f_names
       if flash[name]
-        fl = fl + "<div class=\"flash #{name}\">#{flash[name]}</div>"
+        fl = fl + "<div class=\"alert-message #{name}\">#{flash[name]}</div>"
       end
       flash[name] = nil;
     end
     return fl.html_safe
   end
-
+  
   def js_date(date)
     return escape_javascript "new Date()" if date.nil?
     escape_javascript "new Date(#{date.year}, #{date.month - 1}, #{date.day})"
@@ -28,15 +28,5 @@ module ApplicationHelper
     result = ((points / 1000) * 10).round.to_f / 10
     "#{result} k"
   end
-
-  def video_html(video_url)
-    return if video_url.blank?
-    embedly_api = Embedly::API.new 
-    result = embedly_api.oembed :url => video_url
-    return unless result.first
-    unless result.first.html.nil?
-      return result.first.html.html_safe 
-    end
-  end
-
+  
 end

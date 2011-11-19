@@ -6,6 +6,7 @@ class Tagging
   field :score, :type => Float, :default => 0.0
   
   belongs_to :tag
+  belongs_to :taggable, :polymorphic => true
 
   def to_s
     tag.to_s

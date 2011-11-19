@@ -2,7 +2,7 @@ Feature: Registration
 
 	As a visitor
 	I want to register with this site
-	So that I can use codemav
+	So that I can use CodeMav
 		
 	Scenario: Register new user
 	
@@ -12,7 +12,7 @@ Feature: Registration
 		Then I should be registered
 		And I should have a profile
 		And my profile email should be my user email
-    And I should be redirected to the autodiscover page
+    And I should be redirected to edit my profile
 
   Scenario: Register from homepage
 

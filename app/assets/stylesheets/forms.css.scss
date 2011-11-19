@@ -1,0 +1,150 @@
+@import "colors.scss";
+@import "mixins.scss";
+
+// Modular Scale from modularscale.com using 16px as text size no important number
+// Pixels	Ems	% of 13
+// 751.538	46.971	5,781.062
+// 464.486	29.03	3,572.969
+// 287.074	17.942	2,208.262
+// 177.425	11.089	1,364.808
+// 109.657	6.854	843.515
+// 67.773	4.236	521.331
+// 41.887	2.618	322.208
+// 25.888	1.618	199.138
+// 16	1	123.077
+// 9.889	0.618	76.069
+// 6.112	0.382	47.015
+// 3.778	0.236	29.062
+// 2.335	0.146	17.962
+// 1.443	0.09	11.100
+
+$form-padding: ms(-2);
+$form-border: 1px solid $font-de-emphasis;
+$form-focus-border: 1px solid $codemav-blue;
+$form-font-weight: bold;
+
+@mixin form_defaults {
+	@include corners(3px);
+	padding: $form-padding;
+	font-weight: $form-font-weight;
+	color: $font-black;
+	border: $form-border;
+	font-size: ms(0);
+	margin-left: ms(-3);
+	margin-bottom: ms(-3);	
+}
+
+.form_defaults {
+	@include corners(3px);
+	padding: $form-padding;
+	font-weight: $form-font-weight;
+	color: $font-black;
+	border: $form-border;
+	font-size: ms(0);
+	margin-bottom: ms(-3);
+}
+.form_focus_defaults {
+	border: $form-focus-border;
+}
+
+.button {
+	color: $form-button-font-color;
+	&:hover {
+		color: $form-button-hover-font-color;
+	}
+}
+
+form {
+  label {
+  }
+	input {
+		@extend .form_defaults;
+		&:focus {
+			@extend .form_focus_defaults;
+		}
+	}
+  select {
+    @extend .form_defaults;
+		height: ms(1) + 8px;
+		width: ms(6);
+  }	
+	
+  // 1. font-size: 16px;
+  // 2. padding: 4px;
+  // 3. width: 200px;
+
+  // input {
+  //   font-size:$form_font_size;
+  //   margin-top:$form_top_margin;
+  //   border: 1px solid $gray;
+  //   padding: 4px;
+  //   &:focus {
+  //     border: 1px solid $light_blue;
+  //   }
+  // }
+  //input[type=submit] {
+  //  @include corners(3px);
+  //  @include gradient($gray_gradient2, $gray_gradient1);
+  //  border: 1px solid $gray_foreground;
+  //  color: $gray_text;
+  //  padding: 7px;
+  //  font-size: $form_font_size + 1pt;
+  //  cursor: pointer;
+  //  &:hover {
+  //    @include gradient($dark_gradient1, $dark_gradient2);
+  //    color: $off_white;
+  //    border: 1px solid $blue;
+  //  }
+  //}
+
+  // textarea {
+  //   font-size:$form_font_size;
+  //   margin-top:$form_top_margin;
+  //   height: 100px;
+  //   border: 1px solid $gray;
+  //   padding: 4px;
+  //   &:focus {
+  //     border: 1px solid $light_blue;
+  //   }
+  // }
+}
+
+
+
+
+
+
+// 
+// form.formtastic {
+//   fieldset > ol > li {
+//     margin-top: 0px;
+//     margin-bottom: 0px;
+//     padding-bottom: 5px;;
+//   }
+//   fieldset > ol > li label {
+//     color:$black;
+//     text-align: right;
+//     width: 100px;
+//     padding-right: 10px;
+//     margin-top: 5px;
+//   }
+//   fieldset > ol > li.string input, fieldset > ol > li.password input, fieldset > ol > li textarea {
+//     border: 1px solid #000;
+//     padding: 4px;
+//     width: 60%;
+//     &:focus {
+//       border: 1px solid $light_blue;
+//     }
+//   }
+//   fieldset.buttons {
+//     padding-left: 100px;
+//   }
+// }
+// 
+// form.formtastic input.button, form.formtastic.button.button {
+//   padding: 0.2em 1em 0.2em 1.1em;
+//   font-family: sans-serif;
+//   height: 30px;
+//   margin-left: 10px;
+//   margin-top: 7px;
+// }

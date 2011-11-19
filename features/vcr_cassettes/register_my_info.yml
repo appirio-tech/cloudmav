@@ -1,488 +1,298 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://github.com:80/api/v2/json/user/search/username149
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Wed, 14 Sep 2011 18:47:09 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - keep-alive
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '60'
+      etag:
+      - ! '"2f57500e88a8d72c65d2d953404fd06c"'
+      x-frame-options:
+      - deny
+      x-ratelimit-remaining:
+      - '59'
+      x-runtime:
+      - 39ms
+      content-length:
+      - '12'
+      cache-control:
+      - private, max-age=0, must-revalidate
+    body: ! '{"users":[]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.bitbucket.org:443/1.0/users/username149
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 404
+      message: NOT FOUND
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Wed, 14 Sep 2011 18:47:10 GMT
+      content-type:
+      - text/plain
+      content-length:
+      - '9'
+      expires:
+      - Wed, 14 Sep 2011 18:47:10 GMT
+      vary:
+      - Authorization, Cookie
+      last-modified:
+      - Wed, 14 Sep 2011 18:47:10 GMT
+      etag:
+      - ! '"9d1ead73e678fa2f51a70a933b0bf017"'
+      cache-control:
+      - max-age=0
+    body: Not Found
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.bitbucket.org:443/1.0/users/username149
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 404
+      message: NOT FOUND
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Wed, 14 Sep 2011 18:47:10 GMT
+      content-type:
+      - text/plain
+      content-length:
+      - '9'
+      expires:
+      - Wed, 14 Sep 2011 18:47:10 GMT
+      vary:
+      - Authorization, Cookie
+      last-modified:
+      - Wed, 14 Sep 2011 18:47:10 GMT
+      etag:
+      - ! '"9d1ead73e678fa2f51a70a933b0bf017"'
+      cache-control:
+      - max-age=0
+    body: Not Found
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://github.com:80/api/v2/json/user/search/username1
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      server: 
+    headers:
+      server:
       - nginx/1.0.4
-      date: 
-      - Fri, 26 Aug 2011 02:47:06 GMT
-      content-type: 
+      date:
+      - Wed, 14 Sep 2011 18:48:23 GMT
+      content-type:
       - application/json; charset=utf-8
-      connection: 
+      connection:
       - keep-alive
-      status: 
+      status:
       - 200 OK
-      x-ratelimit-limit: 
-      - "60"
-      etag: 
-      - "\"d3c00f358f069f509f6597554ae0eadd\""
-      x-ratelimit-remaining: 
-      - "59"
-      x-runtime: 
-      - 72ms
-      content-length: 
-      - "393"
-      cache-control: 
-      - private, max-age=0, must-revalidate
-    body: "{\"users\":[{\"gravatar_id\":\"596c89fe1a582486e7c54c95d95297d5\",\"name\":\"\",\"created_at\":\"2011-04-17T01:01:47Z\",\"location\":\"\",\"public_repo_count\":0,\"followers\":0,\"username\":\"username1\",\"language\":\"\",\"fullname\":\"\",\"id\":\"user-734153\",\"repos\":0,\"type\":\"user\",\"followers_count\":0,\"pushed\":\"2011-08-19T10:15:36.701Z\",\"login\":\"username1\",\"score\":3.4479058,\"record\":null,\"created\":\"2011-04-17T01:01:47Z\"}]}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.bitbucket.org:443/1.0/users/username1
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 404
-      message: NOT FOUND
-    headers: 
-      server: 
-      - nginx/1.0.4
-      date: 
-      - Fri, 26 Aug 2011 02:47:07 GMT
-      content-type: 
-      - text/plain
-      content-length: 
-      - "9"
-      expires: 
-      - Fri, 26 Aug 2011 02:47:07 GMT
-      vary: 
-      - Authorization, Cookie
-      last-modified: 
-      - Fri, 26 Aug 2011 02:47:07 GMT
-      etag: 
-      - "\"9d1ead73e678fa2f51a70a933b0bf017\""
-      cache-control: 
-      - max-age=0
-    body: Not Found
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.bitbucket.org:443/1.0/users/username1
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 404
-      message: NOT FOUND
-    headers: 
-      server: 
-      - nginx/1.0.4
-      date: 
-      - Fri, 26 Aug 2011 02:47:08 GMT
-      content-type: 
-      - text/plain
-      content-length: 
-      - "9"
-      expires: 
-      - Fri, 26 Aug 2011 02:47:08 GMT
-      vary: 
-      - Authorization, Cookie
-      last-modified: 
-      - Fri, 26 Aug 2011 02:47:08 GMT
-      etag: 
-      - "\"9d1ead73e678fa2f51a70a933b0bf017\""
-      cache-control: 
-      - max-age=0
-    body: Not Found
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://github.com:80/api/v2/json/user/search/username154
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      server: 
-      - nginx/1.0.4
-      date: 
-      - Fri, 26 Aug 2011 02:49:10 GMT
-      content-type: 
-      - application/json; charset=utf-8
-      connection: 
-      - keep-alive
-      status: 
-      - 200 OK
-      x-ratelimit-limit: 
-      - "60"
-      etag: 
-      - "\"2f57500e88a8d72c65d2d953404fd06c\""
-      x-ratelimit-remaining: 
-      - "59"
-      x-runtime: 
-      - 61ms
-      content-length: 
-      - "12"
-      cache-control: 
-      - private, max-age=0, must-revalidate
-    body: "{\"users\":[]}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.bitbucket.org:443/1.0/users/username154
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 404
-      message: NOT FOUND
-    headers: 
-      server: 
-      - nginx/1.0.4
-      date: 
-      - Fri, 26 Aug 2011 02:49:10 GMT
-      content-type: 
-      - text/plain
-      content-length: 
-      - "9"
-      expires: 
-      - Fri, 26 Aug 2011 02:49:10 GMT
-      vary: 
-      - Authorization, Cookie
-      last-modified: 
-      - Fri, 26 Aug 2011 02:49:10 GMT
-      etag: 
-      - "\"9d1ead73e678fa2f51a70a933b0bf017\""
-      cache-control: 
-      - max-age=0
-    body: Not Found
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.bitbucket.org:443/1.0/users/username154
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 404
-      message: NOT FOUND
-    headers: 
-      server: 
-      - nginx/1.0.4
-      date: 
-      - Fri, 26 Aug 2011 02:49:11 GMT
-      content-type: 
-      - text/plain
-      content-length: 
-      - "9"
-      expires: 
-      - Fri, 26 Aug 2011 02:49:11 GMT
-      vary: 
-      - Authorization, Cookie
-      last-modified: 
-      - Fri, 26 Aug 2011 02:49:11 GMT
-      etag: 
-      - "\"9d1ead73e678fa2f51a70a933b0bf017\""
-      cache-control: 
-      - max-age=0
-    body: Not Found
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://github.com:80/api/v2/json/user/search/username148
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      server: 
-      - nginx/1.0.4
-      date: 
-      - Fri, 26 Aug 2011 04:42:10 GMT
-      content-type: 
-      - application/json; charset=utf-8
-      connection: 
-      - keep-alive
-      status: 
-      - 200 OK
-      x-ratelimit-limit: 
-      - "60"
-      etag: 
-      - "\"2f57500e88a8d72c65d2d953404fd06c\""
-      x-ratelimit-remaining: 
-      - "59"
-      x-runtime: 
-      - 287ms
-      content-length: 
-      - "12"
-      cache-control: 
-      - private, max-age=0, must-revalidate
-    body: "{\"users\":[]}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.bitbucket.org:443/1.0/users/username148
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 404
-      message: NOT FOUND
-    headers: 
-      server: 
-      - nginx/1.0.4
-      date: 
-      - Fri, 26 Aug 2011 04:42:12 GMT
-      content-type: 
-      - text/plain
-      content-length: 
-      - "9"
-      expires: 
-      - Fri, 26 Aug 2011 04:42:12 GMT
-      vary: 
-      - Authorization, Cookie
-      last-modified: 
-      - Fri, 26 Aug 2011 04:42:12 GMT
-      etag: 
-      - "\"9d1ead73e678fa2f51a70a933b0bf017\""
-      cache-control: 
-      - max-age=0
-    body: Not Found
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.bitbucket.org:443/1.0/users/username148
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 404
-      message: NOT FOUND
-    headers: 
-      server: 
-      - nginx/1.0.4
-      date: 
-      - Fri, 26 Aug 2011 04:42:12 GMT
-      content-type: 
-      - text/plain
-      content-length: 
-      - "9"
-      expires: 
-      - Fri, 26 Aug 2011 04:42:12 GMT
-      vary: 
-      - Authorization, Cookie
-      last-modified: 
-      - Fri, 26 Aug 2011 04:42:12 GMT
-      etag: 
-      - "\"9d1ead73e678fa2f51a70a933b0bf017\""
-      cache-control: 
-      - max-age=0
-    body: Not Found
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://github.com:80/api/v2/json/user/search/username157
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      server: 
-      - nginx/1.0.4
-      date: 
-      - Thu, 08 Sep 2011 15:50:32 GMT
-      content-type: 
-      - application/json; charset=utf-8
-      connection: 
-      - keep-alive
-      status: 
-      - 200 OK
-      x-ratelimit-limit: 
-      - "60"
-      etag: 
-      - "\"2f57500e88a8d72c65d2d953404fd06c\""
-      x-ratelimit-remaining: 
-      - "59"
-      x-runtime: 
-      - 98ms
-      content-length: 
-      - "12"
-      cache-control: 
-      - private, max-age=0, must-revalidate
-    body: "{\"users\":[]}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.bitbucket.org:443/1.0/users/username157
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 404
-      message: NOT FOUND
-    headers: 
-      server: 
-      - nginx/1.0.4
-      date: 
-      - Thu, 08 Sep 2011 15:50:33 GMT
-      content-type: 
-      - text/plain
-      content-length: 
-      - "9"
-      expires: 
-      - Thu, 08 Sep 2011 15:50:33 GMT
-      vary: 
-      - Authorization, Cookie
-      last-modified: 
-      - Thu, 08 Sep 2011 15:50:33 GMT
-      etag: 
-      - "\"9d1ead73e678fa2f51a70a933b0bf017\""
-      cache-control: 
-      - max-age=0
-    body: Not Found
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: https://api.bitbucket.org:443/1.0/users/username157
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 404
-      message: NOT FOUND
-    headers: 
-      server: 
-      - nginx/1.0.4
-      date: 
-      - Thu, 08 Sep 2011 15:50:33 GMT
-      content-type: 
-      - text/plain
-      content-length: 
-      - "9"
-      expires: 
-      - Thu, 08 Sep 2011 15:50:33 GMT
-      vary: 
-      - Authorization, Cookie
-      last-modified: 
-      - Thu, 08 Sep 2011 15:50:33 GMT
-      etag: 
-      - "\"9d1ead73e678fa2f51a70a933b0bf017\""
-      cache-control: 
-      - max-age=0
-    body: Not Found
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://github.com:80/api/v2/json/user/search/username143
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      server: 
-      - nginx/1.0.4
-      date: 
-      - Sat, 10 Sep 2011 15:28:32 GMT
-      content-type: 
-      - application/json; charset=utf-8
-      connection: 
-      - keep-alive
-      status: 
-      - 200 OK
-      x-ratelimit-limit: 
-      - "60"
-      etag: 
-      - "\"2f57500e88a8d72c65d2d953404fd06c\""
-      x-frame-options: 
+      x-ratelimit-limit:
+      - '60'
+      etag:
+      - ! '"8181caf1d8782190ec1062a9a3514f69"'
+      x-frame-options:
       - deny
-      x-ratelimit-remaining: 
-      - "59"
-      x-runtime: 
-      - 44ms
-      content-length: 
-      - "12"
-      cache-control: 
+      x-ratelimit-remaining:
+      - '59'
+      x-runtime:
+      - 94ms
+      content-length:
+      - '393'
+      cache-control:
       - private, max-age=0, must-revalidate
-    body: "{\"users\":[]}"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+    body: ! '{"users":[{"gravatar_id":"596c89fe1a582486e7c54c95d95297d5","name":"","created_at":"2011-04-17T01:01:47Z","location":"","public_repo_count":0,"followers":0,"username":"username1","language":"","fullname":"","id":"user-734153","repos":0,"type":"user","followers_count":0,"pushed":"2011-08-19T10:15:36.701Z","login":"username1","score":3.4488678,"record":null,"created":"2011-04-17T01:01:47Z"}]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
-    uri: https://api.bitbucket.org:443/1.0/users/username143
+    uri: https://api.bitbucket.org:443/1.0/users/username1
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 404
       message: NOT FOUND
-    headers: 
-      server: 
+    headers:
+      server:
       - nginx/1.0.4
-      date: 
-      - Sat, 10 Sep 2011 15:28:33 GMT
-      content-type: 
+      date:
+      - Wed, 14 Sep 2011 18:48:24 GMT
+      content-type:
       - text/plain
-      content-length: 
-      - "9"
-      expires: 
-      - Sat, 10 Sep 2011 15:28:33 GMT
-      vary: 
+      content-length:
+      - '9'
+      expires:
+      - Wed, 14 Sep 2011 18:48:24 GMT
+      vary:
       - Authorization, Cookie
-      last-modified: 
-      - Sat, 10 Sep 2011 15:28:33 GMT
-      etag: 
-      - "\"9d1ead73e678fa2f51a70a933b0bf017\""
-      cache-control: 
+      last-modified:
+      - Wed, 14 Sep 2011 18:48:24 GMT
+      etag:
+      - ! '"9d1ead73e678fa2f51a70a933b0bf017"'
+      cache-control:
       - max-age=0
     body: Not Found
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
-    uri: https://api.bitbucket.org:443/1.0/users/username143
+    uri: https://api.bitbucket.org:443/1.0/users/username1
     body: 
     headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 404
       message: NOT FOUND
-    headers: 
-      server: 
+    headers:
+      server:
       - nginx/1.0.4
-      date: 
-      - Sat, 10 Sep 2011 15:28:34 GMT
-      content-type: 
+      date:
+      - Wed, 14 Sep 2011 18:48:24 GMT
+      content-type:
       - text/plain
-      content-length: 
-      - "9"
-      expires: 
-      - Sat, 10 Sep 2011 15:28:34 GMT
-      vary: 
+      content-length:
+      - '9'
+      expires:
+      - Wed, 14 Sep 2011 18:48:24 GMT
+      vary:
       - Authorization, Cookie
-      last-modified: 
-      - Sat, 10 Sep 2011 15:28:34 GMT
-      etag: 
-      - "\"9d1ead73e678fa2f51a70a933b0bf017\""
-      cache-control: 
+      last-modified:
+      - Wed, 14 Sep 2011 18:48:24 GMT
+      etag:
+      - ! '"9d1ead73e678fa2f51a70a933b0bf017"'
+      cache-control:
       - max-age=0
     body: Not Found
-    http_version: "1.1"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://github.com:80/api/v2/json/user/search/username156
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Sat, 24 Sep 2011 04:40:44 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - keep-alive
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '60'
+      etag:
+      - ! '"2f57500e88a8d72c65d2d953404fd06c"'
+      x-frame-options:
+      - deny
+      x-ratelimit-remaining:
+      - '59'
+      x-runtime:
+      - 72ms
+      content-length:
+      - '12'
+      cache-control:
+      - private, max-age=0, must-revalidate
+    body: ! '{"users":[]}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.bitbucket.org:443/1.0/users/username156
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 404
+      message: NOT FOUND
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Sat, 24 Sep 2011 04:40:45 GMT
+      content-type:
+      - text/plain
+      content-length:
+      - '9'
+      expires:
+      - Sat, 24 Sep 2011 04:40:45 GMT
+      vary:
+      - Authorization, Cookie
+      last-modified:
+      - Sat, 24 Sep 2011 04:40:45 GMT
+      etag:
+      - ! '"9d1ead73e678fa2f51a70a933b0bf017"'
+      cache-control:
+      - max-age=0
+    body: Not Found
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.bitbucket.org:443/1.0/users/username156
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 404
+      message: NOT FOUND
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Sat, 24 Sep 2011 04:40:46 GMT
+      content-type:
+      - text/plain
+      content-length:
+      - '9'
+      expires:
+      - Sat, 24 Sep 2011 04:40:46 GMT
+      vary:
+      - Authorization, Cookie
+      last-modified:
+      - Sat, 24 Sep 2011 04:40:46 GMT
+      etag:
+      - ! '"9d1ead73e678fa2f51a70a933b0bf017"'
+      cache-control:
+      - max-age=0
+    body: Not Found
+    http_version: '1.1'

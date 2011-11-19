@@ -1,8 +1,10 @@
 When /^I sync my Twitter account$/ do
   VCR.use_cassette("twitter", :record => :new_episodes) do
-    visit new_profile_twitter_profile_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "twitter_profile_username", :with => 'rookieone'
-    click_button "Save"
+    within("#sync_twitter") do
+      click_button "Sync"
+    end
   end
 end
 
@@ -32,9 +34,11 @@ end
 
 When /^I edit my Twitter profile$/ do
   VCR.use_cassette("twitter_update", :record => :new_episodes) do
-    visit edit_profile_twitter_profile_path(@profile, @twitter_profile)
+    visit edit_profile_path(@profile, @twitter_profile)
     fill_in "twitter_profile_username", :with => "rookieone"
-    click_button "Save"
+    within("#sync_twitter") do
+      click_button "Sync"
+    end
   end
 end
 
@@ -43,8 +47,8 @@ Then /^my Twitter profile should be updated$/ do
   @twitter_profile.username.should == "rookieone"
 end
 
-When /^I view their social profile$/ do
-  visit profile_social_path(@other_user.profile)
+Then /^I should see their Twitter profile$/ do
+  And %Q{I should see "Go to my Twitter page"}
 end
 
 Then /^I should not see their Twitter profile$/ do
@@ -58,7 +62,14 @@ Given /^the other user has a Twitter profile$/ do
   end
 end
 
-Then /^I should see their Twitter profile$/ do
-  And %Q{I should see "Go to my Twitter page"}
+When /^I delete my Twitter profile$/ do
+  visit edit_profile_path(@profile)
+  profile = Profile.find(@profile.id)
+  click_link "delete_twitter"
+end
+
+Then /^I should not have a Twitter profile$/ do
+  @profile.reload
+  @profile.twitter_profile.should be_nil
 end
 

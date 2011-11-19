@@ -1,18 +1,18 @@
-#profile_badges
-  %h3 Badges
+%section#profile_badges
+  %h2 Badges
 
   - if @profile.badges.empty?
     No badges yet
   - else
-    %ul#badges
+    %ul.media-grid#badges
       - @profile.badges.each do |b|
         %li.badge{:title => b.name}
           = image_tag "silver_badge.png"
+    .clear
 .clear
 
 :javascript
   $(function(){
-    $('.badge').tooltip();
-    //$('.badge').tinyTips('title');
+    $('.badge').popover({ placement: 'above', offset: 35 });
   });
 

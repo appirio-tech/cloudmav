@@ -26,4 +26,12 @@ describe User do
       @user.should be_valid
     end
   end
+  
+  describe "username must be unique" do
+    before(:each) do
+      Factory.create(:user, :username => "someusername")
+      @user = Factory.build(:user, :username => "someusername")
+    end
+    it { @user.should_not be_valid }
+  end
 end

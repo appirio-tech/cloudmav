@@ -1,0 +1,51 @@
+@import "colors";
+@import "mixins";
+
+.profile_search_results {
+  margin-bottom: 10px;
+  img.profile_pic {
+    background: #fff;
+    padding: 3px;
+    border: 1px solid $gray_background;
+  }
+  .profile_info {
+    .profile_name {
+      font-size: 16pt;
+    }
+    .profile_username {
+      font-size: 10pt;
+      margin-top: 5px;
+    }
+  }
+
+  .points_and_tags {
+     .points {
+       margin-bottom: 6px;
+       li {
+         @include corners;
+         background: $gray_background;
+         color: $gray_foreground;
+         float: left;
+         text-align:center;
+         padding: 5px;
+         margin-right: 5px;
+         margin-top: 3px;
+         .image {
+           float: left;
+         }
+         .points {
+           font-weight:bold;
+           font-size: 13pt;
+           text-align:center;
+         }
+         .description {
+           font-size: 10pt;
+         }
+       }
+       .selected {
+         background: $dark_background;
+         color: $dark_foreground;
+       }
+     }
+    }
+}

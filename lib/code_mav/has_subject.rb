@@ -1,5 +1,4 @@
 module CodeMav
-
   module HasSubject
     def self.included(receiver)
       receiver.class_eval do
@@ -26,7 +25,5 @@ module CodeMav
       end
 
     end
-
   end
-
 end

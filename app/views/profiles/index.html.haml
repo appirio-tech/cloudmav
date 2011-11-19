@@ -1,24 +1,22 @@
-= content_for :css do
-  = stylesheet_link_tag "profile_search" 
+= content_for :title do
+  Profiles Search
 
-
-.grid_16
-  #people_search_form
+.row
+  .offset5.span8
     = form_tag search_profiles_path do |f|
-      = text_field_tag :search, "", :placeholder => "Search users"
-      = submit_tag "Search", :disable_with => "Searching..."
-.clear
+      = search_field_tag :search, "", :placeholder => "Search users", :class => "input-xlarge"
+      = submit_tag "Search", :disable_with => "Searching...", :class => "btn"
 
-.grid_16
-  - unless @profiles.nil?
-    - if @profiles.empty?
-      #no_results
-        Oh no! No one was found. But searching is free.. so knock yourself out.
-    - else
-      %ul.search_results
-        - @profiles.each do |p|
-          = render :partial => "profiles/search_result", :locals => { :profile => p }
-      = will_paginate @profiles
-          
-.clear
+.row
+  .span16
+    - unless @profiles.nil?
+      - if @profiles.empty?
+        .alert-message.block-message.info
+          Oh no! No one was found. But searching is free.. so knock yourself out.
+      - else
+        %ul.unstyled#search_results
+          - @profiles.each do |p|
+            = render :partial => "profiles/search_result", :locals => { :profile => p }
 
+        - if @profiles.respond_to? :current_page
+          = paginate @profiles

@@ -1,6 +1,5 @@
 class BitbucketProfile
   include Mongoid::Document
-  include CodeMav::Eventable
   include CodeMav::Taggable
   include CodeMav::Syncable
   
@@ -14,6 +13,9 @@ class BitbucketProfile
 
   def related_items
     [profile.coder_profile]
+  end
+  
+  def generate_tags
   end
 
 end

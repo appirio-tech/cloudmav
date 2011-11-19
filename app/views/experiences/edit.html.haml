@@ -1,0 +1,17 @@
+= content_for :title do
+  Edit your Experience Profile
+  
+#profile
+  = render :partial => "profiles/profile_side_bar"
+  .grid_13
+    %h1 Edit your Experience Profile
+    = link_to "Go back to your experience profile", profile_experience_path(@profile)
+
+
+    #syncables
+      %h2 Syncables
+      %ul
+        %li= render :partial => "linkedin_profiles/profile"
+      .clear
+
+.clear

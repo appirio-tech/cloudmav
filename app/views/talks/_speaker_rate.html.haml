@@ -19,5 +19,5 @@
       - else
         %p.rating= @talk.speaker_rating
       .rate_it_button
-        = link_to "Rate It", "http://#{@talk.speaker_rate_url}"
+        = link_to "Rate It", "http://#{@talk.speaker_rate_url}", :target => "_blank"
 

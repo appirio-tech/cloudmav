@@ -21,4 +21,3 @@ class StackOverflowAnswer
   end
 
 end
-

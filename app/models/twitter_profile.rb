@@ -1,7 +1,6 @@
 class TwitterProfile
   include Mongoid::Document
   include CodeMav::Taggable
-  include CodeMav::Eventable
   include CodeMav::Syncable
 
   field :username, :type => String
@@ -14,6 +13,9 @@ class TwitterProfile
 
   def related_items
     [profile.social_profile]
+  end
+  
+  def generate_tags
   end
   
 end

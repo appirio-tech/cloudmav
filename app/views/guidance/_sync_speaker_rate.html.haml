@@ -1,8 +1,0 @@
-%p
-  Let others know about your rating on SpeakerRate.
-  %a{:class => "module_link", :rel => "#learn_sync_speaker_rate"} Sync SpeakerRate 
-
-#learn_sync_speaker_rate.overlay
-  - @profile = current_profile
-  - @speaker_rate_profile = SpeakerRateProfile.new
-  = render :partial => "speaker_rate_profiles/form"

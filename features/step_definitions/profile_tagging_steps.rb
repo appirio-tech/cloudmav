@@ -34,4 +34,5 @@ Given /^I have a job tagged with "([^"]*)"$/ do |tag|
   job.tags_text = tag
   job.save
   job.retag!
+  @profile.reload
 end

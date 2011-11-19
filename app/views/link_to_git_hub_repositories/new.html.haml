@@ -1,0 +1,12 @@
+= content_for :title do
+  Link a Talk to Git Hub Repository
+
+.grid_16
+  %h1 Link a Talk to Git Hub Repository
+  = form_tag(:controller => "link_to_git_hub_repositories", :action => "create", :method => "put") do
+    = hidden_field_tag :profile_id, @profile.username
+    = hidden_field_tag :talk_id, @talk.id
+    = select_tag "git_hub_repository_id", options_for_select(@git_hub_repositories)
+    = big_primary_button_submit_tag "Link"
+
+.clear

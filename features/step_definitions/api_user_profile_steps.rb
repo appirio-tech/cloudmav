@@ -21,7 +21,7 @@ Given /^"([^"]*)" has a tag "([^"]*)" with a score of "([^"]*)"$/ do |username, 
   tagging = Tagging.new(:tag => t, :score => score)
   profile.taggings << tagging
   tagging.save
-  profile.save 
+  profile.save
 end
 
 Then /^the response should have the "([^"]*)" tag with a score of "([^"]*)"$/ do |tag, score|

@@ -11,7 +11,7 @@ class BitbucketProfilesController < LoggedInController
     @bitbucket_profile.profile = @profile
     @bitbucket_profile.sync!
     
-    redirect_to profile_code_path(@profile)
+    redirect_to edit_profile_path(@profile)
   end
 
   def edit
@@ -24,7 +24,7 @@ class BitbucketProfilesController < LoggedInController
     @bitbucket_profile = BitbucketProfile.find(params[:id])
     if @bitbucket_profile.update_attributes(params[:bitbucket_profile])
       @bitbucket_profile.resync!
-      redirect_to profile_code_path(@profile)
+      redirect_to edit_profile_path(@profile)
     else
       render :edit
     end
@@ -34,7 +34,7 @@ class BitbucketProfilesController < LoggedInController
     authorize! :sync_profile, @profile
     @bitbucket_profile = BitbucketProfile.find(params[:id])
     @bitbucket_profile.unsync!
-    redirect_to profile_code_path(@profile)
+    redirect_to edit_profile_path(@profile)
   end
 
 end

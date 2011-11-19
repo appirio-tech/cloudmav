@@ -1,0 +1,18 @@
+= content_for :title do
+  Edit your Code Profile
+  
+#profile
+  = render :partial => "profiles/profile_side_bar"
+  .grid_13
+    %h1 Edit your Code Profile
+    = link_to "Go back to your code profile", profile_code_path(@profile)
+
+    #syncables
+      %h2 Syncables
+      %ul
+        %li= render :partial => "git_hub_profiles/profile"
+        %li= render :partial => "bitbucket_profiles/profile"
+        %li= render :partial => "coder_wall_profiles/profile"
+      .clear
+
+.clear

@@ -30,7 +30,7 @@ end
 Then /^I should be redirected to the autodiscover page$/ do
   user = User.where(:email => @user.email).first
   current_path = URI.parse(current_url).path
-  current_path.should == profile_autodiscovers_path(user.profile)
+  current_path.should == new_profile_autodiscover_path(user.profile)
 end
 
 When /^I register from the home page$/ do
@@ -40,7 +40,9 @@ When /^I register from the home page$/ do
   fill_in "user_email", :with => @user.email
   fill_in "user_password", :with => @user.password
   VCR.use_cassette("register_homepage", :record => :new_episodes) do
-    click_button "Register"
+    within ".register" do
+      click_button "Register"
+    end
   end
 end
 
@@ -60,3 +62,6 @@ Then /^I should not be registered$/ do
   user.should be_nil
 end
 
+Then /^I should be redirected to edit my profile$/ do
+  And %Q{I should see "Edit Profile"}
+end

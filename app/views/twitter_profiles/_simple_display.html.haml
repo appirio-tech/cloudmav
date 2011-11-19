@@ -1,0 +1,4 @@
+- if @profile.twitter_profile
+  %tr
+    %td= image_tag "syncable/twitter_logo.png"
+    %td= link_to @profile.twitter_profile.username, @profile.twitter_profile.url, :target => "_blank"

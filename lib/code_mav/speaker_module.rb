@@ -6,6 +6,7 @@ module CodeMav
         has_one :speaker_profile
         has_one :speaker_rate_profile
         has_one :slide_share_profile
+        has_many :speaker_bios
 
         before_create :create_speaker_profile
       end

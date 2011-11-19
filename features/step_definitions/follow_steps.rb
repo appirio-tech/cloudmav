@@ -11,7 +11,13 @@ end
 
 Then /^"([^"]*)" should have me as a follower$/ do |username|
   profile = Profile.by_username(username).first
-  profile.follower?(@profile).should == true 
+  profile.follower?(@profile).should == true
+end
+
+Then /^there should not be a duplicate following of "([^"]*)"$/ do |username|
+  profile = Profile.find(@profile.id)
+  followee = Profile.by_username(username).first
+  profile.followings.where(:subject_id => followee.id).count.should == 1
 end
 
 Given /^user "([^"]*)" is following me$/ do |username|
@@ -27,6 +33,7 @@ end
 
 Then /^I should see "([^"]*)" on my social page$/ do |username|
   visit profile_social_path(@profile)
+  And %Q{I should see "#{username}"}
 end
 
 When /^I unfollow "([^"]*)" from their profile page$/ do |username|
@@ -40,9 +47,3 @@ Then /^I should not be following "([^"]*)"$/ do |username|
   profile.follows?(followee).should == false
 end
 
-Then /^there should not be a duplicate following of "([^"]*)"$/ do |username|
-  profile = Profile.find(@profile.id)
-  followee = Profile.by_username(username).first
-  profile.followings.where(:subject_id => followee.id).count.should == 1
-end
- 

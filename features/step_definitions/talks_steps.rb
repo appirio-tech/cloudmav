@@ -11,14 +11,6 @@ Then /^the talk should be added$/ do
   profile.talks.select{ |t| t.title == @talk.title }.first.should_not be_nil
 end
 
-Given /^I have a talk$/ do
-  @talk = Factory.create(:talk, :profile => @profile)
-  # profile = User.find(@user.id).profile
-  #   profile.talks << @talk
-  #   @talk.save
-  #   profile.save
-end
-
 When /^I edit the talk$/ do
   visit edit_profile_talk_path(@profile, @talk)
   fill_in "talk_title", :with => "Updated Talk"
@@ -30,7 +22,14 @@ Then /^the talk should be updated$/ do
   talk.title.should == "Updated Talk"
 end
 
-Then /^I should have just "([^"]*)"$/ do |name|
-  profile = Profile.find(@profile.id)
-  profile.activities.where(:name => name).first.should_not be_nil
+When /^I add links to a talk$/ do
+  visit edit_profile_talk_path(@profile, @talk)
+  fill_in "talk_links_block", :with => "www.github.com"
+  click_button "Save"
+end
+
+Then /^the talk should have links$/ do
+  @talk.reload
+  @talk.links.count.should == 1
+  @talk.links[0].should == "http://www.github.com"
 end

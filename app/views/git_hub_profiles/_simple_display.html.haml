@@ -1,0 +1,4 @@
+- if @profile.git_hub_profile
+  %tr
+    %td= image_tag "syncable/git_hub_logo.png"
+    %td= link_to @profile.git_hub_profile.username, @profile.git_hub_profile.url, :target => "_blank"

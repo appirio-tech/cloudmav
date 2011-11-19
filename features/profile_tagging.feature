@@ -11,16 +11,16 @@ Feature: Profile Tagging
 		When my profile's tags are calculated
 		Then my profile should have a "C#" tag
 		
-	Scenario: Tagging from StackOverflow
-	
-		Given I have a profile
-		And I have a stackoverflow profile tagged with "WPF"
-		When my profile's tags are calculated
-		Then my profile should have a "WPF" tag
-		
-	Scenario: Tagging from Jobs
-	
-		Given I have a profile
-		And I have a job tagged with "Rails"
-		When my profile's tags are calculated
-		Then my profile should have a "Rails" tag
+  Scenario: Tagging from StackOverflow
+  
+    Given I have a profile
+    And I have a stackoverflow profile tagged with "WPF"
+    When my profile's tags are calculated
+    Then my profile should have a "WPF" tag
+    
+  Scenario: Tagging from Jobs
+  
+    Given I have a profile
+    And I have a job tagged with "Rails"
+    When my profile's tags are calculated
+    Then my profile should have a "Rails" tag

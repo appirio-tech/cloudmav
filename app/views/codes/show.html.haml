@@ -1,0 +1,64 @@
+= content_for :title do
+  #{@profile.display_name} - Code
+
+#profile
+  = render :partial => "profiles/header"
+  = render :partial => "profiles/profile_menu"
+
+  .span16
+    - if @coder_wall_profile
+      %section#coder_wall
+        %h2 
+          Coderwall Badges
+          %small= link_to "go to Coderwall", @coder_wall_profile.url, :target => "_blank"
+        %ul.coder_wall_badges.media-grid
+          - @coder_wall_profile.badges.each do |badge|
+            %li
+              = image_tag badge.badge, :alt => badge.name, :title => badge.name, :class=> "coderwall_badge"
+      :javascript
+        $(function(){
+          $('.coderwall_badge').popover({ placement: 'above', offset: 35 });
+        });              
+              
+    - if @git_hub_profile
+      %section#git_hub.code_details
+        %h2 
+          GitHub
+          %small= link_to "go to GitHub", @git_hub_profile.url, :target => "_blank"
+        %h3 Top Repositories
+        %table
+          - @git_hub_repositories.each do |repo|
+            %tr
+              %td
+                %h4= link_to repo.name, repo.url
+                .repo_description= repo.description
+              %td.language= repo.language
+              %td
+                .points
+                  .number= repo.forks
+                  .description forks
+              %td
+                .points
+                  .number= repo.watchers
+                  .description watchers                    
+              %td
+                .points
+                  .number= repo.total_score
+                  .description code
+              
+    - if @bitbucket_profile
+      %section#bitbucket.code_details
+        %h2 
+          Bitbucket
+          %small= link_to "go to Bitbucket", @bitbucket_profile.url, :target => "_blank"
+        %h3 Top Repositories
+        %table
+          - @bitbucket_repositories.each do |repo|
+            %tr
+              %td
+                .repo_name= link_to repo.name, repo.url
+                .repo_description= repo.description
+              %td
+                .points
+                  .number= repo.followers_count
+                  .description followers

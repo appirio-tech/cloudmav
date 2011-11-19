@@ -1,5 +1,4 @@
-class StackOverflowProfilesController < ApplicationController
-  before_filter :set_profile
+class StackOverflowProfilesController < LoggedInController
   
   def new
     authorize! :sync_profile, @profile
@@ -12,7 +11,7 @@ class StackOverflowProfilesController < ApplicationController
     @stack_overflow_profile.profile = @profile
     @stack_overflow_profile.sync!
         
-    redirect_to profile_code_path(@profile)
+    redirect_to edit_profile_path(@profile)
   end
 
   def edit
@@ -25,7 +24,7 @@ class StackOverflowProfilesController < ApplicationController
     
     if @profile.stack_overflow_profile.update_attributes(params[:stack_overflow_profile])
       @profile.stack_overflow_profile.resync!
-      redirect_to profile_code_path(@profile)
+      redirect_to edit_profile_path(@profile)
     else
       render :edit
     end
@@ -35,7 +34,7 @@ class StackOverflowProfilesController < ApplicationController
     authorize! :sync_profile, @profile
     @stack_overflow_profile = StackOverflowProfile.find(params[:id])
     @stack_overflow_profile.unsync!
-    redirect_to profile_code_path(@profile)
+    redirect_to edit_profile_path(@profile)
   end
 
 end

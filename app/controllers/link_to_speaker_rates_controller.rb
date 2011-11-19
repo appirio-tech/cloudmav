@@ -11,7 +11,6 @@ class LinkToSpeakerRatesController < LoggedInController
     @speaker_rate_talk = Talk.find(params[:speaker_rate_talk][:talk_id])
     @talk.copy_speaker_rate_info_from(@speaker_rate_talk)
     @talk.save
-    TalkEvent.for_talk(@speaker_rate_talk).destroy_all
     @speaker_rate_talk.destroy
     redirect_to [@profile, @talk]
   end
@@ -19,8 +18,7 @@ class LinkToSpeakerRatesController < LoggedInController
   def refresh
     authorize! :sync_profile, @profile
 
-    event = SpeakerRateProfileSyncEvent.new(:speaker_rate_profile => @profile.speaker_rate_profile, :profile => @profile)
-    event.sync
+    SyncSpeakerRateProfileJob.perform(@profile.speaker_rate_profile.id)
     redirect_to new_profile_talk_link_to_speaker_rate_path(@profile, @talk)
   end
 

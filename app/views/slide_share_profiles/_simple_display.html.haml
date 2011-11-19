@@ -1,0 +1,4 @@
+- if @profile.slide_share_profile
+  %tr
+    %td= image_tag "syncable/slide_share_logo.png"
+    %td= link_to @profile.slide_share_profile.slide_share_username, @profile.slide_share_profile.url, :target => "_blank"

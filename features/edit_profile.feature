@@ -18,4 +18,3 @@ Feature: Edit Profile
 	
 		When I change my location
 		Then my location should be updated
-		

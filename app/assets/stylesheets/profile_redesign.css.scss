@@ -1,0 +1,216 @@
+@import "colors";
+@import "mixins";
+
+#profile_side_bar {
+	@include box-shadow(0px 5px 5px lighten($black, 10%));
+	border: 1px solid $dark_background;
+	#profile_menu {
+	  ul {
+	    @include gradient($dark_background, darken($dark_background, 2%));
+	  }
+	  li {
+		  padding-top: 10px;
+		  padding-bottom: 10px;
+		  border-top: 1px solid lighten($dark_background, 30%);
+			.points {
+				display: inline;
+				float: right;
+				font-weight: bold;
+				margin-right: 4px;
+				color: lighten($dark_background, 0%);
+				background: lighten($dark_background, 50%);
+        padding-left: 4px;
+        padding-right: 4px;
+        width: 26px;
+        text-align: right;
+        @include border-radius(4px);
+			}
+			.title {
+				display: inline;
+				margin-left: 10px;
+				font-weight: bold;
+			}
+		  a {
+		    color: lighten($dark_background, 70%);
+  			&:hover {
+  	    }
+	    }
+	  }
+	  .selected {	    
+	    @include gradient(lighten($codemav-blue, 10%), $codemav-blue);
+	    color: lighten($codemav-blue, 70%);
+	    .points {
+				color: lighten($codemav-blue, 0%);
+				background: lighten($codemav-blue, 50%);	      
+	    }
+	    a {
+	    }
+	  }
+	}
+}
+
+#profile {
+  h1 {
+    font-size: 32px;
+    margin-top: -12px;
+    margin-left: 86px;
+  }
+  h2 {
+    font-size: ms(1);
+    line-height: ms(1) * 1.2;
+    border-bottom: 1px solid lighten($black, 20%);
+    margin-bottom: ms(-1);
+  }
+  section {
+    margin-top: ms(1);
+    ul {
+      margin-top: ms(0);
+    }
+  }
+  ul#profile_actions {
+  }
+  .total_score {
+    @include box-shadow(0px 5px 5px lighten($black, 10%));
+    color: lighten($dark_background, 70%);
+    float: left; 
+    width: ms(3);
+    @include border-radius(4px);
+		background: $dark_background;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-right: 16px;
+    text-align: center;
+    font-size: ms(2);
+  }
+}
+
+#important_stats {
+  margin-top: ms(0);
+  table {
+    border-top: 1px solid $dark_background;
+    tr {
+      td {
+        padding-top: ms(-1);
+        padding-bottom: ms(-1);        
+        border-bottom: 1px solid $dark_background;
+      }
+      td.title {     
+      }
+      td.points {        
+        padding-left: ms(-1);
+        p {
+          @include border-radius(4px);
+          margin: 0px;    
+          padding: 6px;
+          font-weight: bold;
+          color: lighten($dark_background, 70%);
+    			background: $dark_background;
+	        text-align: right;
+        }  			
+      }
+    }
+  }
+  // @include gradient($dark_background, darken($dark_background, 2%));
+  
+  li {
+	  padding-top: 10px;
+	  padding-bottom: 10px;
+	  border-top: 1px solid lighten($dark_background, 30%);
+		.points {
+			display: inline;
+			float: right;
+
+		}
+		.title {
+
+		}
+	}
+}
+
+#skill_chart {
+  border: 1px solid $dark_background;
+  float: right;
+  width: 300px;
+  height: 150px;
+}
+
+#syncables {
+  margin-top: ms(1);
+  ul {
+    li {
+      padding: ms(-3);
+    }
+    .syncable_logo {
+      float: left;
+      margin-right: ms(-1);
+      width: 125px;
+    }
+    .syncable_info {
+      float: left;
+      margin-right: ms(-1);
+      width: ms(6);
+      span {
+        margin-right: ms(-2);
+      }      
+      a {
+        font-size: ms(1);
+      }      
+    }
+    .button-group {
+      margin-top: ms(-2);
+    }
+  }
+}
+
+.speaker_rate_rating {
+  font-size: ms(1);
+  font-weight: bold;
+}
+
+
+
+#talks {
+  margin-top: ms(1);
+  .actions {
+    float:right;
+    position: relative;
+    top: -32px;
+    left: -4px;
+  }
+  ul {    
+    li {
+      margin-top: ms(1);
+      .preview_pic {      
+        float: left;
+        margin-right: ms(-1);
+        border: 1px solid lighten($dark_background, 30%);
+        //@include box-shadow(0px 5px 5px lighten($black, 10%));
+      }
+      .talk_info {
+        position: relative;
+        top: -6px;
+        .talk_title {
+          font-weight: bold;
+          font-size: ms(1);
+
+        }
+        .talk_description {
+          color: lighten($black, 20%);
+          font-size: 12px;
+          width: 464px;
+          margin-left: 110px;
+        }
+      }
+    }
+  }
+}
+
+.coder_wall_badges {
+  margin-top: ms(0);
+  li {
+    display:inline;
+    img {
+      width: 82px;
+    }
+  }
+}

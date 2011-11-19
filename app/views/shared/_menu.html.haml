@@ -1,7 +1,6 @@
-#menu
-  = link_to "What's New", "http://codemav.tumblr.com/", :class => "menu_nav"
-  = link_to "Backlog", backlog_path, :class => "menu_nav"
-  = link_to "People", profiles_path, :class => "menu_nav"
-  = link_to "Talks", talk_search_path, :class => "menu_nav"
-  = link_to "Points", points_path, :class => "menu_nav"
+%ul.nav
+  %li= link_to "What's New", "http://codemav.tumblr.com/", :class => "menu_nav"
+  %li= link_to "People", profiles_path, :class => "menu_nav"
+  %li= link_to "Talks", talk_search_path, :class => "menu_nav"
+  %li= link_to "Points", points_path, :class => "menu_nav"
 

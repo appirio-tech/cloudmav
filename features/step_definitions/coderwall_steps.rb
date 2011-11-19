@@ -1,14 +1,16 @@
 When /^I sync my CoderWall account$/ do
   VCR.use_cassette("coder_wall", :record => :new_episodes) do
-    visit new_profile_coder_wall_profile_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "coder_wall_profile_username", :with => 'rookieone'
-    click_button "Save"
+    within("#sync_coder_wall") do
+      click_button "Sync"
+    end
   end
 end
 
 Then /^I should have a CoderWall profile$/ do
-  profile = User.find(@user.id).profile
-  profile.coder_wall_profile.should_not be_nil
+  @profile.reload
+  @profile.coder_wall_profile.should_not be_nil
 end
 
 Then /^I should have coder points for CoderWall$/ do
@@ -26,6 +28,10 @@ Then /^I should not see their CoderWall profile$/ do
   And %Q{I should not see "Go to my Coderwall Profile"}
 end
 
+Then /^I should see their CoderWall profile$/ do
+  And %Q{I should see "Go to my Coderwall Profile"}
+end
+
 Given /^the other user has a CoderWall profile$/ do
   VCR.use_cassette("other coderwall", :record => :all) do
     coder_wall = CoderWallProfile.new(:username => "rookieone")
@@ -34,10 +40,6 @@ Given /^the other user has a CoderWall profile$/ do
     coder_wall.save
     @other_user.profile.save
   end
-end
-
-Then /^I should see their CoderWall profile$/ do
-  And %Q{I should see "Go to my Coderwall Profile"}
 end
 
 Given /^I have a CoderWall profile$/ do
@@ -55,10 +57,10 @@ When /^I edit my CoderWall username$/ do
   VCR.use_cassette("edit coderwall", :record => :new_episodes) do
     profile = Profile.find(@profile.id)
     @old_badges = profile.coder_wall_profile.badges.to_a
-    visit profile_code_path(@profile)
+    visit edit_profile_path(@profile)
     fill_in "coder_wall_profile_username", :with => "subdigital"
-    with_scope("#sync_coder_wall") do
-      click_button "Save"
+    within("#sync_coder_wall") do
+      click_button "Sync"
     end
   end
 end
@@ -74,7 +76,7 @@ Then /^I should have my new CoderWall badges$/ do
 end
 
 When /^I delete my CoderWall profile$/ do
-  visit profile_code_path(@profile)
+  visit edit_profile_path(@profile)
   profile = Profile.find(@profile.id)
   click_link "delete_coder_wall"
 end
@@ -82,8 +84,3 @@ end
 Then /^I should not have a CoderWall profile$/ do
   Profile.find(@profile.id).coder_wall_profile.should be_nil
 end
-
-Then /^I should not have a CoderWall profile added event$/ do
-  CoderWallProfileAddedEvent.for_profile(@profile).count.should == 0
-end
-

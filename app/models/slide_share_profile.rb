@@ -1,7 +1,6 @@
 class SlideShareProfile
   include Mongoid::Document
   include Mongoid::Timestamps
-  include CodeMav::Eventable
   include CodeMav::Syncable
   
   field :slide_share_username

@@ -1,28 +1,26 @@
-.grid_16
-  %h1 Registration
+= content_for :title do
+  Registration
 
-  = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-    - if resource.errors.any?
-      #error_explanation
-        %h2 There were some problems with your registration...
-        %ul
-          - resource.errors.full_messages.each do |msg|
-            %li= msg
-
-    .label= f.label :username
-    .control= f.text_field :username
-              
-    .label= f.label :email
-    .control= f.text_field :email
-  
-    .label= f.label :password
-    .control= f.password_field :password
-  
-    .submit= f.submit "Register", :disable_with => "Registering..."
+= form_for @user, :url => registration_path("user"), :class => "form-stacked" do |f|
+  %fieldset
+    %legend Create an account
+    .clearfix
+      = f.label :username
+      .input
+        = f.text_field :username, :class => "xlarge"
+    .clearfix
+      = f.label :email
+      .input
+        = f.text_field :email, :class => "xlarge"        
+    .clearfix
+      = f.label :password
+      .input
+        = f.password_field :password, :class => "xlarge"
+  .actions
+    = f.submit "Register", :disable_with => "Registering...", :class => "btn primary"
 
   %br
   = render :partial => "devise/shared/links"
-.clear
 
 :javascript
   var changing_value = true;

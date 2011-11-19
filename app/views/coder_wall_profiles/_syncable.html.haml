@@ -1,0 +1,11 @@
+
+%li.row
+  .span3= link_to image_tag("syncable/coder_wall_logo.png"), "http://www.coderwall.com"
+  .span10
+    - @coder_wall_profile = @profile.coder_wall_profile || CoderWallProfile.new
+    #sync_coder_wall
+      = form_for [@profile, @coder_wall_profile] do |f|
+        = f.text_field :username, :class => "xlarge"
+        = big_positive_loop_button_tag "Sync", :class => "btn success"
+        - if @profile.coder_wall_profile
+          = link_to "Delete", [@profile, @coder_wall_profile], :id=> :delete_coder_wall, :confirm => 'Are you sure?', :method => :delete, :class => "btn danger"

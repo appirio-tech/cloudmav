@@ -1,0 +1,81 @@
+@import "colors.scss";
+
+$font-family: Helvetica, Arial;
+$font-size: 16px;
+$font-magic-number: 24px;
+$standard-margin-bottom: $font-magic-number;
+$standard-line-height: $font-size * 1.2;
+$base-size: 16px;
+$ratio: $golden;
+// Font size 16
+// Modular Scale from modularscale.com using 16px as text size no important number
+// Pixels	Ems	% of 13
+// 751.538	46.971	5,781.062
+// 464.486	29.03	3,572.969
+// 287.074	17.942	2,208.262
+// 177.425	11.089	1,364.808
+// 109.657	6.854	843.515
+// 67.773	4.236	521.331
+// 41.887	2.618	322.208
+// 25.888	1.618	199.138
+// 16	1	123.077
+// 9.889	0.618	76.069
+// 6.112	0.382	47.015
+// 3.778	0.236	29.062
+// 2.335	0.146	17.962
+// 1.443	0.09	11.100
+
+// Font size 12
+// Pixels Ems % of 13
+// 911.973  75.998  7,015.177
+// 563.642  46.97 4,335.708
+// 348.357  29.03 2,679.669
+// 215.301  17.942  1,656.162
+// 133.066  11.089  1,023.585
+// 82.241 6.853 632.623
+// 50.829 4.236 390.992
+// 31.415 2.618 241.654
+// 19.416 1.618 149.354
+// 12 1 92.308
+// 7.417  0.618 57.054
+// 4.584  0.382 35.262
+// 2.833  0.236 21.792
+// 1.751  0.146 13.469
+// 1.082  0.09  8.323
+
+html {
+  font-family: Helvetica, Arial, san-serif;
+  font-size: $font-size;
+	line-height: $standard-line-height;
+	color: $font-black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  //margin-bottom: $standard-margin-bottom;
+  font-weight: bold;
+}
+
+h1 {
+	font-size: ms(2);
+	line-height: ms(2) * 1.2;
+	margin-bottom: 16px;
+}
+
+h2 {
+	font-size: ms(1);
+	line-height: ms(1) * 1.2;	
+}
+
+h3, h4, h5, h6 {
+	font-size: $font-size;
+	line-height: $standard-line-height;
+}
+
+p {
+  margin-bottom: $standard-margin-bottom;
+}
+
+.bold {
+	font-weight: bold;
+}
+

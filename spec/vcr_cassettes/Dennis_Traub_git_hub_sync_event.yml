@@ -1,0 +1,79 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://github.com:80/api/v2/json/user/show/DennisTraub
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Fri, 28 Oct 2011 23:32:12 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - keep-alive
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '60'
+      etag:
+      - ! '"706b6730f0082e2d7e67f75313bdf5db"'
+      x-frame-options:
+      - deny
+      x-ratelimit-remaining:
+      - '59'
+      x-runtime:
+      - 12ms
+      content-length:
+      - '250'
+      cache-control:
+      - private, max-age=0, must-revalidate
+    body: ! '{"user":{"gravatar_id":"051b1efb73b74e2c4eb47c2dd6a36a3a","created_at":"2011/02/07
+      06:23:14 -0800","public_repo_count":2,"public_gist_count":1,"following_count":0,"id":604796,"type":"User","permission":null,"followers_count":0,"login":"DennisTraub"}}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://github.com:80/api/v2/json/repos/show/DennisTraub
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Fri, 28 Oct 2011 23:32:12 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - keep-alive
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '60'
+      etag:
+      - ! '"14d176ab898728b3cdef99ece7fab1cf"'
+      x-frame-options:
+      - deny
+      x-ratelimit-remaining:
+      - '58'
+      x-runtime:
+      - 16ms
+      content-length:
+      - '750'
+      cache-control:
+      - private, max-age=0, must-revalidate
+    body: ! '{"repositories":[{"description":"","forks":1,"open_issues":0,"has_issues":true,"url":"https://github.com/DennisTraub/CSharpKoans","has_downloads":true,"created_at":"2011/02/07
+      06:24:41 -0800","fork":false,"homepage":"","size":0,"private":false,"name":"CSharpKoans","owner":"DennisTraub","has_wiki":true,"watchers":1},{"description":"Ncqrs
+      Framework - The CQRS Framework for .NET","forks":0,"open_issues":0,"has_issues":false,"url":"https://github.com/DennisTraub/ncqrs","has_downloads":true,"created_at":"2011/10/19
+      08:28:46 -0700","pushed_at":"2011/10/12 05:06:09 -0700","fork":true,"homepage":"http://ncqrs.org","master_branch":"master","size":552,"private":false,"language":"C#","name":"ncqrs","owner":"DennisTraub","has_wiki":true,"watchers":1}]}'
+    http_version: '1.1'

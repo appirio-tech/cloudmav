@@ -1,4 +1,3 @@
-
 %p
   Total users = #{@total_users_count}
 
@@ -10,15 +9,3 @@
     %tr
       %td= u.username
       %td= u.profile.name
-
-%p
-  Total events that ran today = #{@daily_events.count}
-
-%table
-  %tr
-    %th Event Type
-    %th Performed at 
-    - @daily_events.each do |e|
-      %tr
-        %td= e.class
-        %td= e.processed_date.strftime("%m/%d/%y")

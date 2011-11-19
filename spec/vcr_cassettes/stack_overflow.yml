@@ -1,0 +1,176 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.stackoverflow.com:80/1.1/users/60336?key=ZJZ_DNRrgk6IQYQ0h_Duyg
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-max:
+      - '10000'
+      x-ratelimit-current:
+      - '9941'
+      x-aspnet-version:
+      - 4.0.30319
+      date:
+      - Fri, 28 Oct 2011 03:57:05 GMT
+      content-length:
+      - '615'
+    body: !binary |-
+      H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+      kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+      AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/S3RH/ucou8vCvpvgB
+      Prm3Ix+tm7xu6O/v4a80/cXyQ7/4/YsZffXpzr17n47CL9rrFaB8VOcXRdPm
+      dT77yLWY1nnWFtXy959lLfe+d+/e3v0H9/cfuDazolmV2fXvv8wWDOg7T8Ye
+      hDpfrVuGgdd3vN7zRVaUv/88a+Z46+HO5NOdfD/fP//0/u50b//e/enevU/v
+      f7o/PZic73164IEss6b9/bPpNG8ai9e93YPdvYf3Hu66Zlf5pCna/Pdf16Di
+      R/O2XT26e/fq6mp8Vfwgq2dNdd4ssrodL/PWh15NDbofeR9nk2rd/v4yQu/j
+      X7TOGybQtFovW/pyx3tl2VwRgc03B+6byyK/sp/fu+/NyOr3v6wI58g7s+pq
+      GX7pd9U01bSQqeKZ/mj//s75ZGd/f/vT6Wy6vZ8fZNsPZ9mn2/nOg/uTB7sP
+      93c+veeNg1nBDKYxNLvLPHWX2eau/bb7mowz/pJ+133lPLusapqc+Ev22+5r
+      bXYRfwNfdBtPstnFQAfyVQ96scjLYmk5JuxBv+y+tMiXIEo+i75lv+2+Nq0W
+      +C6Onvmy+5KTpehrnqi5F3mowjJQDlYr0FcXVQlWcWxEnzVFeZnX3U8ndbVk
+      XbNnPvwl8gv/+P5vnPyS5P8JAAD//321Tl60BAAA
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.stackoverflow.com:80/1.1/users/60336/tags?key=ZJZ_DNRrgk6IQYQ0h_Duyg
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-max:
+      - '10000'
+      x-ratelimit-current:
+      - '9941'
+      x-aspnet-version:
+      - 4.0.30319
+      date:
+      - Fri, 28 Oct 2011 03:57:06 GMT
+      content-length:
+      - '402'
+    body: !binary |-
+      H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+      kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+      AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/S3Ycj/nuVXeT40/3V
+      FD/AJw925KM2u2joz+/hjzT9xfKDPl9mCzT76Gp1/tHIfjqt1ssWb7uPztfl
+      eVGWze9f579oXdT5jL4+z8omd03WTV7//gW++HTn3r1P5fNfot/3u5z+eKTH
+      vZ/NHt9li/KH3ed4mbc/7D6bNpu+XWXLPDba3Z/Nni9qavtD7rMWXv8h9zqt
+      lm1dlc0Pv9/FIq+nRfZDn9tpNctXZf7uh91vmV3n9Q+701nWZpNiOSuWFz/s
+      rld1tcrrtsh/6LzVtNflD7/Xn/5F67y+/mH3mi1ndfXDV1arebXML7LVD7vf
+      RTUpynz7Kp/8sHvGgK9Ja/1sdYwf3/+Nk1+S/D8BAAD//7ZxiZkaCQAA
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.stackoverflow.com:80/1.1/users/60336/questions?key=ZJZ_DNRrgk6IQYQ0h_Duyg
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-max:
+      - '10000'
+      x-ratelimit-current:
+      - '9957'
+      x-aspnet-version:
+      - 4.0.30319
+      date:
+      - Fri, 28 Oct 2011 03:57:06 GMT
+      content-length:
+      - '174'
+    body: !binary |-
+      H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+      kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+      AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/SnRH/ucoucvpr1/3V
+      FD/AJ/e0wS9a501bVMuGPvve93/j5Jck/08AAAD//8zP1wpIAAAA
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://api.stackoverflow.com:80/1.1/users/60336/answers?key=ZJZ_DNRrgk6IQYQ0h_Duyg
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/json; charset=utf-8
+      content-encoding:
+      - gzip
+      x-aspnetmvc-version:
+      - '3.0'
+      x-ratelimit-max:
+      - '10000'
+      x-ratelimit-current:
+      - '9940'
+      x-aspnet-version:
+      - 4.0.30319
+      date:
+      - Fri, 28 Oct 2011 03:57:06 GMT
+      content-length:
+      - '1073'
+    body: !binary |-
+      H4sIAAAAAAAEAOy9B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3m
+      kuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZk
+      AWz2zkrayZ4hgKrIHz9+fB8/In7xb5yk6Udt1WblR4/SgxH/ucoucvpr1/3V
+      FD/AJ/d25KNs2VzldUOffA9/p+kvlh/2q9+/mNGX9x/u7z749MHIfTmd5qs2
+      x3dtvc69L+StabVY5Mu2+f3XNdD56K52dFch3TUNPnKv/qJ13rRFtdQu7+/s
+      UGP3dXW1zGv6wmJIn60bg+GnO/fufWobm6/a6xVG+1GdXxRNm9eEsN9mVjSr
+      Mrv+/ZfZgpt958k4+L7OV+s2A04g4k4AP19kRfn7z7Nmjjcf7kw+3cn38/3z
+      T+/vTvf2792f7t379P6n+9ODyfnepwcfmTd/iRvQtM4Z9u8/y1qepXs7+w8f
+      7Hx6sOvalFnT/v7ZtC0ui/Z6U8P16ve/rNqcCL9etnbKZZREufDLHfflZZFf
+      2c/37nlT3Eyr2jGPYEyTtl4CE0wGyH6elY03+23RlkzJl/NqmV9kqxQ8ly6r
+      Nm2mWVksL1KCWufTtrxOq2V6vJzVVTFL98Z7SiFDnzgf7h58uvtg916UDzuo
+      3MSICupmRqSGO/c+ffjziRH3Pt3Z2znY3/X4JM6IkYZdRvS+eh9GPHDfGEb0
+      Gt+eEb9bZ6sV+C4jzlu2dVWmxZL+mFT1LK/TdYPvmva6zJv0qmjn1bpNq8u8
+      vqqLFl/N8vNsXbYpQcmzOltO81sx6v7DT3fveTzz9flUIN3MpvsP9z7d3/t5
+      xaX36Nk78M3SAJf2G34jXPrgwTfFpafvVlUjXNqsJ9sBp35FM3OiH5xXYNkc
+      X/zex188vyUr3n/48BtiRUC6DSuS7fbMxs8TVtx5eODJ3wZWDBt+I6x4//79
+      b4gVP6/JHs8qUoew2jU7jGm2vF4A5m35bf8bMdEC6Vb8trf/88tAQ6E9PDi4
+      lerrNOzym8eKt+e33Ye+rTEM5310e4b77stn6fPsmoyxarlbc9k34wgKpFtx
+      2cGnP6/iEWGee75q2cRlQcNvRKsFjuUHabXn1UUxhdm8yFuKSWpy8s7TVV2t
+      8rq9HqefV9WM/sTApvnvcUsGvLd77xtiQEC6DQPuPvB9yp8XDLh3/+HOgetn
+      mAG7DbsM6PHm7Rlw71MPomFAD9LtGfDb1RVZ1fQsfbuk367meTsnjddW7M5l
+      EoGk5N0h9iALnHvxSpsvaFLa2/Ml5U2+Ib4kSLfiy0/3PQPz84QvHzzY89z/
+      DXwZNvxGEjX7BzHN+LUyNWDMaYZAA4b4dZtN377MljnFGkVZpsSNpBKzktI1
+      53W1oLC5bekH8W1brSxD4sf3f+PklyT/TwAAAP//6W5Hk4UUAAA=
+    http_version: '1.1'

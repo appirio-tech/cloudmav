@@ -8,9 +8,6 @@ Feature: Daily Admin Email
 
     Given there are 100 users
     And there is a new user "jsmith"
-    And there were 100 events that ran
     When the daily admin email is sent
     Then the email should show 101 total users
     And the email should have "jsmith" as a new user
-    And the email should show 100 events ran
-    And the email should show the type of events ran

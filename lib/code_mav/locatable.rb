@@ -77,7 +77,6 @@ module CodeMav
       end
 
     end
-
   
   end
 end

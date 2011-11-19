@@ -2,17 +2,11 @@ module CodeMav
 
   module Followable
     def self.included(receiver)
-      receiver.class_eval %Q{
-        references_many :followings, :inverse_of => :#{receiver.to_s.underscore}
-        references_many :following_bys, :inverse_of => :#{receiver.to_s.underscore}
-      }
-      Following.class_eval %Q{
-        referenced_in :#{receiver.to_s.underscore}, :inverse_of => :followings
-      }
-      FollowingBy.class_eval %Q{
-        referenced_in :#{receiver.to_s.underscore}, :inverse_of => :following_bys
-      }
-    
+      receiver.class_eval do
+        has_many :followings, :as => :followable
+        has_many :following_bys, :as => :following_by_able
+      end
+      
       receiver.send(:include, InstanceMethods)
     end
     
@@ -63,7 +57,5 @@ module CodeMav
       end
 
     end
-
   end
-
 end

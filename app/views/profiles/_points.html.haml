@@ -1,8 +1,11 @@
 
-%ul#points
+%ul.media-grid#points
   %li.selected
     .points= @profile.total_score
     .description points
+  %li
+    .points= @profile.score(:experience_points)
+    .description experience
   %li
     .points= @profile.score(:knowledge_points)
     .description knowledge

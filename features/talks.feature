@@ -18,3 +18,9 @@ Feature: Talks
     When I edit the talk
     Then the talk should be updated
 
+  Scenario: Add links to talk
+  
+    Given I am logged in
+    And I have a talk
+    When I add links to a talk
+    Then the talk should have links

@@ -1,57 +1,23 @@
 - content_for :title do
   Welcome to CodeMav
-- content_for :css do
-  = stylesheet_link_tag "home"
 
-%h1.hidden Welcome to CodeMav
-
-.grid_10
-  %h2.home_tagline Consolidate your profiles to create your definitive developer identity.
-
+.hero-unit#home
+  %h1 Welcome to CodeMav  
   .home_image
-    = image_tag "home_services.png"
-  
-.grid_6
+    = image_tag "homepage/home_services.png"
+  %p.home_tagline Consolidate your profiles to create your definitive developer identity.
+  = link_to "Sign up", new_user_registration_path, :class => "btn primary large"
 
-  %h3.join_codemav Join CodeMav
-  .register
-    = semantic_form_for User.new, :url => registration_path("user") do |f|
-      = f.inputs do
-        = f.input :username
-        = f.input :email, :required => false
-        = f.input :password, :required => false
-      = f.buttons do
-        = big_primary_button_submit_tag "Register"
-
-.clear
-
-%hr
-
-.grid_4.home_module
-  %h4 Consolidate profiles.
-  %p
-    Consolidate all your separate profiles into one. Now people have one place to find out who you are on GitHub or StackOverflow.
-
-.grid_4.home_module
-  %h4 Build an identity.
-  %p
-    Your distribution of points in categories builds a picture of who you are and how you give back to the community. 
-
-.grid_4.home_module
-  %h4 Earn points.
-  %p
-    Earn points for your activity whether its writing blog posts, giving talks, or contributing to open source projects. The more popular an activity, the more points you earn.
-
-.grid_4.home_module
-  %h4 Stay connected.
-  %p
-    Stay up to date with your friend's activity. Find out about events happening near you. Discover open source projects that need contributions.
-
-.clear
-
-//.grid_16
-// .follow_us_on_twitter
-//    Follow us on twitter #{link_to "@codemav", "http://www.twitter.com/codemav", :target => "_blank"}
-//
-//.clear
-
+.row
+  .span-one-third
+    %h4 Consolidate profiles.
+    %p
+      Consolidate all your online profiles, from GitHub to SlideShare to LinkedIn and more, to create your definitive developer identity.
+  .span-one-third
+    %h4 Earn Recognition.
+    %p
+      Earn points for your developer activities, including blogging, giving talks, and contributing to open source projects. The more popular the activity, the more points you earn.
+  .span-one-third
+    %h4 Stay connected.
+    %p
+      Stay up-to-date with what your fellow developers are doing. Find out about events happening near you, discover open source projects that need contributions, and build your network.

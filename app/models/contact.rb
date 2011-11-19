@@ -16,7 +16,6 @@ class Contact
   after_create :send_email
 
   def send_email
-    Notifier.delay.contact(self)
+    Notifier.contact(self).deliver
   end
 end
-

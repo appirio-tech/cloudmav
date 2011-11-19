@@ -1,0 +1,262 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://github.com:80/api/v2/json/user/show/jnunemaker
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Fri, 28 Oct 2011 03:22:53 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - keep-alive
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '60'
+      etag:
+      - ! '"a895840c93d96d1c3e34938fe73bd25a"'
+      x-frame-options:
+      - deny
+      x-ratelimit-remaining:
+      - '59'
+      x-runtime:
+      - 77ms
+      content-length:
+      - '395'
+      cache-control:
+      - private, max-age=0, must-revalidate
+    body: ! '{"user":{"gravatar_id":"e13c31390e0369fcd5972292ce0e7b92","company":"Ordered
+      List, Inc.","name":"John Nunemaker","created_at":"2008/02/13 10:00:42 -0800","location":"South
+      Bend, IN","public_repo_count":58,"public_gist_count":60,"blog":"http://railstips.org/","following_count":23,"id":235,"type":"User","permission":null,"followers_count":795,"login":"jnunemaker","email":"nunemaker@gmail.com"}}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://github.com:80/api/v2/json/repos/show/jnunemaker
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Fri, 28 Oct 2011 03:22:53 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - keep-alive
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '60'
+      etag:
+      - ! '"34ff2ccf37a95a736acc24371debbbe6"'
+      x-frame-options:
+      - deny
+      x-ratelimit-remaining:
+      - '58'
+      x-runtime:
+      - 181ms
+      content-length:
+      - '25409'
+      cache-control:
+      - private, max-age=0, must-revalidate
+    body: ! '{"repositories":[{"created_at":"2008/03/28 19:36:11 -0700","open_issues":0,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2008/06/01
+      12:02:34 -0700","url":"https://github.com/jnunemaker/aaws","fork":false,"has_downloads":true,"watchers":15,"size":92,"private":false,"name":"aaws","owner":"jnunemaker","description":"[DEAD]
+      API wrapper for Amazon Associates Web Service.","forks":1,"has_wiki":true},{"created_at":"2011/01/25
+      19:08:04 -0800","open_issues":0,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/02/05
+      14:52:32 -0800","url":"https://github.com/jnunemaker/adapter-memcached","fork":false,"has_downloads":true,"watchers":6,"size":588,"private":false,"name":"adapter-memcached","owner":"jnunemaker","description":"Memcached
+      adapter","forks":2,"has_wiki":true},{"created_at":"2011/02/03 06:36:48 -0800","open_issues":0,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/04/15
+      07:13:16 -0700","url":"https://github.com/jnunemaker/adapter-mongo","fork":false,"has_downloads":true,"watchers":12,"size":592,"private":false,"name":"adapter-mongo","owner":"jnunemaker","description":"Adapter
+      for mongo","forks":3,"has_wiki":true},{"created_at":"2011/01/25 19:23:45 -0800","open_issues":0,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/02/03
+      06:41:29 -0800","url":"https://github.com/jnunemaker/adapter-redis","fork":false,"has_downloads":true,"watchers":7,"size":436,"private":false,"name":"adapter-redis","owner":"jnunemaker","description":"Redis
+      adapter","forks":3,"has_wiki":true},{"created_at":"2011/01/25 19:35:28 -0800","open_issues":0,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/01/25
+      22:00:33 -0800","url":"https://github.com/jnunemaker/adapter-riak","fork":false,"has_downloads":true,"watchers":6,"size":260,"private":false,"name":"adapter-riak","owner":"jnunemaker","description":"Riak
+      adapter","forks":1,"has_wiki":true},{"created_at":"2008/06/30 11:00:21 -0700","open_issues":0,"homepage":"http://www.railsbrain.com","has_issues":true,"pushed_at":"2008/06/30
+      13:20:06 -0700","url":"https://github.com/jnunemaker/ajax-rdoc","fork":true,"has_downloads":true,"watchers":4,"size":100,"private":false,"name":"ajax-rdoc","owner":"jnunemaker","description":"Rdoc
+      template and generator for Ruby source code that uses javascript to make searching
+      for methods and classes very easy.","forks":0,"has_wiki":true},{"created_at":"2008/10/24
+      07:37:59 -0700","integrate_branch":"integration","open_issues":0,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2009/04/19
+      19:57:45 -0700","url":"https://github.com/jnunemaker/astrotrain","fork":true,"has_downloads":true,"watchers":6,"size":284,"private":false,"name":"astrotrain","owner":"jnunemaker","description":"email
+      => [http post, jabber]","forks":0,"has_wiki":true},{"created_at":"2010/06/02
+      12:50:31 -0700","open_issues":3,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/10/05
+      09:04:26 -0700","url":"https://github.com/jnunemaker/bin","fork":false,"has_downloads":true,"watchers":56,"size":184,"private":false,"name":"bin","owner":"jnunemaker","description":"ActiveSupport
+      MongoDB Cache store.","forks":9,"has_wiki":true},{"created_at":"2010/02/27 09:26:36
+      -0800","open_issues":3,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/09/22
+      15:34:12 -0700","url":"https://github.com/jnunemaker/canable","fork":false,"has_downloads":true,"watchers":283,"size":176,"private":false,"name":"canable","owner":"jnunemaker","description":"Simple
+      permissions that I have used on my last several projects so I figured it was
+      time to abstract and wrap up into something more easily reusable.","forks":13,"has_wiki":false},{"created_at":"2008/11/17
+      08:10:27 -0800","open_issues":0,"homepage":"","has_issues":true,"language":"Python","pushed_at":"2008/11/19
+      07:58:23 -0800","url":"https://github.com/jnunemaker/chinwag","fork":false,"has_downloads":true,"watchers":6,"size":164,"private":false,"name":"chinwag","owner":"jnunemaker","description":"chat
+      app that steve and i are playing with, uses google app engine, html5, css3 and
+      jquery","forks":0,"has_wiki":true},{"created_at":"2009/03/25 16:54:03 -0700","open_issues":0,"has_issues":true,"language":"Ruby","pushed_at":"2009/04/02
+      08:34:31 -0700","url":"https://github.com/jnunemaker/columbus","fork":false,"has_downloads":true,"watchers":24,"size":104,"private":false,"name":"columbus","owner":"jnunemaker","description":"Autodiscovers
+      feeds from urls","forks":5,"has_wiki":true},{"created_at":"2008/06/08 11:45:38
+      -0700","open_issues":0,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2009/04/20
+      08:05:17 -0700","url":"https://github.com/jnunemaker/common_helpers","fork":false,"has_downloads":true,"watchers":7,"size":64,"private":false,"name":"common_helpers","owner":"jnunemaker","description":"helpers
+      that i use often in apps, nothing special","forks":2,"has_wiki":true},{"created_at":"2009/03/28
+      21:05:59 -0700","integrate_branch":"integration","open_issues":14,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/09/26
+      10:37:31 -0700","url":"https://github.com/jnunemaker/crack","fork":false,"has_downloads":true,"watchers":298,"size":280,"private":false,"name":"crack","owner":"jnunemaker","description":"Really
+      simple JSON and XML parsing, ripped from Merb and Rails.","forks":53,"has_wiki":true},{"created_at":"2010/11/17
+      14:05:37 -0800","open_issues":0,"homepage":"","has_issues":true,"language":"Shell","pushed_at":"2011/10/13
+      12:32:03 -0700","url":"https://github.com/jnunemaker/dotfiles","fork":false,"has_downloads":true,"watchers":8,"size":220,"private":false,"name":"dotfiles","owner":"jnunemaker","description":"Some
+      of my dotfiles, nothing fancy or worthwhile","forks":2,"has_wiki":true},{"created_at":"2008/09/02
+      11:57:16 -0700","open_issues":12,"homepage":"","has_issues":true,"language":"JavaScript","pushed_at":"2008/12/23
+      09:52:27 -0800","url":"https://github.com/jnunemaker/fancy-zoom","fork":false,"has_downloads":true,"watchers":507,"size":304,"private":false,"name":"fancy-zoom","owner":"jnunemaker","description":"Zoomy
+      JavaScript based loosely on Fancy Zoom by Cabel Sasser.","forks":134,"has_wiki":true},{"created_at":"2010/12/22
+      11:19:07 -0800","open_issues":0,"homepage":"","has_issues":false,"language":"Ruby","pushed_at":"2011/05/19
+      16:21:34 -0700","url":"https://github.com/jnunemaker/feedzirra","fork":true,"has_downloads":true,"watchers":3,"size":168,"private":false,"name":"feedzirra","owner":"jnunemaker","description":"A
+      feed fetching and parsing library that treats the internet like Godzilla treats
+      Japan: it dominates and eats all.","forks":0,"has_wiki":true},{"created_at":"2010/03/30
+      08:05:12 -0700","open_issues":0,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2010/03/31
+      18:20:40 -0700","url":"https://github.com/jnunemaker/gemwhois","fork":false,"has_downloads":true,"watchers":21,"size":424,"private":false,"name":"gemwhois","owner":"jnunemaker","description":"Whois
+      for gems, because gem names are like domains in the 90''s","forks":3,"has_wiki":true},{"created_at":"2008/02/15
+      19:54:49 -0800","open_issues":0,"homepage":"http://groups.google.com/group/github-twitter/","has_issues":true,"language":"Ruby","pushed_at":"2008/03/26
+      12:15:28 -0700","url":"https://github.com/jnunemaker/github-twitter","fork":false,"has_downloads":true,"watchers":25,"size":60,"private":false,"name":"github-twitter","owner":"jnunemaker","description":"[DEAD]
+      This is out of date and is left purely for others to peruse. Not needed anymore
+      due to github-services","forks":3,"has_wiki":true},{"created_at":"2009/03/24
+      22:50:52 -0700","open_issues":0,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/09/17
+      06:50:45 -0700","url":"https://github.com/jnunemaker/google-weather","fork":false,"has_downloads":true,"watchers":31,"size":152,"private":false,"name":"google-weather","owner":"jnunemaker","description":"stupid
+      simple fetching of the weather using google''s api","forks":8,"has_wiki":true},{"created_at":"2008/02/13
+      18:45:29 -0800","open_issues":1,"homepage":"http://googlebase.rubyforge.org/","has_issues":true,"language":"Ruby","pushed_at":"2008/03/26
+      12:14:43 -0700","url":"https://github.com/jnunemaker/googlebase","fork":false,"has_downloads":true,"watchers":24,"size":80,"private":false,"name":"googlebase","owner":"jnunemaker","description":"[DEAD]
+      Google Base Auth Class is a base for authenticating to google and making requests
+      to google services.","forks":6,"has_wiki":true},{"created_at":"2008/02/13 18:46:49
+      -0800","open_issues":0,"homepage":"http://googlereader.rubyforge.org/","has_issues":true,"language":"Ruby","pushed_at":"2008/03/26
+      12:14:45 -0700","url":"https://github.com/jnunemaker/googlereader","fork":false,"has_downloads":true,"watchers":34,"size":92,"private":false,"name":"googlereader","owner":"jnunemaker","description":"[DEAD]
+      Wrapper for Google Reader''s undocumented and possibly \"unstable\" API. By
+      unstable, I mean if they haven''t documented it, then they could change it at
+      anytime without notice.","forks":9,"has_wiki":true},{"created_at":"2009/12/22
+      08:43:20 -0800","open_issues":0,"homepage":"http://github.com/jnunemaker/joint","has_issues":false,"language":"Ruby","pushed_at":"2010/03/26
+      14:06:49 -0700","url":"https://github.com/jnunemaker/grip","fork":true,"has_downloads":true,"watchers":31,"size":632,"private":false,"name":"grip","owner":"jnunemaker","description":"This
+      is now http://github.com/jnunemaker/joint. No longer updating this repository.","forks":4,"has_wiki":true},{"created_at":"2008/11/16
+      16:10:27 -0800","integrate_branch":"integration","open_issues":14,"homepage":"http://happymapper.rubyforge.org","has_issues":true,"language":"Ruby","pushed_at":"2011/09/26
+      09:15:58 -0700","url":"https://github.com/jnunemaker/happymapper","fork":false,"has_downloads":true,"watchers":259,"size":176,"private":false,"name":"happymapper","owner":"jnunemaker","description":"XML
+      to object mapping library","forks":59,"has_wiki":true},{"created_at":"2008/07/28
+      13:55:11 -0700","integrate_branch":"integration","open_issues":31,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/10/15
+      11:20:29 -0700","url":"https://github.com/jnunemaker/httparty","fork":false,"has_downloads":true,"watchers":1268,"size":348,"private":false,"name":"httparty","owner":"jnunemaker","description":"Makes
+      http fun! Also, makes consuming restful web services dead easy.","forks":180,"has_wiki":true},{"created_at":"2010/12/19
+      19:47:52 -0800","open_issues":2,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/10/24
+      00:53:44 -0700","url":"https://github.com/jnunemaker/hunt","fork":false,"has_downloads":true,"watchers":45,"size":980,"private":false,"name":"hunt","owner":"jnunemaker","description":"really
+      simple search for mongomapper","forks":4,"has_wiki":false},{"created_at":"2011/01/22
+      06:08:14 -0800","open_issues":0,"homepage":"","has_issues":false,"language":"Ruby","pushed_at":"2011/01/22
+      07:04:13 -0800","url":"https://github.com/jnunemaker/imanip","fork":true,"has_downloads":true,"watchers":3,"size":176,"private":false,"name":"imanip","owner":"jnunemaker","description":"Super-quick
+      image resizing using the ImageMagick command line tools","forks":0,"has_wiki":true},{"created_at":"2008/06/13
+      12:23:57 -0700","open_issues":0,"homepage":"","has_issues":true,"language":"JavaScript","pushed_at":"2009/01/21
+      14:00:02 -0800","url":"https://github.com/jnunemaker/javascripts","fork":false,"has_downloads":true,"watchers":15,"size":72,"private":false,"name":"javascripts","owner":"jnunemaker","description":"some
+      various js files and examples for me to refer to and use","forks":2,"has_wiki":true},{"created_at":"2010/03/26
+      12:12:49 -0700","open_issues":1,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/09/14
+      16:03:52 -0700","url":"https://github.com/jnunemaker/joint","fork":false,"has_downloads":true,"watchers":132,"size":216,"private":false,"name":"joint","owner":"jnunemaker","description":"MongoMapper
+      and GridFS joined in file upload love.","forks":27,"has_wiki":false},{"created_at":"2008/02/13
+      19:13:01 -0800","open_issues":0,"homepage":"http://lorem.rubyforge.org/","has_issues":true,"language":"Ruby","pushed_at":"2009/04/30
+      05:00:18 -0700","url":"https://github.com/jnunemaker/lorem","fork":false,"has_downloads":true,"watchers":25,"size":88,"private":false,"name":"lorem","owner":"jnunemaker","description":"Ever
+      get tired of opening up lipsum.com, filling out a form and waiting for it to
+      give you your filler text? Yeah, me too. I threw this together in an hour to
+      generate lipsum text from the command line.","forks":6,"has_wiki":true},{"created_at":"2009/03/23
+      08:44:29 -0700","open_issues":0,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2009/03/24
+      12:48:46 -0700","url":"https://github.com/jnunemaker/matchy","fork":true,"has_downloads":true,"watchers":20,"size":172,"private":false,"name":"matchy","owner":"jnunemaker","description":"RSpec-esque
+      matchers for Test::Unit","forks":5,"has_wiki":true},{"created_at":"2008/02/13
+      18:49:56 -0800","open_issues":0,"homepage":"http://mirrored.rubyforge.org/","has_issues":true,"language":"Ruby","pushed_at":"2009/05/11
+      14:04:33 -0700","url":"https://github.com/jnunemaker/mirrored","fork":false,"has_downloads":true,"watchers":12,"size":412,"private":false,"name":"mirrored","owner":"jnunemaker","description":"Mirrored
+      is a wrapper for the mirrored del.icio.us and ma.gnolia apis.","forks":0,"has_wiki":true},{"created_at":"2010/08/27
+      06:20:32 -0700","open_issues":0,"homepage":"http://www.yehudakatz.com","has_issues":false,"language":"Ruby","pushed_at":"2010/09/22
+      16:01:11 -0700","url":"https://github.com/jnunemaker/moneta","fork":true,"has_downloads":true,"watchers":1,"size":1016,"private":false,"name":"moneta","owner":"jnunemaker","description":"a
+      unified interface to key/value stores","forks":1,"has_wiki":true},{"created_at":"2011/03/18
+      06:52:59 -0700","open_issues":0,"homepage":"http://api.mongodb.org/ruby","has_issues":false,"language":"Ruby","pushed_at":"2011/03/18
+      12:09:57 -0700","url":"https://github.com/jnunemaker/mongo-ruby-driver","fork":true,"has_downloads":true,"watchers":1,"size":5312,"private":false,"name":"mongo-ruby-driver","owner":"jnunemaker","description":"Ruby
+      driver for MongoDB","forks":0,"has_wiki":false},{"created_at":"2009/05/27 15:55:25
+      -0700","integrate_branch":"fork-queue","open_issues":32,"homepage":"http://mongomapper.com","has_issues":true,"language":"Ruby","pushed_at":"2011/10/27
+      16:53:51 -0700","url":"https://github.com/jnunemaker/mongomapper","fork":false,"has_downloads":true,"watchers":1352,"size":592,"private":false,"name":"mongomapper","owner":"jnunemaker","description":"A
+      Ruby Object Mapper for Mongo","forks":275,"has_wiki":false},{"created_at":"2010/04/29
+      15:50:42 -0700","open_issues":3,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/10/08
+      12:40:23 -0700","url":"https://github.com/jnunemaker/plucky","fork":false,"has_downloads":true,"watchers":85,"size":224,"private":false,"name":"plucky","owner":"jnunemaker","description":"Fancy
+      query magic for the mongo ruby driver","forks":20,"has_wiki":true},{"created_at":"2009/10/13
+      06:24:17 -0700","open_issues":0,"homepage":"http://projecteuler.net/","has_issues":false,"pushed_at":"2009/10/13
+      06:27:25 -0700","url":"https://github.com/jnunemaker/project-euler","fork":false,"has_downloads":true,"watchers":1,"size":76,"private":false,"name":"project-euler","owner":"jnunemaker","description":"just
+      backing up solutions as i have time to work on them","forks":1,"has_wiki":false},{"created_at":"2010/03/10
+      06:04:47 -0800","open_issues":0,"homepage":"","has_issues":false,"language":"Ruby","pushed_at":"2010/03/10
+      07:36:08 -0800","url":"https://github.com/jnunemaker/rack-gridfs","fork":true,"has_downloads":true,"watchers":27,"size":264,"private":false,"name":"rack-gridfs","owner":"jnunemaker","description":"Rack
+      middleware for adding HTTP endpoints for files stored in MongoDB GridFS","forks":4,"has_wiki":true},{"created_at":"2008/04/02
+      20:58:14 -0700","open_issues":0,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2010/02/18
+      21:02:25 -0800","url":"https://github.com/jnunemaker/railsfile","fork":false,"has_downloads":true,"watchers":3,"size":96,"private":false,"name":"railsfile","owner":"jnunemaker","description":"[DEAD]
+      dumb rails log file parser","forks":0,"has_wiki":true},{"created_at":"2011/02/10
+      11:56:55 -0800","open_issues":0,"homepage":"http://github.com/blog/542-introducing-resque","has_issues":false,"language":"Ruby","pushed_at":"2011/02/10
+      12:18:00 -0800","url":"https://github.com/jnunemaker/resque","fork":true,"has_downloads":false,"watchers":1,"size":784,"private":false,"name":"resque","owner":"jnunemaker","description":"Resque
+      is a Redis-backed Ruby library for creating background jobs, placing those jobs
+      on multiple queues, and processing them later.","forks":0,"has_wiki":true},{"created_at":"2010/07/21
+      16:33:41 -0700","open_issues":0,"homepage":"","has_issues":false,"language":"Ruby","pushed_at":"2010/07/21
+      16:59:47 -0700","url":"https://github.com/jnunemaker/rollout","fork":true,"has_downloads":true,"watchers":6,"size":136,"private":false,"name":"rollout","owner":"jnunemaker","description":"Conditionally
+      roll out features with redis.","forks":1,"has_wiki":true},{"created_at":"2010/12/28
+      10:14:15 -0800","open_issues":1,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/09/16
+      18:53:12 -0700","url":"https://github.com/jnunemaker/scam","fork":false,"has_downloads":true,"watchers":30,"size":780,"private":false,"name":"scam","owner":"jnunemaker","description":"Really
+      basic fake model for doing types in memory","forks":3,"has_wiki":true},{"created_at":"2010/01/08
+      17:46:14 -0800","open_issues":1,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/07/09
+      17:35:23 -0700","url":"https://github.com/jnunemaker/scout-plugins","fork":false,"has_downloads":true,"watchers":6,"size":428,"private":false,"name":"scout-plugins","owner":"jnunemaker","description":"scout
+      plugins as i make them...","forks":2,"has_wiki":true},{"created_at":"2008/02/13
+      18:53:43 -0800","open_issues":1,"homepage":"http://scrobbler.rubyforge.org/","has_issues":true,"language":"Ruby","pushed_at":"2009/04/30
+      05:01:19 -0700","url":"https://github.com/jnunemaker/scrobbler","fork":false,"has_downloads":true,"watchers":52,"size":140,"private":false,"name":"scrobbler","owner":"jnunemaker","description":"Scrobbler
+      is a wrapper for the audioscrobbler (last.fm) web services.","forks":34,"has_wiki":true},{"created_at":"2009/06/22
+      13:08:08 -0700","open_issues":0,"homepage":"","has_issues":false,"language":"Ruby","pushed_at":"2009/06/22
+      13:30:55 -0700","url":"https://github.com/jnunemaker/siren","fork":true,"has_downloads":true,"watchers":4,"size":108,"private":false,"name":"siren","owner":"jnunemaker","description":"JSON
+      parser that understands cross-references and casts to typed Ruby objects. Implements
+      JSONQuery against JSON trees and Ruby object graphs.","forks":1,"has_wiki":true},{"created_at":"2008/07/14
+      20:07:00 -0700","open_issues":0,"homepage":"http://snitch.rubyforge.org","has_issues":true,"language":"Ruby","pushed_at":"2008/10/25
+      19:08:47 -0700","url":"https://github.com/jnunemaker/snitch","fork":false,"has_downloads":true,"watchers":6,"size":184,"private":false,"name":"snitch","owner":"jnunemaker","description":"[DEAD]
+      Drop dead easy subversion commit notifications.","forks":1,"has_wiki":true},{"created_at":"2011/03/19
+      20:26:55 -0700","open_issues":0,"homepage":"","has_issues":false,"language":"Ruby","pushed_at":"2011/03/19
+      21:43:19 -0700","url":"https://github.com/jnunemaker/statsd","fork":true,"has_downloads":true,"watchers":5,"size":268,"private":false,"name":"statsd","owner":"jnunemaker","description":"A
+      Ruby Statsd client that isn''t a direct port of the Python example code. Because
+      Ruby isn''t Python.","forks":2,"has_wiki":true},{"created_at":"2008/02/13 19:54:04
+      -0800","open_issues":0,"homepage":"http://rubyforge.org/projects/statwhore/","has_issues":true,"language":"Ruby","pushed_at":"2008/07/30
+      20:16:40 -0700","url":"https://github.com/jnunemaker/statwhore","fork":false,"has_downloads":true,"watchers":45,"size":116,"private":false,"name":"statwhore","owner":"jnunemaker","description":"[DEAD]
+      StatWhore is for the stat addict in all of us. Eventually it will become a ruby
+      wrapper for several web stat services apis. Initially, it will cover Google
+      Analytics and Feedburner.","forks":4,"has_wiki":true},{"created_at":"2011/05/07
+      19:33:38 -0700","open_issues":1,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/09/27
+      14:48:12 -0700","url":"https://github.com/jnunemaker/toystore-mongo","fork":false,"has_downloads":true,"watchers":4,"size":116,"private":false,"name":"toystore-mongo","owner":"jnunemaker","description":"Mongo
+      integration for Toystore","forks":3,"has_wiki":false},{"created_at":"2010/02/19
+      22:02:22 -0800","open_issues":0,"homepage":"","has_issues":true,"language":"JavaScript","pushed_at":"2010/02/21
+      19:22:45 -0800","url":"https://github.com/jnunemaker/trucker","fork":false,"has_downloads":true,"watchers":16,"size":1280,"private":false,"name":"trucker","owner":"jnunemaker","description":"just
+      playing with sinatra and sammy.js","forks":1,"has_wiki":true},{"created_at":"2008/02/13
+      18:20:50 -0800","integrate_branch":"master","open_issues":3,"homepage":"http://rdoc.info/gems/twitter","has_issues":true,"language":"Ruby","pushed_at":"2011/10/25
+      07:40:11 -0700","url":"https://github.com/jnunemaker/twitter","fork":false,"has_downloads":true,"watchers":1415,"size":492,"private":false,"name":"twitter","owner":"jnunemaker","description":"A
+      Ruby wrapper for the Twitter REST and Search APIs","forks":255,"has_wiki":true},{"created_at":"2009/04/03
+      23:55:00 -0700","open_issues":0,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/05/07
+      16:07:33 -0700","url":"https://github.com/jnunemaker/twitter-app","fork":false,"has_downloads":true,"watchers":151,"size":2424,"private":false,"name":"twitter-app","owner":"jnunemaker","description":"example
+      rails 3 application that uses oauth","forks":27,"has_wiki":true},{"created_at":"2011/06/21
+      14:27:47 -0700","open_issues":0,"homepage":"","has_issues":false,"language":"Ruby","pushed_at":"2011/10/05
+      08:49:04 -0700","url":"https://github.com/jnunemaker/user_agent","fork":true,"has_downloads":true,"watchers":6,"size":144,"private":false,"name":"user_agent","owner":"jnunemaker","description":"User
+      agent string parser for Ruby","forks":2,"has_wiki":true},{"created_at":"2008/10/17
+      08:14:35 -0700","open_issues":1,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2010/06/06
+      18:27:15 -0700","url":"https://github.com/jnunemaker/user_stamp","fork":false,"has_downloads":true,"watchers":91,"size":64,"private":false,"name":"user_stamp","owner":"jnunemaker","description":"A
+      Rails plugin that adds the ability to automatically stamp each record with the
+      currently logged in user.","forks":11,"has_wiki":true},{"created_at":"2009/05/28
+      16:18:45 -0700","integrate_branch":"integration","open_issues":1,"homepage":"http://validatable.rubyforge.org/","has_issues":false,"language":"Ruby","pushed_at":"2011/09/16
+      18:38:45 -0700","url":"https://github.com/jnunemaker/validatable","fork":true,"has_downloads":true,"watchers":87,"size":164,"private":false,"name":"validatable","owner":"jnunemaker","description":"Validatable
+      is a library for adding validations. No longer used by MongoMapper so I won''t
+      really be updating...","forks":33,"has_wiki":true},{"created_at":"2010/03/05
+      22:01:20 -0800","integrate_branch":"fork-queue","open_issues":0,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2011/01/22
+      06:11:49 -0800","url":"https://github.com/jnunemaker/wand","fork":false,"has_downloads":true,"watchers":19,"size":440,"private":false,"name":"wand","owner":"jnunemaker","description":"Mime-Type
+      gem with fallback to unix file command. You most likely don''t need this gem.","forks":6,"has_wiki":true},{"created_at":"2008/12/14
+      16:30:23 -0800","open_issues":0,"homepage":"http://addictedtonew.com/archives/145/wordpress-live-search-plugin/","has_issues":true,"language":"PHP","pushed_at":"2008/12/14
+      16:32:39 -0800","url":"https://github.com/jnunemaker/wordpress_live_search_plugin","fork":false,"has_downloads":true,"watchers":11,"size":64,"private":false,"name":"wordpress_live_search_plugin","owner":"jnunemaker","description":"live
+      search plugin for wordpress that just works (with prototype)","forks":2,"has_wiki":true},{"created_at":"2008/12/16
+      14:31:06 -0800","open_issues":0,"homepage":"","has_issues":true,"language":"Ruby","pushed_at":"2009/04/30
+      04:50:40 -0700","url":"https://github.com/jnunemaker/wufoo","fork":false,"has_downloads":true,"watchers":11,"size":72,"private":false,"name":"wufoo","owner":"jnunemaker","description":"simple
+      wrapper for the wufoo submission api","forks":8,"has_wiki":true},{"created_at":"2008/10/23
+      11:09:07 -0700","open_issues":0,"homepage":"http://yardvote.com","has_issues":true,"language":"Ruby","pushed_at":"2008/10/25
+      22:26:36 -0700","organization":"collectiveidea","url":"https://github.com/jnunemaker/yardvote.com","fork":true,"has_downloads":true,"watchers":10,"size":444,"private":false,"name":"yardvote.com","owner":"jnunemaker","description":"Tracking
+      political yard signs.","forks":0,"has_wiki":true}]}'
+    http_version: '1.1'

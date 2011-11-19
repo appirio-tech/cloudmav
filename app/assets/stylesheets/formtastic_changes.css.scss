@@ -1,0 +1,63 @@
+/* -------------------------------------------------------------------------------------------------
+
+Load this stylesheet after formtastic.css in your layouts to override the CSS to suit your needs.
+This will allow you to update formtastic.css with new releases without clobbering your own changes.
+
+For example, to make the inline hint paragraphs a little darker in color than the standard #666:
+
+form.formtastic fieldset > ol > li p.inline-hints { color:#333; }
+
+HINT:
+The following style may be *conditionally* included for improved support on older versions of IE(<8)
+form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
+
+--------------------------------------------------------------------------------------------------*/
+
+form.formtastic {
+	fieldset > ol > li {
+		padding: 0px;
+		margin-bottom: ms(0);
+	}
+	fieldset > ol > li label {
+		width: 100%;
+		margin-top: ms(-4);
+		display: block;
+	}
+  fieldset > ol > li.string input, fieldset > ol > li.password input, fieldset > ol > li textarea {
+		@extend .form_defaults;
+		margin-left: 0px;
+		display:block;
+		&:focus {
+			@extend .form_focus_defaults;
+		}
+  }
+	fieldset > ol > li.text textarea {
+		height: ms(4);
+	}
+	fieldset > ol > li ul.tagit {
+		@include form_defaults;
+		width: 71%;
+		margin-bottom: 16px;
+		margin-left: 4px;
+		padding: 4px;
+		height: ms(4);
+	}
+}
+form.formtastic fieldset.buttons {
+	padding-left: 0px;
+}
+
+form.formtastic fieldset > ol > li.boolean label {
+  padding-left: 0px;
+  width: 100%;
+}
+
+/*// Formtastic*/
+form.formtastic input.button, form.formtastic.button.button {
+  padding: ms(-1);
+	margin-right: ms(-3);
+	color: $form-button-font-color;
+	&:hover {
+		color: $form-button-hover-font-color;
+	}
+}

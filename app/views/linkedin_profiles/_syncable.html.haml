@@ -1,0 +1,8 @@
+
+%li.row
+  .span3= link_to image_tag("syncable/linkedin_logo.png"), "http://www.linkedin.com"
+  .span10
+    = text_field_tag "", "", :class => "xlarge disabled", :disabled => true
+    = link_to "Sync", new_profile_linkedin_profile_path(@profile), :class => "btn success"
+    - if @profile.linkedin_profile
+      = link_to "Delete", [@profile, @profile.linkedin_profile], :id=> :delete_linkedin, :confirm => 'Are you sure?', :method => :delete, :class => "btn danger"

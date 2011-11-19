@@ -1,0 +1,28 @@
+= content_for :title do
+  #{@profile.display_name} - Experience Profile
+
+#profile
+  = render :partial => "profiles/header"
+  = render :partial => "profiles/profile_menu"
+
+  #profile_content
+    .grid_13
+      %section#jobs
+        - if @profile.jobs.empty?
+          %p No jobs added
+        - else
+          %ul.unstyled
+            - @profile.jobs.chronological_order.each do |j|
+              %li.job
+                %h3
+                  = j.title
+                  %small= j.company_name
+                %span= j.display_date_range
+                %p= j.display_description
+      &nbsp;
+    .grid_2
+
+    .clear
+
+  .clear
+.clear

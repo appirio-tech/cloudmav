@@ -1,6 +1,6 @@
 class GitHubProfile
   include Mongoid::Document
-  include CodeMav::Eventable
+  include Mongoid::Timestamps
   include CodeMav::Taggable
   include CodeMav::Syncable
   
@@ -19,14 +19,10 @@ class GitHubProfile
     [profile.coder_profile]
   end
   
-  def as_json(opts={})
-    { 
-      :git_hub_id => git_hub_id,
-      :username => username,
-      :gist_count => gist_count,
-      :repository_count => repository_count,
-      :followers_count => followers_count,
-      :url => url
-    }
+  def generate_tags
+    self.repositories.each do |r|
+      import_tags_from(r)
+    end
   end
+  
 end

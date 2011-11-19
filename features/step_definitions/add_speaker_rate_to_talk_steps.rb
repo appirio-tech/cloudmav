@@ -1,8 +1,8 @@
-When /^I try to link my talk to Speaker Rate$/ do
+When /^I try to link my talk to SpeakerRate$/ do
   visit new_profile_talk_link_to_speaker_rate_path(@profile, @talk)
 end
 
-Then /^I should be able to add my talk to Speaker Rate$/ do
+Then /^I should be able to add my talk to SpeakerRate$/ do
   And %Q{I should see "Add talk to SpeakerRate"}
 end
 
@@ -38,15 +38,10 @@ When /^I refresh from the link my talk to SpeakerRate$/ do
 
   visit new_profile_talk_link_to_speaker_rate_path(@profile, @talk)
   VCR.use_cassette('refresh_link_to_speaker_rate', :record => :new_episodes) do
-    click_link "Refresh"
+    click_link "Sync with SpeakerRate"
   end
 end
 
 Then /^I should be able to select the SpeakerRate talk$/ do
   page.has_content?("Virtual Brown Bag").should == true
 end
-
-Then /^all the Talk events for the SpeakerRate talk should be deleted$/ do
-  TalkEvent.for_talk(@speaker_rate_talk).count.should == 0
-end
-
