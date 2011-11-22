@@ -35,6 +35,10 @@ module CodeMav
         self.skillings.select{|s| s.skill_name == skill_name && s.point_type == point_type}.each{|s| score += s.score }
         score        
       end
+      
+      def skills
+        self.skillings.map{|s| s.skill_name }.uniq
+      end
 
     end
   end
