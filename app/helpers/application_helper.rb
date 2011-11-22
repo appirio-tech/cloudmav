@@ -28,5 +28,5 @@ module ApplicationHelper
     result = ((points / 1000) * 10).round.to_f / 10
     "#{result} k"
   end
-  
+
 end
