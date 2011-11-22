@@ -6,11 +6,16 @@ class SyncStackOverflowProfileJob
     profile = stack_overflow_profile.profile
     
     if stack_overflow_profile.stack_overflow_id.nil?
-      return 
+      stack_overflow_profile.set_error_message! "I think you forgot to enter your id."
+      return
     end
     
     user = StackOverflow.get_user(stack_overflow_profile.stack_overflow_id)
-    return if user.nil?   
+    
+    if user.nil?
+      stack_overflow_profile.set_error_message! "You couldn't find you on StackOverflow. Double check that you entered your id and not your username."
+      return      
+    end
     
     sync_user_data(user, stack_overflow_profile)
     sync_tags(stack_overflow_profile)

@@ -15,6 +15,11 @@ module CodeMav
         !self.error_message.blank?
       end
       
+      def set_error_message!(message)
+        self.error_message = message
+        self.save
+      end
+      
       def display_last_sync_date
         last_synced_date.strftime("%e %b %Y %H:%m:%S%p")
       end
