@@ -1,0 +1,50 @@
+<div id="skill_pie_chart">
+</div>
+
+<script type="text/javascript">
+        $(document).ready(function() {
+            var data = <%= @skill_pie_javascript_data.html_safe %>;
+            var w = 150;
+            var h = 150;
+            var r = 75;
+
+            var vis = d3.select("#skill_pie_chart")
+                    .append("svg:svg")
+                    .data([data])
+                    .attr("width", w)
+                    .attr("height", h);
+
+            var g = vis.append("svg:g").attr("transform", "translate(" + r + "," + r + ")");
+
+            var arc = d3.svg.arc().outerRadius(r);
+
+            var pie = d3.layout.pie()
+                    .value(function(d) {
+                        return d.percent;
+                    });
+
+            var arcs = g.selectAll("g.slice")
+                    .data(pie)
+                    .enter()
+                    .append("svg:g")
+                    .attr("class", function(d) {
+                        return d.data.skill;
+                    });
+
+            arcs.append("svg:path")
+                    .attr("class", function(d) {
+                        return d.data.skill;
+                    })
+                    .attr("d", arc);
+
+        arcs.append("svg:text")
+                .attr("transform", function(d) {
+                d.innerRadius = 0;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";
+            })
+            .attr("text-anchor", "middle")
+            .attr("class", "skill_pie_label")
+            .text(function(d) { return d.data.skill; });
+        });
+    </script>

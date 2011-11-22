@@ -20,5 +20,18 @@ class SkillsPiePresenter
     
     data
   end
+  
+  def self.as_javascript(data)
+    items = []
+    data.each do |d|
+      items << %Q{{"skill":"#{d["skill"]}", "score":#{d["score"]}, "percent":#{d["percent"]}}}      
+    end
+    
+    %Q{[#{items.join(", ")}]}.html_safe
+  end
+  
+  def self.get_javascript_data(profile)
+    as_javascript(get_data(profile))
+  end
 
 end
