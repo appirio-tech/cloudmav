@@ -44,19 +44,19 @@ Feature: SlideShare Profile
   #   Then I should be able to download the slides
   #   And I should see a slideshow
   # 
-  # Scenario: Don't see SlideShare on users without SlideShare
-  # 
-  #   Given there is another user
-  #   When I view their speaker profile
-  #   Then I should not see their SlideShare profile
-  # 
-  # Scenario: See SlideShare on users with SlideShare
-  # 
-  #   Given there is another user
-  #   And the other user has a SlideShare profile
-  #   When I view their speaker profile
-  #   Then I should see their SlideShare profile
-  # 
+  Scenario: Don't see SlideShare on users without SlideShare
+  
+    Given there is another user
+    When I view their profile
+    Then I should not see their SlideShare profile
+  
+  Scenario: See SlideShare on users with SlideShare
+  
+    Given there is another user
+    And the other user has a SlideShare profile
+    When I view their profile
+    Then I should see their SlideShare profile
+  
   
   Scenario: Edit SlideShare
   

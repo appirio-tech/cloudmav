@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
       profile_url(current_user.profile)
     else
       current_user.profile.make_autodiscovered!
-      edit_profile_path(current_user.profile)
+      profile_syncable_path(current_user.profile)
     end
   end
   

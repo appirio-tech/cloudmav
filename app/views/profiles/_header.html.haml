@@ -10,6 +10,7 @@
       = @profile.username
       - if can? :edit, @profile
         = link_to "edit profile", edit_profile_path(@profile), :class => "btn"
+        = link_to "edit syncables", profile_syncable_path(@profile), :class => "btn"
 
 .row
   .span14

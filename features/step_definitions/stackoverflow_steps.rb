@@ -1,6 +1,6 @@
 When /^I sync my StackOverflow account$/ do
   VCR.use_cassette("stack_overflow", :record => :all) do
-    visit edit_profile_path(@profile)
+    visit profile_syncable_path(@profile)
     fill_in "stack_overflow_profile_stack_overflow_id", :with => '60336'
     within("#sync_stack_overflow") do
       click_button "Sync"
@@ -64,7 +64,7 @@ When /^I edit my StackOverflow id$/ do
     profile = Profile.find(@profile.id)
     @old_questions = profile.stack_overflow_profile.questions.to_a
     @old_answers = profile.stack_overflow_profile.answers.to_a
-    visit edit_profile_path(@profile)
+    visit profile_syncable_path(@profile)
     fill_in "stack_overflow_profile_stack_overflow_id", :with => "5056"
     within("#sync_stack_overflow") do
       click_button "Sync"
@@ -83,7 +83,7 @@ Then /^I should have my new StackOverflow answers$/ do
 end
 
 When /^I delete my StackOverflow profile$/ do
-  visit edit_profile_path(@profile)
+  visit profile_syncable_path(@profile)
   profile = Profile.find(@profile.id)
   @old_questions = profile.stack_overflow_profile.questions.to_a
   @old_answers = profile.stack_overflow_profile.answers.to_a
@@ -96,10 +96,22 @@ end
 
 When /^I sync my StackOverflow account with id "([^"]*)"$/ do |stackoverflow_id|
   VCR.use_cassette("stack_overflow_#{stackoverflow_id}", :record => :all) do
-    visit edit_profile_path(@profile)
+    visit profile_syncable_path(@profile)
     fill_in "stack_overflow_profile_stack_overflow_id", :with => stackoverflow_id
     within("#sync_stack_overflow") do
       click_button "Sync"
     end
   end
+end
+
+When /^I there is an error with my StackOverflow sync$/ do
+  profile = Profile.find(@profile.id)
+  so_profile = profile.stack_overflow_profile
+  so_profile.error_message = "Your id is wrong!"
+  so_profile.save
+end
+
+Then /^I should see the error on my syncable page$/ do
+  visit profile_syncable_path(@profile)
+  And %Q{I should see "Your id is wrong!"}
 end

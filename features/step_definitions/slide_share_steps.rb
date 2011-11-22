@@ -1,6 +1,6 @@
 When /^I sync my SlideShare account$/ do
   VCR.use_cassette("slide_share", :record => :new_episodes) do
-    visit edit_profile_path(@profile)
+    visit profile_syncable_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
     within("#slide_share") do
       click_button "Sync"
@@ -40,7 +40,7 @@ end
 
 Given /^I have synced my SlideShare account$/ do
   VCR.use_cassette("slide_share", :record => :new_episodes) do
-    visit edit_profile_path(@profile)
+    visit profile_syncable_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => 'rookieone'
     within("#slide_share") do
       click_button "Sync"
@@ -95,7 +95,7 @@ When /^I edit my SlideShare username$/ do
   VCR.use_cassette("edit slideshare", :record => :new_episodes) do
     profile = Profile.find(@profile.id)
     @old_talks = profile.talks.to_a
-    visit edit_profile_path(@profile)
+    visit profile_syncable_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => "themoleskin"
     within "#slide_share" do
       click_button "Sync"
@@ -111,7 +111,7 @@ Then /^my old talks should be not have their SlideShare info$/ do
 end
 
 When /^I delete my SlideShare profile$/ do
-  visit edit_profile_path(@profile)
+  visit profile_syncable_path(@profile)
   profile = Profile.find(@profile.id)
   @old_talks = profile.talks.to_a
   click_link "delete_slide_share"
@@ -123,7 +123,7 @@ end
 
 When /^I sync my SlideShare account with username "([^"]*)"$/ do |username|
   VCR.use_cassette("slide_share_#{username}", :record => :new_episodes) do
-    visit edit_profile_path(@profile)
+    visit profile_syncable_path(@profile)
     fill_in "slide_share_profile_slide_share_username", :with => username
     within "#slide_share" do
       click_button "Sync"
@@ -136,4 +136,7 @@ Then /^my SlideShare profile should have the url$/ do
   @profile.slide_share_profile.url.should == "http://www.slideshare.net/#{@profile.slide_share_profile.slide_share_username}"
 end
 
+When /^I view their profile$/ do
+  visit profile_path(User.find(@other_user.id).profile)
+end
 

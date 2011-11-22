@@ -1,6 +1,6 @@
 When /^I sync my Bitbucket account$/ do
   VCR.use_cassette("bitbucket", :record => :new_episodes) do
-    visit edit_profile_path(@profile)
+    visit profile_syncable_path(@profile)
     fill_in "bitbucket_profile_username", :with => 'rookieone'
     within("#sync_bitbucket") do
       click_button "Sync"
@@ -18,11 +18,11 @@ Then /^I should have the collection of my Bitbucket repos$/ do
 end
 
 Then /^I should not see their Bitbucket profile$/ do
-  And %Q{I should not see "Go to my Bitbucket Profile"}
+  page.has_selector?("#bitbucket_info").should == false
 end
 
 Then /^I should see their Bitbucket profile$/ do
-  And %Q{I should see "Go to my Bitbucket Profile"}
+  page.has_selector?("#bitbucket_info").should == true
 end
 
 Given /^the other user has a Bitbucket profile$/ do
@@ -44,7 +44,7 @@ When /^I edit my Bitbucket id$/ do
   VCR.use_cassette("edit bitbucket", :record => :new_episodes) do
     profile = Profile.find(@profile.id)
     @old_repositories = profile.bitbucket_profile.repositories.to_a
-    visit edit_profile_path(@profile)
+    visit profile_syncable_path(@profile)
     fill_in "bitbucket_profile_username", :with => "claudiolassala"
     within("#sync_bitbucket") do
       click_button "Sync"
@@ -63,7 +63,7 @@ Then /^I should have my new Bitbucket repositories$/ do
 end
 
 When /^I delete my Bitbucket profile$/ do
-  visit edit_profile_path(@profile)
+  visit profile_syncable_path(@profile)
   profile = Profile.find(@profile.id)
   @old_repositories = profile.bitbucket_profile.repositories.to_a
   click_link "delete_bitbucket"

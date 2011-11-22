@@ -21,6 +21,7 @@ Codemav::Application.routes.draw do
   end
   
   resources :profiles do
+    resource :syncable
     resource :autodiscover
     
     # basic resources

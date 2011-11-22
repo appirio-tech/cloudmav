@@ -6,6 +6,11 @@
     #sync_stack_overflow
       = form_for [@profile, @stack_overflow_profile] do |f|
         = f.text_field :stack_overflow_id, :class => "xlarge"
+        - if @stack_overflow_profile.has_error?
+          %span.label.important Error        
         = submit_tag "Sync", :class => "btn success"
         - if @profile.stack_overflow_profile
           = link_to "Delete", [@profile, @stack_overflow_profile], :id=> :delete_stack_overflow, :confirm => 'Are you sure?', :method => :delete, :class => "btn danger"
+    - if @stack_overflow_profile.has_error?
+      .alert-message.block-message.error
+        = @stack_overflow_profile.error_message

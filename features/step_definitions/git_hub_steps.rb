@@ -1,6 +1,6 @@
 When /^I sync my GitHub account$/ do
   VCR.use_cassette("github", :record => :new_episodes) do
-    visit edit_profile_path(@profile)
+    visit profile_syncable_path(@profile)
     fill_in "git_hub_profile_username", :with => 'rookieone'
     within("#sync_git_hub") do
       click_button "Sync"
@@ -65,7 +65,7 @@ When /^I edit my GitHub id$/ do
   VCR.use_cassette("edit github", :record => :new_episodes) do
     profile = Profile.find(@profile.id)
     @old_repositories = profile.git_hub_profile.repositories.to_a
-    visit edit_profile_path(@profile)
+    visit profile_syncable_path(@profile)
     fill_in "git_hub_profile_username", :with => "panesofglass"
     within("#sync_git_hub") do
       click_button "Sync"
@@ -84,7 +84,7 @@ Then /^I should have my new GitHub repositories$/ do
 end
 
 When /^I delete my GitHub profile$/ do
-  visit edit_profile_path(@profile)
+  visit profile_syncable_path(@profile)
   profile = Profile.find(@profile.id)
   @old_repositories = profile.git_hub_profile.repositories.to_a
   click_link "delete_git_hub"

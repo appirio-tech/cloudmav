@@ -6,7 +6,7 @@ module ApplicationHelper
 
     for name in f_names
       if flash[name]
-        fl = fl + "<div class=\"alert-message #{name}\">#{flash[name]}</div>"
+        fl = fl + "<div class=\"flash alert-message #{name}\">#{flash[name]}</div>"
       end
       flash[name] = nil;
     end

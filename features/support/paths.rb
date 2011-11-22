@@ -16,6 +16,8 @@ module NavigationHelpers
       profile_path(@user.profile)
     when /my edit profile page/
       edit_profile_path(@user.profile)
+    when /my syncable page/
+      profile_syncable_path(@user.profile)      
     when /my profile knowledge page/
       profile_knowledge_path(@profile)
 

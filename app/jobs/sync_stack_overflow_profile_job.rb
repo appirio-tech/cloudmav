@@ -5,7 +5,9 @@ class SyncStackOverflowProfileJob
     stack_overflow_profile = StackOverflowProfile.find(id)
     profile = stack_overflow_profile.profile
     
-    return if stack_overflow_profile.stack_overflow_id.nil?
+    if stack_overflow_profile.stack_overflow_id.nil?
+      return 
+    end
     
     user = StackOverflow.get_user(stack_overflow_profile.stack_overflow_id)
     return if user.nil?   

@@ -1,0 +1,37 @@
+= content_for :title do
+  Syncables for #{@profile.display_name}
+ 
+.page-header
+  %h1
+    Syncables
+    %small
+      last synced on #{@profile.display_last_synced_date} &nbsp;
+
+#syncables
+  %section
+    %h3 Knowledge
+    %ul.unstyled
+      = render :partial => "stack_overflow_profiles/syncable"
+    
+  %section
+    %h3 Experience
+    %ul.unstyled
+      = render :partial => "linkedin_profiles/syncable"
+            
+  %section
+    %h3 Code
+    %ul.unstyled
+      = render :partial => "git_hub_profiles/syncable"
+      %li= render :partial => "bitbucket_profiles/syncable"
+      %li= render :partial => "coder_wall_profiles/syncable"
+                
+  %section
+    %h3 Speaking
+    %ul.unstyled
+      %li= render :partial => "speaker_rate_profiles/syncable"
+      %li= render :partial => "slide_share_profiles/syncable"
+
+  %section
+    %h3 Social
+    %ul.unstyled
+      %li= render :partial => "twitter_profiles/syncable"

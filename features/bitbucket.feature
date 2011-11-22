@@ -21,12 +21,12 @@ Feature: BitbucketProfile
    When I view their code profile
    Then I should not see their Bitbucket profile
   
-  # Scenario: See Bitbucket on users with Bitbucket
-  # 
-  #  Given there is another user
-  #  And the other user has a Bitbucket profile
-  #  When I view their code profile
-  #  Then I should see their Bitbucket profile
+  Scenario: See Bitbucket on users with Bitbucket
+  
+   Given there is another user
+   And the other user has a Bitbucket profile
+   When I view their profile
+   Then I should see their Bitbucket profile
   
   Scenario: Edit Bitbucket
   

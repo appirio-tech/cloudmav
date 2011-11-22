@@ -1,4 +1,4 @@
 - if @profile.speaker_rate_profile
-  %tr
+  %tr#speaker_rate_info
     %td= image_tag "syncable/speaker_rate_logo.png"
     %td= link_to @profile.speaker_rate_profile.speaker_rate_id, @profile.speaker_rate_profile.url, :target => "_blank"
