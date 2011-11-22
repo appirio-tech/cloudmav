@@ -1,10 +1,21 @@
 class SkillsPiePresenter
 
   def self.get_data(profile)
-    data = {}
+    data = []
+    skill_scores = {}
     
-    profile.skillings.each do |skilling|
-      
+    total = 0
+    profile.skills.each do |skill|
+      skill_scores[skill] = profile.skill_score(skill)
+      total = total + skill_scores[skill]
+    end
+    
+    profile.skills.each do |skill|
+      data << {
+        "skill" => skill,
+        "score" => skill_scores[skill],
+        "percent" => (skill_scores[skill].to_f / total.to_f) * 100
+      }
     end
     
     data
