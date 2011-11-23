@@ -12,13 +12,25 @@ class DevJourneyPresenter
         end
       end
       
-      puts "skillings by months"
-      puts skillings_by_month.inspect
-      consolidated_data = skillings_by_month
+      consolidated_data = consolidate_skillings_by_month(skillings_by_month)
       skill_data[:data] = consolidated_data
       data << skill_data
     end
     data
+  end
+  
+  def self.consolidate_skillings_by_month(skillings_by_month)
+    data = {}
+    skillings_by_month.each do |s|
+      score = data[s[:date]] || 0
+      data[s[:date]] = score + s[:score]
+    end
+    result = []
+    data.each do |k,v|
+      result << { :date => DateTime.parse(k), :score => v }
+    end
+    sorted = result.sort { |a,b| a[:date] <=> b[:date] }
+    sorted.each { |d| d[:date] = d[:date].strftime("%m/%d/%Y") }
   end
   
   def self.skilling_for_job?(skilling)
@@ -30,7 +42,7 @@ class DevJourneyPresenter
     months = months_in_date_range(job.start_date, job.end_date)
     skill_pts_per_month = skilling.score / months.count
     months.each do |m|
-      skillings_by_month << { :date => m.strftime("%m/%d/%Y"), :score => skill_pts_per_month }
+      skillings_by_month << { :date => m.strftime("%d/%m/%Y"), :score => skill_pts_per_month }
     end
   end
   
