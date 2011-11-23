@@ -7,9 +7,13 @@ class DevJourneyPresenter
       skillings_by_month = []
       profile.skillings.where(:skill_name => skill).each do |skilling|
         
-        if skilling_for_job?(skilling)
+        case skilling.subject_class_name
+        when "Job"
           add_skill_data_for_job(skilling, skillings_by_month)
+        when "GitHubRepository"
+          add_skill_data_for_git_hub_repo(skilling, skillings_by_month)
         end
+        
       end
       
       consolidated_data = consolidate_skillings_by_month(skillings_by_month)
@@ -33,10 +37,6 @@ class DevJourneyPresenter
     sorted.each { |d| d[:date] = d[:date].strftime("%m/%d/%Y") }
   end
   
-  def self.skilling_for_job?(skilling)
-    skilling.subject_class_name == "Job"
-  end
-  
   def self.add_skill_data_for_job(skilling, skillings_by_month)
     job = skilling.subject
     months = months_in_date_range(job.start_date, job.end_date)
@@ -44,6 +44,13 @@ class DevJourneyPresenter
     months.each do |m|
       skillings_by_month << { :date => m.strftime("%d/%m/%Y"), :score => skill_pts_per_month }
     end
+  end
+  
+  def self.add_skill_data_for_git_hub_repo(skilling, skillings_by_month)
+    repo = skilling.subject
+    cd = DateTime.parse(repo.creation_date)
+    date = Date.new cd.year, cd.month
+    skillings_by_month << { :date => date.strftime("%d/%m/%Y"), :score => skilling.score }
   end
   
   def self.months_in_date_range(from, to)
