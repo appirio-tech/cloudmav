@@ -48,11 +48,27 @@ class DevJourneyPresenter
     end
     
     return {
-      :start_date => dates.flatten.sort.first.strftime("%m/%d/%Y"),
-      :highest_score => scores.flatten.sort.last,
+      :start_date => get_start_date(dates),
+      :highest_score => get_highest_score(scores),
       :data => data,
       :javascript_data => as_javascript(data)
     }
+  end
+  
+  def self.get_start_date(dates)
+    if dates.empty?
+      return 1.year.ago
+    else    
+      return dates.flatten.sort.first.strftime("%m/%d/%Y")
+    end
+  end
+  
+  def self.get_highest_score(scores)
+    if scores.empty?
+      return 100
+    else
+      return scores.flatten.sort.last
+    end
   end
   
   def self.convert_dates(data)
