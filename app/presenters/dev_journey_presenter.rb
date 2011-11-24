@@ -33,10 +33,42 @@ class DevJourneyPresenter
       end
       
       consolidated_data = consolidate_skillings_by_month(skillings_by_month)
-      skill_data[:data] = consolidated_data
+      result = aggregate_by_month(consolidated_data)
+      result = convert_dates(result)
+
+      skill_data[:data] = result      
       data << skill_data
     end
     data
+  end
+  
+  def self.convert_dates(data)
+    data.each { |d| d[:date] = d[:date].strftime("%m/%d/%Y") }
+  end
+  
+  def self.aggregate_by_month(data)
+    sum = 0
+    result = []
+    last_date = nil
+    data.each do |d|
+      date = d[:date]
+      score = d[:score]
+      unless last_date.nil? || (date.month == (last_date >> 1).month)
+        months_in_date_range(last_date >> 1, date << 1).each do |d|
+          result << {
+            :date => d,
+            :score => sum
+          }
+        end        
+      end
+      sum = sum + score
+      last_date = date
+      result << {
+        :date => date,
+        :score => sum
+      }      
+    end
+    result
   end
   
   def self.consolidate_skillings_by_month(skillings_by_month)
@@ -50,13 +82,13 @@ class DevJourneyPresenter
       result << { :date => DateTime.parse(k), :score => v }
     end
     sorted = result.sort { |a,b| a[:date] <=> b[:date] }
-    sorted.each { |d| d[:date] = d[:date].strftime("%m/%d/%Y") }
   end
   
   def self.add_skill_data_for_job(skilling, skillings_by_month)
     job = skilling.subject
     months = months_in_date_range(job.start_date, job.end_date)
-    skill_pts_per_month = skilling.score / months.count
+    
+    skill_pts_per_month = (skilling.score / months.count)
     months.each do |m|
       skillings_by_month << { :date => m.strftime("%d/%m/%Y"), :score => skill_pts_per_month }
     end

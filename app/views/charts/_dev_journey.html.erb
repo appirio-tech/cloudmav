@@ -11,47 +11,12 @@
         var area;
 
         $(document).ready(function() {
-            var data = [
-                {
-                    "Name": "csharp",
-                    "Data":[
-                        { "Date" : Date.parse("2/1/2010"), "Skill": 0 },
-                        { "Date" : Date.parse("3/1/2010"), "Skill": 10 },
-                        { "Date" : Date.parse("4/1/2010"), "Skill": 13 },
-                        { "Date" : Date.parse("5/1/2010"), "Skill": 30 },
-                        { "Date" : Date.parse("6/1/2010"), "Skill": 33 },
-                        { "Date" : Date.parse("7/1/2010"), "Skill": 50 },
-                        { "Date" : Date.parse("8/1/2010"), "Skill": 60 },
-                        { "Date" : Date.parse("9/1/2010"), "Skill": 70 },
-                        { "Date" : Date.parse("10/1/2010"), "Skill": 80 },
-                        { "Date" : Date.parse("11/1/2010"), "Skill": 90 },
-                        { "Date" : Date.parse("12/1/2010"), "Skill": 100 },
-                        { "Date" : Date.parse("1/1/2011"), "Skill": 110 },
-                        { "Date" : Date.parse("2/1/2011"), "Skill": 120 },
-                        { "Date" : Date.parse("3/1/2011"), "Skill": 130 },
-                        { "Date" : Date.parse("4/1/2011"), "Skill": 140 }
-                    ]
-                },
-                {
-                    "Name": "ruby",
-                    "Data": [
-                        { "Date" : Date.parse("10/1/2010"), "Skill": 10 },
-                        { "Date" : Date.parse("11/1/2010"), "Skill": 20 },
-                        { "Date" : Date.parse("12/1/2010"), "Skill": 30 },
-                        { "Date" : Date.parse("1/1/2011"), "Skill": 50 },
-                        { "Date" : Date.parse("2/1/2011"), "Skill": 60 },
-                        { "Date" : Date.parse("3/1/2011"), "Skill": 70 },
-                        { "Date" : Date.parse("4/1/2011"), "Skill": 80 },
-                        { "Date" : Date.parse("5/1/2011"), "Skill": 90 },
-                        { "Date" : Date.parse("6/1/2011"), "Skill": 100 }
-                    ]
-                }
-            ];
+            var data = <%= @dev_journey_javascript_data.html_safe %>;
 
             var w = 940;
             var h = 200;
             var margin = 30;
-            x = d3.time.scale().range([0, w - margin]).domain([Date.parse("2/1/2010"), Date.parse("6/1/2011")]);
+            x = d3.time.scale().range([0, w - margin]).domain([Date.parse("1/1/2008"), Date.parse("12/1/2011")]);
             y = d3.scale.linear().range([h - margin, 0 + margin]).domain([0, 140]);
             xAxis = d3.svg.axis().scale(x).orient("bottom").tickSize(-h, 0).tickPadding(6).ticks(4);
             yAxis = d3.svg.axis().scale(y).orient("right").tickSize(-w).tickPadding(6);
@@ -74,20 +39,20 @@
             line = d3.svg.line()
                     .interpolate("linear")
                     .x(function(d) {
-                        return x(d["Date"]);
+                        return x(d.date);
                     })
                     .y(function(d) {
-                        return y(d["Skill"]);
+                        return y(d.score);
                     });
 
             area = d3.svg.area()
                     .interpolate("linear")
                     .x(function(d) {
-                        return x(d["Date"]);
+                        return x(d.date);
                     })
                     .y0(y(0))
                     .y1(function(d) {
-                        return y(d["Skill"]);
+                        return y(d.score);
                     });
 
             g.select("g.x.axis").call(xAxis);
@@ -98,13 +63,13 @@
                 console.log(d.Data);
 
                 g.append("svg:path")
-                        .attr("class", "area " + d.Name);
+                        .attr("class", "area " + d.name);
 
                 g.append("svg:path")
-                        .attr("class", "line " + d.Name);
+                        .attr("class", "line " + d.name);
 
-                g.select("path.area." + d.Name).data([d.Data]).attr("d", area);
-                g.select("path.line." + d.Name).data([d.Data]).attr("d", line);
+                g.select("path.area." + d.name).data([d.data]).attr("d", area);
+                g.select("path.line." + d.name).data([d.data]).attr("d", line);
             });
 
 
