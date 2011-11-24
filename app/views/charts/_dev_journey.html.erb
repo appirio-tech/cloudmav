@@ -11,13 +11,13 @@
         var area;
 
         $(document).ready(function() {
-            var data = <%= @dev_journey_javascript_data.html_safe %>;
+            var data = <%= @dev_journey_data[:javascript_data].html_safe %>;
 
             var w = 940;
             var h = 200;
             var margin = 30;
-            x = d3.time.scale().range([0, w - margin]).domain([Date.parse("1/1/2008"), Date.parse("12/1/2011")]);
-            y = d3.scale.linear().range([h - margin, 0 + margin]).domain([0, 140]);
+            x = d3.time.scale().range([0, w - margin]).domain([Date.parse("<%= @dev_journey_data[:start_date] %>"), Date.today()]);
+            y = d3.scale.linear().range([h - margin, 0 + margin]).domain([0, <%= @dev_journey_data[:highest_score] %>]);
             xAxis = d3.svg.axis().scale(x).orient("bottom").tickSize(-h, 0).tickPadding(6).ticks(4);
             yAxis = d3.svg.axis().scale(y).orient("right").tickSize(-w).tickPadding(6);
 

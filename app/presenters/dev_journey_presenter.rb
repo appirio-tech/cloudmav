@@ -18,6 +18,9 @@ class DevJourneyPresenter
   
   def self.get_data(profile)
     data = []
+    dates = []
+    scores = []
+    
     profile.skills.each do |skill|
       skill_data = { :name => skill }
       skillings_by_month = []
@@ -34,12 +37,22 @@ class DevJourneyPresenter
       
       consolidated_data = consolidate_skillings_by_month(skillings_by_month)
       result = aggregate_by_month(consolidated_data)
+      
+      dates << result.map{|r| r[:date] }
+      scores << result.map{|r| r[:score] }
+      
       result = convert_dates(result)
 
       skill_data[:data] = result      
       data << skill_data
     end
-    data
+    
+    return {
+      :start_date => dates.flatten.sort.first.strftime("%m/%d/%Y"),
+      :highest_score => scores.flatten.sort.last,
+      :data => data,
+      :javascript_data => as_javascript(data)
+    }
   end
   
   def self.convert_dates(data)

@@ -13,6 +13,7 @@
 //= require backbone.js
 //= require bootstrap-twipsy.js
 //= require bootstrap-popover.js
+//= require date.js
 //= require d3.js
 //= require d3.chart.js
 //= require d3.layout.js

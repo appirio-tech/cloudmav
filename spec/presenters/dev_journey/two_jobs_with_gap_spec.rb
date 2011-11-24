@@ -14,9 +14,9 @@ describe "Dev Journey" do
       
       @data = DevJourneyPresenter.get_data(@profile)
     end
-    it { @data[0][:name].should == "ruby" }
+    it { @data[:data][0][:name].should == "ruby" }
     it "should have the data" do
-      @data[0][:data].should == [
+      @data[:data][0][:data].should == [
         {:date=>"01/01/2010", :score=> 20}, 
         {:date=>"02/01/2010", :score=> 40}, 
         {:date=>"03/01/2010", :score=> 60}, 
@@ -30,6 +30,8 @@ describe "Dev Journey" do
         {:date=>"11/01/2010", :score=> 200}
         ]
     end
+    it { @data[:start_date].should == "01/01/2010" }
+    it { @data[:highest_score].should == 200 }    
   end
   
 end
