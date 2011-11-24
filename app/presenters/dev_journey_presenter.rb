@@ -1,5 +1,21 @@
 class DevJourneyPresenter
   
+  def self.as_javascript(data)
+    items = []
+    data.each do |d|
+      # puts ""
+      # puts d.inspect
+      data = d[:data].map{|i| %Q{ { date: Date.parse('#{i[:date]}'), score: #{i[:score]} } }}.join(", ")
+      items << %Q{ { name: '#{d[:name]}', data: [#{data}]} }      
+    end
+    
+    %Q{[#{items.join(", ")}]}.html_safe
+  end
+  
+  def self.get_javascript_data(profile)
+    as_javascript(get_data(profile))
+  end
+  
   def self.get_data(profile)
     data = []
     profile.skills.each do |skill|
