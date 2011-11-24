@@ -16,4 +16,5 @@
 //= require d3.js
 //= require d3.chart.js
 //= require d3.layout.js
+//= require d3.time.js
 //= require previous_app.js

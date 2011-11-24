@@ -1,0 +1,29 @@
+#dev_journey_chart {
+  margin-bottom: 16px;
+  .axis {
+      shape-rendering: crispEdges;
+  }
+
+  .y.axis line {
+      stroke: #999;
+  }
+
+  .x.axis line {
+      stroke: #ddd;
+  }
+
+  .axis path {
+      fill: none;
+      stroke-width: .5px;
+  }
+
+  path.line {
+      fill: none;
+      stroke: blue;
+      stroke-width: .5px;
+  }
+
+  path.area {
+      opacity: .6;
+  }
+}

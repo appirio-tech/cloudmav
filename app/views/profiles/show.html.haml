@@ -6,7 +6,10 @@
   = render :partial => "profile_menu"
   .clearfix
   
-  .row#profile_content
+  .row
+    .span16
+      = render :partial => "charts/dev_journey"
+  .row#profile_content  
     .span10
       = render :partial => "charts/skill_pie"
       &nbsp;
