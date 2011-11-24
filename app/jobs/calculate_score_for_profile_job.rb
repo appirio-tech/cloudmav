@@ -39,6 +39,7 @@ class CalculateScoreForProfileJob
     return if repos.nil?
     
     repos.each do |r|
+      r.clear_score!
       points = 1
       points = points + (r.watchers || 0) * 0.1
       points = points + (r.forks || 0) * 0.15
