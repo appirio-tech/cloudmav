@@ -14,7 +14,7 @@
         .clearfix
           = f.label :description
           .input
-            %span.uneditable-input= @job.description
+            %span.uneditable-input{:style=> "height: auto;"}= @job.description
         .clearfix
           = f.label "Dates"
           .input

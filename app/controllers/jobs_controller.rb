@@ -8,9 +8,11 @@ class JobsController < LoggedInController
   
   def update
     authorize! :sync_profile, @profile
+    puts "PARAMS"
+    puts params.inspect
     
     @job = Job.find(params[:id])
-    @job.tags_text = params[:job][:tags_text]
+    @job.tags_text = params[:tags]
     if @job.save
       @job.retag!
       Resque.enqueue(CalculateSkillsForProfileJob, @profile.id)

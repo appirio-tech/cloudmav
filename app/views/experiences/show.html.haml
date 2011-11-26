@@ -13,7 +13,7 @@
         - else
           %ul.unstyled
             - @profile.jobs.chronological_order.each do |j|
-              %li.job
+              %li.job.clearfix
                 %h3
                   = j.title
                   %small
@@ -21,6 +21,8 @@
                     = link_to "edit", edit_profile_job_path(@profile, j), :class => "btn"
                 %span= j.display_date_range
                 %p= j.display_description
+                = render :partial => "shared/simple_tags", :locals => { :taggable => j }
+                %hr
       &nbsp;
     .grid_2
 

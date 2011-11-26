@@ -103,6 +103,7 @@ class CalculateScoreForProfileJob
   def self.calculate_score_for_experience(profile)
     return unless profile.jobs
     profile.jobs.each do |job|
+      job.clear_score!
       duration = job.job_duration_in_days
       points = (duration * 0.05).round
       job.earn(points, :experience_points, "for job", job)
