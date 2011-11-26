@@ -115,7 +115,9 @@ class DevJourneyPresenter
   
   def self.add_skill_data_for_job(skilling, skillings_by_month)
     job = skilling.subject
-    months = months_in_date_range(job.start_date, job.end_date)
+    sd = job.start_date
+    ed = job.end_date || DateTime.now
+    months = months_in_date_range(sd, ed)
     
     skill_pts_per_month = (skilling.score / months.count)
     months.each do |m|
