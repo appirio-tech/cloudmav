@@ -15,7 +15,7 @@ class JobsController < LoggedInController
     @job.tags_text = params[:tags]
     if @job.save
       @job.retag!
-      Resque.enqueue(CalculateSkillsForProfileJob, @profile.id)
+      Resque.enqueue(CalculateScoreForProfileJob, @profile.id)
       redirect_to profile_experience_path(@profile)
     else
       render :edit
