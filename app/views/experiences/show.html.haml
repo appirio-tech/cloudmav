@@ -16,7 +16,9 @@
               %li.job
                 %h3
                   = j.title
-                  %small= j.company_name
+                  %small
+                    = j.company_name
+                    = link_to "edit", edit_profile_job_path(@profile, j), :class => "btn"
                 %span= j.display_date_range
                 %p= j.display_description
       &nbsp;

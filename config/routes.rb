@@ -42,6 +42,7 @@ Codemav::Application.routes.draw do
     resources :speaker_bios
     resources :blogs
     resources :linkedin_profiles
+    resources :jobs
     resources :twitter_profiles
     resources :talks do
       resource :link_to_git_hub_repository

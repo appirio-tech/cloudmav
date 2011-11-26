@@ -1,0 +1,42 @@
+= content_for :title do
+  Edit Job
+
+.row
+  .span16
+    
+    = form_for [@profile, @job] do |f|
+      %fieldset
+        %legend Edit Job
+        .clearfix
+          = f.label :title
+          .input
+            %span.uneditable-input= @job.title
+        .clearfix
+          = f.label :description
+          .input
+            %span.uneditable-input= @job.description
+        .clearfix
+          = f.label "Dates"
+          .input
+            %span.uneditable-input= @job.display_date_range
+        %hr
+        .clearfix
+          = f.label :tags_text, "Tags"
+          .input
+            = f.text_area :tags_text, :class => "tagit"
+        .actions
+          = f.submit "Save", :disable_with => "Saving...", :class => "btn primary"
+          
+          
+          
+:javascript
+  $(function() {
+    $(".tagit").each(function() {
+      var values_string = $(this).val();
+      var values = values_string.split(',');
+      $(this).hide();
+      $(this).parent().append("<ul name='tags' class='unstyled'></ul>");
+      $(this).parent().find("ul").tagit({select:true, initialTags: values});
+      $(this).parent().find("select").attr("id", "tags");
+    });
+  });          

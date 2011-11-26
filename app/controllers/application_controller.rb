@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
   end
   
   def access_denied
-    flash[:error] = "Not authorized to perform that action"
+    flash[:error] = "Sorry but you can't do that."
     redirect_to root_path
   end
   

@@ -1,10 +1,9 @@
 class PagesController < ApplicationController
   
-  def home
+  def home    
     if current_profile
-      puts "redirect to #{profile_path(current_profile)}"
+      flash.keep
       redirect_to profile_path(current_profile)
-      #redirect_to backlog_path
     else 
       @user = User.new
     end
