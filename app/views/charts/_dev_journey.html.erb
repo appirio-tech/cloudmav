@@ -2,19 +2,57 @@
 </div>
 
 <script type="text/javascript">
-        var xAxis;
-        var yAxis;
-        var x;
-        var y;
-        var g;
-        var line;
-        var area;
+        var xAxis, yAxis;
+        var x, y, g, h, w;
+        var line, area;
+        
+        function show_jobs() {
+          console.log("show jobs");
+          var data = <%= @dev_journey_jobs_data[:javascript_data].html_safe %>;
+          
+          g.selectAll(".job_start_line")
+                          .data(data)
+                          .enter()
+                          .append("svg:line")
+                          .attr("class", "job_start_line")
+                          .attr("x1", function(d) {
+                              return x(d.StartDate);
+                          })
+                          .attr("y1", function(d) {
+                              return 0;
+                          })
+                          .attr("x2", function(d) {
+                              return x(d.StartDate);
+                          })
+                          .attr("y2", function(d) {
+                              return h;
+                          });
+
+                  g.selectAll(".job_label")
+                          .data(data)
+                          .enter()
+                          .append("svg:text")
+                          .attr("class", "job_label")
+                          .text(function(d) {
+                              return d.CompanyName;
+                          })
+                          .attr("x", function(d) {
+                              return x(d.StartDate);
+                          })
+                          .attr("y", function(d) {
+                              return -4;
+                          })
+                          .attr("text-anchor", "left")
+                          .attr("transform", function(d) {
+                              return "rotate(90 " + x(d.StartDate) + " 0)translate(4,0)";
+                          });
+        }
 
         $(document).ready(function() {
             var data = <%= @dev_journey_data[:javascript_data].html_safe %>;
 
-            var w = 940;
-            var h = 200;
+            w = 940;
+            h = 200;
             var margin = 30;
             x = d3.time.scale().range([0, w - margin]).domain([Date.parse("<%= @dev_journey_data[:start_date] %>"), Date.today()]);
             y = d3.scale.linear().range([h - margin, 0 + margin]).domain([0, <%= @dev_journey_data[:highest_score] %>]);
@@ -71,9 +109,8 @@
                 g.select("path.area." + d.name).data([d.data]).attr("d", area);
                 g.select("path.line." + d.name).data([d.data]).attr("d", line);
             });
-
-
-
+            
+            show_jobs();
         });
 
 </script>

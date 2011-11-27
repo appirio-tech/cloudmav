@@ -6,7 +6,7 @@
 %p We found these jobs on your LinkedIn Profile. 
   
 = form_tag confirm_profile_linkedin_profile_path(@profile, @linkedin_profile), :method => :post do
-  = big_primary_button_submit_tag "Add my LinkedIn Jobs to CodeMav", :disable_with => "Adding..."
+  = submit_tag "Add my LinkedIn Jobs to CodeMav", :disable_with => "Adding...", :class => "btn primary"
 
 %ul.list
   - @linkedin_profile.linkedin_positions.each do |p|

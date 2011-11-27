@@ -16,6 +16,7 @@ class ProfilesController < ApplicationController
     @tab = "summary"
     @skill_pie_javascript_data = SkillsPiePresenter.get_javascript_data(@profile)
     @dev_journey_data = DevJourneyPresenter.get_data(@profile)
+    @dev_journey_jobs_data = DevJourneyJobsPresenter.get_data(@profile)
   end
   
   def edit

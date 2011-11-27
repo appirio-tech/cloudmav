@@ -3,8 +3,6 @@ class DevJourneyPresenter
   def self.as_javascript(data)
     items = []
     data.each do |d|
-      # puts ""
-      # puts d.inspect
       data = d[:data].map{|i| %Q{ { date: Date.parse('#{i[:date]}'), score: #{i[:score]} } }}.join(", ")
       items << %Q{ { name: '#{d[:name]}', data: [#{data}]} }      
     end

@@ -15,9 +15,9 @@
             - @profile.jobs.chronological_order.each do |j|
               %li.job.clearfix
                 %h3
-                  = j.title
+                  = j.company_name
                   %small
-                    = j.company_name
+                    = j.title
                     = link_to "edit", edit_profile_job_path(@profile, j), :class => "btn"
                 %span= j.display_date_range
                 %p= j.display_description
