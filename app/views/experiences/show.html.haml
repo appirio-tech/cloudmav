@@ -18,7 +18,8 @@
                   = j.company_name
                   %small
                     = j.title
-                    = link_to "edit", edit_profile_job_path(@profile, j), :class => "btn"
+                    - if can? :sync_profile, @profile
+                      = link_to "edit", edit_profile_job_path(@profile, j), :class => "btn"
                 %span= j.display_date_range
                 %p= j.display_description
                 = render :partial => "shared/simple_tags", :locals => { :taggable => j }
