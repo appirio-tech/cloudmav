@@ -9,6 +9,12 @@ class SyncGitHubProfileJob
     url = URI.parse("http://github.com/api/v2/json/user/show/#{username}")
     response = Net::HTTP.get_response url
     result = JSON.parse(response.body)
+    
+    if result["error"]
+      git_hub_profile.error_message = result["error"]
+      git_hub_profile.save
+      return
+    end
 
     git_hub_profile.url = "http://www.github.com/#{username}"
     git_hub_profile.git_hub_id = result["user"]["id"]

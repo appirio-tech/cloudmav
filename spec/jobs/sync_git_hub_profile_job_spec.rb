@@ -69,7 +69,7 @@ describe "SyncGitHubProfileJob" do
     it { @git_hub_profile.repositories.count.should == 26 }
     it { @profile.score(:coder_points).should == 455 }
   end
-
+  
   describe "Dennis Traub sync" do
     before(:each) do
       @profile = Factory.create(:user).profile
@@ -88,4 +88,22 @@ describe "SyncGitHubProfileJob" do
     it { @git_hub_profile.url.should == "http://www.github.com/DennisTraub" }
     it { @git_hub_profile.git_hub_id.should_not be_empty }
   end
+  
+  describe "bad username sync" do
+    before(:each) do
+      @profile = Factory.create(:user).profile
+      @git_hub_profile = GitHubProfile.new(:username => "euwberwubrepobnreopibnqerpou")
+      @profile.git_hub_profile = @git_hub_profile
+      @git_hub_profile.save
+      @git_hub_profile.expects(:retag!)
+  
+      VCR.use_cassette("git_hub_sync_event_bad_username", :record => :new_episodes) do
+        SyncGitHubProfileJob.perform(@git_hub_profile.id)
+      end
+      @profile = Profile.find(@profile.id)
+      @git_hub_profile.reload
+    end
+  
+    it { @git_hub_profile.error_message.should == "User not found" }
+  end  
 end

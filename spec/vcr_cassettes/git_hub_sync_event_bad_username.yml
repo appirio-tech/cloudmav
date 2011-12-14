@@ -1,0 +1,36 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: http://github.com:80/api/v2/json/user/show/euwberwubrepobnreopibnqerpou
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 404
+      message: Not Found
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Wed, 14 Dec 2011 21:35:14 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - keep-alive
+      status:
+      - 404 Not Found
+      x-ratelimit-limit:
+      - '60'
+      x-frame-options:
+      - deny
+      x-ratelimit-remaining:
+      - '59'
+      x-runtime:
+      - '6'
+      content-length:
+      - '26'
+      cache-control:
+      - no-cache
+    body: ! '{"error":"User not found"}'
+    http_version: '1.1'
