@@ -50,3 +50,10 @@ Feature: GitHub
    And my old GitHub repositories should be deleted
    And I should have 0 coder points
    And I should be on my edit profile page
+
+ Scenario: GitHub Error
+
+   Given I am logged in
+   And I have a GitHub profile
+   When I there is an error with my GitHub sync
+   Then I should see my GitHub error on my syncable page

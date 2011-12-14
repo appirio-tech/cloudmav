@@ -56,4 +56,4 @@ Feature: StackOverflowProfile
 
     Given I have a StackOverflow profile
     When I there is an error with my StackOverflow sync
-    Then I should see the error on my syncable page
+    Then I should see my StackOverflow error on my syncable page

@@ -111,7 +111,7 @@ When /^I there is an error with my StackOverflow sync$/ do
   so_profile.save
 end
 
-Then /^I should see the error on my syncable page$/ do
+Then /^I should see my StackOverflow error on my syncable page$/ do
   visit profile_syncable_path(@profile)
   And %Q{I should see "Your id is wrong!"}
 end

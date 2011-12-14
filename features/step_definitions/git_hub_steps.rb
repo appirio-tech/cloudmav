@@ -94,3 +94,15 @@ Then /^I should not have a GitHub profile$/ do
   @profile.reload
   @profile.git_hub_profile.should be_nil
 end
+
+When /^I there is an error with my GitHub sync$/ do
+  profile = Profile.find(@profile.id)
+  git_hub_profile = profile.git_hub_profile
+  git_hub_profile.error_message = "Your username is wrong!"
+  git_hub_profile.save
+end
+
+Then /^I should see my GitHub error on my syncable page$/ do
+  visit profile_syncable_path(@profile)
+  And %Q{I should see "Your username is wrong!"}
+end

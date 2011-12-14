@@ -1,20 +1,20 @@
 
+- @stack_overflow_profile = @profile.stack_overflow_profile || StackOverflowProfile.new  
+- @so_error_class = @stack_overflow_profile.has_error? ? "sync_error" : ""
+
 %li
   .row
-    .span3= link_to image_tag("syncable/stack_overflow_logo.png"), "http://www.stackoverflow.com"
-    .span5
-      - @stack_overflow_profile = @profile.stack_overflow_profile || StackOverflowProfile.new
-      - @so_error_class = @stack_overflow_profile.has_error? ? "sync_error" : ""
-      #sync_stack_overflow
-        = form_for [@profile, @stack_overflow_profile] do |f|
-          = f.text_field :stack_overflow_id, :class => "xlarge #{@so_error_class}", :placeholder => "StackOverflow ID (not username)"
-          - if @stack_overflow_profile.has_error?
-            %span.help-block.sync_error_msg= @stack_overflow_profile.error_message
-          %span.help-block= link_to "How do I find my ID?", "#", :class => "sync_help"
-    .span5.sync_actions    
-      = submit_tag "Sync", :class => "btn success"
-      - if @profile.stack_overflow_profile
-        = link_to "Delete", [@profile, @stack_overflow_profile], :id=> :delete_stack_overflow, :confirm => 'Are you sure?', :method => :delete, :class => "btn danger"         
+    = form_for [@profile, @stack_overflow_profile] do |f|
+      .span3= link_to image_tag("syncable/stack_overflow_logo.png"), "http://www.stackoverflow.com"
+      .span5
+        = f.text_field :stack_overflow_id, :class => "xlarge #{@so_error_class}", :placeholder => "StackOverflow ID (not username)"
+        - if @stack_overflow_profile.has_error?
+          %span.help-block.sync_error_msg= @stack_overflow_profile.error_message
+        %span.help-block= link_to "How do I find my ID?", "#", :class => "sync_help"
+      .span5.sync_actions#sync_stack_overflow
+        = submit_tag "Sync", :class => "btn success"
+        - if @profile.stack_overflow_profile
+          = link_to "Delete", [@profile, @stack_overflow_profile], :id=> :delete_stack_overflow, :confirm => 'Are you sure?', :method => :delete, :class => "btn danger"         
       
   .row
     .offset3.span10

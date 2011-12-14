@@ -1,11 +1,24 @@
+- @git_hub_profile = @profile.git_hub_profile || GitHubProfile.new
+- @git_hub_error_class = @git_hub_profile.has_error? ? "sync_error" : ""
 
-%li.row
-  .span3= link_to image_tag("syncable/git_hub_logo.png"), "http://www.github.com"
-  .span10
-    - @git_hub_profile = @profile.git_hub_profile || GitHubProfile.new
-    #sync_git_hub
-      = form_for [@profile, @git_hub_profile] do |f|
-        = f.text_field :username, :class => "xlarge"
+%li
+  .row
+    = form_for [@profile, @git_hub_profile] do |f|
+      .span3= link_to image_tag("syncable/git_hub_logo.png"), "http://www.github.com"
+      .span5
+        = f.text_field :username, :class => "xlarge #{@git_hub_error_class}", :placeholder => "GitHub username"
+        - if @git_hub_profile.has_error?
+          %span.help-block.sync_error_msg= @git_hub_profile.error_message
+        %span.help-block= link_to "How do I find my username?", "#", :class => "sync_help"
+      .span5.sync_actions#sync_git_hub
         = submit_button_tag "Sync", :class => "btn success"
         - if @profile.git_hub_profile
           = link_to "Delete", [@profile, @git_hub_profile], :id=> :delete_git_hub, :confirm => 'Are you sure?', :method => :delete, :class => "btn danger"
+        
+  .row
+    .offset3.span10
+      .alert-message.block-message.info.hide
+        = link_to "x", "#", :class => "close"
+        %p Your GitHub username is simply the username you login with.        
+        
+    
