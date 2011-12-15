@@ -23,6 +23,7 @@ Codemav::Application.routes.draw do
   resources :profiles do
     resource :syncable
     resource :autodiscover
+    resource :points_summary
     
     # basic resources
     resource :speaking

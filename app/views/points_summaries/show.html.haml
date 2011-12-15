@@ -1,0 +1,18 @@
+= content_for :title do
+  Point Summary for #{@profile.display_name}
+  
+.row
+  .span16
+    .page-header
+      %h1 Point Summary for #{@profile.display_name}
+      
+    - @list.each do |i|
+      %section
+        %h2
+          %a{:name => i[:anchor]}= i[:title]
+        %table        
+          - i[:scorings].each do |s|
+            %tr
+              %td= s.name
+              %td= s.score
+          

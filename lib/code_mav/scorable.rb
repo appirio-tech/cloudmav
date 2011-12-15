@@ -41,7 +41,7 @@ module CodeMav
         self.save
         calculate_total_score
       end
-
+      
     end
   end
 end

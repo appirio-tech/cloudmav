@@ -1,26 +1,26 @@
 
 %ul#points
   %li.selected
-    .points= @profile.total_score
-    .description points
+    .points= link_to @profile.total_score, profile_points_summary_path(@profile)
+    .description= link_to "points", profile_points_summary_path(@profile)
   %li
-    .points= @profile.score(:experience_points)
-    .description experience
+    .points= link_to @profile.score(:experience_points), profile_points_summary_path(@profile, :anchor => "experience")
+    .description= link_to "experience", profile_points_summary_path(@profile, :anchor => "experience") 
   %li
-    .points= @profile.score(:knowledge_points)
-    .description knowledge
+    .points= link_to @profile.score(:knowledge_points), profile_points_summary_path(@profile, :anchor => "knowledge")
+    .description= link_to "knowledge", profile_points_summary_path(@profile, :anchor => "knowledge")
   %li
-    .points= @profile.score(:coder_points)
-    .description code
+    .points= link_to @profile.score(:coder_points), profile_points_summary_path(@profile, :anchor => "code")
+    .description= link_to "code", profile_points_summary_path(@profile, :anchor => "code")
   %li
-    .points= @profile.score(:writer_points)
-    .description writing
+    .points= link_to @profile.score(:writer_points), profile_points_summary_path(@profile, :anchor => "writing")
+    .description= link_to "writing", profile_points_summary_path(@profile, :anchor => "writing")
   %li
-    .points= @profile.score(:speaker_points)
-    .description speaking
+    .points= link_to @profile.score(:speaker_points), profile_points_summary_path(@profile, :anchor => "speaking")
+    .description= link_to "speaking", profile_points_summary_path(@profile, :anchor => "speaking")
   %li
-    .points= @profile.score(:social_points)
-    .description social
+    .points= link_to @profile.score(:social_points), profile_points_summary_path(@profile, :anchor => "social")
+    .description= link_to "social", profile_points_summary_path(@profile, :anchor => "social")
   - unless @profile.stack_overflow_profile.nil?
     %li{:style => "width: 80px"}
       .image= image_tag "stack_overflow_points_icon.png"
