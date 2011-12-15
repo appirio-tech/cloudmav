@@ -140,3 +140,15 @@ When /^I view their profile$/ do
   visit profile_path(User.find(@other_user.id).profile)
 end
 
+When /^I there is an error with my SlideShare sync$/ do
+  @profile.reload
+  @profile.slide_share_profile.error_message = "Error with sync"
+  @profile.slide_share_profile.save
+end
+
+Then /^I should see my SlideShare error on my syncable page$/ do
+  visit profile_syncable_path(@profile)  
+  And %Q{I should see "Error with sync"}
+end
+
+

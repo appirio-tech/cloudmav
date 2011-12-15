@@ -1,11 +1,34 @@
 
-%li.row
-  .span3= link_to image_tag("syncable/slide_share_logo.png"), "http://www.slideshare.net"
-  .span10
-    - @slide_share_profile = @profile.slide_share_profile || SlideShareProfile.new
-    #slide_share
-      = form_for [@profile, @slide_share_profile] do |f|
-        = f.text_field :slide_share_username, :class => "xlarge"
+- @slide_share_profile = @profile.slide_share_profile || SlideShareProfile.new
+- @slide_share_error_class = @slide_share_profile.has_error? ? "sync_error" : ""
+
+%li
+  .row
+    = form_for [@profile, @slide_share_profile] do |f|
+      .span3
+        = link_to image_tag("syncable/slide_share_logo.png"), "http://www.slideshare.net", :target => "_blank"
+        %span.help-block= link_to "What is SlideShare?", "#", :class => "sync_what_is"
+      .span5
+        = f.text_field :slide_share_username, :class => "xlarge #{@slide_share_error_class}", :placeholder => "SlideShare username"
+        - if @slide_share_profile.has_error?
+          %span.help-block.sync_error_msg= @slide_share_profile.error_message
+        %span.help-block= link_to "How do I find my username?", "#", :class => "sync_help"      
+      
+      .span3.sync_actions#slide_share        
         = submit_tag "Sync", :class => "btn success"
         - if @profile.slide_share_profile
           = link_to "Delete", [@profile, @slide_share_profile], :id=> :delete_slide_share, :confirm => 'Are you sure?', :method => :delete, :class => "btn danger"
+          
+  .row
+    .offset3.span10
+      .alert-message.block-message.info.what_is.hide
+        = link_to "x", "#", :class => "close"
+        %p
+          %strong SlideShare 
+          is a website where you can upload your slides from your presentations.
+      .alert-message.block-message.info.help.hide
+        = link_to "x", "#", :class => "close"
+        %p 
+          Your 
+          %strong SlideShare username 
+          is the username you log into the site with.

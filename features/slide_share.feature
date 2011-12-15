@@ -75,3 +75,9 @@ Feature: SlideShare Profile
     And my old talks should be not have their SlideShare info
     And I should not have the "Sliding along" badge
     And I should be on my edit profile page
+    
+  Scenario: SlideShare Error
+
+    Given I have a SlideShare profile
+    When I there is an error with my SlideShare sync
+    Then I should see my SlideShare error on my syncable page    
