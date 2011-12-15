@@ -5,7 +5,7 @@
   .row
     = form_for [@profile, @git_hub_profile] do |f|
       .span3
-        = link_to image_tag("syncable/git_hub_logo.png"), "http://www.github.com"
+        = link_to image_tag("syncable/git_hub_logo.png"), "http://www.github.com", :target => "_blank"
         %span.help-block= link_to "What is GitHub?", "#", :class => "sync_what_is"
       .span5
         = f.text_field :username, :class => "xlarge #{@git_hub_error_class}", :placeholder => "GitHub username"
@@ -21,7 +21,7 @@
     .offset3.span10
       .alert-message.block-message.info.what_is.hide
         = link_to "x", "#", :class => "close"
-        %p GitHub is an online code collaboration site that hosts numerous open source projects using git for source control.
+        %p GitHub is an online code collaboration site that hosts numerous open source projects using Git for source control.
       .alert-message.block-message.info.help.hide
         = link_to "x", "#", :class => "close"
         %p Your GitHub username is simply the username you login with.        

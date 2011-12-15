@@ -79,3 +79,14 @@ Then /^my Bitbucket repos should have their information$/ do
   repo.url.should_not be_nil
 end
 
+When /^I there is an error with my Bitbucket sync$/ do
+  @profile.reload
+  @profile.bitbucket_profile.error_message = "Bad username"
+  @profile.bitbucket_profile.save
+end
+
+Then /^I should see my Bitbucket error on my syncable page$/ do
+  visit profile_syncable_path(@profile)
+  And %Q{I should see "Bad username"}
+end
+

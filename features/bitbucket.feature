@@ -48,3 +48,10 @@ Feature: BitbucketProfile
     And my old Bitbucket repositories should be deleted
     And I should have 0 coder points
     And I should be on my edit profile page
+
+  Scenario: Bitbucket Error
+
+    Given I am logged in
+    And I have a Bitbucket profile
+    When I there is an error with my Bitbucket sync
+    Then I should see my Bitbucket error on my syncable page

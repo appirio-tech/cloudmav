@@ -1,11 +1,29 @@
+- @bitbucket_profile = @profile.bitbucket_profile || BitbucketProfile.new
+- @bitbucket_error_class = @bitbucket_profile.has_error? ? "sync_error" : ""
 
-%li.row
-  .span3= link_to image_tag("syncable/bitbucket_logo.png"), "http://www.bitbucket.org"
-  .span10
-    - @bitbucket_profile = @profile.bitbucket_profile || BitbucketProfile.new
-    #sync_bitbucket
-      = form_for [@profile, @bitbucket_profile] do |f|
-        = f.text_field :username, :class => "xlarge"
+%li
+  .row
+    = form_for [@profile, @bitbucket_profile] do |f|
+      .span3
+        = link_to image_tag("syncable/bitbucket_logo.png"), "http://www.bitbucket.org", :target => "_blank"
+        %span.help-block= link_to "What is Bitbucket?", "#", :class => "sync_what_is"
+      .span5
+        = f.text_field :username, :class => "xlarge #{@bitbucket_error_class}", :placeholder => "Bitbucket username"
+        - if @bitbucket_profile.has_error?
+          %span.help-block.sync_error_msg= @bitbucket_profile.error_message
+        %span.help-block= link_to "How do I find my username?", "#", :class => "sync_help"
+        
+      .span3.sync_actions#sync_bitbucket
         = submit_tag "Sync", :class => "btn success"
         - if @profile.bitbucket_profile
           = link_to "Delete", [@profile, @bitbucket_profile], :id=> :delete_bitbucket, :confirm => 'Are you sure?', :method => :delete, :class => "btn danger"
+          
+  .row
+    .offset3.span10
+      .alert-message.block-message.info.what_is.hide
+        = link_to "x", "#", :class => "close"
+        %p
+          Bitbucket is an online source code repository to store all your code projects. You can use Git or Mercurial.
+      .alert-message.block-message.info.help.hide
+        = link_to "x", "#", :class => "close"
+        %p Your Bitbucket username is simply the username you login with.
