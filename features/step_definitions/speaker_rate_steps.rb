@@ -105,3 +105,14 @@ end
 Then /^I should not have a SpeakerRate profile$/ do
   Profile.find(@profile.id).speaker_rate_profile.should be_nil
 end
+
+When /^I there is an error with my SpeakerRate sync$/ do
+  @profile.reload
+  @profile.speaker_rate_profile.error_message = "Wrong username"
+  @profile.speaker_rate_profile.save
+end
+
+Then /^I should see my SpeakerRate error on my syncable page$/ do
+  visit profile_syncable_path(@profile)
+  And %Q{I should see "Wrong username"}  
+end

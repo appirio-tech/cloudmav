@@ -51,3 +51,9 @@ Feature: SpeakerRate Profile
     When I delete my SpeakerRate profile
     Then I should not have a SpeakerRate profile
     And I should not have the "I need validation" badge
+    
+  Scenario: SpeakerRate Error
+
+    Given I have a SpeakerRate profile
+    When I there is an error with my SpeakerRate sync
+    Then I should see my SpeakerRate error on my syncable page    
