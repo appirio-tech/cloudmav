@@ -8,12 +8,9 @@ class JobsController < LoggedInController
   
   def update
     authorize! :sync_profile, @profile
-    puts "PARAMS"
-    puts params.inspect
     
     @job = Job.find(params[:id])
-    @job.tags_text = params[:tags]
-    if @job.save
+    if @job.update_attributes(params[:job])
       @job.retag!
       Resque.enqueue(CalculateScoreForProfileJob, @profile.id)
       redirect_to profile_experience_path(@profile)

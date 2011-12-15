@@ -8,6 +8,10 @@
       %fieldset
         %legend Edit Job
         .clearfix
+          = f.label :company_name
+          .input
+            %span.uneditable-input= @job.company_name        
+        .clearfix
           = f.label :title
           .input
             %span.uneditable-input= @job.title
@@ -23,20 +27,7 @@
         .clearfix
           = f.label :tags_text, "Tags"
           .input
-            = f.text_area :tags_text, :class => "tagit"
+            = f.text_area :tags_text, :class => "tagit", :rows => 3
+            %span.help-block Separate tags with commas
         .actions
-          = f.submit "Save", :disable_with => "Saving...", :class => "btn primary"
-          
-          
-          
-:javascript
-  $(function() {
-    $(".tagit").each(function() {
-      var values_string = $(this).val();
-      var values = values_string.split(',');
-      $(this).hide();
-      $(this).parent().append("<ul name='tags' class='unstyled'></ul>");
-      $(this).parent().find("ul").tagit({select:true, initialTags: values});
-      $(this).parent().find("select").attr("id", "tags");
-    });
-  });          
+          = f.submit "Save", :disable_with => "Saving...", :class => "btn primary"        
