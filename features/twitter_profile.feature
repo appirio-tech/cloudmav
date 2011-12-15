@@ -43,3 +43,9 @@ Feature: TwitterProfile
     When I delete my Twitter profile
     Then I should not have a Twitter profile
     And I should be on my edit profile page
+    
+  Scenario: Twitter Error
+
+    Given I have a Twitter profile
+    When I there is an error with my Twitter sync
+    Then I should see my Twitter error on my syncable page    

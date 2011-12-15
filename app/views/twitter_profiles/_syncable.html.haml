@@ -1,11 +1,34 @@
 
-%li.row
-  .span3= link_to image_tag("syncable/twitter_logo.png"), "http://www.twitter.com"
-  .span10
-    - @twitter_profile = @profile.twitter_profile || TwitterProfile.new
-    #sync_twitter
-      = form_for [@profile, @twitter_profile] do |f|
-        = f.text_field :username, :class => "xlarge"
+- @twitter_profile = @profile.twitter_profile || TwitterProfile.new
+- @twitter_error_class = @twitter_profile.has_error? ? "sync_error" : ""
+
+%li
+  .row
+    = form_for [@profile, @twitter_profile] do |f|  
+      .span3
+        = link_to image_tag("syncable/twitter_logo.png"), "http://www.twitter.com"
+        %span.help-block= link_to "What is Twitter?", "#", :class => "sync_what_is"
+      .span5
+        = f.text_field :username, :class => "xlarge #{@twitter_error_class}", :placeholder => "Twitter username"
+        - if @twitter_profile.has_error?
+          %span.help-block.sync_error_msg= @twitter_profile.error_message
+        %span.help-block= link_to "How do I find my username?", "#", :class => "sync_help"          
+      .span3.sync_actions#sync_twitter      
         = submit_tag "Sync", :class => "btn success"
         - if @profile.twitter_profile
           = link_to "Delete", [@profile, @twitter_profile], :id=> :delete_twitter, :confirm => 'Are you sure?', :method => :delete, :class => "btn danger"
+        
+  .row
+    .offset3.span10
+      .alert-message.block-message.info.what_is.hide
+        = link_to "x", "#", :class => "close"
+        %p
+          %strong Twitter 
+          is a the world's most famous micro-blogging site
+      .alert-message.block-message.info.help.hide
+        = link_to "x", "#", :class => "close"
+        %p
+          Your
+          %strong Twitter username
+          is the username you use to login.
+          

@@ -73,3 +73,14 @@ Then /^I should not have a Twitter profile$/ do
   @profile.twitter_profile.should be_nil
 end
 
+When /^I there is an error with my Twitter sync$/ do
+  @profile.reload
+  @profile.twitter_profile.error_message = "Username not found"
+  @profile.twitter_profile.save
+end
+
+Then /^I should see my Twitter error on my syncable page$/ do
+  visit profile_syncable_path(@profile)
+  And %Q{I should see "Username not found"}  
+end
+
