@@ -43,3 +43,9 @@ Feature: CoderWallProfile
     When I delete my CoderWall profile
     Then I should not have a CoderWall profile
     And I should be on my edit profile page
+    
+  Scenario: CoderWall Error
+
+    Given I have a CoderWall profile
+    When I there is an error with my CoderWall sync
+    Then I should see my CoderWall error on my syncable page    

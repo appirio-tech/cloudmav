@@ -1,6 +1,6 @@
 When /^I sync my CoderWall account$/ do
   VCR.use_cassette("coder_wall", :record => :new_episodes) do
-    visit edit_profile_path(@profile)
+    visit profile_syncable_path(@profile)
     fill_in "coder_wall_profile_username", :with => 'rookieone'
     within("#sync_coder_wall") do
       click_button "Sync"
@@ -57,7 +57,7 @@ When /^I edit my CoderWall username$/ do
   VCR.use_cassette("edit coderwall", :record => :new_episodes) do
     profile = Profile.find(@profile.id)
     @old_badges = profile.coder_wall_profile.badges.to_a
-    visit edit_profile_path(@profile)
+    visit profile_syncable_path(@profile)
     fill_in "coder_wall_profile_username", :with => "subdigital"
     within("#sync_coder_wall") do
       click_button "Sync"
@@ -76,11 +76,22 @@ Then /^I should have my new CoderWall badges$/ do
 end
 
 When /^I delete my CoderWall profile$/ do
-  visit edit_profile_path(@profile)
+  visit profile_syncable_path(@profile)
   profile = Profile.find(@profile.id)
   click_link "delete_coder_wall"
 end
 
 Then /^I should not have a CoderWall profile$/ do
   Profile.find(@profile.id).coder_wall_profile.should be_nil
+end
+
+When /^I there is an error with my CoderWall sync$/ do
+  @profile.reload
+  @profile.coder_wall_profile.error_message = "Bad username"
+  @profile.coder_wall_profile.save
+end
+
+Then /^I should see my CoderWall error on my syncable page$/ do
+  visit profile_syncable_path(@profile)
+  And %Q{I should see "Bad username"}
 end
