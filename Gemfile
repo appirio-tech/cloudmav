@@ -21,6 +21,8 @@ gem "cancan"
 
 # Server
 gem "powify"
+gem "foreman"
+gem "thin"
 
 # View / UI
 gem "haml"
