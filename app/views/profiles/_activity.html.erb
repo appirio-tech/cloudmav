@@ -1,0 +1,20 @@
+<h3>Activity</h3>
+<ol id="activity_list" class="unstyled">
+</ol>
+<%= image_tag "ajax-loader.gif", :id => "activity_loader" %>
+
+
+<script type="text/javascript">
+
+  $.get("<%= profile_activity_path(@profile.id) %>", function(data) {
+      $("#activity_loader").remove();
+      $list = $("#activity_list");
+      _.each(data.activities, function(item) {
+        var activityHtml = $("<li>" + item.activity.title + "<div class='pull-right'>" + item.activity.date + "</div></li>").hide();
+        activityHtml.appendTo($list).slideDown();
+        //$list.append("<tr><td>" + item.activity.title + "</td></tr>");
+      });
+      //$("#activity_list tr").slideDown();
+  });
+
+</script>

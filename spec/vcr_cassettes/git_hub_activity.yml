@@ -1,0 +1,510 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://github.com:443/rookieone.atom
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.4
+      date:
+      - Wed, 28 Dec 2011 18:11:41 GMT
+      content-type:
+      - application/atom+xml; charset=utf-8
+      connection:
+      - keep-alive
+      status:
+      - 200 OK
+      etag:
+      - ! '"25caabd309d9e066b8a9757745b80476"'
+      x-frame-options:
+      - deny
+      x-runtime:
+      - '269'
+      content-length:
+      - '48897'
+      cache-control:
+      - private, max-age=0, must-revalidate
+      strict-transport-security:
+      - max-age=2592000
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\"
+      xmlns:media=\"http://search.yahoo.com/mrss/\" xml:lang=\"en-US\">\n  <id>tag:github.com,2008:/rookieone</id>\n
+      \ <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/rookieone\"/>\n
+      \ <link type=\"application/atom+xml\" rel=\"self\" href=\"https://github.com/rookieone.atom\"/>\n
+      \ <title>RookieOne's Activity</title>\n  <updated>2011-12-20T18:55:17Z</updated>\n
+      \ <entry>\n    <id>tag:github.com,2008:PushEvent/1506704966</id>\n    <published>2011-12-20T18:55:17Z</published>\n
+      \   <updated>2011-12-20T18:55:17Z</updated>\n    <link type=\"text/html\" rel=\"alternate\"
+      href=\"https://github.com/RookieOne/Box.net-gem/compare/3c9d74d417...89f4b88591\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-20T18:55:17Z&quot;
+      title=&quot;2011-12-20 18:55:17&quot;&gt;December 20, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/Box.net-gem/commit/89f4b88591b824e46cb3e9cb1a60d3e19cd9df0d&quot;&gt;89f4b88&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;added
+      check to see if logged in before running tests&lt;/blockquote&gt;\n        &lt;/div&gt;\n
+      \     &lt;/li&gt;\n    &lt;/ul&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n</content>\n
+      \ </entry>\n  <entry>\n    <id>tag:github.com,2008:CreateEvent/1506704964</id>\n
+      \   <published>2011-12-20T18:55:18Z</published>\n    <updated>2011-12-20T18:55:18Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/Box.net-gem/tree/v0.0.14\"/>\n
+      \   <title type=\"html\">RookieOne created tag v0.0.14  at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;created&lt;/span&gt; tag &lt;a href=&quot;/RookieOne/Box.net-gem/tree/v0.0.14&quot;&gt;v0.0.14&lt;/a&gt;
+      \ at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-20T18:55:18Z&quot;
+      title=&quot;2011-12-20 18:55:18&quot;&gt;December 20, 2011&lt;/time&gt;\n&lt;/div&gt;\n\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n  &lt;div class=&quot;message&quot;&gt;\n\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1504901723</id>\n
+      \   <published>2011-12-13T00:12:53Z</published>\n    <updated>2011-12-13T00:12:53Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/rookieone.github.com/compare/f8cf7541ee...d471d71d41\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/rookieone.github.com</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/rookieone.github.com&quot;&gt;RookieOne/rookieone.github.com&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-13T00:12:53Z&quot;
+      title=&quot;2011-12-13 00:12:53&quot;&gt;December 13, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/rookieone.github.com/commit/d471d71d4148ac3ff5291eb28f9fc1676b52da18&quot;&gt;d471d71&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;Site
+      updated at 2011-12-13 00:15:13 UTC&lt;/blockquote&gt;\n        &lt;/div&gt;\n
+      \     &lt;/li&gt;\n    &lt;/ul&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n</content>\n
+      \ </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1504900232</id>\n
+      \   <published>2011-12-13T00:05:24Z</published>\n    <updated>2011-12-13T00:05:24Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/rookieone.github.com/compare/c7959ff95f...f8cf7541ee\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/rookieone.github.com</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/rookieone.github.com&quot;&gt;RookieOne/rookieone.github.com&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-13T00:05:24Z&quot;
+      title=&quot;2011-12-13 00:05:24&quot;&gt;December 13, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/rookieone.github.com/commit/f8cf7541ee2d7f49ef206cbf84cbd789b3c5098d&quot;&gt;f8cf754&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;Site
+      updated at 2011-12-13 00:07:33 UTC&lt;/blockquote&gt;\n        &lt;/div&gt;\n
+      \     &lt;/li&gt;\n    &lt;/ul&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n</content>\n
+      \ </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1504316921</id>\n
+      \   <published>2011-12-09T18:02:56Z</published>\n    <updated>2011-12-09T18:02:56Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/JBsWpfExamples/compare/a5f2becf9b...55e8700038\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/JBsWpfExamples</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/JBsWpfExamples&quot;&gt;RookieOne/JBsWpfExamples&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-09T18:02:56Z&quot;
+      title=&quot;2011-12-09 18:02:56&quot;&gt;December 09, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;a href=&quot;/RookieOne&quot; class=&quot;committer&quot;&gt;RookieOne&lt;/a&gt;
+      committed &lt;a href=&quot;/RookieOne/JBsWpfExamples/commit/55e870003831874bd54b416a6725202bca8af0ba&quot;&gt;55e8700&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;merege&lt;/blockquote&gt;\n
+      \       &lt;/div&gt;\n      &lt;/li&gt;\n      &lt;li&gt;\n      &lt;a href=&quot;/RookieOne&quot;
+      class=&quot;committer&quot;&gt;RookieOne&lt;/a&gt; committed &lt;a href=&quot;/RookieOne/JBsWpfExamples/commit/c2e453e23cc53de249ffd5c628eab09310b22bff&quot;&gt;c2e453e&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;added
+      menu example&lt;/blockquote&gt;\n        &lt;/div&gt;\n      &lt;/li&gt;\n      &lt;li
+      class=&quot;more&quot;&gt;&lt;a href=&quot;/RookieOne/JBsWpfExamples/compare/a5f2becf9b...55e8700038&quot;&gt;View
+      comparison for these 2 commits &amp;raquo;&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:CreateEvent/1504120984</id>\n
+      \   <published>2011-12-08T22:41:22Z</published>\n    <updated>2011-12-08T22:41:22Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/sp_2010/tree/v0.0.6\"/>\n
+      \   <title type=\"html\">RookieOne created tag v0.0.6  at RookieOne/sp_2010</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;created&lt;/span&gt; tag &lt;a href=&quot;/RookieOne/sp_2010/tree/v0.0.6&quot;&gt;v0.0.6&lt;/a&gt;
+      \ at &lt;a href=&quot;/RookieOne/sp_2010&quot;&gt;RookieOne/sp_2010&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-08T22:41:22Z&quot;
+      title=&quot;2011-12-08 22:41:22&quot;&gt;December 08, 2011&lt;/time&gt;\n&lt;/div&gt;\n\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n  &lt;div class=&quot;message&quot;&gt;\n\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1504120936</id>\n
+      \   <published>2011-12-08T22:41:12Z</published>\n    <updated>2011-12-08T22:41:12Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/sp_2010/compare/f103042d7e...8ea5492852\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/sp_2010</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/sp_2010&quot;&gt;RookieOne/sp_2010&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-08T22:41:12Z&quot;
+      title=&quot;2011-12-08 22:41:12&quot;&gt;December 08, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/sp_2010/commit/8ea549285271b9df021c492fc6ad018ca1097d26&quot;&gt;8ea5492&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;Added
+      ntlm support and am using domainatrix for url parsing&lt;/blockquote&gt;\n        &lt;/div&gt;\n
+      \     &lt;/li&gt;\n    &lt;/ul&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n</content>\n
+      \ </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1504120793</id>\n
+      \   <published>2011-12-08T22:40:42Z</published>\n    <updated>2011-12-08T22:40:42Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/sp_2010/compare/887cc25e81...f103042d7e\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/sp_2010</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/sp_2010&quot;&gt;RookieOne/sp_2010&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-08T22:40:42Z&quot;
+      title=&quot;2011-12-08 22:40:42&quot;&gt;December 08, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/sp_2010/commit/f103042d7ee1d0f3b0cb4bd832b0b78e00410ade&quot;&gt;f103042&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;Added
+      ntlm support and am using domainatrix for url parsing&lt;/blockquote&gt;\n        &lt;/div&gt;\n
+      \     &lt;/li&gt;\n    &lt;/ul&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n</content>\n
+      \ </entry>\n  <entry>\n    <id>tag:github.com,2008:CreateEvent/1503180873</id>\n
+      \   <published>2011-12-05T16:29:20Z</published>\n    <updated>2011-12-05T16:29:20Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/Box.net-gem/tree/v0.0.13\"/>\n
+      \   <title type=\"html\">RookieOne created tag v0.0.13  at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;created&lt;/span&gt; tag &lt;a href=&quot;/RookieOne/Box.net-gem/tree/v0.0.13&quot;&gt;v0.0.13&lt;/a&gt;
+      \ at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-05T16:29:20Z&quot;
+      title=&quot;2011-12-05 16:29:20&quot;&gt;December 05, 2011&lt;/time&gt;\n&lt;/div&gt;\n\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n  &lt;div class=&quot;message&quot;&gt;\n\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1503180840</id>\n
+      \   <published>2011-12-05T16:29:13Z</published>\n    <updated>2011-12-05T16:29:13Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/Box.net-gem/compare/2656451d54...3c9d74d417\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-05T16:29:13Z&quot;
+      title=&quot;2011-12-05 16:29:13&quot;&gt;December 05, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/Box.net-gem/commit/3c9d74d417d37b15ee0d1e7bfe5f814079f148dc&quot;&gt;3c9d74d&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;moved
+      classes into single file&lt;/blockquote&gt;\n        &lt;/div&gt;\n      &lt;/li&gt;\n
+      \   &lt;/ul&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n
+      \   <id>tag:github.com,2008:CreateEvent/1503177690</id>\n    <published>2011-12-05T16:17:11Z</published>\n
+      \   <updated>2011-12-05T16:17:11Z</updated>\n    <link type=\"text/html\" rel=\"alternate\"
+      href=\"https://github.com/RookieOne/Box.net-gem/tree/v0.0.11\"/>\n    <title
+      type=\"html\">RookieOne created tag v0.0.11  at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;created&lt;/span&gt; tag &lt;a href=&quot;/RookieOne/Box.net-gem/tree/v0.0.11&quot;&gt;v0.0.11&lt;/a&gt;
+      \ at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-05T16:17:11Z&quot;
+      title=&quot;2011-12-05 16:17:11&quot;&gt;December 05, 2011&lt;/time&gt;\n&lt;/div&gt;\n\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n  &lt;div class=&quot;message&quot;&gt;\n\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1503177681</id>\n
+      \   <published>2011-12-05T16:17:09Z</published>\n    <updated>2011-12-05T16:17:09Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/Box.net-gem/compare/bf13a5d71b...2656451d54\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-05T16:17:09Z&quot;
+      title=&quot;2011-12-05 16:17:09&quot;&gt;December 05, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/Box.net-gem/commit/2656451d5466d64dcd4a252ebfccbdcbd9efcbe5&quot;&gt;2656451&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;version
+      bump&lt;/blockquote&gt;\n        &lt;/div&gt;\n      &lt;/li&gt;\n      &lt;li&gt;\n
+      \     &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan Birkholz&lt;/span&gt;&lt;/strong&gt;
+      committed &lt;a href=&quot;/RookieOne/Box.net-gem/commit/0d563f8725809acdbca690b317599776fca6e313&quot;&gt;0d563f8&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;changed
+      namespace in version&lt;/blockquote&gt;\n        &lt;/div&gt;\n      &lt;/li&gt;\n
+      \     &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;/RookieOne/Box.net-gem/compare/bf13a5d71b...2656451d54&quot;&gt;View
+      comparison for these 2 commits &amp;raquo;&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1503177383</id>\n
+      \   <published>2011-12-05T16:16:06Z</published>\n    <updated>2011-12-05T16:16:06Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/Box.net-gem/compare/083fe0fd8e...bf13a5d71b\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-05T16:16:06Z&quot;
+      title=&quot;2011-12-05 16:16:06&quot;&gt;December 05, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/Box.net-gem/commit/bf13a5d71b177f1f23c61b2722128115c420fd60&quot;&gt;bf13a5d&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;changed
+      namespace from boxnet to boxnetapi&lt;/blockquote&gt;\n        &lt;/div&gt;\n
+      \     &lt;/li&gt;\n    &lt;/ul&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n</content>\n
+      \ </entry>\n  <entry>\n    <id>tag:github.com,2008:CreateEvent/1503175704</id>\n
+      \   <published>2011-12-05T16:09:33Z</published>\n    <updated>2011-12-05T16:09:33Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/Box.net-gem/tree/v0.0.10\"/>\n
+      \   <title type=\"html\">RookieOne created tag v0.0.10  at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;created&lt;/span&gt; tag &lt;a href=&quot;/RookieOne/Box.net-gem/tree/v0.0.10&quot;&gt;v0.0.10&lt;/a&gt;
+      \ at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-05T16:09:33Z&quot;
+      title=&quot;2011-12-05 16:09:33&quot;&gt;December 05, 2011&lt;/time&gt;\n&lt;/div&gt;\n\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n  &lt;div class=&quot;message&quot;&gt;\n\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1503175695</id>\n
+      \   <published>2011-12-05T16:09:32Z</published>\n    <updated>2011-12-05T16:09:32Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/Box.net-gem/compare/400ffde8c3...083fe0fd8e\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-05T16:09:32Z&quot;
+      title=&quot;2011-12-05 16:09:32&quot;&gt;December 05, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/Box.net-gem/commit/083fe0fd8e62d9f23a865eeb87dbeaaf9a130927&quot;&gt;083fe0f&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;removed
+      namespace&lt;/blockquote&gt;\n        &lt;/div&gt;\n      &lt;/li&gt;\n    &lt;/ul&gt;\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:CreateEvent/1503171540</id>\n
+      \   <published>2011-12-05T15:54:17Z</published>\n    <updated>2011-12-05T15:54:17Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/Box.net-gem/tree/v0.0.9\"/>\n
+      \   <title type=\"html\">RookieOne created tag v0.0.9  at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;created&lt;/span&gt; tag &lt;a href=&quot;/RookieOne/Box.net-gem/tree/v0.0.9&quot;&gt;v0.0.9&lt;/a&gt;
+      \ at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-05T15:54:17Z&quot;
+      title=&quot;2011-12-05 15:54:17&quot;&gt;December 05, 2011&lt;/time&gt;\n&lt;/div&gt;\n\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n  &lt;div class=&quot;message&quot;&gt;\n\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1503171483</id>\n
+      \   <published>2011-12-05T15:54:06Z</published>\n    <updated>2011-12-05T15:54:06Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/Box.net-gem/compare/921661d501...400ffde8c3\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-05T15:54:06Z&quot;
+      title=&quot;2011-12-05 15:54:06&quot;&gt;December 05, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/Box.net-gem/commit/400ffde8c3afea5f2c8e354c83fc40ef15c2b647&quot;&gt;400ffde&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;added
+      namespace on objectw&lt;/blockquote&gt;\n        &lt;/div&gt;\n      &lt;/li&gt;\n
+      \   &lt;/ul&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n
+      \   <id>tag:github.com,2008:CreateEvent/1503168435</id>\n    <published>2011-12-05T15:41:57Z</published>\n
+      \   <updated>2011-12-05T15:41:57Z</updated>\n    <link type=\"text/html\" rel=\"alternate\"
+      href=\"https://github.com/RookieOne/Box.net-gem/tree/v0.0.8\"/>\n    <title
+      type=\"html\">RookieOne created tag v0.0.8  at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;created&lt;/span&gt; tag &lt;a href=&quot;/RookieOne/Box.net-gem/tree/v0.0.8&quot;&gt;v0.0.8&lt;/a&gt;
+      \ at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-05T15:41:57Z&quot;
+      title=&quot;2011-12-05 15:41:57&quot;&gt;December 05, 2011&lt;/time&gt;\n&lt;/div&gt;\n\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n  &lt;div class=&quot;message&quot;&gt;\n\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1503168397</id>\n
+      \   <published>2011-12-05T15:41:51Z</published>\n    <updated>2011-12-05T15:41:51Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/Box.net-gem/compare/9657688179...921661d501\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-05T15:41:51Z&quot;
+      title=&quot;2011-12-05 15:41:51&quot;&gt;December 05, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/Box.net-gem/commit/921661d5019f3ff05f9fe916680fda0ea047498c&quot;&gt;921661d&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;bumped
+      version&lt;/blockquote&gt;\n        &lt;/div&gt;\n      &lt;/li&gt;\n      &lt;li&gt;\n
+      \     &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan Birkholz&lt;/span&gt;&lt;/strong&gt;
+      committed &lt;a href=&quot;/RookieOne/Box.net-gem/commit/0516e3e6e41b11f86afc10e05bbceb0226f9155c&quot;&gt;0516e3e&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;removed
+      that nil check&lt;/blockquote&gt;\n        &lt;/div&gt;\n      &lt;/li&gt;\n
+      \     &lt;li class=&quot;more&quot;&gt;&lt;a href=&quot;/RookieOne/Box.net-gem/compare/9657688179...921661d501&quot;&gt;View
+      comparison for these 2 commits &amp;raquo;&lt;/a&gt;&lt;/li&gt;\n    &lt;/ul&gt;\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:CreateEvent/1503164956</id>\n
+      \   <published>2011-12-05T15:27:37Z</published>\n    <updated>2011-12-05T15:27:37Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/Box.net-gem/tree/v0.0.7\"/>\n
+      \   <title type=\"html\">RookieOne created tag v0.0.7  at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;created&lt;/span&gt; tag &lt;a href=&quot;/RookieOne/Box.net-gem/tree/v0.0.7&quot;&gt;v0.0.7&lt;/a&gt;
+      \ at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-05T15:27:37Z&quot;
+      title=&quot;2011-12-05 15:27:37&quot;&gt;December 05, 2011&lt;/time&gt;\n&lt;/div&gt;\n\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n  &lt;div class=&quot;message&quot;&gt;\n\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1503164923</id>\n
+      \   <published>2011-12-05T15:27:27Z</published>\n    <updated>2011-12-05T15:27:27Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/Box.net-gem/compare/957420b0b8...9657688179\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/Box.net-gem</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/Box.net-gem&quot;&gt;RookieOne/Box.net-gem&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-12-05T15:27:27Z&quot;
+      title=&quot;2011-12-05 15:27:27&quot;&gt;December 05, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/Box.net-gem/commit/965768817904da16bc4a87e6c44f5b1f6ba6d25b&quot;&gt;9657688&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;check
+      if data is nil&lt;/blockquote&gt;\n        &lt;/div&gt;\n      &lt;/li&gt;\n
+      \   &lt;/ul&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n
+      \   <id>tag:github.com,2008:CreateEvent/1501522141</id>\n    <published>2011-11-28T16:33:18Z</published>\n
+      \   <updated>2011-11-28T16:33:18Z</updated>\n    <link type=\"text/html\" rel=\"alternate\"
+      href=\"https://github.com/RookieOne/sp_2010/tree/v0.0.5\"/>\n    <title type=\"html\">RookieOne
+      created tag v0.0.5  at RookieOne/sp_2010</title>\n    <author>\n      <name>RookieOne</name>\n
+      \     <email>rookieone@gmail.com</email>\n      <uri>https://github.com/RookieOne</uri>\n
+      \   </author>\n    <media:thumbnail height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;created&lt;/span&gt; tag &lt;a href=&quot;/RookieOne/sp_2010/tree/v0.0.5&quot;&gt;v0.0.5&lt;/a&gt;
+      \ at &lt;a href=&quot;/RookieOne/sp_2010&quot;&gt;RookieOne/sp_2010&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-11-28T16:33:18Z&quot;
+      title=&quot;2011-11-28 16:33:18&quot;&gt;November 28, 2011&lt;/time&gt;\n&lt;/div&gt;\n\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n  &lt;div class=&quot;message&quot;&gt;\n\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1501522112</id>\n
+      \   <published>2011-11-28T16:33:11Z</published>\n    <updated>2011-11-28T16:33:11Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/sp_2010/compare/08e0c250d5...887cc25e81\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/sp_2010</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/sp_2010&quot;&gt;RookieOne/sp_2010&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-11-28T16:33:11Z&quot;
+      title=&quot;2011-11-28 16:33:11&quot;&gt;November 28, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/sp_2010/commit/887cc25e814db57ff2225ce85d938ca1fe160030&quot;&gt;887cc25&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;removed
+      net dav ref&lt;/blockquote&gt;\n        &lt;/div&gt;\n      &lt;/li&gt;\n    &lt;/ul&gt;\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:CreateEvent/1501521482</id>\n
+      \   <published>2011-11-28T16:30:59Z</published>\n    <updated>2011-11-28T16:30:59Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/sp_2010/tree/v0.0.4\"/>\n
+      \   <title type=\"html\">RookieOne created tag v0.0.4  at RookieOne/sp_2010</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;created&lt;/span&gt; tag &lt;a href=&quot;/RookieOne/sp_2010/tree/v0.0.4&quot;&gt;v0.0.4&lt;/a&gt;
+      \ at &lt;a href=&quot;/RookieOne/sp_2010&quot;&gt;RookieOne/sp_2010&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-11-28T16:30:59Z&quot;
+      title=&quot;2011-11-28 16:30:59&quot;&gt;November 28, 2011&lt;/time&gt;\n&lt;/div&gt;\n\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n  &lt;div class=&quot;message&quot;&gt;\n\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1501521429</id>\n
+      \   <published>2011-11-28T16:30:48Z</published>\n    <updated>2011-11-28T16:30:48Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/sp_2010/compare/646c812b2e...08e0c250d5\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/sp_2010</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/sp_2010&quot;&gt;RookieOne/sp_2010&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-11-28T16:30:48Z&quot;
+      title=&quot;2011-11-28 16:30:48&quot;&gt;November 28, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/sp_2010/commit/08e0c250d5a02bd9ce6a587e48122a6574d55bb7&quot;&gt;08e0c25&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;removed
+      netdav gem reference&lt;/blockquote&gt;\n        &lt;/div&gt;\n      &lt;/li&gt;\n
+      \   &lt;/ul&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n
+      \   <id>tag:github.com,2008:CreateEvent/1501520914</id>\n    <published>2011-11-28T16:29:09Z</published>\n
+      \   <updated>2011-11-28T16:29:09Z</updated>\n    <link type=\"text/html\" rel=\"alternate\"
+      href=\"https://github.com/RookieOne/sp_2010/tree/v0.0.3\"/>\n    <title type=\"html\">RookieOne
+      created tag v0.0.3  at RookieOne/sp_2010</title>\n    <author>\n      <name>RookieOne</name>\n
+      \     <email>rookieone@gmail.com</email>\n      <uri>https://github.com/RookieOne</uri>\n
+      \   </author>\n    <media:thumbnail height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;created&lt;/span&gt; tag &lt;a href=&quot;/RookieOne/sp_2010/tree/v0.0.3&quot;&gt;v0.0.3&lt;/a&gt;
+      \ at &lt;a href=&quot;/RookieOne/sp_2010&quot;&gt;RookieOne/sp_2010&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-11-28T16:29:09Z&quot;
+      title=&quot;2011-11-28 16:29:09&quot;&gt;November 28, 2011&lt;/time&gt;\n&lt;/div&gt;\n\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n  &lt;div class=&quot;message&quot;&gt;\n\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1501520576</id>\n
+      \   <published>2011-11-28T16:27:57Z</published>\n    <updated>2011-11-28T16:27:57Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/sp_2010/compare/d98413dc5a...646c812b2e\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/sp_2010</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/sp_2010&quot;&gt;RookieOne/sp_2010&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-11-28T16:27:57Z&quot;
+      title=&quot;2011-11-28 16:27:57&quot;&gt;November 28, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/sp_2010/commit/646c812b2e2859497bcf314a46749c4564db21c4&quot;&gt;646c812&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;updating
+      version 0.0.3&lt;/blockquote&gt;\n        &lt;/div&gt;\n      &lt;/li&gt;\n
+      \   &lt;/ul&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n
+      \   <id>tag:github.com,2008:CreateEvent/1501519975</id>\n    <published>2011-11-28T16:25:53Z</published>\n
+      \   <updated>2011-11-28T16:25:53Z</updated>\n    <link type=\"text/html\" rel=\"alternate\"
+      href=\"https://github.com/RookieOne/sp_2010/tree/v0.0.2\"/>\n    <title type=\"html\">RookieOne
+      created tag v0.0.2  at RookieOne/sp_2010</title>\n    <author>\n      <name>RookieOne</name>\n
+      \     <email>rookieone@gmail.com</email>\n      <uri>https://github.com/RookieOne</uri>\n
+      \   </author>\n    <media:thumbnail height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;created&lt;/span&gt; tag &lt;a href=&quot;/RookieOne/sp_2010/tree/v0.0.2&quot;&gt;v0.0.2&lt;/a&gt;
+      \ at &lt;a href=&quot;/RookieOne/sp_2010&quot;&gt;RookieOne/sp_2010&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-11-28T16:25:53Z&quot;
+      title=&quot;2011-11-28 16:25:53&quot;&gt;November 28, 2011&lt;/time&gt;\n&lt;/div&gt;\n\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n  &lt;div class=&quot;message&quot;&gt;\n\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n    <id>tag:github.com,2008:PushEvent/1501512236</id>\n
+      \   <published>2011-11-28T16:14:42Z</published>\n    <updated>2011-11-28T16:14:42Z</updated>\n
+      \   <link type=\"text/html\" rel=\"alternate\" href=\"https://github.com/RookieOne/sp_2010/compare/ae0c57f893...d98413dc5a\"/>\n
+      \   <title type=\"html\">RookieOne pushed to master at RookieOne/sp_2010</title>\n
+      \   <author>\n      <name>RookieOne</name>\n      <email>rookieone@gmail.com</email>\n
+      \     <uri>https://github.com/RookieOne</uri>\n    </author>\n    <media:thumbnail
+      height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;pushed&lt;/span&gt; to master at &lt;a href=&quot;/RookieOne/sp_2010&quot;&gt;RookieOne/sp_2010&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-11-28T16:14:42Z&quot;
+      title=&quot;2011-11-28 16:14:42&quot;&gt;November 28, 2011&lt;/time&gt;\n&lt;/div&gt;\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n\n  &lt;div class=&quot;commits&quot;&gt;\n
+      \   &lt;ul&gt;\n      &lt;li&gt;\n      &lt;strong&gt;&lt;span class=&quot;committer&quot;&gt;Jonathan
+      Birkholz&lt;/span&gt;&lt;/strong&gt; committed &lt;a href=&quot;/RookieOne/sp_2010/commit/d98413dc5aa9a1d4ee00bc382e40910459d1b34e&quot;&gt;d98413d&lt;/a&gt;\n\n
+      \       &lt;div class=&quot;message&quot;&gt;\n          &lt;blockquote&gt;changed
+      get files to accept credentials&lt;/blockquote&gt;\n        &lt;/div&gt;\n      &lt;/li&gt;\n
+      \   &lt;/ul&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n  <entry>\n
+      \   <id>tag:github.com,2008:CreateEvent/1501507415</id>\n    <published>2011-11-28T15:58:17Z</published>\n
+      \   <updated>2011-11-28T15:58:17Z</updated>\n    <link type=\"text/html\" rel=\"alternate\"
+      href=\"https://github.com/RookieOne/sp_2010/compare/master\"/>\n    <title type=\"html\">RookieOne
+      created branch master  at RookieOne/sp_2010</title>\n    <author>\n      <name>RookieOne</name>\n
+      \     <email>rookieone@gmail.com</email>\n      <uri>https://github.com/RookieOne</uri>\n
+      \   </author>\n    <media:thumbnail height=\"30\" width=\"30\" url=\"https://secure.gravatar.com/avatar/90b60e4e4f651c2435c236564c8bf268?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\"/>\n
+      \   <content type=\"html\">&lt;div class=&quot;title&quot;&gt;\n  &lt;a href=&quot;/RookieOne&quot;&gt;RookieOne&lt;/a&gt;
+      &lt;span&gt;created&lt;/span&gt; branch &lt;a href=&quot;/RookieOne/sp_2010/tree/master&quot;&gt;master&lt;/a&gt;
+      \ at &lt;a href=&quot;/RookieOne/sp_2010&quot;&gt;RookieOne/sp_2010&lt;/a&gt;\n
+      \ &lt;time class=&quot;js-relative-date&quot; datetime=&quot;2011-11-28T15:58:17Z&quot;
+      title=&quot;2011-11-28 15:58:17&quot;&gt;November 28, 2011&lt;/time&gt;\n&lt;/div&gt;\n\n&lt;div
+      class=&quot;details&quot;&gt;\n  \n  &lt;div class=&quot;message&quot;&gt;\n
+      \     New branch is at &lt;a href=&quot;/RookieOne/sp_2010/tree/master&quot;&gt;/RookieOne/sp_2010/tree/master&lt;/a&gt;\n
+      \     &lt;br /&gt;\n      &lt;a href=&quot;/RookieOne/sp_2010/compare/master&quot;
+      class=&quot;compare-link&quot;&gt;Compare master branch with master &amp;raquo;&lt;/a&gt;\n\n\n
+      \ &lt;/div&gt;\n&lt;/div&gt;\n</content>\n  </entry>\n</feed>\n"
+    http_version: '1.1'

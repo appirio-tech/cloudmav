@@ -21,6 +21,7 @@ Codemav::Application.routes.draw do
   end
   
   resources :profiles do
+    resource :activity
     resource :syncable
     resource :autodiscover
     resource :points_summary
