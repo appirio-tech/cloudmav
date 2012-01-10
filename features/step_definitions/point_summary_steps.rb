@@ -8,7 +8,6 @@ end
 
 When /^I view my point summary$/ do
   visit profile_points_summary_path(@profile)
-  And "show me the page"
 end
 
 Then /^I should see how I earned my speaker points$/ do
