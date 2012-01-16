@@ -10,7 +10,7 @@ class SyncStackOverflowProfileJob
       return
     end
     
-    user = StackOverflow.get_user(stack_overflow_profile.stack_overflow_id)
+    user = API::StackOverflow.get_user(stack_overflow_profile.stack_overflow_id)
     
     if user.nil?
       stack_overflow_profile.set_error_message! "You couldn't find you on StackOverflow. Double check that you entered your id and not your username."
@@ -44,7 +44,7 @@ class SyncStackOverflowProfileJob
   end
   
   def self.sync_tags(stack_overflow_profile)
-    tags = StackOverflow.get_user_tags(stack_overflow_profile.stack_overflow_id)
+    tags = API::StackOverflow.get_user_tags(stack_overflow_profile.stack_overflow_id)
     return if tags.nil?
     so_tags = {}
     tags["tags"].each do |t|
@@ -54,52 +54,51 @@ class SyncStackOverflowProfileJob
   end
   
   def self.sync_questions(stack_overflow_profile)
-    questions = StackOverflow.get_user_questions(stack_overflow_profile.stack_overflow_id)
+    questions = API::StackOverflow.get_user_questions(stack_overflow_profile.stack_overflow_id)
     return if questions.nil?
-    
-    top_questions = questions.sort{|a,b| a["score"] <=> b["score"] }.first(3)
+
+    top_questions = questions.sort{|a,b| b.vote_count <=> a.vote_count }.first(3)
 
     top_questions.each do |so_question|
-      question = stack_overflow_profile.questions.where(:question_id => so_question["question_id"]).first
+      question = stack_overflow_profile.questions.where(:question_id => so_question.id).first
       unless question
         question = stack_overflow_profile.questions.build
       end
-      question.title = so_question["title"]
-      question.question_id = so_question["question_id"]
-      question.url = "http://www.stackoverflow.com/questions/#{so_question["question_id"]}"
-      question.date = Time.at(so_question["creation_date"])
-      question.score = so_question["score"]
+      question.title = so_question.title
+      question.question_id = so_question.id
+      question.url = "http://www.stackoverflow.com/questions/#{so_question.id}"
+      question.date = so_question.creation_date
+      question.score = so_question.score
       question.save
     end
 
-    top_question_ids = top_questions.map{|q| q["question_id"]}
+    top_question_ids = top_questions.map{|q| q.id }
     questions_to_delete = stack_overflow_profile.questions.not_in(:question_id => top_question_ids)
     questions_to_delete.each{|q| q.destroy }
   end
   
   def self.sync_answers(stack_overflow_profile)
-    answers = StackOverflow.get_user_answers(stack_overflow_profile.stack_overflow_id)
+    answers = API::StackOverflow.get_user_answers(stack_overflow_profile.stack_overflow_id)
     return if answers.nil?
 
-    top_answers = answers.sort{|a,b| a["score"] <=> b["score"] }.first(3)
+    top_answers = answers.sort{|a,b| b.vote_count <=> a.vote_count }.first(3)
 
     top_answers.each do |so_answer|
-      answer = stack_overflow_profile.answers.where(:answer_id => so_answer["answer_id"]).first
+      answer = stack_overflow_profile.answers.where(:answer_id => so_answer.id).first
       unless answer
         answer = stack_overflow_profile.answers.build
       end
-      answer.title = so_answer["title"]
-      answer.question_id = so_answer["question_id"]
-      answer.answer_id = so_answer["answer_id"]
-      answer.accepted = so_answer["accepted"]
-      answer.url = "http://www.stackoverflow.com/questions/#{so_answer["question_id"]}"
-
-      answer.date = convert_to_date(so_answer["creation_date"])
-      answer.score = so_answer["score"]
+      answer.title = so_answer.title
+      answer.question_id = so_answer.question_id
+      answer.answer_id = so_answer.id
+      answer.accepted = so_answer.accepted
+      answer.url = "http://www.stackoverflow.com/questions/#{so_answer.question_id}"
+      answer.date = so_answer.creation_date
+      answer.score = so_answer.score
       answer.save
     end
 
-    top_answer_ids = top_answers.map{|a| a["answer_id"]}
+    top_answer_ids = top_answers.map{|a| a.id }
     answers_to_delete = stack_overflow_profile.answers.not_in(:answer_id => top_answer_ids)
     answers_to_delete.each{|a| a.destroy }
   end

@@ -42,7 +42,7 @@ gem "escape_utils", "0.2.3"
 # Api Gems
 gem "httparty", "0.7.8"
 gem "bitbucket_api", "0.0.1"
-gem "stack_overflow", "0.0.8"
+gem "stack_overflow", "0.0.9"
 gem "speaker_rate", "0.0.5"
 gem "slide_share", "0.0.3"
 gem "linkedin", "0.3.1"
