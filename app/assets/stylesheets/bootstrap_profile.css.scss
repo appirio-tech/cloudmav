@@ -131,3 +131,39 @@ table#accounts {
 #follow_profile {
   
 }
+
+.profile_section {
+  h3 {
+    margin-top: ms(1);
+    margin-bottom: 4px;
+  }
+  table {
+    border: 0px solid $black;
+    border-top: 1px solid lighten($dark_background, 60%);
+    tr {
+      height: 68px;
+      td {
+        border: 0px solid $black;
+        border-bottom: 1px solid lighten($dark_background, 60%);
+        padding: 6px;
+      }
+    }
+  }
+  .repo_description {
+    font-size: 12px;
+  }
+  .points {
+    @include corners;
+    background: $gray_background;
+    color: $gray_foreground;
+    padding: 10px;
+    margin-right: 10px;
+    text-align: center;
+    .number {
+      font-weight: bold;
+    }
+    .description {
+      font-size: 12px;
+    }
+  }
+}

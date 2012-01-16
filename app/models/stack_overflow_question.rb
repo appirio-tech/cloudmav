@@ -9,6 +9,8 @@ class StackOverflowQuestion
   field :url, :type => String
   field :date, :type => DateTime
   field :score, :type => String
+  field :vote_count, :type => String
+  field :view_count, :type => String
 
   def profile
     stack_overflow_profile.profile

@@ -69,6 +69,8 @@ class SyncStackOverflowProfileJob
       question.url = "http://www.stackoverflow.com/questions/#{so_question.id}"
       question.date = so_question.creation_date
       question.score = so_question.score
+      question.vote_count = so_question.vote_count
+      question.view_count = so_question.view_count
       question.save
     end
 
@@ -95,6 +97,8 @@ class SyncStackOverflowProfileJob
       answer.url = "http://www.stackoverflow.com/questions/#{so_answer.question_id}"
       answer.date = so_answer.creation_date
       answer.score = so_answer.score
+      answer.vote_count = so_answer.vote_count
+      answer.view_count = so_answer.view_count
       answer.save
     end
 

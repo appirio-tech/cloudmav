@@ -8,19 +8,38 @@
   .row#profile_content
     .span16
       - if @stack_overflow_profile
-        - unless @stack_overflow_profile.answers.empty?
-          %section#stack_overflow_answers
-            %h2 Top 3 Stack Overflow Answers
-            %ol
+        %section.profile_section
+          - unless @stack_overflow_profile.answers.empty?
+            %h3 Top Stack Overflow Answers
+            %table
               - @stack_overflow_profile.answers.each do |a|
-                %li= link_to a.title, a.url, :target => "_blank"
-                      
-        - unless @stack_overflow_profile.questions.empty?
-          %section#stack_overflow_questions
-            %h2 Top 3 Stack Overflow Questions
-            %ol
+                %tr
+                  %td
+                    %h4= link_to a.title, a.url, :target => "_blank"
+                  %td
+                    .points
+                      .number= a.vote_count
+                      .description votes
+                  %td
+                    .points
+                      .number= a.view_count
+                      .description views
+
+          - unless @stack_overflow_profile.questions.empty?
+            %h3 Top Stack Overflow Questions
+            %table
               - @stack_overflow_profile.questions.each do |q|
-                %li= link_to q.title, q.url, :target => "_blank"
+                %tr
+                  %td
+                    %h4= link_to q.title, q.url, :target => "_blank"
+                  %td
+                    .points
+                      .number= q.vote_count
+                      .description votes
+                  %td
+                    .points
+                      .number= q.view_count
+                      .description views
       
         = render :partial => "shared/tags", :locals => {:taggable => @profile.knowledge_profile}
     .grid_2

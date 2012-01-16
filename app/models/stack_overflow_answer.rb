@@ -11,6 +11,8 @@ class StackOverflowAnswer
   field :date, :type => DateTime
   field :accepted, :type => Boolean
   field :score, :type => String
+  field :vote_count, :type => String
+  field :view_count, :type => String
 
   def accepted?
     accepted
