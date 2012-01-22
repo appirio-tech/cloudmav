@@ -20,7 +20,8 @@
   .container#content
     = flashy
     = render :partial => 'shared/recent_badges'
-    = yield
+    .content
+      = yield
 
     .span16
       &nbsp;

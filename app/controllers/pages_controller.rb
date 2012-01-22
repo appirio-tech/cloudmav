@@ -14,5 +14,8 @@ class PagesController < ApplicationController
 
   def points
   end
+
+  def change_log
+  end
   
 end

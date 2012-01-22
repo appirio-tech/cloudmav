@@ -83,7 +83,9 @@ Codemav::Application.routes.draw do
   resource :talk_search
   
   mount Resque::Server, :at => "/resque"  
-  
+
+  match "/change_log" => "pages#change_log", :as => :change_log
+
   match "/:username" => "profiles#show", :as => :profile
   match "/:username/update" => "profiles#update", :as => :update_profile, :method => :put
   match "/:username/experience" => "experiences#show", :as => :profile_experience

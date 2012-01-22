@@ -1,0 +1,19 @@
+.page-header#profile_header
+  %h1
+    Change Log
+
+
+.row
+  .span16
+    %h3 1/22/2011
+    %p
+      Previously I had a tumbler site to update changes. The result was the site never looked like it was part of CodeMav and I never updated it. So I decided to try having a Change Log. I will update the Change Log every week with updates on new features and bug fixes.
+    %ul
+      %li
+        %p
+          Added Activity stream on profile page. Currently is only pulling GitHub activity but I plan to aggregate other services soon.
+        - if current_profile
+          = link_to "Check out your activity steam", profile_path(current_profile)
+
+
+
