@@ -23,7 +23,7 @@ gem "devise"
 gem "cancan"
 
 # Server
-gem "powify"
+gem "powify", '0.8.5'
 gem "foreman"
 gem "thin"
 
@@ -40,13 +40,13 @@ gem "simple-rss", "1.2.3"
 gem "escape_utils", "0.2.3"
 
 # Api Gems
-gem "httparty", "0.7.8"
-gem "bitbucket_api", "0.0.1"
-gem "stack_overflow", "0.0.9"
-gem "speaker_rate", "0.0.5"
-gem "slide_share", "0.0.3"
-gem "linkedin", "0.3.1"
-gem "twitter", "1.6.1"
+gem "httparty"
+gem "bitbucket_api"
+gem "stack_overflow"
+gem "speaker_rate"
+gem "slide_share"
+gem "linkedin"
+gem "twitter"
 
 # Geolocation
 gem "geokit"
