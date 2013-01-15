@@ -4,9 +4,9 @@ require File.expand_path('../application', __FILE__)
 # Initialize the rails application
 Codemav::Application.initialize!
 
-SlideShare.API_KEY = "IUKyhLLC"
-SlideShare.SECRET = "PdZ8enD1"
-API::StackOverflow.API_KEY = "ZJZ_DNRrgk6IQYQ0h_Duyg"
+SlideShare.API_KEY = ""
+SlideShare.SECRET = ""
+API::StackOverflow.API_KEY = ""
 
 LINKEDIN_API_KEY = ""
 LINKEDIN_SECRET_KEY = ""
