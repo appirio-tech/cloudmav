@@ -1,13 +1,13 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.10'
 gem 'rake', '0.8.7'
 gem 'json', '1.4.6'
 gem 'jquery-rails'
 
 # Database
 gem "mongo"
-gem "mongoid"
+gem "mongoid", '~> 2'
 gem "bson_ext"
 
 gem "kaminari" # for paging
@@ -31,6 +31,7 @@ gem "thin"
 gem "haml"
 gem "formtastic", "1.2.4"
 gem "css3buttons", "1.0.1"
+gem 'modular-scale'
 
 # 3rd Party Services
 gem "gravtastic"
@@ -67,6 +68,7 @@ gem "sunspot_rails", "1.2.1"
 gem "has_permalink"
 
 # CodeMav Api
+gem 'crack'
 gem "rabl", "0.3.0"
 
 # Attach images to models and store in the s3 cloud
@@ -94,16 +96,16 @@ group :test do
   # rspec gems
   gem "rspec-rails"
   gem "factory_girl_rails"
-  
+
   # cucumber gems
   gem "cucumber", "1.0.3"
   gem "cucumber-rails", "1.0.2"
   gem "database_cleaner" # cleans database for every scenario run. works with mongoid now
   gem "launchy" # allows 'show me the page' to launch a browser
-  
+
   # mocks & stubs
   gem "mocha", "0.9.12"
-  
+
   # mock web calls
   gem "vcr"
   gem "fakeweb"
