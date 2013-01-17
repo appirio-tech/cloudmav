@@ -76,11 +76,6 @@ class Profile
   scope :by_username, lambda { |uname| where(:username => uname) }
   scope :named, lambda { |name| { :where => { :name => name } } }
 
-  def badges
-    Badge.where(:_id.in => badgings.map(&:badge_id))
-  end
-
-
   def display_name
     (self.name.blank? || self.name.nil?) ? self.username : self.name
   end

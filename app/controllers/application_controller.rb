@@ -49,9 +49,8 @@ class ApplicationController < ActionController::Base
 
   def unseen_badges
     return unless current_user
-    #unseen_badgings = current_profile.badgings.unseen.to_a
-    #@unseen_badges = unseen_badgings.map(&:badge)
-    #unseen_badgings.each {|b| b.mark_as_seen }
-    []
+    unseen_badgings = current_profile.badgings.unseen.to_a
+    @unseen_badges = unseen_badgings.map(&:badge)
+    unseen_badgings.each {|b| b.mark_as_seen }
   end
 end
