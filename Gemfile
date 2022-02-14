@@ -1,16 +1,16 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.10'
+gem 'rails', '5.2.6.2'
 gem 'rake', '0.8.7'
 gem 'json', '1.4.6'
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 4.0.1'
 
 # Database
 gem "mongo"
 gem "mongoid", '~> 2'
 gem "bson_ext"
 
-gem "kaminari" # for paging
+gem "kaminari" , ">= 0.14.1" # for paging
 group :production do
   gem 'pg'
 end
@@ -19,7 +19,7 @@ group :test do
 end
 
 # Authentication and Authorization
-gem "devise"
+gem "devise", ">= 4.4.2"
 gem "cancan"
 
 # Server
@@ -86,16 +86,16 @@ gem "sendgrid"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
+  gem 'sass-rails', '~> 5.0.5'
+  gem 'coffee-rails', '~> 4.2.2'
   gem 'uglifier'
   gem 'bourbon'
 end
 
 group :test do
   # rspec gems
-  gem "rspec-rails"
-  gem "factory_girl_rails"
+  gem "rspec-rails", ">= 2.12.2"
+  gem "factory_girl_rails", ">= 4.1.0"
 
   # cucumber gems
   gem "cucumber", "1.0.3"
