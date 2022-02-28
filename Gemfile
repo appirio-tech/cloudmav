@@ -72,7 +72,7 @@ gem 'crack'
 gem "rabl", "0.3.0"
 
 # Attach images to models and store in the s3 cloud
-gem 'fog', "0.11.0"
+gem 'fog', '1.14.0'
 gem 'rmagick', "2.13.1"
 gem "carrierwave", "0.5.7"
 gem 'carrierwave-mongoid', "0.1.0", :require => 'carrierwave/mongoid'
